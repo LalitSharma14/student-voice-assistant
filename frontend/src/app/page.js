@@ -1,4 +1,17 @@
+"use client";
+
+import { useState } from "react";
 export default function Home() {
+  const [message, setMessage] = useState("");
+  const [messages, setMessages] = useState([]);
+  const handleSend = () => {
+
+    if (message.trim() === "") return;
+
+    setMessages([...messages, message]);
+
+    setMessage("");
+  };
   return (
     <div className="bg-gray-100 min-h-screen">
 
@@ -39,21 +52,46 @@ export default function Home() {
 
           {/* Chat Box */}
           <div className="h-64 border rounded-lg p-4 overflow-y-auto mb-4 bg-gray-50">
-            <p className="text-gray-500">
-              Chat messages will appear here...
-            </p>
+            <div className="space-y-3">
+              {messages.length === 0 ? (
+              <p className="text-gray-500">Chat messages will appear here...</p>
+              ) : (
+              messages.map((msg, index) => (
+                <div
+                  key={index}
+                  className="bg-blue-100 text-gray-800 p-3 rounded-lg w-fit max-w-[80%]"
+                >
+                <p>
+                  <span className="font-bold">You: </span>
+                  {msg}
+                </p>
+                </div>
+              ))
+              )}
+            </div>
           </div>
 
           {/* Input Section */}
           <div className="flex gap-3">
+            
 
             <input
               type="text"
               placeholder="Ask your question..."
-              className="flex-1 border border-gray-300 p-3 rounded-lg outline-none focus:ring-2 focus:ring-blue-400"
-            />
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  handleSend();
+                }
+              }}
+  className="flex-1 border border-gray-300 p-3 rounded-lg outline-none focus:ring-2 focus:ring-blue-400"
+/>
 
-            <button className="bg-blue-600 hover:bg-blue-700 transition text-white px-5 py-3 rounded-lg font-semibold">
+            <button
+              onClick={handleSend}
+              className="bg-blue-600 hover:bg-blue-700 transition text-white px-5 py-3 rounded-lg font-semibold"
+            >
               Send
             </button>
 
@@ -62,6 +100,9 @@ export default function Home() {
             </button>
 
           </div>
+          <p className="mt-4 text-lg text-blue-600">
+            {message}
+          </p>
         </div>
       </div>
     </div>
