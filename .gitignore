@@ -1,0 +1,56 @@
+# ── Environment & Secrets ──────────────────────────────
+.env
+.env.local
+.env.development
+.env.production
+.env*.local
+
+# ── Python / Backend ───────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+venv/
+.venv/
+env/
+*.egg
+
+# ── Uploaded & Generated Audio (runtime files) ─────────
+uploads/
+audio/
+
+# ── Whisper model cache ────────────────────────────────
+~/.cache/huggingface/
+*.bin
+*.pt
+
+# ── Node / Frontend ────────────────────────────────────
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/.cache/
+frontend/.npm/
+
+# ── Next.js ────────────────────────────────────────────
+.next/
+out/
+next-env.d.ts
+
+# ── OS & Editor ────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── Logs ───────────────────────────────────────────────
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

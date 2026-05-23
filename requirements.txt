@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+python-dotenv
+python-multipart
+faster-whisper
+google-generativeai
+groq
+edge-tts
