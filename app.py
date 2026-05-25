@@ -5,6 +5,7 @@ import os
 import json
 import uuid
 import asyncio
+import time
 import unicodedata
 import traceback
 from typing import Optional
@@ -50,35 +51,45 @@ async def ask_question(
     unique_id  = uuid.uuid4().hex
     audio_path = os.path.join(UPLOAD_DIR, f"{unique_id}{file_ext}")
 
+    total_start = time.perf_counter()
     try:
+        save_start = time.perf_counter()
         print(f"\n[STEP 1] Saving uploaded file: {file.filename}")
         content = await file.read()
         if not content:
             raise HTTPException(status_code=400, detail="Uploaded file is empty.")
         with open(audio_path, "wb") as f:
             f.write(content)
-        print(f"[STEP 1] ✅ Saved to {audio_path} ({len(content)} bytes)")
+        save_time = time.perf_counter() - save_start    
+        print(f"[STEP 1] ✅ Saved to {audio_path} ({len(content)} bytes) | Time: {save_time:.2f}s")
 
+        stt_start = time.perf_counter()
         print(f"[STEP 2] Running STT...")
         question, language = speech_to_text(audio_path)
-        print(f"[STEP 2] ✅ question='{question}' language='{language}'")
+        stt_time = time.perf_counter() - stt_start
+        print(f"[STEP 2] ✅ question='{question}' language='{language}' | Time: {stt_time:.2f}s")
 
         if not question.strip():
             raise HTTPException(status_code=422, detail="Could not detect speech. Please speak clearly.")
 
+        llm_start = time.perf_counter()
         print(f"[STEP 3] Calling LLM...")
         chat_history = json.loads(history)
         answer = await asyncio.to_thread(ask_llm, question, language, chat_history)
-        print(f"[STEP 3] ✅ answer='{answer[:80]}...'")
+        llm_time = time.perf_counter() - llm_start
+        print(f"[STEP 3] ✅ answer='{answer[:80]}...'| Time: {save_time:.2f}s")
 
+        tts_start = time.perf_counter()
         audio_out_path = os.path.join(AUDIO_DIR, f"{unique_id}.mp3")
         print(f"[STEP 4] Running TTS → {audio_out_path}")
         await text_to_speech(answer, language, audio_out_path)
-        print(f"[STEP 4] ✅ Audio saved")
+        print(f"[STEP 4] ✅ Audio saved | Time: {save_time:.2f}s")
 
         mtime     = os.path.getmtime(audio_out_path)
         audio_url = f"audio/{unique_id}.mp3?t={mtime:.0f}"
-        print(f"[STEP 5] ✅ Returning response")
+
+        total_time = time.perf_counter() - total_start
+        print(f"[STEP 5] ✅ Returning response | TOTAL VOICE TIME: {total_time:.2f}s")
 
         return {
             "question":  question,
@@ -106,6 +117,7 @@ async def ask_question_text(
     history: Optional[str] = Form(default="[]"),
 ):
     unique_id = uuid.uuid4().hex
+    total_start = time.perf_counter()
 
     try:
         has_devanagari = any(
@@ -118,19 +130,27 @@ async def ask_question_text(
         if not question.strip():
             raise HTTPException(status_code=422, detail="Question cannot be empty.")
 
+        llm_start = time.perf_counter()
+
         print(f"[TEXT] Calling LLM...")
         chat_history = json.loads(history)
         answer = await asyncio.to_thread(ask_llm, question, language, chat_history)
-        print(f"[TEXT] ✅ answer='{answer[:80]}...'")
+        llm_time = time.perf_counter() - llm_start
+        print(f"[TEXT] ✅ answer='{answer[:80]}...' | LLM Time: {llm_time:.2f}s")
+
+        tts_start = time.perf_counter()
 
         audio_out_path = os.path.join(AUDIO_DIR, f"{unique_id}.mp3")
         print(f"[TEXT] Running TTS → {audio_out_path}")
         await text_to_speech(answer, language, audio_out_path)
-        print(f"[TEXT] ✅ Audio saved")
+        tts_time = time.perf_counter() - tts_start
+        print(f"[TEXT] ✅ Audio saved | TTS Time: {tts_time:.2f}s")
 
         mtime     = os.path.getmtime(audio_out_path)
         audio_url = f"audio/{unique_id}.mp3?t={mtime:.0f}"
-
+        total_time = time.perf_counter() - total_start
+        print(f"[TEXT] ✅ Returning response | TOTAL TEXT TIME: {total_time:.2f}s")
+        
         return {
             "question":  question,
             "language":  language,
