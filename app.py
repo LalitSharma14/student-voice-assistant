@@ -135,27 +135,17 @@ async def ask_question_text(
         print(f"[TEXT] Calling LLM...")
         chat_history = json.loads(history)
         answer = await asyncio.to_thread(ask_llm, question, language, chat_history)
+
         llm_time = time.perf_counter() - llm_start
         print(f"[TEXT] ✅ answer='{answer[:80]}...' | LLM Time: {llm_time:.2f}s")
 
-        tts_start = time.perf_counter()
-
-        audio_out_path = os.path.join(AUDIO_DIR, f"{unique_id}.mp3")
-        print(f"[TEXT] Running TTS → {audio_out_path}")
-        await text_to_speech(answer, language, audio_out_path)
-        tts_time = time.perf_counter() - tts_start
-        print(f"[TEXT] ✅ Audio saved | TTS Time: {tts_time:.2f}s")
-
-        mtime     = os.path.getmtime(audio_out_path)
-        audio_url = f"audio/{unique_id}.mp3?t={mtime:.0f}"
         total_time = time.perf_counter() - total_start
-        print(f"[TEXT] ✅ Returning response | TOTAL TEXT TIME: {total_time:.2f}s")
-        
+        print(f"[TEXT] ✅ Returning text response without TTS | TOTAL TEXT TIME: {total_time:.2f}s")
+
         return {
-            "question":  question,
-            "language":  language,
-            "answer":    answer,
-            "audio_url": audio_url,
+            "question": question,
+            "language": language,
+            "answer": answer,
         }
 
     except HTTPException:
@@ -165,3 +155,40 @@ async def ask_question_text(
         print("\n[TEXT ERROR] ❌ Pipeline crashed:")
         traceback.print_exc()
         raise HTTPException(status_code=500, detail=f"[{type(e).__name__}] {str(e)}")
+@app.post("/tts/")
+async def generate_tts(
+    text: str = Form(...),
+    language: str = Form(default="en"),
+):
+    unique_id = uuid.uuid4().hex
+    total_start = time.perf_counter()
+
+    try:
+        if not text.strip():
+            raise HTTPException(status_code=422, detail="Text cannot be empty.")
+
+        audio_out_path = os.path.join(AUDIO_DIR, f"{unique_id}.mp3")
+
+        print(f"[TTS ROUTE] Generating audio for language='{language}'")
+        await text_to_speech(text, language, audio_out_path)
+
+        mtime = os.path.getmtime(audio_out_path)
+        audio_url = f"audio/{unique_id}.mp3?t={mtime:.0f}"
+
+        total_time = time.perf_counter() - total_start
+        print(f"[TTS ROUTE] ✅ Returning audio URL | TOTAL TTS TIME: {total_time:.2f}s")
+
+        return {
+            "audio_url": audio_url,
+        }
+
+    except HTTPException:
+        raise
+
+    except Exception as e:
+        print("\n[TTS ROUTE ERROR] ❌ TTS generation crashed:")
+        traceback.print_exc()
+        raise HTTPException(
+            status_code=500,
+            detail=f"[{type(e).__name__}] {str(e)}"
+        )    
