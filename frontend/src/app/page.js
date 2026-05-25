@@ -124,41 +124,90 @@ export default function Home() {
 
   // ── Text question ──────────────────────────────────
   const handleTextSend = async () => {
-    if (!textInput.trim() || isLoading) return;
+  if (!textInput.trim() || isLoading) return;
 
-    const question = textInput.trim();
-    setTextInput("");
-    setError("");
-    setIsLoading(true);
+  const question = textInput.trim();
+  const assistantId = crypto.randomUUID();
 
+  setTextInput("");
+  setError("");
+  setIsLoading(true);
+
+  setMessages((prev) => [
+    ...prev,
+    { role: "user", text: question, isVoice: false },
+  ]);
+
+  const formData = new FormData();
+  formData.append("question", question);
+  formData.append("history", JSON.stringify(history));
+
+  try {
+    // Step 1: Get text answer only
+    const res = await fetch("/api/ask-text/", {
+      method: "POST",
+      body: formData,
+    });
+
+    if (!res.ok) {
+      const err = await res.json();
+      throw new Error(err.detail || "Server error");
+    }
+
+    const data = await res.json();
+
+    // Step 2: Display answer immediately, without waiting for audio
     setMessages((prev) => [
       ...prev,
-      { role: "user", text: question, isVoice: false },
+      {
+        id: assistantId,
+        role: "assistant",
+        text: data.answer,
+        audioUrl: null,
+        autoPlay: false,
+      },
     ]);
 
-    const formData = new FormData();
-    formData.append("question", question);
-    formData.append("history", JSON.stringify(history));
+    updateHistory(question, data.answer);
+
+    // Stop the thinking/loading bubble as soon as text is visible
+    setIsLoading(false);
+
+    // Step 3: Generate audio separately
+    const ttsFormData = new FormData();
+    ttsFormData.append("text", data.answer);
+    ttsFormData.append("language", data.language || "en");
 
     try {
-      const res = await fetch("/api/ask-text/", { method: "POST", body: formData });
-      if (!res.ok) {
-        const err = await res.json();
-        throw new Error(err.detail || "Server error");
-      }
-      const data = await res.json();
+      const ttsRes = await fetch("/api/tts/", {
+        method: "POST",
+        body: ttsFormData,
+      });
 
-      setMessages((prev) => [
-        ...prev,
-        { role: "assistant", text: data.answer, audioUrl: data.audio_url, autoPlay: false },
-      ]);
-      updateHistory(question, data.answer);
-    } catch (e) {
-      setError(e.message);
-    } finally {
-      setIsLoading(false);
+      if (!ttsRes.ok) {
+        console.error("TTS generation failed");
+        return;
+      }
+
+      const ttsData = await ttsRes.json();
+
+      // Step 4: Attach audio only to this assistant message
+      setMessages((prev) =>
+        prev.map((msg) =>
+          msg.id === assistantId
+            ? { ...msg, audioUrl: ttsData.audio_url }
+            : msg
+        )
+      );
+    } catch (ttsError) {
+      console.error("TTS request failed:", ttsError);
     }
-  };
+
+  } catch (e) {
+    setError(e.message);
+    setIsLoading(false);
+  }
+};
 
   return (
     <div style={{ fontFamily: "sans-serif", background: "#f3f4f6", minHeight: "100vh" }}>
