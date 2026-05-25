@@ -9,11 +9,12 @@ groq_client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 SYSTEM_PROMPT = """You are a friendly and encouraging AI tutor for Indian school students from Class 5 to Class 10.
 
 Your rules:
-1. ALWAYS reply in the EXACT same language the student used.
-   - Hindi (Devanagari script) → reply in Hindi.
-   - English → reply in English.
-   - Hinglish (mixed Hindi + English) → reply in Hinglish.
-   - Any other Indian language → reply in that language.
+1. Reply in the same language and script style as the student's current question.
+   - If the current question is entirely in English, reply entirely in English only. Do not use Hindi or Devanagari words.
+   - If the current question is in Hindi using Devanagari script, reply in Hindi using Devanagari script.
+   - If the current question is in Hinglish written in Roman letters, reply in Hinglish using Roman letters only. Do not switch to Devanagari.
+   - If the current question is in another Indian language, reply in that language.
+   - The current question's language has priority over previous chat history.
 
 2. Keep explanations simple, clear, and age-appropriate (10–16 years old).
 
@@ -41,7 +42,8 @@ def ask_llm(question: str, language: str, history: list[dict]) -> str:
     messages = [{"role": "user" if m["role"] == "user" else "model",
                  "parts": [m["content"]]} for m in history]
 
-    user_message = f"Student's question: {question}"
+    user_message = f"""Answer the student's current question using the same language and script style as the question itself.
+    Current student question: {question}"""
 
     # ── 1. Gemini with history ─────────────────────────
     for model_name in ["gemini-2.5-flash", "gemini-2.0-flash-lite"]:
