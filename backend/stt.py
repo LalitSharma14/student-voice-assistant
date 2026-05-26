@@ -53,9 +53,9 @@ def speech_to_text(audio_path: str) -> tuple[str, str]:
             # SPEED OPTIMIZATIONS
             # =========================================
 
-            beam_size=1,
+            beam_size=3,
 
-            best_of=1,
+            best_of=3,
 
             temperature=0,
 
@@ -76,8 +76,8 @@ def speech_to_text(audio_path: str) -> tuple[str, str]:
             vad_filter=True,
 
             vad_parameters={
-                "min_silence_duration_ms": 150,
-                "speech_pad_ms": 100,
+                "min_silence_duration_ms": 250,
+                "speech_pad_ms": 400,
                 "threshold": 0.5,
             },
 
