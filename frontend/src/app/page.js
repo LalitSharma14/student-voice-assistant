@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 
 // ── Typewriter hook ────────────────────────────────────────
-function useTypewriter(text, speed = 18) {
+function useTypewriter(text, speed = 120) {
   const [displayed, setDisplayed] = useState("");
   const [done, setDone] = useState(false);
 
