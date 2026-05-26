@@ -9,6 +9,7 @@ groq_client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 SYSTEM_PROMPT = """You are a friendly and encouraging AI tutor for Indian school students from Class 5 to Class 10.
 
 Your rules:
+
 1. Reply in the same language and script style as the student's current question.
    - If the current question is entirely in English, reply entirely in English only. Do not use Hindi or Devanagari words.
    - If the current question is in Hindi using Devanagari script, reply in Hindi using Devanagari script.
@@ -18,32 +19,54 @@ Your rules:
 
 2. Keep explanations simple, clear, and age-appropriate (10–16 years old).
 
-3. Give a COMPLETE answer — never stop mid-sentence.
+3. RESPONSE LENGTH RULES — this is the most important rule:
+   - For a first question on any topic: give a SHORT answer only.
+     - 2 to 3 sentences maximum.
+     - One simple real-life example if it helps.
+   - For a follow-up question where the student asks for more detail, explanation, or says things like "explain more", "aur batao", "details do", "why", "how": give a DETAILED answer.
+     - A clear explanation in 4 to 6 sentences.
+     - One real-life example.
+     - One encouraging closing line.
+   - Never give a long answer when a short one is enough.
+   - Never give a short answer when the student has clearly asked for detail.
 
-4. Structure:
-   - A clear explanation (3–5 sentences).
-   - One real-life example if helpful.
-   - One encouraging closing line.
+4. No bullet points — write in natural flowing sentences.
 
-5. No bullet points — write in natural flowing sentences.
+5. Remember the conversation history and use it to answer follow-up questions correctly.
 
-6. Remember the conversation history and use it to answer follow-up questions.
-
-7. If the question is off-topic or inappropriate, politely redirect to study topics."""
+6. If the question is off-topic or inappropriate, politely redirect to study topics in 1 sentence."""
 
 
 def ask_llm(question: str, language: str, history: list[dict]) -> str:
     """
     history = list of {role, content} dicts representing past conversation.
-    Supports follow-up questions using full conversation memory.
+    Automatically gives short answers first, detailed on follow-up.
     """
 
-    # Build messages with full history for context
-    messages = [{"role": "user" if m["role"] == "user" else "model",
-                 "parts": [m["content"]]} for m in history]
+    detail_keywords = [
+        "more", "detail", "explain", "why", "how", "elaborate",
+        "aur batao", "aur", "kyun", "kaise", "samjhao", "bataiye",
+        "विस्तार", "समझाओ", "क्यों", "कैसे", "और बताओ"
+    ]
+    is_followup_detail = any(kw in question.lower() for kw in detail_keywords)
 
-    user_message = f"""Answer the student's current question using the same language and script style as the question itself.
-    Current student question: {question}"""
+    messages = [
+        {
+            "role": "user" if m["role"] == "user" else "model",
+            "parts": [m["content"]]
+        }
+        for m in history
+    ]
+
+    if is_followup_detail:
+        user_message = f"""The student is asking for more detail or explanation on the previous topic.
+Give a detailed answer (4 to 6 sentences) with an example.
+Use the same language and script as this question.
+Student question: {question}"""
+    else:
+        user_message = f"""Give a SHORT answer only — 2 to 3 sentences maximum — with one simple example if needed.
+Use the same language and script as this question.
+Student question: {question}"""
 
     # ── 1. Gemini with history ─────────────────────────
     for model_name in ["gemini-2.5-flash", "gemini-2.0-flash-lite"]:
@@ -56,11 +79,10 @@ def ask_llm(question: str, language: str, history: list[dict]) -> str:
                     max_output_tokens=600,
                 ),
             )
-            # Start chat with previous history
             chat = gemini_model.start_chat(history=messages)
             response = chat.send_message(user_message)
             answer = response.text.strip()
-            print(f"[LLM] Used: {model_name} | tokens ~{len(answer.split())}")
+            print(f"[LLM] Used: {model_name} | followup_detail={is_followup_detail} | tokens ~{len(answer.split())}")
             return answer
 
         except Exception as e:
@@ -73,15 +95,12 @@ def ask_llm(question: str, language: str, history: list[dict]) -> str:
                 print(f"[{model_name}] Error: {e}")
                 break
 
-    # ── 2. Groq fallback with history ─────────────────
+    # ── 2. Groq fallback ──────────────────────────────
     try:
         print("[LLM] Using Groq fallback")
         groq_messages = [{"role": "system", "content": SYSTEM_PROMPT}]
         for m in history:
-            groq_messages.append({
-                "role": m["role"],
-                "content": m["content"]
-            })
+            groq_messages.append({"role": m["role"], "content": m["content"]})
         groq_messages.append({"role": "user", "content": user_message})
 
         completion = groq_client.chat.completions.create(

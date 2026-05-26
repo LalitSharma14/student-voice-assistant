@@ -15,7 +15,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from backend.stt import speech_to_text
 from backend.llm import ask_llm
-from backend.tts import text_to_speech
+from backend.tts import text_to_speech, clean_text_for_tts  # single clean import
 
 # ── Directories ────────────────────────────────────────────
 UPLOAD_DIR = "uploads"
@@ -60,7 +60,7 @@ async def ask_question(
             raise HTTPException(status_code=400, detail="Uploaded file is empty.")
         with open(audio_path, "wb") as f:
             f.write(content)
-        save_time = time.perf_counter() - save_start    
+        save_time = time.perf_counter() - save_start
         print(f"[STEP 1] ✅ Saved to {audio_path} ({len(content)} bytes) | Time: {save_time:.2f}s")
 
         stt_start = time.perf_counter()
@@ -76,14 +76,16 @@ async def ask_question(
         print(f"[STEP 3] Calling LLM...")
         chat_history = json.loads(history)
         answer = await asyncio.to_thread(ask_llm, question, language, chat_history)
+        answer = clean_text_for_tts(answer)   # clean once, used for both text and TTS
         llm_time = time.perf_counter() - llm_start
-        print(f"[STEP 3] ✅ answer='{answer[:80]}...'| Time: {save_time:.2f}s")
+        print(f"[STEP 3] ✅ answer='{answer[:80]}...' | Time: {llm_time:.2f}s")
 
         tts_start = time.perf_counter()
         audio_out_path = os.path.join(AUDIO_DIR, f"{unique_id}.mp3")
         print(f"[STEP 4] Running TTS → {audio_out_path}")
         await text_to_speech(answer, language, audio_out_path)
-        print(f"[STEP 4] ✅ Audio saved | Time: {save_time:.2f}s")
+        tts_time = time.perf_counter() - tts_start
+        print(f"[STEP 4] ✅ Audio saved | Time: {tts_time:.2f}s")
 
         mtime     = os.path.getmtime(audio_out_path)
         audio_url = f"audio/{unique_id}.mp3?t={mtime:.0f}"
@@ -131,21 +133,20 @@ async def ask_question_text(
             raise HTTPException(status_code=422, detail="Question cannot be empty.")
 
         llm_start = time.perf_counter()
-
         print(f"[TEXT] Calling LLM...")
         chat_history = json.loads(history)
         answer = await asyncio.to_thread(ask_llm, question, language, chat_history)
-
+        answer = clean_text_for_tts(answer)   # clean once, used for both text and TTS
         llm_time = time.perf_counter() - llm_start
         print(f"[TEXT] ✅ answer='{answer[:80]}...' | LLM Time: {llm_time:.2f}s")
 
         total_time = time.perf_counter() - total_start
-        print(f"[TEXT] ✅ Returning text response without TTS | TOTAL TEXT TIME: {total_time:.2f}s")
+        print(f"[TEXT] ✅ Returning text response | TOTAL TEXT TIME: {total_time:.2f}s")
 
         return {
             "question": question,
             "language": language,
-            "answer": answer,
+            "answer":   answer,
         }
 
     except HTTPException:
@@ -155,6 +156,8 @@ async def ask_question_text(
         print("\n[TEXT ERROR] ❌ Pipeline crashed:")
         traceback.print_exc()
         raise HTTPException(status_code=500, detail=f"[{type(e).__name__}] {str(e)}")
+
+
 @app.post("/tts/")
 async def generate_tts(
     text: str = Form(...),
@@ -167,12 +170,16 @@ async def generate_tts(
         if not text.strip():
             raise HTTPException(status_code=422, detail="Text cannot be empty.")
 
-        audio_out_path = os.path.join(AUDIO_DIR, f"{unique_id}.mp3")
+        # Clean the text here too — the /tts/ endpoint receives
+        # already-cleaned text from ask-text, but clean again
+        # just to be safe so nothing slips through
+        text = clean_text_for_tts(text)
 
+        audio_out_path = os.path.join(AUDIO_DIR, f"{unique_id}.mp3")
         print(f"[TTS ROUTE] Generating audio for language='{language}'")
         await text_to_speech(text, language, audio_out_path)
 
-        mtime = os.path.getmtime(audio_out_path)
+        mtime     = os.path.getmtime(audio_out_path)
         audio_url = f"audio/{unique_id}.mp3?t={mtime:.0f}"
 
         total_time = time.perf_counter() - total_start
@@ -191,4 +198,4 @@ async def generate_tts(
         raise HTTPException(
             status_code=500,
             detail=f"[{type(e).__name__}] {str(e)}"
-        )    
+        )
