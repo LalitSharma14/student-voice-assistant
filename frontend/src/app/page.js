@@ -8,22 +8,35 @@ function useTypewriter(text, speed = 120) {
   const [done, setDone] = useState(false);
 
   useEffect(() => {
-    if (!text) return;
+    if (!text) {
+      setDisplayed("");
+      setDone(true);
+      return;
+    }
+
     setDisplayed("");
     setDone(false);
+
     const words = text.split(" ");
-    let i = 0;
+    let index = 0;
+
     const interval = setInterval(() => {
-      if (i < words.length) {
-        setDisplayed((prev) => (prev ? prev + " " + words[i] : words[i]));
-        i++;
-      } else {
+      if (index >= words.length) {
         setDone(true);
         clearInterval(interval);
+        return;
       }
+
+      const currentWord = words[index];
+      index += 1;
+
+      setDisplayed((prev) =>
+        prev ? `${prev} ${currentWord}` : currentWord
+      );
     }, speed);
+
     return () => clearInterval(interval);
-  }, [text]);
+  }, [text, speed]);
 
   return { displayed, done };
 }
