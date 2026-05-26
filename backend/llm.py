@@ -58,14 +58,104 @@ def ask_llm(question: str, language: str, history: list[dict]) -> str:
         for m in history
     ]
 
+        # Give the model an explicit output-language rule based on backend detection.
+    # This is stricter than asking the model to infer language again.
+    if language == "en":
+        language_instruction = (
+            "Answer entirely in English only. "
+            "Do not use Hindi, Hinglish, or Devanagari words."
+        )
+    elif language == "hi":
+        language_instruction = (
+            "Answer entirely in simple Hindi using Devanagari script only. "
+            "Do not write Hindi words in English letters."
+        )
+    elif language == "hinglish":
+        language_instruction = (
+            "Answer in natural Hinglish using Roman English letters only. "
+            "Do not use Devanagari script."
+        )
+    else:
+        language_instruction = (
+            "Answer in the same language and script style as the student's question."
+        )
+
+        # Give the model an explicit output-language rule based on backend detection.
+    # This is stricter than asking the model to infer language again.
+    if language == "en":
+        language_instruction = (
+            "Answer entirely in English only. "
+            "Do not use Hindi, Hinglish, or Devanagari words."
+        )
+    elif language == "hi":
+        language_instruction = (
+            "Answer entirely in simple Hindi using Devanagari script only. "
+            "Do not write Hindi words in English letters."
+        )
+    elif language == "hinglish":
+        language_instruction = (
+            "Answer in natural Hinglish using Roman English letters only. "
+            "Do not use Devanagari script."
+        )
+    else:
+        language_instruction = (
+            "Answer in the same language and script style as the student's question."
+        )
+
+        # Give the model an explicit output-language rule based on backend detection.
+    # This is stricter than asking the model to infer language again.
+    if language == "en":
+        language_instruction = (
+            "Answer entirely in English only. "
+            "Do not use Hindi, Hinglish, or Devanagari words."
+        )
+    elif language == "hi":
+        language_instruction = (
+            "Answer entirely in simple Hindi using Devanagari script only. "
+            "Do not write Hindi words in English letters."
+        )
+    elif language == "hinglish":
+        language_instruction = (
+            "Answer in natural Hinglish using Roman English letters only. "
+            "Do not use Devanagari script."
+        )
+    else:
+        language_instruction = (
+            "Answer in the same language and script style as the student's question."
+        )
+
+    # Give the model an explicit output-language rule based on backend detection.
+    # This is stricter than asking the model to infer language again.
+    if language == "en":
+        language_instruction = (
+            "Answer entirely in English only. "
+            "Do not use Hindi, Hinglish, or Devanagari words."
+        )
+    elif language == "hi":
+        language_instruction = (
+            "Answer entirely in simple Hindi using Devanagari script only. "
+            "Do not write Hindi words in English letters."
+        )
+    elif language == "hinglish":
+        language_instruction = (
+            "Answer in natural Hinglish using Roman English letters only. "
+            "Do not use Devanagari script."
+        )
+    else:
+        language_instruction = (
+            "Answer in the same language and script style as the student's question."
+        )
+
     if is_followup_detail:
         user_message = f"""The student is asking for more detail or explanation on the previous topic.
-Give a detailed answer (4 to 6 sentences) with an example.
-Use the same language and script as this question.
+Give a detailed answer of 4 to 6 sentences with one simple example.
+{language_instruction}
+
 Student question: {question}"""
     else:
-        user_message = f"""Give a SHORT answer only — 2 to 3 sentences maximum — with one simple example if needed.
-Use the same language and script as this question.
+        user_message = f"""Give a SHORT answer only: 2 to 3 sentences maximum, with one simple example only if needed.
+{language_instruction}
+
 Student question: {question}"""
 
     # ── 1. Gemini with history ─────────────────────────
