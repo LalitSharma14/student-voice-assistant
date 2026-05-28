@@ -112,6 +112,12 @@ export default function Home() {
   const [error, setError]               = useState("");
   const [playingIndex, setPlayingIndex] = useState(null);
 
+  // ── Student learning profile ─────────────────────────────
+  const [classLevel, setClassLevel]         = useState("5");
+  const [board, setBoard]                   = useState("CBSE");
+  const [answerLanguage, setAnswerLanguage] = useState("en");
+  const [profileCompleted, setProfileCompleted] = useState(false);
+
   const mediaRecorderRef = useRef(null);
   const audioChunksRef   = useRef([]);
   const chatEndRef       = useRef(null);
@@ -170,12 +176,17 @@ export default function Home() {
       { id: crypto.randomUUID(), role: "user", text: question, isVoice: false },
     ]);
 
-    const formData = new FormData();
+        const formData = new FormData();
     formData.append("question", question);
     formData.append("history", JSON.stringify(history));
 
+    // Send selected student profile with every typed question
+    formData.append("class_level", classLevel);
+    formData.append("board", board);
+    formData.append("answer_language", answerLanguage);
+
     try {
-      const res = await fetch("/api/ask-text/", { method: "POST", body: formData });
+      const res = await fetch("/api/ask-text", { method: "POST", body: formData });
       if (!res.ok) {
         const err = await res.json();
         throw new Error(err.detail || "Server error");
@@ -202,7 +213,7 @@ export default function Home() {
       ttsFormData.append("language", data.language || "en");
 
       try {
-        const ttsRes = await fetch("/api/tts/", { method: "POST", body: ttsFormData });
+        const ttsRes = await fetch("/api/tts", { method: "POST", body: ttsFormData });
         if (!ttsRes.ok) return;
         const ttsData = await ttsRes.json();
 
@@ -235,7 +246,7 @@ export default function Home() {
     formData.append("history", JSON.stringify(history));
 
     try {
-      const res = await fetch("/api/ask/", { method: "POST", body: formData });
+      const res = await fetch("/api/ask", { method: "POST", body: formData });
       if (!res.ok) {
         const err = await res.json();
         throw new Error(err.detail || "Server error");
@@ -292,10 +303,204 @@ export default function Home() {
     }
   };
 
-  const stopRecording = () => {
+    const stopRecording = () => {
     mediaRecorderRef.current?.stop();
     setIsRecording(false);
   };
+
+  // ── Student profile setup screen ────────────────────────
+  if (!profileCompleted) {
+    return (
+      <div
+        style={{
+          fontFamily: "sans-serif",
+          background: "#f3f4f6",
+          minHeight: "100vh",
+        }}
+      >
+        {/* Navbar */}
+        <nav
+          style={{
+            background: "#1a56db",
+            padding: "14px 24px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
+        >
+          <span style={{ color: "#fff", fontSize: "18px", fontWeight: 500 }}>
+            🎓 Student Voice Assistant
+          </span>
+        </nav>
+
+        {/* Setup Card */}
+        <div
+          style={{
+            maxWidth: "460px",
+            margin: "0 auto",
+            padding: "56px 16px",
+          }}
+        >
+          <div
+            style={{
+              background: "#fff",
+              border: "1px solid #e5e7eb",
+              borderRadius: "18px",
+              padding: "30px 26px",
+              boxShadow: "0 4px 18px rgba(0, 0, 0, 0.05)",
+            }}
+          >
+            <div style={{ textAlign: "center", marginBottom: "28px" }}>
+              <div style={{ fontSize: "42px", marginBottom: "10px" }}>👋</div>
+
+              <h1
+                style={{
+                  fontSize: "24px",
+                  fontWeight: 600,
+                  color: "#111827",
+                  marginBottom: "8px",
+                }}
+              >
+                Welcome, Student
+              </h1>
+
+              <p
+                style={{
+                  fontSize: "14px",
+                  color: "#6b7280",
+                  lineHeight: "1.5",
+                }}
+              >
+                Select your learning profile to get explanations suitable for
+                you.
+              </p>
+            </div>
+
+            {/* Class Selection */}
+            <label
+              style={{
+                display: "block",
+                fontSize: "13px",
+                fontWeight: 500,
+                color: "#374151",
+                marginBottom: "6px",
+              }}
+            >
+              Select your class
+            </label>
+
+            <select
+              value={classLevel}
+              onChange={(e) => setClassLevel(e.target.value)}
+              style={{
+                width: "100%",
+                padding: "11px 12px",
+                marginBottom: "18px",
+                borderRadius: "9px",
+                border: "1px solid #d1d5db",
+                background: "#fff",
+                fontSize: "14px",
+                color: "#111827",
+                outline: "none",
+              }}
+            >
+              <option value="5">Class 5</option>
+              <option value="6">Class 6</option>
+              <option value="7">Class 7</option>
+              <option value="8">Class 8</option>
+              <option value="9">Class 9</option>
+              <option value="10">Class 10</option>
+            </select>
+
+            {/* Board Selection */}
+            <label
+              style={{
+                display: "block",
+                fontSize: "13px",
+                fontWeight: 500,
+                color: "#374151",
+                marginBottom: "6px",
+              }}
+            >
+              Select your board
+            </label>
+
+            <select
+              value={board}
+              onChange={(e) => setBoard(e.target.value)}
+              style={{
+                width: "100%",
+                padding: "11px 12px",
+                marginBottom: "18px",
+                borderRadius: "9px",
+                border: "1px solid #d1d5db",
+                background: "#fff",
+                fontSize: "14px",
+                color: "#111827",
+                outline: "none",
+              }}
+            >
+              <option value="CBSE">CBSE</option>
+              <option value="RBSE">RBSE</option>
+              <option value="ICSE">ICSE</option>
+              <option value="Other">Other</option>
+            </select>
+
+            {/* Language Selection */}
+            <label
+              style={{
+                display: "block",
+                fontSize: "13px",
+                fontWeight: 500,
+                color: "#374151",
+                marginBottom: "6px",
+              }}
+            >
+              Choose answer language
+            </label>
+
+            <select
+              value={answerLanguage}
+              onChange={(e) => setAnswerLanguage(e.target.value)}
+              style={{
+                width: "100%",
+                padding: "11px 12px",
+                marginBottom: "26px",
+                borderRadius: "9px",
+                border: "1px solid #d1d5db",
+                background: "#fff",
+                fontSize: "14px",
+                color: "#111827",
+                outline: "none",
+              }}
+            >
+              <option value="en">English</option>
+              <option value="hi">हिंदी</option>
+              <option value="hinglish">Hinglish</option>
+            </select>
+
+            {/* Start Button */}
+            <button
+              onClick={() => setProfileCompleted(true)}
+              style={{
+                width: "100%",
+                padding: "12px 16px",
+                border: "none",
+                borderRadius: "10px",
+                background: "#1a56db",
+                color: "#fff",
+                fontSize: "15px",
+                fontWeight: 500,
+                cursor: "pointer",
+              }}
+            >
+              Start Learning →
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div style={{ fontFamily: "sans-serif", background: "#f3f4f6", minHeight: "100vh" }}>
