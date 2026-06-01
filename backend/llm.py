@@ -25,13 +25,19 @@ Your rules:
 
 2. Keep explanations simple, clear, and age-appropriate for students aged 10 to 16 years.
 
-3. Response length rules:
-   - For a first question on a topic, give a short answer of 2 to 3 sentences maximum.
-   - Include one simple real-life example only if it is useful.
-   - For a follow-up question asking for more explanation or detail, give a detailed answer of 4 to 6 sentences, with one example and one encouraging closing line.
+3. Normal chatbot answer rules:
+   - For a normal first question, give a short answer of 2 to 3 sentences maximum.
+   - Include one simple real-life example only if useful.
    - Never make a simple answer unnecessarily long.
 
-4. Do not use bullet points unless the student explicitly asks for a list.
+4. Study-topic answer rules:
+   - If the question contains STUDY_TOPIC_MODE, treat it as a syllabus-topic explanation request.
+   - For STUDY_TOPIC_MODE, give a detailed answer in headings and bullet points.
+   - Do not give a short 4-5 line answer.
+   - Do not write one long paragraph.
+   - Explain step by step in easy language.
+   - Include important keywords and a short summary.
+   - Keep the answer suitable for the student's selected class level.
 
 5. Use the conversation history to answer follow-up questions correctly.
 
@@ -71,6 +77,8 @@ def build_language_instruction(language: str) -> str:
         "Output language instruction: Answer in the same language and script style "
         "requested for the student's current question."
     )
+
+
 def build_student_profile_instruction(
     class_level: Optional[str],
     board: Optional[str],
@@ -116,7 +124,7 @@ def build_student_profile_instruction(
         "but do not claim exact textbook wording unless textbook content is provided."
     )
 
-    return "\n".join(profile_lines) + "\n" + level_instruction + "\n" + board_instruction    
+    return "\n".join(profile_lines) + "\n" + level_instruction + "\n" + board_instruction
 
 
 def is_detail_question(question: str) -> bool:
@@ -149,6 +157,23 @@ def is_detail_question(question: str) -> bool:
     return any(keyword in normalized_question for keyword in detail_keywords)
 
 
+def is_study_topic_prompt(question: str) -> bool:
+    """
+    Detect syllabus-topic study prompts coming from the Syllabus Tracker.
+    """
+
+    normalized_question = question.lower()
+
+    return (
+        "study_topic_mode" in normalized_question
+        or (
+            "topic:" in normalized_question
+            and "chapter:" in normalized_question
+            and "answer format:" in normalized_question
+        )
+    )
+
+
 def build_user_message(
     question: str,
     language: str,
@@ -162,6 +187,58 @@ def build_user_message(
 
     language_instruction = build_language_instruction(language)
     profile_instruction = build_student_profile_instruction(class_level, board)
+    study_topic_prompt = is_study_topic_prompt(question)
+
+    if study_topic_prompt:
+        return f"""The student is studying a syllabus topic from the Syllabus Tracker.
+
+This is STUDY_TOPIC_MODE.
+
+Give a detailed, structured, point-wise explanation.
+Do not give a short 4-5 line answer.
+
+Required answer format:
+
+# Topic Explanation
+
+## 1. Meaning
+- Explain the topic in simple words.
+- Keep it suitable for the selected class level.
+
+## 2. Why It Is Important
+- Explain why this topic matters.
+- Connect it with daily life or school learning.
+
+## 3. Step-by-Step Explanation
+- Break the concept into easy steps.
+- Use short bullet points.
+- Avoid one long paragraph.
+- If the topic has a process, explain the process in order.
+
+## 4. Important Keywords
+- List important words with simple meanings.
+- Keep definitions short and easy.
+
+## 5. Simple Real-Life Example
+- Give one easy example that a school student can understand.
+
+## 6. Quick Revision Summary
+- Give 4 to 6 short revision points.
+
+Rules:
+- Use headings and bullet points.
+- Do not write one long paragraph.
+- Do not make the answer too short.
+- Make the answer useful for studying the topic.
+- Keep the explanation suitable for Class {class_level}.
+- If the topic is mathematical, write formulas clearly using readable symbols.
+
+{profile_instruction}
+
+{language_instruction}
+
+Student question:
+{question}"""
 
     if detailed:
         return f"""The student is asking for more detail or explanation on the previous topic.
@@ -180,6 +257,7 @@ Student question: {question}"""
 {language_instruction}
 
 Student question: {question}"""
+
 
 def get_fallback_message(language: str) -> str:
     """
@@ -210,12 +288,16 @@ def ask_llm(
         language: Output style decided by app.py: "en", "hi", or "hinglish".
         history: Previous conversation messages as dictionaries containing
                  role and content.
+        class_level: Student class selected in frontend.
+        board: Student education board selected in frontend.
 
     Returns:
         Generated answer string.
     """
 
     detailed = is_detail_question(question)
+    study_topic_prompt = is_study_topic_prompt(question)
+
     user_message = build_user_message(
         question,
         language,
@@ -223,6 +305,10 @@ def ask_llm(
         class_level,
         board,
     )
+
+    # Normal answers stay short.
+    # Syllabus topic explanations get more output space.
+    max_tokens = 2200 if study_topic_prompt else 600
 
     # Gemini history format
     gemini_history = [
@@ -241,7 +327,7 @@ def ask_llm(
                 system_instruction=SYSTEM_PROMPT,
                 generation_config=genai.GenerationConfig(
                     temperature=0.4,
-                    max_output_tokens=600,
+                    max_output_tokens=max_tokens,
                 ),
             )
 
@@ -254,6 +340,8 @@ def ask_llm(
                 f"[LLM] Used: {model_name} "
                 f"| language='{language}' "
                 f"| followup_detail={detailed} "
+                f"| study_topic={study_topic_prompt} "
+                f"| max_tokens={max_tokens} "
                 f"| tokens ~{len(answer.split())}"
             )
 
@@ -272,7 +360,11 @@ def ask_llm(
 
     # ── 2. Groq Fallback ──────────────────────────────────
     try:
-        print(f"[LLM] Using Groq fallback | language='{language}'")
+        print(
+            f"[LLM] Using Groq fallback "
+            f"| language='{language}' "
+            f"| study_topic={study_topic_prompt}"
+        )
 
         groq_messages = [
             {
@@ -300,7 +392,7 @@ def ask_llm(
             model="llama-3.3-70b-versatile",
             messages=groq_messages,
             temperature=0.4,
-            max_tokens=600,
+            max_tokens=max_tokens,
         )
 
         answer = completion.choices[0].message.content.strip()
@@ -308,6 +400,8 @@ def ask_llm(
         print(
             f"[LLM] Groq answered "
             f"| language='{language}' "
+            f"| study_topic={study_topic_prompt} "
+            f"| max_tokens={max_tokens} "
             f"| tokens ~{len(answer.split())}"
         )
 
