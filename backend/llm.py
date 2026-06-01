@@ -38,6 +38,9 @@ Your rules:
    - Explain step by step in easy language.
    - Include important keywords and a short summary.
    - Keep the answer suitable for the student's selected class level.
+   - Start definitions with Definition:.
+   - Start very important lines with Important:.
+   - Start memory-based lines with Remember:.
 
 5. Use the conversation history to answer follow-up questions correctly.
 
@@ -152,7 +155,7 @@ def is_detail_question(question: str) -> bool:
         "और बताओ",
     ]
 
-    normalized_question = question.lower()
+    normalized_question = (question or "").lower()
 
     return any(keyword in normalized_question for keyword in detail_keywords)
 
@@ -162,7 +165,7 @@ def is_study_topic_prompt(question: str) -> bool:
     Detect syllabus-topic study prompts coming from the Syllabus Tracker.
     """
 
-    normalized_question = question.lower()
+    normalized_question = (question or "").lower()
 
     return (
         "study_topic_mode" in normalized_question
@@ -185,6 +188,7 @@ def build_user_message(
     Build the current user prompt with language and student-level control.
     """
 
+    question = str(question or "").strip()
     language_instruction = build_language_instruction(language)
     profile_instruction = build_student_profile_instruction(class_level, board)
     study_topic_prompt = is_study_topic_prompt(question)
@@ -199,51 +203,51 @@ Do not give the answer in one long paragraph.
 Do not give a short 4-5 line answer.
 
 Output formatting rules:
-- Start definitions with **Definition:**.
-- Start very important lines with **Important:**.
-- Start memory-based points with **Remember:**.
-- Use Markdown formatting.
-- Use bold headings.
+- Use Markdown-style formatting.
+- Use bold-looking headings by writing section titles clearly.
 - Use bullet points under every heading.
-- Highlight important definitions using bold text.
+- Highlight important definitions by starting the line with Definition:.
+- Highlight important lines by starting the line with Important:.
+- Highlight memory-based lines by starting the line with Remember:.
 - Keep paragraphs very short.
 - Put every major idea on a new line.
 - Use blank lines between sections.
 
 Required answer format:
 
-**Topic Explanation**
+Topic Explanation
 
-**1. Meaning**
-- **Definition:** Explain the topic in simple words.
+1. Meaning
+- Definition: Explain the topic in simple words.
 - Give 1 or 2 easy points about what it means.
 
-**2. Why It Is Important**
-- Explain why this topic matters.
+2. Why It Is Important
+- Important: Explain why this topic matters.
 - Connect it with daily life or school learning.
 
-**3. Step-by-Step Explanation**
+3. Step-by-Step Explanation
 - Explain the concept step by step.
 - Use separate bullet points.
 - Do not combine all steps into one paragraph.
 
-**4. Important Keywords**
-- **Keyword 1:** Simple meaning.
-- **Keyword 2:** Simple meaning.
-- **Keyword 3:** Simple meaning.
+4. Important Keywords
+- Keyword 1: Simple meaning.
+- Keyword 2: Simple meaning.
+- Keyword 3: Simple meaning.
 
-**5. Simple Real-Life Example**
+5. Simple Real-Life Example
 - Give one easy example that a school student can understand.
 
-**6. Quick Revision Summary**
-- Give 4 to 6 short revision points.
+6. Quick Revision Summary
+- Remember: Give 4 to 6 short revision points.
 - Each point should be on a new line.
 
 Strict rules:
 - The answer must be in points, not paragraph form.
-- Every section must have a bold heading.
-- Definitions must start with **Definition:**.
-- Important words must be bold.
+- Every section must have a clear heading.
+- Definitions must start with Definition:.
+- Important points must start with Important:.
+- Memory/revision points must start with Remember:.
 - Keep the explanation suitable for Class {class_level}.
 - If the topic is mathematical, write formulas clearly on separate lines.
 
@@ -253,6 +257,28 @@ Strict rules:
 
 Student question:
 {question}"""
+
+    if detailed:
+        return f"""The student is asking for more detail or explanation on the previous topic.
+
+Give a detailed answer of 4 to 6 sentences with one simple example and one encouraging closing line.
+
+{profile_instruction}
+
+{language_instruction}
+
+Student question:
+{question}"""
+
+    return f"""Give a short answer only: 2 to 3 sentences maximum, with one simple example only if helpful.
+
+{profile_instruction}
+
+{language_instruction}
+
+Student question:
+{question}"""
+
 
 def get_fallback_message(language: str) -> str:
     """
@@ -268,47 +294,20 @@ def get_fallback_message(language: str) -> str:
     return "Sorry, I could not answer right now. Please try again."
 
 
-def ask_llm(
-    question: str,
-    language: str,
-    history: list[dict],
-    class_level: Optional[str] = None,
-    board: Optional[str] = None,
-) -> str:
+def clean_chat_history(history: list[dict]) -> list[dict]:
     """
-    Generate an answer for the student.
-
-    Args:
-        question: Current student question.
-        language: Output style decided by app.py: "en", "hi", or "hinglish".
-        history: Previous conversation messages as dictionaries containing
-                 role and content.
-        class_level: Student class selected in frontend.
-        board: Student education board selected in frontend.
-
-    Returns:
-        Generated answer string.
+    Keep useful previous history and remove empty/bad messages.
     """
 
-    detailed = is_detail_question(question)
-    study_topic_prompt = is_study_topic_prompt(question)
-
-    user_message = build_user_message(
-        question,
-        language,
-        detailed,
-        class_level,
-        board,
-    )
-
-    # Normal answers stay short.
-    # Syllabus topic explanations get more output space.
-    max_tokens = 2200 if study_topic_prompt else 600
-
-    # Clean history to avoid empty-content crashes while keeping useful context
     clean_history = []
 
-    for message in history[-8:]:  # keep last 8 messages only
+    if not isinstance(history, list):
+        return clean_history
+
+    for message in history[-8:]:
+        if not isinstance(message, dict):
+            continue
+
         role = message.get("role")
         content = str(message.get("content") or "").strip()
 
@@ -324,7 +323,65 @@ def ask_llm(
                 "content": content,
             }
         )
-    print(f"[LLM] Clean history messages: {len(clean_history)} / raw: {len(history)}")
+
+    return clean_history
+
+
+def ask_llm(
+    question: str,
+    language: str,
+    history: list[dict],
+    class_level: Optional[str] = None,
+    board: Optional[str] = None,
+) -> str:
+    """
+    Generate an answer for the student.
+    """
+
+    question = str(question or "").strip()
+
+    if not question:
+        return get_fallback_message(language)
+
+    detailed = is_detail_question(question)
+    study_topic_prompt = is_study_topic_prompt(question)
+
+    user_message = build_user_message(
+        question,
+        language,
+        detailed,
+        class_level,
+        board,
+    )
+
+    # Safety fallback: never send empty content to Gemini/Groq
+    if not user_message or not str(user_message).strip():
+        print("[LLM] WARNING: build_user_message returned empty. Using fallback prompt.")
+
+        language_instruction = build_language_instruction(language)
+        profile_instruction = build_student_profile_instruction(class_level, board)
+
+        user_message = f"""Answer the student's question clearly.
+
+{profile_instruction}
+
+{language_instruction}
+
+Student question:
+{question}"""
+
+    user_message = str(user_message).strip()
+
+    print(f"[LLM] User message length: {len(user_message)}")
+
+    # Normal answers stay short.
+    # Syllabus topic explanations get more output space.
+    max_tokens = 2200 if study_topic_prompt else 600
+
+    clean_history = clean_chat_history(history)
+
+    print(f"[LLM] Clean history messages: {len(clean_history)} / raw: {len(history) if isinstance(history, list) else 0}")
+
     # Gemini history format
     gemini_history = [
         {
@@ -349,7 +406,10 @@ def ask_llm(
             chat = gemini_model.start_chat(history=gemini_history)
             response = chat.send_message(user_message)
 
-            answer = response.text.strip()
+            answer = (response.text or "").strip()
+
+            if not answer:
+                raise ValueError("Gemini returned an empty answer")
 
             print(
                 f"[LLM] Used: {model_name} "
@@ -411,6 +471,9 @@ def ask_llm(
         )
 
         answer = completion.choices[0].message.content.strip()
+
+        if not answer:
+            raise ValueError("Groq returned an empty answer")
 
         print(
             f"[LLM] Groq answered "
