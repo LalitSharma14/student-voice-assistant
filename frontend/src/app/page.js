@@ -193,9 +193,7 @@ function useTypewriter(text, speed = 120) {
       const currentWord = words[index];
       index += 1;
 
-      setDisplayed((prev) =>
-        prev ? `${prev} ${currentWord}` : currentWord
-      );
+      setDisplayed((prev) => (prev ? `${prev} ${currentWord}` : currentWord));
     }, speed);
 
     return () => clearInterval(interval);
@@ -339,6 +337,7 @@ export default function Home() {
   const [textInput, setTextInput] = useState("");
   const [isRecording, setIsRecording] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [isTranscribing, setIsTranscribing] = useState(false);
   const [error, setError] = useState("");
   const [playingIndex, setPlayingIndex] = useState(null);
 
@@ -368,6 +367,9 @@ export default function Home() {
   const audioChunksRef = useRef([]);
   const chatEndRef = useRef(null);
   const audioRef = useRef(null);
+  const abortControllerRef = useRef(null);
+  const cancelledRef = useRef(false);
+  const pendingVoiceDataRef = useRef(null);
 
   useEffect(() => {
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -375,6 +377,7 @@ export default function Home() {
 
   const stopAudio = () => {
     if (audioRef.current) {
+      audioRef.current.onended = null;
       audioRef.current.pause();
       audioRef.current.currentTime = 0;
       audioRef.current = null;
@@ -384,11 +387,29 @@ export default function Home() {
 
   const playAudio = (audioUrl, index) => {
     stopAudio();
+
     const audio = new Audio(`/api/${audioUrl}`);
     audioRef.current = audio;
-    setPlayingIndex(index);
-    audio.play();
-    audio.onended = () => setPlayingIndex(null);
+
+    setTimeout(() => {
+      if (audioRef.current !== audio) return;
+
+      const playPromise = audio.play();
+
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            setPlayingIndex(index);
+            audio.onended = () => setPlayingIndex(null);
+          })
+          .catch((e) => {
+            if (e.name !== "AbortError") {
+              console.error("Audio play error:", e);
+            }
+            setPlayingIndex(null);
+          });
+      }
+    }, 80);
   };
 
   const updateHistory = (question, answer) => {
@@ -404,12 +425,13 @@ export default function Home() {
     setMessages([]);
     setHistory([]);
     setError("");
+    pendingVoiceDataRef.current = null;
   };
 
   const handleStudyTopic = (subtopic) => {
-  if (!selectedSubject || !currentChapter || !subtopic) return;
+    if (!selectedSubject || !currentChapter || !subtopic) return;
 
-  const prompt = `STUDY_TOPIC_MODE
+    const prompt = `STUDY_TOPIC_MODE
 
 Topic: ${subtopic}
 Chapter: ${currentChapter.title}
@@ -434,9 +456,23 @@ Rules:
 - Keep the language easy for Class ${classLevel}.
 - Follow the selected answer language.`;
 
-  setTextInput(prompt);
-  setActiveTab("chat");
-};
+    pendingVoiceDataRef.current = null;
+    setTextInput(prompt);
+    setActiveTab("chat");
+  };
+
+  const cancelProcessing = () => {
+    cancelledRef.current = true;
+
+    if (abortControllerRef.current) {
+      abortControllerRef.current.abort();
+      abortControllerRef.current = null;
+    }
+
+    setIsLoading(false);
+    setIsTranscribing(false);
+    setError("");
+  };
 
   // ── Text question ──────────────────────────────────
   const handleTextSend = async () => {
@@ -457,7 +493,6 @@ Rules:
     const formData = new FormData();
     formData.append("question", question);
     formData.append("history", JSON.stringify(history));
-
     formData.append("class_level", classLevel);
     formData.append("board", board);
     formData.append("answer_language", answerLanguage);
@@ -519,68 +554,107 @@ Rules:
     }
   };
 
-  // ── Voice question ─────────────────────────────────
-  const sendAudioToBackend = async (audioBlob) => {
-    setIsLoading(true);
-    setError("");
+  // ── Voice: stop recording, transcribe, then show text in input box ─
+  const stopRecordingAndTranscribe = () => {
+    if (!mediaRecorderRef.current) return;
 
-    const assistantId = crypto.randomUUID();
+    mediaRecorderRef.current.onstop = async () => {
+      const blob = new Blob(audioChunksRef.current, { type: "audio/webm" });
+      const stream = mediaRecorderRef.current?.stream;
 
-    const formData = new FormData();
-    formData.append("file", audioBlob, "recording.webm");
-    formData.append("history", JSON.stringify(history));
+      if (stream) stream.getTracks().forEach((t) => t.stop());
 
-    try {
-      const res = await fetch("/api/ask", {
-        method: "POST",
-        body: formData,
-      });
+      setIsRecording(false);
+      setIsTranscribing(true);
+      cancelledRef.current = false;
+      abortControllerRef.current = new AbortController();
 
-      if (!res.ok) {
-        const err = await res.json();
-        throw new Error(err.detail || "Server error");
-      }
+      const formData = new FormData();
+      formData.append("file", blob, "recording.webm");
+      formData.append("history", JSON.stringify(history));
 
-      const data = await res.json();
+      try {
+        const res = await fetch("/api/ask", {
+          method: "POST",
+          body: formData,
+          signal: abortControllerRef.current.signal,
+        });
 
-      setMessages((prev) => {
-        const aiIndex = prev.length + 1;
+        if (cancelledRef.current) return;
 
-        const updated = [
-          ...prev,
-          {
-            id: crypto.randomUUID(),
-            role: "user",
-            text: data.question,
-            isVoice: true,
-          },
-          {
-            id: assistantId,
-            role: "assistant",
-            text: data.answer,
-            audioUrl: data.audio_url,
-            typing: false,
-          },
-        ];
-
-        if (data.audio_url) {
-          setTimeout(() => playAudio(data.audio_url, aiIndex), 200);
+        if (!res.ok) {
+          const err = await res.json();
+          throw new Error(err.detail || "Server error");
         }
 
-        return updated;
-      });
+        const data = await res.json();
 
-      updateHistory(data.question, data.answer);
-    } catch (e) {
-      setError(e.message);
-    } finally {
-      setIsLoading(false);
+        setIsTranscribing(false);
+        setTextInput(data.question);
+        pendingVoiceDataRef.current = data;
+      } catch (e) {
+        if (e.name === "AbortError" || cancelledRef.current) {
+          setIsTranscribing(false);
+          return;
+        }
+
+        setIsTranscribing(false);
+        setError(e.message);
+      }
+    };
+
+    mediaRecorderRef.current.stop();
+  };
+
+  // ── Send button: voice pending data or normal text ─
+  const handleSend = async () => {
+    if (!textInput.trim() || isLoading) return;
+
+    if (pendingVoiceDataRef.current) {
+      const data = pendingVoiceDataRef.current;
+      const question = textInput.trim();
+      pendingVoiceDataRef.current = null;
+
+      setTextInput("");
+      setError("");
+
+      const assistantId = crypto.randomUUID();
+
+      setMessages((prev) => [
+        ...prev,
+        { id: crypto.randomUUID(), role: "user", text: question, isVoice: true },
+        {
+          id: assistantId,
+          role: "assistant",
+          text: data.answer,
+          audioUrl: data.audio_url,
+          typing: false,
+        },
+      ]);
+
+      updateHistory(question, data.answer);
+
+      if (data.audio_url) {
+        setTimeout(() => {
+          setMessages((prev) => {
+            const aiIndex = prev.findIndex((m) => m.id === assistantId);
+            if (aiIndex !== -1) playAudio(data.audio_url, aiIndex);
+            return prev;
+          });
+        }, 200);
+      }
+
+      return;
     }
+
+    await handleTextSend();
   };
 
   const startRecording = async () => {
     setError("");
     stopAudio();
+    pendingVoiceDataRef.current = null;
+    setTextInput("");
 
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
@@ -593,12 +667,6 @@ Rules:
         if (e.data.size > 0) audioChunksRef.current.push(e.data);
       };
 
-      recorder.onstop = () => {
-        const blob = new Blob(audioChunksRef.current, { type: "audio/webm" });
-        stream.getTracks().forEach((t) => t.stop());
-        sendAudioToBackend(blob);
-      };
-
       recorder.start();
       setIsRecording(true);
     } catch (e) {
@@ -606,12 +674,7 @@ Rules:
     }
   };
 
-  const stopRecording = () => {
-    mediaRecorderRef.current?.stop();
-    setIsRecording(false);
-  };
-
-  // ── Student profile setup screen ────────────────────────
+  // ── Profile screen ─────────────────────────────────
   if (!profileCompleted) {
     return (
       <div
@@ -635,25 +698,18 @@ Rules:
           </span>
         </nav>
 
-        <div
-          style={{
-            maxWidth: "460px",
-            margin: "0 auto",
-            padding: "56px 16px",
-          }}
-        >
+        <div style={{ maxWidth: "460px", margin: "0 auto", padding: "56px 16px" }}>
           <div
             style={{
               background: "#fff",
               border: "1px solid #e5e7eb",
               borderRadius: "18px",
               padding: "30px 26px",
-              boxShadow: "0 4px 18px rgba(0, 0, 0, 0.05)",
+              boxShadow: "0 4px 18px rgba(0,0,0,0.05)",
             }}
           >
             <div style={{ textAlign: "center", marginBottom: "28px" }}>
               <div style={{ fontSize: "42px", marginBottom: "10px" }}>👋</div>
-
               <h1
                 style={{
                   fontSize: "24px",
@@ -664,7 +720,6 @@ Rules:
               >
                 Welcome, Student
               </h1>
-
               <p
                 style={{
                   fontSize: "14px",
@@ -672,8 +727,7 @@ Rules:
                   lineHeight: "1.5",
                 }}
               >
-                Select your learning profile to get explanations suitable for
-                you.
+                Select your learning profile to get explanations suitable for you.
               </p>
             </div>
 
@@ -688,7 +742,6 @@ Rules:
             >
               Select your class
             </label>
-
             <select
               value={classLevel}
               onChange={(e) => setClassLevel(e.target.value)}
@@ -723,7 +776,6 @@ Rules:
             >
               Select your board
             </label>
-
             <select
               value={board}
               onChange={(e) => setBoard(e.target.value)}
@@ -756,7 +808,6 @@ Rules:
             >
               Choose answer language
             </label>
-
             <select
               value={answerLanguage}
               onChange={(e) => setAnswerLanguage(e.target.value)}
@@ -836,7 +887,6 @@ Rules:
           >
             Login
           </button>
-
           <button
             style={{
               padding: "7px 16px",
@@ -868,7 +918,6 @@ Rules:
           >
             Welcome, Student 👋
           </h1>
-
           <p style={{ fontSize: "14px", color: "#6b7280" }}>
             Ask anything in Hindi, English, or Hinglish — Class {classLevel} ·{" "}
             {board}
@@ -913,8 +962,7 @@ Rules:
               cursor: "pointer",
               fontSize: "14px",
               fontWeight: 500,
-              background:
-                activeTab === "syllabus" ? "#1a56db" : "transparent",
+              background: activeTab === "syllabus" ? "#1a56db" : "transparent",
               color: activeTab === "syllabus" ? "#fff" : "#374151",
             }}
           >
@@ -932,6 +980,7 @@ Rules:
               overflow: "hidden",
             }}
           >
+            {/* Card Header */}
             <div
               style={{
                 padding: "12px 16px",
@@ -982,6 +1031,7 @@ Rules:
               )}
             </div>
 
+            {/* Messages */}
             <div
               style={{
                 height: "380px",
@@ -1106,6 +1156,7 @@ Rules:
               <div ref={chatEndRef} />
             </div>
 
+            {/* Error */}
             {error && (
               <div
                 style={{
@@ -1122,6 +1173,54 @@ Rules:
               </div>
             )}
 
+            {/* Transcribing status with cancel button */}
+            {isTranscribing && (
+              <div
+                style={{
+                  margin: "0 16px 12px",
+                  padding: "10px 14px",
+                  background: "#eff6ff",
+                  border: "1px solid #bfdbfe",
+                  borderRadius: "8px",
+                  fontSize: "13px",
+                  color: "#1a56db",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                }}
+              >
+                <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                  <div
+                    style={{
+                      width: "8px",
+                      height: "8px",
+                      borderRadius: "50%",
+                      background: "#1a56db",
+                      animation: "pulse 1s infinite",
+                    }}
+                  />
+                  Processing your voice...
+                </div>
+
+                <button
+                  onClick={cancelProcessing}
+                  style={{
+                    fontSize: "12px",
+                    padding: "4px 10px",
+                    borderRadius: "20px",
+                    border: "1px solid #bfdbfe",
+                    background: "#fff",
+                    color: "#1a56db",
+                    cursor: "pointer",
+                    fontWeight: 500,
+                  }}
+                >
+                  ✕ Cancel
+                </button>
+              </div>
+            )}
+
+            {/* Recording bar */}
             {isRecording && (
               <div
                 style={{
@@ -1143,12 +1242,31 @@ Rules:
                     height: "8px",
                     borderRadius: "50%",
                     background: "#dc2626",
+                    animation: "pulse 1s infinite",
                   }}
                 />
-                Recording... press mic again to stop and send
+                Recording... press mic again to stop
               </div>
             )}
 
+            {/* Transcribed text hint */}
+            {!isRecording &&
+              !isTranscribing &&
+              pendingVoiceDataRef.current &&
+              textInput && (
+                <div
+                  style={{
+                    margin: "0 16px 8px",
+                    fontSize: "12px",
+                    color: "#6b7280",
+                    padding: "0 4px",
+                  }}
+                >
+                  ✏️ Review or edit your question, then press Send
+                </div>
+              )}
+
+            {/* Input area */}
             <div
               style={{
                 padding: "14px 16px",
@@ -1160,13 +1278,23 @@ Rules:
             >
               <input
                 type="text"
-                placeholder="Type your question here..."
+                placeholder={
+                  isTranscribing
+                    ? "Transcribing your voice..."
+                    : "Type your question here..."
+                }
                 value={textInput}
-                onChange={(e) => setTextInput(e.target.value)}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter") handleTextSend();
+                onChange={(e) => {
+                  setTextInput(e.target.value);
+
+                  if (pendingVoiceDataRef.current) {
+                    pendingVoiceDataRef.current = null;
+                  }
                 }}
-                disabled={isLoading || isRecording}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") handleSend();
+                }}
+                disabled={isLoading || isRecording || isTranscribing}
                 style={{
                   flex: 1,
                   padding: "10px 16px",
@@ -1174,14 +1302,19 @@ Rules:
                   borderRadius: "24px",
                   fontSize: "14px",
                   color: "#111827",
-                  background: "#f9fafb",
+                  background: isTranscribing ? "#f3f4f6" : "#f9fafb",
                   outline: "none",
                 }}
               />
 
               <button
-                onClick={handleTextSend}
-                disabled={isLoading || isRecording || !textInput.trim()}
+                onClick={handleSend}
+                disabled={
+                  isLoading ||
+                  isRecording ||
+                  isTranscribing ||
+                  !textInput.trim()
+                }
                 style={{
                   width: "38px",
                   height: "38px",
@@ -1195,7 +1328,12 @@ Rules:
                   alignItems: "center",
                   justifyContent: "center",
                   opacity:
-                    isLoading || isRecording || !textInput.trim() ? 0.4 : 1,
+                    isLoading ||
+                    isRecording ||
+                    isTranscribing ||
+                    !textInput.trim()
+                      ? 0.4
+                      : 1,
                 }}
                 title="Send"
               >
@@ -1203,8 +1341,10 @@ Rules:
               </button>
 
               <button
-                onClick={isRecording ? stopRecording : startRecording}
-                disabled={isLoading}
+                onClick={
+                  isRecording ? stopRecordingAndTranscribe : startRecording
+                }
+                disabled={isLoading || isTranscribing}
                 style={{
                   width: "38px",
                   height: "38px",
@@ -1217,7 +1357,7 @@ Rules:
                   justifyContent: "center",
                   background: isRecording ? "#dc2626" : "#f0fdf4",
                   color: isRecording ? "#fff" : "#16a34a",
-                  opacity: isLoading ? 0.4 : 1,
+                  opacity: isLoading || isTranscribing ? 0.4 : 1,
                 }}
                 title={isRecording ? "Stop recording" : "Start recording"}
               >
@@ -1251,7 +1391,6 @@ Rules:
           >
             <div style={{ textAlign: "center", marginBottom: "22px" }}>
               <div style={{ fontSize: "40px", marginBottom: "8px" }}>📚</div>
-
               <h2
                 style={{
                   fontSize: "22px",
@@ -1262,7 +1401,6 @@ Rules:
               >
                 Syllabus Tracker
               </h2>
-
               <p style={{ fontSize: "14px", color: "#6b7280" }}>
                 Class {classLevel} · {board} · Choose a topic to study
               </p>
@@ -1305,7 +1443,6 @@ Rules:
                       <div style={{ fontSize: "34px", marginBottom: "10px" }}>
                         {subjectIcon}
                       </div>
-
                       <div
                         style={{
                           fontSize: "16px",
@@ -1316,7 +1453,6 @@ Rules:
                       >
                         {subject}
                       </div>
-
                       <div style={{ fontSize: "12px", color: "#6b7280" }}>
                         {currentSyllabus[subject].length} chapters
                       </div>
@@ -1402,7 +1538,6 @@ Rules:
                         >
                           {chapter.title}
                         </span>
-
                         <span
                           style={{
                             display: "block",
@@ -1544,6 +1679,11 @@ Rules:
         @keyframes blink {
           0%, 100% { opacity: 1; }
           50% { opacity: 0; }
+        }
+
+        @keyframes pulse {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0.3; }
         }
       `}</style>
     </div>
