@@ -305,11 +305,10 @@ def ask_llm(
     # Syllabus topic explanations get more output space.
     max_tokens = 2200 if study_topic_prompt else 600
 
-    # Gemini history format
-        # Clean history to avoid empty messages crashing Gemini/Groq
+    # Clean history to avoid empty-content crashes while keeping useful context
     clean_history = []
 
-    for message in history:
+    for message in history[-8:]:  # keep last 8 messages only
         role = message.get("role")
         content = str(message.get("content") or "").strip()
 
@@ -325,7 +324,7 @@ def ask_llm(
                 "content": content,
             }
         )
-
+    print(f"[LLM] Clean history messages: {len(clean_history)} / raw: {len(history)}")
     # Gemini history format
     gemini_history = [
         {
