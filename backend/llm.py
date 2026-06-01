@@ -306,12 +306,33 @@ def ask_llm(
     max_tokens = 2200 if study_topic_prompt else 600
 
     # Gemini history format
+        # Clean history to avoid empty messages crashing Gemini/Groq
+    clean_history = []
+
+    for message in history:
+        role = message.get("role")
+        content = str(message.get("content") or "").strip()
+
+        if role not in {"user", "assistant"}:
+            continue
+
+        if not content:
+            continue
+
+        clean_history.append(
+            {
+                "role": role,
+                "content": content,
+            }
+        )
+
+    # Gemini history format
     gemini_history = [
         {
             "role": "user" if message["role"] == "user" else "model",
             "parts": [message["content"]],
         }
-        for message in history
+        for message in clean_history
     ]
 
     # ── 1. Gemini Primary Models ──────────────────────────
@@ -368,7 +389,7 @@ def ask_llm(
             }
         ]
 
-        for message in history:
+        for message in clean_history:
             groq_messages.append(
                 {
                     "role": message["role"],
