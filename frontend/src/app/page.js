@@ -253,22 +253,49 @@ function AssistantBubble({ msg, index, playingIndex, playAudio, stopAudio }) {
           color: "#111827",
         }}
       >
-        <div>
-          {textToShow}
-          {msg.typing && !done && (
-            <span
-              style={{
-                display: "inline-block",
-                width: "2px",
-                height: "14px",
-                background: "#1a56db",
-                marginLeft: "3px",
-                verticalAlign: "middle",
-                animation: "blink 0.8s infinite",
-              }}
-            />
-          )}
-        </div>
+       <div
+  style={{
+    whiteSpace: "pre-wrap",
+    lineHeight: "1.7",
+  }}
+>
+  {textToShow.split("\n").map((line, lineIndex) => {
+    const cleanLine = line.replace(/\*\*/g, "");
+
+    const isHighlightedLine =
+      cleanLine.toLowerCase().includes("definition:") ||
+      cleanLine.toLowerCase().includes("important:") ||
+      cleanLine.toLowerCase().includes("remember:") ||
+      cleanLine.toLowerCase().includes("note:");
+
+    return (
+      <div
+        key={lineIndex}
+        style={{
+          color: isHighlightedLine ? "#1a56db" : "inherit",
+          fontWeight: isHighlightedLine ? 600 : "inherit",
+          marginBottom: line.trim() === "" ? "8px" : "4px",
+        }}
+      >
+        {cleanLine}
+      </div>
+    );
+  })}
+
+      {msg.typing && !done && (
+        <span
+          style={{
+          display: "inline-block",
+          width: "2px",
+          height: "14px",
+          background: "#1a56db",
+          marginLeft: "3px",
+          verticalAlign: "middle",
+          animation: "blink 0.8s infinite",
+        }}
+    />
+  )}
+</div>
 
         {msg.typing && done && !msg.audioUrl && (
           <div

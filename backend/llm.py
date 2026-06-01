@@ -194,44 +194,58 @@ def build_user_message(
 
 This is STUDY_TOPIC_MODE.
 
-Give a detailed, structured, point-wise explanation.
+You must give a detailed, structured, point-wise explanation.
+Do not give the answer in one long paragraph.
 Do not give a short 4-5 line answer.
+
+Output formatting rules:
+- Start definitions with **Definition:**.
+- Start very important lines with **Important:**.
+- Start memory-based points with **Remember:**.
+- Use Markdown formatting.
+- Use bold headings.
+- Use bullet points under every heading.
+- Highlight important definitions using bold text.
+- Keep paragraphs very short.
+- Put every major idea on a new line.
+- Use blank lines between sections.
 
 Required answer format:
 
-# Topic Explanation
+**Topic Explanation**
 
-## 1. Meaning
-- Explain the topic in simple words.
-- Keep it suitable for the selected class level.
+**1. Meaning**
+- **Definition:** Explain the topic in simple words.
+- Give 1 or 2 easy points about what it means.
 
-## 2. Why It Is Important
+**2. Why It Is Important**
 - Explain why this topic matters.
 - Connect it with daily life or school learning.
 
-## 3. Step-by-Step Explanation
-- Break the concept into easy steps.
-- Use short bullet points.
-- Avoid one long paragraph.
-- If the topic has a process, explain the process in order.
+**3. Step-by-Step Explanation**
+- Explain the concept step by step.
+- Use separate bullet points.
+- Do not combine all steps into one paragraph.
 
-## 4. Important Keywords
-- List important words with simple meanings.
-- Keep definitions short and easy.
+**4. Important Keywords**
+- **Keyword 1:** Simple meaning.
+- **Keyword 2:** Simple meaning.
+- **Keyword 3:** Simple meaning.
 
-## 5. Simple Real-Life Example
+**5. Simple Real-Life Example**
 - Give one easy example that a school student can understand.
 
-## 6. Quick Revision Summary
+**6. Quick Revision Summary**
 - Give 4 to 6 short revision points.
+- Each point should be on a new line.
 
-Rules:
-- Use headings and bullet points.
-- Do not write one long paragraph.
-- Do not make the answer too short.
-- Make the answer useful for studying the topic.
+Strict rules:
+- The answer must be in points, not paragraph form.
+- Every section must have a bold heading.
+- Definitions must start with **Definition:**.
+- Important words must be bold.
 - Keep the explanation suitable for Class {class_level}.
-- If the topic is mathematical, write formulas clearly using readable symbols.
+- If the topic is mathematical, write formulas clearly on separate lines.
 
 {profile_instruction}
 
@@ -239,25 +253,6 @@ Rules:
 
 Student question:
 {question}"""
-
-    if detailed:
-        return f"""The student is asking for more detail or explanation on the previous topic.
-Give a detailed answer of 4 to 6 sentences with one simple example and one encouraging closing line.
-
-{profile_instruction}
-
-{language_instruction}
-
-Student question: {question}"""
-
-    return f"""Give a short answer only: 2 to 3 sentences maximum, with one simple example only if helpful.
-
-{profile_instruction}
-
-{language_instruction}
-
-Student question: {question}"""
-
 
 def get_fallback_message(language: str) -> str:
     """
