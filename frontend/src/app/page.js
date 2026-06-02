@@ -1,7 +1,8 @@
+
 "use client";
-
+ 
 import { useState, useRef, useEffect } from "react";
-
+ 
 import { auth, db } from "../lib/firebase";
 import {
   createUserWithEmailAndPassword,
@@ -17,7 +18,7 @@ import {
   collection,
   serverTimestamp,
 } from "firebase/firestore";
-
+ 
 // ── Sample syllabus data for Phase 1 ───────────────────────
 const SYLLABUS_DATA = {
   "5": {
@@ -60,7 +61,7 @@ const SYLLABUS_DATA = {
           ],
         },
       ],
-
+ 
       Maths: [
         {
           title: "Numbers and Numeration",
@@ -99,7 +100,7 @@ const SYLLABUS_DATA = {
           ],
         },
       ],
-
+ 
       English: [
         {
           title: "Reading Comprehension",
@@ -138,7 +139,7 @@ const SYLLABUS_DATA = {
           ],
         },
       ],
-
+ 
       SST: [
         {
           title: "Our Country India",
@@ -180,7 +181,7 @@ const SYLLABUS_DATA = {
     },
   },
 };
-
+ 
 const STATUS_OPTIONS = [
   "Not Started",
   "In Progress",
@@ -188,46 +189,46 @@ const STATUS_OPTIONS = [
   "Revision Done",
   "Test Done",
 ];
-
+ 
 const COMPLETED_STATUSES = ["Completed", "Revision Done", "Test Done"];
-
+ 
 // ── Typewriter hook ────────────────────────────────────────
 function useTypewriter(text, speed = 120) {
   const [displayed, setDisplayed] = useState("");
   const [done, setDone] = useState(false);
-
+ 
   useEffect(() => {
     if (!text) {
       setDisplayed("");
       setDone(true);
       return;
     }
-
+ 
     setDisplayed("");
     setDone(false);
-
+ 
     const words = text.split(" ");
     let index = 0;
-
+ 
     const interval = setInterval(() => {
       if (index >= words.length) {
         setDone(true);
         clearInterval(interval);
         return;
       }
-
+ 
       const currentWord = words[index];
       index += 1;
-
+ 
       setDisplayed((prev) => (prev ? `${prev} ${currentWord}` : currentWord));
     }, speed);
-
+ 
     return () => clearInterval(interval);
   }, [text, speed]);
-
+ 
   return { displayed, done };
 }
-
+ 
 // ── Assistant bubble with typewriter ──────────────────────
 function AssistantBubble({
   msg,
@@ -240,22 +241,22 @@ function AssistantBubble({
   const { displayed, done } = useTypewriter(msg.typing ? msg.text : "");
   const [audioReady, setAudioReady] = useState(false);
   const ttsStarted = useRef(false);
-
+ 
   useEffect(() => {
   if (done && msg.typing) {
     onTypingComplete?.(msg.id);
   }
 }, [done, msg.typing, msg.id, onTypingComplete]);
-
+ 
   useEffect(() => {
     if (!msg.typing && msg.audioUrl && !ttsStarted.current) {
       ttsStarted.current = true;
       setAudioReady(true);
     }
   }, [msg.audioUrl, msg.typing]);
-
+ 
   const textToShow = msg.typing ? displayed : msg.text;
-
+ 
   return (
     <div style={{ display: "flex", gap: "8px", alignItems: "flex-end" }}>
       <div
@@ -275,7 +276,7 @@ function AssistantBubble({
       >
         AI
       </div>
-
+ 
       <div
         style={{
           maxWidth: "78%",
@@ -296,19 +297,39 @@ function AssistantBubble({
 >
   {textToShow.split("\n").map((line, lineIndex) => {
     const cleanLine = line.replace(/\*\*/g, "");
-
-    const isHighlightedLine =
-      cleanLine.toLowerCase().includes("definition:") ||
-      cleanLine.toLowerCase().includes("important:") ||
-      cleanLine.toLowerCase().includes("remember:") ||
-      cleanLine.toLowerCase().includes("note:");
-
+    const lowerLine = cleanLine.toLowerCase().trim();
+ 
+    // Only headings are blue. Important lines stay black but bold.
+    const isHeadingLine =
+      lowerLine === "topic explanation" ||
+      lowerLine === "quick revision" ||
+      lowerLine === "quick meaning" ||
+      lowerLine === "key points" ||
+      lowerLine === "important terms" ||
+      lowerLine === "must remember" ||
+      lowerLine === "quick flowchart" ||
+      lowerLine === "simple diagram" ||
+      lowerLine === "exam points" ||
+      lowerLine === "quick summary" ||
+      lowerLine === "meaning" ||
+      lowerLine === "why it is important" ||
+      lowerLine === "step-by-step explanation" ||
+      lowerLine === "important keywords" ||
+      lowerLine === "simple real-life example" ||
+      /^\d+\.\s/.test(lowerLine);
+ 
+    const isImportantLine =
+      lowerLine.includes("definition:") ||
+      lowerLine.includes("important:") ||
+      lowerLine.includes("remember:") ||
+      lowerLine.includes("note:");
+ 
     return (
       <div
         key={lineIndex}
         style={{
-          color: isHighlightedLine ? "#1a56db" : "inherit",
-          fontWeight: isHighlightedLine ? 600 : "inherit",
+          color: isHeadingLine ? "#1a56db" : "inherit",
+          fontWeight: isHeadingLine || isImportantLine ? 700 : "inherit",
           marginBottom: line.trim() === "" ? "8px" : "4px",
         }}
       >
@@ -316,7 +337,7 @@ function AssistantBubble({
       </div>
     );
   })}
-
+ 
       {msg.typing && !done && (
         <span
           style={{
@@ -331,7 +352,7 @@ function AssistantBubble({
     />
   )}
 </div>
-
+ 
         {msg.typing && done && !msg.audioUrl && (
           <div
             style={{
@@ -346,7 +367,7 @@ function AssistantBubble({
             <span>⏳</span> Preparing audio...
           </div>
         )}
-
+ 
         {audioReady && msg.audioUrl && (
           <div style={{ marginTop: "8px" }}>
             {playingIndex === index ? (
@@ -392,7 +413,7 @@ function AssistantBubble({
     </div>
   );
 }
-
+ 
 export default function Home() {
   const [messages, setMessages] = useState([]);
   const [history, setHistory] = useState([]);
@@ -402,80 +423,81 @@ export default function Home() {
   const [isTranscribing, setIsTranscribing] = useState(false);
   const [error, setError] = useState("");
   const [playingIndex, setPlayingIndex] = useState(null);
-
+ 
   // ── Main app tabs ────────────────────────────────────────
   const [activeTab, setActiveTab] = useState("chat");
-
+ 
   // ── Syllabus tracker selection states ────────────────────
   const [selectedSubject, setSelectedSubject] = useState(null);
   const [selectedChapter, setSelectedChapter] = useState(null);
   const [topicProgress, setTopicProgress] = useState({});
+  const [revisionProgress, setRevisionProgress] = useState({});
   const [progressLoading, setProgressLoading] = useState(false);
-
-
+ 
+ 
     // ── Firebase auth states ────────────────────────────────
   const [user, setUser] = useState(null);
   const [userProfile, setUserProfile] = useState(null);
   const [authMode, setAuthMode] = useState("login"); // login | signup
   const [authLoading, setAuthLoading] = useState(true);
   const [authError, setAuthError] = useState("");
-
+ 
   const [signupName, setSignupName] = useState("");
   const [signupEmail, setSignupEmail] = useState("");
   const [signupMobile, setSignupMobile] = useState("");
   const [signupPassword, setSignupPassword] = useState("");
   const [signupClassLevel, setSignupClassLevel] = useState("5");
   const [signupBoard, setSignupBoard] = useState("CBSE");
-
+ 
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
-
+ 
   // ── Student learning profile ─────────────────────────────
   const [classLevel, setClassLevel] = useState("5");
   const [board, setBoard] = useState("CBSE");
   const [answerLanguage, setAnswerLanguage] = useState("en");
   const [profileCompleted, setProfileCompleted] = useState(false);
-
+ 
   const currentSyllabus =
     SYLLABUS_DATA[classLevel]?.[board] || SYLLABUS_DATA["5"]?.CBSE;
-
+ 
   const currentChapters = selectedSubject
     ? currentSyllabus?.[selectedSubject] || []
     : [];
-
+ 
   const currentChapter = selectedChapter;
-
+ 
   const getTopicId = (subject, chapterTitle, topicTitle) => {
     return `${classLevel}_${board}_${subject}_${chapterTitle}_${topicTitle}`
       .toLowerCase()
       .replace(/[^a-z0-9]+/g, "_")
       .replace(/^_+|_+$/g, "");
   };
-
+ 
   const getTopicStatus = (subject, chapterTitle, topicTitle) => {
     const topicId = getTopicId(subject, chapterTitle, topicTitle);
     return topicProgress[topicId]?.status || "Not Started";
   };
-
+ 
   const isCompletedStatus = (status) => {
     return COMPLETED_STATUSES.includes(status);
   };
-
+ 
   const getProgressStatus = (completed, total) => {
     if (total === 0 || completed === 0) return "Not Started";
     if (completed === total) return "Completed";
     return "In Progress";
   };
-
+ 
   const getStatusColor = (status) => {
     if (status === "Completed") return "#16a34a";
     if (status === "In Progress") return "#1a56db";
     return "#6b7280";
   };
-
+ 
   const getChapterProgress = (subject, chapter) => {
     const totalTopics = chapter?.subtopics?.length || 0;
-
+ 
     if (totalTopics === 0) {
       return {
         completed: 0,
@@ -484,11 +506,11 @@ export default function Home() {
         status: "Not Started",
       };
     }
-
+ 
     const completedTopics = chapter.subtopics.filter((topic) =>
       isCompletedStatus(getTopicStatus(subject, chapter.title, topic))
     ).length;
-
+ 
     return {
       completed: completedTopics,
       total: totalTopics,
@@ -496,19 +518,19 @@ export default function Home() {
       status: getProgressStatus(completedTopics, totalTopics),
     };
   };
-
+ 
   const getSubjectProgress = (subject) => {
     const chapters = currentSyllabus?.[subject] || [];
     let totalTopics = 0;
     let completedTopics = 0;
-
+ 
     chapters.forEach((chapter) => {
       totalTopics += chapter.subtopics.length;
       completedTopics += chapter.subtopics.filter((topic) =>
         isCompletedStatus(getTopicStatus(subject, chapter.title, topic))
       ).length;
     });
-
+ 
     return {
       completed: completedTopics,
       total: totalTopics,
@@ -516,17 +538,17 @@ export default function Home() {
       status: getProgressStatus(completedTopics, totalTopics),
     };
   };
-
+ 
   const getOverallProgress = () => {
     let totalTopics = 0;
     let completedTopics = 0;
-
+ 
     Object.keys(currentSyllabus || {}).forEach((subject) => {
       const subjectProgress = getSubjectProgress(subject);
       totalTopics += subjectProgress.total;
       completedTopics += subjectProgress.completed;
     });
-
+ 
     return {
       completed: completedTopics,
       total: totalTopics,
@@ -534,7 +556,7 @@ export default function Home() {
       status: getProgressStatus(completedTopics, totalTopics),
     };
   };
-
+ 
   const progressBar = (percent) => (
     <div
       style={{
@@ -556,7 +578,7 @@ export default function Home() {
       />
     </div>
   );
-
+ 
   const mediaRecorderRef = useRef(null);
   const audioChunksRef = useRef([]);
   const chatEndRef = useRef(null);
@@ -564,7 +586,7 @@ export default function Home() {
   const abortControllerRef = useRef(null);
   const cancelledRef = useRef(false);
   const pendingVoiceDataRef = useRef(null);
-
+ 
     const labelStyle = {
     display: "block",
     fontSize: "13px",
@@ -572,7 +594,7 @@ export default function Home() {
     color: "#374151",
     marginBottom: "6px",
   };
-
+ 
   const inputStyle = {
     width: "100%",
     padding: "11px 12px",
@@ -585,16 +607,16 @@ export default function Home() {
     outline: "none",
     boxSizing: "border-box",
   };
-
+ 
   useEffect(() => {
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
-
+ 
     // ── Firebase login state listener ───────────────────────
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
       setAuthLoading(true);
-
+ 
       try {
         if (!currentUser) {
           setUser(null);
@@ -603,20 +625,20 @@ export default function Home() {
           setAuthLoading(false);
           return;
         }
-
+ 
         setUser(currentUser);
-
+ 
         const userDocRef = doc(db, "users", currentUser.uid);
         const userSnap = await getDoc(userDocRef);
-
+ 
         if (userSnap.exists()) {
           const profile = userSnap.data();
-
+ 
           setUserProfile(profile);
           setClassLevel(profile.classLevel || "5");
           setBoard(profile.board || "CBSE");
         }
-
+ 
         setProfileCompleted(false); // after login, ask only language
       } catch (error) {
         console.error("Auth profile load error:", error);
@@ -625,18 +647,20 @@ export default function Home() {
         setAuthLoading(false);
       }
     });
-
+ 
     return () => unsubscribe();
   }, []);
-
+ 
   useEffect(() => {
     if (user) {
       loadTopicProgress(user.uid);
+      loadRevisionProgress(user.uid);
     } else {
       setTopicProgress({});
+      setRevisionProgress({});
     }
   }, [user]);
-
+ 
   const stopAudio = () => {
     if (audioRef.current) {
       audioRef.current.onended = null;
@@ -646,18 +670,18 @@ export default function Home() {
     }
     setPlayingIndex(null);
   };
-
+ 
   const playAudio = (audioUrl, index) => {
     stopAudio();
-
+ 
     const audio = new Audio(`/api/${audioUrl}`);
     audioRef.current = audio;
-
+ 
     setTimeout(() => {
       if (audioRef.current !== audio) return;
-
+ 
       const playPromise = audio.play();
-
+ 
       if (playPromise !== undefined) {
         playPromise
           .then(() => {
@@ -673,7 +697,7 @@ export default function Home() {
       }
     }, 80);
   };
-
+ 
   const updateHistory = (question, answer) => {
     setHistory((prev) => [
       ...prev,
@@ -681,10 +705,10 @@ export default function Home() {
       { role: "assistant", content: answer },
     ]);
   };
-
+ 
     const handleCreateAccount = async () => {
     setAuthError("");
-
+ 
     if (
       !signupName.trim() ||
       !signupEmail.trim() ||
@@ -694,23 +718,23 @@ export default function Home() {
       setAuthError("Please fill all required fields.");
       return;
     }
-
+ 
     if (signupPassword.length < 6) {
       setAuthError("Password should be at least 6 characters.");
       return;
     }
-
+ 
     try {
       setAuthLoading(true);
-
+ 
       const userCredential = await createUserWithEmailAndPassword(
         auth,
         signupEmail.trim(),
         signupPassword
       );
-
+ 
       const createdUser = userCredential.user;
-
+ 
       const profileData = {
         name: signupName.trim(),
         email: signupEmail.trim(),
@@ -719,9 +743,9 @@ export default function Home() {
         board: signupBoard,
         createdAt: serverTimestamp(),
       };
-
+ 
       await setDoc(doc(db, "users", createdUser.uid), profileData);
-
+ 
       setUser(createdUser);
       setUserProfile(profileData);
       setClassLevel(signupClassLevel);
@@ -734,18 +758,18 @@ export default function Home() {
       setAuthLoading(false);
     }
   };
-
+ 
   const handleLogin = async () => {
     setAuthError("");
-
+ 
     if (!loginEmail.trim() || !loginPassword.trim()) {
       setAuthError("Please enter email and password.");
       return;
     }
-
+ 
     try {
       setAuthLoading(true);
-
+ 
       await signInWithEmailAndPassword(
         auth,
         loginEmail.trim(),
@@ -758,35 +782,36 @@ export default function Home() {
       setAuthLoading(false);
     }
   };
-
+ 
   const handleLogout = async () => {
     await signOut(auth);
-
+ 
     setUser(null);
     setUserProfile(null);
     setMessages([]);
     setHistory([]);
     setTextInput("");
     setTopicProgress({});
+    setRevisionProgress({});
     setProfileCompleted(false);
     pendingVoiceDataRef.current = null;
   };
-
+ 
   const loadTopicProgress = async (uid) => {
     if (!uid) return;
-
+ 
     try {
       setProgressLoading(true);
-
+ 
       const progressRef = collection(db, "users", uid, "topicProgress");
       const progressSnap = await getDocs(progressRef);
-
+ 
       const loadedProgress = {};
-
+ 
       progressSnap.forEach((progressDoc) => {
         loadedProgress[progressDoc.id] = progressDoc.data();
       });
-
+ 
       setTopicProgress(loadedProgress);
     } catch (error) {
       console.error("Progress load error:", error);
@@ -794,15 +819,15 @@ export default function Home() {
       setProgressLoading(false);
     }
   };
-
+ 
   const updateTopicStatus = async (subject, chapterTitle, topicTitle, status) => {
     if (!user) {
       setError("Please login to save progress.");
       return;
     }
-
+ 
     const topicId = getTopicId(subject, chapterTitle, topicTitle);
-
+ 
     const progressData = {
       subject,
       chapterTitle,
@@ -812,7 +837,7 @@ export default function Home() {
       board,
       updatedAt: serverTimestamp(),
     };
-
+ 
     setTopicProgress((prev) => ({
       ...prev,
       [topicId]: {
@@ -820,7 +845,7 @@ export default function Home() {
         updatedAt: new Date().toISOString(),
       },
     }));
-
+ 
     try {
       await setDoc(
         doc(db, "users", user.uid, "topicProgress", topicId),
@@ -831,7 +856,7 @@ export default function Home() {
       console.error("Progress save error:", error);
     }
   };
-
+ 
   const markTypingComplete = (messageId) => {
     setMessages((prev) =>
       prev.map((msg) =>
@@ -839,7 +864,7 @@ export default function Home() {
       )
     );
   };
-
+ 
   const clearConversation = () => {
     stopAudio();
     setMessages([]);
@@ -847,10 +872,111 @@ export default function Home() {
     setError("");
     pendingVoiceDataRef.current = null;
   };
-
+ 
+  const getRevisionStatus = (subject, chapterTitle, topicTitle) => {
+    const topicId = getTopicId(subject, chapterTitle, topicTitle);
+    return revisionProgress[topicId]?.revised || false;
+  };
+ 
+  const loadRevisionProgress = async (uid) => {
+    if (!uid) return;
+ 
+    try {
+      const revisionRef = collection(db, "users", uid, "revisionProgress");
+      const revisionSnap = await getDocs(revisionRef);
+ 
+      const loadedRevision = {};
+ 
+      revisionSnap.forEach((revisionDoc) => {
+        loadedRevision[revisionDoc.id] = revisionDoc.data();
+      });
+ 
+      setRevisionProgress(loadedRevision);
+    } catch (error) {
+      console.error("Revision progress load error:", error);
+    }
+  };
+ 
+  const updateRevisionStatus = async (subject, chapterTitle, topicTitle) => {
+    if (!user) return;
+ 
+    const topicId = getTopicId(subject, chapterTitle, topicTitle);
+ 
+    const revisionData = {
+      subject,
+      chapterTitle,
+      topicTitle,
+      revised: true,
+      classLevel,
+      board,
+      updatedAt: serverTimestamp(),
+    };
+ 
+    setRevisionProgress((prev) => ({
+      ...prev,
+      [topicId]: {
+        ...revisionData,
+        updatedAt: new Date().toISOString(),
+      },
+    }));
+ 
+    try {
+      await setDoc(
+        doc(db, "users", user.uid, "revisionProgress", topicId),
+        revisionData,
+        { merge: true }
+      );
+    } catch (error) {
+      console.error("Revision save error:", error);
+    }
+  };
+ 
+  const handleReviseTopic = async (subtopic) => {
+    if (!selectedSubject || !currentChapter || !subtopic) return;
+ 
+    // Revision is tracked separately and does not affect completion percentage.
+    await updateRevisionStatus(
+      selectedSubject,
+      currentChapter.title,
+      subtopic
+    );
+ 
+    const prompt = `REVISION_TOPIC_MODE
+ 
+Topic: ${subtopic}
+Chapter: ${currentChapter.title}
+Subject: ${selectedSubject}
+Class: ${classLevel}
+Board: ${board}
+ 
+Create short and crisp revision notes for this topic.
+ 
+Revision format:
+1. Quick Meaning
+2. Key Points
+3. Important Terms
+4. Must Remember
+5. Quick Flowchart
+6. Exam Points
+ 
+Rules:
+- Keep it short and crisp.
+- Use mostly bullet points.
+- Do not write long paragraphs.
+- Use clear headings, but do not write the word "Heading".
+- Keep headings simple like "Quick Meaning" or "Key Points".
+- Use a simple text flowchart or diagram if possible.
+- Definitions and most important facts can be bold, but only headings should be highlighted in blue by the frontend.
+- Follow the selected answer language.`;
+ 
+    pendingVoiceDataRef.current = null;
+    setTextInput(prompt);
+    setActiveTab("chat");
+  };
+ 
   const handleStudyTopic = async (subtopic) => {
     if (!selectedSubject || !currentChapter || !subtopic) return;
-
+ 
     // When student clicks Study Topic, the topic is considered completed.
     // Chapter and subject status are calculated automatically from completed topics.
     await updateTopicStatus(
@@ -859,17 +985,17 @@ export default function Home() {
       subtopic,
       "Completed"
     );
-
+ 
     const prompt = `STUDY_TOPIC_MODE
-
+ 
 Topic: ${subtopic}
 Chapter: ${currentChapter.title}
 Subject: ${selectedSubject}
 Class: ${classLevel}
 Board: ${board}
-
+ 
 Explain this topic in detail for a school student.
-
+ 
 Answer format:
 1. Meaning of the topic
 2. Why it is important
@@ -877,70 +1003,70 @@ Answer format:
 4. Important keywords with simple meanings
 5. One simple real-life example
 6. Quick revision summary
-
+ 
 Rules:
 - Give a large answer, not 4-5 lines.
 - Use headings and bullet points.
 - Do not write one long paragraph.
 - Keep the language easy for Class ${classLevel}.
 - Follow the selected answer language.`;
-
+ 
     pendingVoiceDataRef.current = null;
     setTextInput(prompt);
     setActiveTab("chat");
   };
-
+ 
   const cancelProcessing = () => {
     cancelledRef.current = true;
-
+ 
     if (abortControllerRef.current) {
       abortControllerRef.current.abort();
       abortControllerRef.current = null;
     }
-
+ 
     setIsLoading(false);
     setIsTranscribing(false);
     setError("");
   };
-
+ 
   // ── Text question ──────────────────────────────────
   const handleTextSend = async () => {
     if (!textInput.trim() || isLoading) return;
-
+ 
     const question = textInput.trim();
     const assistantId = crypto.randomUUID();
-
+ 
     setTextInput("");
     setError("");
     setIsLoading(true);
-
+ 
     setMessages((prev) => [
     ...prev.map((msg) =>
     msg.role === "assistant" ? { ...msg, typing: false } : msg
     ),
     { id: crypto.randomUUID(), role: "user", text: question, isVoice: false },
     ]);
-
+ 
     const formData = new FormData();
     formData.append("question", question);
     formData.append("history", JSON.stringify(history));
     formData.append("class_level", classLevel);
     formData.append("board", board);
     formData.append("answer_language", answerLanguage);
-
+ 
     try {
       const res = await fetch("/api/ask-text", {
         method: "POST",
         body: formData,
       });
-
+ 
       if (!res.ok) {
         const err = await res.json();
         throw new Error(err.detail || "Server error");
       }
-
+ 
       const data = await res.json();
-
+ 
       setMessages((prev) => [
         ...prev.map((msg) =>
         msg.role === "assistant" ? { ...msg, typing: false } : msg
@@ -955,21 +1081,21 @@ Rules:
       ]);
       updateHistory(question, data.answer);
       setIsLoading(false);
-
+ 
       const ttsFormData = new FormData();
       ttsFormData.append("text", data.answer);
       ttsFormData.append("language", data.language || "en");
-
+ 
       try {
         const ttsRes = await fetch("/api/tts", {
           method: "POST",
           body: ttsFormData,
         });
-
+ 
         if (!ttsRes.ok) return;
-
+ 
         const ttsData = await ttsRes.json();
-
+ 
         setMessages((prev) =>
           prev.map((msg) =>
             msg.id === assistantId
@@ -985,42 +1111,42 @@ Rules:
       setIsLoading(false);
     }
   };
-
+ 
   // ── Voice: stop recording, transcribe, then show text in input box ─
   const stopRecordingAndTranscribe = () => {
     if (!mediaRecorderRef.current) return;
-
+ 
     mediaRecorderRef.current.onstop = async () => {
       const blob = new Blob(audioChunksRef.current, { type: "audio/webm" });
       const stream = mediaRecorderRef.current?.stream;
-
+ 
       if (stream) stream.getTracks().forEach((t) => t.stop());
-
+ 
       setIsRecording(false);
       setIsTranscribing(true);
       cancelledRef.current = false;
       abortControllerRef.current = new AbortController();
-
+ 
       const formData = new FormData();
       formData.append("file", blob, "recording.webm");
       formData.append("history", JSON.stringify(history));
-
+ 
       try {
         const res = await fetch("/api/ask", {
           method: "POST",
           body: formData,
           signal: abortControllerRef.current.signal,
         });
-
+ 
         if (cancelledRef.current) return;
-
+ 
         if (!res.ok) {
           const err = await res.json();
           throw new Error(err.detail || "Server error");
         }
-
+ 
         const data = await res.json();
-
+ 
         setIsTranscribing(false);
         setTextInput(data.question);
         pendingVoiceDataRef.current = data;
@@ -1029,29 +1155,29 @@ Rules:
           setIsTranscribing(false);
           return;
         }
-
+ 
         setIsTranscribing(false);
         setError(e.message);
       }
     };
-
+ 
     mediaRecorderRef.current.stop();
   };
-
+ 
   // ── Send button: voice pending data or normal text ─
   const handleSend = async () => {
     if (!textInput.trim() || isLoading) return;
-
+ 
     if (pendingVoiceDataRef.current) {
       const data = pendingVoiceDataRef.current;
       const question = textInput.trim();
       pendingVoiceDataRef.current = null;
-
+ 
       setTextInput("");
       setError("");
-
+ 
       const assistantId = crypto.randomUUID();
-
+ 
       setMessages((prev) => [
         ...prev.map((msg) =>
         msg.role === "assistant" ? { ...msg, typing: false } : msg
@@ -1065,9 +1191,9 @@ Rules:
         typing: false,
       },
     ]);
-
+ 
       updateHistory(question, data.answer);
-
+ 
       if (data.audio_url) {
         setTimeout(() => {
           setMessages((prev) => {
@@ -1077,37 +1203,37 @@ Rules:
           });
         }, 200);
       }
-
+ 
       return;
     }
-
+ 
     await handleTextSend();
   };
-
+ 
   const startRecording = async () => {
     setError("");
     stopAudio();
     pendingVoiceDataRef.current = null;
     setTextInput("");
-
+ 
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
       const recorder = new MediaRecorder(stream);
-
+ 
       mediaRecorderRef.current = recorder;
       audioChunksRef.current = [];
-
+ 
       recorder.ondataavailable = (e) => {
         if (e.data.size > 0) audioChunksRef.current.push(e.data);
       };
-
+ 
       recorder.start();
       setIsRecording(true);
     } catch (e) {
       setError("Microphone access denied. Please allow microphone permission.");
     }
   };
-
+ 
     // ── Auth loading screen ────────────────────────────────
   if (authLoading) {
     return (
@@ -1126,7 +1252,7 @@ Rules:
       </div>
     );
   }
-
+ 
   // ── Login / Create Account screen ──────────────────────
   if (!user) {
     return (
@@ -1147,7 +1273,7 @@ Rules:
             🎓 Student Voice Assistant
           </span>
         </nav>
-
+ 
         <div style={{ maxWidth: "460px", margin: "0 auto", padding: "40px 16px" }}>
           <div
             style={{
@@ -1176,7 +1302,7 @@ Rules:
                   : "Create your student profile."}
               </p>
             </div>
-
+ 
             {authError && (
               <div
                 style={{
@@ -1192,7 +1318,7 @@ Rules:
                 ⚠️ {authError}
               </div>
             )}
-
+ 
             {authMode === "signup" && (
               <>
                 <label style={labelStyle}>Name</label>
@@ -1202,7 +1328,7 @@ Rules:
                   placeholder="Enter your name"
                   style={inputStyle}
                 />
-
+ 
                 <label style={labelStyle}>Mobile Number</label>
                 <input
                   value={signupMobile}
@@ -1212,7 +1338,7 @@ Rules:
                 />
               </>
             )}
-
+ 
             <label style={labelStyle}>Email</label>
             <input
               type="email"
@@ -1225,7 +1351,7 @@ Rules:
               placeholder="Enter email"
               style={inputStyle}
             />
-
+ 
             <label style={labelStyle}>Password</label>
             <input
               type="password"
@@ -1238,7 +1364,7 @@ Rules:
               placeholder="Enter password"
               style={inputStyle}
             />
-
+ 
             {authMode === "signup" && (
               <>
                 <label style={labelStyle}>Class</label>
@@ -1254,7 +1380,7 @@ Rules:
                   <option value="9">Class 9</option>
                   <option value="10">Class 10</option>
                 </select>
-
+ 
                 <label style={labelStyle}>Board</label>
                 <select
                   value={signupBoard}
@@ -1268,7 +1394,7 @@ Rules:
                 </select>
               </>
             )}
-
+ 
             <button
               onClick={authMode === "login" ? handleLogin : handleCreateAccount}
               disabled={authLoading}
@@ -1288,7 +1414,7 @@ Rules:
             >
               {authMode === "login" ? "Login" : "Create Account"}
             </button>
-
+ 
             <button
               onClick={() => {
                 setAuthError("");
@@ -1313,7 +1439,7 @@ Rules:
       </div>
     );
   }
-
+ 
   // ── Language selection screen after login ───────────────
   if (!profileCompleted) {
     return (
@@ -1336,7 +1462,7 @@ Rules:
           <span style={{ color: "#fff", fontSize: "18px", fontWeight: 500 }}>
             🎓 Student Voice Assistant
           </span>
-
+ 
           <button
             onClick={handleLogout}
             style={{
@@ -1353,7 +1479,7 @@ Rules:
             Logout
           </button>
         </nav>
-
+ 
         <div style={{ maxWidth: "460px", margin: "0 auto", padding: "56px 16px" }}>
           <div
             style={{
@@ -1366,7 +1492,7 @@ Rules:
           >
             <div style={{ textAlign: "center", marginBottom: "28px" }}>
               <div style={{ fontSize: "42px", marginBottom: "10px" }}>🎓</div>
-
+ 
               <h1
                 style={{
                   fontSize: "24px",
@@ -1377,12 +1503,12 @@ Rules:
               >
                 Welcome, {userProfile?.name || "Student"}
               </h1>
-
+ 
               <p style={{ fontSize: "14px", color: "#6b7280", lineHeight: "1.5" }}>
                 Class {classLevel} · {board}
               </p>
             </div>
-
+ 
             <label style={labelStyle}>Choose answer language</label>
             <select
               value={answerLanguage}
@@ -1393,7 +1519,7 @@ Rules:
               <option value="hi">हिंदी</option>
               <option value="hinglish">Hinglish</option>
             </select>
-
+ 
             <button
               onClick={() => setProfileCompleted(true)}
               style={{
@@ -1416,7 +1542,7 @@ Rules:
       </div>
     );
   }
-
+ 
   return (
     <div
       style={{
@@ -1438,12 +1564,12 @@ Rules:
         <span style={{ color: "#fff", fontSize: "18px", fontWeight: 500 }}>
           🎓 Student Voice Assistant
         </span>
-
+ 
         <div style={{ display: "flex", gap: "10px", alignItems: "center" }}>
   <span style={{ color: "#fff", fontSize: "13px" }}>
     {userProfile?.name || user?.email}
   </span>
-
+ 
   <button
     onClick={handleLogout}
     style={{
@@ -1461,7 +1587,7 @@ Rules:
   </button>
 </div>
       </nav>
-
+ 
       {/* Main */}
       <div style={{ maxWidth: "760px", margin: "0 auto", padding: "32px 16px" }}>
         {/* Hero */}
@@ -1481,7 +1607,7 @@ Rules:
             {board}
           </p>
         </div>
-
+ 
         {/* App Tabs */}
         <div
           style={{
@@ -1509,7 +1635,7 @@ Rules:
           >
             💬 Chatbot
           </button>
-
+ 
           <button
             onClick={() => setActiveTab("syllabus")}
             style={{
@@ -1527,7 +1653,7 @@ Rules:
             📚 Syllabus Tracker
           </button>
         </div>
-
+ 
         {/* Chatbot Section */}
         {activeTab === "chat" && (
           <div
@@ -1567,7 +1693,7 @@ Rules:
                   AI Tutor
                 </span>
               </div>
-
+ 
               {history.length > 0 && (
                 <button
                   onClick={clearConversation}
@@ -1588,7 +1714,7 @@ Rules:
                 </button>
               )}
             </div>
-
+ 
             {/* Messages */}
             <div
               style={{
@@ -1636,7 +1762,7 @@ Rules:
                       >
                         You
                       </div>
-
+ 
                       <div
                         style={{
                           maxWidth: "78%",
@@ -1665,7 +1791,7 @@ Rules:
                   )
                 )
               )}
-
+ 
               {isLoading && (
                 <div style={{ display: "flex", gap: "8px", alignItems: "flex-end" }}>
                   <div
@@ -1684,7 +1810,7 @@ Rules:
                   >
                     AI
                   </div>
-
+ 
                   <div
                     style={{
                       padding: "12px 16px",
@@ -1711,10 +1837,10 @@ Rules:
                   </div>
                 </div>
               )}
-
+ 
               <div ref={chatEndRef} />
             </div>
-
+ 
             {/* Error */}
             {error && (
               <div
@@ -1731,7 +1857,7 @@ Rules:
                 ⚠️ {error}
               </div>
             )}
-
+ 
             {/* Transcribing status with cancel button */}
             {isTranscribing && (
               <div
@@ -1760,7 +1886,7 @@ Rules:
                   />
                   Processing your voice...
                 </div>
-
+ 
                 <button
                   onClick={cancelProcessing}
                   style={{
@@ -1778,7 +1904,7 @@ Rules:
                 </button>
               </div>
             )}
-
+ 
             {/* Recording bar */}
             {isRecording && (
               <div
@@ -1807,7 +1933,7 @@ Rules:
                 Recording... press mic again to stop
               </div>
             )}
-
+ 
             {/* Transcribed text hint */}
             {!isRecording &&
               !isTranscribing &&
@@ -1824,7 +1950,7 @@ Rules:
                   ✏️ Review or edit your question, then press Send
                 </div>
               )}
-
+ 
             {/* Input area */}
             <div
               style={{
@@ -1845,7 +1971,7 @@ Rules:
                 value={textInput}
                 onChange={(e) => {
                   setTextInput(e.target.value);
-
+ 
                   if (pendingVoiceDataRef.current) {
                     pendingVoiceDataRef.current = null;
                   }
@@ -1865,7 +1991,7 @@ Rules:
                   outline: "none",
                 }}
               />
-
+ 
               <button
                 onClick={handleSend}
                 disabled={
@@ -1898,7 +2024,7 @@ Rules:
               >
                 ➤
               </button>
-
+ 
               <button
                 onClick={
                   isRecording ? stopRecordingAndTranscribe : startRecording
@@ -1923,7 +2049,7 @@ Rules:
                 🎤
               </button>
             </div>
-
+ 
             <div
               style={{
                 textAlign: "center",
@@ -1937,7 +2063,7 @@ Rules:
             </div>
           </div>
         )}
-
+ 
         {/* Syllabus Tracker Section */}
         {activeTab === "syllabus" && (
           <div
@@ -1963,10 +2089,10 @@ Rules:
               <p style={{ fontSize: "14px", color: "#6b7280" }}>
                 Class {classLevel} · {board} · Track topics, chapters, and subjects
               </p>
-
+ 
               {(() => {
                 const overallProgress = getOverallProgress();
-
+ 
                 return (
                   <div
                     style={{
@@ -1995,7 +2121,7 @@ Rules:
                       >
                         Overall Progress
                       </span>
-
+ 
                       <span
                         style={{
                           fontSize: "13px",
@@ -2006,9 +2132,9 @@ Rules:
                         {overallProgress.percent}%
                       </span>
                     </div>
-
+ 
                     {progressBar(overallProgress.percent)}
-
+ 
                     <div
                       style={{
                         fontSize: "12px",
@@ -2023,7 +2149,7 @@ Rules:
                 );
               })()}
             </div>
-
+ 
             {!selectedSubject && (
               <div
                 style={{
@@ -2041,7 +2167,7 @@ Rules:
                       : subject === "English"
                       ? "📘"
                       : "🌍";
-
+ 
                   return (
                     <button
                       key={subject}
@@ -2073,13 +2199,13 @@ Rules:
                       </div>
                       {(() => {
                         const subjectProgress = getSubjectProgress(subject);
-
+ 
                         return (
                           <>
                             <div style={{ fontSize: "12px", color: "#6b7280", marginBottom: "4px" }}>
                               {subjectProgress.percent}% completed
                             </div>
-
+ 
                             <div
                               style={{
                                 fontSize: "11px",
@@ -2090,9 +2216,9 @@ Rules:
                             >
                               {subjectProgress.status}
                             </div>
-
+ 
                             {progressBar(subjectProgress.percent)}
-
+ 
                             <div style={{ fontSize: "11px", color: "#6b7280", marginTop: "7px" }}>
                               {subjectProgress.completed}/{subjectProgress.total} topics ·{" "}
                               {currentSyllabus[subject].length} chapters
@@ -2105,7 +2231,7 @@ Rules:
                 })}
               </div>
             )}
-
+ 
             {selectedSubject && !selectedChapter && (
               <div>
                 <button
@@ -2124,7 +2250,7 @@ Rules:
                 >
                   ← Back to Subjects
                 </button>
-
+ 
                 <h3
                   style={{
                     fontSize: "18px",
@@ -2135,7 +2261,7 @@ Rules:
                 >
                   {selectedSubject} Chapters
                 </h3>
-
+ 
                 <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
                   {currentChapters.map((chapter, index) => (
                     <button
@@ -2170,7 +2296,7 @@ Rules:
                       >
                         {index + 1}
                       </span>
-
+ 
                       <span style={{ flex: 1 }}>
                         <span
                           style={{
@@ -2184,7 +2310,7 @@ Rules:
                         </span>
                         {(() => {
                           const chapterProgress = getChapterProgress(selectedSubject, chapter);
-
+ 
                           return (
                             <>
                               <span
@@ -2199,7 +2325,7 @@ Rules:
                                 {chapterProgress.percent}% completed ·{" "}
                                 {chapterProgress.completed}/{chapterProgress.total} topics
                               </span>
-
+ 
                               <span
                                 style={{
                                   display: "inline-block",
@@ -2211,20 +2337,20 @@ Rules:
                               >
                                 {chapterProgress.status}
                               </span>
-
+ 
                               {progressBar(chapterProgress.percent)}
                             </>
                           );
                         })()}
                       </span>
-
+ 
                       <span style={{ color: "#9ca3af" }}>›</span>
                     </button>
                   ))}
                 </div>
               </div>
             )}
-
+ 
             {selectedSubject && selectedChapter && (
               <div>
                 <button
@@ -2240,7 +2366,7 @@ Rules:
                 >
                   ← Back to Chapters
                 </button>
-
+ 
                 <div
                   style={{
                     padding: "16px",
@@ -2258,7 +2384,7 @@ Rules:
                   >
                     {selectedSubject}
                   </div>
-
+ 
                   <h3
                     style={{
                       fontSize: "19px",
@@ -2269,10 +2395,10 @@ Rules:
                   >
                     {currentChapter.title}
                   </h3>
-
+ 
                   {(() => {
                     const chapterProgress = getChapterProgress(selectedSubject, currentChapter);
-
+ 
                     return (
                       <div
                         style={{
@@ -2299,7 +2425,7 @@ Rules:
                           >
                             Chapter Progress
                           </span>
-
+ 
                           <span
                             style={{
                               fontSize: "13px",
@@ -2310,9 +2436,9 @@ Rules:
                             {chapterProgress.percent}%
                           </span>
                         </div>
-
+ 
                         {progressBar(chapterProgress.percent)}
-
+ 
                         <div
                           style={{
                             fontSize: "12px",
@@ -2322,7 +2448,7 @@ Rules:
                         >
                           {chapterProgress.completed}/{chapterProgress.total} topics completed
                         </div>
-
+ 
                         <div
                           style={{
                             fontSize: "12px",
@@ -2336,7 +2462,7 @@ Rules:
                       </div>
                     );
                   })()}
-
+ 
                   <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
                     {currentChapter.subtopics.map((subtopic, index) => {
                       const currentStatus = getTopicStatus(
@@ -2345,7 +2471,7 @@ Rules:
                         subtopic
                       );
                       const topicCompleted = isCompletedStatus(currentStatus);
-
+ 
                       return (
                       <div
                         key={subtopic}
@@ -2376,7 +2502,7 @@ Rules:
                         >
                           {topicCompleted ? "✓" : index + 1}
                         </span>
-
+ 
                         <span
                           style={{
                             flex: 1,
@@ -2387,7 +2513,7 @@ Rules:
                         >
                           {subtopic}
                         </span>
-
+ 
                         <select
                           value={currentStatus}
                           onChange={(e) =>
@@ -2415,7 +2541,36 @@ Rules:
                             </option>
                           ))}
                         </select>
-
+ 
+                        <button
+                          onClick={() => handleReviseTopic(subtopic)}
+                          style={{
+                            padding: "6px 10px",
+                            border: "1px solid #bfdbfe",
+                            borderRadius: "8px",
+                            background: getRevisionStatus(
+                              selectedSubject,
+                              currentChapter.title,
+                              subtopic
+                            )
+                              ? "#eff6ff"
+                              : "#fff",
+                            color: "#1a56db",
+                            fontSize: "12px",
+                            cursor: "pointer",
+                            flexShrink: 0,
+                            fontWeight: 600,
+                          }}
+                        >
+                          {getRevisionStatus(
+                            selectedSubject,
+                            currentChapter.title,
+                            subtopic
+                          )
+                            ? "Revised"
+                            : "Revise"}
+                        </button>
+ 
                         <button
                           onClick={() => handleStudyTopic(subtopic)}
                           style={{
@@ -2441,18 +2596,18 @@ Rules:
           </div>
         )}
       </div>
-
+ 
       <style>{`
         @keyframes bounce {
           0%, 80%, 100% { transform: scale(0.7); opacity: 0.5; }
           40% { transform: scale(1); opacity: 1; }
         }
-
+ 
         @keyframes blink {
           0%, 100% { opacity: 1; }
           50% { opacity: 0; }
         }
-
+ 
         @keyframes pulse {
           0%, 100% { opacity: 1; }
           50% { opacity: 0.3; }
