@@ -2,6 +2,20 @@
 
 import { useState, useRef, useEffect } from "react";
 
+import { auth, db } from "../lib/firebase";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  onAuthStateChanged,
+  signOut,
+} from "firebase/auth";
+import {
+  doc,
+  setDoc,
+  getDoc,
+  serverTimestamp,
+} from "firebase/firestore";
+
 // ── Sample syllabus data for Phase 1 ───────────────────────
 const SYLLABUS_DATA = {
   "5": {
@@ -375,6 +389,24 @@ export default function Home() {
   const [selectedSubject, setSelectedSubject] = useState(null);
   const [selectedChapter, setSelectedChapter] = useState(null);
 
+
+    // ── Firebase auth states ────────────────────────────────
+  const [user, setUser] = useState(null);
+  const [userProfile, setUserProfile] = useState(null);
+  const [authMode, setAuthMode] = useState("login"); // login | signup
+  const [authLoading, setAuthLoading] = useState(true);
+  const [authError, setAuthError] = useState("");
+
+  const [signupName, setSignupName] = useState("");
+  const [signupEmail, setSignupEmail] = useState("");
+  const [signupMobile, setSignupMobile] = useState("");
+  const [signupPassword, setSignupPassword] = useState("");
+  const [signupClassLevel, setSignupClassLevel] = useState("5");
+  const [signupBoard, setSignupBoard] = useState("CBSE");
+
+  const [loginEmail, setLoginEmail] = useState("");
+  const [loginPassword, setLoginPassword] = useState("");
+
   // ── Student learning profile ─────────────────────────────
   const [classLevel, setClassLevel] = useState("5");
   const [board, setBoard] = useState("CBSE");
@@ -398,9 +430,69 @@ export default function Home() {
   const cancelledRef = useRef(false);
   const pendingVoiceDataRef = useRef(null);
 
+    const labelStyle = {
+    display: "block",
+    fontSize: "13px",
+    fontWeight: 500,
+    color: "#374151",
+    marginBottom: "6px",
+  };
+
+  const inputStyle = {
+    width: "100%",
+    padding: "11px 12px",
+    marginBottom: "16px",
+    borderRadius: "9px",
+    border: "1px solid #d1d5db",
+    background: "#fff",
+    fontSize: "14px",
+    color: "#111827",
+    outline: "none",
+    boxSizing: "border-box",
+  };
+
   useEffect(() => {
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
+
+    // ── Firebase login state listener ───────────────────────
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
+      setAuthLoading(true);
+
+      try {
+        if (!currentUser) {
+          setUser(null);
+          setUserProfile(null);
+          setProfileCompleted(false);
+          setAuthLoading(false);
+          return;
+        }
+
+        setUser(currentUser);
+
+        const userDocRef = doc(db, "users", currentUser.uid);
+        const userSnap = await getDoc(userDocRef);
+
+        if (userSnap.exists()) {
+          const profile = userSnap.data();
+
+          setUserProfile(profile);
+          setClassLevel(profile.classLevel || "5");
+          setBoard(profile.board || "CBSE");
+        }
+
+        setProfileCompleted(false); // after login, ask only language
+      } catch (error) {
+        console.error("Auth profile load error:", error);
+        setAuthError("Could not load your profile. Please try again.");
+      } finally {
+        setAuthLoading(false);
+      }
+    });
+
+    return () => unsubscribe();
+  }, []);
 
   const stopAudio = () => {
     if (audioRef.current) {
@@ -445,6 +537,95 @@ export default function Home() {
       { role: "user", content: question },
       { role: "assistant", content: answer },
     ]);
+  };
+
+    const handleCreateAccount = async () => {
+    setAuthError("");
+
+    if (
+      !signupName.trim() ||
+      !signupEmail.trim() ||
+      !signupMobile.trim() ||
+      !signupPassword.trim()
+    ) {
+      setAuthError("Please fill all required fields.");
+      return;
+    }
+
+    if (signupPassword.length < 6) {
+      setAuthError("Password should be at least 6 characters.");
+      return;
+    }
+
+    try {
+      setAuthLoading(true);
+
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        signupEmail.trim(),
+        signupPassword
+      );
+
+      const createdUser = userCredential.user;
+
+      const profileData = {
+        name: signupName.trim(),
+        email: signupEmail.trim(),
+        mobile: signupMobile.trim(),
+        classLevel: signupClassLevel,
+        board: signupBoard,
+        createdAt: serverTimestamp(),
+      };
+
+      await setDoc(doc(db, "users", createdUser.uid), profileData);
+
+      setUser(createdUser);
+      setUserProfile(profileData);
+      setClassLevel(signupClassLevel);
+      setBoard(signupBoard);
+      setProfileCompleted(false);
+    } catch (error) {
+      console.error("Create account error:", error);
+      setAuthError(error.message || "Could not create account.");
+    } finally {
+      setAuthLoading(false);
+    }
+  };
+
+  const handleLogin = async () => {
+    setAuthError("");
+
+    if (!loginEmail.trim() || !loginPassword.trim()) {
+      setAuthError("Please enter email and password.");
+      return;
+    }
+
+    try {
+      setAuthLoading(true);
+
+      await signInWithEmailAndPassword(
+        auth,
+        loginEmail.trim(),
+        loginPassword
+      );
+    } catch (error) {
+      console.error("Login error:", error);
+      setAuthError(error.message || "Could not login.");
+    } finally {
+      setAuthLoading(false);
+    }
+  };
+
+  const handleLogout = async () => {
+    await signOut(auth);
+
+    setUser(null);
+    setUserProfile(null);
+    setMessages([]);
+    setHistory([]);
+    setTextInput("");
+    setProfileCompleted(false);
+    pendingVoiceDataRef.current = null;
   };
 
   const clearConversation = () => {
@@ -701,7 +882,213 @@ Rules:
     }
   };
 
-  // ── Profile screen ─────────────────────────────────
+    // ── Auth loading screen ────────────────────────────────
+  if (authLoading) {
+    return (
+      <div
+        style={{
+          fontFamily: "sans-serif",
+          background: "#f3f4f6",
+          minHeight: "100vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          color: "#374151",
+        }}
+      >
+        Loading...
+      </div>
+    );
+  }
+
+  // ── Login / Create Account screen ──────────────────────
+  if (!user) {
+    return (
+      <div
+        style={{
+          fontFamily: "sans-serif",
+          background: "#f3f4f6",
+          minHeight: "100vh",
+        }}
+      >
+        <nav
+          style={{
+            background: "#1a56db",
+            padding: "14px 24px",
+          }}
+        >
+          <span style={{ color: "#fff", fontSize: "18px", fontWeight: 500 }}>
+            🎓 Student Voice Assistant
+          </span>
+        </nav>
+
+        <div style={{ maxWidth: "460px", margin: "0 auto", padding: "40px 16px" }}>
+          <div
+            style={{
+              background: "#fff",
+              border: "1px solid #e5e7eb",
+              borderRadius: "18px",
+              padding: "28px 24px",
+              boxShadow: "0 4px 18px rgba(0,0,0,0.05)",
+            }}
+          >
+            <div style={{ textAlign: "center", marginBottom: "22px" }}>
+              <div style={{ fontSize: "40px", marginBottom: "8px" }}>👋</div>
+              <h1
+                style={{
+                  fontSize: "24px",
+                  fontWeight: 600,
+                  color: "#111827",
+                  marginBottom: "6px",
+                }}
+              >
+                {authMode === "login" ? "Login" : "Create Account"}
+              </h1>
+              <p style={{ fontSize: "14px", color: "#6b7280" }}>
+                {authMode === "login"
+                  ? "Login to continue learning."
+                  : "Create your student profile."}
+              </p>
+            </div>
+
+            {authError && (
+              <div
+                style={{
+                  marginBottom: "14px",
+                  padding: "10px 12px",
+                  background: "#fef2f2",
+                  border: "1px solid #fca5a5",
+                  borderRadius: "8px",
+                  color: "#dc2626",
+                  fontSize: "13px",
+                }}
+              >
+                ⚠️ {authError}
+              </div>
+            )}
+
+            {authMode === "signup" && (
+              <>
+                <label style={labelStyle}>Name</label>
+                <input
+                  value={signupName}
+                  onChange={(e) => setSignupName(e.target.value)}
+                  placeholder="Enter your name"
+                  style={inputStyle}
+                />
+
+                <label style={labelStyle}>Mobile Number</label>
+                <input
+                  value={signupMobile}
+                  onChange={(e) => setSignupMobile(e.target.value)}
+                  placeholder="Enter mobile number"
+                  style={inputStyle}
+                />
+              </>
+            )}
+
+            <label style={labelStyle}>Email</label>
+            <input
+              type="email"
+              value={authMode === "login" ? loginEmail : signupEmail}
+              onChange={(e) =>
+                authMode === "login"
+                  ? setLoginEmail(e.target.value)
+                  : setSignupEmail(e.target.value)
+              }
+              placeholder="Enter email"
+              style={inputStyle}
+            />
+
+            <label style={labelStyle}>Password</label>
+            <input
+              type="password"
+              value={authMode === "login" ? loginPassword : signupPassword}
+              onChange={(e) =>
+                authMode === "login"
+                  ? setLoginPassword(e.target.value)
+                  : setSignupPassword(e.target.value)
+              }
+              placeholder="Enter password"
+              style={inputStyle}
+            />
+
+            {authMode === "signup" && (
+              <>
+                <label style={labelStyle}>Class</label>
+                <select
+                  value={signupClassLevel}
+                  onChange={(e) => setSignupClassLevel(e.target.value)}
+                  style={inputStyle}
+                >
+                  <option value="5">Class 5</option>
+                  <option value="6">Class 6</option>
+                  <option value="7">Class 7</option>
+                  <option value="8">Class 8</option>
+                  <option value="9">Class 9</option>
+                  <option value="10">Class 10</option>
+                </select>
+
+                <label style={labelStyle}>Board</label>
+                <select
+                  value={signupBoard}
+                  onChange={(e) => setSignupBoard(e.target.value)}
+                  style={inputStyle}
+                >
+                  <option value="CBSE">CBSE</option>
+                  <option value="RBSE">RBSE</option>
+                  <option value="ICSE">ICSE</option>
+                  <option value="Other">Other</option>
+                </select>
+              </>
+            )}
+
+            <button
+              onClick={authMode === "login" ? handleLogin : handleCreateAccount}
+              disabled={authLoading}
+              style={{
+                width: "100%",
+                padding: "12px 16px",
+                border: "none",
+                borderRadius: "10px",
+                background: "#1a56db",
+                color: "#fff",
+                fontSize: "15px",
+                fontWeight: 500,
+                cursor: "pointer",
+                marginTop: "8px",
+                opacity: authLoading ? 0.6 : 1,
+              }}
+            >
+              {authMode === "login" ? "Login" : "Create Account"}
+            </button>
+
+            <button
+              onClick={() => {
+                setAuthError("");
+                setAuthMode(authMode === "login" ? "signup" : "login");
+              }}
+              style={{
+                width: "100%",
+                marginTop: "14px",
+                background: "transparent",
+                border: "none",
+                color: "#1a56db",
+                cursor: "pointer",
+                fontSize: "14px",
+              }}
+            >
+              {authMode === "login"
+                ? "New student? Create account"
+                : "Already have an account? Login"}
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // ── Language selection screen after login ───────────────
   if (!profileCompleted) {
     return (
       <div
@@ -723,6 +1110,22 @@ Rules:
           <span style={{ color: "#fff", fontSize: "18px", fontWeight: 500 }}>
             🎓 Student Voice Assistant
           </span>
+
+          <button
+            onClick={handleLogout}
+            style={{
+              padding: "7px 14px",
+              borderRadius: "8px",
+              border: "none",
+              background: "#fff",
+              color: "#1a56db",
+              cursor: "pointer",
+              fontSize: "13px",
+              fontWeight: 500,
+            }}
+          >
+            Logout
+          </button>
         </nav>
 
         <div style={{ maxWidth: "460px", margin: "0 auto", padding: "56px 16px" }}>
@@ -736,7 +1139,8 @@ Rules:
             }}
           >
             <div style={{ textAlign: "center", marginBottom: "28px" }}>
-              <div style={{ fontSize: "42px", marginBottom: "10px" }}>👋</div>
+              <div style={{ fontSize: "42px", marginBottom: "10px" }}>🎓</div>
+
               <h1
                 style={{
                   fontSize: "24px",
@@ -745,110 +1149,19 @@ Rules:
                   marginBottom: "8px",
                 }}
               >
-                Welcome, Student
+                Welcome, {userProfile?.name || "Student"}
               </h1>
-              <p
-                style={{
-                  fontSize: "14px",
-                  color: "#6b7280",
-                  lineHeight: "1.5",
-                }}
-              >
-                Select your learning profile to get explanations suitable for you.
+
+              <p style={{ fontSize: "14px", color: "#6b7280", lineHeight: "1.5" }}>
+                Class {classLevel} · {board}
               </p>
             </div>
 
-            <label
-              style={{
-                display: "block",
-                fontSize: "13px",
-                fontWeight: 500,
-                color: "#374151",
-                marginBottom: "6px",
-              }}
-            >
-              Select your class
-            </label>
-            <select
-              value={classLevel}
-              onChange={(e) => setClassLevel(e.target.value)}
-              style={{
-                width: "100%",
-                padding: "11px 12px",
-                marginBottom: "18px",
-                borderRadius: "9px",
-                border: "1px solid #d1d5db",
-                background: "#fff",
-                fontSize: "14px",
-                color: "#111827",
-                outline: "none",
-              }}
-            >
-              <option value="5">Class 5</option>
-              <option value="6">Class 6</option>
-              <option value="7">Class 7</option>
-              <option value="8">Class 8</option>
-              <option value="9">Class 9</option>
-              <option value="10">Class 10</option>
-            </select>
-
-            <label
-              style={{
-                display: "block",
-                fontSize: "13px",
-                fontWeight: 500,
-                color: "#374151",
-                marginBottom: "6px",
-              }}
-            >
-              Select your board
-            </label>
-            <select
-              value={board}
-              onChange={(e) => setBoard(e.target.value)}
-              style={{
-                width: "100%",
-                padding: "11px 12px",
-                marginBottom: "18px",
-                borderRadius: "9px",
-                border: "1px solid #d1d5db",
-                background: "#fff",
-                fontSize: "14px",
-                color: "#111827",
-                outline: "none",
-              }}
-            >
-              <option value="CBSE">CBSE</option>
-              <option value="RBSE">RBSE</option>
-              <option value="ICSE">ICSE</option>
-              <option value="Other">Other</option>
-            </select>
-
-            <label
-              style={{
-                display: "block",
-                fontSize: "13px",
-                fontWeight: 500,
-                color: "#374151",
-                marginBottom: "6px",
-              }}
-            >
-              Choose answer language
-            </label>
+            <label style={labelStyle}>Choose answer language</label>
             <select
               value={answerLanguage}
               onChange={(e) => setAnswerLanguage(e.target.value)}
-              style={{
-                width: "100%",
-                padding: "11px 12px",
-                marginBottom: "26px",
-                borderRadius: "9px",
-                border: "1px solid #d1d5db",
-                background: "#fff",
-                fontSize: "14px",
-                color: "#111827",
-                outline: "none",
-              }}
+              style={inputStyle}
             >
               <option value="en">English</option>
               <option value="hi">हिंदी</option>
@@ -867,6 +1180,7 @@ Rules:
                 fontSize: "15px",
                 fontWeight: 500,
                 cursor: "pointer",
+                marginTop: "16px",
               }}
             >
               Start Learning →
@@ -899,36 +1213,27 @@ Rules:
           🎓 Student Voice Assistant
         </span>
 
-        <div style={{ display: "flex", gap: "10px" }}>
-          <button
-            style={{
-              padding: "7px 16px",
-              borderRadius: "8px",
-              fontSize: "13px",
-              fontWeight: 500,
-              border: "1px solid rgba(255,255,255,0.3)",
-              background: "rgba(255,255,255,0.15)",
-              color: "#fff",
-              cursor: "pointer",
-            }}
-          >
-            Login
-          </button>
-          <button
-            style={{
-              padding: "7px 16px",
-              borderRadius: "8px",
-              fontSize: "13px",
-              fontWeight: 500,
-              border: "none",
-              background: "#fff",
-              color: "#1a56db",
-              cursor: "pointer",
-            }}
-          >
-            Get Started
-          </button>
-        </div>
+        <div style={{ display: "flex", gap: "10px", alignItems: "center" }}>
+  <span style={{ color: "#fff", fontSize: "13px" }}>
+    {userProfile?.name || user?.email}
+  </span>
+
+  <button
+    onClick={handleLogout}
+    style={{
+      padding: "7px 16px",
+      borderRadius: "8px",
+      fontSize: "13px",
+      fontWeight: 500,
+      border: "none",
+      background: "#fff",
+      color: "#1a56db",
+      cursor: "pointer",
+    }}
+  >
+    Logout
+  </button>
+</div>
       </nav>
 
       {/* Main */}
