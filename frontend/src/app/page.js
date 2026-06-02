@@ -13,6 +13,8 @@ import {
   doc,
   setDoc,
   getDoc,
+  getDocs,
+  collection,
   serverTimestamp,
 } from "firebase/firestore";
 
@@ -179,6 +181,16 @@ const SYLLABUS_DATA = {
   },
 };
 
+const STATUS_OPTIONS = [
+  "Not Started",
+  "In Progress",
+  "Completed",
+  "Revision Done",
+  "Test Done",
+];
+
+const COMPLETED_STATUSES = ["Completed", "Revision Done", "Test Done"];
+
 // ── Typewriter hook ────────────────────────────────────────
 function useTypewriter(text, speed = 120) {
   const [displayed, setDisplayed] = useState("");
@@ -217,14 +229,23 @@ function useTypewriter(text, speed = 120) {
 }
 
 // ── Assistant bubble with typewriter ──────────────────────
-function AssistantBubble({ msg, index, playingIndex, playAudio, stopAudio }) {
+function AssistantBubble({
+  msg,
+  index,
+  playingIndex,
+  playAudio,
+  stopAudio,
+  onTypingComplete,
+}) {
   const { displayed, done } = useTypewriter(msg.typing ? msg.text : "");
   const [audioReady, setAudioReady] = useState(false);
   const ttsStarted = useRef(false);
 
   useEffect(() => {
-    if (done && msg.audioUrl) setAudioReady(true);
-  }, [done, msg.audioUrl]);
+  if (done && msg.typing) {
+    onTypingComplete?.(msg.id);
+  }
+}, [done, msg.typing, msg.id, onTypingComplete]);
 
   useEffect(() => {
     if (!msg.typing && msg.audioUrl && !ttsStarted.current) {
@@ -388,6 +409,8 @@ export default function Home() {
   // ── Syllabus tracker selection states ────────────────────
   const [selectedSubject, setSelectedSubject] = useState(null);
   const [selectedChapter, setSelectedChapter] = useState(null);
+  const [topicProgress, setTopicProgress] = useState({});
+  const [progressLoading, setProgressLoading] = useState(false);
 
 
     // ── Firebase auth states ────────────────────────────────
@@ -421,6 +444,118 @@ export default function Home() {
     : [];
 
   const currentChapter = selectedChapter;
+
+  const getTopicId = (subject, chapterTitle, topicTitle) => {
+    return `${classLevel}_${board}_${subject}_${chapterTitle}_${topicTitle}`
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "_")
+      .replace(/^_+|_+$/g, "");
+  };
+
+  const getTopicStatus = (subject, chapterTitle, topicTitle) => {
+    const topicId = getTopicId(subject, chapterTitle, topicTitle);
+    return topicProgress[topicId]?.status || "Not Started";
+  };
+
+  const isCompletedStatus = (status) => {
+    return COMPLETED_STATUSES.includes(status);
+  };
+
+  const getProgressStatus = (completed, total) => {
+    if (total === 0 || completed === 0) return "Not Started";
+    if (completed === total) return "Completed";
+    return "In Progress";
+  };
+
+  const getStatusColor = (status) => {
+    if (status === "Completed") return "#16a34a";
+    if (status === "In Progress") return "#1a56db";
+    return "#6b7280";
+  };
+
+  const getChapterProgress = (subject, chapter) => {
+    const totalTopics = chapter?.subtopics?.length || 0;
+
+    if (totalTopics === 0) {
+      return {
+        completed: 0,
+        total: 0,
+        percent: 0,
+        status: "Not Started",
+      };
+    }
+
+    const completedTopics = chapter.subtopics.filter((topic) =>
+      isCompletedStatus(getTopicStatus(subject, chapter.title, topic))
+    ).length;
+
+    return {
+      completed: completedTopics,
+      total: totalTopics,
+      percent: Math.round((completedTopics / totalTopics) * 100),
+      status: getProgressStatus(completedTopics, totalTopics),
+    };
+  };
+
+  const getSubjectProgress = (subject) => {
+    const chapters = currentSyllabus?.[subject] || [];
+    let totalTopics = 0;
+    let completedTopics = 0;
+
+    chapters.forEach((chapter) => {
+      totalTopics += chapter.subtopics.length;
+      completedTopics += chapter.subtopics.filter((topic) =>
+        isCompletedStatus(getTopicStatus(subject, chapter.title, topic))
+      ).length;
+    });
+
+    return {
+      completed: completedTopics,
+      total: totalTopics,
+      percent: totalTopics === 0 ? 0 : Math.round((completedTopics / totalTopics) * 100),
+      status: getProgressStatus(completedTopics, totalTopics),
+    };
+  };
+
+  const getOverallProgress = () => {
+    let totalTopics = 0;
+    let completedTopics = 0;
+
+    Object.keys(currentSyllabus || {}).forEach((subject) => {
+      const subjectProgress = getSubjectProgress(subject);
+      totalTopics += subjectProgress.total;
+      completedTopics += subjectProgress.completed;
+    });
+
+    return {
+      completed: completedTopics,
+      total: totalTopics,
+      percent: totalTopics === 0 ? 0 : Math.round((completedTopics / totalTopics) * 100),
+      status: getProgressStatus(completedTopics, totalTopics),
+    };
+  };
+
+  const progressBar = (percent) => (
+    <div
+      style={{
+        width: "100%",
+        height: "8px",
+        borderRadius: "999px",
+        background: "#e5e7eb",
+        overflow: "hidden",
+      }}
+    >
+      <div
+        style={{
+          width: `${percent}%`,
+          height: "100%",
+          borderRadius: "999px",
+          background: "#1a56db",
+          transition: "width 0.3s ease",
+        }}
+      />
+    </div>
+  );
 
   const mediaRecorderRef = useRef(null);
   const audioChunksRef = useRef([]);
@@ -493,6 +628,14 @@ export default function Home() {
 
     return () => unsubscribe();
   }, []);
+
+  useEffect(() => {
+    if (user) {
+      loadTopicProgress(user.uid);
+    } else {
+      setTopicProgress({});
+    }
+  }, [user]);
 
   const stopAudio = () => {
     if (audioRef.current) {
@@ -624,8 +767,77 @@ export default function Home() {
     setMessages([]);
     setHistory([]);
     setTextInput("");
+    setTopicProgress({});
     setProfileCompleted(false);
     pendingVoiceDataRef.current = null;
+  };
+
+  const loadTopicProgress = async (uid) => {
+    if (!uid) return;
+
+    try {
+      setProgressLoading(true);
+
+      const progressRef = collection(db, "users", uid, "topicProgress");
+      const progressSnap = await getDocs(progressRef);
+
+      const loadedProgress = {};
+
+      progressSnap.forEach((progressDoc) => {
+        loadedProgress[progressDoc.id] = progressDoc.data();
+      });
+
+      setTopicProgress(loadedProgress);
+    } catch (error) {
+      console.error("Progress load error:", error);
+    } finally {
+      setProgressLoading(false);
+    }
+  };
+
+  const updateTopicStatus = async (subject, chapterTitle, topicTitle, status) => {
+    if (!user) {
+      setError("Please login to save progress.");
+      return;
+    }
+
+    const topicId = getTopicId(subject, chapterTitle, topicTitle);
+
+    const progressData = {
+      subject,
+      chapterTitle,
+      topicTitle,
+      status,
+      classLevel,
+      board,
+      updatedAt: serverTimestamp(),
+    };
+
+    setTopicProgress((prev) => ({
+      ...prev,
+      [topicId]: {
+        ...progressData,
+        updatedAt: new Date().toISOString(),
+      },
+    }));
+
+    try {
+      await setDoc(
+        doc(db, "users", user.uid, "topicProgress", topicId),
+        progressData,
+        { merge: true }
+      );
+    } catch (error) {
+      console.error("Progress save error:", error);
+    }
+  };
+
+  const markTypingComplete = (messageId) => {
+    setMessages((prev) =>
+      prev.map((msg) =>
+        msg.id === messageId ? { ...msg, typing: false } : msg
+      )
+    );
   };
 
   const clearConversation = () => {
@@ -636,8 +848,17 @@ export default function Home() {
     pendingVoiceDataRef.current = null;
   };
 
-  const handleStudyTopic = (subtopic) => {
+  const handleStudyTopic = async (subtopic) => {
     if (!selectedSubject || !currentChapter || !subtopic) return;
+
+    // When student clicks Study Topic, the topic is considered completed.
+    // Chapter and subject status are calculated automatically from completed topics.
+    await updateTopicStatus(
+      selectedSubject,
+      currentChapter.title,
+      subtopic,
+      "Completed"
+    );
 
     const prompt = `STUDY_TOPIC_MODE
 
@@ -694,8 +915,10 @@ Rules:
     setIsLoading(true);
 
     setMessages((prev) => [
-      ...prev,
-      { id: crypto.randomUUID(), role: "user", text: question, isVoice: false },
+    ...prev.map((msg) =>
+    msg.role === "assistant" ? { ...msg, typing: false } : msg
+    ),
+    { id: crypto.randomUUID(), role: "user", text: question, isVoice: false },
     ]);
 
     const formData = new FormData();
@@ -719,7 +942,9 @@ Rules:
       const data = await res.json();
 
       setMessages((prev) => [
-        ...prev,
+        ...prev.map((msg) =>
+        msg.role === "assistant" ? { ...msg, typing: false } : msg
+        ),
         {
           id: assistantId,
           role: "assistant",
@@ -728,7 +953,6 @@ Rules:
           typing: true,
         },
       ]);
-
       updateHistory(question, data.answer);
       setIsLoading(false);
 
@@ -829,16 +1053,18 @@ Rules:
       const assistantId = crypto.randomUUID();
 
       setMessages((prev) => [
-        ...prev,
-        { id: crypto.randomUUID(), role: "user", text: question, isVoice: true },
-        {
-          id: assistantId,
-          role: "assistant",
-          text: data.answer,
-          audioUrl: data.audio_url,
-          typing: false,
-        },
-      ]);
+        ...prev.map((msg) =>
+        msg.role === "assistant" ? { ...msg, typing: false } : msg
+      ),
+      { id: crypto.randomUUID(), role: "user", text: question, isVoice: true },
+      {
+        id: assistantId,
+        role: "assistant",
+        text: data.answer,
+        audioUrl: data.audio_url,
+        typing: false,
+      },
+    ]);
 
       updateHistory(question, data.answer);
 
@@ -1434,6 +1660,7 @@ Rules:
                       playingIndex={playingIndex}
                       playAudio={playAudio}
                       stopAudio={stopAudio}
+                      onTypingComplete={markTypingComplete}
                     />
                   )
                 )
@@ -1734,8 +1961,67 @@ Rules:
                 Syllabus Tracker
               </h2>
               <p style={{ fontSize: "14px", color: "#6b7280" }}>
-                Class {classLevel} · {board} · Choose a topic to study
+                Class {classLevel} · {board} · Track topics, chapters, and subjects
               </p>
+
+              {(() => {
+                const overallProgress = getOverallProgress();
+
+                return (
+                  <div
+                    style={{
+                      marginTop: "16px",
+                      padding: "14px",
+                      borderRadius: "14px",
+                      background: "#eff6ff",
+                      border: "1px solid #bfdbfe",
+                      textAlign: "left",
+                    }}
+                  >
+                    <div
+                      style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "center",
+                        marginBottom: "8px",
+                      }}
+                    >
+                      <span
+                        style={{
+                          fontSize: "14px",
+                          fontWeight: 600,
+                          color: "#111827",
+                        }}
+                      >
+                        Overall Progress
+                      </span>
+
+                      <span
+                        style={{
+                          fontSize: "13px",
+                          fontWeight: 600,
+                          color: "#1a56db",
+                        }}
+                      >
+                        {overallProgress.percent}%
+                      </span>
+                    </div>
+
+                    {progressBar(overallProgress.percent)}
+
+                    <div
+                      style={{
+                        fontSize: "12px",
+                        color: "#6b7280",
+                        marginTop: "7px",
+                      }}
+                    >
+                      {overallProgress.completed}/{overallProgress.total} topics completed
+                      {progressLoading ? " · Syncing..." : ""}
+                    </div>
+                  </div>
+                );
+              })()}
             </div>
 
             {!selectedSubject && (
@@ -1785,9 +2071,35 @@ Rules:
                       >
                         {subject}
                       </div>
-                      <div style={{ fontSize: "12px", color: "#6b7280" }}>
-                        {currentSyllabus[subject].length} chapters
-                      </div>
+                      {(() => {
+                        const subjectProgress = getSubjectProgress(subject);
+
+                        return (
+                          <>
+                            <div style={{ fontSize: "12px", color: "#6b7280", marginBottom: "4px" }}>
+                              {subjectProgress.percent}% completed
+                            </div>
+
+                            <div
+                              style={{
+                                fontSize: "11px",
+                                color: getStatusColor(subjectProgress.status),
+                                fontWeight: 700,
+                                marginBottom: "8px",
+                              }}
+                            >
+                              {subjectProgress.status}
+                            </div>
+
+                            {progressBar(subjectProgress.percent)}
+
+                            <div style={{ fontSize: "11px", color: "#6b7280", marginTop: "7px" }}>
+                              {subjectProgress.completed}/{subjectProgress.total} topics ·{" "}
+                              {currentSyllabus[subject].length} chapters
+                            </div>
+                          </>
+                        );
+                      })()}
                     </button>
                   );
                 })}
@@ -1870,16 +2182,40 @@ Rules:
                         >
                           {chapter.title}
                         </span>
-                        <span
-                          style={{
-                            display: "block",
-                            fontSize: "12px",
-                            color: "#6b7280",
-                            marginTop: "2px",
-                          }}
-                        >
-                          {chapter.subtopics.length} topics
-                        </span>
+                        {(() => {
+                          const chapterProgress = getChapterProgress(selectedSubject, chapter);
+
+                          return (
+                            <>
+                              <span
+                                style={{
+                                  display: "block",
+                                  fontSize: "12px",
+                                  color: "#6b7280",
+                                  marginTop: "2px",
+                                  marginBottom: "6px",
+                                }}
+                              >
+                                {chapterProgress.percent}% completed ·{" "}
+                                {chapterProgress.completed}/{chapterProgress.total} topics
+                              </span>
+
+                              <span
+                                style={{
+                                  display: "inline-block",
+                                  fontSize: "11px",
+                                  color: getStatusColor(chapterProgress.status),
+                                  fontWeight: 700,
+                                  marginBottom: "6px",
+                                }}
+                              >
+                                {chapterProgress.status}
+                              </span>
+
+                              {progressBar(chapterProgress.percent)}
+                            </>
+                          );
+                        })()}
                       </span>
 
                       <span style={{ color: "#9ca3af" }}>›</span>
@@ -1934,8 +2270,83 @@ Rules:
                     {currentChapter.title}
                   </h3>
 
+                  {(() => {
+                    const chapterProgress = getChapterProgress(selectedSubject, currentChapter);
+
+                    return (
+                      <div
+                        style={{
+                          padding: "12px",
+                          borderRadius: "12px",
+                          background: "#eff6ff",
+                          border: "1px solid #bfdbfe",
+                          marginBottom: "12px",
+                        }}
+                      >
+                        <div
+                          style={{
+                            display: "flex",
+                            justifyContent: "space-between",
+                            marginBottom: "8px",
+                          }}
+                        >
+                          <span
+                            style={{
+                              fontSize: "13px",
+                              fontWeight: 600,
+                              color: "#111827",
+                            }}
+                          >
+                            Chapter Progress
+                          </span>
+
+                          <span
+                            style={{
+                              fontSize: "13px",
+                              fontWeight: 600,
+                              color: "#1a56db",
+                            }}
+                          >
+                            {chapterProgress.percent}%
+                          </span>
+                        </div>
+
+                        {progressBar(chapterProgress.percent)}
+
+                        <div
+                          style={{
+                            fontSize: "12px",
+                            color: "#6b7280",
+                            marginTop: "7px",
+                          }}
+                        >
+                          {chapterProgress.completed}/{chapterProgress.total} topics completed
+                        </div>
+
+                        <div
+                          style={{
+                            fontSize: "12px",
+                            color: getStatusColor(chapterProgress.status),
+                            fontWeight: 700,
+                            marginTop: "4px",
+                          }}
+                        >
+                          {chapterProgress.status}
+                        </div>
+                      </div>
+                    );
+                  })()}
+
                   <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-                    {currentChapter.subtopics.map((subtopic, index) => (
+                    {currentChapter.subtopics.map((subtopic, index) => {
+                      const currentStatus = getTopicStatus(
+                        selectedSubject,
+                        currentChapter.title,
+                        subtopic
+                      );
+                      const topicCompleted = isCompletedStatus(currentStatus);
+
+                      return (
                       <div
                         key={subtopic}
                         style={{
@@ -1945,7 +2356,7 @@ Rules:
                           padding: "10px 12px",
                           borderRadius: "10px",
                           background: "#fff",
-                          border: "1px solid #e5e7eb",
+                          border: topicCompleted ? "1px solid #86efac" : "1px solid #e5e7eb",
                         }}
                       >
                         <span
@@ -1953,8 +2364,8 @@ Rules:
                             width: "22px",
                             height: "22px",
                             borderRadius: "50%",
-                            background: "#eff6ff",
-                            color: "#1a56db",
+                            background: topicCompleted ? "#dcfce7" : "#eff6ff",
+                            color: topicCompleted ? "#16a34a" : "#1a56db",
                             display: "flex",
                             alignItems: "center",
                             justifyContent: "center",
@@ -1963,7 +2374,7 @@ Rules:
                             flexShrink: 0,
                           }}
                         >
-                          {index + 1}
+                          {topicCompleted ? "✓" : index + 1}
                         </span>
 
                         <span
@@ -1976,6 +2387,34 @@ Rules:
                         >
                           {subtopic}
                         </span>
+
+                        <select
+                          value={currentStatus}
+                          onChange={(e) =>
+                            updateTopicStatus(
+                              selectedSubject,
+                              currentChapter.title,
+                              subtopic,
+                              e.target.value
+                            )
+                          }
+                          style={{
+                            padding: "6px 8px",
+                            borderRadius: "8px",
+                            border: "1px solid #d1d5db",
+                            background: "#fff",
+                            color: "#374151",
+                            fontSize: "12px",
+                            cursor: "pointer",
+                            flexShrink: 0,
+                          }}
+                        >
+                          {STATUS_OPTIONS.map((status) => (
+                            <option key={status} value={status}>
+                              {status}
+                            </option>
+                          ))}
+                        </select>
 
                         <button
                           onClick={() => handleStudyTopic(subtopic)}
@@ -1993,7 +2432,8 @@ Rules:
                           Study Topic
                         </button>
                       </div>
-                    ))}
+                      );
+                    })}
                   </div>
                 </div>
               </div>
