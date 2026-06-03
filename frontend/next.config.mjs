@@ -22,6 +22,11 @@ const nextConfig = {
         source: "/api/audio/:path*",
         destination: "https://lalit00014-student-voice-assistant-backend.hf.space/audio/:path*",
       },
+      {
+        source: "/api/generate-test",
+        destination: "https://lalit00014-student-voice-assistant-backend.hf.space/generate-test/",
+      },
+
     ];
   },
 };

@@ -1,5 +1,7 @@
 import os
 import time
+import json
+import re
 from typing import Optional
  
 import google.generativeai as genai
@@ -561,3 +563,224 @@ Student question:
     except Exception as error:
         print(f"[Groq] Error: {error}")
         return get_fallback_message(language)
+ 
+ 
+def _extract_json_object(text: str) -> dict:
+    """
+    Extract a JSON object from model output safely.
+    """
+ 
+    text = (text or "").strip()
+ 
+    if text.startswith("```"):
+        text = re.sub(r"^```(?:json)?", "", text, flags=re.IGNORECASE).strip()
+        text = re.sub(r"```$", "", text).strip()
+ 
+    try:
+        return json.loads(text)
+    except Exception:
+        pass
+ 
+    start = text.find("{")
+    end = text.rfind("}")
+ 
+    if start != -1 and end != -1 and end > start:
+        return json.loads(text[start : end + 1])
+ 
+    raise ValueError("Could not parse JSON from model output")
+ 
+ 
+def _normalize_mcq_payload(payload: dict, question_count: int) -> list[dict]:
+    """
+    Normalize and validate MCQ JSON so frontend always gets the same shape.
+    """
+ 
+    questions = payload.get("questions", [])
+ 
+    if not isinstance(questions, list):
+        raise ValueError("MCQ payload does not contain a questions list")
+ 
+    normalized = []
+ 
+    for item in questions:
+        if not isinstance(item, dict):
+            continue
+ 
+        question = str(item.get("question") or "").strip()
+        options = item.get("options", [])
+        answer_index = item.get("answerIndex", item.get("answer_index", 0))
+        explanation = str(item.get("explanation") or "").strip()
+ 
+        if not question or not isinstance(options, list) or len(options) != 4:
+            continue
+ 
+        try:
+            answer_index = int(answer_index)
+        except Exception:
+            answer_index = 0
+ 
+        if answer_index < 0 or answer_index > 3:
+            answer_index = 0
+ 
+        normalized.append(
+            {
+                "question": question,
+                "options": [str(option).strip() for option in options[:4]],
+                "answerIndex": answer_index,
+                "explanation": explanation,
+            }
+        )
+ 
+    if len(normalized) < question_count:
+        raise ValueError(
+            f"Only {len(normalized)} valid MCQs generated, expected {question_count}"
+        )
+ 
+    return normalized[:question_count]
+ 
+ 
+def generate_test_mcqs(
+    test_type: str,
+    subject: str,
+    chapter_title: str,
+    topic_title: str,
+    topics: list[str],
+    question_count: int,
+    language: str,
+    class_level: Optional[str] = None,
+    board: Optional[str] = None,
+) -> list[dict]:
+    """
+    Generate MCQs as JSON for interactive tests.
+ 
+    Returns:
+    [
+      {
+        "question": "...",
+        "options": ["...", "...", "...", "..."],
+        "answerIndex": 0,
+        "explanation": "..."
+      }
+    ]
+    """
+ 
+    language_instruction = build_language_instruction(language)
+    profile_instruction = build_student_profile_instruction(class_level, board)
+ 
+    if test_type == "topic":
+        scope_instruction = f"""Test type: Topic Test
+Topic: {topic_title}
+Chapter: {chapter_title}
+Subject: {subject}
+Create exactly {question_count} MCQs from this topic only."""
+    else:
+        topic_list = ", ".join(topics or [])
+        scope_instruction = f"""Test type: Chapter Test
+Chapter: {chapter_title}
+Subject: {subject}
+Topics in chapter: {topic_list}
+Create exactly {question_count} MCQs covering the full chapter."""
+ 
+    prompt = f"""You are generating an interactive MCQ test for a school student.
+ 
+{scope_instruction}
+ 
+{profile_instruction}
+ 
+{language_instruction}
+ 
+Return ONLY valid JSON.
+Do not use markdown.
+Do not add explanation outside JSON.
+ 
+Required JSON format:
+{{
+  "questions": [
+    {{
+      "question": "Question text",
+      "options": ["Option A", "Option B", "Option C", "Option D"],
+      "answerIndex": 0,
+      "explanation": "One short explanation of the correct answer"
+    }}
+  ]
+}}
+ 
+Strict rules:
+- Generate exactly {question_count} questions.
+- Each question must have exactly 4 options.
+- answerIndex must be 0, 1, 2, or 3.
+- Keep questions suitable for Class {class_level}.
+- Avoid repeated questions.
+- Avoid trick questions.
+- Keep options short and clear.
+"""
+ 
+    max_tokens = 3500 if question_count >= 20 else 2200
+ 
+    # Gemini primary
+    for model_name in ["gemini-2.5-flash", "gemini-2.0-flash-lite"]:
+        try:
+            gemini_model = genai.GenerativeModel(
+                model_name=model_name,
+                system_instruction=SYSTEM_PROMPT,
+                generation_config=genai.GenerationConfig(
+                    temperature=0.3,
+                    max_output_tokens=max_tokens,
+                ),
+            )
+ 
+            response = gemini_model.generate_content(prompt)
+            text = (response.text or "").strip()
+ 
+            payload = _extract_json_object(text)
+            questions = _normalize_mcq_payload(payload, question_count)
+ 
+            print(
+                f"[TEST] Used {model_name} | type={test_type} "
+                f"| questions={len(questions)}"
+            )
+ 
+            return questions
+ 
+        except Exception as error:
+            error_text = str(error)
+ 
+            if "429" in error_text or "quota" in error_text.lower():
+                print(f"[TEST {model_name}] Rate limited — trying next model")
+                time.sleep(1)
+                continue
+ 
+            print(f"[TEST {model_name}] Error: {error}")
+            break
+ 
+    # Groq fallback
+    try:
+        print(f"[TEST] Using Groq fallback | type={test_type}")
+ 
+        completion = groq_client.chat.completions.create(
+            model="llama-3.3-70b-versatile",
+            messages=[
+                {
+                    "role": "system",
+                    "content": SYSTEM_PROMPT,
+                },
+                {
+                    "role": "user",
+                    "content": prompt,
+                },
+            ],
+            temperature=0.3,
+            max_tokens=max_tokens,
+        )
+ 
+        text = completion.choices[0].message.content.strip()
+        payload = _extract_json_object(text)
+        questions = _normalize_mcq_payload(payload, question_count)
+ 
+        print(f"[TEST] Groq answered | type={test_type} | questions={len(questions)}")
+ 
+        return questions
+ 
+    except Exception as error:
+        print(f"[TEST Groq] Error: {error}")
+        raise

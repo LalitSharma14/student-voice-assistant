@@ -1,7 +1,5 @@
-
 "use client";
- 
-import { useState, useRef, useEffect } from "react";
+ import { useState, useRef, useEffect } from "react";
  
 import { auth, db } from "../lib/firebase";
 import {
@@ -432,7 +430,12 @@ export default function Home() {
   const [selectedChapter, setSelectedChapter] = useState(null);
   const [topicProgress, setTopicProgress] = useState({});
   const [revisionProgress, setRevisionProgress] = useState({});
+  const [testResults, setTestResults] = useState({});
   const [progressLoading, setProgressLoading] = useState(false);
+  const [testLoading, setTestLoading] = useState(false);
+  const [currentTest, setCurrentTest] = useState(null);
+  const [selectedAnswers, setSelectedAnswers] = useState({});
+  const [submittedTestResult, setSubmittedTestResult] = useState(null);
  
  
     // ── Firebase auth states ────────────────────────────────
@@ -655,9 +658,11 @@ export default function Home() {
     if (user) {
       loadTopicProgress(user.uid);
       loadRevisionProgress(user.uid);
+      loadTestResults(user.uid);
     } else {
       setTopicProgress({});
       setRevisionProgress({});
+      setTestResults({});
     }
   }, [user]);
  
@@ -793,6 +798,13 @@ export default function Home() {
     setTextInput("");
     setTopicProgress({});
     setRevisionProgress({});
+    setTestResults({});
+    setCurrentTest(null);
+    setSelectedAnswers({});
+    setSubmittedTestResult(null);
+    setActiveTab("chat");
+    setSelectedSubject(null);
+    setSelectedChapter(null);
     setProfileCompleted(false);
     pendingVoiceDataRef.current = null;
   };
@@ -929,6 +941,199 @@ export default function Home() {
     } catch (error) {
       console.error("Revision save error:", error);
     }
+  };
+ 
+ 
+  const getTestId = (type, subject, chapterTitle, topicTitle = "") => {
+    const rawId =
+      type === "topic"
+        ? `topic_${classLevel}_${board}_${subject}_${chapterTitle}_${topicTitle}`
+        : `chapter_${classLevel}_${board}_${subject}_${chapterTitle}`;
+ 
+    return rawId
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "_")
+      .replace(/^_+|_+$/g, "");
+  };
+ 
+  const getSavedTestResult = (type, subject, chapterTitle, topicTitle = "") => {
+    const testId = getTestId(type, subject, chapterTitle, topicTitle);
+    return testResults[testId] || null;
+  };
+ 
+  const loadTestResults = async (uid) => {
+    if (!uid) return;
+ 
+    try {
+      const testRef = collection(db, "users", uid, "testResults");
+      const testSnap = await getDocs(testRef);
+ 
+      const loadedTests = {};
+ 
+      testSnap.forEach((testDoc) => {
+        loadedTests[testDoc.id] = testDoc.data();
+      });
+ 
+      setTestResults(loadedTests);
+    } catch (error) {
+      console.error("Test results load error:", error);
+    }
+  };
+ 
+  const saveTestResult = async (resultData) => {
+    if (!user || !resultData?.testId) return;
+ 
+    setTestResults((prev) => ({
+      ...prev,
+      [resultData.testId]: {
+        ...resultData,
+        updatedAt: new Date().toISOString(),
+      },
+    }));
+ 
+    try {
+      await setDoc(
+        doc(db, "users", user.uid, "testResults", resultData.testId),
+        {
+          ...resultData,
+          updatedAt: serverTimestamp(),
+        },
+        { merge: true }
+      );
+    } catch (error) {
+      console.error("Test result save error:", error);
+    }
+  };
+ 
+  const startTest = async ({
+    type,
+    subject,
+    chapterTitle,
+    topicTitle = "",
+    topics = [],
+    questionCount,
+  }) => {
+    if (!user) {
+      setError("Please login to start a test.");
+      return;
+    }
+ 
+    setError("");
+    setTestLoading(true);
+    setSelectedAnswers({});
+    setSubmittedTestResult(null);
+    setCurrentTest(null);
+    setActiveTab("test");
+ 
+    const testId = getTestId(type, subject, chapterTitle, topicTitle);
+ 
+    const formData = new FormData();
+    formData.append("test_type", type);
+    formData.append("subject", subject);
+    formData.append("chapter_title", chapterTitle);
+    formData.append("topic_title", topicTitle || "");
+    formData.append("topics", JSON.stringify(topics || []));
+    formData.append("question_count", String(questionCount));
+    formData.append("class_level", classLevel);
+    formData.append("board", board);
+    formData.append("answer_language", answerLanguage);
+ 
+    try {
+      const res = await fetch("/api/generate-test", {
+        method: "POST",
+        body: formData,
+      });
+ 
+      if (!res.ok) {
+        const err = await res.json();
+        throw new Error(err.detail || "Could not generate test.");
+      }
+ 
+      const data = await res.json();
+      const questions = Array.isArray(data.questions) ? data.questions : [];
+ 
+      if (!questions.length) {
+        throw new Error("No questions generated. Please try again.");
+      }
+ 
+      setCurrentTest({
+        testId,
+        type,
+        subject,
+        chapterTitle,
+        topicTitle,
+        questionCount,
+        questions,
+      });
+    } catch (error) {
+      console.error("Test generation error:", error);
+      setError(error.message || "Could not generate test.");
+      setActiveTab("syllabus");
+    } finally {
+      setTestLoading(false);
+    }
+  };
+ 
+  const handleTopicTest = (subtopic) => {
+    if (!selectedSubject || !currentChapter || !subtopic) return;
+ 
+    startTest({
+      type: "topic",
+      subject: selectedSubject,
+      chapterTitle: currentChapter.title,
+      topicTitle: subtopic,
+      topics: [subtopic],
+      questionCount: 10,
+    });
+  };
+ 
+  const handleChapterTest = () => {
+    if (!selectedSubject || !currentChapter) return;
+ 
+    startTest({
+      type: "chapter",
+      subject: selectedSubject,
+      chapterTitle: currentChapter.title,
+      topicTitle: "",
+      topics: currentChapter.subtopics || [],
+      questionCount: 20,
+    });
+  };
+ 
+  const submitCurrentTest = async () => {
+    if (!currentTest?.questions?.length) return;
+ 
+    const total = currentTest.questions.length;
+    let score = 0;
+ 
+    currentTest.questions.forEach((question, index) => {
+      if (Number(selectedAnswers[index]) === Number(question.answerIndex)) {
+        score += 1;
+      }
+    });
+ 
+    const resultData = {
+      testId: currentTest.testId,
+      type: currentTest.type,
+      subject: currentTest.subject,
+      chapterTitle: currentTest.chapterTitle,
+      topicTitle: currentTest.topicTitle || "",
+      score,
+      total,
+      percentage: Math.round((score / total) * 100),
+      classLevel,
+      board,
+    };
+ 
+    setSubmittedTestResult(resultData);
+    await saveTestResult(resultData);
+  };
+ 
+  const resetTestView = () => {
+    setCurrentTest(null);
+    setSelectedAnswers({});
+    setSubmittedTestResult(null);
+    setActiveTab("syllabus");
   };
  
   const handleReviseTopic = async (subtopic) => {
@@ -1652,7 +1857,275 @@ Rules:
           >
             📚 Syllabus Tracker
           </button>
+ 
+          <button
+            onClick={() => currentTest && setActiveTab("test")}
+            disabled={!currentTest && !testLoading}
+            style={{
+              flex: 1,
+              padding: "10px 12px",
+              borderRadius: "9px",
+              border: "none",
+              cursor: currentTest || testLoading ? "pointer" : "not-allowed",
+              fontSize: "14px",
+              fontWeight: 500,
+              background: activeTab === "test" ? "#1a56db" : "transparent",
+              color: activeTab === "test" ? "#fff" : "#374151",
+              opacity: currentTest || testLoading ? 1 : 0.45,
+            }}
+          >
+            📝 Test
+          </button>
         </div>
+ 
+        {/* Test Section */}
+        {activeTab === "test" && (
+          <div
+            style={{
+              background: "#fff",
+              border: "1px solid #e5e7eb",
+              borderRadius: "16px",
+              padding: "20px",
+            }}
+          >
+            {testLoading ? (
+              <div style={{ textAlign: "center", padding: "40px 12px" }}>
+                <div style={{ fontSize: "36px", marginBottom: "10px" }}>📝</div>
+                <h2 style={{ fontSize: "20px", color: "#111827", marginBottom: "6px" }}>
+                  Generating your test...
+                </h2>
+                <p style={{ fontSize: "13px", color: "#6b7280" }}>
+                  Please wait while AI creates class-appropriate MCQs.
+                </p>
+              </div>
+            ) : currentTest ? (
+              <div>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    gap: "12px",
+                    alignItems: "flex-start",
+                    marginBottom: "16px",
+                  }}
+                >
+                  <div>
+                    <div style={{ fontSize: "13px", color: "#6b7280", marginBottom: "4px" }}>
+                      {currentTest.type === "topic" ? "Topic Test" : "Chapter Test"}
+                    </div>
+                    <h2
+                      style={{
+                        fontSize: "21px",
+                        fontWeight: 700,
+                        color: "#111827",
+                        marginBottom: "4px",
+                      }}
+                    >
+                      {currentTest.type === "topic"
+                        ? currentTest.topicTitle
+                        : currentTest.chapterTitle}
+                    </h2>
+                    <p style={{ fontSize: "13px", color: "#6b7280" }}>
+                      {currentTest.subject} · {currentTest.questions.length} MCQs
+                    </p>
+                  </div>
+ 
+                  <button
+                    onClick={resetTestView}
+                    style={{
+                      padding: "7px 12px",
+                      borderRadius: "8px",
+                      border: "1px solid #d1d5db",
+                      background: "#fff",
+                      color: "#374151",
+                      cursor: "pointer",
+                      fontSize: "12px",
+                    }}
+                  >
+                    Back to Syllabus
+                  </button>
+                </div>
+ 
+                {submittedTestResult && (
+                  <div
+                    style={{
+                      padding: "14px",
+                      borderRadius: "14px",
+                      background: "#f0fdf4",
+                      border: "1px solid #86efac",
+                      marginBottom: "16px",
+                    }}
+                  >
+                    <div
+                      style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "center",
+                      }}
+                    >
+                      <div>
+                        <div
+                          style={{
+                            fontSize: "16px",
+                            fontWeight: 700,
+                            color: "#111827",
+                            marginBottom: "4px",
+                          }}
+                        >
+                          Test Completed ✅
+                        </div>
+                        <div style={{ fontSize: "13px", color: "#6b7280" }}>
+                          Your score has been saved.
+                        </div>
+                      </div>
+ 
+                      <div
+                        style={{
+                          fontSize: "28px",
+                          fontWeight: 800,
+                          color: "#16a34a",
+                        }}
+                      >
+                        {submittedTestResult.score}/{submittedTestResult.total}
+                      </div>
+                    </div>
+                  </div>
+                )}
+ 
+                <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
+                  {currentTest.questions.map((question, questionIndex) => {
+                    const selected = selectedAnswers[questionIndex];
+                    const isSubmitted = Boolean(submittedTestResult);
+ 
+                    return (
+                      <div
+                        key={questionIndex}
+                        style={{
+                          padding: "14px",
+                          borderRadius: "14px",
+                          background: "#f9fafb",
+                          border: "1px solid #e5e7eb",
+                        }}
+                      >
+                        <div
+                          style={{
+                            fontSize: "14px",
+                            fontWeight: 700,
+                            color: "#111827",
+                            marginBottom: "10px",
+                          }}
+                        >
+                          Q{questionIndex + 1}. {question.question}
+                        </div>
+ 
+                        <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+                          {(question.options || []).map((option, optionIndex) => {
+                            const isCorrect = optionIndex === question.answerIndex;
+                            const isSelected = Number(selected) === optionIndex;
+ 
+                            return (
+                              <label
+                                key={optionIndex}
+                                style={{
+                                  display: "flex",
+                                  alignItems: "center",
+                                  gap: "8px",
+                                  padding: "8px 10px",
+                                  borderRadius: "10px",
+                                  border:
+                                    isSubmitted && isCorrect
+                                      ? "1px solid #86efac"
+                                      : isSubmitted && isSelected && !isCorrect
+                                      ? "1px solid #fca5a5"
+                                      : "1px solid #e5e7eb",
+                                  background:
+                                    isSubmitted && isCorrect
+                                      ? "#f0fdf4"
+                                      : isSubmitted && isSelected && !isCorrect
+                                      ? "#fef2f2"
+                                      : "#fff",
+                                  cursor: isSubmitted ? "default" : "pointer",
+                                  fontSize: "13px",
+                                  color: "#111827",
+                                }}
+                              >
+                                <input
+                                  type="radio"
+                                  name={`question-${questionIndex}`}
+                                  checked={Number(selected) === optionIndex}
+                                  disabled={isSubmitted}
+                                  onChange={() =>
+                                    setSelectedAnswers((prev) => ({
+                                      ...prev,
+                                      [questionIndex]: optionIndex,
+                                    }))
+                                  }
+                                />
+                                <span>
+                                  {String.fromCharCode(65 + optionIndex)}. {option}
+                                </span>
+                              </label>
+                            );
+                          })}
+                        </div>
+ 
+                        {isSubmitted && question.explanation && (
+                          <div
+                            style={{
+                              marginTop: "9px",
+                              fontSize: "12px",
+                              color: "#6b7280",
+                              lineHeight: "1.5",
+                            }}
+                          >
+                            <strong>Explanation:</strong> {question.explanation}
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+ 
+                {!submittedTestResult && (
+                  <button
+                    onClick={submitCurrentTest}
+                    disabled={
+                      Object.keys(selectedAnswers).length !== currentTest.questions.length
+                    }
+                    style={{
+                      width: "100%",
+                      marginTop: "18px",
+                      padding: "12px 16px",
+                      borderRadius: "10px",
+                      border: "none",
+                      background: "#1a56db",
+                      color: "#fff",
+                      fontSize: "15px",
+                      fontWeight: 700,
+                      cursor:
+                        Object.keys(selectedAnswers).length === currentTest.questions.length
+                          ? "pointer"
+                          : "not-allowed",
+                      opacity:
+                        Object.keys(selectedAnswers).length === currentTest.questions.length
+                          ? 1
+                          : 0.45,
+                    }}
+                  >
+                    Submit Test
+                  </button>
+                )}
+              </div>
+            ) : (
+              <div style={{ textAlign: "center", padding: "40px 12px" }}>
+                <div style={{ fontSize: "36px", marginBottom: "10px" }}>📝</div>
+                <p style={{ fontSize: "14px", color: "#6b7280" }}>
+                  Start a test from the Syllabus Tracker.
+                </p>
+              </div>
+            )}
+          </div>
+        )}
  
         {/* Chatbot Section */}
         {activeTab === "chat" && (
@@ -2459,6 +2932,54 @@ Rules:
                         >
                           {chapterProgress.status}
                         </div>
+ 
+                        {(() => {
+                          const savedChapterTest = getSavedTestResult(
+                            "chapter",
+                            selectedSubject,
+                            currentChapter.title
+                          );
+ 
+                          return (
+                            <div
+                              style={{
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "space-between",
+                                gap: "10px",
+                                marginTop: "12px",
+                              }}
+                            >
+                              <button
+                                onClick={handleChapterTest}
+                                style={{
+                                  padding: "8px 12px",
+                                  border: "none",
+                                  borderRadius: "9px",
+                                  background: "#1a56db",
+                                  color: "#fff",
+                                  fontSize: "12px",
+                                  cursor: "pointer",
+                                  fontWeight: 700,
+                                }}
+                              >
+                                Chapter Test - 20 MCQs
+                              </button>
+ 
+                              {savedChapterTest && (
+                                <span
+                                  style={{
+                                    fontSize: "12px",
+                                    color: "#16a34a",
+                                    fontWeight: 700,
+                                  }}
+                                >
+                                  Last Score: {savedChapterTest.score}/{savedChapterTest.total}
+                                </span>
+                              )}
+                            </div>
+                          );
+                        })()}
                       </div>
                     );
                   })()}
@@ -2541,6 +3062,49 @@ Rules:
                             </option>
                           ))}
                         </select>
+ 
+                        {(() => {
+                          const savedTopicTest = getSavedTestResult(
+                            "topic",
+                            selectedSubject,
+                            currentChapter.title,
+                            subtopic
+                          );
+ 
+                          return (
+                            <>
+                              {savedTopicTest && (
+                                <span
+                                  style={{
+                                    fontSize: "11px",
+                                    color: "#16a34a",
+                                    fontWeight: 700,
+                                    whiteSpace: "nowrap",
+                                  }}
+                                >
+                                  Test: {savedTopicTest.score}/{savedTopicTest.total}
+                                </span>
+                              )}
+ 
+                              <button
+                                onClick={() => handleTopicTest(subtopic)}
+                                style={{
+                                  padding: "6px 10px",
+                                  border: "1px solid #bbf7d0",
+                                  borderRadius: "8px",
+                                  background: "#f0fdf4",
+                                  color: "#16a34a",
+                                  fontSize: "12px",
+                                  cursor: "pointer",
+                                  flexShrink: 0,
+                                  fontWeight: 600,
+                                }}
+                              >
+                                Test
+                              </button>
+                            </>
+                          );
+                        })()}
  
                         <button
                           onClick={() => handleReviseTopic(subtopic)}
