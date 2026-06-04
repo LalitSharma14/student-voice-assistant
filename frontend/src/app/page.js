@@ -1,6 +1,6 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
-
+ 
 import { auth, db } from "../lib/firebase";
 import {
   createUserWithEmailAndPassword,
@@ -16,7 +16,7 @@ import {
   collection,
   serverTimestamp,
 } from "firebase/firestore";
-
+ 
 // ── Brand tokens ───────────────────────────────────────────
 const B = {
   navy:        "#2b5888",
@@ -41,20 +41,25 @@ const B = {
   greenLight:  "#f0fdf4",
   greenBorder: "#86efac",
 };
-
-// ── Teachifyy Logo SVG ─────────────────────────────────────
+ 
+// ── Teachifyy Logo Image ───────────────────────────────────
+// Save the uploaded logo image as: frontend/public/logo.png
 function TeachifyyLogo({ size = 32, showText = true, light = false }) {
   const textColor = light ? B.white : B.navy;
+ 
   return (
     <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-      <svg width={size} height={size} viewBox="0 0 100 100" fill="none">
-        {/* Paper plane top - red */}
-        <path d="M15 20 L75 10 L55 45 Z" fill={B.red} />
-        {/* Paper plane dot */}
-        <circle cx="72" cy="18" r="8" fill={B.red} />
-        {/* Book/base - navy */}
-        <path d="M25 45 L65 35 L70 70 L20 75 Z" fill={B.navy} />
-      </svg>
+      <img
+        src="/logo.png"
+        alt="Teachifyy logo"
+        style={{
+          width: size,
+          height: size,
+          objectFit: "contain",
+          display: "block",
+        }}
+      />
+ 
       {showText && (
         <span style={{
           fontSize: size * 0.6,
@@ -69,7 +74,7 @@ function TeachifyyLogo({ size = 32, showText = true, light = false }) {
     </div>
   );
 }
-
+ 
 // ── Sample syllabus data ───────────────────────────────────
 const SYLLABUS_DATA = {
   "5": {
@@ -101,15 +106,15 @@ const SYLLABUS_DATA = {
     },
   },
 };
-
+ 
 const STATUS_OPTIONS = ["Not Started", "In Progress", "Completed", "Revision Done", "Test Done"];
 const COMPLETED_STATUSES = ["Completed", "Revision Done", "Test Done"];
-
+ 
 // ── Typewriter hook ────────────────────────────────────────
 function useTypewriter(text, speed = 120) {
   const [displayed, setDisplayed] = useState("");
   const [done, setDone] = useState(false);
-
+ 
   useEffect(() => {
     if (!text) { setDisplayed(""); setDone(true); return; }
     setDisplayed(""); setDone(false);
@@ -122,33 +127,33 @@ function useTypewriter(text, speed = 120) {
     }, speed);
     return () => clearInterval(interval);
   }, [text, speed]);
-
+ 
   return { displayed, done };
 }
-
+ 
 // ── Assistant bubble ───────────────────────────────────────
 function AssistantBubble({ msg, index, playingIndex, playAudio, stopAudio, onTypingComplete }) {
   const { displayed, done } = useTypewriter(msg.typing ? msg.text : "");
   const [audioReady, setAudioReady] = useState(false);
   const ttsStarted = useRef(false);
-
+ 
   useEffect(() => {
     if (done && msg.typing) onTypingComplete?.(msg.id);
   }, [done, msg.typing, msg.id, onTypingComplete]);
-
+ 
   useEffect(() => {
     if (done && msg.audioUrl) setAudioReady(true);
   }, [done, msg.audioUrl]);
-
+ 
   useEffect(() => {
     if (!msg.typing && msg.audioUrl && !ttsStarted.current) {
       ttsStarted.current = true;
       setAudioReady(true);
     }
   }, [msg.audioUrl, msg.typing]);
-
+ 
   const textToShow = msg.typing ? displayed : msg.text;
-
+ 
   return (
     <div style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
       {/* AI avatar */}
@@ -160,7 +165,7 @@ function AssistantBubble({ msg, index, playingIndex, playAudio, stopAudio, onTyp
       }}>
         AI
       </div>
-
+ 
       <div style={{
         maxWidth: "82%", padding: "12px 16px",
         borderRadius: "4px 16px 16px 16px",
@@ -190,7 +195,7 @@ function AssistantBubble({ msg, index, playingIndex, playAudio, stopAudio, onTyp
             const isImportant =
               lowerLine.includes("definition:") || lowerLine.includes("important:") ||
               lowerLine.includes("remember:") || lowerLine.includes("note:");
-
+ 
             return (
               <div key={i} style={{
                 color: isHeading ? B.navy : "inherit",
@@ -209,7 +214,7 @@ function AssistantBubble({ msg, index, playingIndex, playAudio, stopAudio, onTyp
             }} />
           )}
         </div>
-
+ 
         {/* Stop typewriter button while generating */}
         {msg.typing && !done && (
           <button
@@ -224,13 +229,13 @@ function AssistantBubble({ msg, index, playingIndex, playAudio, stopAudio, onTyp
             ⏹ Stop generating
           </button>
         )}
-
+ 
         {msg.typing && done && !msg.audioUrl && (
           <div style={{ marginTop: "8px", fontSize: "11px", color: B.gray500, display: "flex", alignItems: "center", gap: "4px" }}>
             <span style={{ animation: "pulse 1s infinite", display: "inline-block" }}>⏳</span> Preparing audio...
           </div>
         )}
-
+ 
         {audioReady && msg.audioUrl && (
           <div style={{ marginTop: "10px" }}>
             {playingIndex === index ? (
@@ -256,7 +261,7 @@ function AssistantBubble({ msg, index, playingIndex, playAudio, stopAudio, onTyp
     </div>
   );
 }
-
+ 
 // ── Progress bar ───────────────────────────────────────────
 function ProgressBar({ percent, color = B.navy }) {
   return (
@@ -265,7 +270,7 @@ function ProgressBar({ percent, color = B.navy }) {
     </div>
   );
 }
-
+ 
 // ── Main component ─────────────────────────────────────────
 export default function Home() {
   const [messages, setMessages] = useState([]);
@@ -304,11 +309,11 @@ export default function Home() {
   const [board, setBoard] = useState("CBSE");
   const [answerLanguage, setAnswerLanguage] = useState("en");
   const [profileCompleted, setProfileCompleted] = useState(false);
-
+ 
   const currentSyllabus = SYLLABUS_DATA[classLevel]?.[board] || SYLLABUS_DATA["5"]?.CBSE;
   const currentChapters = selectedSubject ? currentSyllabus?.[selectedSubject] || [] : [];
   const currentChapter = selectedChapter;
-
+ 
   const mediaRecorderRef = useRef(null);
   const audioChunksRef = useRef([]);
   const chatEndRef = useRef(null);
@@ -316,7 +321,7 @@ export default function Home() {
   const abortControllerRef = useRef(null);
   const cancelledRef = useRef(false);
   const pendingVoiceDataRef = useRef(null);
-
+ 
   // Shared input/label styles
   const labelStyle = { display: "block", fontSize: "13px", fontWeight: 600, color: B.gray700, marginBottom: "6px", fontFamily: "'Plus Jakarta Sans', sans-serif" };
   const inputStyle = {
@@ -326,9 +331,9 @@ export default function Home() {
     boxSizing: "border-box", fontFamily: "'Plus Jakarta Sans', sans-serif",
     transition: "border-color 0.2s",
   };
-
+ 
   useEffect(() => { chatEndRef.current?.scrollIntoView({ behavior: "smooth" }); }, [messages]);
-
+ 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
       setAuthLoading(true);
@@ -350,17 +355,17 @@ export default function Home() {
     });
     return () => unsubscribe();
   }, []);
-
+ 
   useEffect(() => {
     if (user) { loadTopicProgress(user.uid); loadRevisionProgress(user.uid); loadTestResults(user.uid); }
     else { setTopicProgress({}); setRevisionProgress({}); setTestResults({}); }
   }, [user]);
-
+ 
   const stopAudio = () => {
     if (audioRef.current) { audioRef.current.onended = null; audioRef.current.pause(); audioRef.current.currentTime = 0; audioRef.current = null; }
     setPlayingIndex(null);
   };
-
+ 
   const playAudio = (audioUrl, index) => {
     stopAudio();
     const audio = new Audio(`/api/${audioUrl}`);
@@ -374,11 +379,11 @@ export default function Home() {
       }
     }, 80);
   };
-
+ 
   const updateHistory = (question, answer) => {
     setHistory((prev) => [...prev, { role: "user", content: question }, { role: "assistant", content: answer }]);
   };
-
+ 
   // All original functions — unchanged
   const getTopicId = (subject, chapterTitle, topicTitle) =>
     `${classLevel}_${board}_${subject}_${chapterTitle}_${topicTitle}`.toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_+|_+$/g, "");
@@ -386,27 +391,27 @@ export default function Home() {
   const isCompletedStatus = (status) => COMPLETED_STATUSES.includes(status);
   const getProgressStatus = (completed, total) => { if (total === 0 || completed === 0) return "Not Started"; if (completed === total) return "Completed"; return "In Progress"; };
   const getStatusColor = (status) => { if (status === "Completed") return B.green; if (status === "In Progress") return B.navy; return B.gray500; };
-
+ 
   const getChapterProgress = (subject, chapter) => {
     const totalTopics = chapter?.subtopics?.length || 0;
     if (totalTopics === 0) return { completed: 0, total: 0, percent: 0, status: "Not Started" };
     const completedTopics = chapter.subtopics.filter((t) => isCompletedStatus(getTopicStatus(subject, chapter.title, t))).length;
     return { completed: completedTopics, total: totalTopics, percent: Math.round((completedTopics / totalTopics) * 100), status: getProgressStatus(completedTopics, totalTopics) };
   };
-
+ 
   const getSubjectProgress = (subject) => {
     const chapters = currentSyllabus?.[subject] || [];
     let totalTopics = 0, completedTopics = 0;
     chapters.forEach((chapter) => { totalTopics += chapter.subtopics.length; completedTopics += chapter.subtopics.filter((t) => isCompletedStatus(getTopicStatus(subject, chapter.title, t))).length; });
     return { completed: completedTopics, total: totalTopics, percent: totalTopics === 0 ? 0 : Math.round((completedTopics / totalTopics) * 100), status: getProgressStatus(completedTopics, totalTopics) };
   };
-
+ 
   const getOverallProgress = () => {
     let totalTopics = 0, completedTopics = 0;
     Object.keys(currentSyllabus || {}).forEach((subject) => { const p = getSubjectProgress(subject); totalTopics += p.total; completedTopics += p.completed; });
     return { completed: completedTopics, total: totalTopics, percent: totalTopics === 0 ? 0 : Math.round((completedTopics / totalTopics) * 100), status: getProgressStatus(completedTopics, totalTopics) };
   };
-
+ 
   const handleCreateAccount = async () => {
     setAuthError("");
     if (!signupName.trim() || !signupEmail.trim() || !signupMobile.trim() || !signupPassword.trim()) { setAuthError("Please fill all required fields."); return; }
@@ -420,14 +425,14 @@ export default function Home() {
       setUser(createdUser); setUserProfile(profileData); setClassLevel(signupClassLevel); setBoard(signupBoard); setProfileCompleted(false);
     } catch (error) { setAuthError(error.message || "Could not create account."); } finally { setAuthLoading(false); }
   };
-
+ 
   const handleLogin = async () => {
     setAuthError("");
     if (!loginEmail.trim() || !loginPassword.trim()) { setAuthError("Please enter email and password."); return; }
     try { setAuthLoading(true); await signInWithEmailAndPassword(auth, loginEmail.trim(), loginPassword); }
     catch (error) { setAuthError(error.message || "Could not login."); } finally { setAuthLoading(false); }
   };
-
+ 
   const handleLogout = async () => {
     await signOut(auth);
     setUser(null); setUserProfile(null); setMessages([]); setHistory([]); setTextInput("");
@@ -436,13 +441,13 @@ export default function Home() {
     setActiveTab("chat"); setSelectedSubject(null); setSelectedChapter(null);
     setProfileCompleted(false); pendingVoiceDataRef.current = null;
   };
-
+ 
   const loadTopicProgress = async (uid) => {
     if (!uid) return;
     try { setProgressLoading(true); const snap = await getDocs(collection(db, "users", uid, "topicProgress")); const loaded = {}; snap.forEach((d) => { loaded[d.id] = d.data(); }); setTopicProgress(loaded); }
     catch (error) { console.error("Progress load error:", error); } finally { setProgressLoading(false); }
   };
-
+ 
   const updateTopicStatus = async (subject, chapterTitle, topicTitle, status) => {
     if (!user) { setError("Please login to save progress."); return; }
     const topicId = getTopicId(subject, chapterTitle, topicTitle);
@@ -451,21 +456,21 @@ export default function Home() {
     try { await setDoc(doc(db, "users", user.uid, "topicProgress", topicId), progressData, { merge: true }); }
     catch (error) { console.error("Progress save error:", error); }
   };
-
+ 
   const markTypingComplete = (messageId) => {
     setMessages((prev) => prev.map((msg) => msg.id === messageId ? { ...msg, typing: false } : msg));
   };
-
+ 
   const clearConversation = () => { stopAudio(); setMessages([]); setHistory([]); setError(""); pendingVoiceDataRef.current = null; };
-
+ 
   const getRevisionStatus = (subject, chapterTitle, topicTitle) => revisionProgress[getTopicId(subject, chapterTitle, topicTitle)]?.revised || false;
-
+ 
   const loadRevisionProgress = async (uid) => {
     if (!uid) return;
     try { const snap = await getDocs(collection(db, "users", uid, "revisionProgress")); const loaded = {}; snap.forEach((d) => { loaded[d.id] = d.data(); }); setRevisionProgress(loaded); }
     catch (error) { console.error("Revision progress load error:", error); }
   };
-
+ 
   const updateRevisionStatus = async (subject, chapterTitle, topicTitle) => {
     if (!user) return;
     const topicId = getTopicId(subject, chapterTitle, topicTitle);
@@ -474,26 +479,26 @@ export default function Home() {
     try { await setDoc(doc(db, "users", user.uid, "revisionProgress", topicId), revisionData, { merge: true }); }
     catch (error) { console.error("Revision save error:", error); }
   };
-
+ 
   const getTestId = (type, subject, chapterTitle, topicTitle = "") =>
     (type === "topic" ? `topic_${classLevel}_${board}_${subject}_${chapterTitle}_${topicTitle}` : `chapter_${classLevel}_${board}_${subject}_${chapterTitle}`)
     .toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_+|_+$/g, "");
-
+ 
   const getSavedTestResult = (type, subject, chapterTitle, topicTitle = "") => testResults[getTestId(type, subject, chapterTitle, topicTitle)] || null;
-
+ 
   const loadTestResults = async (uid) => {
     if (!uid) return;
     try { const snap = await getDocs(collection(db, "users", uid, "testResults")); const loaded = {}; snap.forEach((d) => { loaded[d.id] = d.data(); }); setTestResults(loaded); }
     catch (error) { console.error("Test results load error:", error); }
   };
-
+ 
   const saveTestResult = async (resultData) => {
     if (!user || !resultData?.testId) return;
     setTestResults((prev) => ({ ...prev, [resultData.testId]: { ...resultData, updatedAt: new Date().toISOString() } }));
     try { await setDoc(doc(db, "users", user.uid, "testResults", resultData.testId), { ...resultData, updatedAt: serverTimestamp() }, { merge: true }); }
     catch (error) { console.error("Test result save error:", error); }
   };
-
+ 
   const startTest = async ({ type, subject, chapterTitle, topicTitle = "", topics = [], questionCount }) => {
     if (!user) { setError("Please login to start a test."); return; }
     setError(""); setTestLoading(true); setSelectedAnswers({}); setSubmittedTestResult(null); setCurrentTest(null); setActiveTab("test");
@@ -513,17 +518,17 @@ export default function Home() {
     } catch (error) { console.error("Test generation error:", error); setError(error.message || "Could not generate test."); setActiveTab("syllabus"); }
     finally { setTestLoading(false); }
   };
-
+ 
   const handleTopicTest = (subtopic) => {
     if (!selectedSubject || !currentChapter || !subtopic) return;
     startTest({ type: "topic", subject: selectedSubject, chapterTitle: currentChapter.title, topicTitle: subtopic, topics: [subtopic], questionCount: 10 });
   };
-
+ 
   const handleChapterTest = () => {
     if (!selectedSubject || !currentChapter) return;
     startTest({ type: "chapter", subject: selectedSubject, chapterTitle: currentChapter.title, topicTitle: "", topics: currentChapter.subtopics || [], questionCount: 20 });
   };
-
+ 
   const submitCurrentTest = async () => {
     if (!currentTest?.questions?.length) return;
     let score = 0;
@@ -532,29 +537,29 @@ export default function Home() {
     setSubmittedTestResult(resultData);
     await saveTestResult(resultData);
   };
-
+ 
   const resetTestView = () => { setCurrentTest(null); setSelectedAnswers({}); setSubmittedTestResult(null); setActiveTab("syllabus"); };
-
+ 
   const handleReviseTopic = async (subtopic) => {
     if (!selectedSubject || !currentChapter || !subtopic) return;
     await updateRevisionStatus(selectedSubject, currentChapter.title, subtopic);
     const prompt = `REVISION_TOPIC_MODE\n\nTopic: ${subtopic}\nChapter: ${currentChapter.title}\nSubject: ${selectedSubject}\nClass: ${classLevel}\nBoard: ${board}\n\nCreate short and crisp revision notes for this topic.\n\nRevision format:\n1. Quick Meaning\n2. Key Points\n3. Important Terms\n4. Must Remember\n5. Quick Flowchart\n6. Exam Points\n\nRules:\n- Keep it short and crisp.\n- Use mostly bullet points.\n- Do not write long paragraphs.\n- Follow the selected answer language.`;
     pendingVoiceDataRef.current = null; setTextInput(prompt); setActiveTab("chat");
   };
-
+ 
   const handleStudyTopic = async (subtopic) => {
     if (!selectedSubject || !currentChapter || !subtopic) return;
     await updateTopicStatus(selectedSubject, currentChapter.title, subtopic, "Completed");
     const prompt = `STUDY_TOPIC_MODE\n\nTopic: ${subtopic}\nChapter: ${currentChapter.title}\nSubject: ${selectedSubject}\nClass: ${classLevel}\nBoard: ${board}\n\nExplain this topic in detail for a school student.\n\nAnswer format:\n1. Meaning of the topic\n2. Why it is important\n3. Step-by-step explanation\n4. Important keywords with simple meanings\n5. One simple real-life example\n6. Quick revision summary\n\nRules:\n- Give a large answer, not 4-5 lines.\n- Use headings and bullet points.\n- Keep the language easy for Class ${classLevel}.\n- Follow the selected answer language.`;
     pendingVoiceDataRef.current = null; setTextInput(prompt); setActiveTab("chat");
   };
-
+ 
   const cancelProcessing = () => {
     cancelledRef.current = true;
     if (abortControllerRef.current) { abortControllerRef.current.abort(); abortControllerRef.current = null; }
     setIsLoading(false); setIsTranscribing(false); setError("");
   };
-
+ 
   const handleTextSend = async () => {
     if (!textInput.trim() || isLoading) return;
     const question = textInput.trim();
@@ -580,7 +585,7 @@ export default function Home() {
       } catch (ttsError) { console.error("TTS failed:", ttsError); }
     } catch (e) { setError(e.message); setIsLoading(false); }
   };
-
+ 
   const stopRecordingAndTranscribe = () => {
     if (!mediaRecorderRef.current) return;
     mediaRecorderRef.current.onstop = async () => {
@@ -601,7 +606,7 @@ export default function Home() {
     };
     mediaRecorderRef.current.stop();
   };
-
+ 
   const handleSend = async () => {
     if (!textInput.trim() || isLoading) return;
     if (pendingVoiceDataRef.current) {
@@ -616,7 +621,7 @@ export default function Home() {
     }
     await handleTextSend();
   };
-
+ 
   const startRecording = async () => {
     setError(""); stopAudio(); pendingVoiceDataRef.current = null; setTextInput("");
     try {
@@ -627,33 +632,33 @@ export default function Home() {
       recorder.start(); setIsRecording(true);
     } catch (e) { setError("Microphone access denied. Please allow microphone permission."); }
   };
-
+ 
   // ── Loading screen ─────────────────────────────────────
   if (authLoading) {
     return (
       <div style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", background: B.bg, minHeight: "100vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "16px" }}>
-        <TeachifyyLogo size={40} />
+        <TeachifyyLogo size={76} />
         <div style={{ fontSize: "14px", color: B.gray500 }}>Loading...</div>
       </div>
     );
   }
-
+ 
   // ── Auth screen ────────────────────────────────────────
   if (!user) {
     return (
       <div style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", background: B.bg, minHeight: "100vh" }}>
         <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
+ 
         {/* Navbar */}
         <nav style={{ background: B.navy, padding: "14px 28px", display: "flex", alignItems: "center", justifyContent: "space-between", boxShadow: "0 2px 12px rgba(43,88,136,0.15)" }}>
           <TeachifyyLogo size={30} light />
           <span style={{ color: "rgba(255,255,255,0.7)", fontSize: "13px" }}>Student Voice Assistant</span>
         </nav>
-
+ 
         <div style={{ maxWidth: "440px", margin: "0 auto", padding: "48px 16px" }}>
           {/* Brand accent bar */}
           <div style={{ height: "4px", borderRadius: "2px", background: `linear-gradient(90deg, ${B.navy}, ${B.red})`, marginBottom: "28px" }} />
-
+ 
           <div style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "20px", padding: "32px 28px", boxShadow: "0 8px 32px rgba(43,88,136,0.08)" }}>
             <div style={{ textAlign: "center", marginBottom: "28px" }}>
               <TeachifyyLogo size={36} />
@@ -664,13 +669,13 @@ export default function Home() {
                 {authMode === "login" ? "Login to continue learning." : "Create your student profile."}
               </p>
             </div>
-
+ 
             {authError && (
               <div style={{ marginBottom: "16px", padding: "10px 14px", background: B.redLight, border: `1px solid ${B.red}`, borderRadius: "10px", color: B.red, fontSize: "13px", fontWeight: 500 }}>
                 ⚠️ {authError}
               </div>
             )}
-
+ 
             {authMode === "signup" && (
               <>
                 <label style={labelStyle}>Full Name</label>
@@ -679,13 +684,13 @@ export default function Home() {
                 <input value={signupMobile} onChange={(e) => setSignupMobile(e.target.value)} placeholder="Enter mobile number" style={inputStyle} />
               </>
             )}
-
+ 
             <label style={labelStyle}>Email</label>
             <input type="email" value={authMode === "login" ? loginEmail : signupEmail} onChange={(e) => authMode === "login" ? setLoginEmail(e.target.value) : setSignupEmail(e.target.value)} placeholder="Enter email" style={inputStyle} />
-
+ 
             <label style={labelStyle}>Password</label>
             <input type="password" value={authMode === "login" ? loginPassword : signupPassword} onChange={(e) => authMode === "login" ? setLoginPassword(e.target.value) : setSignupPassword(e.target.value)} placeholder="Enter password" style={inputStyle} />
-
+ 
             {authMode === "signup" && (
               <>
                 <label style={labelStyle}>Class</label>
@@ -698,7 +703,7 @@ export default function Home() {
                 </select>
               </>
             )}
-
+ 
             <button
               onClick={authMode === "login" ? handleLogin : handleCreateAccount}
               disabled={authLoading}
@@ -706,7 +711,7 @@ export default function Home() {
             >
               {authMode === "login" ? "Login →" : "Create Account →"}
             </button>
-
+ 
             <button
               onClick={() => { setAuthError(""); setAuthMode(authMode === "login" ? "signup" : "login"); }}
               style={{ width: "100%", marginTop: "14px", background: "transparent", border: "none", color: B.navy, cursor: "pointer", fontSize: "14px", fontWeight: 500, fontFamily: "'Plus Jakarta Sans', sans-serif" }}
@@ -714,7 +719,7 @@ export default function Home() {
               {authMode === "login" ? "New student? Create account" : "Already have an account? Login"}
             </button>
           </div>
-
+ 
           {/* Tagline */}
           <p style={{ textAlign: "center", marginTop: "20px", fontSize: "12px", color: B.gray500, fontStyle: "italic" }}>
             Develop what teaching demands
@@ -723,20 +728,20 @@ export default function Home() {
       </div>
     );
   }
-
+ 
   // ── Language selection screen ──────────────────────────
   if (!profileCompleted) {
     return (
       <div style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", background: B.bg, minHeight: "100vh" }}>
         <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
+ 
         <nav style={{ background: B.navy, padding: "14px 28px", display: "flex", alignItems: "center", justifyContent: "space-between", boxShadow: "0 2px 12px rgba(43,88,136,0.15)" }}>
           <TeachifyyLogo size={30} light />
           <button onClick={handleLogout} style={{ padding: "7px 16px", borderRadius: "8px", border: "none", background: "rgba(255,255,255,0.15)", color: B.white, cursor: "pointer", fontSize: "13px", fontWeight: 500 }}>
             Logout
           </button>
         </nav>
-
+ 
         <div style={{ maxWidth: "440px", margin: "0 auto", padding: "48px 16px" }}>
           <div style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "20px", padding: "32px 28px", boxShadow: "0 8px 32px rgba(43,88,136,0.08)" }}>
             <div style={{ textAlign: "center", marginBottom: "28px" }}>
@@ -744,14 +749,14 @@ export default function Home() {
               <h1 style={{ fontSize: "22px", fontWeight: 700, color: B.navy, marginBottom: "6px" }}>Welcome, {userProfile?.name || "Student"}!</h1>
               <p style={{ fontSize: "14px", color: B.gray500 }}>Class {classLevel} · {board}</p>
             </div>
-
+ 
             <label style={labelStyle}>Choose answer language</label>
             <select value={answerLanguage} onChange={(e) => setAnswerLanguage(e.target.value)} style={inputStyle}>
               <option value="en">English</option>
               <option value="hi">हिंदी</option>
               <option value="hinglish">Hinglish</option>
             </select>
-
+ 
             <button
               onClick={() => setProfileCompleted(true)}
               style={{ width: "100%", padding: "13px 16px", border: "none", borderRadius: "12px", background: `linear-gradient(135deg, ${B.red}, ${B.orange})`, color: B.white, fontSize: "15px", fontWeight: 700, cursor: "pointer", marginTop: "8px", fontFamily: "'Plus Jakarta Sans', sans-serif" }}
@@ -763,18 +768,18 @@ export default function Home() {
       </div>
     );
   }
-
+ 
   // ── Main app ───────────────────────────────────────────
   const overallProgress = getOverallProgress();
-
+ 
   return (
     <div style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", background: B.bg, minHeight: "100vh" }}>
       <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
+ 
       {/* Navbar */}
       <nav style={{ background: B.navy, padding: "12px 28px", display: "flex", alignItems: "center", justifyContent: "space-between", boxShadow: "0 2px 12px rgba(43,88,136,0.15)", position: "sticky", top: 0, zIndex: 100 }}>
         <TeachifyyLogo size={28} light />
-
+ 
         <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
           <div style={{ textAlign: "right" }}>
             <div style={{ color: B.white, fontSize: "13px", fontWeight: 600 }}>{userProfile?.name || user?.email}</div>
@@ -785,13 +790,13 @@ export default function Home() {
           </button>
         </div>
       </nav>
-
+ 
       {/* Red accent stripe */}
       <div style={{ height: "3px", background: `linear-gradient(90deg, ${B.red}, ${B.orange}, ${B.warm})` }} />
-
+ 
       {/* Main */}
       <div style={{ maxWidth: "800px", margin: "0 auto", padding: "28px 16px" }}>
-
+ 
         {/* Hero */}
         <div style={{ textAlign: "center", marginBottom: "20px" }}>
           <h1 style={{ fontSize: "24px", fontWeight: 700, color: B.navy, marginBottom: "4px" }}>
@@ -801,7 +806,7 @@ export default function Home() {
             Ask anything in Hindi, English, or Hinglish
           </p>
         </div>
-
+ 
         {/* Tabs */}
         <div style={{ display: "flex", gap: "6px", marginBottom: "18px", background: B.gray200, padding: "5px", borderRadius: "14px" }}>
           {[
@@ -826,11 +831,11 @@ export default function Home() {
             </button>
           ))}
         </div>
-
+ 
         {/* ── CHAT TAB ── */}
         {activeTab === "chat" && (
           <div style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "18px", overflow: "hidden", boxShadow: "0 4px 20px rgba(43,88,136,0.06)" }}>
-
+ 
             {/* Chat header */}
             <div style={{ padding: "14px 18px", borderBottom: `1px solid ${B.gray200}`, display: "flex", alignItems: "center", justifyContent: "space-between", background: B.white }}>
               <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
@@ -846,7 +851,7 @@ export default function Home() {
                 </button>
               )}
             </div>
-
+ 
             {/* Messages */}
             <div style={{ height: "400px", overflowY: "auto", padding: "18px", display: "flex", flexDirection: "column", gap: "14px", background: B.gray50 }}>
               {messages.length === 0 ? (
@@ -879,7 +884,7 @@ export default function Home() {
                   )
                 )
               )}
-
+ 
               {isLoading && (
                 <div style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
                   <div style={{ width: "32px", height: "32px", borderRadius: "50%", background: `linear-gradient(135deg, ${B.navy}, ${B.navyDark})`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "12px", fontWeight: 700, color: B.white, flexShrink: 0 }}>AI</div>
@@ -892,14 +897,14 @@ export default function Home() {
               )}
               <div ref={chatEndRef} />
             </div>
-
+ 
             {/* Error */}
             {error && (
               <div style={{ margin: "0 16px 10px", padding: "10px 14px", background: B.redLight, border: `1px solid ${B.red}`, borderRadius: "10px", fontSize: "13px", color: B.red, fontWeight: 500 }}>
                 ⚠️ {error}
               </div>
             )}
-
+ 
             {/* Transcribing bar */}
             {isTranscribing && (
               <div style={{ margin: "0 16px 10px", padding: "10px 14px", background: B.navyLight, border: `1px solid ${B.navy}`, borderRadius: "10px", fontSize: "13px", color: B.navy, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
@@ -912,7 +917,7 @@ export default function Home() {
                 </button>
               </div>
             )}
-
+ 
             {/* Recording bar */}
             {isRecording && (
               <div style={{ margin: "0 16px 10px", padding: "10px 14px", background: B.redLight, border: `1px solid ${B.red}`, borderRadius: "10px", fontSize: "13px", color: B.red, display: "flex", alignItems: "center", gap: "8px" }}>
@@ -920,14 +925,14 @@ export default function Home() {
                 <span style={{ fontWeight: 500 }}>Recording... press mic again to stop</span>
               </div>
             )}
-
+ 
             {/* Voice review hint */}
             {!isRecording && !isTranscribing && pendingVoiceDataRef.current && textInput && (
               <div style={{ margin: "0 16px 8px", fontSize: "12px", color: B.navy, padding: "0 4px", fontWeight: 500 }}>
                 ✏️ Review or edit your question, then press Send
               </div>
             )}
-
+ 
             {/* Input area */}
             <div style={{ padding: "14px 16px", borderTop: `1px solid ${B.gray200}`, display: "flex", gap: "8px", alignItems: "flex-end", background: B.white }}>
               {/* Textarea for multi-line input */}
@@ -954,7 +959,7 @@ export default function Home() {
                 onFocus={(e) => { e.target.style.borderColor = B.navy; }}
                 onBlur={(e) => { e.target.style.borderColor = B.gray300; }}
               />
-
+ 
               {/* Send button */}
               <button
                 onClick={handleSend}
@@ -971,7 +976,7 @@ export default function Home() {
               >
                 ➤
               </button>
-
+ 
               {/* Mic button */}
               <button
                 onClick={isRecording ? stopRecordingAndTranscribe : startRecording}
@@ -990,13 +995,13 @@ export default function Home() {
                 🎤
               </button>
             </div>
-
+ 
             <div style={{ textAlign: "center", fontSize: "11px", color: B.gray500, padding: "8px 16px", borderTop: `1px solid ${B.gray100}`, background: B.white }}>
               Press <kbd style={{ background: B.gray100, padding: "1px 5px", borderRadius: "4px", fontSize: "10px" }}>Enter</kbd> to send · <kbd style={{ background: B.gray100, padding: "1px 5px", borderRadius: "4px", fontSize: "10px" }}>Shift+Enter</kbd> for new line
             </div>
           </div>
         )}
-
+ 
         {/* ── TEST TAB ── */}
         {activeTab === "test" && (
           <div style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "18px", padding: "22px", boxShadow: "0 4px 20px rgba(43,88,136,0.06)" }}>
@@ -1022,7 +1027,7 @@ export default function Home() {
                     ← Back
                   </button>
                 </div>
-
+ 
                 {submittedTestResult && (
                   <div style={{ padding: "16px", borderRadius: "14px", background: B.greenLight, border: `1px solid ${B.greenBorder}`, marginBottom: "18px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                     <div>
@@ -1032,7 +1037,7 @@ export default function Home() {
                     <div style={{ fontSize: "32px", fontWeight: 800, color: B.green }}>{submittedTestResult.score}/{submittedTestResult.total}</div>
                   </div>
                 )}
-
+ 
                 <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
                   {currentTest.questions.map((question, qi) => {
                     const selected = selectedAnswers[qi];
@@ -1066,7 +1071,7 @@ export default function Home() {
                     );
                   })}
                 </div>
-
+ 
                 {!submittedTestResult && (
                   <button
                     onClick={submitCurrentTest}
@@ -1091,17 +1096,17 @@ export default function Home() {
             )}
           </div>
         )}
-
+ 
         {/* ── SYLLABUS TAB ── */}
         {activeTab === "syllabus" && (
           <div style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "18px", padding: "24px", boxShadow: "0 4px 20px rgba(43,88,136,0.06)" }}>
-
+ 
             {/* Header + overall progress */}
             <div style={{ textAlign: "center", marginBottom: "20px" }}>
               <div style={{ fontSize: "36px", marginBottom: "6px" }}>📚</div>
               <h2 style={{ fontSize: "20px", fontWeight: 700, color: B.navy, marginBottom: "4px" }}>Syllabus Tracker</h2>
               <p style={{ fontSize: "13px", color: B.gray500 }}>Class {classLevel} · {board}</p>
-
+ 
               <div style={{ marginTop: "14px", padding: "14px 16px", borderRadius: "14px", background: B.navyLight, border: `1px solid rgba(43,88,136,0.15)`, textAlign: "left" }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "8px" }}>
                   <span style={{ fontSize: "13px", fontWeight: 700, color: B.navy }}>Overall Progress</span>
@@ -1113,7 +1118,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
+ 
             {/* Subject grid */}
             {!selectedSubject && (
               <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "12px" }}>
@@ -1133,7 +1138,7 @@ export default function Home() {
                 })}
               </div>
             )}
-
+ 
             {/* Chapter list */}
             {selectedSubject && !selectedChapter && (
               <div>
@@ -1159,14 +1164,14 @@ export default function Home() {
                 </div>
               </div>
             )}
-
+ 
             {/* Topic list */}
             {selectedSubject && selectedChapter && (
               <div>
                 <button onClick={() => setSelectedChapter(null)} style={{ marginBottom: "14px", border: "none", background: "transparent", color: B.navy, fontSize: "13px", cursor: "pointer", fontWeight: 600 }}>
                   ← Back to Chapters
                 </button>
-
+ 
                 <div style={{ padding: "16px", borderRadius: "14px", background: B.navyLight, border: `1px solid rgba(43,88,136,0.15)`, marginBottom: "14px" }}>
                   <div style={{ fontSize: "12px", color: B.gray500, marginBottom: "3px", fontWeight: 500 }}>{selectedSubject}</div>
                   <h3 style={{ fontSize: "18px", fontWeight: 700, color: B.navy, marginBottom: "10px" }}>{currentChapter.title}</h3>
@@ -1191,7 +1196,7 @@ export default function Home() {
                     );
                   })()}
                 </div>
-
+ 
                 <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
                   {currentChapter.subtopics.map((subtopic, index) => {
                     const currentStatus = getTopicStatus(selectedSubject, currentChapter.title, subtopic);
@@ -1224,7 +1229,7 @@ export default function Home() {
           </div>
         )}
       </div>
-
+ 
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
         * { box-sizing: border-box; }
