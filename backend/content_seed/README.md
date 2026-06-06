@@ -5,12 +5,15 @@ This folder stores reviewed learning content before it is uploaded to Firestore.
 Current seed:
 
 - `class_5_cbse_all_subjects.json`
+- `class_6_cbse_all_subjects.json`
 - Board: CBSE
-- Class: 5
-- Subjects: EVS, Maths, English, Hindi
-- Topics: 256 total topic documents matching the current frontend Class 5 NCERT-style syllabus
+- Class 5 subjects: EVS, Maths, English, Hindi
+- Class 6 subjects: Maths, Science, Social Science, English, Hindi
+- Class 5 topics: 256 total topic documents matching the current frontend Class 5 NCERT-style syllabus
+- Class 6 topics: 216 total topic documents matching the current frontend Class 6 CBSE syllabus
 
 The older `class_5_cbse_science.json` file is kept only as an early demo seed. The active seed is generated from the NCERT-style Class 5 syllabus in `generate_class_5_cbse_all_subjects.py`.
+The Class 6 seed is generated from `generate_class_6_cbse_all_subjects.py`.
 
 ## Firestore Location
 
@@ -86,6 +89,13 @@ python backend\import_content_library.py
 
 The dry run prints document IDs without writing. The second command uploads to Firestore.
 
+To upload Class 6 instead of Class 5:
+
+```cmd
+python backend\import_content_library.py --seed backend\content_seed\class_6_cbse_all_subjects.json --dry-run
+python backend\import_content_library.py --seed backend\content_seed\class_6_cbse_all_subjects.json
+```
+
 ## Regenerate The Full Class 5 Seed
 
 If the frontend Class 5 syllabus changes, update:
@@ -98,6 +108,20 @@ Then run:
 
 ```cmd
 python backend\content_seed\generate_class_5_cbse_all_subjects.py
+```
+
+## Regenerate The Full Class 6 Seed
+
+If the frontend Class 6 syllabus changes, update:
+
+```text
+backend/content_seed/generate_class_6_cbse_all_subjects.py
+```
+
+Then run:
+
+```cmd
+python backend\content_seed\generate_class_6_cbse_all_subjects.py
 ```
 
 ## Frontend Behavior

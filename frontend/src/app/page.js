@@ -78,6 +78,11 @@ function TeachifyyLogo({ size = 32, showText = true, light = false }) {
  
 const STATUS_OPTIONS = ["Not Started", "In Progress", "Completed", "Revision Done", "Test Done"];
 const COMPLETED_STATUSES = ["Completed", "Test Done"];
+const ANSWER_LANGUAGES = [
+  { value: "en", label: "English" },
+  { value: "hinglish", label: "Hinglish" },
+  { value: "hi", label: "Hindi" },
+];
  
 // ── Typewriter hook ────────────────────────────────────────
 function useTypewriter(text, speed = 120) {
@@ -334,6 +339,12 @@ export default function Home() {
   const stopAudio = () => {
     if (audioRef.current) { audioRef.current.onended = null; audioRef.current.pause(); audioRef.current.currentTime = 0; audioRef.current = null; }
     setPlayingIndex(null);
+  };
+
+  const handleAnswerLanguageChange = (language) => {
+    setAnswerLanguage(language);
+    pendingVoiceDataRef.current = null;
+    stopAudio();
   };
  
   const playAudio = (audioUrl, index) => {
@@ -747,6 +758,7 @@ export default function Home() {
       abortControllerRef.current = new AbortController();
       const formData = new FormData();
       formData.append("file", blob, "recording.webm"); formData.append("history", JSON.stringify(history));
+      formData.append("class_level", classLevel); formData.append("board", board); formData.append("answer_language", answerLanguage);
       try {
         const res = await fetch("/api/ask", { method: "POST", body: formData, signal: abortControllerRef.current.signal });
         if (cancelledRef.current) return;
@@ -904,10 +916,10 @@ export default function Home() {
             </div>
  
             <label style={labelStyle}>Choose answer language</label>
-            <select value={answerLanguage} onChange={(e) => setAnswerLanguage(e.target.value)} style={inputStyle}>
-              <option value="en">English</option>
-              <option value="hi">हिंदी</option>
-              <option value="hinglish">Hinglish</option>
+            <select value={answerLanguage} onChange={(e) => handleAnswerLanguageChange(e.target.value)} style={inputStyle}>
+              {ANSWER_LANGUAGES.map((language) => (
+                <option key={language.value} value={language.value}>{language.label}</option>
+              ))}
             </select>
  
             <button
@@ -1112,6 +1124,32 @@ export default function Home() {
                 onFocus={(e) => { e.target.style.borderColor = B.navy; }}
                 onBlur={(e) => { e.target.style.borderColor = B.gray300; }}
               />
+
+              <select
+                value={answerLanguage}
+                onChange={(e) => handleAnswerLanguageChange(e.target.value)}
+                disabled={isLoading || isRecording || isTranscribing}
+                title="Answer language"
+                style={{
+                  height: "42px",
+                  minWidth: "104px",
+                  borderRadius: "12px",
+                  border: `1.5px solid ${B.gray300}`,
+                  background: B.white,
+                  color: B.navy,
+                  fontSize: "12px",
+                  fontWeight: 700,
+                  cursor: isLoading || isRecording || isTranscribing ? "not-allowed" : "pointer",
+                  outline: "none",
+                  padding: "0 8px",
+                  opacity: isLoading || isRecording || isTranscribing ? 0.55 : 1,
+                  fontFamily: "'Plus Jakarta Sans', sans-serif",
+                }}
+              >
+                {ANSWER_LANGUAGES.map((language) => (
+                  <option key={language.value} value={language.value}>{language.label}</option>
+                ))}
+              </select>
  
               {/* Send button */}
               <button

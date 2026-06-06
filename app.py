@@ -112,6 +112,9 @@ def home():
 async def ask_question(
     file: UploadFile = File(...),
     history: Optional[str] = Form(default="[]"),
+    class_level: Optional[str] = Form(default=None),
+    board: Optional[str] = Form(default=None),
+    answer_language: Optional[str] = Form(default=None),
 ):
     file_ext   = os.path.splitext(file.filename)[-1] or ".webm"
     unique_id  = uuid.uuid4().hex
@@ -152,16 +155,30 @@ async def ask_question(
                 detail="Could not detect speech. Please speak clearly."
             )
  
+        allowed_classes = {"5", "6", "7", "8", "9", "10"}
+        allowed_boards = {"CBSE", "RBSE", "ICSE", "Other"}
+        allowed_languages = {"en", "hi", "hinglish"}
+
+        validated_class_level = class_level if class_level in allowed_classes else None
+        validated_board = board if board in allowed_boards else None
+
         # Whisper may write spoken Hinglish in Hindi script.
-        # Decide how the AI answer should be displayed.
-        answer_language, tts_language = detect_voice_answer_style(
+        # Decide how the AI answer should be displayed, unless the student selected it.
+        detected_answer_language, detected_tts_language = detect_voice_answer_style(
             question,
             whisper_language
         )
+
+        if answer_language in allowed_languages:
+            selected_answer_language = answer_language
+            tts_language = "hi" if selected_answer_language == "hi" else "en"
+        else:
+            selected_answer_language = detected_answer_language
+            tts_language = detected_tts_language
  
         print(
-            f"[STEP 2.1] Answer style='{answer_language}' "
-            f"tts_language='{tts_language}'"
+            f"[STEP 2.1] Answer style='{selected_answer_language}' "
+            f"tts_language='{tts_language}' class='{validated_class_level}' board='{validated_board}'"
         )
  
         # ── LLM Answer ───────────────────────────────────
@@ -172,8 +189,10 @@ async def ask_question(
         answer = await asyncio.to_thread(
             ask_llm,
             question,
-            answer_language,
-            chat_history
+            selected_answer_language,
+            chat_history,
+            validated_class_level,
+            validated_board
         )
  
         answer = clean_text_for_tts(answer)
@@ -200,7 +219,7 @@ async def ask_question(
  
         return {
             "question": question,
-            "language": answer_language,
+            "language": selected_answer_language,
             "tts_language": tts_language,
             "answer": answer,
             "audio_url": audio_url,
