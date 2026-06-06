@@ -16,6 +16,7 @@ import {
   collection,
   serverTimestamp,
 } from "firebase/firestore";
+import { SYLLABUS_DATA } from "../data/syllabus";
  
 // ── Brand tokens ───────────────────────────────────────────
 const B = {
@@ -75,40 +76,8 @@ function TeachifyyLogo({ size = 32, showText = true, light = false }) {
   );
 }
  
-// ── Sample syllabus data ───────────────────────────────────
-const SYLLABUS_DATA = {
-  "5": {
-    CBSE: {
-      Science: [
-        { title: "Plants and Their Life", subtopics: ["Parts of a plant", "Photosynthesis", "Uses of plants", "Plant reproduction"] },
-        { title: "Animals and Their Habitats", subtopics: ["Domestic and wild animals", "Animal habitats", "Adaptation in animals", "Food habits of animals"] },
-        { title: "Food and Health", subtopics: ["Balanced diet", "Nutrients in food", "Healthy eating habits", "Diseases caused by unhealthy food"] },
-        { title: "Our Environment", subtopics: ["Natural environment", "Pollution", "Conservation of resources", "Keeping surroundings clean"] },
-      ],
-      Maths: [
-        { title: "Numbers and Numeration", subtopics: ["Place value", "Expanded form", "Comparing numbers", "Roman numerals"] },
-        { title: "Addition and Subtraction", subtopics: ["Addition of large numbers", "Subtraction of large numbers", "Word problems", "Checking answers"] },
-        { title: "Multiplication and Division", subtopics: ["Multiplication facts", "Division facts", "Long multiplication", "Long division"] },
-        { title: "Fractions", subtopics: ["Like and unlike fractions", "Equivalent fractions", "Addition of fractions", "Subtraction of fractions"] },
-      ],
-      English: [
-        { title: "Reading Comprehension", subtopics: ["Reading short passages", "Finding main idea", "Answering questions", "Vocabulary from passage"] },
-        { title: "Nouns and Pronouns", subtopics: ["Common nouns", "Proper nouns", "Personal pronouns", "Using pronouns correctly"] },
-        { title: "Verbs and Tenses", subtopics: ["Action words", "Present tense", "Past tense", "Future tense"] },
-        { title: "Paragraph Writing", subtopics: ["Writing topic sentence", "Adding supporting lines", "Using simple examples", "Ending a paragraph"] },
-      ],
-      SST: [
-        { title: "Our Country India", subtopics: ["Location of India", "Neighbouring countries", "States and union territories", "National symbols"] },
-        { title: "Maps and Directions", subtopics: ["Types of maps", "Directions", "Symbols on maps", "Reading a simple map"] },
-        { title: "Early Humans", subtopics: ["Life of early humans", "Discovery of fire", "Stone tools", "Settled life"] },
-        { title: "Our Rights and Duties", subtopics: ["Meaning of rights", "Meaning of duties", "Good citizen habits", "Respecting others"] },
-      ],
-    },
-  },
-};
- 
 const STATUS_OPTIONS = ["Not Started", "In Progress", "Completed", "Revision Done", "Test Done"];
-const COMPLETED_STATUSES = ["Completed", "Revision Done", "Test Done"];
+const COMPLETED_STATUSES = ["Completed", "Test Done"];
  
 // ── Typewriter hook ────────────────────────────────────────
 function useTypewriter(text, speed = 120) {
@@ -122,7 +91,7 @@ function useTypewriter(text, speed = 120) {
     let index = 0;
     const interval = setInterval(() => {
       if (index >= words.length) { setDone(true); clearInterval(interval); return; }
-      setDisplayed((prev) => (prev ? `${prev} ${words[index]}` : words[index]));
+      setDisplayed(words.slice(0, index + 1).join(" "));
       index += 1;
     }, speed);
     return () => clearInterval(interval);
@@ -321,6 +290,7 @@ export default function Home() {
   const abortControllerRef = useRef(null);
   const cancelledRef = useRef(false);
   const pendingVoiceDataRef = useRef(null);
+  const requestLockRef = useRef(false);
  
   // Shared input/label styles
   const labelStyle = { display: "block", fontSize: "13px", fontWeight: 600, color: B.gray700, marginBottom: "6px", fontFamily: "'Plus Jakarta Sans', sans-serif" };
@@ -379,6 +349,21 @@ export default function Home() {
       }
     }, 80);
   };
+
+  const getTtsLanguage = () => {
+    if (answerLanguage === "hi") return "hi";
+    return "en";
+  };
+
+  const generateAnswerAudio = async (text, language = getTtsLanguage()) => {
+    const ttsFormData = new FormData();
+    ttsFormData.append("text", text);
+    ttsFormData.append("language", language);
+    const ttsRes = await fetch("/api/tts", { method: "POST", body: ttsFormData });
+    if (!ttsRes.ok) return null;
+    const ttsData = await ttsRes.json();
+    return ttsData.audio_url || null;
+  };
  
   const updateHistory = (question, answer) => {
     setHistory((prev) => [...prev, { role: "user", content: question }, { role: "assistant", content: answer }]);
@@ -387,6 +372,8 @@ export default function Home() {
   // All original functions — unchanged
   const getTopicId = (subject, chapterTitle, topicTitle) =>
     `${classLevel}_${board}_${subject}_${chapterTitle}_${topicTitle}`.toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_+|_+$/g, "");
+  const getContentId = (subject, chapterTitle, topicTitle) =>
+    `class_${classLevel}_${board}_${subject}_${chapterTitle}_${topicTitle}`.toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_+|_+$/g, "");
   const getTopicStatus = (subject, chapterTitle, topicTitle) => topicProgress[getTopicId(subject, chapterTitle, topicTitle)]?.status || "Not Started";
   const isCompletedStatus = (status) => COMPLETED_STATUSES.includes(status);
   const getProgressStatus = (completed, total) => { if (total === 0 || completed === 0) return "Not Started"; if (completed === total) return "Completed"; return "In Progress"; };
@@ -461,7 +448,7 @@ export default function Home() {
     setMessages((prev) => prev.map((msg) => msg.id === messageId ? { ...msg, typing: false } : msg));
   };
  
-  const clearConversation = () => { stopAudio(); setMessages([]); setHistory([]); setError(""); pendingVoiceDataRef.current = null; };
+  const clearConversation = () => { stopAudio(); setMessages([]); setHistory([]); setError(""); pendingVoiceDataRef.current = null; requestLockRef.current = false; };
  
   const getRevisionStatus = (subject, chapterTitle, topicTitle) => revisionProgress[getTopicId(subject, chapterTitle, topicTitle)]?.revised || false;
  
@@ -539,17 +526,183 @@ export default function Home() {
   };
  
   const resetTestView = () => { setCurrentTest(null); setSelectedAnswers({}); setSubmittedTestResult(null); setActiveTab("syllabus"); };
+
+  const formatList = (items = []) => items.filter(Boolean).map((item) => `- ${item}`).join("\n");
+
+  const formatTermList = (items = []) =>
+    items.filter(Boolean).map((item) => `- ${item.term}: ${item.meaning}`).join("\n");
+
+  const formatStudyContent = (contentDoc) => {
+    const content = contentDoc.studyContent || {};
+    const diagram = content.diagram || {};
+    return [
+      content.title || contentDoc.topicTitle || "Study Topic",
+      "",
+      "Meaning",
+      content.intro || "",
+      "",
+      "NCERT-Based Explanation",
+      content.ncertBasedExplanation || "",
+      "",
+      "Easy Explanation",
+      content.aiSimplifiedExplanation || "",
+      "",
+      "Step-by-Step Explanation",
+      formatList(content.stepByStep),
+      "",
+      "Important Keywords",
+      formatTermList(content.keywords),
+      "",
+      "Simple Real-Life Example",
+      content.realLifeExample || "",
+      "",
+      diagram.content ? `${diagram.title || "Simple Diagram"}\n${diagram.content}` : "",
+      "",
+      "Quick Summary",
+      formatList(content.summary),
+      "",
+      contentDoc.sourceLabel || "",
+    ].filter((part) => part !== "").join("\n");
+  };
+
+  const formatRevisionContent = (contentDoc) => {
+    const content = contentDoc.revisionContent || {};
+    return [
+      `Quick Revision: ${contentDoc.topicTitle || ""}`.trim(),
+      "",
+      "Quick Meaning",
+      content.quickMeaning || "",
+      "",
+      "Key Points",
+      formatList(content.keyPoints),
+      "",
+      "Important Terms",
+      formatTermList(content.importantTerms),
+      "",
+      "Must Remember",
+      formatList(content.mustRemember),
+      "",
+      content.quickFlowchart ? `Quick Flowchart\n${content.quickFlowchart}` : "",
+      "",
+      "Exam Points",
+      formatList(content.examPoints),
+      "",
+      contentDoc.sourceLabel || "",
+    ].filter((part) => part !== "").join("\n");
+  };
+
+  const loadPublishedContent = async (subject, chapterTitle, topicTitle) => {
+    const contentId = getContentId(subject, chapterTitle, topicTitle);
+    const snap = await getDoc(doc(db, "contentLibrary", contentId));
+    if (!snap.exists()) return null;
+    const data = snap.data();
+    return data.status === "published" ? data : null;
+  };
+
+  const addStoredContentToChat = (label, answer) => {
+    const assistantId = crypto.randomUUID();
+    stopAudio();
+    setMessages((prev) => [
+      ...prev.map((msg) => msg.role === "assistant" ? { ...msg, typing: false } : msg),
+      { id: crypto.randomUUID(), role: "user", text: label, isVoice: false },
+      { id: assistantId, role: "assistant", text: answer, audioUrl: null, typing: true },
+    ]);
+    updateHistory(label, answer);
+    setActiveTab("chat");
+    return assistantId;
+  };
+
+  const convertStoredContentLanguage = async ({ label, sourceText, mode }) => {
+    if (answerLanguage === "en") return sourceText;
+
+    const languageLabel = answerLanguage === "hi" ? "Hindi in Devanagari script" : "natural Roman Hinglish";
+    const modeMarker = mode === "revision" ? "REVISION_TOPIC_MODE" : "STUDY_TOPIC_MODE";
+    const formData = new FormData();
+    formData.append(
+      "question",
+      `${modeMarker}\n\nRewrite the stored ${mode} content below in ${languageLabel} for a Class ${classLevel} CBSE student.\n\nRules:\n- Do not say that you are rewriting or translating.\n- Keep the full lesson useful and detailed; do not shorten it to only 2-3 lines.\n- Keep all useful teaching points from the source.\n- Keep headings, bullet points, examples, summaries, and important keywords.\n- Keep it easy, warm, and student-friendly.\n- Do not add unrelated facts.\n- If the target is Hinglish, use Roman English letters only and no Devanagari.\n- If the target is Hindi, use simple Devanagari Hindi only, suitable for a Class ${classLevel} student.\n\nVisible student request: ${label}\n\nStored source content:\n${sourceText}`
+    );
+    formData.append("history", JSON.stringify([]));
+    formData.append("class_level", classLevel);
+    formData.append("board", board);
+    formData.append("answer_language", answerLanguage);
+
+    const res = await fetch("/api/ask-text", { method: "POST", body: formData });
+    if (!res.ok) {
+      const err = await res.json();
+      throw new Error(err.detail || "Could not convert stored content language.");
+    }
+    const data = await res.json();
+    return data.answer || sourceText;
+  };
+
+  const addStoredContentWithLanguage = async ({ label, sourceText, mode }) => {
+    if (requestLockRef.current) return;
+    requestLockRef.current = true;
+    pendingVoiceDataRef.current = null;
+    setTextInput("");
+    setError("");
+    setIsLoading(answerLanguage !== "en");
+    setActiveTab("chat");
+    try {
+      const answer = await convertStoredContentLanguage({ label, sourceText, mode });
+      const assistantId = addStoredContentToChat(label, answer);
+      try {
+        const audioUrl = await generateAnswerAudio(answer);
+        if (audioUrl) {
+          setMessages((prev) => prev.map((msg) => msg.id === assistantId ? { ...msg, audioUrl } : msg));
+        }
+      } catch (ttsError) {
+        console.error("Stored content TTS failed:", ttsError);
+      }
+    } catch (error) {
+      console.error("Stored content language conversion error:", error);
+      setError(error.message || "Could not prepare this answer in the selected language.");
+      const assistantId = addStoredContentToChat(label, sourceText);
+      try {
+        const audioUrl = await generateAnswerAudio(sourceText);
+        if (audioUrl) {
+          setMessages((prev) => prev.map((msg) => msg.id === assistantId ? { ...msg, audioUrl } : msg));
+        }
+      } catch (ttsError) {
+        console.error("Stored content fallback TTS failed:", ttsError);
+      }
+    } finally {
+      setIsLoading(false);
+      requestLockRef.current = false;
+    }
+  };
  
   const handleReviseTopic = async (subtopic) => {
-    if (!selectedSubject || !currentChapter || !subtopic) return;
+    if (!selectedSubject || !currentChapter || !subtopic || requestLockRef.current) return;
     await updateRevisionStatus(selectedSubject, currentChapter.title, subtopic);
+    const label = `Revision: ${subtopic}`;
+    try {
+      const contentDoc = await loadPublishedContent(selectedSubject, currentChapter.title, subtopic);
+      if (contentDoc?.revisionContent) {
+        await addStoredContentWithLanguage({ label, sourceText: formatRevisionContent(contentDoc), mode: "revision" });
+        return;
+      }
+    } catch (error) {
+      console.error("Content library revision load error:", error);
+    }
     const prompt = `REVISION_TOPIC_MODE\n\nTopic: ${subtopic}\nChapter: ${currentChapter.title}\nSubject: ${selectedSubject}\nClass: ${classLevel}\nBoard: ${board}\n\nCreate short and crisp revision notes for this topic.\n\nRevision format:\n1. Quick Meaning\n2. Key Points\n3. Important Terms\n4. Must Remember\n5. Quick Flowchart\n6. Exam Points\n\nRules:\n- Keep it short and crisp.\n- Use mostly bullet points.\n- Do not write long paragraphs.\n- Follow the selected answer language.`;
     pendingVoiceDataRef.current = null; setTextInput(prompt); setActiveTab("chat");
   };
  
   const handleStudyTopic = async (subtopic) => {
-    if (!selectedSubject || !currentChapter || !subtopic) return;
+    if (!selectedSubject || !currentChapter || !subtopic || requestLockRef.current) return;
     await updateTopicStatus(selectedSubject, currentChapter.title, subtopic, "Completed");
+    const label = `Study Topic: ${subtopic}`;
+    try {
+      const contentDoc = await loadPublishedContent(selectedSubject, currentChapter.title, subtopic);
+      if (contentDoc?.studyContent) {
+        await addStoredContentWithLanguage({ label, sourceText: formatStudyContent(contentDoc), mode: "study topic" });
+        return;
+      }
+    } catch (error) {
+      console.error("Content library study load error:", error);
+    }
     const prompt = `STUDY_TOPIC_MODE\n\nTopic: ${subtopic}\nChapter: ${currentChapter.title}\nSubject: ${selectedSubject}\nClass: ${classLevel}\nBoard: ${board}\n\nExplain this topic in detail for a school student.\n\nAnswer format:\n1. Meaning of the topic\n2. Why it is important\n3. Step-by-step explanation\n4. Important keywords with simple meanings\n5. One simple real-life example\n6. Quick revision summary\n\nRules:\n- Give a large answer, not 4-5 lines.\n- Use headings and bullet points.\n- Keep the language easy for Class ${classLevel}.\n- Follow the selected answer language.`;
     pendingVoiceDataRef.current = null; setTextInput(prompt); setActiveTab("chat");
   };
@@ -557,11 +710,13 @@ export default function Home() {
   const cancelProcessing = () => {
     cancelledRef.current = true;
     if (abortControllerRef.current) { abortControllerRef.current.abort(); abortControllerRef.current = null; }
+    requestLockRef.current = false;
     setIsLoading(false); setIsTranscribing(false); setError("");
   };
  
   const handleTextSend = async () => {
-    if (!textInput.trim() || isLoading) return;
+    if (!textInput.trim() || isLoading || requestLockRef.current) return;
+    requestLockRef.current = true;
     const question = textInput.trim();
     const assistantId = crypto.randomUUID();
     setTextInput(""); setError(""); setIsLoading(true);
@@ -574,16 +729,12 @@ export default function Home() {
       if (!res.ok) { const err = await res.json(); throw new Error(err.detail || "Server error"); }
       const data = await res.json();
       setMessages((prev) => [...prev.map((msg) => msg.role === "assistant" ? { ...msg, typing: false } : msg), { id: assistantId, role: "assistant", text: data.answer, audioUrl: null, typing: true }]);
-      updateHistory(question, data.answer); setIsLoading(false);
-      const ttsFormData = new FormData();
-      ttsFormData.append("text", data.answer); ttsFormData.append("language", data.language || "en");
+      updateHistory(question, data.answer); setIsLoading(false); requestLockRef.current = false;
       try {
-        const ttsRes = await fetch("/api/tts", { method: "POST", body: ttsFormData });
-        if (!ttsRes.ok) return;
-        const ttsData = await ttsRes.json();
-        setMessages((prev) => prev.map((msg) => msg.id === assistantId ? { ...msg, audioUrl: ttsData.audio_url } : msg));
+        const audioUrl = await generateAnswerAudio(data.answer, data.language === "hi" ? "hi" : "en");
+        if (audioUrl) setMessages((prev) => prev.map((msg) => msg.id === assistantId ? { ...msg, audioUrl } : msg));
       } catch (ttsError) { console.error("TTS failed:", ttsError); }
-    } catch (e) { setError(e.message); setIsLoading(false); }
+    } catch (e) { setError(e.message); setIsLoading(false); requestLockRef.current = false; }
   };
  
   const stopRecordingAndTranscribe = () => {
@@ -608,8 +759,9 @@ export default function Home() {
   };
  
   const handleSend = async () => {
-    if (!textInput.trim() || isLoading) return;
+    if (!textInput.trim() || isLoading || requestLockRef.current) return;
     if (pendingVoiceDataRef.current) {
+      requestLockRef.current = true;
       const data = pendingVoiceDataRef.current;
       const question = textInput.trim();
       pendingVoiceDataRef.current = null; setTextInput(""); setError("");
@@ -617,6 +769,7 @@ export default function Home() {
       setMessages((prev) => [...prev.map((msg) => msg.role === "assistant" ? { ...msg, typing: false } : msg), { id: crypto.randomUUID(), role: "user", text: question, isVoice: true }, { id: assistantId, role: "assistant", text: data.answer, audioUrl: data.audio_url, typing: false }]);
       updateHistory(question, data.answer);
       if (data.audio_url) { setTimeout(() => { setMessages((prev) => { const aiIndex = prev.findIndex((m) => m.id === assistantId); if (aiIndex !== -1) playAudio(data.audio_url, aiIndex); return prev; }); }, 200); }
+      requestLockRef.current = false;
       return;
     }
     await handleTextSend();
@@ -1123,7 +1276,7 @@ export default function Home() {
             {!selectedSubject && (
               <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "12px" }}>
                 {Object.keys(currentSyllabus).map((subject) => {
-                  const icons = { Science: "🔬", Maths: "➗", English: "📘", SST: "🌍" };
+                  const icons = { EVS: "🌱", Maths: "➗", English: "📘", Hindi: "📕" };
                   const sp = getSubjectProgress(subject);
                   return (
                     <button key={subject} onClick={() => { setSelectedSubject(subject); setSelectedChapter(null); }} style={{ padding: "20px 14px", borderRadius: "16px", border: `1.5px solid ${B.gray200}`, background: B.white, cursor: "pointer", textAlign: "center", transition: "all 0.2s", boxShadow: "0 2px 8px rgba(43,88,136,0.04)" }}>
@@ -1213,11 +1366,11 @@ export default function Home() {
                           {STATUS_OPTIONS.map((s) => <option key={s} value={s}>{s}</option>)}
                         </select>
                         {savedTopicTest && <span style={{ fontSize: "11px", color: B.green, fontWeight: 700 }}>Test: {savedTopicTest.score}/{savedTopicTest.total}</span>}
-                        <button onClick={() => handleTopicTest(subtopic)} style={{ padding: "5px 10px", border: `1px solid ${B.greenBorder}`, borderRadius: "8px", background: B.greenLight, color: B.green, fontSize: "11px", cursor: "pointer", flexShrink: 0, fontWeight: 700 }}>Test</button>
-                        <button onClick={() => handleReviseTopic(subtopic)} style={{ padding: "5px 10px", border: `1px solid ${revised ? B.navy : B.gray300}`, borderRadius: "8px", background: revised ? B.navyLight : B.white, color: B.navy, fontSize: "11px", cursor: "pointer", flexShrink: 0, fontWeight: 600 }}>
+                        <button disabled={isLoading || testLoading} onClick={() => handleTopicTest(subtopic)} style={{ padding: "5px 10px", border: `1px solid ${B.greenBorder}`, borderRadius: "8px", background: B.greenLight, color: B.green, fontSize: "11px", cursor: isLoading || testLoading ? "not-allowed" : "pointer", flexShrink: 0, fontWeight: 700, opacity: isLoading || testLoading ? 0.5 : 1 }}>Test</button>
+                        <button disabled={isLoading || testLoading} onClick={() => handleReviseTopic(subtopic)} style={{ padding: "5px 10px", border: `1px solid ${revised ? B.navy : B.gray300}`, borderRadius: "8px", background: revised ? B.navyLight : B.white, color: B.navy, fontSize: "11px", cursor: isLoading || testLoading ? "not-allowed" : "pointer", flexShrink: 0, fontWeight: 600, opacity: isLoading || testLoading ? 0.5 : 1 }}>
                           {revised ? "Revised ✓" : "Revise"}
                         </button>
-                        <button onClick={() => handleStudyTopic(subtopic)} style={{ padding: "5px 10px", border: "none", borderRadius: "8px", background: B.navy, color: B.white, fontSize: "11px", cursor: "pointer", flexShrink: 0, fontWeight: 600 }}>
+                        <button disabled={isLoading || testLoading} onClick={() => handleStudyTopic(subtopic)} style={{ padding: "5px 10px", border: "none", borderRadius: "8px", background: B.navy, color: B.white, fontSize: "11px", cursor: isLoading || testLoading ? "not-allowed" : "pointer", flexShrink: 0, fontWeight: 600, opacity: isLoading || testLoading ? 0.5 : 1 }}>
                           Study
                         </button>
                       </div>

@@ -274,8 +274,6 @@ async def ask_question_text(
             validated_board,
         )
  
-        answer = clean_text_for_tts(answer)
- 
         llm_time = time.perf_counter() - llm_start
         print(f"[TEXT] ✅ answer='{answer[:80]}...' | LLM Time: {llm_time:.2f}s")
  

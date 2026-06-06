@@ -15,6 +15,7 @@ VOICE_MAP = {
     "pa": "pa-IN-OjasveeNeural",
     "ur": "ur-PK-AsadNeural",
     "en": "en-IN-NeerjaNeural",
+    "hinglish": "en-IN-NeerjaNeural",
     "fr": "fr-FR-DeniseNeural",
     "es": "es-ES-ElviraNeural",
     "de": "de-DE-KatjaNeural",

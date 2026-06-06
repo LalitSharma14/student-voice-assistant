@@ -1,0 +1,284 @@
+[
+  {
+    "id": "class_5_cbse_science_plants_and_their_life_parts_of_a_plant",
+    "classLevel": "5",
+    "board": "CBSE",
+    "subject": "Science",
+    "chapterTitle": "Plants and Their Life",
+    "topicTitle": "Parts of a plant",
+    "status": "published",
+    "version": 1,
+    "sourceLabel": "Based on NCERT + AI explanation",
+    "studyContent": {
+      "title": "Parts of a plant",
+      "intro": "A plant has different parts, and each part has a special job that helps the plant live and grow.",
+      "ncertBasedExplanation": "The main parts of a plant are roots, stem, leaves, flowers, fruits, and seeds. These parts work together to help the plant absorb water, stand upright, make food, and produce new plants.",
+      "aiSimplifiedExplanation": "Think of a plant like a small living machine. Roots drink water, the stem carries it, leaves make food, flowers help make fruits, and seeds grow into new plants.",
+      "stepByStep": [
+        "Roots grow under the soil and absorb water and minerals.",
+        "The stem supports the plant and carries water to different parts.",
+        "Leaves make food for the plant using sunlight.",
+        "Flowers help in making fruits and seeds.",
+        "Fruits protect seeds.",
+        "Seeds can grow into new plants."
+      ],
+      "keywords": [
+        { "term": "Root", "meaning": "The part that fixes the plant in soil and absorbs water." },
+        { "term": "Stem", "meaning": "The part that supports the plant and carries water and food." },
+        { "term": "Leaf", "meaning": "The part where food is made." },
+        { "term": "Seed", "meaning": "The part that can grow into a new plant." }
+      ],
+      "realLifeExample": "A mango tree has roots under the ground, a strong stem or trunk, leaves that make food, flowers that later form mangoes, and seeds inside the mangoes.",
+      "diagram": {
+        "type": "text",
+        "title": "Plant Parts Diagram",
+        "content": "Flower -> Fruit -> Seed\n   |\nLeaves -> Stem -> Roots"
+      },
+      "summary": [
+        "Plants have many parts with different jobs.",
+        "Roots absorb water and hold the plant firmly.",
+        "Leaves make food for the plant.",
+        "Flowers, fruits, and seeds help plants reproduce."
+      ]
+    },
+    "revisionContent": {
+      "quickMeaning": "The main parts of a plant are roots, stem, leaves, flowers, fruits, and seeds.",
+      "keyPoints": [
+        "Roots absorb water and minerals from soil.",
+        "Stem supports the plant.",
+        "Leaves make food.",
+        "Flowers help form fruits and seeds."
+      ],
+      "importantTerms": [
+        { "term": "Root", "meaning": "Absorbs water and holds the plant." },
+        { "term": "Stem", "meaning": "Supports the plant and carries water." },
+        { "term": "Leaf", "meaning": "Makes food for the plant." }
+      ],
+      "mustRemember": [
+        "Roots are usually below the soil.",
+        "Stem carries water to leaves.",
+        "Leaves are called food factories of the plant."
+      ],
+      "quickFlowchart": "Roots absorb water -> Stem carries water -> Leaves make food -> Flowers form fruits -> Seeds make new plants",
+      "examPoints": [
+        "Name the main parts of a plant.",
+        "Write the function of roots.",
+        "Write why leaves are important."
+      ]
+    },
+    "sourceRefs": [
+      { "source": "NCERT-based", "note": "Simplified with AI for Class 5 CBSE students." }
+    ]
+  },
+  {
+    "id": "class_5_cbse_science_plants_and_their_life_photosynthesis",
+    "classLevel": "5",
+    "board": "CBSE",
+    "subject": "Science",
+    "chapterTitle": "Plants and Their Life",
+    "topicTitle": "Photosynthesis",
+    "status": "published",
+    "version": 1,
+    "sourceLabel": "Based on NCERT + AI explanation",
+    "studyContent": {
+      "title": "Photosynthesis",
+      "intro": "Photosynthesis is the process by which green plants make their own food.",
+      "ncertBasedExplanation": "Green plants use sunlight, water, carbon dioxide, and chlorophyll to prepare food in their leaves. Oxygen is released during this process.",
+      "aiSimplifiedExplanation": "Plants do not go to a shop for food. Their leaves use sunlight, water, and air to make food inside the plant.",
+      "stepByStep": [
+        "Roots absorb water from the soil.",
+        "Leaves take carbon dioxide from the air.",
+        "Chlorophyll in green leaves traps sunlight.",
+        "The plant makes food called glucose.",
+        "Oxygen is released into the air."
+      ],
+      "keywords": [
+        { "term": "Photosynthesis", "meaning": "The process by which green plants make food using sunlight." },
+        { "term": "Chlorophyll", "meaning": "The green substance in leaves that traps sunlight." },
+        { "term": "Carbon dioxide", "meaning": "A gas from air used by plants to make food." },
+        { "term": "Glucose", "meaning": "Food made by plants." }
+      ],
+      "realLifeExample": "When a money plant is kept near sunlight and watered regularly, its leaves can make food and the plant grows well.",
+      "diagram": {
+        "type": "text",
+        "title": "Photosynthesis Flow",
+        "content": "Sunlight + Water + Carbon dioxide\n              |\n          Green leaves\n              |\n       Food + Oxygen"
+      },
+      "summary": [
+        "Photosynthesis helps green plants make food.",
+        "Leaves are the main place where photosynthesis happens.",
+        "Sunlight, water, carbon dioxide, and chlorophyll are needed.",
+        "Oxygen is released during photosynthesis."
+      ]
+    },
+    "revisionContent": {
+      "quickMeaning": "Photosynthesis is the process by which green plants make food using sunlight.",
+      "keyPoints": [
+        "It happens mainly in leaves.",
+        "Plants need sunlight, water, carbon dioxide, and chlorophyll.",
+        "Food is made and oxygen is released."
+      ],
+      "importantTerms": [
+        { "term": "Chlorophyll", "meaning": "Green substance that traps sunlight." },
+        { "term": "Glucose", "meaning": "Food made by plants." },
+        { "term": "Oxygen", "meaning": "Gas released during photosynthesis." }
+      ],
+      "mustRemember": [
+        "Photo means light and synthesis means putting together.",
+        "Leaves are called food factories of plants.",
+        "Chlorophyll gives leaves their green colour."
+      ],
+      "quickFlowchart": "Roots absorb water -> Leaves take carbon dioxide -> Chlorophyll traps sunlight -> Food is made -> Oxygen is released",
+      "examPoints": [
+        "Define photosynthesis.",
+        "Name the things needed for photosynthesis.",
+        "Write the gas released during photosynthesis."
+      ]
+    },
+    "sourceRefs": [
+      { "source": "NCERT-based", "note": "Simplified with AI for Class 5 CBSE students." }
+    ]
+  },
+  {
+    "id": "class_5_cbse_science_plants_and_their_life_uses_of_plants",
+    "classLevel": "5",
+    "board": "CBSE",
+    "subject": "Science",
+    "chapterTitle": "Plants and Their Life",
+    "topicTitle": "Uses of plants",
+    "status": "published",
+    "version": 1,
+    "sourceLabel": "Based on NCERT + AI explanation",
+    "studyContent": {
+      "title": "Uses of plants",
+      "intro": "Plants are very useful living things. They give us food, oxygen, medicines, wood, fibre, and many other things.",
+      "ncertBasedExplanation": "Humans and animals depend on plants in many ways. Plants provide fruits, vegetables, cereals, pulses, oil, spices, medicines, cotton, wood, and fresh air.",
+      "aiSimplifiedExplanation": "Plants help us every day. The food we eat, the oxygen we breathe, the cotton in clothes, and the wood in furniture can all come from plants.",
+      "stepByStep": [
+        "Plants give us food such as fruits, vegetables, grains, and pulses.",
+        "Plants release oxygen, which humans and animals need for breathing.",
+        "Some plants are used to make medicines.",
+        "Cotton and jute plants give fibres used for clothes and bags.",
+        "Trees give wood for furniture and paper.",
+        "Plants give shade and help keep the environment clean."
+      ],
+      "keywords": [
+        { "term": "Cereals", "meaning": "Food grains like rice, wheat, and maize." },
+        { "term": "Pulses", "meaning": "Seeds like gram, peas, and lentils that are rich in protein." },
+        { "term": "Fibre", "meaning": "Material from plants used to make cloth or bags." },
+        { "term": "Medicinal plant", "meaning": "A plant used to make medicine." }
+      ],
+      "realLifeExample": "In one day, you may eat wheat chapati, wear a cotton shirt, sit on a wooden chair, and breathe oxygen from plants.",
+      "diagram": {
+        "type": "text",
+        "title": "Uses of Plants",
+        "content": "Plants\n |-- Food\n |-- Oxygen\n |-- Medicines\n |-- Fibre\n |-- Wood\n |-- Shade"
+      },
+      "summary": [
+        "Plants are useful for humans and animals.",
+        "They give food and oxygen.",
+        "They provide medicines, fibres, wood, and shade.",
+        "We should protect plants and grow more trees."
+      ]
+    },
+    "revisionContent": {
+      "quickMeaning": "Plants give us many useful things like food, oxygen, medicines, fibre, wood, and shade.",
+      "keyPoints": [
+        "Fruits, vegetables, cereals, and pulses come from plants.",
+        "Plants release oxygen for breathing.",
+        "Cotton and jute are plant fibres.",
+        "Some plants are used as medicines."
+      ],
+      "importantTerms": [
+        { "term": "Cereal", "meaning": "A food grain such as wheat or rice." },
+        { "term": "Fibre", "meaning": "Plant material used to make cloth or bags." },
+        { "term": "Medicine", "meaning": "Something used to treat illness." }
+      ],
+      "mustRemember": [
+        "Plants are the main source of food.",
+        "Plants help keep air fresh.",
+        "We should not cut trees unnecessarily."
+      ],
+      "quickFlowchart": "Plants -> Food + Oxygen + Medicine + Fibre + Wood + Clean environment",
+      "examPoints": [
+        "Write any five uses of plants.",
+        "Give examples of plant fibres.",
+        "Explain why plants are important for breathing."
+      ]
+    },
+    "sourceRefs": [
+      { "source": "NCERT-based", "note": "Simplified with AI for Class 5 CBSE students." }
+    ]
+  },
+  {
+    "id": "class_5_cbse_science_plants_and_their_life_plant_reproduction",
+    "classLevel": "5",
+    "board": "CBSE",
+    "subject": "Science",
+    "chapterTitle": "Plants and Their Life",
+    "topicTitle": "Plant reproduction",
+    "status": "published",
+    "version": 1,
+    "sourceLabel": "Based on NCERT + AI explanation",
+    "studyContent": {
+      "title": "Plant reproduction",
+      "intro": "Plant reproduction means the process by which plants produce new plants of their own kind.",
+      "ncertBasedExplanation": "Many plants reproduce through seeds. Some plants can also grow from stems, roots, leaves, or spores. Flowers help in the formation of fruits and seeds.",
+      "aiSimplifiedExplanation": "Just like animals have babies, plants also make new plants. A seed can grow into a new plant when it gets water, air, and warmth.",
+      "stepByStep": [
+        "A flower can form a fruit.",
+        "A fruit contains seeds.",
+        "A seed can fall into soil.",
+        "When the seed gets water, air, and warmth, it starts growing.",
+        "A tiny root and shoot come out of the seed.",
+        "The seed slowly becomes a new plant."
+      ],
+      "keywords": [
+        { "term": "Reproduction", "meaning": "The process of producing new living things of the same kind." },
+        { "term": "Seed", "meaning": "The part of a plant that can grow into a new plant." },
+        { "term": "Germination", "meaning": "The process by which a seed starts growing into a new plant." },
+        { "term": "Seedling", "meaning": "A young plant that grows from a seed." }
+      ],
+      "realLifeExample": "If you plant a bean seed in moist soil and keep it in a warm place, it can germinate and grow into a bean plant.",
+      "diagram": {
+        "type": "text",
+        "title": "Seed to Plant",
+        "content": "Seed -> Germination -> Seedling -> Young plant -> Mature plant"
+      },
+      "summary": [
+        "Plants reproduce to make new plants.",
+        "Many plants reproduce through seeds.",
+        "Seeds need water, air, and warmth to germinate.",
+        "Some plants can also grow from stems, roots, or leaves."
+      ]
+    },
+    "revisionContent": {
+      "quickMeaning": "Plant reproduction is the process by which plants produce new plants.",
+      "keyPoints": [
+        "Most plants reproduce through seeds.",
+        "Seeds are usually found inside fruits.",
+        "Germination is the growth of a seed into a seedling.",
+        "Seeds need water, air, and warmth to grow."
+      ],
+      "importantTerms": [
+        { "term": "Seed", "meaning": "Can grow into a new plant." },
+        { "term": "Germination", "meaning": "Growth of a seed into a new plant." },
+        { "term": "Seedling", "meaning": "A young plant." }
+      ],
+      "mustRemember": [
+        "Flowers help form fruits and seeds.",
+        "A seed contains a baby plant.",
+        "Water, air, and warmth are needed for germination."
+      ],
+      "quickFlowchart": "Flower -> Fruit -> Seed -> Germination -> Seedling -> New plant",
+      "examPoints": [
+        "Define plant reproduction.",
+        "Write conditions needed for seed germination.",
+        "Explain the seed-to-plant process."
+      ]
+    },
+    "sourceRefs": [
+      { "source": "NCERT-based", "note": "Simplified with AI for Class 5 CBSE students." }
+    ]
+  }
+]

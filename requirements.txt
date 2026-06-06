@@ -6,3 +6,6 @@ faster-whisper
 google-generativeai
 groq
 edge-tts
+firebase-admin
+protobuf>=5.29.6,<6
+grpcio-status<1.72
