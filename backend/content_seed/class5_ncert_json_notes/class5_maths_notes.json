@@ -1,0 +1,1091 @@
+{
+  "metadata": {
+    "class": 5,
+    "board": "CBSE",
+    "createdFor": "Backend-ready NCERT notes for student app",
+    "generatedOn": "2026-06-08",
+    "formatFields": [
+      "class",
+      "board",
+      "subject",
+      "chapter",
+      "topic",
+      "meaning",
+      "ncertBasedExplanation",
+      "easyExplanation",
+      "examples",
+      "importantKeywords",
+      "quickSummary",
+      "revisionNotes"
+    ],
+    "note": "Explanations are simplified, paraphrased, student-friendly notes based on the uploaded NCERT PDFs.",
+    "subject": "Maths",
+    "totalChapters": 15
+  },
+  "chapters": [
+    {
+      "class": 5,
+      "board": "CBSE",
+      "subject": "Maths",
+      "chapterNumber": 1,
+      "chapter": "We the Travellers - I",
+      "language": "English",
+      "source": "NCERT Class 5 textbook PDF uploaded by user",
+      "topics": [
+        {
+          "topic": "Large numbers",
+          "meaning": "Large numbers are numbers with thousands and ten-thousands places.",
+          "ncertBasedExplanation": "NCERT begins with travel and vehicles to introduce large numbers. Students learn to write numbers like 10,000 and beyond using the Indian place value system.",
+          "easyExplanation": "Large numbers help us count big quantities like vehicles, distances, people, and money.",
+          "examples": [
+            "1,000",
+            "10,000",
+            "45,867",
+            "Number of vehicles in a state"
+          ],
+          "importantKeywords": [
+            "large numbers",
+            "place value",
+            "ten thousand",
+            "comma",
+            "digits"
+          ],
+          "quickSummary": "Large numbers are read using place value.",
+          "revisionNotes": "Use commas to read large numbers.; 10 thousands make 10,000.; Each digit has a value depending on its place.; Compare numbers from the leftmost place."
+        },
+        {
+          "topic": "Place value",
+          "meaning": "Place value is the value of a digit because of its position in a number.",
+          "ncertBasedExplanation": "The chapter expands the place value chart to include ten-thousands. Students learn TTh, Th, H, T, and O.",
+          "easyExplanation": "In 13,520, 1 is in ten-thousands place and means 10,000.",
+          "examples": [
+            "1,380 = 1 thousand + 3 hundreds + 8 tens",
+            "9,123",
+            "10,458"
+          ],
+          "importantKeywords": [
+            "TTh",
+            "Th",
+            "H",
+            "T",
+            "O",
+            "expanded form"
+          ],
+          "quickSummary": "Place value tells what each digit means.",
+          "revisionNotes": "TTh means ten thousand.; Th means thousand.; H means hundred.; T means ten.; O means ones."
+        },
+        {
+          "topic": "Rounding",
+          "meaning": "Rounding means finding the nearest ten, hundred, or thousand.",
+          "ncertBasedExplanation": "The chapter uses number lines and examples like the rabbit's position to explain nearest tens, hundreds, and thousands.",
+          "easyExplanation": "Rounding helps us quickly estimate a number close to the actual number.",
+          "examples": [
+            "2,346 nearest ten is 2,350",
+            "3,176 rounded to nearest hundred",
+            "Prices and distances"
+          ],
+          "importantKeywords": [
+            "rounding",
+            "nearest ten",
+            "nearest hundred",
+            "nearest thousand",
+            "estimate"
+          ],
+          "quickSummary": "Rounding gives an approximate value.",
+          "revisionNotes": "Look at neighbouring tens, hundreds, or thousands.; Choose the closest one.; If exactly halfway, follow the rule taught by your teacher.; Rounding is useful for estimation."
+        }
+      ]
+    },
+    {
+      "class": 5,
+      "board": "CBSE",
+      "subject": "Maths",
+      "chapterNumber": 2,
+      "chapter": "Fractions",
+      "language": "English",
+      "source": "NCERT Class 5 textbook PDF uploaded by user",
+      "topics": [
+        {
+          "topic": "Fractions as parts of a whole",
+          "meaning": "A fraction shows equal parts of a whole.",
+          "ncertBasedExplanation": "NCERT uses fraction kits, parathas, pizza, and shapes to help students see fractions as equal parts.",
+          "easyExplanation": "If a whole pizza is cut into 4 equal slices, one slice is one-fourth.",
+          "examples": [
+            "1/2",
+            "1/3",
+            "1/4",
+            "pizza slices"
+          ],
+          "importantKeywords": [
+            "fraction",
+            "whole",
+            "equal parts",
+            "numerator",
+            "denominator"
+          ],
+          "quickSummary": "Fractions show equal parts of a whole.",
+          "revisionNotes": "The denominator tells total equal parts.; The numerator tells selected parts.; Parts must be equal.; Fractions can be shown using shapes."
+        },
+        {
+          "topic": "Equivalent fractions",
+          "meaning": "Equivalent fractions are different fractions that show the same value.",
+          "ncertBasedExplanation": "Students make a whole using different fraction pieces and observe patterns like 1/3 = 2/6 = 3/9.",
+          "easyExplanation": "Equivalent fractions look different but have the same size or amount.",
+          "examples": [
+            "1/2 = 2/4",
+            "1/3 = 2/6",
+            "2/4 = 3/6"
+          ],
+          "importantKeywords": [
+            "equivalent",
+            "same value",
+            "fraction kit",
+            "multiply",
+            "divide"
+          ],
+          "quickSummary": "Equivalent fractions represent the same amount.",
+          "revisionNotes": "Multiply numerator and denominator by the same number.; Divide both by the same number when possible.; Use diagrams to compare.; Equivalent means equal in value."
+        },
+        {
+          "topic": "Comparing fractions",
+          "meaning": "Comparing fractions means finding which fraction is smaller, greater, or equal.",
+          "ncertBasedExplanation": "NCERT uses number lines, fraction strips, and reference to one-half or one whole to compare fractions.",
+          "easyExplanation": "To compare fractions, think about the size of each part and how many parts are taken.",
+          "examples": [
+            "1/4 < 3/4",
+            "2/3 > 1/3",
+            "Fractions less than half"
+          ],
+          "importantKeywords": [
+            "compare",
+            "greater than",
+            "less than",
+            "half",
+            "number line"
+          ],
+          "quickSummary": "Fractions can be compared using models and number lines.",
+          "revisionNotes": "Same denominator: compare numerators.; Same numerator: smaller denominator means bigger parts.; Use 1/2 as a reference.; Number lines make comparison clear."
+        }
+      ]
+    },
+    {
+      "class": 5,
+      "board": "CBSE",
+      "subject": "Maths",
+      "chapterNumber": 3,
+      "chapter": "Angles as Turns",
+      "language": "English",
+      "source": "NCERT Class 5 textbook PDF uploaded by user",
+      "topics": [
+        {
+          "topic": "Turns and angles",
+          "meaning": "An angle can be understood as the amount of turn between two directions.",
+          "ncertBasedExplanation": "NCERT connects angles with full turns, half turns, and quarter turns, using familiar actions and clock movements.",
+          "easyExplanation": "When you turn from one direction to another, you make an angle.",
+          "examples": [
+            "Full turn",
+            "Half turn",
+            "Quarter turn",
+            "Right angle"
+          ],
+          "importantKeywords": [
+            "angle",
+            "turn",
+            "full turn",
+            "half turn",
+            "quarter turn"
+          ],
+          "quickSummary": "Angles can be seen as turns.",
+          "revisionNotes": "A full turn returns to the starting direction.; A half turn changes direction to opposite.; A quarter turn makes a right angle.; Turns help understand angles easily."
+        },
+        {
+          "topic": "Right angle",
+          "meaning": "A right angle is a quarter turn and measures 90 degrees.",
+          "ncertBasedExplanation": "Students identify right angles through turns, corners, paper folding, and objects around them.",
+          "easyExplanation": "The corner of a book usually makes a right angle.",
+          "examples": [
+            "Book corner",
+            "Door frame",
+            "Clock at 3 o'clock",
+            "Square corner"
+          ],
+          "importantKeywords": [
+            "right angle",
+            "90 degrees",
+            "quarter turn",
+            "corner"
+          ],
+          "quickSummary": "A right angle is one-fourth of a full turn.",
+          "revisionNotes": "Look for square corners.; A quarter turn forms a right angle.; Many objects around us have right angles.; Use angle tools to check."
+        },
+        {
+          "topic": "Clockwise and anticlockwise",
+          "meaning": "Clockwise is the direction of clock hands; anticlockwise is the opposite direction.",
+          "ncertBasedExplanation": "The chapter asks students to observe clock hands and directions to understand movement.",
+          "easyExplanation": "Clock hands move clockwise. Moving the other way is anticlockwise.",
+          "examples": [
+            "Clock hands",
+            "Turning a knob",
+            "Rotating a paper",
+            "Compass directions"
+          ],
+          "importantKeywords": [
+            "clockwise",
+            "anticlockwise",
+            "direction",
+            "rotation"
+          ],
+          "quickSummary": "Directions of turns help describe movement.",
+          "revisionNotes": "Clockwise follows clock hands.; Anticlockwise is opposite.; Use direction words clearly.; Turns can be measured and described."
+        }
+      ]
+    },
+    {
+      "class": 5,
+      "board": "CBSE",
+      "subject": "Maths",
+      "chapterNumber": 4,
+      "chapter": "We the Travellers - II",
+      "language": "English",
+      "source": "NCERT Class 5 textbook PDF uploaded by user",
+      "topics": [
+        {
+          "topic": "Travel data",
+          "meaning": "Travel data includes information like distance, time, route, and number of passengers.",
+          "ncertBasedExplanation": "NCERT continues the travel context to strengthen number sense, operations, and estimation.",
+          "easyExplanation": "When we travel, we use maths to know how far, how long, and how much.",
+          "examples": [
+            "Bus route distance",
+            "Train timing",
+            "Ticket cost",
+            "Travel duration"
+          ],
+          "importantKeywords": [
+            "travel",
+            "distance",
+            "time",
+            "data",
+            "route"
+          ],
+          "quickSummary": "Travel situations use many mathematical ideas.",
+          "revisionNotes": "Distances can be added.; Time can be compared.; Costs can be calculated.; Routes can be planned."
+        },
+        {
+          "topic": "Addition and subtraction in journeys",
+          "meaning": "Addition and subtraction help calculate total distance, remaining distance, and changes during travel.",
+          "ncertBasedExplanation": "The chapter gives real-life contexts where students combine or compare numbers related to trips.",
+          "easyExplanation": "If a bus travels 120 km then 80 km more, total distance is 200 km.",
+          "examples": [
+            "Total distance",
+            "Remaining distance",
+            "Fare difference",
+            "Number of travellers"
+          ],
+          "importantKeywords": [
+            "addition",
+            "subtraction",
+            "total",
+            "difference",
+            "journey"
+          ],
+          "quickSummary": "Journey problems can be solved using operations.",
+          "revisionNotes": "Read the question carefully.; Identify total or difference.; Align place values.; Check whether answer makes sense."
+        },
+        {
+          "topic": "Estimation in travel",
+          "meaning": "Estimation gives a quick approximate answer for distance, time, or cost.",
+          "ncertBasedExplanation": "Students learn to make reasonable guesses before or after exact calculation.",
+          "easyExplanation": "Estimation helps us plan quickly without calculating every detail.",
+          "examples": [
+            "Approximate travel time",
+            "Estimated fare",
+            "Rounded distance"
+          ],
+          "importantKeywords": [
+            "estimate",
+            "approximate",
+            "round off",
+            "planning"
+          ],
+          "quickSummary": "Estimation is useful in planning journeys.",
+          "revisionNotes": "Round numbers to easier values.; Estimate before exact calculation.; Use estimation to check answers.; It saves time."
+        }
+      ]
+    },
+    {
+      "class": 5,
+      "board": "CBSE",
+      "subject": "Maths",
+      "chapterNumber": 5,
+      "chapter": "Far and Near",
+      "language": "English",
+      "source": "NCERT Class 5 textbook PDF uploaded by user",
+      "topics": [
+        {
+          "topic": "Measurement of length",
+          "meaning": "Length measures how long, tall, far, or wide something is.",
+          "ncertBasedExplanation": "NCERT asks students to identify appropriate units for measuring objects and distances.",
+          "easyExplanation": "We use different units for small and large lengths.",
+          "examples": [
+            "Length of pencil in cm",
+            "Height in metres",
+            "Distance in kilometres"
+          ],
+          "importantKeywords": [
+            "length",
+            "centimetre",
+            "metre",
+            "kilometre",
+            "distance"
+          ],
+          "quickSummary": "Choose units according to what you measure.",
+          "revisionNotes": "Small objects: centimetres.; Room-sized lengths: metres.; Long distances: kilometres.; Measure carefully from zero mark."
+        },
+        {
+          "topic": "Near and far distances",
+          "meaning": "Near and far describe how close or distant objects are.",
+          "ncertBasedExplanation": "The chapter builds understanding of distance through real-life observation and maps.",
+          "easyExplanation": "Your desk is near you, but another city is far from you.",
+          "examples": [
+            "Home to school",
+            "Desk to board",
+            "City to city"
+          ],
+          "importantKeywords": [
+            "near",
+            "far",
+            "distance",
+            "route",
+            "unit"
+          ],
+          "quickSummary": "Distance tells how far one place or object is.",
+          "revisionNotes": "Use suitable units.; Compare distances.; Maps can show far and near places.; Estimate before measuring."
+        },
+        {
+          "topic": "Scale and maps",
+          "meaning": "A scale helps represent large distances in a smaller drawing or map.",
+          "ncertBasedExplanation": "Students connect real distances with diagrams, routes, and measurements.",
+          "easyExplanation": "A map cannot show real size, so it uses scale.",
+          "examples": [
+            "Map scale",
+            "School map",
+            "Road distance"
+          ],
+          "importantKeywords": [
+            "scale",
+            "map",
+            "route",
+            "measurement"
+          ],
+          "quickSummary": "Scale helps convert map distance to real distance.",
+          "revisionNotes": "Read scale carefully.; Measure map distance.; Convert using scale.; Maps help planning."
+        }
+      ]
+    },
+    {
+      "class": 5,
+      "board": "CBSE",
+      "subject": "Maths",
+      "chapterNumber": 6,
+      "chapter": "The Dairy Farm",
+      "language": "English",
+      "source": "NCERT Class 5 textbook PDF uploaded by user",
+      "topics": [
+        {
+          "topic": "Multiplication in real life",
+          "meaning": "Multiplication is repeated addition used to find totals quickly.",
+          "ncertBasedExplanation": "NCERT uses a dairy farm context to solve problems involving milk, animals, containers, and quantities.",
+          "easyExplanation": "If one cow gives 5 litres and there are 4 cows, total is 20 litres.",
+          "examples": [
+            "Milk collected from cows",
+            "Number of bottles",
+            "Daily production"
+          ],
+          "importantKeywords": [
+            "multiplication",
+            "repeated addition",
+            "total",
+            "quantity"
+          ],
+          "quickSummary": "Multiplication helps calculate repeated groups.",
+          "revisionNotes": "Identify equal groups.; Multiply number of groups by quantity in each group.; Use tables.; Check with addition."
+        },
+        {
+          "topic": "Division and sharing",
+          "meaning": "Division means sharing equally or making equal groups.",
+          "ncertBasedExplanation": "Farm situations help students divide milk, money, or items into equal parts.",
+          "easyExplanation": "If 20 litres of milk is filled equally into 5 cans, each can gets 4 litres.",
+          "examples": [
+            "Milk bottles",
+            "Sharing fodder",
+            "Grouping animals"
+          ],
+          "importantKeywords": [
+            "division",
+            "equal sharing",
+            "groups",
+            "remainder"
+          ],
+          "quickSummary": "Division is used for equal sharing and grouping.",
+          "revisionNotes": "Find what is being shared.; Decide number of groups.; Divide carefully.; Interpret remainder if any."
+        },
+        {
+          "topic": "Word problems",
+          "meaning": "Word problems are maths questions written in story form.",
+          "ncertBasedExplanation": "The chapter uses dairy farm stories to help students read, understand, and solve practical questions.",
+          "easyExplanation": "First understand the story, then choose the operation.",
+          "examples": [
+            "Total milk",
+            "Profit from selling milk",
+            "Milk in cans"
+          ],
+          "importantKeywords": [
+            "word problem",
+            "operation",
+            "data",
+            "answer"
+          ],
+          "quickSummary": "Word problems connect maths with daily life.",
+          "revisionNotes": "Read twice.; Underline numbers and keywords.; Decide operation.; Write answer with unit."
+        }
+      ]
+    },
+    {
+      "class": 5,
+      "board": "CBSE",
+      "subject": "Maths",
+      "chapterNumber": 7,
+      "chapter": "Shapes and Patterns",
+      "language": "English",
+      "source": "NCERT Class 5 textbook PDF uploaded by user",
+      "topics": [
+        {
+          "topic": "Patterns",
+          "meaning": "A pattern is a repeated or arranged design following a rule.",
+          "ncertBasedExplanation": "NCERT uses weaving mats, rows, over-under arrangements, and shapes to explore patterns.",
+          "easyExplanation": "A pattern repeats in a planned way.",
+          "examples": [
+            "2 over, 1 under weaving",
+            "Tile patterns",
+            "Number patterns"
+          ],
+          "importantKeywords": [
+            "pattern",
+            "repeat",
+            "rule",
+            "sequence",
+            "design"
+          ],
+          "quickSummary": "Patterns are made by following rules.",
+          "revisionNotes": "Find the repeating part.; Continue the rule.; Patterns can be in numbers, shapes, or designs.; Check if the rule stays same."
+        },
+        {
+          "topic": "Tessellation",
+          "meaning": "Tessellation means covering a surface with shapes without gaps or overlaps.",
+          "ncertBasedExplanation": "The chapter shows tiling patterns using one or more shapes and asks students to continue them.",
+          "easyExplanation": "Tiles on a floor often make tessellations.",
+          "examples": [
+            "Square tiles",
+            "Triangle patterns",
+            "Pentagon designs"
+          ],
+          "importantKeywords": [
+            "tessellation",
+            "tiling",
+            "shape",
+            "gap",
+            "overlap"
+          ],
+          "quickSummary": "Tessellations cover surfaces neatly.",
+          "revisionNotes": "Shapes must fit together.; No gaps should remain.; No overlap should happen.; Many patterns use more than one shape."
+        },
+        {
+          "topic": "2D and 3D shapes",
+          "meaning": "2D shapes are flat, while 3D shapes are solid objects.",
+          "ncertBasedExplanation": "Students form shapes using triangles, rhombuses, cube nets, and solid models.",
+          "easyExplanation": "A square is flat, but a cube is solid.",
+          "examples": [
+            "Triangle",
+            "Rhombus",
+            "Cube",
+            "Dodecahedron"
+          ],
+          "importantKeywords": [
+            "2D",
+            "3D",
+            "face",
+            "edge",
+            "net"
+          ],
+          "quickSummary": "Shapes can be flat or solid.",
+          "revisionNotes": "2D shapes have length and breadth.; 3D shapes have length, breadth, and height.; Nets fold into solids.; Count faces, edges, and corners."
+        }
+      ]
+    },
+    {
+      "class": 5,
+      "board": "CBSE",
+      "subject": "Maths",
+      "chapterNumber": 8,
+      "chapter": "Weight and Capacity",
+      "language": "English",
+      "source": "NCERT Class 5 textbook PDF uploaded by user",
+      "topics": [
+        {
+          "topic": "Weight units",
+          "meaning": "Weight tells how heavy something is.",
+          "ncertBasedExplanation": "NCERT teaches kilograms, grams, and milligrams using daily objects, groceries, and animals.",
+          "easyExplanation": "We use kg for heavy things, g for lighter things, and mg for very tiny weights.",
+          "examples": [
+            "Rice in kg",
+            "Spices in g",
+            "Ant weight in mg"
+          ],
+          "importantKeywords": [
+            "weight",
+            "kilogram",
+            "gram",
+            "milligram",
+            "balance"
+          ],
+          "quickSummary": "Weight units depend on how heavy an object is.",
+          "revisionNotes": "1000 g = 1 kg.; 1000 mg = 1 g.; Use suitable units.; Convert before adding or subtracting."
+        },
+        {
+          "topic": "Capacity units",
+          "meaning": "Capacity tells how much liquid a container can hold.",
+          "ncertBasedExplanation": "The chapter explains litres and millilitres through milk, petrol, bottles, and containers.",
+          "easyExplanation": "A bottle can hold 1 litre or 500 millilitres of water.",
+          "examples": [
+            "Milk packet",
+            "Water bottle",
+            "Petrol tank"
+          ],
+          "importantKeywords": [
+            "capacity",
+            "litre",
+            "millilitre",
+            "container",
+            "liquid"
+          ],
+          "quickSummary": "Capacity measures liquids.",
+          "revisionNotes": "1000 ml = 1 l.; Use ml for small quantities.; Use l for larger quantities.; Convert units in calculations."
+        },
+        {
+          "topic": "Operations with measures",
+          "meaning": "Operations with measures include adding, subtracting, multiplying, or dividing weights and capacities.",
+          "ncertBasedExplanation": "NCERT uses real-life situations like groceries, onion use, petrol, and milk to practise calculations.",
+          "easyExplanation": "Before calculating, make sure all units are the same.",
+          "examples": [
+            "5 kg 200 g + 8 kg 900 g",
+            "1 l + 500 ml",
+            "Petrol used"
+          ],
+          "importantKeywords": [
+            "conversion",
+            "addition",
+            "subtraction",
+            "measure",
+            "unit"
+          ],
+          "quickSummary": "Convert units and then calculate.",
+          "revisionNotes": "Convert kg to g if needed.; Convert l to ml if needed.; Add or subtract carefully.; Write units in final answer."
+        }
+      ]
+    },
+    {
+      "class": 5,
+      "board": "CBSE",
+      "subject": "Maths",
+      "chapterNumber": 9,
+      "chapter": "Coconut Farm",
+      "language": "English",
+      "source": "NCERT Class 5 textbook PDF uploaded by user",
+      "topics": [
+        {
+          "topic": "Farm maths",
+          "meaning": "Farm maths uses numbers to count plants, produce, cost, and work.",
+          "ncertBasedExplanation": "NCERT uses a coconut farm context to practise multiplication, division, and money-related thinking.",
+          "easyExplanation": "Farmers use maths to count trees, coconuts, labour, and selling price.",
+          "examples": [
+            "Coconuts per tree",
+            "Total harvest",
+            "Selling coconuts"
+          ],
+          "importantKeywords": [
+            "farm",
+            "harvest",
+            "total",
+            "cost",
+            "income"
+          ],
+          "quickSummary": "Farming situations need maths calculations.",
+          "revisionNotes": "Count groups carefully.; Multiply for totals.; Divide for sharing.; Use money calculations in sales."
+        },
+        {
+          "topic": "Arrays and grouping",
+          "meaning": "Arrays arrange objects in rows and columns to count quickly.",
+          "ncertBasedExplanation": "Farm rows and plants help students understand multiplication visually.",
+          "easyExplanation": "If there are 5 rows with 8 trees each, total trees are 40.",
+          "examples": [
+            "Rows of coconut trees",
+            "Boxes of coconuts",
+            "Plantation layout"
+          ],
+          "importantKeywords": [
+            "array",
+            "row",
+            "column",
+            "grouping",
+            "multiplication"
+          ],
+          "quickSummary": "Arrays make multiplication easier.",
+          "revisionNotes": "Rows and columns show equal groups.; Multiply rows by columns.; Draw arrays for clarity.; Arrays help avoid counting one by one."
+        },
+        {
+          "topic": "Money and quantity",
+          "meaning": "Money and quantity problems connect number of items with price.",
+          "ncertBasedExplanation": "Students learn to calculate total cost, earnings, and comparisons using farm produce.",
+          "easyExplanation": "If one coconut costs ₹20, five coconuts cost ₹100.",
+          "examples": [
+            "Cost of coconuts",
+            "Total earnings",
+            "Market sale"
+          ],
+          "importantKeywords": [
+            "money",
+            "price",
+            "quantity",
+            "cost",
+            "earnings"
+          ],
+          "quickSummary": "Price multiplied by quantity gives total cost.",
+          "revisionNotes": "Find price per item.; Find number of items.; Multiply to get total.; Compare costs carefully."
+        }
+      ]
+    },
+    {
+      "class": 5,
+      "board": "CBSE",
+      "subject": "Maths",
+      "chapterNumber": 10,
+      "chapter": "Symmetrical Designs",
+      "language": "English",
+      "source": "NCERT Class 5 textbook PDF uploaded by user",
+      "topics": [
+        {
+          "topic": "Symmetry",
+          "meaning": "Symmetry means one part of a shape or design matches another part.",
+          "ncertBasedExplanation": "NCERT uses cutouts, letters, and designs to explore reflection and rotational symmetry.",
+          "easyExplanation": "A butterfly's wings look similar on both sides.",
+          "examples": [
+            "Butterfly",
+            "Paper folding",
+            "Letters",
+            "Rangoli"
+          ],
+          "importantKeywords": [
+            "symmetry",
+            "reflection",
+            "mirror line",
+            "design"
+          ],
+          "quickSummary": "Symmetry makes balanced designs.",
+          "revisionNotes": "A line of symmetry divides matching halves.; Fold to check reflection symmetry.; Many designs have symmetry.; Symmetry is seen in nature and art."
+        },
+        {
+          "topic": "Rotational symmetry",
+          "meaning": "Rotational symmetry means a design looks the same after being turned.",
+          "ncertBasedExplanation": "The chapter asks students to turn letters and designs and observe whether they look the same.",
+          "easyExplanation": "If a design looks the same after a quarter turn, it has rotational symmetry.",
+          "examples": [
+            "Pinwheel",
+            "Square design",
+            "Fan",
+            "Firkis"
+          ],
+          "importantKeywords": [
+            "rotation",
+            "turn",
+            "quarter turn",
+            "same design"
+          ],
+          "quickSummary": "Rotational symmetry is about matching after a turn.",
+          "revisionNotes": "Mark a point to track rotation.; Turn the design.; Check if it matches.; Some designs match after 1/2 or 1/4 turn."
+        },
+        {
+          "topic": "Reflection symmetry",
+          "meaning": "Reflection symmetry means a design matches its mirror image.",
+          "ncertBasedExplanation": "Students sort designs into reflection symmetry, rotational symmetry, or both.",
+          "easyExplanation": "A heart shape often has reflection symmetry.",
+          "examples": [
+            "Mirror image",
+            "Folded paper",
+            "Leaf",
+            "Letter A"
+          ],
+          "importantKeywords": [
+            "reflection",
+            "mirror",
+            "line of symmetry",
+            "matching halves"
+          ],
+          "quickSummary": "Reflection symmetry has two matching sides.",
+          "revisionNotes": "Use a mirror or fold.; Both sides should match.; Some shapes have many symmetry lines.; Reflection differs from rotation."
+        }
+      ]
+    },
+    {
+      "class": 5,
+      "board": "CBSE",
+      "subject": "Maths",
+      "chapterNumber": 11,
+      "chapter": "Grandmother’s Quilt",
+      "language": "English",
+      "source": "NCERT Class 5 textbook PDF uploaded by user",
+      "topics": [
+        {
+          "topic": "Area",
+          "meaning": "Area is the amount of surface covered by a shape.",
+          "ncertBasedExplanation": "NCERT uses quilts, rugs, square patches, and grids to introduce area.",
+          "easyExplanation": "Area tells how much space a shape covers.",
+          "examples": [
+            "Number of square patches",
+            "Area of a desk",
+            "Grid squares"
+          ],
+          "importantKeywords": [
+            "area",
+            "surface",
+            "square unit",
+            "grid",
+            "patch"
+          ],
+          "quickSummary": "Area measures covered space.",
+          "revisionNotes": "Count full squares.; Combine partial squares carefully.; Area of rectangle = length × breadth.; Area of square = side × side."
+        },
+        {
+          "topic": "Perimeter",
+          "meaning": "Perimeter is the total distance around a shape.",
+          "ncertBasedExplanation": "The chapter compares area and perimeter through rectangles and shapes.",
+          "easyExplanation": "Perimeter is like walking around the boundary of a field.",
+          "examples": [
+            "Boundary of quilt",
+            "Frame of rectangle",
+            "Fence around garden"
+          ],
+          "importantKeywords": [
+            "perimeter",
+            "boundary",
+            "length",
+            "breadth",
+            "around"
+          ],
+          "quickSummary": "Perimeter measures the boundary.",
+          "revisionNotes": "Add all side lengths.; Rectangle perimeter = 2 × (length + breadth).; Shapes with same area may have different perimeters.; Always write units."
+        },
+        {
+          "topic": "Area and perimeter comparison",
+          "meaning": "Two shapes can have the same area but different perimeters, or similar perimeter but different area.",
+          "ncertBasedExplanation": "Students explore this by making shapes on grids and comparing them.",
+          "easyExplanation": "Changing a shape can change its boundary even if covered space remains same.",
+          "examples": [
+            "Different rectangles with same area",
+            "Grid shapes",
+            "Tile arrangements"
+          ],
+          "importantKeywords": [
+            "compare",
+            "same area",
+            "different perimeter",
+            "rectangle"
+          ],
+          "quickSummary": "Area and perimeter are different ideas.",
+          "revisionNotes": "Area is inside space.; Perimeter is boundary length.; Do not confuse them.; Use grids to compare."
+        }
+      ]
+    },
+    {
+      "class": 5,
+      "board": "CBSE",
+      "subject": "Maths",
+      "chapterNumber": 12,
+      "chapter": "Racing Seconds",
+      "language": "English",
+      "source": "NCERT Class 5 textbook PDF uploaded by user",
+      "topics": [
+        {
+          "topic": "Seconds, minutes, and hours",
+          "meaning": "Seconds, minutes, and hours are units of time.",
+          "ncertBasedExplanation": "NCERT introduces seconds through races and quick activities where small time differences matter.",
+          "easyExplanation": "Seconds are used for very short times, minutes for longer activities, and hours for even longer time.",
+          "examples": [
+            "Race timing",
+            "Brushing teeth",
+            "Studying for 50 minutes"
+          ],
+          "importantKeywords": [
+            "second",
+            "minute",
+            "hour",
+            "time",
+            "duration"
+          ],
+          "quickSummary": "Time is measured using seconds, minutes, and hours.",
+          "revisionNotes": "60 seconds = 1 minute.; 60 minutes = 1 hour.; Use seconds for short events.; Convert units carefully."
+        },
+        {
+          "topic": "12-hour and 24-hour time",
+          "meaning": "The 12-hour format uses AM/PM, while the 24-hour format counts from 00:00 to 23:59.",
+          "ncertBasedExplanation": "Students practise reading clocks and converting time formats.",
+          "easyExplanation": "06:00 PM is 18:00 in 24-hour time.",
+          "examples": [
+            "School timing",
+            "Train timing",
+            "Digital clock"
+          ],
+          "importantKeywords": [
+            "12-hour",
+            "24-hour",
+            "AM",
+            "PM",
+            "clock"
+          ],
+          "quickSummary": "Time can be written in different formats.",
+          "revisionNotes": "AM is midnight to noon.; PM is noon to midnight.; Add 12 to PM hours except 12 PM.; 12 AM is 00:00."
+        },
+        {
+          "topic": "Duration",
+          "meaning": "Duration is the amount of time between starting and ending.",
+          "ncertBasedExplanation": "The chapter uses situations like play time, study time, and races to find elapsed time.",
+          "easyExplanation": "If you start at 6:15 PM and play for 1 hour 45 minutes, add the duration to find return time.",
+          "examples": [
+            "Study duration",
+            "Race duration",
+            "Travel duration"
+          ],
+          "importantKeywords": [
+            "duration",
+            "elapsed time",
+            "start time",
+            "end time"
+          ],
+          "quickSummary": "Duration tells how long an activity takes.",
+          "revisionNotes": "Find start and end times.; Add or subtract time carefully.; Convert minutes to hours if needed.; Write answer clearly."
+        }
+      ]
+    },
+    {
+      "class": 5,
+      "board": "CBSE",
+      "subject": "Maths",
+      "chapterNumber": 13,
+      "chapter": "Animal Jumps",
+      "language": "English",
+      "source": "NCERT Class 5 textbook PDF uploaded by user",
+      "topics": [
+        {
+          "topic": "Jumps and number patterns",
+          "meaning": "Jump patterns show repeated movement on a number line or grid.",
+          "ncertBasedExplanation": "NCERT uses animal jumps to help students understand skip counting, patterns, and movement.",
+          "easyExplanation": "If an animal jumps 3 steps each time, the numbers increase by 3.",
+          "examples": [
+            "Frog jumps",
+            "Rabbit jumps",
+            "Number line"
+          ],
+          "importantKeywords": [
+            "jump",
+            "skip counting",
+            "pattern",
+            "number line"
+          ],
+          "quickSummary": "Jumps show repeated addition or movement.",
+          "revisionNotes": "Find jump size.; Add same number each time.; Use number lines.; Patterns help predict next positions."
+        },
+        {
+          "topic": "Multiples",
+          "meaning": "Multiples are numbers obtained by multiplying a number by 1, 2, 3, and so on.",
+          "ncertBasedExplanation": "Animal jumps can show multiples because equal jumps land on repeated counts.",
+          "easyExplanation": "Multiples of 5 are 5, 10, 15, 20, and so on.",
+          "examples": [
+            "2-step jumps",
+            "5-step jumps",
+            "Landing points"
+          ],
+          "importantKeywords": [
+            "multiple",
+            "skip count",
+            "equal jump",
+            "sequence"
+          ],
+          "quickSummary": "Multiples come from equal jumps.",
+          "revisionNotes": "Equal jumps form multiples.; Multiplication and skip counting are related.; Use tables.; Multiples help in division too."
+        },
+        {
+          "topic": "Grid movement",
+          "meaning": "Grid movement uses rows, columns, and directions to locate positions.",
+          "ncertBasedExplanation": "Students follow movement rules and observe positions reached by animals.",
+          "easyExplanation": "A grid helps us describe where something is and how it moves.",
+          "examples": [
+            "Moving right",
+            "Moving up",
+            "Animal path"
+          ],
+          "importantKeywords": [
+            "grid",
+            "row",
+            "column",
+            "position",
+            "movement"
+          ],
+          "quickSummary": "Grids help track movement.",
+          "revisionNotes": "Use rows and columns.; Follow directions in order.; Count steps carefully.; Mark starting point."
+        }
+      ]
+    },
+    {
+      "class": 5,
+      "board": "CBSE",
+      "subject": "Maths",
+      "chapterNumber": 14,
+      "chapter": "Maps and Locations",
+      "language": "English",
+      "source": "NCERT Class 5 textbook PDF uploaded by user",
+      "topics": [
+        {
+          "topic": "Directions",
+          "meaning": "Directions help us locate and move from one place to another.",
+          "ncertBasedExplanation": "NCERT uses bird watching, bus routes, metro maps, and zoo maps to teach direction sense.",
+          "easyExplanation": "North, South, East, and West help us describe locations.",
+          "examples": [
+            "North of road",
+            "West of a tent",
+            "Right turn",
+            "Metro route"
+          ],
+          "importantKeywords": [
+            "north",
+            "south",
+            "east",
+            "west",
+            "direction"
+          ],
+          "quickSummary": "Directions make routes clear.",
+          "revisionNotes": "Know the four main directions.; Right and left depend on facing direction.; Maps use direction signs.; Read instructions step by step."
+        },
+        {
+          "topic": "Maps",
+          "meaning": "A map is a drawing that shows places, routes, and locations from above.",
+          "ncertBasedExplanation": "The chapter uses route maps and location maps to help students find places and plan paths.",
+          "easyExplanation": "Maps help us go from one place to another.",
+          "examples": [
+            "Zoo map",
+            "Metro map",
+            "Room map"
+          ],
+          "importantKeywords": [
+            "map",
+            "route",
+            "location",
+            "station",
+            "landmark"
+          ],
+          "quickSummary": "Maps show where places are located.",
+          "revisionNotes": "Read symbols and labels.; Follow routes carefully.; Use direction words.; Compare different routes."
+        },
+        {
+          "topic": "Coordinates and grids",
+          "meaning": "Coordinates and grids use rows and columns to locate exact positions.",
+          "ncertBasedExplanation": "Students observe zoo maps on grids and find positions using numbered rows and columns.",
+          "easyExplanation": "A grid is like boxes on a map. Each box helps find a place.",
+          "examples": [
+            "Zoo grid",
+            "Anthill path",
+            "Seat location"
+          ],
+          "importantKeywords": [
+            "coordinate",
+            "grid",
+            "row",
+            "column",
+            "position"
+          ],
+          "quickSummary": "Grids help locate places accurately.",
+          "revisionNotes": "Identify row and column.; Mark exact position.; Follow allowed paths.; Use coordinates clearly."
+        }
+      ]
+    },
+    {
+      "class": 5,
+      "board": "CBSE",
+      "subject": "Maths",
+      "chapterNumber": 15,
+      "chapter": "Data Through Pictures",
+      "language": "English",
+      "source": "NCERT Class 5 textbook PDF uploaded by user",
+      "topics": [
+        {
+          "topic": "Pictographs",
+          "meaning": "A pictograph uses pictures or icons to show data.",
+          "ncertBasedExplanation": "NCERT introduces pictographs using shop items and traffic counts, where one icon may represent many items.",
+          "easyExplanation": "If one toy picture means 5 toys, three pictures mean 15 toys.",
+          "examples": [
+            "Toys pictograph",
+            "Board games count",
+            "Two-wheelers by day"
+          ],
+          "importantKeywords": [
+            "pictograph",
+            "icon",
+            "data",
+            "key",
+            "count"
+          ],
+          "quickSummary": "Pictographs show numbers using pictures.",
+          "revisionNotes": "Always read the key.; Count icons carefully.; Multiply by icon value.; Compare categories."
+        },
+        {
+          "topic": "Bar graphs",
+          "meaning": "A bar graph uses bars to compare data.",
+          "ncertBasedExplanation": "Students record routines and measurements, then make bar graphs to compare values.",
+          "easyExplanation": "Longer bars usually show larger numbers.",
+          "examples": [
+            "Hours spent on activities",
+            "Finger length graph",
+            "Food wastage data"
+          ],
+          "importantKeywords": [
+            "bar graph",
+            "data",
+            "axis",
+            "category",
+            "compare"
+          ],
+          "quickSummary": "Bar graphs make comparison easy.",
+          "revisionNotes": "Label axes.; Use equal scale.; Draw bars neatly.; Compare bar heights."
+        },
+        {
+          "topic": "Reading and interpreting data",
+          "meaning": "Interpreting data means understanding what the data tells us.",
+          "ncertBasedExplanation": "The chapter encourages students to answer questions, find most/least, totals, and think about real-life issues like food wastage.",
+          "easyExplanation": "Data helps us make decisions and understand situations better.",
+          "examples": [
+            "Most vehicles",
+            "Least time spent",
+            "Food wastage observation"
+          ],
+          "importantKeywords": [
+            "interpretation",
+            "most",
+            "least",
+            "total",
+            "true or false"
+          ],
+          "quickSummary": "Data is useful when we read it correctly.",
+          "revisionNotes": "Find the largest and smallest values.; Calculate totals when needed.; Check statements using data.; Use data to solve problems."
+        }
+      ]
+    }
+  ]
+}

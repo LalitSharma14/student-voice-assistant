@@ -1,0 +1,3482 @@
+[
+  {
+    "class": 5,
+    "board": "CBSE",
+    "subject": "Maths",
+    "book": {
+      "name": "NCERT",
+      "sourcePdf": "Class 5 uploaded NCERT PDF"
+    },
+    "chapterNumber": 1,
+    "chapter": "We the Travellers - I",
+    "topics": [
+      {
+        "topic": "Large Numbers and Place Value",
+        "meaning": "Reading and writing numbers beyond 10,000 using Indian place value system.",
+        "ncertBasedExplanation": "In NCERT Class 5 Maths chapter 'We the Travellers - I', learners explore this idea using pictures, activities, tables, questions and real-life situations. The chapter expects students to notice patterns, explain their thinking, and solve problems step by step instead of only memorising answers.",
+        "easyExplanation": "In this topic, do not memorise the answer. Understand the idea, take one small example, solve it step by step, and then check your answer using the meaning of the numbers or shapes.",
+        "stepByStepExplanation": [
+          {
+            "step": 1,
+            "title": "Look at the number carefully",
+            "explanation": "Take a number such as 13,520. Read it from left to right and notice how many digits it has."
+          },
+          {
+            "step": 2,
+            "title": "Write the place value chart",
+            "explanation": "Arrange the digits under Ten-thousands, Thousands, Hundreds, Tens and Ones. In 13,520: 1 is ten-thousands, 3 is thousands, 5 is hundreds, 2 is tens, and 0 is ones."
+          },
+          {
+            "step": 3,
+            "title": "Find each digit’s value",
+            "explanation": "The value of a digit depends on its place. So 1 means 10,000, 3 means 3,000, 5 means 500, 2 means 20, and 0 means 0."
+          },
+          {
+            "step": 4,
+            "title": "Write the expanded form",
+            "explanation": "Add all place values: 13,520 = 10,000 + 3,000 + 500 + 20 + 0."
+          },
+          {
+            "step": 5,
+            "title": "Read the number name",
+            "explanation": "After understanding place value, read the number as thirteen thousand five hundred twenty."
+          }
+        ],
+        "examples": [
+          "Use a number line, grid, clock, map or drawing before doing hard calculations.",
+          "Write units like cm, kg, litre or minutes with the answer.",
+          "Check whether your answer is bigger/smaller according to the question."
+        ],
+        "importantKeywords": [
+          {
+            "keyword": "digit",
+            "definition": "A symbol from 0 to 9 used to write numbers.",
+            "simpleExample": "In this topic, 'digit' helps you solve questions about large numbers and place value."
+          },
+          {
+            "keyword": "place value",
+            "definition": "The value of a digit according to its position in a number.",
+            "simpleExample": "In this topic, 'place value' helps you solve questions about large numbers and place value."
+          },
+          {
+            "keyword": "ten thousand",
+            "definition": "A place value equal to 10 groups of 1,000, written as 10,000.",
+            "simpleExample": "In this topic, 'ten thousand' helps you solve questions about large numbers and place value."
+          },
+          {
+            "keyword": "comma",
+            "definition": "A mark used in large numbers to make them easier to read.",
+            "simpleExample": "In this topic, 'comma' helps you solve questions about large numbers and place value."
+          },
+          {
+            "keyword": "expanded form",
+            "definition": "Writing a number as the sum of its place values.",
+            "simpleExample": "In this topic, 'expanded form' helps you solve questions about large numbers and place value."
+          }
+        ],
+        "quickSummary": "Large Numbers and Place Value helps students understand reading and writing numbers beyond 10,000 using indian place value system. through examples, activities and step-by-step problem solving.",
+        "revisionNotes": [
+          "Read the question carefully before solving.",
+          "Underline important numbers and units.",
+          "Use drawings or tables when possible.",
+          "Write the final answer with the correct unit.",
+          "Check the answer using estimation or reverse operation."
+        ]
+      },
+      {
+        "topic": "Comparing and Ordering Numbers",
+        "meaning": "Arranging numbers in increasing or decreasing order by comparing place values.",
+        "ncertBasedExplanation": "In NCERT Class 5 Maths chapter 'We the Travellers - I', learners explore this idea using pictures, activities, tables, questions and real-life situations. The chapter expects students to notice patterns, explain their thinking, and solve problems step by step instead of only memorising answers.",
+        "easyExplanation": "In this topic, do not memorise the answer. Understand the idea, take one small example, solve it step by step, and then check your answer using the meaning of the numbers or shapes.",
+        "stepByStepExplanation": [
+          {
+            "step": 1,
+            "title": "Count the digits first",
+            "explanation": "A number with more digits is usually greater. For example, 49,014 is greater than 9,990 because it has five digits while 9,990 has four digits."
+          },
+          {
+            "step": 2,
+            "title": "Compare from the leftmost digit",
+            "explanation": "If the numbers have the same number of digits, compare the first digit from the left. The number with the larger digit at the first different place is greater."
+          },
+          {
+            "step": 3,
+            "title": "Use place value, not only digit value",
+            "explanation": "A digit has value according to its position. 4 in ten-thousands place is greater than 9 in thousands place."
+          },
+          {
+            "step": 4,
+            "title": "Arrange in increasing or decreasing order",
+            "explanation": "Increasing order means smallest to largest. Decreasing order means largest to smallest."
+          },
+          {
+            "step": 5,
+            "title": "Check using a number line",
+            "explanation": "Numbers farther to the right on a number line are greater. This helps verify the order."
+          }
+        ],
+        "examples": [
+          "Use a number line, grid, clock, map or drawing before doing hard calculations.",
+          "Write units like cm, kg, litre or minutes with the answer.",
+          "Check whether your answer is bigger/smaller according to the question."
+        ],
+        "importantKeywords": [
+          {
+            "keyword": "greater than",
+            "definition": "A relation showing one number is bigger than another.",
+            "simpleExample": "In this topic, 'greater than' helps you solve questions about comparing and ordering numbers."
+          },
+          {
+            "keyword": "less than",
+            "definition": "A relation showing one number is smaller than another.",
+            "simpleExample": "In this topic, 'less than' helps you solve questions about comparing and ordering numbers."
+          },
+          {
+            "keyword": "increasing order",
+            "definition": "Arranging numbers from smallest to largest.",
+            "simpleExample": "In this topic, 'increasing order' helps you solve questions about comparing and ordering numbers."
+          },
+          {
+            "keyword": "decreasing order",
+            "definition": "Arranging numbers from largest to smallest.",
+            "simpleExample": "In this topic, 'decreasing order' helps you solve questions about comparing and ordering numbers."
+          },
+          {
+            "keyword": "number line",
+            "definition": "A line on which numbers are marked in order.",
+            "simpleExample": "In this topic, 'number line' helps you solve questions about comparing and ordering numbers."
+          }
+        ],
+        "quickSummary": "Comparing and Ordering Numbers helps students understand arranging numbers in increasing or decreasing order by comparing place values. through examples, activities and step-by-step problem solving.",
+        "revisionNotes": [
+          "Read the question carefully before solving.",
+          "Underline important numbers and units.",
+          "Use drawings or tables when possible.",
+          "Write the final answer with the correct unit.",
+          "Check the answer using estimation or reverse operation."
+        ]
+      },
+      {
+        "topic": "Rounding to Nearest Tens, Hundreds and Thousands",
+        "meaning": "Finding the closest ten, hundred or thousand to a number.",
+        "ncertBasedExplanation": "In NCERT Class 5 Maths chapter 'We the Travellers - I', learners explore this idea using pictures, activities, tables, questions and real-life situations. The chapter expects students to notice patterns, explain their thinking, and solve problems step by step instead of only memorising answers.",
+        "easyExplanation": "In this topic, do not memorise the answer. Understand the idea, take one small example, solve it step by step, and then check your answer using the meaning of the numbers or shapes.",
+        "stepByStepExplanation": [
+          {
+            "step": 1,
+            "title": "Decide what to round to",
+            "explanation": "First decide whether you need the nearest ten, nearest hundred, or nearest thousand."
+          },
+          {
+            "step": 2,
+            "title": "Find the two nearby choices",
+            "explanation": "For 2,346, the nearest tens are 2,340 and 2,350; the nearest hundreds are 2,300 and 2,400; the nearest thousands are 2,000 and 3,000."
+          },
+          {
+            "step": 3,
+            "title": "Check which is closer",
+            "explanation": "Compare the distance from the given number to both choices. 2,346 is 4 away from 2,350 and 6 away from 2,340, so nearest ten is 2,350."
+          },
+          {
+            "step": 4,
+            "title": "Use the 5 rule",
+            "explanation": "If the digit to the right is 5 or more, round up. If it is less than 5, round down."
+          },
+          {
+            "step": 5,
+            "title": "Write the rounded number",
+            "explanation": "After rounding, replace the smaller place digits with zero where needed, such as 2,346 rounded to nearest hundred = 2,300."
+          }
+        ],
+        "examples": [
+          "Use a number line, grid, clock, map or drawing before doing hard calculations.",
+          "Write units like cm, kg, litre or minutes with the answer.",
+          "Check whether your answer is bigger/smaller according to the question."
+        ],
+        "importantKeywords": [
+          {
+            "keyword": "rounding off",
+            "definition": "Changing a number to the nearest ten, hundred, thousand or other place for easy estimation.",
+            "simpleExample": "In this topic, 'rounding off' helps you solve questions about rounding to nearest tens, hundreds and thousands."
+          },
+          {
+            "keyword": "nearest ten",
+            "definition": "The multiple of 10 closest to a number.",
+            "simpleExample": "In this topic, 'nearest ten' helps you solve questions about rounding to nearest tens, hundreds and thousands."
+          },
+          {
+            "keyword": "nearest hundred",
+            "definition": "The multiple of 100 closest to a number.",
+            "simpleExample": "In this topic, 'nearest hundred' helps you solve questions about rounding to nearest tens, hundreds and thousands."
+          },
+          {
+            "keyword": "nearest thousand",
+            "definition": "The multiple of 1000 closest to a number.",
+            "simpleExample": "In this topic, 'nearest thousand' helps you solve questions about rounding to nearest tens, hundreds and thousands."
+          },
+          {
+            "keyword": "estimate",
+            "definition": "A close guess that is not exact but useful.",
+            "simpleExample": "In this topic, 'estimate' helps you solve questions about rounding to nearest tens, hundreds and thousands."
+          }
+        ],
+        "quickSummary": "Rounding to Nearest Tens, Hundreds and Thousands helps students understand finding the closest ten, hundred or thousand to a number. through examples, activities and step-by-step problem solving.",
+        "revisionNotes": [
+          "Read the question carefully before solving.",
+          "Underline important numbers and units.",
+          "Use drawings or tables when possible.",
+          "Write the final answer with the correct unit.",
+          "Check the answer using estimation or reverse operation."
+        ]
+      }
+    ]
+  },
+  {
+    "class": 5,
+    "board": "CBSE",
+    "subject": "Maths",
+    "book": {
+      "name": "NCERT",
+      "sourcePdf": "Class 5 uploaded NCERT PDF"
+    },
+    "chapterNumber": 2,
+    "chapter": "Fractions",
+    "topics": [
+      {
+        "topic": "Meaning of Fractions",
+        "meaning": "Understanding a fraction as equal parts of a whole.",
+        "ncertBasedExplanation": "In NCERT Class 5 Maths chapter 'Fractions', learners explore this idea using pictures, activities, tables, questions and real-life situations. The chapter expects students to notice patterns, explain their thinking, and solve problems step by step instead of only memorising answers.",
+        "easyExplanation": "In this topic, do not memorise the answer. Understand the idea, take one small example, solve it step by step, and then check your answer using the meaning of the numbers or shapes.",
+        "stepByStepExplanation": [
+          {
+            "step": 1,
+            "title": "Start with a whole",
+            "explanation": "A fraction is used when one whole thing or one group is divided into equal parts."
+          },
+          {
+            "step": 2,
+            "title": "Identify the denominator",
+            "explanation": "The denominator tells how many equal parts the whole is divided into. In 3/4, the denominator is 4."
+          },
+          {
+            "step": 3,
+            "title": "Identify the numerator",
+            "explanation": "The numerator tells how many parts are taken or shaded. In 3/4, the numerator is 3."
+          },
+          {
+            "step": 4,
+            "title": "Use pictures or objects",
+            "explanation": "Draw a circle, rectangle, strip, or group of objects and divide it equally. This makes the fraction easy to see."
+          },
+          {
+            "step": 5,
+            "title": "Compare or make equivalent fractions",
+            "explanation": "Fractions can be compared by using same-sized parts, number lines, or equivalent fractions."
+          }
+        ],
+        "examples": [
+          "Use a number line, grid, clock, map or drawing before doing hard calculations.",
+          "Write units like cm, kg, litre or minutes with the answer.",
+          "Check whether your answer is bigger/smaller according to the question."
+        ],
+        "importantKeywords": [
+          {
+            "keyword": "fraction",
+            "definition": "A number that shows part of a whole or part of a group.",
+            "simpleExample": "In this topic, 'fraction' helps you solve questions about meaning of fractions."
+          },
+          {
+            "keyword": "whole",
+            "definition": "One complete thing or complete group.",
+            "simpleExample": "In this topic, 'whole' helps you solve questions about meaning of fractions."
+          },
+          {
+            "keyword": "numerator",
+            "definition": "The top number in a fraction showing how many parts are taken.",
+            "simpleExample": "In this topic, 'numerator' helps you solve questions about meaning of fractions."
+          },
+          {
+            "keyword": "denominator",
+            "definition": "The bottom number in a fraction showing total equal parts.",
+            "simpleExample": "In this topic, 'denominator' helps you solve questions about meaning of fractions."
+          },
+          {
+            "keyword": "equal parts",
+            "definition": "Parts that are exactly the same size.",
+            "simpleExample": "In this topic, 'equal parts' helps you solve questions about meaning of fractions."
+          }
+        ],
+        "quickSummary": "Meaning of Fractions helps students understand understanding a fraction as equal parts of a whole. through examples, activities and step-by-step problem solving.",
+        "revisionNotes": [
+          "Read the question carefully before solving.",
+          "Underline important numbers and units.",
+          "Use drawings or tables when possible.",
+          "Write the final answer with the correct unit.",
+          "Check the answer using estimation or reverse operation."
+        ]
+      },
+      {
+        "topic": "Equivalent Fractions",
+        "meaning": "Fractions that look different but show the same value.",
+        "ncertBasedExplanation": "In NCERT Class 5 Maths chapter 'Fractions', learners explore this idea using pictures, activities, tables, questions and real-life situations. The chapter expects students to notice patterns, explain their thinking, and solve problems step by step instead of only memorising answers.",
+        "easyExplanation": "In this topic, do not memorise the answer. Understand the idea, take one small example, solve it step by step, and then check your answer using the meaning of the numbers or shapes.",
+        "stepByStepExplanation": [
+          {
+            "step": 1,
+            "title": "Start with a whole",
+            "explanation": "A fraction is used when one whole thing or one group is divided into equal parts."
+          },
+          {
+            "step": 2,
+            "title": "Identify the denominator",
+            "explanation": "The denominator tells how many equal parts the whole is divided into. In 3/4, the denominator is 4."
+          },
+          {
+            "step": 3,
+            "title": "Identify the numerator",
+            "explanation": "The numerator tells how many parts are taken or shaded. In 3/4, the numerator is 3."
+          },
+          {
+            "step": 4,
+            "title": "Use pictures or objects",
+            "explanation": "Draw a circle, rectangle, strip, or group of objects and divide it equally. This makes the fraction easy to see."
+          },
+          {
+            "step": 5,
+            "title": "Compare or make equivalent fractions",
+            "explanation": "Fractions can be compared by using same-sized parts, number lines, or equivalent fractions."
+          }
+        ],
+        "examples": [
+          "Use a number line, grid, clock, map or drawing before doing hard calculations.",
+          "Write units like cm, kg, litre or minutes with the answer.",
+          "Check whether your answer is bigger/smaller according to the question."
+        ],
+        "importantKeywords": [
+          {
+            "keyword": "equivalent fraction",
+            "definition": "Fractions that have the same value though they are written differently.",
+            "simpleExample": "In this topic, 'equivalent fraction' helps you solve questions about equivalent fractions."
+          },
+          {
+            "keyword": "one-half",
+            "definition": "One out of two equal parts, written as 1/2.",
+            "simpleExample": "In this topic, 'one-half' helps you solve questions about equivalent fractions."
+          },
+          {
+            "keyword": "one-third",
+            "definition": "One out of three equal parts, written as 1/3.",
+            "simpleExample": "In this topic, 'one-third' helps you solve questions about equivalent fractions."
+          },
+          {
+            "keyword": "fraction kit",
+            "definition": "A set of fraction pieces used to compare and make fractions.",
+            "simpleExample": "In this topic, 'fraction kit' helps you solve questions about equivalent fractions."
+          },
+          {
+            "keyword": "same value",
+            "definition": "Equal in amount even if written differently.",
+            "simpleExample": "In this topic, 'same value' helps you solve questions about equivalent fractions."
+          }
+        ],
+        "quickSummary": "Equivalent Fractions helps students understand fractions that look different but show the same value. through examples, activities and step-by-step problem solving.",
+        "revisionNotes": [
+          "Read the question carefully before solving.",
+          "Underline important numbers and units.",
+          "Use drawings or tables when possible.",
+          "Write the final answer with the correct unit.",
+          "Check the answer using estimation or reverse operation."
+        ]
+      },
+      {
+        "topic": "Comparing Fractions",
+        "meaning": "Finding which fraction is bigger or smaller by using equal wholes and fraction pieces.",
+        "ncertBasedExplanation": "In NCERT Class 5 Maths chapter 'Fractions', learners explore this idea using pictures, activities, tables, questions and real-life situations. The chapter expects students to notice patterns, explain their thinking, and solve problems step by step instead of only memorising answers.",
+        "easyExplanation": "In this topic, do not memorise the answer. Understand the idea, take one small example, solve it step by step, and then check your answer using the meaning of the numbers or shapes.",
+        "stepByStepExplanation": [
+          {
+            "step": 1,
+            "title": "Count the digits first",
+            "explanation": "A number with more digits is usually greater. For example, 49,014 is greater than 9,990 because it has five digits while 9,990 has four digits."
+          },
+          {
+            "step": 2,
+            "title": "Compare from the leftmost digit",
+            "explanation": "If the numbers have the same number of digits, compare the first digit from the left. The number with the larger digit at the first different place is greater."
+          },
+          {
+            "step": 3,
+            "title": "Use place value, not only digit value",
+            "explanation": "A digit has value according to its position. 4 in ten-thousands place is greater than 9 in thousands place."
+          },
+          {
+            "step": 4,
+            "title": "Arrange in increasing or decreasing order",
+            "explanation": "Increasing order means smallest to largest. Decreasing order means largest to smallest."
+          },
+          {
+            "step": 5,
+            "title": "Check using a number line",
+            "explanation": "Numbers farther to the right on a number line are greater. This helps verify the order."
+          }
+        ],
+        "examples": [
+          "Use a number line, grid, clock, map or drawing before doing hard calculations.",
+          "Write units like cm, kg, litre or minutes with the answer.",
+          "Check whether your answer is bigger/smaller according to the question."
+        ],
+        "importantKeywords": [
+          {
+            "keyword": "compare",
+            "definition": "To find how two things are similar, different, bigger or smaller.",
+            "simpleExample": "In this topic, 'compare' helps you solve questions about comparing fractions."
+          },
+          {
+            "keyword": "greater fraction",
+            "definition": "A fraction that represents a larger part of the same-sized whole.",
+            "simpleExample": "In this topic, 'greater fraction' helps you solve questions about comparing fractions."
+          },
+          {
+            "keyword": "smaller fraction",
+            "definition": "A fraction that represents a smaller part of the same-sized whole.",
+            "simpleExample": "In this topic, 'smaller fraction' helps you solve questions about comparing fractions."
+          },
+          {
+            "keyword": "unit fraction",
+            "definition": "A fraction with numerator 1.",
+            "simpleExample": "In this topic, 'unit fraction' helps you solve questions about comparing fractions."
+          },
+          {
+            "keyword": "same denominator",
+            "definition": "Fractions having the same bottom number.",
+            "simpleExample": "In this topic, 'same denominator' helps you solve questions about comparing fractions."
+          }
+        ],
+        "quickSummary": "Comparing Fractions helps students understand finding which fraction is bigger or smaller by using equal wholes and fraction pieces. through examples, activities and step-by-step problem solving.",
+        "revisionNotes": [
+          "Read the question carefully before solving.",
+          "Underline important numbers and units.",
+          "Use drawings or tables when possible.",
+          "Write the final answer with the correct unit.",
+          "Check the answer using estimation or reverse operation."
+        ]
+      }
+    ]
+  },
+  {
+    "class": 5,
+    "board": "CBSE",
+    "subject": "Maths",
+    "book": {
+      "name": "NCERT",
+      "sourcePdf": "Class 5 uploaded NCERT PDF"
+    },
+    "chapterNumber": 3,
+    "chapter": "Angles as Turns",
+    "topics": [
+      {
+        "topic": "Turns and Angles",
+        "meaning": "Understanding angles through quarter turn, half turn and full turn.",
+        "ncertBasedExplanation": "In NCERT Class 5 Maths chapter 'Angles as Turns', learners explore this idea using pictures, activities, tables, questions and real-life situations. The chapter expects students to notice patterns, explain their thinking, and solve problems step by step instead of only memorising answers.",
+        "easyExplanation": "In this topic, do not memorise the answer. Understand the idea, take one small example, solve it step by step, and then check your answer using the meaning of the numbers or shapes.",
+        "stepByStepExplanation": [
+          {
+            "step": 1,
+            "title": "Understand a turn",
+            "explanation": "An angle can be understood as the amount of turn. When you turn from one direction to another, you make an angle."
+          },
+          {
+            "step": 2,
+            "title": "Use daily examples",
+            "explanation": "Turning a door handle, rotating a clock hand, taking a left turn, or opening a book all show angles as turns."
+          },
+          {
+            "step": 3,
+            "title": "Know right angle",
+            "explanation": "A quarter turn makes a right angle. It is the angle seen at the corner of a square or rectangle."
+          },
+          {
+            "step": 4,
+            "title": "Compare turns",
+            "explanation": "A half turn is bigger than a quarter turn, and a full turn brings you back to the starting direction."
+          },
+          {
+            "step": 5,
+            "title": "Apply to maps and movement",
+            "explanation": "Directions like left, right, north, south, clockwise, and anticlockwise can be understood using turns."
+          }
+        ],
+        "examples": [
+          "Use a number line, grid, clock, map or drawing before doing hard calculations.",
+          "Write units like cm, kg, litre or minutes with the answer.",
+          "Check whether your answer is bigger/smaller according to the question."
+        ],
+        "importantKeywords": [
+          {
+            "keyword": "angle",
+            "definition": "The amount of turn between two arms meeting at a point.",
+            "simpleExample": "In this topic, 'angle' helps you solve questions about turns and angles."
+          },
+          {
+            "keyword": "turn",
+            "definition": "A change in direction.",
+            "simpleExample": "In this topic, 'turn' helps you solve questions about turns and angles."
+          },
+          {
+            "keyword": "quarter turn",
+            "definition": "One-fourth of a full turn.",
+            "simpleExample": "In this topic, 'quarter turn' helps you solve questions about turns and angles."
+          },
+          {
+            "keyword": "half turn",
+            "definition": "One-half of a full turn.",
+            "simpleExample": "In this topic, 'half turn' helps you solve questions about turns and angles."
+          },
+          {
+            "keyword": "full turn",
+            "definition": "One complete rotation that brings an object back to the starting direction.",
+            "simpleExample": "In this topic, 'full turn' helps you solve questions about turns and angles."
+          }
+        ],
+        "quickSummary": "Turns and Angles helps students understand understanding angles through quarter turn, half turn and full turn. through examples, activities and step-by-step problem solving.",
+        "revisionNotes": [
+          "Read the question carefully before solving.",
+          "Underline important numbers and units.",
+          "Use drawings or tables when possible.",
+          "Write the final answer with the correct unit.",
+          "Check the answer using estimation or reverse operation."
+        ]
+      },
+      {
+        "topic": "Right Angle and Direction Change",
+        "meaning": "Recognising right angle turns in movement and shapes.",
+        "ncertBasedExplanation": "In NCERT Class 5 Maths chapter 'Angles as Turns', learners explore this idea using pictures, activities, tables, questions and real-life situations. The chapter expects students to notice patterns, explain their thinking, and solve problems step by step instead of only memorising answers.",
+        "easyExplanation": "In this topic, do not memorise the answer. Understand the idea, take one small example, solve it step by step, and then check your answer using the meaning of the numbers or shapes.",
+        "stepByStepExplanation": [
+          {
+            "step": 1,
+            "title": "Understand a turn",
+            "explanation": "An angle can be understood as the amount of turn. When you turn from one direction to another, you make an angle."
+          },
+          {
+            "step": 2,
+            "title": "Use daily examples",
+            "explanation": "Turning a door handle, rotating a clock hand, taking a left turn, or opening a book all show angles as turns."
+          },
+          {
+            "step": 3,
+            "title": "Know right angle",
+            "explanation": "A quarter turn makes a right angle. It is the angle seen at the corner of a square or rectangle."
+          },
+          {
+            "step": 4,
+            "title": "Compare turns",
+            "explanation": "A half turn is bigger than a quarter turn, and a full turn brings you back to the starting direction."
+          },
+          {
+            "step": 5,
+            "title": "Apply to maps and movement",
+            "explanation": "Directions like left, right, north, south, clockwise, and anticlockwise can be understood using turns."
+          }
+        ],
+        "examples": [
+          "Use a number line, grid, clock, map or drawing before doing hard calculations.",
+          "Write units like cm, kg, litre or minutes with the answer.",
+          "Check whether your answer is bigger/smaller according to the question."
+        ],
+        "importantKeywords": [
+          {
+            "keyword": "right angle",
+            "definition": "An angle equal to a quarter turn, or 90 degrees.",
+            "simpleExample": "In this topic, 'right angle' helps you solve questions about right angle and direction change."
+          },
+          {
+            "keyword": "clockwise",
+            "definition": "Moving in the same direction as clock hands.",
+            "simpleExample": "In this topic, 'clockwise' helps you solve questions about right angle and direction change."
+          },
+          {
+            "keyword": "anticlockwise",
+            "definition": "Moving opposite to clock hands.",
+            "simpleExample": "In this topic, 'anticlockwise' helps you solve questions about right angle and direction change."
+          },
+          {
+            "keyword": "direction",
+            "definition": "The way in which something faces or moves.",
+            "simpleExample": "In this topic, 'direction' helps you solve questions about right angle and direction change."
+          },
+          {
+            "keyword": "corner",
+            "definition": "A point where two sides meet.",
+            "simpleExample": "In this topic, 'corner' helps you solve questions about right angle and direction change."
+          }
+        ],
+        "quickSummary": "Right Angle and Direction Change helps students understand recognising right angle turns in movement and shapes. through examples, activities and step-by-step problem solving.",
+        "revisionNotes": [
+          "Read the question carefully before solving.",
+          "Underline important numbers and units.",
+          "Use drawings or tables when possible.",
+          "Write the final answer with the correct unit.",
+          "Check the answer using estimation or reverse operation."
+        ]
+      },
+      {
+        "topic": "Measuring and Comparing Turns",
+        "meaning": "Comparing turns by observing how much rotation has happened.",
+        "ncertBasedExplanation": "In NCERT Class 5 Maths chapter 'Angles as Turns', learners explore this idea using pictures, activities, tables, questions and real-life situations. The chapter expects students to notice patterns, explain their thinking, and solve problems step by step instead of only memorising answers.",
+        "easyExplanation": "In this topic, do not memorise the answer. Understand the idea, take one small example, solve it step by step, and then check your answer using the meaning of the numbers or shapes.",
+        "stepByStepExplanation": [
+          {
+            "step": 1,
+            "title": "Count the digits first",
+            "explanation": "A number with more digits is usually greater. For example, 49,014 is greater than 9,990 because it has five digits while 9,990 has four digits."
+          },
+          {
+            "step": 2,
+            "title": "Compare from the leftmost digit",
+            "explanation": "If the numbers have the same number of digits, compare the first digit from the left. The number with the larger digit at the first different place is greater."
+          },
+          {
+            "step": 3,
+            "title": "Use place value, not only digit value",
+            "explanation": "A digit has value according to its position. 4 in ten-thousands place is greater than 9 in thousands place."
+          },
+          {
+            "step": 4,
+            "title": "Arrange in increasing or decreasing order",
+            "explanation": "Increasing order means smallest to largest. Decreasing order means largest to smallest."
+          },
+          {
+            "step": 5,
+            "title": "Check using a number line",
+            "explanation": "Numbers farther to the right on a number line are greater. This helps verify the order."
+          }
+        ],
+        "examples": [
+          "Use a number line, grid, clock, map or drawing before doing hard calculations.",
+          "Write units like cm, kg, litre or minutes with the answer.",
+          "Check whether your answer is bigger/smaller according to the question."
+        ],
+        "importantKeywords": [
+          {
+            "keyword": "rotation",
+            "definition": "Turning around a point.",
+            "simpleExample": "In this topic, 'rotation' helps you solve questions about measuring and comparing turns."
+          },
+          {
+            "keyword": "straight angle",
+            "definition": "An angle equal to a half turn, or 180 degrees.",
+            "simpleExample": "In this topic, 'straight angle' helps you solve questions about measuring and comparing turns."
+          },
+          {
+            "keyword": "small angle",
+            "definition": "An angle with a smaller amount of turn.",
+            "simpleExample": "In this topic, 'small angle' helps you solve questions about measuring and comparing turns."
+          },
+          {
+            "keyword": "large angle",
+            "definition": "An angle with a greater amount of turn.",
+            "simpleExample": "In this topic, 'large angle' helps you solve questions about measuring and comparing turns."
+          },
+          {
+            "keyword": "measure",
+            "definition": "To find the size or amount of something.",
+            "simpleExample": "In this topic, 'measure' helps you solve questions about measuring and comparing turns."
+          }
+        ],
+        "quickSummary": "Measuring and Comparing Turns helps students understand comparing turns by observing how much rotation has happened. through examples, activities and step-by-step problem solving.",
+        "revisionNotes": [
+          "Read the question carefully before solving.",
+          "Underline important numbers and units.",
+          "Use drawings or tables when possible.",
+          "Write the final answer with the correct unit.",
+          "Check the answer using estimation or reverse operation."
+        ]
+      }
+    ]
+  },
+  {
+    "class": 5,
+    "board": "CBSE",
+    "subject": "Maths",
+    "book": {
+      "name": "NCERT",
+      "sourcePdf": "Class 5 uploaded NCERT PDF"
+    },
+    "chapterNumber": 4,
+    "chapter": "We the Travellers - II",
+    "topics": [
+      {
+        "topic": "Distance and Travel",
+        "meaning": "Using kilometres and metres to understand travel and route distances.",
+        "ncertBasedExplanation": "In NCERT Class 5 Maths chapter 'We the Travellers - II', learners explore this idea using pictures, activities, tables, questions and real-life situations. The chapter expects students to notice patterns, explain their thinking, and solve problems step by step instead of only memorising answers.",
+        "easyExplanation": "In this topic, do not memorise the answer. Understand the idea, take one small example, solve it step by step, and then check your answer using the meaning of the numbers or shapes.",
+        "stepByStepExplanation": [
+          {
+            "step": 1,
+            "title": "Identify what is being measured",
+            "explanation": "First decide whether the question is about length, distance, weight, capacity, or location."
+          },
+          {
+            "step": 2,
+            "title": "Choose the correct unit",
+            "explanation": "Use cm or m for length, g or kg for weight, ml or L for capacity, and km for long distance."
+          },
+          {
+            "step": 3,
+            "title": "Compare with a known object",
+            "explanation": "Use daily objects to estimate. A pencil may be measured in cm, a road in km, milk in litres, and vegetables in kg."
+          },
+          {
+            "step": 4,
+            "title": "Convert if needed",
+            "explanation": "Sometimes you must convert units before solving, such as 1 kg = 1000 g or 1 L = 1000 ml."
+          },
+          {
+            "step": 5,
+            "title": "Solve and write the unit",
+            "explanation": "After calculation, always write the correct unit with the answer."
+          }
+        ],
+        "examples": [
+          "Use a number line, grid, clock, map or drawing before doing hard calculations.",
+          "Write units like cm, kg, litre or minutes with the answer.",
+          "Check whether your answer is bigger/smaller according to the question."
+        ],
+        "importantKeywords": [
+          {
+            "keyword": "distance",
+            "definition": "The length between two places.",
+            "simpleExample": "In this topic, 'distance' helps you solve questions about distance and travel."
+          },
+          {
+            "keyword": "kilometre",
+            "definition": "A unit of length used for long distances, equal to 1000 metres.",
+            "simpleExample": "In this topic, 'kilometre' helps you solve questions about distance and travel."
+          },
+          {
+            "keyword": "metre",
+            "definition": "A unit of length used to measure moderate distances.",
+            "simpleExample": "In this topic, 'metre' helps you solve questions about distance and travel."
+          },
+          {
+            "keyword": "route",
+            "definition": "A path from one place to another.",
+            "simpleExample": "In this topic, 'route' helps you solve questions about distance and travel."
+          },
+          {
+            "keyword": "journey",
+            "definition": "Travel from one place to another.",
+            "simpleExample": "In this topic, 'journey' helps you solve questions about distance and travel."
+          }
+        ],
+        "quickSummary": "Distance and Travel helps students understand using kilometres and metres to understand travel and route distances. through examples, activities and step-by-step problem solving.",
+        "revisionNotes": [
+          "Read the question carefully before solving.",
+          "Underline important numbers and units.",
+          "Use drawings or tables when possible.",
+          "Write the final answer with the correct unit.",
+          "Check the answer using estimation or reverse operation."
+        ]
+      },
+      {
+        "topic": "Speed in Daily Life",
+        "meaning": "Understanding how distance covered in a fixed time helps compare movement.",
+        "ncertBasedExplanation": "In NCERT Class 5 Maths chapter 'We the Travellers - II', learners explore this idea using pictures, activities, tables, questions and real-life situations. The chapter expects students to notice patterns, explain their thinking, and solve problems step by step instead of only memorising answers.",
+        "easyExplanation": "In this topic, do not memorise the answer. Understand the idea, take one small example, solve it step by step, and then check your answer using the meaning of the numbers or shapes.",
+        "stepByStepExplanation": [
+          {
+            "step": 1,
+            "title": "Understand the concept",
+            "explanation": "Understanding how distance covered in a fixed time helps compare movement."
+          },
+          {
+            "step": 2,
+            "title": "Take one simple example",
+            "explanation": "Use small numbers, a drawing, or daily life objects so the idea becomes visible."
+          },
+          {
+            "step": 3,
+            "title": "Write the mathematical information",
+            "explanation": "Write the numbers, units, shapes, or clues given in the question in an organised way."
+          },
+          {
+            "step": 4,
+            "title": "Solve slowly",
+            "explanation": "Apply the rule one step at a time and do not skip calculation steps."
+          },
+          {
+            "step": 5,
+            "title": "Explain and verify",
+            "explanation": "Write the final answer with units if needed, and check whether it is reasonable."
+          }
+        ],
+        "examples": [
+          "Use a number line, grid, clock, map or drawing before doing hard calculations.",
+          "Write units like cm, kg, litre or minutes with the answer.",
+          "Check whether your answer is bigger/smaller according to the question."
+        ],
+        "importantKeywords": [
+          {
+            "keyword": "speed",
+            "definition": "How fast something moves; distance covered in a fixed time.",
+            "simpleExample": "In this topic, 'speed' helps you solve questions about speed in daily life."
+          },
+          {
+            "keyword": "hour",
+            "definition": "A unit of time equal to 60 minutes.",
+            "simpleExample": "In this topic, 'hour' helps you solve questions about speed in daily life."
+          },
+          {
+            "keyword": "per hour",
+            "definition": "For each hour.",
+            "simpleExample": "In this topic, 'per hour' helps you solve questions about speed in daily life."
+          },
+          {
+            "keyword": "vehicle",
+            "definition": "A machine or means used for transport.",
+            "simpleExample": "In this topic, 'vehicle' helps you solve questions about speed in daily life."
+          },
+          {
+            "keyword": "travel time",
+            "definition": "The time taken to complete a journey.",
+            "simpleExample": "In this topic, 'travel time' helps you solve questions about speed in daily life."
+          }
+        ],
+        "quickSummary": "Speed in Daily Life helps students understand understanding how distance covered in a fixed time helps compare movement. through examples, activities and step-by-step problem solving.",
+        "revisionNotes": [
+          "Read the question carefully before solving.",
+          "Underline important numbers and units.",
+          "Use drawings or tables when possible.",
+          "Write the final answer with the correct unit.",
+          "Check the answer using estimation or reverse operation."
+        ]
+      },
+      {
+        "topic": "Word Problems in Travel",
+        "meaning": "Solving travel problems by reading data and choosing the correct operation.",
+        "ncertBasedExplanation": "In NCERT Class 5 Maths chapter 'We the Travellers - II', learners explore this idea using pictures, activities, tables, questions and real-life situations. The chapter expects students to notice patterns, explain their thinking, and solve problems step by step instead of only memorising answers.",
+        "easyExplanation": "In this topic, do not memorise the answer. Understand the idea, take one small example, solve it step by step, and then check your answer using the meaning of the numbers or shapes.",
+        "stepByStepExplanation": [
+          {
+            "step": 1,
+            "title": "Understand the concept",
+            "explanation": "Solving travel problems by reading data and choosing the correct operation."
+          },
+          {
+            "step": 2,
+            "title": "Take one simple example",
+            "explanation": "Use small numbers, a drawing, or daily life objects so the idea becomes visible."
+          },
+          {
+            "step": 3,
+            "title": "Write the mathematical information",
+            "explanation": "Write the numbers, units, shapes, or clues given in the question in an organised way."
+          },
+          {
+            "step": 4,
+            "title": "Solve slowly",
+            "explanation": "Apply the rule one step at a time and do not skip calculation steps."
+          },
+          {
+            "step": 5,
+            "title": "Explain and verify",
+            "explanation": "Write the final answer with units if needed, and check whether it is reasonable."
+          }
+        ],
+        "examples": [
+          "Use a number line, grid, clock, map or drawing before doing hard calculations.",
+          "Write units like cm, kg, litre or minutes with the answer.",
+          "Check whether your answer is bigger/smaller according to the question."
+        ],
+        "importantKeywords": [
+          {
+            "keyword": "word problem",
+            "definition": "A maths question written in sentences.",
+            "simpleExample": "In this topic, 'word problem' helps you solve questions about word problems in travel."
+          },
+          {
+            "keyword": "operation",
+            "definition": "A mathematical action such as addition, subtraction, multiplication or division.",
+            "simpleExample": "In this topic, 'operation' helps you solve questions about word problems in travel."
+          },
+          {
+            "keyword": "total",
+            "definition": "The complete amount after adding.",
+            "simpleExample": "In this topic, 'total' helps you solve questions about word problems in travel."
+          },
+          {
+            "keyword": "difference",
+            "definition": "The amount by which one number is more or less than another.",
+            "simpleExample": "In this topic, 'difference' helps you solve questions about word problems in travel."
+          },
+          {
+            "keyword": "strategy",
+            "definition": "A method used to solve a problem.",
+            "simpleExample": "In this topic, 'strategy' helps you solve questions about word problems in travel."
+          }
+        ],
+        "quickSummary": "Word Problems in Travel helps students understand solving travel problems by reading data and choosing the correct operation. through examples, activities and step-by-step problem solving.",
+        "revisionNotes": [
+          "Read the question carefully before solving.",
+          "Underline important numbers and units.",
+          "Use drawings or tables when possible.",
+          "Write the final answer with the correct unit.",
+          "Check the answer using estimation or reverse operation."
+        ]
+      }
+    ]
+  },
+  {
+    "class": 5,
+    "board": "CBSE",
+    "subject": "Maths",
+    "book": {
+      "name": "NCERT",
+      "sourcePdf": "Class 5 uploaded NCERT PDF"
+    },
+    "chapterNumber": 5,
+    "chapter": "Far and Near",
+    "topics": [
+      {
+        "topic": "Measurement of Length",
+        "meaning": "Measuring short and long lengths using suitable units.",
+        "ncertBasedExplanation": "In NCERT Class 5 Maths chapter 'Far and Near', learners explore this idea using pictures, activities, tables, questions and real-life situations. The chapter expects students to notice patterns, explain their thinking, and solve problems step by step instead of only memorising answers.",
+        "easyExplanation": "In this topic, do not memorise the answer. Understand the idea, take one small example, solve it step by step, and then check your answer using the meaning of the numbers or shapes.",
+        "stepByStepExplanation": [
+          {
+            "step": 1,
+            "title": "Identify what is being measured",
+            "explanation": "First decide whether the question is about length, distance, weight, capacity, or location."
+          },
+          {
+            "step": 2,
+            "title": "Choose the correct unit",
+            "explanation": "Use cm or m for length, g or kg for weight, ml or L for capacity, and km for long distance."
+          },
+          {
+            "step": 3,
+            "title": "Compare with a known object",
+            "explanation": "Use daily objects to estimate. A pencil may be measured in cm, a road in km, milk in litres, and vegetables in kg."
+          },
+          {
+            "step": 4,
+            "title": "Convert if needed",
+            "explanation": "Sometimes you must convert units before solving, such as 1 kg = 1000 g or 1 L = 1000 ml."
+          },
+          {
+            "step": 5,
+            "title": "Solve and write the unit",
+            "explanation": "After calculation, always write the correct unit with the answer."
+          }
+        ],
+        "examples": [
+          "Use a number line, grid, clock, map or drawing before doing hard calculations.",
+          "Write units like cm, kg, litre or minutes with the answer.",
+          "Check whether your answer is bigger/smaller according to the question."
+        ],
+        "importantKeywords": [
+          {
+            "keyword": "length",
+            "definition": "Measurement of how long something is.",
+            "simpleExample": "In this topic, 'length' helps you solve questions about measurement of length."
+          },
+          {
+            "keyword": "centimetre",
+            "definition": "A small unit of length.",
+            "simpleExample": "In this topic, 'centimetre' helps you solve questions about measurement of length."
+          },
+          {
+            "keyword": "metre",
+            "definition": "A unit of length used to measure moderate distances.",
+            "simpleExample": "In this topic, 'metre' helps you solve questions about measurement of length."
+          },
+          {
+            "keyword": "kilometre",
+            "definition": "A unit of length used for long distances, equal to 1000 metres.",
+            "simpleExample": "In this topic, 'kilometre' helps you solve questions about measurement of length."
+          },
+          {
+            "keyword": "scale",
+            "definition": "A measuring tool or a ratio used on maps.",
+            "simpleExample": "In this topic, 'scale' helps you solve questions about measurement of length."
+          }
+        ],
+        "quickSummary": "Measurement of Length helps students understand measuring short and long lengths using suitable units. through examples, activities and step-by-step problem solving.",
+        "revisionNotes": [
+          "Read the question carefully before solving.",
+          "Underline important numbers and units.",
+          "Use drawings or tables when possible.",
+          "Write the final answer with the correct unit.",
+          "Check the answer using estimation or reverse operation."
+        ]
+      },
+      {
+        "topic": "Near and Far Objects",
+        "meaning": "Comparing distances using observation and measurement.",
+        "ncertBasedExplanation": "In NCERT Class 5 Maths chapter 'Far and Near', learners explore this idea using pictures, activities, tables, questions and real-life situations. The chapter expects students to notice patterns, explain their thinking, and solve problems step by step instead of only memorising answers.",
+        "easyExplanation": "In this topic, do not memorise the answer. Understand the idea, take one small example, solve it step by step, and then check your answer using the meaning of the numbers or shapes.",
+        "stepByStepExplanation": [
+          {
+            "step": 1,
+            "title": "Understand the concept",
+            "explanation": "Comparing distances using observation and measurement."
+          },
+          {
+            "step": 2,
+            "title": "Take one simple example",
+            "explanation": "Use small numbers, a drawing, or daily life objects so the idea becomes visible."
+          },
+          {
+            "step": 3,
+            "title": "Write the mathematical information",
+            "explanation": "Write the numbers, units, shapes, or clues given in the question in an organised way."
+          },
+          {
+            "step": 4,
+            "title": "Solve slowly",
+            "explanation": "Apply the rule one step at a time and do not skip calculation steps."
+          },
+          {
+            "step": 5,
+            "title": "Explain and verify",
+            "explanation": "Write the final answer with units if needed, and check whether it is reasonable."
+          }
+        ],
+        "examples": [
+          "Use a number line, grid, clock, map or drawing before doing hard calculations.",
+          "Write units like cm, kg, litre or minutes with the answer.",
+          "Check whether your answer is bigger/smaller according to the question."
+        ],
+        "importantKeywords": [
+          {
+            "keyword": "near",
+            "definition": "At a short distance.",
+            "simpleExample": "In this topic, 'near' helps you solve questions about near and far objects."
+          },
+          {
+            "keyword": "far",
+            "definition": "At a long distance.",
+            "simpleExample": "In this topic, 'far' helps you solve questions about near and far objects."
+          },
+          {
+            "keyword": "estimate",
+            "definition": "A close guess that is not exact but useful.",
+            "simpleExample": "In this topic, 'estimate' helps you solve questions about near and far objects."
+          },
+          {
+            "keyword": "actual measurement",
+            "definition": "The real measurement found using a tool.",
+            "simpleExample": "In this topic, 'actual measurement' helps you solve questions about near and far objects."
+          },
+          {
+            "keyword": "unit",
+            "definition": "A standard amount used for measurement.",
+            "simpleExample": "In this topic, 'unit' helps you solve questions about near and far objects."
+          }
+        ],
+        "quickSummary": "Near and Far Objects helps students understand comparing distances using observation and measurement. through examples, activities and step-by-step problem solving.",
+        "revisionNotes": [
+          "Read the question carefully before solving.",
+          "Underline important numbers and units.",
+          "Use drawings or tables when possible.",
+          "Write the final answer with the correct unit.",
+          "Check the answer using estimation or reverse operation."
+        ]
+      },
+      {
+        "topic": "Maps and Scale Idea",
+        "meaning": "Understanding how drawings can show real distances in a small space.",
+        "ncertBasedExplanation": "In NCERT Class 5 Maths chapter 'Far and Near', learners explore this idea using pictures, activities, tables, questions and real-life situations. The chapter expects students to notice patterns, explain their thinking, and solve problems step by step instead of only memorising answers.",
+        "easyExplanation": "In this topic, do not memorise the answer. Understand the idea, take one small example, solve it step by step, and then check your answer using the meaning of the numbers or shapes.",
+        "stepByStepExplanation": [
+          {
+            "step": 1,
+            "title": "Identify what is being measured",
+            "explanation": "First decide whether the question is about length, distance, weight, capacity, or location."
+          },
+          {
+            "step": 2,
+            "title": "Choose the correct unit",
+            "explanation": "Use cm or m for length, g or kg for weight, ml or L for capacity, and km for long distance."
+          },
+          {
+            "step": 3,
+            "title": "Compare with a known object",
+            "explanation": "Use daily objects to estimate. A pencil may be measured in cm, a road in km, milk in litres, and vegetables in kg."
+          },
+          {
+            "step": 4,
+            "title": "Convert if needed",
+            "explanation": "Sometimes you must convert units before solving, such as 1 kg = 1000 g or 1 L = 1000 ml."
+          },
+          {
+            "step": 5,
+            "title": "Solve and write the unit",
+            "explanation": "After calculation, always write the correct unit with the answer."
+          }
+        ],
+        "examples": [
+          "Use a number line, grid, clock, map or drawing before doing hard calculations.",
+          "Write units like cm, kg, litre or minutes with the answer.",
+          "Check whether your answer is bigger/smaller according to the question."
+        ],
+        "importantKeywords": [
+          {
+            "keyword": "map",
+            "definition": "A drawing showing places and routes.",
+            "simpleExample": "In this topic, 'map' helps you solve questions about maps and scale idea."
+          },
+          {
+            "keyword": "scale",
+            "definition": "A measuring tool or a ratio used on maps.",
+            "simpleExample": "In this topic, 'scale' helps you solve questions about maps and scale idea."
+          },
+          {
+            "keyword": "symbol",
+            "definition": "A sign that represents something on a map or chart.",
+            "simpleExample": "In this topic, 'symbol' helps you solve questions about maps and scale idea."
+          },
+          {
+            "keyword": "direction",
+            "definition": "The way in which something faces or moves.",
+            "simpleExample": "In this topic, 'direction' helps you solve questions about maps and scale idea."
+          },
+          {
+            "keyword": "location",
+            "definition": "The position of a place or object.",
+            "simpleExample": "In this topic, 'location' helps you solve questions about maps and scale idea."
+          }
+        ],
+        "quickSummary": "Maps and Scale Idea helps students understand understanding how drawings can show real distances in a small space. through examples, activities and step-by-step problem solving.",
+        "revisionNotes": [
+          "Read the question carefully before solving.",
+          "Underline important numbers and units.",
+          "Use drawings or tables when possible.",
+          "Write the final answer with the correct unit.",
+          "Check the answer using estimation or reverse operation."
+        ]
+      }
+    ]
+  },
+  {
+    "class": 5,
+    "board": "CBSE",
+    "subject": "Maths",
+    "book": {
+      "name": "NCERT",
+      "sourcePdf": "Class 5 uploaded NCERT PDF"
+    },
+    "chapterNumber": 6,
+    "chapter": "The Dairy Farm",
+    "topics": [
+      {
+        "topic": "Multiplication in Equal Groups",
+        "meaning": "Using repeated equal groups to multiply.",
+        "ncertBasedExplanation": "In NCERT Class 5 Maths chapter 'The Dairy Farm', learners explore this idea using pictures, activities, tables, questions and real-life situations. The chapter expects students to notice patterns, explain their thinking, and solve problems step by step instead of only memorising answers.",
+        "easyExplanation": "In this topic, do not memorise the answer. Understand the idea, take one small example, solve it step by step, and then check your answer using the meaning of the numbers or shapes.",
+        "stepByStepExplanation": [
+          {
+            "step": 1,
+            "title": "Understand the situation",
+            "explanation": "Find out whether the question is about equal groups, sharing, repeated addition, repeated subtraction, or number jumps."
+          },
+          {
+            "step": 2,
+            "title": "Choose multiplication or division",
+            "explanation": "Use multiplication when equal groups are joined. Use division when something is shared equally or split into groups."
+          },
+          {
+            "step": 3,
+            "title": "Write the number sentence",
+            "explanation": "Convert the story into a maths sentence, such as 6 groups of 8 = 6 × 8, or 48 shared among 6 = 48 ÷ 6."
+          },
+          {
+            "step": 4,
+            "title": "Solve using a clear method",
+            "explanation": "You may use tables, repeated addition, repeated subtraction, arrays, or long division depending on the question."
+          },
+          {
+            "step": 5,
+            "title": "Check with reverse operation",
+            "explanation": "Check multiplication using division and division using multiplication. This helps catch mistakes."
+          }
+        ],
+        "examples": [
+          "Use a number line, grid, clock, map or drawing before doing hard calculations.",
+          "Write units like cm, kg, litre or minutes with the answer.",
+          "Check whether your answer is bigger/smaller according to the question."
+        ],
+        "importantKeywords": [
+          {
+            "keyword": "multiplication",
+            "definition": "Repeated addition of equal groups.",
+            "simpleExample": "In this topic, 'multiplication' helps you solve questions about multiplication in equal groups."
+          },
+          {
+            "keyword": "equal groups",
+            "definition": "Groups having the same number of objects.",
+            "simpleExample": "In this topic, 'equal groups' helps you solve questions about multiplication in equal groups."
+          },
+          {
+            "keyword": "product",
+            "definition": "The answer in multiplication.",
+            "simpleExample": "In this topic, 'product' helps you solve questions about multiplication in equal groups."
+          },
+          {
+            "keyword": "times",
+            "definition": "A word showing multiplication.",
+            "simpleExample": "In this topic, 'times' helps you solve questions about multiplication in equal groups."
+          },
+          {
+            "keyword": "array",
+            "definition": "Objects arranged in rows and columns.",
+            "simpleExample": "In this topic, 'array' helps you solve questions about multiplication in equal groups."
+          }
+        ],
+        "quickSummary": "Multiplication in Equal Groups helps students understand using repeated equal groups to multiply. through examples, activities and step-by-step problem solving.",
+        "revisionNotes": [
+          "Read the question carefully before solving.",
+          "Underline important numbers and units.",
+          "Use drawings or tables when possible.",
+          "Write the final answer with the correct unit.",
+          "Check the answer using estimation or reverse operation."
+        ]
+      },
+      {
+        "topic": "Division as Sharing and Grouping",
+        "meaning": "Dividing quantities into equal parts or equal groups.",
+        "ncertBasedExplanation": "In NCERT Class 5 Maths chapter 'The Dairy Farm', learners explore this idea using pictures, activities, tables, questions and real-life situations. The chapter expects students to notice patterns, explain their thinking, and solve problems step by step instead of only memorising answers.",
+        "easyExplanation": "In this topic, do not memorise the answer. Understand the idea, take one small example, solve it step by step, and then check your answer using the meaning of the numbers or shapes.",
+        "stepByStepExplanation": [
+          {
+            "step": 1,
+            "title": "Understand the situation",
+            "explanation": "Find out whether the question is about equal groups, sharing, repeated addition, repeated subtraction, or number jumps."
+          },
+          {
+            "step": 2,
+            "title": "Choose multiplication or division",
+            "explanation": "Use multiplication when equal groups are joined. Use division when something is shared equally or split into groups."
+          },
+          {
+            "step": 3,
+            "title": "Write the number sentence",
+            "explanation": "Convert the story into a maths sentence, such as 6 groups of 8 = 6 × 8, or 48 shared among 6 = 48 ÷ 6."
+          },
+          {
+            "step": 4,
+            "title": "Solve using a clear method",
+            "explanation": "You may use tables, repeated addition, repeated subtraction, arrays, or long division depending on the question."
+          },
+          {
+            "step": 5,
+            "title": "Check with reverse operation",
+            "explanation": "Check multiplication using division and division using multiplication. This helps catch mistakes."
+          }
+        ],
+        "examples": [
+          "Use a number line, grid, clock, map or drawing before doing hard calculations.",
+          "Write units like cm, kg, litre or minutes with the answer.",
+          "Check whether your answer is bigger/smaller according to the question."
+        ],
+        "importantKeywords": [
+          {
+            "keyword": "division",
+            "definition": "Splitting into equal parts or groups.",
+            "simpleExample": "In this topic, 'division' helps you solve questions about division as sharing and grouping."
+          },
+          {
+            "keyword": "quotient",
+            "definition": "The answer in division.",
+            "simpleExample": "In this topic, 'quotient' helps you solve questions about division as sharing and grouping."
+          },
+          {
+            "keyword": "remainder",
+            "definition": "The amount left after division when equal grouping is not exact.",
+            "simpleExample": "In this topic, 'remainder' helps you solve questions about division as sharing and grouping."
+          },
+          {
+            "keyword": "sharing",
+            "definition": "Dividing equally among people or groups.",
+            "simpleExample": "In this topic, 'sharing' helps you solve questions about division as sharing and grouping."
+          },
+          {
+            "keyword": "grouping",
+            "definition": "Making equal groups from a quantity.",
+            "simpleExample": "In this topic, 'grouping' helps you solve questions about division as sharing and grouping."
+          }
+        ],
+        "quickSummary": "Division as Sharing and Grouping helps students understand dividing quantities into equal parts or equal groups. through examples, activities and step-by-step problem solving.",
+        "revisionNotes": [
+          "Read the question carefully before solving.",
+          "Underline important numbers and units.",
+          "Use drawings or tables when possible.",
+          "Write the final answer with the correct unit.",
+          "Check the answer using estimation or reverse operation."
+        ]
+      },
+      {
+        "topic": "Milk, Money and Quantity Problems",
+        "meaning": "Solving problems involving dairy quantities and cost.",
+        "ncertBasedExplanation": "In NCERT Class 5 Maths chapter 'The Dairy Farm', learners explore this idea using pictures, activities, tables, questions and real-life situations. The chapter expects students to notice patterns, explain their thinking, and solve problems step by step instead of only memorising answers.",
+        "easyExplanation": "In this topic, do not memorise the answer. Understand the idea, take one small example, solve it step by step, and then check your answer using the meaning of the numbers or shapes.",
+        "stepByStepExplanation": [
+          {
+            "step": 1,
+            "title": "Understand the situation",
+            "explanation": "Find out whether the question is about equal groups, sharing, repeated addition, repeated subtraction, or number jumps."
+          },
+          {
+            "step": 2,
+            "title": "Choose multiplication or division",
+            "explanation": "Use multiplication when equal groups are joined. Use division when something is shared equally or split into groups."
+          },
+          {
+            "step": 3,
+            "title": "Write the number sentence",
+            "explanation": "Convert the story into a maths sentence, such as 6 groups of 8 = 6 × 8, or 48 shared among 6 = 48 ÷ 6."
+          },
+          {
+            "step": 4,
+            "title": "Solve using a clear method",
+            "explanation": "You may use tables, repeated addition, repeated subtraction, arrays, or long division depending on the question."
+          },
+          {
+            "step": 5,
+            "title": "Check with reverse operation",
+            "explanation": "Check multiplication using division and division using multiplication. This helps catch mistakes."
+          }
+        ],
+        "examples": [
+          "Use a number line, grid, clock, map or drawing before doing hard calculations.",
+          "Write units like cm, kg, litre or minutes with the answer.",
+          "Check whether your answer is bigger/smaller according to the question."
+        ],
+        "importantKeywords": [
+          {
+            "keyword": "litre",
+            "definition": "A unit used to measure liquid capacity.",
+            "simpleExample": "In this topic, 'litre' helps you solve questions about milk, money and quantity problems."
+          },
+          {
+            "keyword": "cost",
+            "definition": "The money needed to buy something.",
+            "simpleExample": "In this topic, 'cost' helps you solve questions about milk, money and quantity problems."
+          },
+          {
+            "keyword": "rate",
+            "definition": "Cost or quantity for one unit.",
+            "simpleExample": "In this topic, 'rate' helps you solve questions about milk, money and quantity problems."
+          },
+          {
+            "keyword": "total amount",
+            "definition": "The full money or quantity calculated.",
+            "simpleExample": "In this topic, 'total amount' helps you solve questions about milk, money and quantity problems."
+          },
+          {
+            "keyword": "calculation",
+            "definition": "Working with numbers to find an answer.",
+            "simpleExample": "In this topic, 'calculation' helps you solve questions about milk, money and quantity problems."
+          }
+        ],
+        "quickSummary": "Milk, Money and Quantity Problems helps students understand solving problems involving dairy quantities and cost. through examples, activities and step-by-step problem solving.",
+        "revisionNotes": [
+          "Read the question carefully before solving.",
+          "Underline important numbers and units.",
+          "Use drawings or tables when possible.",
+          "Write the final answer with the correct unit.",
+          "Check the answer using estimation or reverse operation."
+        ]
+      }
+    ]
+  },
+  {
+    "class": 5,
+    "board": "CBSE",
+    "subject": "Maths",
+    "book": {
+      "name": "NCERT",
+      "sourcePdf": "Class 5 uploaded NCERT PDF"
+    },
+    "chapterNumber": 7,
+    "chapter": "Shapes and Patterns",
+    "topics": [
+      {
+        "topic": "2D Shapes and Properties",
+        "meaning": "Recognising shapes by sides, corners and patterns.",
+        "ncertBasedExplanation": "In NCERT Class 5 Maths chapter 'Shapes and Patterns', learners explore this idea using pictures, activities, tables, questions and real-life situations. The chapter expects students to notice patterns, explain their thinking, and solve problems step by step instead of only memorising answers.",
+        "easyExplanation": "In this topic, do not memorise the answer. Understand the idea, take one small example, solve it step by step, and then check your answer using the meaning of the numbers or shapes.",
+        "stepByStepExplanation": [
+          {
+            "step": 1,
+            "title": "Observe the shape or design",
+            "explanation": "Look carefully at the lines, corners, repeated parts, and direction of the design."
+          },
+          {
+            "step": 2,
+            "title": "Find repeated parts",
+            "explanation": "A pattern is made when a shape, colour, number, or design repeats in a fixed way."
+          },
+          {
+            "step": 3,
+            "title": "Check symmetry",
+            "explanation": "A design has symmetry if one part matches another part after folding, reflection, or rotation."
+          },
+          {
+            "step": 4,
+            "title": "Continue the pattern",
+            "explanation": "To continue a pattern, first find the rule, then repeat the same rule for the next steps."
+          },
+          {
+            "step": 5,
+            "title": "Create your own design",
+            "explanation": "After understanding the rule, make a new pattern using shapes, blocks, tiles, or drawings."
+          }
+        ],
+        "examples": [
+          "Use a number line, grid, clock, map or drawing before doing hard calculations.",
+          "Write units like cm, kg, litre or minutes with the answer.",
+          "Check whether your answer is bigger/smaller according to the question."
+        ],
+        "importantKeywords": [
+          {
+            "keyword": "shape",
+            "definition": "A form or outline of an object.",
+            "simpleExample": "In this topic, 'shape' helps you solve questions about 2d shapes and properties."
+          },
+          {
+            "keyword": "side",
+            "definition": "A straight boundary of a shape.",
+            "simpleExample": "In this topic, 'side' helps you solve questions about 2d shapes and properties."
+          },
+          {
+            "keyword": "corner",
+            "definition": "A point where two sides meet.",
+            "simpleExample": "In this topic, 'corner' helps you solve questions about 2d shapes and properties."
+          },
+          {
+            "keyword": "polygon",
+            "definition": "A closed shape made of straight sides.",
+            "simpleExample": "In this topic, 'polygon' helps you solve questions about 2d shapes and properties."
+          },
+          {
+            "keyword": "rectangle",
+            "definition": "A four-sided shape with opposite sides equal and all corners right angles.",
+            "simpleExample": "In this topic, 'rectangle' helps you solve questions about 2d shapes and properties."
+          }
+        ],
+        "quickSummary": "2D Shapes and Properties helps students understand recognising shapes by sides, corners and patterns. through examples, activities and step-by-step problem solving.",
+        "revisionNotes": [
+          "Read the question carefully before solving.",
+          "Underline important numbers and units.",
+          "Use drawings or tables when possible.",
+          "Write the final answer with the correct unit.",
+          "Check the answer using estimation or reverse operation."
+        ]
+      },
+      {
+        "topic": "Growing and Repeating Patterns",
+        "meaning": "Finding the rule behind a pattern and continuing it.",
+        "ncertBasedExplanation": "In NCERT Class 5 Maths chapter 'Shapes and Patterns', learners explore this idea using pictures, activities, tables, questions and real-life situations. The chapter expects students to notice patterns, explain their thinking, and solve problems step by step instead of only memorising answers.",
+        "easyExplanation": "In this topic, do not memorise the answer. Understand the idea, take one small example, solve it step by step, and then check your answer using the meaning of the numbers or shapes.",
+        "stepByStepExplanation": [
+          {
+            "step": 1,
+            "title": "Observe the shape or design",
+            "explanation": "Look carefully at the lines, corners, repeated parts, and direction of the design."
+          },
+          {
+            "step": 2,
+            "title": "Find repeated parts",
+            "explanation": "A pattern is made when a shape, colour, number, or design repeats in a fixed way."
+          },
+          {
+            "step": 3,
+            "title": "Check symmetry",
+            "explanation": "A design has symmetry if one part matches another part after folding, reflection, or rotation."
+          },
+          {
+            "step": 4,
+            "title": "Continue the pattern",
+            "explanation": "To continue a pattern, first find the rule, then repeat the same rule for the next steps."
+          },
+          {
+            "step": 5,
+            "title": "Create your own design",
+            "explanation": "After understanding the rule, make a new pattern using shapes, blocks, tiles, or drawings."
+          }
+        ],
+        "examples": [
+          "Use a number line, grid, clock, map or drawing before doing hard calculations.",
+          "Write units like cm, kg, litre or minutes with the answer.",
+          "Check whether your answer is bigger/smaller according to the question."
+        ],
+        "importantKeywords": [
+          {
+            "keyword": "pattern",
+            "definition": "An arrangement that follows a rule.",
+            "simpleExample": "In this topic, 'pattern' helps you solve questions about growing and repeating patterns."
+          },
+          {
+            "keyword": "rule",
+            "definition": "The idea that tells how a pattern changes or repeats.",
+            "simpleExample": "In this topic, 'rule' helps you solve questions about growing and repeating patterns."
+          },
+          {
+            "keyword": "repeat",
+            "definition": "To happen again in the same way.",
+            "simpleExample": "In this topic, 'repeat' helps you solve questions about growing and repeating patterns."
+          },
+          {
+            "keyword": "sequence",
+            "definition": "An ordered list of numbers, shapes or objects.",
+            "simpleExample": "In this topic, 'sequence' helps you solve questions about growing and repeating patterns."
+          },
+          {
+            "keyword": "term",
+            "definition": "One item in a sequence or pattern.",
+            "simpleExample": "In this topic, 'term' helps you solve questions about growing and repeating patterns."
+          }
+        ],
+        "quickSummary": "Growing and Repeating Patterns helps students understand finding the rule behind a pattern and continuing it. through examples, activities and step-by-step problem solving.",
+        "revisionNotes": [
+          "Read the question carefully before solving.",
+          "Underline important numbers and units.",
+          "Use drawings or tables when possible.",
+          "Write the final answer with the correct unit.",
+          "Check the answer using estimation or reverse operation."
+        ]
+      },
+      {
+        "topic": "Tiling and Designs",
+        "meaning": "Using shapes to cover a space without gaps or overlaps.",
+        "ncertBasedExplanation": "In NCERT Class 5 Maths chapter 'Shapes and Patterns', learners explore this idea using pictures, activities, tables, questions and real-life situations. The chapter expects students to notice patterns, explain their thinking, and solve problems step by step instead of only memorising answers.",
+        "easyExplanation": "In this topic, do not memorise the answer. Understand the idea, take one small example, solve it step by step, and then check your answer using the meaning of the numbers or shapes.",
+        "stepByStepExplanation": [
+          {
+            "step": 1,
+            "title": "Observe the shape or design",
+            "explanation": "Look carefully at the lines, corners, repeated parts, and direction of the design."
+          },
+          {
+            "step": 2,
+            "title": "Find repeated parts",
+            "explanation": "A pattern is made when a shape, colour, number, or design repeats in a fixed way."
+          },
+          {
+            "step": 3,
+            "title": "Check symmetry",
+            "explanation": "A design has symmetry if one part matches another part after folding, reflection, or rotation."
+          },
+          {
+            "step": 4,
+            "title": "Continue the pattern",
+            "explanation": "To continue a pattern, first find the rule, then repeat the same rule for the next steps."
+          },
+          {
+            "step": 5,
+            "title": "Create your own design",
+            "explanation": "After understanding the rule, make a new pattern using shapes, blocks, tiles, or drawings."
+          }
+        ],
+        "examples": [
+          "Use a number line, grid, clock, map or drawing before doing hard calculations.",
+          "Write units like cm, kg, litre or minutes with the answer.",
+          "Check whether your answer is bigger/smaller according to the question."
+        ],
+        "importantKeywords": [
+          {
+            "keyword": "tile",
+            "definition": "A shape used to cover a surface.",
+            "simpleExample": "In this topic, 'tile' helps you solve questions about tiling and designs."
+          },
+          {
+            "keyword": "tessellation",
+            "definition": "A pattern of shapes covering a surface without gaps or overlaps.",
+            "simpleExample": "In this topic, 'tessellation' helps you solve questions about tiling and designs."
+          },
+          {
+            "keyword": "gap",
+            "definition": "An empty space between shapes.",
+            "simpleExample": "In this topic, 'gap' helps you solve questions about tiling and designs."
+          },
+          {
+            "keyword": "overlap",
+            "definition": "When one shape lies partly on top of another.",
+            "simpleExample": "In this topic, 'overlap' helps you solve questions about tiling and designs."
+          },
+          {
+            "keyword": "design",
+            "definition": "A planned pattern or arrangement.",
+            "simpleExample": "In this topic, 'design' helps you solve questions about tiling and designs."
+          }
+        ],
+        "quickSummary": "Tiling and Designs helps students understand using shapes to cover a space without gaps or overlaps. through examples, activities and step-by-step problem solving.",
+        "revisionNotes": [
+          "Read the question carefully before solving.",
+          "Underline important numbers and units.",
+          "Use drawings or tables when possible.",
+          "Write the final answer with the correct unit.",
+          "Check the answer using estimation or reverse operation."
+        ]
+      }
+    ]
+  },
+  {
+    "class": 5,
+    "board": "CBSE",
+    "subject": "Maths",
+    "book": {
+      "name": "NCERT",
+      "sourcePdf": "Class 5 uploaded NCERT PDF"
+    },
+    "chapterNumber": 8,
+    "chapter": "Weight and Capacity",
+    "topics": [
+      {
+        "topic": "Measuring Weight",
+        "meaning": "Using grams and kilograms to measure heaviness.",
+        "ncertBasedExplanation": "In NCERT Class 5 Maths chapter 'Weight and Capacity', learners explore this idea using pictures, activities, tables, questions and real-life situations. The chapter expects students to notice patterns, explain their thinking, and solve problems step by step instead of only memorising answers.",
+        "easyExplanation": "In this topic, do not memorise the answer. Understand the idea, take one small example, solve it step by step, and then check your answer using the meaning of the numbers or shapes.",
+        "stepByStepExplanation": [
+          {
+            "step": 1,
+            "title": "Identify what is being measured",
+            "explanation": "First decide whether the question is about length, distance, weight, capacity, or location."
+          },
+          {
+            "step": 2,
+            "title": "Choose the correct unit",
+            "explanation": "Use cm or m for length, g or kg for weight, ml or L for capacity, and km for long distance."
+          },
+          {
+            "step": 3,
+            "title": "Compare with a known object",
+            "explanation": "Use daily objects to estimate. A pencil may be measured in cm, a road in km, milk in litres, and vegetables in kg."
+          },
+          {
+            "step": 4,
+            "title": "Convert if needed",
+            "explanation": "Sometimes you must convert units before solving, such as 1 kg = 1000 g or 1 L = 1000 ml."
+          },
+          {
+            "step": 5,
+            "title": "Solve and write the unit",
+            "explanation": "After calculation, always write the correct unit with the answer."
+          }
+        ],
+        "examples": [
+          "Use a number line, grid, clock, map or drawing before doing hard calculations.",
+          "Write units like cm, kg, litre or minutes with the answer.",
+          "Check whether your answer is bigger/smaller according to the question."
+        ],
+        "importantKeywords": [
+          {
+            "keyword": "weight",
+            "definition": "Measurement of how heavy something is.",
+            "simpleExample": "In this topic, 'weight' helps you solve questions about measuring weight."
+          },
+          {
+            "keyword": "gram",
+            "definition": "A small unit of weight.",
+            "simpleExample": "In this topic, 'gram' helps you solve questions about measuring weight."
+          },
+          {
+            "keyword": "kilogram",
+            "definition": "A larger unit of weight equal to 1000 grams.",
+            "simpleExample": "In this topic, 'kilogram' helps you solve questions about measuring weight."
+          },
+          {
+            "keyword": "balance",
+            "definition": "A tool used to compare or measure weight.",
+            "simpleExample": "In this topic, 'balance' helps you solve questions about measuring weight."
+          },
+          {
+            "keyword": "heavier",
+            "definition": "Having more weight.",
+            "simpleExample": "In this topic, 'heavier' helps you solve questions about measuring weight."
+          }
+        ],
+        "quickSummary": "Measuring Weight helps students understand using grams and kilograms to measure heaviness. through examples, activities and step-by-step problem solving.",
+        "revisionNotes": [
+          "Read the question carefully before solving.",
+          "Underline important numbers and units.",
+          "Use drawings or tables when possible.",
+          "Write the final answer with the correct unit.",
+          "Check the answer using estimation or reverse operation."
+        ]
+      },
+      {
+        "topic": "Measuring Capacity",
+        "meaning": "Using millilitres and litres to measure how much liquid a container holds.",
+        "ncertBasedExplanation": "In NCERT Class 5 Maths chapter 'Weight and Capacity', learners explore this idea using pictures, activities, tables, questions and real-life situations. The chapter expects students to notice patterns, explain their thinking, and solve problems step by step instead of only memorising answers.",
+        "easyExplanation": "In this topic, do not memorise the answer. Understand the idea, take one small example, solve it step by step, and then check your answer using the meaning of the numbers or shapes.",
+        "stepByStepExplanation": [
+          {
+            "step": 1,
+            "title": "Identify what is being measured",
+            "explanation": "First decide whether the question is about length, distance, weight, capacity, or location."
+          },
+          {
+            "step": 2,
+            "title": "Choose the correct unit",
+            "explanation": "Use cm or m for length, g or kg for weight, ml or L for capacity, and km for long distance."
+          },
+          {
+            "step": 3,
+            "title": "Compare with a known object",
+            "explanation": "Use daily objects to estimate. A pencil may be measured in cm, a road in km, milk in litres, and vegetables in kg."
+          },
+          {
+            "step": 4,
+            "title": "Convert if needed",
+            "explanation": "Sometimes you must convert units before solving, such as 1 kg = 1000 g or 1 L = 1000 ml."
+          },
+          {
+            "step": 5,
+            "title": "Solve and write the unit",
+            "explanation": "After calculation, always write the correct unit with the answer."
+          }
+        ],
+        "examples": [
+          "Use a number line, grid, clock, map or drawing before doing hard calculations.",
+          "Write units like cm, kg, litre or minutes with the answer.",
+          "Check whether your answer is bigger/smaller according to the question."
+        ],
+        "importantKeywords": [
+          {
+            "keyword": "capacity",
+            "definition": "The amount a container can hold.",
+            "simpleExample": "In this topic, 'capacity' helps you solve questions about measuring capacity."
+          },
+          {
+            "keyword": "millilitre",
+            "definition": "A small unit of liquid capacity.",
+            "simpleExample": "In this topic, 'millilitre' helps you solve questions about measuring capacity."
+          },
+          {
+            "keyword": "litre",
+            "definition": "A unit used to measure liquid capacity.",
+            "simpleExample": "In this topic, 'litre' helps you solve questions about measuring capacity."
+          },
+          {
+            "keyword": "container",
+            "definition": "An object used to hold something.",
+            "simpleExample": "In this topic, 'container' helps you solve questions about measuring capacity."
+          },
+          {
+            "keyword": "volume",
+            "definition": "The amount of space occupied by a substance.",
+            "simpleExample": "In this topic, 'volume' helps you solve questions about measuring capacity."
+          }
+        ],
+        "quickSummary": "Measuring Capacity helps students understand using millilitres and litres to measure how much liquid a container holds. through examples, activities and step-by-step problem solving.",
+        "revisionNotes": [
+          "Read the question carefully before solving.",
+          "Underline important numbers and units.",
+          "Use drawings or tables when possible.",
+          "Write the final answer with the correct unit.",
+          "Check the answer using estimation or reverse operation."
+        ]
+      },
+      {
+        "topic": "Conversion and Word Problems",
+        "meaning": "Changing units and solving daily-life problems.",
+        "ncertBasedExplanation": "In NCERT Class 5 Maths chapter 'Weight and Capacity', learners explore this idea using pictures, activities, tables, questions and real-life situations. The chapter expects students to notice patterns, explain their thinking, and solve problems step by step instead of only memorising answers.",
+        "easyExplanation": "In this topic, do not memorise the answer. Understand the idea, take one small example, solve it step by step, and then check your answer using the meaning of the numbers or shapes.",
+        "stepByStepExplanation": [
+          {
+            "step": 1,
+            "title": "Understand the concept",
+            "explanation": "Changing units and solving daily-life problems."
+          },
+          {
+            "step": 2,
+            "title": "Take one simple example",
+            "explanation": "Use small numbers, a drawing, or daily life objects so the idea becomes visible."
+          },
+          {
+            "step": 3,
+            "title": "Write the mathematical information",
+            "explanation": "Write the numbers, units, shapes, or clues given in the question in an organised way."
+          },
+          {
+            "step": 4,
+            "title": "Solve slowly",
+            "explanation": "Apply the rule one step at a time and do not skip calculation steps."
+          },
+          {
+            "step": 5,
+            "title": "Explain and verify",
+            "explanation": "Write the final answer with units if needed, and check whether it is reasonable."
+          }
+        ],
+        "examples": [
+          "Use a number line, grid, clock, map or drawing before doing hard calculations.",
+          "Write units like cm, kg, litre or minutes with the answer.",
+          "Check whether your answer is bigger/smaller according to the question."
+        ],
+        "importantKeywords": [
+          {
+            "keyword": "conversion",
+            "definition": "Changing a measurement from one unit to another.",
+            "simpleExample": "In this topic, 'conversion' helps you solve questions about conversion and word problems."
+          },
+          {
+            "keyword": "1000 ml",
+            "definition": "One thousand millilitres, equal to 1 litre.",
+            "simpleExample": "In this topic, '1000 ml' helps you solve questions about conversion and word problems."
+          },
+          {
+            "keyword": "1000 g",
+            "definition": "One thousand grams, equal to 1 kilogram.",
+            "simpleExample": "In this topic, '1000 g' helps you solve questions about conversion and word problems."
+          },
+          {
+            "keyword": "difference",
+            "definition": "The amount by which one number is more or less than another.",
+            "simpleExample": "In this topic, 'difference' helps you solve questions about conversion and word problems."
+          },
+          {
+            "keyword": "sum",
+            "definition": "The answer after addition.",
+            "simpleExample": "In this topic, 'sum' helps you solve questions about conversion and word problems."
+          }
+        ],
+        "quickSummary": "Conversion and Word Problems helps students understand changing units and solving daily-life problems. through examples, activities and step-by-step problem solving.",
+        "revisionNotes": [
+          "Read the question carefully before solving.",
+          "Underline important numbers and units.",
+          "Use drawings or tables when possible.",
+          "Write the final answer with the correct unit.",
+          "Check the answer using estimation or reverse operation."
+        ]
+      }
+    ]
+  },
+  {
+    "class": 5,
+    "board": "CBSE",
+    "subject": "Maths",
+    "book": {
+      "name": "NCERT",
+      "sourcePdf": "Class 5 uploaded NCERT PDF"
+    },
+    "chapterNumber": 9,
+    "chapter": "Coconut Farm",
+    "topics": [
+      {
+        "topic": "Multiplication Strategies",
+        "meaning": "Using grouping, doubling and place value to multiply.",
+        "ncertBasedExplanation": "In NCERT Class 5 Maths chapter 'Coconut Farm', learners explore this idea using pictures, activities, tables, questions and real-life situations. The chapter expects students to notice patterns, explain their thinking, and solve problems step by step instead of only memorising answers.",
+        "easyExplanation": "In this topic, do not memorise the answer. Understand the idea, take one small example, solve it step by step, and then check your answer using the meaning of the numbers or shapes.",
+        "stepByStepExplanation": [
+          {
+            "step": 1,
+            "title": "Understand the situation",
+            "explanation": "Find out whether the question is about equal groups, sharing, repeated addition, repeated subtraction, or number jumps."
+          },
+          {
+            "step": 2,
+            "title": "Choose multiplication or division",
+            "explanation": "Use multiplication when equal groups are joined. Use division when something is shared equally or split into groups."
+          },
+          {
+            "step": 3,
+            "title": "Write the number sentence",
+            "explanation": "Convert the story into a maths sentence, such as 6 groups of 8 = 6 × 8, or 48 shared among 6 = 48 ÷ 6."
+          },
+          {
+            "step": 4,
+            "title": "Solve using a clear method",
+            "explanation": "You may use tables, repeated addition, repeated subtraction, arrays, or long division depending on the question."
+          },
+          {
+            "step": 5,
+            "title": "Check with reverse operation",
+            "explanation": "Check multiplication using division and division using multiplication. This helps catch mistakes."
+          }
+        ],
+        "examples": [
+          "Use a number line, grid, clock, map or drawing before doing hard calculations.",
+          "Write units like cm, kg, litre or minutes with the answer.",
+          "Check whether your answer is bigger/smaller according to the question."
+        ],
+        "importantKeywords": [
+          {
+            "keyword": "strategy",
+            "definition": "A method used to solve a problem.",
+            "simpleExample": "In this topic, 'strategy' helps you solve questions about multiplication strategies."
+          },
+          {
+            "keyword": "multiple",
+            "definition": "A number obtained by multiplying a given number by 1, 2, 3 and so on.",
+            "simpleExample": "In this topic, 'multiple' helps you solve questions about multiplication strategies."
+          },
+          {
+            "keyword": "factor",
+            "definition": "A number that divides another number exactly.",
+            "simpleExample": "In this topic, 'factor' helps you solve questions about multiplication strategies."
+          },
+          {
+            "keyword": "partial product",
+            "definition": "A product found by multiplying parts of a number.",
+            "simpleExample": "In this topic, 'partial product' helps you solve questions about multiplication strategies."
+          },
+          {
+            "keyword": "mental maths",
+            "definition": "Doing calculations in the mind without writing many steps.",
+            "simpleExample": "In this topic, 'mental maths' helps you solve questions about multiplication strategies."
+          }
+        ],
+        "quickSummary": "Multiplication Strategies helps students understand using grouping, doubling and place value to multiply. through examples, activities and step-by-step problem solving.",
+        "revisionNotes": [
+          "Read the question carefully before solving.",
+          "Underline important numbers and units.",
+          "Use drawings or tables when possible.",
+          "Write the final answer with the correct unit.",
+          "Check the answer using estimation or reverse operation."
+        ]
+      },
+      {
+        "topic": "Division Strategies",
+        "meaning": "Breaking division into easy parts and checking the answer.",
+        "ncertBasedExplanation": "In NCERT Class 5 Maths chapter 'Coconut Farm', learners explore this idea using pictures, activities, tables, questions and real-life situations. The chapter expects students to notice patterns, explain their thinking, and solve problems step by step instead of only memorising answers.",
+        "easyExplanation": "In this topic, do not memorise the answer. Understand the idea, take one small example, solve it step by step, and then check your answer using the meaning of the numbers or shapes.",
+        "stepByStepExplanation": [
+          {
+            "step": 1,
+            "title": "Understand the situation",
+            "explanation": "Find out whether the question is about equal groups, sharing, repeated addition, repeated subtraction, or number jumps."
+          },
+          {
+            "step": 2,
+            "title": "Choose multiplication or division",
+            "explanation": "Use multiplication when equal groups are joined. Use division when something is shared equally or split into groups."
+          },
+          {
+            "step": 3,
+            "title": "Write the number sentence",
+            "explanation": "Convert the story into a maths sentence, such as 6 groups of 8 = 6 × 8, or 48 shared among 6 = 48 ÷ 6."
+          },
+          {
+            "step": 4,
+            "title": "Solve using a clear method",
+            "explanation": "You may use tables, repeated addition, repeated subtraction, arrays, or long division depending on the question."
+          },
+          {
+            "step": 5,
+            "title": "Check with reverse operation",
+            "explanation": "Check multiplication using division and division using multiplication. This helps catch mistakes."
+          }
+        ],
+        "examples": [
+          "Use a number line, grid, clock, map or drawing before doing hard calculations.",
+          "Write units like cm, kg, litre or minutes with the answer.",
+          "Check whether your answer is bigger/smaller according to the question."
+        ],
+        "importantKeywords": [
+          {
+            "keyword": "divide",
+            "definition": "To split into equal groups or parts.",
+            "simpleExample": "In this topic, 'divide' helps you solve questions about division strategies."
+          },
+          {
+            "keyword": "estimate",
+            "definition": "A close guess that is not exact but useful.",
+            "simpleExample": "In this topic, 'estimate' helps you solve questions about division strategies."
+          },
+          {
+            "keyword": "remainder",
+            "definition": "The amount left after division when equal grouping is not exact.",
+            "simpleExample": "In this topic, 'remainder' helps you solve questions about division strategies."
+          },
+          {
+            "keyword": "checking",
+            "definition": "Verifying whether an answer is correct.",
+            "simpleExample": "In this topic, 'checking' helps you solve questions about division strategies."
+          },
+          {
+            "keyword": "inverse operation",
+            "definition": "An opposite operation, like multiplication and division.",
+            "simpleExample": "In this topic, 'inverse operation' helps you solve questions about division strategies."
+          }
+        ],
+        "quickSummary": "Division Strategies helps students understand breaking division into easy parts and checking the answer. through examples, activities and step-by-step problem solving.",
+        "revisionNotes": [
+          "Read the question carefully before solving.",
+          "Underline important numbers and units.",
+          "Use drawings or tables when possible.",
+          "Write the final answer with the correct unit.",
+          "Check the answer using estimation or reverse operation."
+        ]
+      },
+      {
+        "topic": "Farm Data Problems",
+        "meaning": "Using farm situations to solve quantity and money problems.",
+        "ncertBasedExplanation": "In NCERT Class 5 Maths chapter 'Coconut Farm', learners explore this idea using pictures, activities, tables, questions and real-life situations. The chapter expects students to notice patterns, explain their thinking, and solve problems step by step instead of only memorising answers.",
+        "easyExplanation": "In this topic, do not memorise the answer. Understand the idea, take one small example, solve it step by step, and then check your answer using the meaning of the numbers or shapes.",
+        "stepByStepExplanation": [
+          {
+            "step": 1,
+            "title": "Understand what the data shows",
+            "explanation": "Data means collected information. First see what is being counted, such as animals, vehicles, fruits, marks, or students."
+          },
+          {
+            "step": 2,
+            "title": "Read the title and labels",
+            "explanation": "The title tells the topic of the graph. Labels tell what each row, column, or bar means."
+          },
+          {
+            "step": 3,
+            "title": "Check the key or scale",
+            "explanation": "In a pictograph, one picture may represent more than one object. In a bar graph, the scale tells how much each mark or height represents."
+          },
+          {
+            "step": 4,
+            "title": "Compare the values",
+            "explanation": "Find the highest, lowest, equal, more than, less than, and difference by reading the graph carefully."
+          },
+          {
+            "step": 5,
+            "title": "Write the conclusion",
+            "explanation": "After reading the graph, write one clear sentence about what the data tells you."
+          }
+        ],
+        "examples": [
+          "Use a number line, grid, clock, map or drawing before doing hard calculations.",
+          "Write units like cm, kg, litre or minutes with the answer.",
+          "Check whether your answer is bigger/smaller according to the question."
+        ],
+        "importantKeywords": [
+          {
+            "keyword": "data",
+            "definition": "Information collected for study.",
+            "simpleExample": "In this topic, 'data' helps you solve questions about farm data problems."
+          },
+          {
+            "keyword": "farm",
+            "definition": "A place where crops are grown or animals are kept.",
+            "simpleExample": "In this topic, 'farm' helps you solve questions about farm data problems."
+          },
+          {
+            "keyword": "quantity",
+            "definition": "An amount or number of something.",
+            "simpleExample": "In this topic, 'quantity' helps you solve questions about farm data problems."
+          },
+          {
+            "keyword": "rows",
+            "definition": "Horizontal lines of objects.",
+            "simpleExample": "In this topic, 'rows' helps you solve questions about farm data problems."
+          },
+          {
+            "keyword": "columns",
+            "definition": "Vertical lines of objects.",
+            "simpleExample": "In this topic, 'columns' helps you solve questions about farm data problems."
+          }
+        ],
+        "quickSummary": "Farm Data Problems helps students understand using farm situations to solve quantity and money problems. through examples, activities and step-by-step problem solving.",
+        "revisionNotes": [
+          "Read the question carefully before solving.",
+          "Underline important numbers and units.",
+          "Use drawings or tables when possible.",
+          "Write the final answer with the correct unit.",
+          "Check the answer using estimation or reverse operation."
+        ]
+      }
+    ]
+  },
+  {
+    "class": 5,
+    "board": "CBSE",
+    "subject": "Maths",
+    "book": {
+      "name": "NCERT",
+      "sourcePdf": "Class 5 uploaded NCERT PDF"
+    },
+    "chapterNumber": 10,
+    "chapter": "Symmetrical Designs",
+    "topics": [
+      {
+        "topic": "Reflection Symmetry",
+        "meaning": "A shape has reflection symmetry when one half is a mirror image of the other.",
+        "ncertBasedExplanation": "In NCERT Class 5 Maths chapter 'Symmetrical Designs', learners explore this idea using pictures, activities, tables, questions and real-life situations. The chapter expects students to notice patterns, explain their thinking, and solve problems step by step instead of only memorising answers.",
+        "easyExplanation": "In this topic, do not memorise the answer. Understand the idea, take one small example, solve it step by step, and then check your answer using the meaning of the numbers or shapes.",
+        "stepByStepExplanation": [
+          {
+            "step": 1,
+            "title": "Observe the shape or design",
+            "explanation": "Look carefully at the lines, corners, repeated parts, and direction of the design."
+          },
+          {
+            "step": 2,
+            "title": "Find repeated parts",
+            "explanation": "A pattern is made when a shape, colour, number, or design repeats in a fixed way."
+          },
+          {
+            "step": 3,
+            "title": "Check symmetry",
+            "explanation": "A design has symmetry if one part matches another part after folding, reflection, or rotation."
+          },
+          {
+            "step": 4,
+            "title": "Continue the pattern",
+            "explanation": "To continue a pattern, first find the rule, then repeat the same rule for the next steps."
+          },
+          {
+            "step": 5,
+            "title": "Create your own design",
+            "explanation": "After understanding the rule, make a new pattern using shapes, blocks, tiles, or drawings."
+          }
+        ],
+        "examples": [
+          "Use a number line, grid, clock, map or drawing before doing hard calculations.",
+          "Write units like cm, kg, litre or minutes with the answer.",
+          "Check whether your answer is bigger/smaller according to the question."
+        ],
+        "importantKeywords": [
+          {
+            "keyword": "symmetry",
+            "definition": "A property where parts of a shape match in a balanced way.",
+            "simpleExample": "In this topic, 'symmetry' helps you solve questions about reflection symmetry."
+          },
+          {
+            "keyword": "line of symmetry",
+            "definition": "A line that divides a figure into two matching halves.",
+            "simpleExample": "In this topic, 'line of symmetry' helps you solve questions about reflection symmetry."
+          },
+          {
+            "keyword": "mirror image",
+            "definition": "A reflected image that looks reversed but matches the original.",
+            "simpleExample": "In this topic, 'mirror image' helps you solve questions about reflection symmetry."
+          },
+          {
+            "keyword": "reflection",
+            "definition": "Flipping a shape as if seen in a mirror.",
+            "simpleExample": "In this topic, 'reflection' helps you solve questions about reflection symmetry."
+          },
+          {
+            "keyword": "half",
+            "definition": "One of two equal parts.",
+            "simpleExample": "In this topic, 'half' helps you solve questions about reflection symmetry."
+          }
+        ],
+        "quickSummary": "Reflection Symmetry helps students understand a shape has reflection symmetry when one half is a mirror image of the other. through examples, activities and step-by-step problem solving.",
+        "revisionNotes": [
+          "Read the question carefully before solving.",
+          "Underline important numbers and units.",
+          "Use drawings or tables when possible.",
+          "Write the final answer with the correct unit.",
+          "Check the answer using estimation or reverse operation."
+        ]
+      },
+      {
+        "topic": "Rotational Symmetry",
+        "meaning": "A shape has rotational symmetry if it looks the same after a turn.",
+        "ncertBasedExplanation": "In NCERT Class 5 Maths chapter 'Symmetrical Designs', learners explore this idea using pictures, activities, tables, questions and real-life situations. The chapter expects students to notice patterns, explain their thinking, and solve problems step by step instead of only memorising answers.",
+        "easyExplanation": "In this topic, do not memorise the answer. Understand the idea, take one small example, solve it step by step, and then check your answer using the meaning of the numbers or shapes.",
+        "stepByStepExplanation": [
+          {
+            "step": 1,
+            "title": "Observe the shape or design",
+            "explanation": "Look carefully at the lines, corners, repeated parts, and direction of the design."
+          },
+          {
+            "step": 2,
+            "title": "Find repeated parts",
+            "explanation": "A pattern is made when a shape, colour, number, or design repeats in a fixed way."
+          },
+          {
+            "step": 3,
+            "title": "Check symmetry",
+            "explanation": "A design has symmetry if one part matches another part after folding, reflection, or rotation."
+          },
+          {
+            "step": 4,
+            "title": "Continue the pattern",
+            "explanation": "To continue a pattern, first find the rule, then repeat the same rule for the next steps."
+          },
+          {
+            "step": 5,
+            "title": "Create your own design",
+            "explanation": "After understanding the rule, make a new pattern using shapes, blocks, tiles, or drawings."
+          }
+        ],
+        "examples": [
+          "Use a number line, grid, clock, map or drawing before doing hard calculations.",
+          "Write units like cm, kg, litre or minutes with the answer.",
+          "Check whether your answer is bigger/smaller according to the question."
+        ],
+        "importantKeywords": [
+          {
+            "keyword": "rotational symmetry",
+            "definition": "A property where a shape looks the same after a partial turn.",
+            "simpleExample": "In this topic, 'rotational symmetry' helps you solve questions about rotational symmetry."
+          },
+          {
+            "keyword": "centre",
+            "definition": "The middle point around which a shape turns.",
+            "simpleExample": "In this topic, 'centre' helps you solve questions about rotational symmetry."
+          },
+          {
+            "keyword": "quarter turn",
+            "definition": "One-fourth of a full turn.",
+            "simpleExample": "In this topic, 'quarter turn' helps you solve questions about rotational symmetry."
+          },
+          {
+            "keyword": "orientation",
+            "definition": "The direction in which an object faces.",
+            "simpleExample": "In this topic, 'orientation' helps you solve questions about rotational symmetry."
+          },
+          {
+            "keyword": "design",
+            "definition": "A planned pattern or arrangement.",
+            "simpleExample": "In this topic, 'design' helps you solve questions about rotational symmetry."
+          }
+        ],
+        "quickSummary": "Rotational Symmetry helps students understand a shape has rotational symmetry if it looks the same after a turn. through examples, activities and step-by-step problem solving.",
+        "revisionNotes": [
+          "Read the question carefully before solving.",
+          "Underline important numbers and units.",
+          "Use drawings or tables when possible.",
+          "Write the final answer with the correct unit.",
+          "Check the answer using estimation or reverse operation."
+        ]
+      },
+      {
+        "topic": "Block Printing and Patterns",
+        "meaning": "Using repeated blocks to create symmetrical designs.",
+        "ncertBasedExplanation": "In NCERT Class 5 Maths chapter 'Symmetrical Designs', learners explore this idea using pictures, activities, tables, questions and real-life situations. The chapter expects students to notice patterns, explain their thinking, and solve problems step by step instead of only memorising answers.",
+        "easyExplanation": "In this topic, do not memorise the answer. Understand the idea, take one small example, solve it step by step, and then check your answer using the meaning of the numbers or shapes.",
+        "stepByStepExplanation": [
+          {
+            "step": 1,
+            "title": "Observe the shape or design",
+            "explanation": "Look carefully at the lines, corners, repeated parts, and direction of the design."
+          },
+          {
+            "step": 2,
+            "title": "Find repeated parts",
+            "explanation": "A pattern is made when a shape, colour, number, or design repeats in a fixed way."
+          },
+          {
+            "step": 3,
+            "title": "Check symmetry",
+            "explanation": "A design has symmetry if one part matches another part after folding, reflection, or rotation."
+          },
+          {
+            "step": 4,
+            "title": "Continue the pattern",
+            "explanation": "To continue a pattern, first find the rule, then repeat the same rule for the next steps."
+          },
+          {
+            "step": 5,
+            "title": "Create your own design",
+            "explanation": "After understanding the rule, make a new pattern using shapes, blocks, tiles, or drawings."
+          }
+        ],
+        "examples": [
+          "Use a number line, grid, clock, map or drawing before doing hard calculations.",
+          "Write units like cm, kg, litre or minutes with the answer.",
+          "Check whether your answer is bigger/smaller according to the question."
+        ],
+        "importantKeywords": [
+          {
+            "keyword": "block print",
+            "definition": "A design printed using a carved block.",
+            "simpleExample": "In this topic, 'block print' helps you solve questions about block printing and patterns."
+          },
+          {
+            "keyword": "motif",
+            "definition": "A repeated decorative shape or design.",
+            "simpleExample": "In this topic, 'motif' helps you solve questions about block printing and patterns."
+          },
+          {
+            "keyword": "repeat",
+            "definition": "To happen again in the same way.",
+            "simpleExample": "In this topic, 'repeat' helps you solve questions about block printing and patterns."
+          },
+          {
+            "keyword": "craft",
+            "definition": "Skilled handwork used to make useful or beautiful things.",
+            "simpleExample": "In this topic, 'craft' helps you solve questions about block printing and patterns."
+          },
+          {
+            "keyword": "pattern",
+            "definition": "An arrangement that follows a rule.",
+            "simpleExample": "In this topic, 'pattern' helps you solve questions about block printing and patterns."
+          }
+        ],
+        "quickSummary": "Block Printing and Patterns helps students understand using repeated blocks to create symmetrical designs. through examples, activities and step-by-step problem solving.",
+        "revisionNotes": [
+          "Read the question carefully before solving.",
+          "Underline important numbers and units.",
+          "Use drawings or tables when possible.",
+          "Write the final answer with the correct unit.",
+          "Check the answer using estimation or reverse operation."
+        ]
+      }
+    ]
+  },
+  {
+    "class": 5,
+    "board": "CBSE",
+    "subject": "Maths",
+    "book": {
+      "name": "NCERT",
+      "sourcePdf": "Class 5 uploaded NCERT PDF"
+    },
+    "chapterNumber": 11,
+    "chapter": "Grandmother’s Quilt",
+    "topics": [
+      {
+        "topic": "Area of Shapes",
+        "meaning": "Area tells how much surface a shape covers.",
+        "ncertBasedExplanation": "In NCERT Class 5 Maths chapter 'Grandmother’s Quilt', learners explore this idea using pictures, activities, tables, questions and real-life situations. The chapter expects students to notice patterns, explain their thinking, and solve problems step by step instead of only memorising answers.",
+        "easyExplanation": "In this topic, do not memorise the answer. Understand the idea, take one small example, solve it step by step, and then check your answer using the meaning of the numbers or shapes.",
+        "stepByStepExplanation": [
+          {
+            "step": 1,
+            "title": "Understand the boundary and inside space",
+            "explanation": "Perimeter is the distance around a shape. Area is the space covered inside a shape."
+          },
+          {
+            "step": 2,
+            "title": "For perimeter, add all sides",
+            "explanation": "If a shape has sides 4 cm, 3 cm, 4 cm and 3 cm, perimeter = 4 + 3 + 4 + 3 = 14 cm."
+          },
+          {
+            "step": 3,
+            "title": "For area, count square units",
+            "explanation": "If a shape is drawn on a square grid, count how many full squares it covers. That gives the area."
+          },
+          {
+            "step": 4,
+            "title": "Compare different shapes",
+            "explanation": "Two shapes can have the same area but different perimeters. They may cover equal space but have different boundaries."
+          },
+          {
+            "step": 5,
+            "title": "Use correct units",
+            "explanation": "Perimeter is written in units like cm or m. Area is written in square units like square cm or square m."
+          }
+        ],
+        "examples": [
+          "Use a number line, grid, clock, map or drawing before doing hard calculations.",
+          "Write units like cm, kg, litre or minutes with the answer.",
+          "Check whether your answer is bigger/smaller according to the question."
+        ],
+        "importantKeywords": [
+          {
+            "keyword": "area",
+            "definition": "The amount of surface covered by a shape.",
+            "simpleExample": "In this topic, 'area' helps you solve questions about area of shapes."
+          },
+          {
+            "keyword": "square unit",
+            "definition": "A unit used to measure area, such as square cm.",
+            "simpleExample": "In this topic, 'square unit' helps you solve questions about area of shapes."
+          },
+          {
+            "keyword": "surface",
+            "definition": "The outer or top part of an object or shape.",
+            "simpleExample": "In this topic, 'surface' helps you solve questions about area of shapes."
+          },
+          {
+            "keyword": "grid",
+            "definition": "A network of rows and columns.",
+            "simpleExample": "In this topic, 'grid' helps you solve questions about area of shapes."
+          },
+          {
+            "keyword": "cover",
+            "definition": "To place over a surface.",
+            "simpleExample": "In this topic, 'cover' helps you solve questions about area of shapes."
+          }
+        ],
+        "quickSummary": "Area of Shapes helps students understand area tells how much surface a shape covers. through examples, activities and step-by-step problem solving.",
+        "revisionNotes": [
+          "Read the question carefully before solving.",
+          "Underline important numbers and units.",
+          "Use drawings or tables when possible.",
+          "Write the final answer with the correct unit.",
+          "Check the answer using estimation or reverse operation."
+        ]
+      },
+      {
+        "topic": "Perimeter of Shapes",
+        "meaning": "Perimeter is the total distance around a shape.",
+        "ncertBasedExplanation": "In NCERT Class 5 Maths chapter 'Grandmother’s Quilt', learners explore this idea using pictures, activities, tables, questions and real-life situations. The chapter expects students to notice patterns, explain their thinking, and solve problems step by step instead of only memorising answers.",
+        "easyExplanation": "In this topic, do not memorise the answer. Understand the idea, take one small example, solve it step by step, and then check your answer using the meaning of the numbers or shapes.",
+        "stepByStepExplanation": [
+          {
+            "step": 1,
+            "title": "Understand the boundary and inside space",
+            "explanation": "Perimeter is the distance around a shape. Area is the space covered inside a shape."
+          },
+          {
+            "step": 2,
+            "title": "For perimeter, add all sides",
+            "explanation": "If a shape has sides 4 cm, 3 cm, 4 cm and 3 cm, perimeter = 4 + 3 + 4 + 3 = 14 cm."
+          },
+          {
+            "step": 3,
+            "title": "For area, count square units",
+            "explanation": "If a shape is drawn on a square grid, count how many full squares it covers. That gives the area."
+          },
+          {
+            "step": 4,
+            "title": "Compare different shapes",
+            "explanation": "Two shapes can have the same area but different perimeters. They may cover equal space but have different boundaries."
+          },
+          {
+            "step": 5,
+            "title": "Use correct units",
+            "explanation": "Perimeter is written in units like cm or m. Area is written in square units like square cm or square m."
+          }
+        ],
+        "examples": [
+          "Use a number line, grid, clock, map or drawing before doing hard calculations.",
+          "Write units like cm, kg, litre or minutes with the answer.",
+          "Check whether your answer is bigger/smaller according to the question."
+        ],
+        "importantKeywords": [
+          {
+            "keyword": "perimeter",
+            "definition": "The total distance around a shape.",
+            "simpleExample": "In this topic, 'perimeter' helps you solve questions about perimeter of shapes."
+          },
+          {
+            "keyword": "boundary",
+            "definition": "The outer edge of a shape.",
+            "simpleExample": "In this topic, 'boundary' helps you solve questions about perimeter of shapes."
+          },
+          {
+            "keyword": "length",
+            "definition": "Measurement of how long something is.",
+            "simpleExample": "In this topic, 'length' helps you solve questions about perimeter of shapes."
+          },
+          {
+            "keyword": "breadth",
+            "definition": "The width of a rectangle.",
+            "simpleExample": "In this topic, 'breadth' helps you solve questions about perimeter of shapes."
+          },
+          {
+            "keyword": "total distance",
+            "definition": "The complete length around a shape.",
+            "simpleExample": "In this topic, 'total distance' helps you solve questions about perimeter of shapes."
+          }
+        ],
+        "quickSummary": "Perimeter of Shapes helps students understand perimeter is the total distance around a shape. through examples, activities and step-by-step problem solving.",
+        "revisionNotes": [
+          "Read the question carefully before solving.",
+          "Underline important numbers and units.",
+          "Use drawings or tables when possible.",
+          "Write the final answer with the correct unit.",
+          "Check the answer using estimation or reverse operation."
+        ]
+      },
+      {
+        "topic": "Same Area Different Perimeter",
+        "meaning": "Shapes can have the same area but different perimeters.",
+        "ncertBasedExplanation": "In NCERT Class 5 Maths chapter 'Grandmother’s Quilt', learners explore this idea using pictures, activities, tables, questions and real-life situations. The chapter expects students to notice patterns, explain their thinking, and solve problems step by step instead of only memorising answers.",
+        "easyExplanation": "In this topic, do not memorise the answer. Understand the idea, take one small example, solve it step by step, and then check your answer using the meaning of the numbers or shapes.",
+        "stepByStepExplanation": [
+          {
+            "step": 1,
+            "title": "Understand the boundary and inside space",
+            "explanation": "Perimeter is the distance around a shape. Area is the space covered inside a shape."
+          },
+          {
+            "step": 2,
+            "title": "For perimeter, add all sides",
+            "explanation": "If a shape has sides 4 cm, 3 cm, 4 cm and 3 cm, perimeter = 4 + 3 + 4 + 3 = 14 cm."
+          },
+          {
+            "step": 3,
+            "title": "For area, count square units",
+            "explanation": "If a shape is drawn on a square grid, count how many full squares it covers. That gives the area."
+          },
+          {
+            "step": 4,
+            "title": "Compare different shapes",
+            "explanation": "Two shapes can have the same area but different perimeters. They may cover equal space but have different boundaries."
+          },
+          {
+            "step": 5,
+            "title": "Use correct units",
+            "explanation": "Perimeter is written in units like cm or m. Area is written in square units like square cm or square m."
+          }
+        ],
+        "examples": [
+          "Use a number line, grid, clock, map or drawing before doing hard calculations.",
+          "Write units like cm, kg, litre or minutes with the answer.",
+          "Check whether your answer is bigger/smaller according to the question."
+        ],
+        "importantKeywords": [
+          {
+            "keyword": "rectangle",
+            "definition": "A four-sided shape with opposite sides equal and all corners right angles.",
+            "simpleExample": "In this topic, 'rectangle' helps you solve questions about same area different perimeter."
+          },
+          {
+            "keyword": "square",
+            "definition": "A four-sided shape with equal sides and right angles.",
+            "simpleExample": "In this topic, 'square' helps you solve questions about same area different perimeter."
+          },
+          {
+            "keyword": "compare",
+            "definition": "To find how two things are similar, different, bigger or smaller.",
+            "simpleExample": "In this topic, 'compare' helps you solve questions about same area different perimeter."
+          },
+          {
+            "keyword": "formula",
+            "definition": "A rule written using mathematical words or symbols.",
+            "simpleExample": "In this topic, 'formula' helps you solve questions about same area different perimeter."
+          },
+          {
+            "keyword": "patch",
+            "definition": "A small piece used to make a larger design.",
+            "simpleExample": "In this topic, 'patch' helps you solve questions about same area different perimeter."
+          }
+        ],
+        "quickSummary": "Same Area Different Perimeter helps students understand shapes can have the same area but different perimeters. through examples, activities and step-by-step problem solving.",
+        "revisionNotes": [
+          "Read the question carefully before solving.",
+          "Underline important numbers and units.",
+          "Use drawings or tables when possible.",
+          "Write the final answer with the correct unit.",
+          "Check the answer using estimation or reverse operation."
+        ]
+      }
+    ]
+  },
+  {
+    "class": 5,
+    "board": "CBSE",
+    "subject": "Maths",
+    "book": {
+      "name": "NCERT",
+      "sourcePdf": "Class 5 uploaded NCERT PDF"
+    },
+    "chapterNumber": 12,
+    "chapter": "Racing Seconds",
+    "topics": [
+      {
+        "topic": "Seconds, Minutes and Hours",
+        "meaning": "Understanding smaller and larger units of time.",
+        "ncertBasedExplanation": "In NCERT Class 5 Maths chapter 'Racing Seconds', learners explore this idea using pictures, activities, tables, questions and real-life situations. The chapter expects students to notice patterns, explain their thinking, and solve problems step by step instead of only memorising answers.",
+        "easyExplanation": "In this topic, do not memorise the answer. Understand the idea, take one small example, solve it step by step, and then check your answer using the meaning of the numbers or shapes.",
+        "stepByStepExplanation": [
+          {
+            "step": 1,
+            "title": "Know the units of time",
+            "explanation": "60 seconds make 1 minute, and 60 minutes make 1 hour. These facts help in every time question."
+          },
+          {
+            "step": 2,
+            "title": "Read the starting time",
+            "explanation": "First note the time at which the activity begins. Write hours and minutes clearly."
+          },
+          {
+            "step": 3,
+            "title": "Read the ending time",
+            "explanation": "Then note the time at which the activity ends. Be careful with AM, PM, and crossing 12 o’clock."
+          },
+          {
+            "step": 4,
+            "title": "Find the difference step by step",
+            "explanation": "Count from start time to the next hour, then count full hours, then count remaining minutes."
+          },
+          {
+            "step": 5,
+            "title": "Check the answer",
+            "explanation": "A duration answer should make sense. For example, a race may take seconds, a class may take minutes, and a journey may take hours."
+          }
+        ],
+        "examples": [
+          "Use a number line, grid, clock, map or drawing before doing hard calculations.",
+          "Write units like cm, kg, litre or minutes with the answer.",
+          "Check whether your answer is bigger/smaller according to the question."
+        ],
+        "importantKeywords": [
+          {
+            "keyword": "second",
+            "definition": "A small unit of time; 60 seconds make 1 minute.",
+            "simpleExample": "In this topic, 'second' helps you solve questions about seconds, minutes and hours."
+          },
+          {
+            "keyword": "minute",
+            "definition": "A unit of time equal to 60 seconds.",
+            "simpleExample": "In this topic, 'minute' helps you solve questions about seconds, minutes and hours."
+          },
+          {
+            "keyword": "hour",
+            "definition": "A unit of time equal to 60 minutes.",
+            "simpleExample": "In this topic, 'hour' helps you solve questions about seconds, minutes and hours."
+          },
+          {
+            "keyword": "clock",
+            "definition": "A device that shows time.",
+            "simpleExample": "In this topic, 'clock' helps you solve questions about seconds, minutes and hours."
+          },
+          {
+            "keyword": "duration",
+            "definition": "How long something lasts.",
+            "simpleExample": "In this topic, 'duration' helps you solve questions about seconds, minutes and hours."
+          }
+        ],
+        "quickSummary": "Seconds, Minutes and Hours helps students understand understanding smaller and larger units of time. through examples, activities and step-by-step problem solving.",
+        "revisionNotes": [
+          "Read the question carefully before solving.",
+          "Underline important numbers and units.",
+          "Use drawings or tables when possible.",
+          "Write the final answer with the correct unit.",
+          "Check the answer using estimation or reverse operation."
+        ]
+      },
+      {
+        "topic": "12-Hour and 24-Hour Time",
+        "meaning": "Reading and writing time in two formats.",
+        "ncertBasedExplanation": "In NCERT Class 5 Maths chapter 'Racing Seconds', learners explore this idea using pictures, activities, tables, questions and real-life situations. The chapter expects students to notice patterns, explain their thinking, and solve problems step by step instead of only memorising answers.",
+        "easyExplanation": "In this topic, do not memorise the answer. Understand the idea, take one small example, solve it step by step, and then check your answer using the meaning of the numbers or shapes.",
+        "stepByStepExplanation": [
+          {
+            "step": 1,
+            "title": "Know the units of time",
+            "explanation": "60 seconds make 1 minute, and 60 minutes make 1 hour. These facts help in every time question."
+          },
+          {
+            "step": 2,
+            "title": "Read the starting time",
+            "explanation": "First note the time at which the activity begins. Write hours and minutes clearly."
+          },
+          {
+            "step": 3,
+            "title": "Read the ending time",
+            "explanation": "Then note the time at which the activity ends. Be careful with AM, PM, and crossing 12 o’clock."
+          },
+          {
+            "step": 4,
+            "title": "Find the difference step by step",
+            "explanation": "Count from start time to the next hour, then count full hours, then count remaining minutes."
+          },
+          {
+            "step": 5,
+            "title": "Check the answer",
+            "explanation": "A duration answer should make sense. For example, a race may take seconds, a class may take minutes, and a journey may take hours."
+          }
+        ],
+        "examples": [
+          "Use a number line, grid, clock, map or drawing before doing hard calculations.",
+          "Write units like cm, kg, litre or minutes with the answer.",
+          "Check whether your answer is bigger/smaller according to the question."
+        ],
+        "importantKeywords": [
+          {
+            "keyword": "12-hour format",
+            "definition": "A time format that uses a.m. and p.m.",
+            "simpleExample": "In this topic, '12-hour format' helps you solve questions about 12-hour and 24-hour time."
+          },
+          {
+            "keyword": "24-hour format",
+            "definition": "A time format from 00:00 to 23:59.",
+            "simpleExample": "In this topic, '24-hour format' helps you solve questions about 12-hour and 24-hour time."
+          },
+          {
+            "keyword": "a.m.",
+            "definition": "Time from midnight to before noon.",
+            "simpleExample": "In this topic, 'a.m.' helps you solve questions about 12-hour and 24-hour time."
+          },
+          {
+            "keyword": "p.m.",
+            "definition": "Time from noon to before midnight.",
+            "simpleExample": "In this topic, 'p.m.' helps you solve questions about 12-hour and 24-hour time."
+          },
+          {
+            "keyword": "midnight",
+            "definition": "12:00 at night or 00:00 in 24-hour time.",
+            "simpleExample": "In this topic, 'midnight' helps you solve questions about 12-hour and 24-hour time."
+          }
+        ],
+        "quickSummary": "12-Hour and 24-Hour Time helps students understand reading and writing time in two formats. through examples, activities and step-by-step problem solving.",
+        "revisionNotes": [
+          "Read the question carefully before solving.",
+          "Underline important numbers and units.",
+          "Use drawings or tables when possible.",
+          "Write the final answer with the correct unit.",
+          "Check the answer using estimation or reverse operation."
+        ]
+      },
+      {
+        "topic": "Time Duration Problems",
+        "meaning": "Finding start time, end time or total time.",
+        "ncertBasedExplanation": "In NCERT Class 5 Maths chapter 'Racing Seconds', learners explore this idea using pictures, activities, tables, questions and real-life situations. The chapter expects students to notice patterns, explain their thinking, and solve problems step by step instead of only memorising answers.",
+        "easyExplanation": "In this topic, do not memorise the answer. Understand the idea, take one small example, solve it step by step, and then check your answer using the meaning of the numbers or shapes.",
+        "stepByStepExplanation": [
+          {
+            "step": 1,
+            "title": "Know the units of time",
+            "explanation": "60 seconds make 1 minute, and 60 minutes make 1 hour. These facts help in every time question."
+          },
+          {
+            "step": 2,
+            "title": "Read the starting time",
+            "explanation": "First note the time at which the activity begins. Write hours and minutes clearly."
+          },
+          {
+            "step": 3,
+            "title": "Read the ending time",
+            "explanation": "Then note the time at which the activity ends. Be careful with AM, PM, and crossing 12 o’clock."
+          },
+          {
+            "step": 4,
+            "title": "Find the difference step by step",
+            "explanation": "Count from start time to the next hour, then count full hours, then count remaining minutes."
+          },
+          {
+            "step": 5,
+            "title": "Check the answer",
+            "explanation": "A duration answer should make sense. For example, a race may take seconds, a class may take minutes, and a journey may take hours."
+          }
+        ],
+        "examples": [
+          "Use a number line, grid, clock, map or drawing before doing hard calculations.",
+          "Write units like cm, kg, litre or minutes with the answer.",
+          "Check whether your answer is bigger/smaller according to the question."
+        ],
+        "importantKeywords": [
+          {
+            "keyword": "start time",
+            "definition": "The time when an activity begins.",
+            "simpleExample": "In this topic, 'start time' helps you solve questions about time duration problems."
+          },
+          {
+            "keyword": "end time",
+            "definition": "The time when an activity finishes.",
+            "simpleExample": "In this topic, 'end time' helps you solve questions about time duration problems."
+          },
+          {
+            "keyword": "elapsed time",
+            "definition": "The time passed between start and end.",
+            "simpleExample": "In this topic, 'elapsed time' helps you solve questions about time duration problems."
+          },
+          {
+            "keyword": "convert",
+            "definition": "To change from one form or unit to another.",
+            "simpleExample": "In this topic, 'convert' helps you solve questions about time duration problems."
+          },
+          {
+            "keyword": "schedule",
+            "definition": "A plan showing time for activities.",
+            "simpleExample": "In this topic, 'schedule' helps you solve questions about time duration problems."
+          }
+        ],
+        "quickSummary": "Time Duration Problems helps students understand finding start time, end time or total time. through examples, activities and step-by-step problem solving.",
+        "revisionNotes": [
+          "Read the question carefully before solving.",
+          "Underline important numbers and units.",
+          "Use drawings or tables when possible.",
+          "Write the final answer with the correct unit.",
+          "Check the answer using estimation or reverse operation."
+        ]
+      }
+    ]
+  },
+  {
+    "class": 5,
+    "board": "CBSE",
+    "subject": "Maths",
+    "book": {
+      "name": "NCERT",
+      "sourcePdf": "Class 5 uploaded NCERT PDF"
+    },
+    "chapterNumber": 13,
+    "chapter": "Animal Jumps",
+    "topics": [
+      {
+        "topic": "Number Patterns through Jumps",
+        "meaning": "Using equal jumps on a number line to study patterns.",
+        "ncertBasedExplanation": "In NCERT Class 5 Maths chapter 'Animal Jumps', learners explore this idea using pictures, activities, tables, questions and real-life situations. The chapter expects students to notice patterns, explain their thinking, and solve problems step by step instead of only memorising answers.",
+        "easyExplanation": "In this topic, do not memorise the answer. Understand the idea, take one small example, solve it step by step, and then check your answer using the meaning of the numbers or shapes.",
+        "stepByStepExplanation": [
+          {
+            "step": 1,
+            "title": "Observe the shape or design",
+            "explanation": "Look carefully at the lines, corners, repeated parts, and direction of the design."
+          },
+          {
+            "step": 2,
+            "title": "Find repeated parts",
+            "explanation": "A pattern is made when a shape, colour, number, or design repeats in a fixed way."
+          },
+          {
+            "step": 3,
+            "title": "Check symmetry",
+            "explanation": "A design has symmetry if one part matches another part after folding, reflection, or rotation."
+          },
+          {
+            "step": 4,
+            "title": "Continue the pattern",
+            "explanation": "To continue a pattern, first find the rule, then repeat the same rule for the next steps."
+          },
+          {
+            "step": 5,
+            "title": "Create your own design",
+            "explanation": "After understanding the rule, make a new pattern using shapes, blocks, tiles, or drawings."
+          }
+        ],
+        "examples": [
+          "Use a number line, grid, clock, map or drawing before doing hard calculations.",
+          "Write units like cm, kg, litre or minutes with the answer.",
+          "Check whether your answer is bigger/smaller according to the question."
+        ],
+        "importantKeywords": [
+          {
+            "keyword": "jump",
+            "definition": "A fixed movement from one number to another on a number line.",
+            "simpleExample": "In this topic, 'jump' helps you solve questions about number patterns through jumps."
+          },
+          {
+            "keyword": "number pattern",
+            "definition": "A list of numbers that follows a rule.",
+            "simpleExample": "In this topic, 'number pattern' helps you solve questions about number patterns through jumps."
+          },
+          {
+            "keyword": "skip counting",
+            "definition": "Counting forward by numbers other than one, such as 2, 5 or 10.",
+            "simpleExample": "In this topic, 'skip counting' helps you solve questions about number patterns through jumps."
+          },
+          {
+            "keyword": "number line",
+            "definition": "A line on which numbers are marked in order.",
+            "simpleExample": "In this topic, 'number line' helps you solve questions about number patterns through jumps."
+          },
+          {
+            "keyword": "interval",
+            "definition": "The equal space or difference between numbers.",
+            "simpleExample": "In this topic, 'interval' helps you solve questions about number patterns through jumps."
+          }
+        ],
+        "quickSummary": "Number Patterns through Jumps helps students understand using equal jumps on a number line to study patterns. through examples, activities and step-by-step problem solving.",
+        "revisionNotes": [
+          "Read the question carefully before solving.",
+          "Underline important numbers and units.",
+          "Use drawings or tables when possible.",
+          "Write the final answer with the correct unit.",
+          "Check the answer using estimation or reverse operation."
+        ]
+      },
+      {
+        "topic": "Multiples and Common Jumps",
+        "meaning": "Finding numbers reached by repeated equal jumps.",
+        "ncertBasedExplanation": "In NCERT Class 5 Maths chapter 'Animal Jumps', learners explore this idea using pictures, activities, tables, questions and real-life situations. The chapter expects students to notice patterns, explain their thinking, and solve problems step by step instead of only memorising answers.",
+        "easyExplanation": "In this topic, do not memorise the answer. Understand the idea, take one small example, solve it step by step, and then check your answer using the meaning of the numbers or shapes.",
+        "stepByStepExplanation": [
+          {
+            "step": 1,
+            "title": "Understand the situation",
+            "explanation": "Find out whether the question is about equal groups, sharing, repeated addition, repeated subtraction, or number jumps."
+          },
+          {
+            "step": 2,
+            "title": "Choose multiplication or division",
+            "explanation": "Use multiplication when equal groups are joined. Use division when something is shared equally or split into groups."
+          },
+          {
+            "step": 3,
+            "title": "Write the number sentence",
+            "explanation": "Convert the story into a maths sentence, such as 6 groups of 8 = 6 × 8, or 48 shared among 6 = 48 ÷ 6."
+          },
+          {
+            "step": 4,
+            "title": "Solve using a clear method",
+            "explanation": "You may use tables, repeated addition, repeated subtraction, arrays, or long division depending on the question."
+          },
+          {
+            "step": 5,
+            "title": "Check with reverse operation",
+            "explanation": "Check multiplication using division and division using multiplication. This helps catch mistakes."
+          }
+        ],
+        "examples": [
+          "Use a number line, grid, clock, map or drawing before doing hard calculations.",
+          "Write units like cm, kg, litre or minutes with the answer.",
+          "Check whether your answer is bigger/smaller according to the question."
+        ],
+        "importantKeywords": [
+          {
+            "keyword": "multiple",
+            "definition": "A number obtained by multiplying a given number by 1, 2, 3 and so on.",
+            "simpleExample": "In this topic, 'multiple' helps you solve questions about multiples and common jumps."
+          },
+          {
+            "keyword": "common multiple",
+            "definition": "A number that is a multiple of two or more numbers.",
+            "simpleExample": "In this topic, 'common multiple' helps you solve questions about multiples and common jumps."
+          },
+          {
+            "keyword": "repeated addition",
+            "definition": "Adding the same number again and again.",
+            "simpleExample": "In this topic, 'repeated addition' helps you solve questions about multiples and common jumps."
+          },
+          {
+            "keyword": "landing point",
+            "definition": "The number reached after jumps.",
+            "simpleExample": "In this topic, 'landing point' helps you solve questions about multiples and common jumps."
+          },
+          {
+            "keyword": "sequence",
+            "definition": "An ordered list of numbers, shapes or objects.",
+            "simpleExample": "In this topic, 'sequence' helps you solve questions about multiples and common jumps."
+          }
+        ],
+        "quickSummary": "Multiples and Common Jumps helps students understand finding numbers reached by repeated equal jumps. through examples, activities and step-by-step problem solving.",
+        "revisionNotes": [
+          "Read the question carefully before solving.",
+          "Underline important numbers and units.",
+          "Use drawings or tables when possible.",
+          "Write the final answer with the correct unit.",
+          "Check the answer using estimation or reverse operation."
+        ]
+      },
+      {
+        "topic": "Puzzle Thinking",
+        "meaning": "Using clues and patterns to find hidden numbers.",
+        "ncertBasedExplanation": "In NCERT Class 5 Maths chapter 'Animal Jumps', learners explore this idea using pictures, activities, tables, questions and real-life situations. The chapter expects students to notice patterns, explain their thinking, and solve problems step by step instead of only memorising answers.",
+        "easyExplanation": "In this topic, do not memorise the answer. Understand the idea, take one small example, solve it step by step, and then check your answer using the meaning of the numbers or shapes.",
+        "stepByStepExplanation": [
+          {
+            "step": 1,
+            "title": "Understand the concept",
+            "explanation": "Using clues and patterns to find hidden numbers."
+          },
+          {
+            "step": 2,
+            "title": "Take one simple example",
+            "explanation": "Use small numbers, a drawing, or daily life objects so the idea becomes visible."
+          },
+          {
+            "step": 3,
+            "title": "Write the mathematical information",
+            "explanation": "Write the numbers, units, shapes, or clues given in the question in an organised way."
+          },
+          {
+            "step": 4,
+            "title": "Solve slowly",
+            "explanation": "Apply the rule one step at a time and do not skip calculation steps."
+          },
+          {
+            "step": 5,
+            "title": "Explain and verify",
+            "explanation": "Write the final answer with units if needed, and check whether it is reasonable."
+          }
+        ],
+        "examples": [
+          "Use a number line, grid, clock, map or drawing before doing hard calculations.",
+          "Write units like cm, kg, litre or minutes with the answer.",
+          "Check whether your answer is bigger/smaller according to the question."
+        ],
+        "importantKeywords": [
+          {
+            "keyword": "clue",
+            "definition": "A hint that helps solve a puzzle.",
+            "simpleExample": "In this topic, 'clue' helps you solve questions about puzzle thinking."
+          },
+          {
+            "keyword": "puzzle",
+            "definition": "A problem that needs careful thinking to solve.",
+            "simpleExample": "In this topic, 'puzzle' helps you solve questions about puzzle thinking."
+          },
+          {
+            "keyword": "logic",
+            "definition": "Reasoning used to find the correct answer.",
+            "simpleExample": "In this topic, 'logic' helps you solve questions about puzzle thinking."
+          },
+          {
+            "keyword": "hidden number",
+            "definition": "A number that must be found using clues.",
+            "simpleExample": "In this topic, 'hidden number' helps you solve questions about puzzle thinking."
+          },
+          {
+            "keyword": "reasoning",
+            "definition": "Thinking step by step with evidence.",
+            "simpleExample": "In this topic, 'reasoning' helps you solve questions about puzzle thinking."
+          }
+        ],
+        "quickSummary": "Puzzle Thinking helps students understand using clues and patterns to find hidden numbers. through examples, activities and step-by-step problem solving.",
+        "revisionNotes": [
+          "Read the question carefully before solving.",
+          "Underline important numbers and units.",
+          "Use drawings or tables when possible.",
+          "Write the final answer with the correct unit.",
+          "Check the answer using estimation or reverse operation."
+        ]
+      }
+    ]
+  },
+  {
+    "class": 5,
+    "board": "CBSE",
+    "subject": "Maths",
+    "book": {
+      "name": "NCERT",
+      "sourcePdf": "Class 5 uploaded NCERT PDF"
+    },
+    "chapterNumber": 14,
+    "chapter": "Maps and Locations",
+    "topics": [
+      {
+        "topic": "Directions on a Map",
+        "meaning": "Using north, south, east and west to describe location.",
+        "ncertBasedExplanation": "In NCERT Class 5 Maths chapter 'Maps and Locations', learners explore this idea using pictures, activities, tables, questions and real-life situations. The chapter expects students to notice patterns, explain their thinking, and solve problems step by step instead of only memorising answers.",
+        "easyExplanation": "In this topic, do not memorise the answer. Understand the idea, take one small example, solve it step by step, and then check your answer using the meaning of the numbers or shapes.",
+        "stepByStepExplanation": [
+          {
+            "step": 1,
+            "title": "Understand a turn",
+            "explanation": "An angle can be understood as the amount of turn. When you turn from one direction to another, you make an angle."
+          },
+          {
+            "step": 2,
+            "title": "Use daily examples",
+            "explanation": "Turning a door handle, rotating a clock hand, taking a left turn, or opening a book all show angles as turns."
+          },
+          {
+            "step": 3,
+            "title": "Know right angle",
+            "explanation": "A quarter turn makes a right angle. It is the angle seen at the corner of a square or rectangle."
+          },
+          {
+            "step": 4,
+            "title": "Compare turns",
+            "explanation": "A half turn is bigger than a quarter turn, and a full turn brings you back to the starting direction."
+          },
+          {
+            "step": 5,
+            "title": "Apply to maps and movement",
+            "explanation": "Directions like left, right, north, south, clockwise, and anticlockwise can be understood using turns."
+          }
+        ],
+        "examples": [
+          "Use a number line, grid, clock, map or drawing before doing hard calculations.",
+          "Write units like cm, kg, litre or minutes with the answer.",
+          "Check whether your answer is bigger/smaller according to the question."
+        ],
+        "importantKeywords": [
+          {
+            "keyword": "north",
+            "definition": "The direction shown at the top of most maps.",
+            "simpleExample": "In this topic, 'north' helps you solve questions about directions on a map."
+          },
+          {
+            "keyword": "south",
+            "definition": "The direction opposite north.",
+            "simpleExample": "In this topic, 'south' helps you solve questions about directions on a map."
+          },
+          {
+            "keyword": "east",
+            "definition": "The direction where the Sun rises.",
+            "simpleExample": "In this topic, 'east' helps you solve questions about directions on a map."
+          },
+          {
+            "keyword": "west",
+            "definition": "The direction where the Sun sets.",
+            "simpleExample": "In this topic, 'west' helps you solve questions about directions on a map."
+          },
+          {
+            "keyword": "direction",
+            "definition": "The way in which something faces or moves.",
+            "simpleExample": "In this topic, 'direction' helps you solve questions about directions on a map."
+          }
+        ],
+        "quickSummary": "Directions on a Map helps students understand using north, south, east and west to describe location. through examples, activities and step-by-step problem solving.",
+        "revisionNotes": [
+          "Read the question carefully before solving.",
+          "Underline important numbers and units.",
+          "Use drawings or tables when possible.",
+          "Write the final answer with the correct unit.",
+          "Check the answer using estimation or reverse operation."
+        ]
+      },
+      {
+        "topic": "Routes and Turns",
+        "meaning": "Following instructions to move from one place to another.",
+        "ncertBasedExplanation": "In NCERT Class 5 Maths chapter 'Maps and Locations', learners explore this idea using pictures, activities, tables, questions and real-life situations. The chapter expects students to notice patterns, explain their thinking, and solve problems step by step instead of only memorising answers.",
+        "easyExplanation": "In this topic, do not memorise the answer. Understand the idea, take one small example, solve it step by step, and then check your answer using the meaning of the numbers or shapes.",
+        "stepByStepExplanation": [
+          {
+            "step": 1,
+            "title": "Understand a turn",
+            "explanation": "An angle can be understood as the amount of turn. When you turn from one direction to another, you make an angle."
+          },
+          {
+            "step": 2,
+            "title": "Use daily examples",
+            "explanation": "Turning a door handle, rotating a clock hand, taking a left turn, or opening a book all show angles as turns."
+          },
+          {
+            "step": 3,
+            "title": "Know right angle",
+            "explanation": "A quarter turn makes a right angle. It is the angle seen at the corner of a square or rectangle."
+          },
+          {
+            "step": 4,
+            "title": "Compare turns",
+            "explanation": "A half turn is bigger than a quarter turn, and a full turn brings you back to the starting direction."
+          },
+          {
+            "step": 5,
+            "title": "Apply to maps and movement",
+            "explanation": "Directions like left, right, north, south, clockwise, and anticlockwise can be understood using turns."
+          }
+        ],
+        "examples": [
+          "Use a number line, grid, clock, map or drawing before doing hard calculations.",
+          "Write units like cm, kg, litre or minutes with the answer.",
+          "Check whether your answer is bigger/smaller according to the question."
+        ],
+        "importantKeywords": [
+          {
+            "keyword": "route",
+            "definition": "A path from one place to another.",
+            "simpleExample": "In this topic, 'route' helps you solve questions about routes and turns."
+          },
+          {
+            "keyword": "turn",
+            "definition": "A change in direction.",
+            "simpleExample": "In this topic, 'turn' helps you solve questions about routes and turns."
+          },
+          {
+            "keyword": "left",
+            "definition": "The direction opposite right.",
+            "simpleExample": "In this topic, 'left' helps you solve questions about routes and turns."
+          },
+          {
+            "keyword": "right",
+            "definition": "The direction opposite left.",
+            "simpleExample": "In this topic, 'right' helps you solve questions about routes and turns."
+          },
+          {
+            "keyword": "landmark",
+            "definition": "An important place or object used to locate something.",
+            "simpleExample": "In this topic, 'landmark' helps you solve questions about routes and turns."
+          }
+        ],
+        "quickSummary": "Routes and Turns helps students understand following instructions to move from one place to another. through examples, activities and step-by-step problem solving.",
+        "revisionNotes": [
+          "Read the question carefully before solving.",
+          "Underline important numbers and units.",
+          "Use drawings or tables when possible.",
+          "Write the final answer with the correct unit.",
+          "Check the answer using estimation or reverse operation."
+        ]
+      },
+      {
+        "topic": "Grid Locations",
+        "meaning": "Finding places using rows, columns and coordinates.",
+        "ncertBasedExplanation": "In NCERT Class 5 Maths chapter 'Maps and Locations', learners explore this idea using pictures, activities, tables, questions and real-life situations. The chapter expects students to notice patterns, explain their thinking, and solve problems step by step instead of only memorising answers.",
+        "easyExplanation": "In this topic, do not memorise the answer. Understand the idea, take one small example, solve it step by step, and then check your answer using the meaning of the numbers or shapes.",
+        "stepByStepExplanation": [
+          {
+            "step": 1,
+            "title": "Understand the concept",
+            "explanation": "Finding places using rows, columns and coordinates."
+          },
+          {
+            "step": 2,
+            "title": "Take one simple example",
+            "explanation": "Use small numbers, a drawing, or daily life objects so the idea becomes visible."
+          },
+          {
+            "step": 3,
+            "title": "Write the mathematical information",
+            "explanation": "Write the numbers, units, shapes, or clues given in the question in an organised way."
+          },
+          {
+            "step": 4,
+            "title": "Solve slowly",
+            "explanation": "Apply the rule one step at a time and do not skip calculation steps."
+          },
+          {
+            "step": 5,
+            "title": "Explain and verify",
+            "explanation": "Write the final answer with units if needed, and check whether it is reasonable."
+          }
+        ],
+        "examples": [
+          "Use a number line, grid, clock, map or drawing before doing hard calculations.",
+          "Write units like cm, kg, litre or minutes with the answer.",
+          "Check whether your answer is bigger/smaller according to the question."
+        ],
+        "importantKeywords": [
+          {
+            "keyword": "grid",
+            "definition": "A network of rows and columns.",
+            "simpleExample": "In this topic, 'grid' helps you solve questions about grid locations."
+          },
+          {
+            "keyword": "row",
+            "definition": "A horizontal line in a grid.",
+            "simpleExample": "In this topic, 'row' helps you solve questions about grid locations."
+          },
+          {
+            "keyword": "column",
+            "definition": "A vertical line in a grid.",
+            "simpleExample": "In this topic, 'column' helps you solve questions about grid locations."
+          },
+          {
+            "keyword": "coordinate",
+            "definition": "A pair of values used to locate a point on a grid.",
+            "simpleExample": "In this topic, 'coordinate' helps you solve questions about grid locations."
+          },
+          {
+            "keyword": "map key",
+            "definition": "A list explaining symbols used on a map.",
+            "simpleExample": "In this topic, 'map key' helps you solve questions about grid locations."
+          }
+        ],
+        "quickSummary": "Grid Locations helps students understand finding places using rows, columns and coordinates. through examples, activities and step-by-step problem solving.",
+        "revisionNotes": [
+          "Read the question carefully before solving.",
+          "Underline important numbers and units.",
+          "Use drawings or tables when possible.",
+          "Write the final answer with the correct unit.",
+          "Check the answer using estimation or reverse operation."
+        ]
+      }
+    ]
+  },
+  {
+    "class": 5,
+    "board": "CBSE",
+    "subject": "Maths",
+    "book": {
+      "name": "NCERT",
+      "sourcePdf": "Class 5 uploaded NCERT PDF"
+    },
+    "chapterNumber": 15,
+    "chapter": "Data Through Pictures",
+    "topics": [
+      {
+        "topic": "Pictographs",
+        "meaning": "Showing data using pictures or icons.",
+        "ncertBasedExplanation": "In NCERT Class 5 Maths chapter 'Data Through Pictures', learners explore this idea using pictures, activities, tables, questions and real-life situations. The chapter expects students to notice patterns, explain their thinking, and solve problems step by step instead of only memorising answers.",
+        "easyExplanation": "In this topic, do not memorise the answer. Understand the idea, take one small example, solve it step by step, and then check your answer using the meaning of the numbers or shapes.",
+        "stepByStepExplanation": [
+          {
+            "step": 1,
+            "title": "Understand what the data shows",
+            "explanation": "Data means collected information. First see what is being counted, such as animals, vehicles, fruits, marks, or students."
+          },
+          {
+            "step": 2,
+            "title": "Read the title and labels",
+            "explanation": "The title tells the topic of the graph. Labels tell what each row, column, or bar means."
+          },
+          {
+            "step": 3,
+            "title": "Check the key or scale",
+            "explanation": "In a pictograph, one picture may represent more than one object. In a bar graph, the scale tells how much each mark or height represents."
+          },
+          {
+            "step": 4,
+            "title": "Compare the values",
+            "explanation": "Find the highest, lowest, equal, more than, less than, and difference by reading the graph carefully."
+          },
+          {
+            "step": 5,
+            "title": "Write the conclusion",
+            "explanation": "After reading the graph, write one clear sentence about what the data tells you."
+          }
+        ],
+        "examples": [
+          "Use a number line, grid, clock, map or drawing before doing hard calculations.",
+          "Write units like cm, kg, litre or minutes with the answer.",
+          "Check whether your answer is bigger/smaller according to the question."
+        ],
+        "importantKeywords": [
+          {
+            "keyword": "data",
+            "definition": "Information collected for study.",
+            "simpleExample": "In this topic, 'data' helps you solve questions about pictographs."
+          },
+          {
+            "keyword": "pictograph",
+            "definition": "A graph that uses pictures or icons to show data.",
+            "simpleExample": "In this topic, 'pictograph' helps you solve questions about pictographs."
+          },
+          {
+            "keyword": "icon",
+            "definition": "A small picture representing a number or object.",
+            "simpleExample": "In this topic, 'icon' helps you solve questions about pictographs."
+          },
+          {
+            "keyword": "key",
+            "definition": "A note explaining what each icon or symbol represents.",
+            "simpleExample": "In this topic, 'key' helps you solve questions about pictographs."
+          },
+          {
+            "keyword": "count",
+            "definition": "To find how many objects there are.",
+            "simpleExample": "In this topic, 'count' helps you solve questions about pictographs."
+          }
+        ],
+        "quickSummary": "Pictographs helps students understand showing data using pictures or icons. through examples, activities and step-by-step problem solving.",
+        "revisionNotes": [
+          "Read the question carefully before solving.",
+          "Underline important numbers and units.",
+          "Use drawings or tables when possible.",
+          "Write the final answer with the correct unit.",
+          "Check the answer using estimation or reverse operation."
+        ]
+      },
+      {
+        "topic": "Bar Graphs",
+        "meaning": "Showing numbers using bars of different heights or lengths.",
+        "ncertBasedExplanation": "In NCERT Class 5 Maths chapter 'Data Through Pictures', learners explore this idea using pictures, activities, tables, questions and real-life situations. The chapter expects students to notice patterns, explain their thinking, and solve problems step by step instead of only memorising answers.",
+        "easyExplanation": "In this topic, do not memorise the answer. Understand the idea, take one small example, solve it step by step, and then check your answer using the meaning of the numbers or shapes.",
+        "stepByStepExplanation": [
+          {
+            "step": 1,
+            "title": "Understand what the data shows",
+            "explanation": "Data means collected information. First see what is being counted, such as animals, vehicles, fruits, marks, or students."
+          },
+          {
+            "step": 2,
+            "title": "Read the title and labels",
+            "explanation": "The title tells the topic of the graph. Labels tell what each row, column, or bar means."
+          },
+          {
+            "step": 3,
+            "title": "Check the key or scale",
+            "explanation": "In a pictograph, one picture may represent more than one object. In a bar graph, the scale tells how much each mark or height represents."
+          },
+          {
+            "step": 4,
+            "title": "Compare the values",
+            "explanation": "Find the highest, lowest, equal, more than, less than, and difference by reading the graph carefully."
+          },
+          {
+            "step": 5,
+            "title": "Write the conclusion",
+            "explanation": "After reading the graph, write one clear sentence about what the data tells you."
+          }
+        ],
+        "examples": [
+          "Use a number line, grid, clock, map or drawing before doing hard calculations.",
+          "Write units like cm, kg, litre or minutes with the answer.",
+          "Check whether your answer is bigger/smaller according to the question."
+        ],
+        "importantKeywords": [
+          {
+            "keyword": "bar graph",
+            "definition": "A graph that uses bars to show and compare data.",
+            "simpleExample": "In this topic, 'bar graph' helps you solve questions about bar graphs."
+          },
+          {
+            "keyword": "axis",
+            "definition": "A reference line on a graph.",
+            "simpleExample": "In this topic, 'axis' helps you solve questions about bar graphs."
+          },
+          {
+            "keyword": "scale",
+            "definition": "A measuring tool or a ratio used on maps.",
+            "simpleExample": "In this topic, 'scale' helps you solve questions about bar graphs."
+          },
+          {
+            "keyword": "category",
+            "definition": "A group or type in data.",
+            "simpleExample": "In this topic, 'category' helps you solve questions about bar graphs."
+          },
+          {
+            "keyword": "value",
+            "definition": "The number shown for a category.",
+            "simpleExample": "In this topic, 'value' helps you solve questions about bar graphs."
+          }
+        ],
+        "quickSummary": "Bar Graphs helps students understand showing numbers using bars of different heights or lengths. through examples, activities and step-by-step problem solving.",
+        "revisionNotes": [
+          "Read the question carefully before solving.",
+          "Underline important numbers and units.",
+          "Use drawings or tables when possible.",
+          "Write the final answer with the correct unit.",
+          "Check the answer using estimation or reverse operation."
+        ]
+      },
+      {
+        "topic": "Reading and Interpreting Data",
+        "meaning": "Answering questions by comparing values in a graph or picture.",
+        "ncertBasedExplanation": "In NCERT Class 5 Maths chapter 'Data Through Pictures', learners explore this idea using pictures, activities, tables, questions and real-life situations. The chapter expects students to notice patterns, explain their thinking, and solve problems step by step instead of only memorising answers.",
+        "easyExplanation": "In this topic, do not memorise the answer. Understand the idea, take one small example, solve it step by step, and then check your answer using the meaning of the numbers or shapes.",
+        "stepByStepExplanation": [
+          {
+            "step": 1,
+            "title": "Understand what the data shows",
+            "explanation": "Data means collected information. First see what is being counted, such as animals, vehicles, fruits, marks, or students."
+          },
+          {
+            "step": 2,
+            "title": "Read the title and labels",
+            "explanation": "The title tells the topic of the graph. Labels tell what each row, column, or bar means."
+          },
+          {
+            "step": 3,
+            "title": "Check the key or scale",
+            "explanation": "In a pictograph, one picture may represent more than one object. In a bar graph, the scale tells how much each mark or height represents."
+          },
+          {
+            "step": 4,
+            "title": "Compare the values",
+            "explanation": "Find the highest, lowest, equal, more than, less than, and difference by reading the graph carefully."
+          },
+          {
+            "step": 5,
+            "title": "Write the conclusion",
+            "explanation": "After reading the graph, write one clear sentence about what the data tells you."
+          }
+        ],
+        "examples": [
+          "Use a number line, grid, clock, map or drawing before doing hard calculations.",
+          "Write units like cm, kg, litre or minutes with the answer.",
+          "Check whether your answer is bigger/smaller according to the question."
+        ],
+        "importantKeywords": [
+          {
+            "keyword": "interpret",
+            "definition": "To understand and explain data.",
+            "simpleExample": "In this topic, 'interpret' helps you solve questions about reading and interpreting data."
+          },
+          {
+            "keyword": "most",
+            "definition": "The greatest number or amount.",
+            "simpleExample": "In this topic, 'most' helps you solve questions about reading and interpreting data."
+          },
+          {
+            "keyword": "least",
+            "definition": "The smallest number or amount.",
+            "simpleExample": "In this topic, 'least' helps you solve questions about reading and interpreting data."
+          },
+          {
+            "keyword": "difference",
+            "definition": "The amount by which one number is more or less than another.",
+            "simpleExample": "In this topic, 'difference' helps you solve questions about reading and interpreting data."
+          },
+          {
+            "keyword": "total",
+            "definition": "The complete amount after adding.",
+            "simpleExample": "In this topic, 'total' helps you solve questions about reading and interpreting data."
+          }
+        ],
+        "quickSummary": "Reading and Interpreting Data helps students understand answering questions by comparing values in a graph or picture. through examples, activities and step-by-step problem solving.",
+        "revisionNotes": [
+          "Read the question carefully before solving.",
+          "Underline important numbers and units.",
+          "Use drawings or tables when possible.",
+          "Write the final answer with the correct unit.",
+          "Check the answer using estimation or reverse operation."
+        ]
+      }
+    ]
+  }
+]

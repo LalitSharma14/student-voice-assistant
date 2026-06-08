@@ -381,10 +381,22 @@ export default function Home() {
   };
  
   // All original functions — unchanged
+  const slugForId = (value) => {
+    const text = String(value || "").toLowerCase();
+    let output = "";
+    for (const char of text) {
+      if (/^[a-z0-9]$/.test(char)) output += char;
+      else if (/[\s\-_./'’:]/.test(char)) output += "_";
+      else if (/\p{L}|\p{N}/u.test(char)) output += `u${char.codePointAt(0).toString(16)}`;
+      else output += "_";
+    }
+    return output.replace(/_+/g, "_").replace(/^_+|_+$/g, "");
+  };
+
   const getTopicId = (subject, chapterTitle, topicTitle) =>
-    `${classLevel}_${board}_${subject}_${chapterTitle}_${topicTitle}`.toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_+|_+$/g, "");
+    slugForId(`${classLevel}_${board}_${subject}_${chapterTitle}_${topicTitle}`);
   const getContentId = (subject, chapterTitle, topicTitle) =>
-    `class_${classLevel}_${board}_${subject}_${chapterTitle}_${topicTitle}`.toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_+|_+$/g, "");
+    slugForId(`class_${classLevel}_${board}_${subject}_${chapterTitle}_${topicTitle}`);
   const getTopicStatus = (subject, chapterTitle, topicTitle) => topicProgress[getTopicId(subject, chapterTitle, topicTitle)]?.status || "Not Started";
   const isCompletedStatus = (status) => COMPLETED_STATUSES.includes(status);
   const getProgressStatus = (completed, total) => { if (total === 0 || completed === 0) return "Not Started"; if (completed === total) return "Completed"; return "In Progress"; };

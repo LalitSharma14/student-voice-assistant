@@ -1,0 +1,927 @@
+{
+  "metadata": {
+    "class": 5,
+    "board": "CBSE",
+    "createdFor": "Backend-ready NCERT notes for student app",
+    "generatedOn": "2026-06-08",
+    "formatFields": [
+      "class",
+      "board",
+      "subject",
+      "chapter",
+      "topic",
+      "meaning",
+      "ncertBasedExplanation",
+      "easyExplanation",
+      "examples",
+      "importantKeywords",
+      "quickSummary",
+      "revisionNotes"
+    ],
+    "note": "Explanations are simplified, paraphrased, student-friendly notes based on the uploaded NCERT PDFs.",
+    "subject": "English",
+    "totalChapters": 10
+  },
+  "chapters": [
+    {
+      "class": 5,
+      "board": "CBSE",
+      "subject": "English",
+      "chapterNumber": 1,
+      "chapter": "Papa’s Spectacles",
+      "language": "English",
+      "source": "NCERT Class 5 textbook PDF uploaded by user",
+      "topics": [
+        {
+          "topic": "Chapter understanding",
+          "meaning": "This topic explains the main idea, events, and message of 'Papa’s Spectacles'.",
+          "ncertBasedExplanation": "The poem shows a father searching everywhere for his spectacles. He cannot read, watch TV, or do small tasks without them. After looking in many places, the child notices that the spectacles are actually on Papa's head. The poem uses humour to show how people sometimes miss things that are very close to them.",
+          "easyExplanation": "In easy words, this chapter helps students understand care for family, observation, and humour. The events and characters show the idea in a simple way.",
+          "examples": [
+            "Help family members when they need support.",
+            "Observe carefully before worrying.",
+            "Small moments at home can be funny and loving."
+          ],
+          "importantKeywords": [
+            "spectacles",
+            "pair",
+            "glanced",
+            "searching",
+            "newspaper",
+            "vegetables",
+            "chapter",
+            "theme",
+            "message"
+          ],
+          "quickSummary": "The chapter teaches students about care for family, observation, and humour.",
+          "revisionNotes": [
+            "Remember the main theme: care for family, observation, and humour.",
+            "Identify the speaker or main character.",
+            "Notice the problem and how it is solved.",
+            "Learn new words from the lesson."
+          ]
+        },
+        {
+          "topic": "Values and life skills",
+          "meaning": "Values are good habits and qualities that help us become better human beings.",
+          "ncertBasedExplanation": "Through 'Papa’s Spectacles', students can connect the lesson with daily life. The chapter encourages observation, kindness, honesty, responsibility, or respect depending on the situation.",
+          "easyExplanation": "A lesson is not only for reading. It also teaches how to behave in real life.",
+          "examples": [
+            "Help family members when they need support.",
+            "Observe carefully before worrying.",
+            "Small moments at home can be funny and loving."
+          ],
+          "importantKeywords": [
+            "value",
+            "responsibility",
+            "kindness",
+            "respect",
+            "gratitude"
+          ],
+          "quickSummary": "Stories and poems teach useful values for everyday life.",
+          "revisionNotes": [
+            "Think about what the character learns.",
+            "Connect the lesson with your home and school life.",
+            "Practise good behaviour shown in the chapter."
+          ]
+        },
+        {
+          "topic": "Vocabulary and language practice",
+          "meaning": "Vocabulary means the important words we learn from a lesson.",
+          "ncertBasedExplanation": "The chapter gives students chances to learn words, spellings, phrases, sentence use, and speaking or writing practice related to 'Papa’s Spectacles'.",
+          "easyExplanation": "Learning new words helps us read, speak, and write better.",
+          "examples": [
+            "Use words from 'Papa’s Spectacles' in your own sentences.",
+            "Find similar words and opposite words.",
+            "Write a short paragraph about the chapter."
+          ],
+          "importantKeywords": [
+            "spectacles",
+            "pair",
+            "glanced",
+            "searching",
+            "newspaper",
+            "vegetables"
+          ],
+          "quickSummary": "New words improve reading, writing, and speaking skills.",
+          "revisionNotes": [
+            "Read new words aloud.",
+            "Check spellings carefully.",
+            "Use words in sentences.",
+            "Practise speaking and writing activities."
+          ]
+        }
+      ]
+    },
+    {
+      "class": 5,
+      "board": "CBSE",
+      "subject": "English",
+      "chapterNumber": 2,
+      "chapter": "Gone with the Scooter",
+      "language": "English",
+      "source": "NCERT Class 5 textbook PDF uploaded by user",
+      "topics": [
+        {
+          "topic": "Chapter understanding",
+          "meaning": "This topic explains the main idea, events, and message of 'Gone with the Scooter'.",
+          "ncertBasedExplanation": "The chapter revolves around a scooter-related situation and helps students think about alertness, care, and responsible behaviour. It encourages children to notice details, understand a problem, and respond sensibly instead of panicking.",
+          "easyExplanation": "In easy words, this chapter helps students understand presence of mind, responsibility, and problem solving. The events and characters show the idea in a simple way.",
+          "examples": [
+            "Stay alert in public places.",
+            "Take care of belongings.",
+            "Use presence of mind to solve problems."
+          ],
+          "importantKeywords": [
+            "scooter",
+            "journey",
+            "careful",
+            "lost",
+            "found",
+            "responsible",
+            "chapter",
+            "theme",
+            "message"
+          ],
+          "quickSummary": "The chapter teaches students about presence of mind, responsibility, and problem solving.",
+          "revisionNotes": [
+            "Remember the main theme: presence of mind, responsibility, and problem solving.",
+            "Identify the speaker or main character.",
+            "Notice the problem and how it is solved.",
+            "Learn new words from the lesson."
+          ]
+        },
+        {
+          "topic": "Values and life skills",
+          "meaning": "Values are good habits and qualities that help us become better human beings.",
+          "ncertBasedExplanation": "Through 'Gone with the Scooter', students can connect the lesson with daily life. The chapter encourages observation, kindness, honesty, responsibility, or respect depending on the situation.",
+          "easyExplanation": "A lesson is not only for reading. It also teaches how to behave in real life.",
+          "examples": [
+            "Stay alert in public places.",
+            "Take care of belongings.",
+            "Use presence of mind to solve problems."
+          ],
+          "importantKeywords": [
+            "value",
+            "responsibility",
+            "kindness",
+            "respect",
+            "gratitude"
+          ],
+          "quickSummary": "Stories and poems teach useful values for everyday life.",
+          "revisionNotes": [
+            "Think about what the character learns.",
+            "Connect the lesson with your home and school life.",
+            "Practise good behaviour shown in the chapter."
+          ]
+        },
+        {
+          "topic": "Vocabulary and language practice",
+          "meaning": "Vocabulary means the important words we learn from a lesson.",
+          "ncertBasedExplanation": "The chapter gives students chances to learn words, spellings, phrases, sentence use, and speaking or writing practice related to 'Gone with the Scooter'.",
+          "easyExplanation": "Learning new words helps us read, speak, and write better.",
+          "examples": [
+            "Use words from 'Gone with the Scooter' in your own sentences.",
+            "Find similar words and opposite words.",
+            "Write a short paragraph about the chapter."
+          ],
+          "importantKeywords": [
+            "scooter",
+            "journey",
+            "careful",
+            "lost",
+            "found",
+            "responsible"
+          ],
+          "quickSummary": "New words improve reading, writing, and speaking skills.",
+          "revisionNotes": [
+            "Read new words aloud.",
+            "Check spellings carefully.",
+            "Use words in sentences.",
+            "Practise speaking and writing activities."
+          ]
+        }
+      ]
+    },
+    {
+      "class": 5,
+      "board": "CBSE",
+      "subject": "English",
+      "chapterNumber": 3,
+      "chapter": "The Rainbow",
+      "language": "English",
+      "source": "NCERT Class 5 textbook PDF uploaded by user",
+      "topics": [
+        {
+          "topic": "Chapter understanding",
+          "meaning": "This topic explains the main idea, events, and message of 'The Rainbow'.",
+          "ncertBasedExplanation": "The poem presents the rainbow as a beautiful natural sight. It helps children enjoy colours, sky, rain, and sunshine. The poem connects observation of nature with imagination and joy.",
+          "easyExplanation": "In easy words, this chapter helps students understand beauty of nature and imagination. The events and characters show the idea in a simple way.",
+          "examples": [
+            "Enjoy the beauty of nature.",
+            "Observe colours and weather changes.",
+            "Use imagination while reading poems."
+          ],
+          "importantKeywords": [
+            "rainbow",
+            "colours",
+            "sky",
+            "rain",
+            "sunshine",
+            "beautiful",
+            "chapter",
+            "theme",
+            "message"
+          ],
+          "quickSummary": "The chapter teaches students about beauty of nature and imagination.",
+          "revisionNotes": [
+            "Remember the main theme: beauty of nature and imagination.",
+            "Identify the speaker or main character.",
+            "Notice the problem and how it is solved.",
+            "Learn new words from the lesson."
+          ]
+        },
+        {
+          "topic": "Values and life skills",
+          "meaning": "Values are good habits and qualities that help us become better human beings.",
+          "ncertBasedExplanation": "Through 'The Rainbow', students can connect the lesson with daily life. The chapter encourages observation, kindness, honesty, responsibility, or respect depending on the situation.",
+          "easyExplanation": "A lesson is not only for reading. It also teaches how to behave in real life.",
+          "examples": [
+            "Enjoy the beauty of nature.",
+            "Observe colours and weather changes.",
+            "Use imagination while reading poems."
+          ],
+          "importantKeywords": [
+            "value",
+            "responsibility",
+            "kindness",
+            "respect",
+            "gratitude"
+          ],
+          "quickSummary": "Stories and poems teach useful values for everyday life.",
+          "revisionNotes": [
+            "Think about what the character learns.",
+            "Connect the lesson with your home and school life.",
+            "Practise good behaviour shown in the chapter."
+          ]
+        },
+        {
+          "topic": "Vocabulary and language practice",
+          "meaning": "Vocabulary means the important words we learn from a lesson.",
+          "ncertBasedExplanation": "The chapter gives students chances to learn words, spellings, phrases, sentence use, and speaking or writing practice related to 'The Rainbow'.",
+          "easyExplanation": "Learning new words helps us read, speak, and write better.",
+          "examples": [
+            "Use words from 'The Rainbow' in your own sentences.",
+            "Find similar words and opposite words.",
+            "Write a short paragraph about the chapter."
+          ],
+          "importantKeywords": [
+            "rainbow",
+            "colours",
+            "sky",
+            "rain",
+            "sunshine",
+            "beautiful"
+          ],
+          "quickSummary": "New words improve reading, writing, and speaking skills.",
+          "revisionNotes": [
+            "Read new words aloud.",
+            "Check spellings carefully.",
+            "Use words in sentences.",
+            "Practise speaking and writing activities."
+          ]
+        }
+      ]
+    },
+    {
+      "class": 5,
+      "board": "CBSE",
+      "subject": "English",
+      "chapterNumber": 4,
+      "chapter": "The Wise Parrot",
+      "language": "English",
+      "source": "NCERT Class 5 textbook PDF uploaded by user",
+      "topics": [
+        {
+          "topic": "Chapter understanding",
+          "meaning": "This topic explains the main idea, events, and message of 'The Wise Parrot'.",
+          "ncertBasedExplanation": "The story shows how a parrot uses intelligence and careful thinking. Through the character of the wise parrot, students learn that wisdom is not about size or strength but about understanding situations correctly.",
+          "easyExplanation": "In easy words, this chapter helps students understand wisdom, clever thinking, and kindness. The events and characters show the idea in a simple way.",
+          "examples": [
+            "Think before acting.",
+            "Wisdom can solve difficult problems.",
+            "Be kind and fair to others."
+          ],
+          "importantKeywords": [
+            "wise",
+            "parrot",
+            "clever",
+            "decision",
+            "kindness",
+            "freedom",
+            "chapter",
+            "theme",
+            "message"
+          ],
+          "quickSummary": "The chapter teaches students about wisdom, clever thinking, and kindness.",
+          "revisionNotes": [
+            "Remember the main theme: wisdom, clever thinking, and kindness.",
+            "Identify the speaker or main character.",
+            "Notice the problem and how it is solved.",
+            "Learn new words from the lesson."
+          ]
+        },
+        {
+          "topic": "Values and life skills",
+          "meaning": "Values are good habits and qualities that help us become better human beings.",
+          "ncertBasedExplanation": "Through 'The Wise Parrot', students can connect the lesson with daily life. The chapter encourages observation, kindness, honesty, responsibility, or respect depending on the situation.",
+          "easyExplanation": "A lesson is not only for reading. It also teaches how to behave in real life.",
+          "examples": [
+            "Think before acting.",
+            "Wisdom can solve difficult problems.",
+            "Be kind and fair to others."
+          ],
+          "importantKeywords": [
+            "value",
+            "responsibility",
+            "kindness",
+            "respect",
+            "gratitude"
+          ],
+          "quickSummary": "Stories and poems teach useful values for everyday life.",
+          "revisionNotes": [
+            "Think about what the character learns.",
+            "Connect the lesson with your home and school life.",
+            "Practise good behaviour shown in the chapter."
+          ]
+        },
+        {
+          "topic": "Vocabulary and language practice",
+          "meaning": "Vocabulary means the important words we learn from a lesson.",
+          "ncertBasedExplanation": "The chapter gives students chances to learn words, spellings, phrases, sentence use, and speaking or writing practice related to 'The Wise Parrot'.",
+          "easyExplanation": "Learning new words helps us read, speak, and write better.",
+          "examples": [
+            "Use words from 'The Wise Parrot' in your own sentences.",
+            "Find similar words and opposite words.",
+            "Write a short paragraph about the chapter."
+          ],
+          "importantKeywords": [
+            "wise",
+            "parrot",
+            "clever",
+            "decision",
+            "kindness",
+            "freedom"
+          ],
+          "quickSummary": "New words improve reading, writing, and speaking skills.",
+          "revisionNotes": [
+            "Read new words aloud.",
+            "Check spellings carefully.",
+            "Use words in sentences.",
+            "Practise speaking and writing activities."
+          ]
+        }
+      ]
+    },
+    {
+      "class": 5,
+      "board": "CBSE",
+      "subject": "English",
+      "chapterNumber": 5,
+      "chapter": "The Frog",
+      "language": "English",
+      "source": "NCERT Class 5 textbook PDF uploaded by user",
+      "topics": [
+        {
+          "topic": "Chapter understanding",
+          "meaning": "This topic explains the main idea, events, and message of 'The Frog'.",
+          "ncertBasedExplanation": "The poem or lesson about the frog encourages students to observe small creatures around them. It helps children learn about movement, sound, habitat, and the role of animals in nature.",
+          "easyExplanation": "In easy words, this chapter helps students understand nature, animals, and observation. The events and characters show the idea in a simple way.",
+          "examples": [
+            "Respect small animals.",
+            "Observe nature carefully.",
+            "Every creature has a place in the environment."
+          ],
+          "importantKeywords": [
+            "frog",
+            "pond",
+            "jump",
+            "croak",
+            "water",
+            "nature",
+            "chapter",
+            "theme",
+            "message"
+          ],
+          "quickSummary": "The chapter teaches students about nature, animals, and observation.",
+          "revisionNotes": [
+            "Remember the main theme: nature, animals, and observation.",
+            "Identify the speaker or main character.",
+            "Notice the problem and how it is solved.",
+            "Learn new words from the lesson."
+          ]
+        },
+        {
+          "topic": "Values and life skills",
+          "meaning": "Values are good habits and qualities that help us become better human beings.",
+          "ncertBasedExplanation": "Through 'The Frog', students can connect the lesson with daily life. The chapter encourages observation, kindness, honesty, responsibility, or respect depending on the situation.",
+          "easyExplanation": "A lesson is not only for reading. It also teaches how to behave in real life.",
+          "examples": [
+            "Respect small animals.",
+            "Observe nature carefully.",
+            "Every creature has a place in the environment."
+          ],
+          "importantKeywords": [
+            "value",
+            "responsibility",
+            "kindness",
+            "respect",
+            "gratitude"
+          ],
+          "quickSummary": "Stories and poems teach useful values for everyday life.",
+          "revisionNotes": [
+            "Think about what the character learns.",
+            "Connect the lesson with your home and school life.",
+            "Practise good behaviour shown in the chapter."
+          ]
+        },
+        {
+          "topic": "Vocabulary and language practice",
+          "meaning": "Vocabulary means the important words we learn from a lesson.",
+          "ncertBasedExplanation": "The chapter gives students chances to learn words, spellings, phrases, sentence use, and speaking or writing practice related to 'The Frog'.",
+          "easyExplanation": "Learning new words helps us read, speak, and write better.",
+          "examples": [
+            "Use words from 'The Frog' in your own sentences.",
+            "Find similar words and opposite words.",
+            "Write a short paragraph about the chapter."
+          ],
+          "importantKeywords": [
+            "frog",
+            "pond",
+            "jump",
+            "croak",
+            "water",
+            "nature"
+          ],
+          "quickSummary": "New words improve reading, writing, and speaking skills.",
+          "revisionNotes": [
+            "Read new words aloud.",
+            "Check spellings carefully.",
+            "Use words in sentences.",
+            "Practise speaking and writing activities."
+          ]
+        }
+      ]
+    },
+    {
+      "class": 5,
+      "board": "CBSE",
+      "subject": "English",
+      "chapterNumber": 6,
+      "chapter": "What a Tank!",
+      "language": "English",
+      "source": "NCERT Class 5 textbook PDF uploaded by user",
+      "topics": [
+        {
+          "topic": "Chapter understanding",
+          "meaning": "This topic explains the main idea, events, and message of 'What a Tank!'.",
+          "ncertBasedExplanation": "The chapter focuses on a tank as an important source or storage place for water. Students learn how water structures help people, animals, and communities, especially when water is needed.",
+          "easyExplanation": "In easy words, this chapter helps students understand water storage, community life, and usefulness. The events and characters show the idea in a simple way.",
+          "examples": [
+            "Water is precious.",
+            "Community resources must be protected.",
+            "Store and use water wisely."
+          ],
+          "importantKeywords": [
+            "tank",
+            "water",
+            "storage",
+            "community",
+            "resource",
+            "clean",
+            "chapter",
+            "theme",
+            "message"
+          ],
+          "quickSummary": "The chapter teaches students about water storage, community life, and usefulness.",
+          "revisionNotes": [
+            "Remember the main theme: water storage, community life, and usefulness.",
+            "Identify the speaker or main character.",
+            "Notice the problem and how it is solved.",
+            "Learn new words from the lesson."
+          ]
+        },
+        {
+          "topic": "Values and life skills",
+          "meaning": "Values are good habits and qualities that help us become better human beings.",
+          "ncertBasedExplanation": "Through 'What a Tank!', students can connect the lesson with daily life. The chapter encourages observation, kindness, honesty, responsibility, or respect depending on the situation.",
+          "easyExplanation": "A lesson is not only for reading. It also teaches how to behave in real life.",
+          "examples": [
+            "Water is precious.",
+            "Community resources must be protected.",
+            "Store and use water wisely."
+          ],
+          "importantKeywords": [
+            "value",
+            "responsibility",
+            "kindness",
+            "respect",
+            "gratitude"
+          ],
+          "quickSummary": "Stories and poems teach useful values for everyday life.",
+          "revisionNotes": [
+            "Think about what the character learns.",
+            "Connect the lesson with your home and school life.",
+            "Practise good behaviour shown in the chapter."
+          ]
+        },
+        {
+          "topic": "Vocabulary and language practice",
+          "meaning": "Vocabulary means the important words we learn from a lesson.",
+          "ncertBasedExplanation": "The chapter gives students chances to learn words, spellings, phrases, sentence use, and speaking or writing practice related to 'What a Tank!'.",
+          "easyExplanation": "Learning new words helps us read, speak, and write better.",
+          "examples": [
+            "Use words from 'What a Tank!' in your own sentences.",
+            "Find similar words and opposite words.",
+            "Write a short paragraph about the chapter."
+          ],
+          "importantKeywords": [
+            "tank",
+            "water",
+            "storage",
+            "community",
+            "resource",
+            "clean"
+          ],
+          "quickSummary": "New words improve reading, writing, and speaking skills.",
+          "revisionNotes": [
+            "Read new words aloud.",
+            "Check spellings carefully.",
+            "Use words in sentences.",
+            "Practise speaking and writing activities."
+          ]
+        }
+      ]
+    },
+    {
+      "class": 5,
+      "board": "CBSE",
+      "subject": "English",
+      "chapterNumber": 7,
+      "chapter": "Gilli Danda",
+      "language": "English",
+      "source": "NCERT Class 5 textbook PDF uploaded by user",
+      "topics": [
+        {
+          "topic": "Chapter understanding",
+          "meaning": "This topic explains the main idea, events, and message of 'Gilli Danda'.",
+          "ncertBasedExplanation": "The chapter introduces the traditional Indian game Gilli Danda. It helps students understand outdoor play, rules, coordination, and the joy of playing with friends.",
+          "easyExplanation": "In easy words, this chapter helps students understand traditional games, teamwork, and childhood. The events and characters show the idea in a simple way.",
+          "examples": [
+            "Traditional games are valuable.",
+            "Playing outdoors builds fitness and teamwork.",
+            "Follow rules while playing."
+          ],
+          "importantKeywords": [
+            "gilli",
+            "danda",
+            "game",
+            "team",
+            "rules",
+            "playground",
+            "chapter",
+            "theme",
+            "message"
+          ],
+          "quickSummary": "The chapter teaches students about traditional games, teamwork, and childhood.",
+          "revisionNotes": [
+            "Remember the main theme: traditional games, teamwork, and childhood.",
+            "Identify the speaker or main character.",
+            "Notice the problem and how it is solved.",
+            "Learn new words from the lesson."
+          ]
+        },
+        {
+          "topic": "Values and life skills",
+          "meaning": "Values are good habits and qualities that help us become better human beings.",
+          "ncertBasedExplanation": "Through 'Gilli Danda', students can connect the lesson with daily life. The chapter encourages observation, kindness, honesty, responsibility, or respect depending on the situation.",
+          "easyExplanation": "A lesson is not only for reading. It also teaches how to behave in real life.",
+          "examples": [
+            "Traditional games are valuable.",
+            "Playing outdoors builds fitness and teamwork.",
+            "Follow rules while playing."
+          ],
+          "importantKeywords": [
+            "value",
+            "responsibility",
+            "kindness",
+            "respect",
+            "gratitude"
+          ],
+          "quickSummary": "Stories and poems teach useful values for everyday life.",
+          "revisionNotes": [
+            "Think about what the character learns.",
+            "Connect the lesson with your home and school life.",
+            "Practise good behaviour shown in the chapter."
+          ]
+        },
+        {
+          "topic": "Vocabulary and language practice",
+          "meaning": "Vocabulary means the important words we learn from a lesson.",
+          "ncertBasedExplanation": "The chapter gives students chances to learn words, spellings, phrases, sentence use, and speaking or writing practice related to 'Gilli Danda'.",
+          "easyExplanation": "Learning new words helps us read, speak, and write better.",
+          "examples": [
+            "Use words from 'Gilli Danda' in your own sentences.",
+            "Find similar words and opposite words.",
+            "Write a short paragraph about the chapter."
+          ],
+          "importantKeywords": [
+            "gilli",
+            "danda",
+            "game",
+            "team",
+            "rules",
+            "playground"
+          ],
+          "quickSummary": "New words improve reading, writing, and speaking skills.",
+          "revisionNotes": [
+            "Read new words aloud.",
+            "Check spellings carefully.",
+            "Use words in sentences.",
+            "Practise speaking and writing activities."
+          ]
+        }
+      ]
+    },
+    {
+      "class": 5,
+      "board": "CBSE",
+      "subject": "English",
+      "chapterNumber": 8,
+      "chapter": "The Decision of the Panchayat",
+      "language": "English",
+      "source": "NCERT Class 5 textbook PDF uploaded by user",
+      "topics": [
+        {
+          "topic": "Chapter understanding",
+          "meaning": "This topic explains the main idea, events, and message of 'The Decision of the Panchayat'.",
+          "ncertBasedExplanation": "The story explains how a panchayat discusses a matter and makes a decision. It helps students understand fairness, listening to all sides, and solving disputes peacefully.",
+          "easyExplanation": "In easy words, this chapter helps students understand justice, fairness, and community decision making. The events and characters show the idea in a simple way.",
+          "examples": [
+            "Listen before judging.",
+            "Fair decisions help society.",
+            "Community discussions can solve problems."
+          ],
+          "importantKeywords": [
+            "panchayat",
+            "decision",
+            "justice",
+            "fairness",
+            "village",
+            "discussion",
+            "chapter",
+            "theme",
+            "message"
+          ],
+          "quickSummary": "The chapter teaches students about justice, fairness, and community decision making.",
+          "revisionNotes": [
+            "Remember the main theme: justice, fairness, and community decision making.",
+            "Identify the speaker or main character.",
+            "Notice the problem and how it is solved.",
+            "Learn new words from the lesson."
+          ]
+        },
+        {
+          "topic": "Values and life skills",
+          "meaning": "Values are good habits and qualities that help us become better human beings.",
+          "ncertBasedExplanation": "Through 'The Decision of the Panchayat', students can connect the lesson with daily life. The chapter encourages observation, kindness, honesty, responsibility, or respect depending on the situation.",
+          "easyExplanation": "A lesson is not only for reading. It also teaches how to behave in real life.",
+          "examples": [
+            "Listen before judging.",
+            "Fair decisions help society.",
+            "Community discussions can solve problems."
+          ],
+          "importantKeywords": [
+            "value",
+            "responsibility",
+            "kindness",
+            "respect",
+            "gratitude"
+          ],
+          "quickSummary": "Stories and poems teach useful values for everyday life.",
+          "revisionNotes": [
+            "Think about what the character learns.",
+            "Connect the lesson with your home and school life.",
+            "Practise good behaviour shown in the chapter."
+          ]
+        },
+        {
+          "topic": "Vocabulary and language practice",
+          "meaning": "Vocabulary means the important words we learn from a lesson.",
+          "ncertBasedExplanation": "The chapter gives students chances to learn words, spellings, phrases, sentence use, and speaking or writing practice related to 'The Decision of the Panchayat'.",
+          "easyExplanation": "Learning new words helps us read, speak, and write better.",
+          "examples": [
+            "Use words from 'The Decision of the Panchayat' in your own sentences.",
+            "Find similar words and opposite words.",
+            "Write a short paragraph about the chapter."
+          ],
+          "importantKeywords": [
+            "panchayat",
+            "decision",
+            "justice",
+            "fairness",
+            "village",
+            "discussion"
+          ],
+          "quickSummary": "New words improve reading, writing, and speaking skills.",
+          "revisionNotes": [
+            "Read new words aloud.",
+            "Check spellings carefully.",
+            "Use words in sentences.",
+            "Practise speaking and writing activities."
+          ]
+        }
+      ]
+    },
+    {
+      "class": 5,
+      "board": "CBSE",
+      "subject": "English",
+      "chapterNumber": 9,
+      "chapter": "Vocation",
+      "language": "English",
+      "source": "NCERT Class 5 textbook PDF uploaded by user",
+      "topics": [
+        {
+          "topic": "Chapter understanding",
+          "meaning": "This topic explains the main idea, events, and message of 'Vocation'.",
+          "ncertBasedExplanation": "The poem or lesson explores different kinds of work people do. It helps children understand that every occupation has importance and every worker deserves respect.",
+          "easyExplanation": "In easy words, this chapter helps students understand respect for work and dignity of labour. The events and characters show the idea in a simple way.",
+          "examples": [
+            "Respect all kinds of work.",
+            "Every worker contributes to society.",
+            "Do your own work sincerely."
+          ],
+          "importantKeywords": [
+            "vocation",
+            "work",
+            "worker",
+            "profession",
+            "respect",
+            "labour",
+            "chapter",
+            "theme",
+            "message"
+          ],
+          "quickSummary": "The chapter teaches students about respect for work and dignity of labour.",
+          "revisionNotes": [
+            "Remember the main theme: respect for work and dignity of labour.",
+            "Identify the speaker or main character.",
+            "Notice the problem and how it is solved.",
+            "Learn new words from the lesson."
+          ]
+        },
+        {
+          "topic": "Values and life skills",
+          "meaning": "Values are good habits and qualities that help us become better human beings.",
+          "ncertBasedExplanation": "Through 'Vocation', students can connect the lesson with daily life. The chapter encourages observation, kindness, honesty, responsibility, or respect depending on the situation.",
+          "easyExplanation": "A lesson is not only for reading. It also teaches how to behave in real life.",
+          "examples": [
+            "Respect all kinds of work.",
+            "Every worker contributes to society.",
+            "Do your own work sincerely."
+          ],
+          "importantKeywords": [
+            "value",
+            "responsibility",
+            "kindness",
+            "respect",
+            "gratitude"
+          ],
+          "quickSummary": "Stories and poems teach useful values for everyday life.",
+          "revisionNotes": [
+            "Think about what the character learns.",
+            "Connect the lesson with your home and school life.",
+            "Practise good behaviour shown in the chapter."
+          ]
+        },
+        {
+          "topic": "Vocabulary and language practice",
+          "meaning": "Vocabulary means the important words we learn from a lesson.",
+          "ncertBasedExplanation": "The chapter gives students chances to learn words, spellings, phrases, sentence use, and speaking or writing practice related to 'Vocation'.",
+          "easyExplanation": "Learning new words helps us read, speak, and write better.",
+          "examples": [
+            "Use words from 'Vocation' in your own sentences.",
+            "Find similar words and opposite words.",
+            "Write a short paragraph about the chapter."
+          ],
+          "importantKeywords": [
+            "vocation",
+            "work",
+            "worker",
+            "profession",
+            "respect",
+            "labour"
+          ],
+          "quickSummary": "New words improve reading, writing, and speaking skills.",
+          "revisionNotes": [
+            "Read new words aloud.",
+            "Check spellings carefully.",
+            "Use words in sentences.",
+            "Practise speaking and writing activities."
+          ]
+        }
+      ]
+    },
+    {
+      "class": 5,
+      "board": "CBSE",
+      "subject": "English",
+      "chapterNumber": 10,
+      "chapter": "Glass Bangles",
+      "language": "English",
+      "source": "NCERT Class 5 textbook PDF uploaded by user",
+      "topics": [
+        {
+          "topic": "Chapter understanding",
+          "meaning": "This topic explains the main idea, events, and message of 'Glass Bangles'.",
+          "ncertBasedExplanation": "The chapter introduces glass bangles and the people involved in making or selling them. It helps students appreciate craft, colour, skill, and the hard work behind everyday objects.",
+          "easyExplanation": "In easy words, this chapter helps students understand craft, skill, and livelihood. The events and characters show the idea in a simple way.",
+          "examples": [
+            "Respect artisans and craft workers.",
+            "Handmade things require skill.",
+            "Notice the work behind objects we use."
+          ],
+          "importantKeywords": [
+            "glass",
+            "bangles",
+            "craft",
+            "artisan",
+            "colour",
+            "skill",
+            "chapter",
+            "theme",
+            "message"
+          ],
+          "quickSummary": "The chapter teaches students about craft, skill, and livelihood.",
+          "revisionNotes": [
+            "Remember the main theme: craft, skill, and livelihood.",
+            "Identify the speaker or main character.",
+            "Notice the problem and how it is solved.",
+            "Learn new words from the lesson."
+          ]
+        },
+        {
+          "topic": "Values and life skills",
+          "meaning": "Values are good habits and qualities that help us become better human beings.",
+          "ncertBasedExplanation": "Through 'Glass Bangles', students can connect the lesson with daily life. The chapter encourages observation, kindness, honesty, responsibility, or respect depending on the situation.",
+          "easyExplanation": "A lesson is not only for reading. It also teaches how to behave in real life.",
+          "examples": [
+            "Respect artisans and craft workers.",
+            "Handmade things require skill.",
+            "Notice the work behind objects we use."
+          ],
+          "importantKeywords": [
+            "value",
+            "responsibility",
+            "kindness",
+            "respect",
+            "gratitude"
+          ],
+          "quickSummary": "Stories and poems teach useful values for everyday life.",
+          "revisionNotes": [
+            "Think about what the character learns.",
+            "Connect the lesson with your home and school life.",
+            "Practise good behaviour shown in the chapter."
+          ]
+        },
+        {
+          "topic": "Vocabulary and language practice",
+          "meaning": "Vocabulary means the important words we learn from a lesson.",
+          "ncertBasedExplanation": "The chapter gives students chances to learn words, spellings, phrases, sentence use, and speaking or writing practice related to 'Glass Bangles'.",
+          "easyExplanation": "Learning new words helps us read, speak, and write better.",
+          "examples": [
+            "Use words from 'Glass Bangles' in your own sentences.",
+            "Find similar words and opposite words.",
+            "Write a short paragraph about the chapter."
+          ],
+          "importantKeywords": [
+            "glass",
+            "bangles",
+            "craft",
+            "artisan",
+            "colour",
+            "skill"
+          ],
+          "quickSummary": "New words improve reading, writing, and speaking skills.",
+          "revisionNotes": [
+            "Read new words aloud.",
+            "Check spellings carefully.",
+            "Use words in sentences.",
+            "Practise speaking and writing activities."
+          ]
+        }
+      ]
+    }
+  ]
+}

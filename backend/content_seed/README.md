@@ -9,10 +9,10 @@ Current seed:
 - Board: CBSE
 - Class 5 subjects: EVS, Maths, English, Hindi
 - Class 6 subjects: Maths, Science, Social Science, English, Hindi
-- Class 5 topics: 256 total topic documents matching the current frontend Class 5 NCERT-style syllabus
+- Class 5 topics: 173 total topic documents generated from the reviewed NCERT JSON note files in `class5_ncert_json_notes`
 - Class 6 topics: 216 total topic documents matching the current frontend Class 6 CBSE syllabus
 
-The older `class_5_cbse_science.json` file is kept only as an early demo seed. The active seed is generated from the NCERT-style Class 5 syllabus in `generate_class_5_cbse_all_subjects.py`.
+The older `class_5_cbse_science.json` file is kept only as an early demo seed. The active Class 5 seed is generated from the NCERT JSON notes in `class5_ncert_json_notes` using `generate_class_5_cbse_all_subjects.py`. EVS uses `class5_evs_detailed_notes_teacher_style_v4.json`; Maths, English, and Hindi use the teacher-style v3 detailed notes files.
 The Class 6 seed is generated from `generate_class_6_cbse_all_subjects.py`.
 
 ## Firestore Location
@@ -98,13 +98,17 @@ python backend\import_content_library.py --seed backend\content_seed\class_6_cbs
 
 ## Regenerate The Full Class 5 Seed
 
-If the frontend Class 5 syllabus changes, update:
+If the Class 5 NCERT JSON notes change, update the files in:
+
+```text
+backend/content_seed/class5_ncert_json_notes
+```
+
+Then run:
 
 ```text
 backend/content_seed/generate_class_5_cbse_all_subjects.py
 ```
-
-Then run:
 
 ```cmd
 python backend\content_seed\generate_class_5_cbse_all_subjects.py
