@@ -1,0 +1,3044 @@
+{
+  "subject": "Social Studies",
+  "chapters": [
+    {
+      "class": 6,
+      "board": "CBSE",
+      "subject": "Social Studies",
+      "chapterNumber": 0,
+      "chapter": "Introduction - Why Social Science?",
+      "topics": [
+        {
+          "topicId": "c6_social_studies_ch0_meaning_of_social_science",
+          "topic": "Meaning of Social Science",
+          "meaning": "Social Science studies human society, places, past, culture, governance and economic life.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Social Studies chapter 'Introduction - Why Social Science?', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Meaning of Social Science means social Science studies human society, places, past, culture, governance and economic life. It can be remembered through examples such as Studying why roads are built and how communities live..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Meaning of Social Science in society",
+              "explanation": "Meaning of Social Science is connected with people, places, time, resources, culture, government, or economy. The topic becomes clear when it is linked with real human life."
+            },
+            {
+              "step": 2,
+              "title": "Basic meaning",
+              "explanation": "The basic meaning is: Social Science studies human society, places, past, culture, governance and economic life."
+            },
+            {
+              "step": 3,
+              "title": "How the idea works",
+              "explanation": "The idea works through this flow: human society -> questions about life -> study places and past -> study government and economy -> better future. These points show cause, connection, and effect."
+            },
+            {
+              "step": 4,
+              "title": "Example or Indian connection",
+              "explanation": "A helpful example is: Studying why roads are built and how communities live.. Examples make Social Science answers concrete and easy to remember."
+            },
+            {
+              "step": 5,
+              "title": "Importance",
+              "explanation": "This topic is important because it helps students understand how societies are organised, how people live together, how decisions are made, and how the past and present are connected."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "A complete answer on Meaning of Social Science should include meaning, context, example, and importance."
+            }
+          ],
+          "examples": [
+            "Studying why roads are built and how communities live."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Social Science",
+              "definition": "Study of human society and its relationship with place, past, government and economy.",
+              "simpleExample": "Studying a village."
+            },
+            {
+              "keyword": "Society",
+              "definition": "People living together with shared relationships and rules.",
+              "simpleExample": "Town society."
+            },
+            {
+              "keyword": "Community",
+              "definition": "People connected by place or common life.",
+              "simpleExample": "School community."
+            }
+          ],
+          "quickSummary": "Meaning of Social Science: Social Science studies human society, places, past, culture, governance and economic life.",
+          "revisionNotes": [
+            "Meaning of Social Science should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_social_studies_ch0_themes_of_social_science",
+          "topic": "Themes of Social Science",
+          "meaning": "The subject is organised into themes such as land, past, culture, governance and economic life.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Social Studies chapter 'Introduction - Why Social Science?', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Themes of Social Science means the subject is organised into themes such as land, past, culture, governance and economic life. It can be remembered through examples such as A river affects settlement, farming, trade and culture..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Themes of Social Science in society",
+              "explanation": "Themes of Social Science is connected with people, places, time, resources, culture, government, or economy. The topic becomes clear when it is linked with real human life."
+            },
+            {
+              "step": 2,
+              "title": "Basic meaning",
+              "explanation": "The basic meaning is: The subject is organised into themes such as land, past, culture, governance and economic life."
+            },
+            {
+              "step": 3,
+              "title": "How the idea works",
+              "explanation": "The idea works through this flow: land and people -> past -> culture -> governance -> economic life. These points show cause, connection, and effect."
+            },
+            {
+              "step": 4,
+              "title": "Example or Indian connection",
+              "explanation": "A helpful example is: A river affects settlement, farming, trade and culture.. Examples make Social Science answers concrete and easy to remember."
+            },
+            {
+              "step": 5,
+              "title": "Importance",
+              "explanation": "This topic is important because it helps students understand how societies are organised, how people live together, how decisions are made, and how the past and present are connected."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "A complete answer on Themes of Social Science should include meaning, context, example, and importance."
+            }
+          ],
+          "examples": [
+            "A river affects settlement, farming, trade and culture."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Theme",
+              "definition": "A broad area of study.",
+              "simpleExample": "Governance and Democracy."
+            },
+            {
+              "keyword": "Multidisciplinarity",
+              "definition": "Connecting ideas from different fields.",
+              "simpleExample": "History and geography together."
+            },
+            {
+              "keyword": "Economy",
+              "definition": "System of work, money and resources.",
+              "simpleExample": "Markets."
+            }
+          ],
+          "quickSummary": "Themes of Social Science: The subject is organised into themes such as land, past, culture, governance and economic life.",
+          "revisionNotes": [
+            "Themes of Social Science should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        }
+      ]
+    },
+    {
+      "class": 6,
+      "board": "CBSE",
+      "subject": "Social Studies",
+      "chapterNumber": 1,
+      "chapter": "Locating Places on the Earth",
+      "topics": [
+        {
+          "topicId": "c6_social_studies_ch1_maps_and_globe",
+          "topic": "Maps and Globe",
+          "meaning": "A map is a flat representation of Earth or part of it, while a globe is a spherical model of Earth.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Social Studies chapter 'Locating Places on the Earth', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Maps and Globe means a map is a flat representation of Earth or part of it, while a globe is a spherical model of Earth. It can be remembered through examples such as Using a city map to find a museum..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Maps and Globe in society",
+              "explanation": "Maps and Globe is connected with people, places, time, resources, culture, government, or economy. The topic becomes clear when it is linked with real human life."
+            },
+            {
+              "step": 2,
+              "title": "Basic meaning",
+              "explanation": "The basic meaning is: A map is a flat representation of Earth or part of it, while a globe is a spherical model of Earth."
+            },
+            {
+              "step": 3,
+              "title": "How the idea works",
+              "explanation": "The idea works through this flow: flat map -> spherical globe -> symbols -> directions -> location. These points show cause, connection, and effect."
+            },
+            {
+              "step": 4,
+              "title": "Example or Indian connection",
+              "explanation": "A helpful example is: Using a city map to find a museum.. Examples make Social Science answers concrete and easy to remember."
+            },
+            {
+              "step": 5,
+              "title": "Importance",
+              "explanation": "This topic is important because it helps students understand how societies are organised, how people live together, how decisions are made, and how the past and present are connected."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "A complete answer on Maps and Globe should include meaning, context, example, and importance."
+            }
+          ],
+          "examples": [
+            "Using a city map to find a museum."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Map",
+              "definition": "Flat drawing of Earth or part of it.",
+              "simpleExample": "Map of India."
+            },
+            {
+              "keyword": "Globe",
+              "definition": "Spherical model of Earth.",
+              "simpleExample": "Classroom globe."
+            },
+            {
+              "keyword": "Symbol",
+              "definition": "Small sign used on map.",
+              "simpleExample": "Blue line for river."
+            }
+          ],
+          "quickSummary": "Maps and Globe: A map is a flat representation of Earth or part of it, while a globe is a spherical model of Earth.",
+          "revisionNotes": [
+            "Maps and Globe should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_social_studies_ch1_latitude_and_longitude",
+          "topic": "Latitude and Longitude",
+          "meaning": "Latitude and longitude are imaginary lines used to locate places on Earth.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Social Studies chapter 'Locating Places on the Earth', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Latitude and Longitude means latitude and longitude are imaginary lines used to locate places on Earth. It can be remembered through examples such as Delhi can be located by latitude and longitude..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Latitude and Longitude in society",
+              "explanation": "Latitude and Longitude is connected with people, places, time, resources, culture, government, or economy. The topic becomes clear when it is linked with real human life."
+            },
+            {
+              "step": 2,
+              "title": "Basic meaning",
+              "explanation": "The basic meaning is: Latitude and longitude are imaginary lines used to locate places on Earth."
+            },
+            {
+              "step": 3,
+              "title": "How the idea works",
+              "explanation": "The idea works through this flow: equator reference -> latitudes -> prime meridian -> longitudes -> coordinates. These points show cause, connection, and effect."
+            },
+            {
+              "step": 4,
+              "title": "Example or Indian connection",
+              "explanation": "A helpful example is: Delhi can be located by latitude and longitude.. Examples make Social Science answers concrete and easy to remember."
+            },
+            {
+              "step": 5,
+              "title": "Importance",
+              "explanation": "This topic is important because it helps students understand how societies are organised, how people live together, how decisions are made, and how the past and present are connected."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "A complete answer on Latitude and Longitude should include meaning, context, example, and importance."
+            }
+          ],
+          "examples": [
+            "Delhi can be located by latitude and longitude."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Latitude",
+              "definition": "Imaginary line measuring north/south from Equator.",
+              "simpleExample": "23.5°N."
+            },
+            {
+              "keyword": "Longitude",
+              "definition": "Imaginary line measuring east/west from Prime Meridian.",
+              "simpleExample": "82.5°E."
+            },
+            {
+              "keyword": "Coordinate",
+              "definition": "Pair of values used to locate point.",
+              "simpleExample": "Latitude + longitude."
+            }
+          ],
+          "quickSummary": "Latitude and Longitude: Latitude and longitude are imaginary lines used to locate places on Earth.",
+          "revisionNotes": [
+            "Latitude and Longitude should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_social_studies_ch1_time_and_longitude",
+          "topic": "Time and Longitude",
+          "meaning": "Local time changes with longitude, while standard time gives a common time for a region.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Social Studies chapter 'Locating Places on the Earth', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Time and Longitude means local time changes with longitude, while standard time gives a common time for a region. It can be remembered through examples such as India uses Indian Standard Time based on 82.5°E..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Time and Longitude in society",
+              "explanation": "Time and Longitude is connected with people, places, time, resources, culture, government, or economy. The topic becomes clear when it is linked with real human life."
+            },
+            {
+              "step": 2,
+              "title": "Basic meaning",
+              "explanation": "The basic meaning is: Local time changes with longitude, while standard time gives a common time for a region."
+            },
+            {
+              "step": 3,
+              "title": "How the idea works",
+              "explanation": "The idea works through this flow: Earth rotates -> different longitudes face Sun -> local times differ -> standard meridian chosen. These points show cause, connection, and effect."
+            },
+            {
+              "step": 4,
+              "title": "Example or Indian connection",
+              "explanation": "A helpful example is: India uses Indian Standard Time based on 82.5°E.. Examples make Social Science answers concrete and easy to remember."
+            },
+            {
+              "step": 5,
+              "title": "Importance",
+              "explanation": "This topic is important because it helps students understand how societies are organised, how people live together, how decisions are made, and how the past and present are connected."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "A complete answer on Time and Longitude should include meaning, context, example, and importance."
+            }
+          ],
+          "examples": [
+            "India uses Indian Standard Time based on 82.5°E."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Local Time",
+              "definition": "Time based on Sun position at a longitude.",
+              "simpleExample": "Local noon."
+            },
+            {
+              "keyword": "Standard Time",
+              "definition": "Common official time of a region.",
+              "simpleExample": "IST."
+            },
+            {
+              "keyword": "Standard Meridian",
+              "definition": "Longitude selected for standard time.",
+              "simpleExample": "82°30'E."
+            }
+          ],
+          "quickSummary": "Time and Longitude: Local time changes with longitude, while standard time gives a common time for a region.",
+          "revisionNotes": [
+            "Time and Longitude should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        }
+      ]
+    },
+    {
+      "class": 6,
+      "board": "CBSE",
+      "subject": "Social Studies",
+      "chapterNumber": 2,
+      "chapter": "Oceans and Continents",
+      "topics": [
+        {
+          "topicId": "c6_social_studies_ch2_continents",
+          "topic": "Continents",
+          "meaning": "Continents are very large landmasses on Earth.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Social Studies chapter 'Oceans and Continents', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Continents means continents are very large landmasses on Earth. It can be remembered through examples such as Asia is the largest continent..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Continents in society",
+              "explanation": "Continents is connected with people, places, time, resources, culture, government, or economy. The topic becomes clear when it is linked with real human life."
+            },
+            {
+              "step": 2,
+              "title": "Basic meaning",
+              "explanation": "The basic meaning is: Continents are very large landmasses on Earth."
+            },
+            {
+              "step": 3,
+              "title": "How the idea works",
+              "explanation": "The idea works through this flow: Earth surface -> large landmass -> continent names -> location. These points show cause, connection, and effect."
+            },
+            {
+              "step": 4,
+              "title": "Example or Indian connection",
+              "explanation": "A helpful example is: Asia is the largest continent.. Examples make Social Science answers concrete and easy to remember."
+            },
+            {
+              "step": 5,
+              "title": "Importance",
+              "explanation": "This topic is important because it helps students understand how societies are organised, how people live together, how decisions are made, and how the past and present are connected."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "A complete answer on Continents should include meaning, context, example, and importance."
+            }
+          ],
+          "examples": [
+            "Asia is the largest continent."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Continent",
+              "definition": "Very large landmass.",
+              "simpleExample": "Africa."
+            },
+            {
+              "keyword": "Landmass",
+              "definition": "Large area of land.",
+              "simpleExample": "Eurasia."
+            },
+            {
+              "keyword": "Asia",
+              "definition": "Largest continent and location of India.",
+              "simpleExample": "India is in Asia."
+            }
+          ],
+          "quickSummary": "Continents: Continents are very large landmasses on Earth.",
+          "revisionNotes": [
+            "Continents should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_social_studies_ch2_oceans",
+          "topic": "Oceans",
+          "meaning": "Oceans are vast bodies of saltwater covering most of Earth.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Social Studies chapter 'Oceans and Continents', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Oceans means oceans are vast bodies of saltwater covering most of Earth. It can be remembered through examples such as Indian Ocean lies south of India..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Oceans in society",
+              "explanation": "Oceans is connected with people, places, time, resources, culture, government, or economy. The topic becomes clear when it is linked with real human life."
+            },
+            {
+              "step": 2,
+              "title": "Basic meaning",
+              "explanation": "The basic meaning is: Oceans are vast bodies of saltwater covering most of Earth."
+            },
+            {
+              "step": 3,
+              "title": "How the idea works",
+              "explanation": "The idea works through this flow: large water body -> saltwater -> ocean names -> importance. These points show cause, connection, and effect."
+            },
+            {
+              "step": 4,
+              "title": "Example or Indian connection",
+              "explanation": "A helpful example is: Indian Ocean lies south of India.. Examples make Social Science answers concrete and easy to remember."
+            },
+            {
+              "step": 5,
+              "title": "Importance",
+              "explanation": "This topic is important because it helps students understand how societies are organised, how people live together, how decisions are made, and how the past and present are connected."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "A complete answer on Oceans should include meaning, context, example, and importance."
+            }
+          ],
+          "examples": [
+            "Indian Ocean lies south of India."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Ocean",
+              "definition": "Huge body of saltwater.",
+              "simpleExample": "Indian Ocean."
+            },
+            {
+              "keyword": "Saltwater",
+              "definition": "Water containing dissolved salts.",
+              "simpleExample": "Sea water."
+            },
+            {
+              "keyword": "Marine Life",
+              "definition": "Life in oceans/seas.",
+              "simpleExample": "Fish and corals."
+            }
+          ],
+          "quickSummary": "Oceans: Oceans are vast bodies of saltwater covering most of Earth.",
+          "revisionNotes": [
+            "Oceans should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_social_studies_ch2_earth_surface",
+          "topic": "Earth Surface",
+          "meaning": "Earth’s surface contains both land and water, with more water than land.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Social Studies chapter 'Oceans and Continents', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Earth Surface means earth’s surface contains both land and water, with more water than land. It can be remembered through examples such as World map shows blue oceans and coloured continents..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Earth Surface in society",
+              "explanation": "Earth Surface is connected with people, places, time, resources, culture, government, or economy. The topic becomes clear when it is linked with real human life."
+            },
+            {
+              "step": 2,
+              "title": "Basic meaning",
+              "explanation": "The basic meaning is: Earth’s surface contains both land and water, with more water than land."
+            },
+            {
+              "step": 3,
+              "title": "How the idea works",
+              "explanation": "The idea works through this flow: land and water -> continents -> oceans -> interaction. These points show cause, connection, and effect."
+            },
+            {
+              "step": 4,
+              "title": "Example or Indian connection",
+              "explanation": "A helpful example is: World map shows blue oceans and coloured continents.. Examples make Social Science answers concrete and easy to remember."
+            },
+            {
+              "step": 5,
+              "title": "Importance",
+              "explanation": "This topic is important because it helps students understand how societies are organised, how people live together, how decisions are made, and how the past and present are connected."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "A complete answer on Earth Surface should include meaning, context, example, and importance."
+            }
+          ],
+          "examples": [
+            "World map shows blue oceans and coloured continents."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Earth Surface",
+              "definition": "Outer part of Earth made of land and water.",
+              "simpleExample": "Continents and oceans."
+            },
+            {
+              "keyword": "Water Body",
+              "definition": "Natural area filled with water.",
+              "simpleExample": "Ocean or lake."
+            },
+            {
+              "keyword": "World Map",
+              "definition": "Map of whole Earth.",
+              "simpleExample": "Map with continents."
+            }
+          ],
+          "quickSummary": "Earth Surface: Earth’s surface contains both land and water, with more water than land.",
+          "revisionNotes": [
+            "Earth Surface should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        }
+      ]
+    },
+    {
+      "class": 6,
+      "board": "CBSE",
+      "subject": "Social Studies",
+      "chapterNumber": 3,
+      "chapter": "Landforms and Life",
+      "topics": [
+        {
+          "topicId": "c6_social_studies_ch3_major_landforms",
+          "topic": "Major Landforms",
+          "meaning": "Landforms are natural features such as mountains, plains, plateaus, valleys and deserts.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Social Studies chapter 'Landforms and Life', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Major Landforms means landforms are natural features such as mountains, plains, plateaus, valleys and deserts. It can be remembered through examples such as Plains support farming; mountains affect travel..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Major Landforms in society",
+              "explanation": "Major Landforms is connected with people, places, time, resources, culture, government, or economy. The topic becomes clear when it is linked with real human life."
+            },
+            {
+              "step": 2,
+              "title": "Basic meaning",
+              "explanation": "The basic meaning is: Landforms are natural features such as mountains, plains, plateaus, valleys and deserts."
+            },
+            {
+              "step": 3,
+              "title": "How the idea works",
+              "explanation": "The idea works through this flow: natural feature -> shape of land -> conditions -> human life. These points show cause, connection, and effect."
+            },
+            {
+              "step": 4,
+              "title": "Example or Indian connection",
+              "explanation": "A helpful example is: Plains support farming; mountains affect travel.. Examples make Social Science answers concrete and easy to remember."
+            },
+            {
+              "step": 5,
+              "title": "Importance",
+              "explanation": "This topic is important because it helps students understand how societies are organised, how people live together, how decisions are made, and how the past and present are connected."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "A complete answer on Major Landforms should include meaning, context, example, and importance."
+            }
+          ],
+          "examples": [
+            "Plains support farming; mountains affect travel."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Landform",
+              "definition": "Natural shape of Earth surface.",
+              "simpleExample": "Mountain."
+            },
+            {
+              "keyword": "Mountain",
+              "definition": "High landform with steep sides.",
+              "simpleExample": "Himalayas."
+            },
+            {
+              "keyword": "Plain",
+              "definition": "Flat or gently rolling land.",
+              "simpleExample": "Ganga plain."
+            }
+          ],
+          "quickSummary": "Major Landforms: Landforms are natural features such as mountains, plains, plateaus, valleys and deserts.",
+          "revisionNotes": [
+            "Major Landforms should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_social_studies_ch3_mountains_and_plains",
+          "topic": "Mountains and Plains",
+          "meaning": "Mountains and plains influence water, climate, farming, settlement and lifestyle.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Social Studies chapter 'Landforms and Life', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Mountains and Plains means mountains and plains influence water, climate, farming, settlement and lifestyle. It can be remembered through examples such as Terrace farming on mountains and wheat farming in plains..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Mountains and Plains in society",
+              "explanation": "Mountains and Plains is connected with people, places, time, resources, culture, government, or economy. The topic becomes clear when it is linked with real human life."
+            },
+            {
+              "step": 2,
+              "title": "Basic meaning",
+              "explanation": "The basic meaning is: Mountains and plains influence water, climate, farming, settlement and lifestyle."
+            },
+            {
+              "step": 3,
+              "title": "How the idea works",
+              "explanation": "The idea works through this flow: land condition -> resources -> human activity -> adaptation. These points show cause, connection, and effect."
+            },
+            {
+              "step": 4,
+              "title": "Example or Indian connection",
+              "explanation": "A helpful example is: Terrace farming on mountains and wheat farming in plains.. Examples make Social Science answers concrete and easy to remember."
+            },
+            {
+              "step": 5,
+              "title": "Importance",
+              "explanation": "This topic is important because it helps students understand how societies are organised, how people live together, how decisions are made, and how the past and present are connected."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "A complete answer on Mountains and Plains should include meaning, context, example, and importance."
+            }
+          ],
+          "examples": [
+            "Terrace farming on mountains and wheat farming in plains."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Slope",
+              "definition": "Slanting land surface.",
+              "simpleExample": "Hill slope."
+            },
+            {
+              "keyword": "Terrace Farming",
+              "definition": "Step-like farming on slopes.",
+              "simpleExample": "Mountain fields."
+            },
+            {
+              "keyword": "Settlement",
+              "definition": "Place where people live.",
+              "simpleExample": "Village or city."
+            }
+          ],
+          "quickSummary": "Mountains and Plains: Mountains and plains influence water, climate, farming, settlement and lifestyle.",
+          "revisionNotes": [
+            "Mountains and Plains should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_social_studies_ch3_deserts_and_plateaus",
+          "topic": "Deserts and Plateaus",
+          "meaning": "Deserts are dry regions and plateaus are raised flat lands with special resources and challenges.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Social Studies chapter 'Landforms and Life', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Deserts and Plateaus means deserts are dry regions and plateaus are raised flat lands with special resources and challenges. It can be remembered through examples such as Thar Desert and Deccan Plateau..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Deserts and Plateaus in society",
+              "explanation": "Deserts and Plateaus is connected with people, places, time, resources, culture, government, or economy. The topic becomes clear when it is linked with real human life."
+            },
+            {
+              "step": 2,
+              "title": "Basic meaning",
+              "explanation": "The basic meaning is: Deserts are dry regions and plateaus are raised flat lands with special resources and challenges."
+            },
+            {
+              "step": 3,
+              "title": "How the idea works",
+              "explanation": "The idea works through this flow: dry/high land -> resource availability -> human adaptation -> economic use. These points show cause, connection, and effect."
+            },
+            {
+              "step": 4,
+              "title": "Example or Indian connection",
+              "explanation": "A helpful example is: Thar Desert and Deccan Plateau.. Examples make Social Science answers concrete and easy to remember."
+            },
+            {
+              "step": 5,
+              "title": "Importance",
+              "explanation": "This topic is important because it helps students understand how societies are organised, how people live together, how decisions are made, and how the past and present are connected."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "A complete answer on Deserts and Plateaus should include meaning, context, example, and importance."
+            }
+          ],
+          "examples": [
+            "Thar Desert and Deccan Plateau."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Desert",
+              "definition": "Very dry region with little rainfall.",
+              "simpleExample": "Thar."
+            },
+            {
+              "keyword": "Plateau",
+              "definition": "High flat land.",
+              "simpleExample": "Deccan Plateau."
+            },
+            {
+              "keyword": "Adaptation",
+              "definition": "Adjustment to local conditions.",
+              "simpleExample": "Camel use in desert."
+            }
+          ],
+          "quickSummary": "Deserts and Plateaus: Deserts are dry regions and plateaus are raised flat lands with special resources and challenges.",
+          "revisionNotes": [
+            "Deserts and Plateaus should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        }
+      ]
+    },
+    {
+      "class": 6,
+      "board": "CBSE",
+      "subject": "Social Studies",
+      "chapterNumber": 4,
+      "chapter": "Timeline and Sources of History",
+      "topics": [
+        {
+          "topicId": "c6_social_studies_ch4_timeline",
+          "topic": "Timeline",
+          "meaning": "A timeline arranges events in chronological order.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Social Studies chapter 'Timeline and Sources of History', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Timeline means a timeline arranges events in chronological order. It can be remembered through examples such as Timeline from birth to Class 6..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Timeline in society",
+              "explanation": "Timeline is connected with people, places, time, resources, culture, government, or economy. The topic becomes clear when it is linked with real human life."
+            },
+            {
+              "step": 2,
+              "title": "Basic meaning",
+              "explanation": "The basic meaning is: A timeline arranges events in chronological order."
+            },
+            {
+              "step": 3,
+              "title": "How the idea works",
+              "explanation": "The idea works through this flow: identify event -> find date/period -> arrange order -> see change. These points show cause, connection, and effect."
+            },
+            {
+              "step": 4,
+              "title": "Example or Indian connection",
+              "explanation": "A helpful example is: Timeline from birth to Class 6.. Examples make Social Science answers concrete and easy to remember."
+            },
+            {
+              "step": 5,
+              "title": "Importance",
+              "explanation": "This topic is important because it helps students understand how societies are organised, how people live together, how decisions are made, and how the past and present are connected."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "A complete answer on Timeline should include meaning, context, example, and importance."
+            }
+          ],
+          "examples": [
+            "Timeline from birth to Class 6."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "History",
+              "definition": "Study of human past.",
+              "simpleExample": "History of a city."
+            },
+            {
+              "keyword": "Timeline",
+              "definition": "Line showing events in time order.",
+              "simpleExample": "Freedom movement timeline."
+            },
+            {
+              "keyword": "Chronology",
+              "definition": "Arrangement by time.",
+              "simpleExample": "Older to newer events."
+            }
+          ],
+          "quickSummary": "Timeline: A timeline arranges events in chronological order.",
+          "revisionNotes": [
+            "Timeline should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_social_studies_ch4_sources_of_history",
+          "topic": "Sources of History",
+          "meaning": "Sources are materials that give information about the past.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Social Studies chapter 'Timeline and Sources of History', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Sources of History means sources are materials that give information about the past. It can be remembered through examples such as Coins and inscriptions tell about rulers and trade..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Sources of History in society",
+              "explanation": "Sources of History is connected with people, places, time, resources, culture, government, or economy. The topic becomes clear when it is linked with real human life."
+            },
+            {
+              "step": 2,
+              "title": "Basic meaning",
+              "explanation": "The basic meaning is: Sources are materials that give information about the past."
+            },
+            {
+              "step": 3,
+              "title": "How the idea works",
+              "explanation": "The idea works through this flow: find source -> study material/text -> compare evidence -> draw conclusion. These points show cause, connection, and effect."
+            },
+            {
+              "step": 4,
+              "title": "Example or Indian connection",
+              "explanation": "A helpful example is: Coins and inscriptions tell about rulers and trade.. Examples make Social Science answers concrete and easy to remember."
+            },
+            {
+              "step": 5,
+              "title": "Importance",
+              "explanation": "This topic is important because it helps students understand how societies are organised, how people live together, how decisions are made, and how the past and present are connected."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "A complete answer on Sources of History should include meaning, context, example, and importance."
+            }
+          ],
+          "examples": [
+            "Coins and inscriptions tell about rulers and trade."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Source",
+              "definition": "Evidence about past.",
+              "simpleExample": "Old coin."
+            },
+            {
+              "keyword": "Inscription",
+              "definition": "Writing engraved on hard surface.",
+              "simpleExample": "Stone inscription."
+            },
+            {
+              "keyword": "Manuscript",
+              "definition": "Handwritten old document.",
+              "simpleExample": "Palm-leaf manuscript."
+            }
+          ],
+          "quickSummary": "Sources of History: Sources are materials that give information about the past.",
+          "revisionNotes": [
+            "Sources of History should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_social_studies_ch4_archaeology",
+          "topic": "Archaeology",
+          "meaning": "Archaeology studies the past through material remains.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Social Studies chapter 'Timeline and Sources of History', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Archaeology means archaeology studies the past through material remains. It can be remembered through examples such as Pottery pieces from ancient settlement..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Archaeology in society",
+              "explanation": "Archaeology is connected with people, places, time, resources, culture, government, or economy. The topic becomes clear when it is linked with real human life."
+            },
+            {
+              "step": 2,
+              "title": "Basic meaning",
+              "explanation": "The basic meaning is: Archaeology studies the past through material remains."
+            },
+            {
+              "step": 3,
+              "title": "How the idea works",
+              "explanation": "The idea works through this flow: excavate site -> find objects -> record details -> interpret past. These points show cause, connection, and effect."
+            },
+            {
+              "step": 4,
+              "title": "Example or Indian connection",
+              "explanation": "A helpful example is: Pottery pieces from ancient settlement.. Examples make Social Science answers concrete and easy to remember."
+            },
+            {
+              "step": 5,
+              "title": "Importance",
+              "explanation": "This topic is important because it helps students understand how societies are organised, how people live together, how decisions are made, and how the past and present are connected."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "A complete answer on Archaeology should include meaning, context, example, and importance."
+            }
+          ],
+          "examples": [
+            "Pottery pieces from ancient settlement."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Archaeology",
+              "definition": "Study of past through material remains.",
+              "simpleExample": "Studying old tools."
+            },
+            {
+              "keyword": "Artefact",
+              "definition": "Object made or used by humans in past.",
+              "simpleExample": "Pottery."
+            },
+            {
+              "keyword": "Excavation",
+              "definition": "Careful digging of historical site.",
+              "simpleExample": "Digging ruins."
+            }
+          ],
+          "quickSummary": "Archaeology: Archaeology studies the past through material remains.",
+          "revisionNotes": [
+            "Archaeology should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        }
+      ]
+    },
+    {
+      "class": 6,
+      "board": "CBSE",
+      "subject": "Social Studies",
+      "chapterNumber": 5,
+      "chapter": "India, That Is Bharat",
+      "topics": [
+        {
+          "topicId": "c6_social_studies_ch5_names_of_india",
+          "topic": "Names of India",
+          "meaning": "India has names such as Bharat and India with historical and cultural meanings.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Social Studies chapter 'India, That Is Bharat', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Names of India means india has names such as Bharat and India with historical and cultural meanings. It can be remembered through examples such as Bharat is used in the Constitution..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Names of India in society",
+              "explanation": "Names of India is connected with people, places, time, resources, culture, government, or economy. The topic becomes clear when it is linked with real human life."
+            },
+            {
+              "step": 2,
+              "title": "Basic meaning",
+              "explanation": "The basic meaning is: India has names such as Bharat and India with historical and cultural meanings."
+            },
+            {
+              "step": 3,
+              "title": "How the idea works",
+              "explanation": "The idea works through this flow: name appears -> source/context -> meaning -> identity. These points show cause, connection, and effect."
+            },
+            {
+              "step": 4,
+              "title": "Example or Indian connection",
+              "explanation": "A helpful example is: Bharat is used in the Constitution.. Examples make Social Science answers concrete and easy to remember."
+            },
+            {
+              "step": 5,
+              "title": "Importance",
+              "explanation": "This topic is important because it helps students understand how societies are organised, how people live together, how decisions are made, and how the past and present are connected."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "A complete answer on Names of India should include meaning, context, example, and importance."
+            }
+          ],
+          "examples": [
+            "Bharat is used in the Constitution."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Bharat",
+              "definition": "Ancient and constitutional name of India.",
+              "simpleExample": "India, that is Bharat."
+            },
+            {
+              "keyword": "India",
+              "definition": "Modern widely used name of the country.",
+              "simpleExample": "Republic of India."
+            },
+            {
+              "keyword": "Identity",
+              "definition": "Sense of who we are.",
+              "simpleExample": "National identity."
+            }
+          ],
+          "quickSummary": "Names of India: India has names such as Bharat and India with historical and cultural meanings.",
+          "revisionNotes": [
+            "Names of India should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_social_studies_ch5_geographical_identity",
+          "topic": "Geographical Identity",
+          "meaning": "India’s identity is connected with mountains, rivers, seas, plains and cultural regions.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Social Studies chapter 'India, That Is Bharat', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Geographical Identity means india’s identity is connected with mountains, rivers, seas, plains and cultural regions. It can be remembered through examples such as Himalayas in north and Indian Ocean in south..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Geographical Identity in society",
+              "explanation": "Geographical Identity is connected with people, places, time, resources, culture, government, or economy. The topic becomes clear when it is linked with real human life."
+            },
+            {
+              "step": 2,
+              "title": "Basic meaning",
+              "explanation": "The basic meaning is: India’s identity is connected with mountains, rivers, seas, plains and cultural regions."
+            },
+            {
+              "step": 3,
+              "title": "How the idea works",
+              "explanation": "The idea works through this flow: natural features -> settlements -> culture -> identity. These points show cause, connection, and effect."
+            },
+            {
+              "step": 4,
+              "title": "Example or Indian connection",
+              "explanation": "A helpful example is: Himalayas in north and Indian Ocean in south.. Examples make Social Science answers concrete and easy to remember."
+            },
+            {
+              "step": 5,
+              "title": "Importance",
+              "explanation": "This topic is important because it helps students understand how societies are organised, how people live together, how decisions are made, and how the past and present are connected."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "A complete answer on Geographical Identity should include meaning, context, example, and importance."
+            }
+          ],
+          "examples": [
+            "Himalayas in north and Indian Ocean in south."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Subcontinent",
+              "definition": "Large distinct landmass smaller than continent.",
+              "simpleExample": "Indian subcontinent."
+            },
+            {
+              "keyword": "Civilisation",
+              "definition": "Developed human society with culture and systems.",
+              "simpleExample": "Indian civilisation."
+            },
+            {
+              "keyword": "Geography",
+              "definition": "Study of Earth and places.",
+              "simpleExample": "Physical features of India."
+            }
+          ],
+          "quickSummary": "Geographical Identity: India’s identity is connected with mountains, rivers, seas, plains and cultural regions.",
+          "revisionNotes": [
+            "Geographical Identity should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_social_studies_ch5_unity_of_india",
+          "topic": "Unity of India",
+          "meaning": "Unity means shared connection among people despite diversity.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Social Studies chapter 'India, That Is Bharat', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Unity of India means unity means shared connection among people despite diversity. It can be remembered through examples such as Different states celebrate different festivals but belong to India..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Unity of India in society",
+              "explanation": "Unity of India is connected with people, places, time, resources, culture, government, or economy. The topic becomes clear when it is linked with real human life."
+            },
+            {
+              "step": 2,
+              "title": "Basic meaning",
+              "explanation": "The basic meaning is: Unity means shared connection among people despite diversity."
+            },
+            {
+              "step": 3,
+              "title": "How the idea works",
+              "explanation": "The idea works through this flow: many regions -> many languages -> shared traditions -> common identity. These points show cause, connection, and effect."
+            },
+            {
+              "step": 4,
+              "title": "Example or Indian connection",
+              "explanation": "A helpful example is: Different states celebrate different festivals but belong to India.. Examples make Social Science answers concrete and easy to remember."
+            },
+            {
+              "step": 5,
+              "title": "Importance",
+              "explanation": "This topic is important because it helps students understand how societies are organised, how people live together, how decisions are made, and how the past and present are connected."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "A complete answer on Unity of India should include meaning, context, example, and importance."
+            }
+          ],
+          "examples": [
+            "Different states celebrate different festivals but belong to India."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Unity",
+              "definition": "Togetherness.",
+              "simpleExample": "People standing as citizens."
+            },
+            {
+              "keyword": "Diversity",
+              "definition": "Presence of variety.",
+              "simpleExample": "Many languages."
+            },
+            {
+              "keyword": "Culture",
+              "definition": "Way of life.",
+              "simpleExample": "Food, dress, festivals."
+            }
+          ],
+          "quickSummary": "Unity of India: Unity means shared connection among people despite diversity.",
+          "revisionNotes": [
+            "Unity of India should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        }
+      ]
+    },
+    {
+      "class": 6,
+      "board": "CBSE",
+      "subject": "Social Studies",
+      "chapterNumber": 6,
+      "chapter": "The Beginnings of Indian Civilisation",
+      "topics": [
+        {
+          "topicId": "c6_social_studies_ch6_early_settlements",
+          "topic": "Early Settlements",
+          "meaning": "Early settlements developed where people had water, fertile land, food and safety.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Social Studies chapter 'The Beginnings of Indian Civilisation', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Early Settlements means early settlements developed where people had water, fertile land, food and safety. It can be remembered through examples such as Settlements near rivers..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Early Settlements in society",
+              "explanation": "Early Settlements is connected with people, places, time, resources, culture, government, or economy. The topic becomes clear when it is linked with real human life."
+            },
+            {
+              "step": 2,
+              "title": "Basic meaning",
+              "explanation": "The basic meaning is: Early settlements developed where people had water, fertile land, food and safety."
+            },
+            {
+              "step": 3,
+              "title": "How the idea works",
+              "explanation": "The idea works through this flow: water source -> farming -> houses -> crafts -> community. These points show cause, connection, and effect."
+            },
+            {
+              "step": 4,
+              "title": "Example or Indian connection",
+              "explanation": "A helpful example is: Settlements near rivers.. Examples make Social Science answers concrete and easy to remember."
+            },
+            {
+              "step": 5,
+              "title": "Importance",
+              "explanation": "This topic is important because it helps students understand how societies are organised, how people live together, how decisions are made, and how the past and present are connected."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "A complete answer on Early Settlements should include meaning, context, example, and importance."
+            }
+          ],
+          "examples": [
+            "Settlements near rivers."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Settlement",
+              "definition": "Place where people live together.",
+              "simpleExample": "Ancient village."
+            },
+            {
+              "keyword": "Agriculture",
+              "definition": "Growing crops.",
+              "simpleExample": "Wheat farming."
+            },
+            {
+              "keyword": "Civilisation",
+              "definition": "Organised society with settlements and culture.",
+              "simpleExample": "Harappan civilisation."
+            }
+          ],
+          "quickSummary": "Early Settlements: Early settlements developed where people had water, fertile land, food and safety.",
+          "revisionNotes": [
+            "Early Settlements should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_social_studies_ch6_harappan_civilisation",
+          "topic": "Harappan Civilisation",
+          "meaning": "Harappan civilisation was an early urban civilisation known for planned cities.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Social Studies chapter 'The Beginnings of Indian Civilisation', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Harappan Civilisation means harappan civilisation was an early urban civilisation known for planned cities. It can be remembered through examples such as Harappa and Mohenjo-daro..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Harappan Civilisation in society",
+              "explanation": "Harappan Civilisation is connected with people, places, time, resources, culture, government, or economy. The topic becomes clear when it is linked with real human life."
+            },
+            {
+              "step": 2,
+              "title": "Basic meaning",
+              "explanation": "The basic meaning is: Harappan civilisation was an early urban civilisation known for planned cities."
+            },
+            {
+              "step": 3,
+              "title": "How the idea works",
+              "explanation": "The idea works through this flow: planned streets -> brick houses -> drainage -> crafts and trade -> seals. These points show cause, connection, and effect."
+            },
+            {
+              "step": 4,
+              "title": "Example or Indian connection",
+              "explanation": "A helpful example is: Harappa and Mohenjo-daro.. Examples make Social Science answers concrete and easy to remember."
+            },
+            {
+              "step": 5,
+              "title": "Importance",
+              "explanation": "This topic is important because it helps students understand how societies are organised, how people live together, how decisions are made, and how the past and present are connected."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "A complete answer on Harappan Civilisation should include meaning, context, example, and importance."
+            }
+          ],
+          "examples": [
+            "Harappa and Mohenjo-daro."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Harappan Civilisation",
+              "definition": "Ancient civilisation with planned cities.",
+              "simpleExample": "Harappa."
+            },
+            {
+              "keyword": "Drainage System",
+              "definition": "Network for wastewater.",
+              "simpleExample": "Covered drains."
+            },
+            {
+              "keyword": "Seal",
+              "definition": "Small engraved object used for marking/identity.",
+              "simpleExample": "Harappan seal."
+            }
+          ],
+          "quickSummary": "Harappan Civilisation: Harappan civilisation was an early urban civilisation known for planned cities.",
+          "revisionNotes": [
+            "Harappan Civilisation should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_social_studies_ch6_archaeological_evidence",
+          "topic": "Archaeological Evidence",
+          "meaning": "Objects, ruins, pottery, seals and buildings help reconstruct early civilisation.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Social Studies chapter 'The Beginnings of Indian Civilisation', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Archaeological Evidence means objects, ruins, pottery, seals and buildings help reconstruct early civilisation. It can be remembered through examples such as Pottery shows storage and cooking practices..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Archaeological Evidence in society",
+              "explanation": "Archaeological Evidence is connected with people, places, time, resources, culture, government, or economy. The topic becomes clear when it is linked with real human life."
+            },
+            {
+              "step": 2,
+              "title": "Basic meaning",
+              "explanation": "The basic meaning is: Objects, ruins, pottery, seals and buildings help reconstruct early civilisation."
+            },
+            {
+              "step": 3,
+              "title": "How the idea works",
+              "explanation": "The idea works through this flow: excavation -> object found -> study use -> connect with life. These points show cause, connection, and effect."
+            },
+            {
+              "step": 4,
+              "title": "Example or Indian connection",
+              "explanation": "A helpful example is: Pottery shows storage and cooking practices.. Examples make Social Science answers concrete and easy to remember."
+            },
+            {
+              "step": 5,
+              "title": "Importance",
+              "explanation": "This topic is important because it helps students understand how societies are organised, how people live together, how decisions are made, and how the past and present are connected."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "A complete answer on Archaeological Evidence should include meaning, context, example, and importance."
+            }
+          ],
+          "examples": [
+            "Pottery shows storage and cooking practices."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Evidence",
+              "definition": "Information supporting historical understanding.",
+              "simpleExample": "Tool found at site."
+            },
+            {
+              "keyword": "Ruin",
+              "definition": "Remains of old building/city.",
+              "simpleExample": "Ancient ruins."
+            },
+            {
+              "keyword": "Craft",
+              "definition": "Skilled making of objects.",
+              "simpleExample": "Bead making."
+            }
+          ],
+          "quickSummary": "Archaeological Evidence: Objects, ruins, pottery, seals and buildings help reconstruct early civilisation.",
+          "revisionNotes": [
+            "Archaeological Evidence should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        }
+      ]
+    },
+    {
+      "class": 6,
+      "board": "CBSE",
+      "subject": "Social Studies",
+      "chapterNumber": 7,
+      "chapter": "India’s Cultural Roots",
+      "topics": [
+        {
+          "topicId": "c6_social_studies_ch7_culture_and_tradition",
+          "topic": "Culture and Tradition",
+          "meaning": "Culture includes values, beliefs, arts, literature, practices and ways of life.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Social Studies chapter 'India’s Cultural Roots', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Culture and Tradition means culture includes values, beliefs, arts, literature, practices and ways of life. It can be remembered through examples such as Festivals, music and stories..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Culture and Tradition in society",
+              "explanation": "Culture and Tradition is connected with people, places, time, resources, culture, government, or economy. The topic becomes clear when it is linked with real human life."
+            },
+            {
+              "step": 2,
+              "title": "Basic meaning",
+              "explanation": "The basic meaning is: Culture includes values, beliefs, arts, literature, practices and ways of life."
+            },
+            {
+              "step": 3,
+              "title": "How the idea works",
+              "explanation": "The idea works through this flow: shared practices -> values -> knowledge -> transmission -> continuity. These points show cause, connection, and effect."
+            },
+            {
+              "step": 4,
+              "title": "Example or Indian connection",
+              "explanation": "A helpful example is: Festivals, music and stories.. Examples make Social Science answers concrete and easy to remember."
+            },
+            {
+              "step": 5,
+              "title": "Importance",
+              "explanation": "This topic is important because it helps students understand how societies are organised, how people live together, how decisions are made, and how the past and present are connected."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "A complete answer on Culture and Tradition should include meaning, context, example, and importance."
+            }
+          ],
+          "examples": [
+            "Festivals, music and stories."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Culture",
+              "definition": "Way of life of people.",
+              "simpleExample": "Food and festivals."
+            },
+            {
+              "keyword": "Tradition",
+              "definition": "Practice passed across generations.",
+              "simpleExample": "Lighting lamps."
+            },
+            {
+              "keyword": "Heritage",
+              "definition": "Valuable inheritance from past.",
+              "simpleExample": "Ancient temples."
+            }
+          ],
+          "quickSummary": "Culture and Tradition: Culture includes values, beliefs, arts, literature, practices and ways of life.",
+          "revisionNotes": [
+            "Culture and Tradition should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_social_studies_ch7_knowledge_traditions",
+          "topic": "Knowledge Traditions",
+          "meaning": "Knowledge traditions preserve learning in fields such as literature, science, medicine and philosophy.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Social Studies chapter 'India’s Cultural Roots', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Knowledge Traditions means knowledge traditions preserve learning in fields such as literature, science, medicine and philosophy. It can be remembered through examples such as Traditional medicine and mathematical ideas..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Knowledge Traditions in society",
+              "explanation": "Knowledge Traditions is connected with people, places, time, resources, culture, government, or economy. The topic becomes clear when it is linked with real human life."
+            },
+            {
+              "step": 2,
+              "title": "Basic meaning",
+              "explanation": "The basic meaning is: Knowledge traditions preserve learning in fields such as literature, science, medicine and philosophy."
+            },
+            {
+              "step": 3,
+              "title": "How the idea works",
+              "explanation": "The idea works through this flow: observation -> learning -> texts/oral teaching -> practice -> new understanding. These points show cause, connection, and effect."
+            },
+            {
+              "step": 4,
+              "title": "Example or Indian connection",
+              "explanation": "A helpful example is: Traditional medicine and mathematical ideas.. Examples make Social Science answers concrete and easy to remember."
+            },
+            {
+              "step": 5,
+              "title": "Importance",
+              "explanation": "This topic is important because it helps students understand how societies are organised, how people live together, how decisions are made, and how the past and present are connected."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "A complete answer on Knowledge Traditions should include meaning, context, example, and importance."
+            }
+          ],
+          "examples": [
+            "Traditional medicine and mathematical ideas."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Knowledge Tradition",
+              "definition": "Continuity of learning over generations.",
+              "simpleExample": "Teacher-student learning."
+            },
+            {
+              "keyword": "Text",
+              "definition": "Written work containing knowledge.",
+              "simpleExample": "Manuscript."
+            },
+            {
+              "keyword": "Philosophy",
+              "definition": "Study of deep questions of life and truth.",
+              "simpleExample": "Questions about right conduct."
+            }
+          ],
+          "quickSummary": "Knowledge Traditions: Knowledge traditions preserve learning in fields such as literature, science, medicine and philosophy.",
+          "revisionNotes": [
+            "Knowledge Traditions should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_social_studies_ch7_values",
+          "topic": "Values",
+          "meaning": "Values such as truth, respect, service and harmony guide social life.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Social Studies chapter 'India’s Cultural Roots', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Values means values such as truth, respect, service and harmony guide social life. It can be remembered through examples such as Respecting elders and helping others..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Values in society",
+              "explanation": "Values is connected with people, places, time, resources, culture, government, or economy. The topic becomes clear when it is linked with real human life."
+            },
+            {
+              "step": 2,
+              "title": "Basic meaning",
+              "explanation": "The basic meaning is: Values such as truth, respect, service and harmony guide social life."
+            },
+            {
+              "step": 3,
+              "title": "How the idea works",
+              "explanation": "The idea works through this flow: value idea -> daily practice -> community life -> long-term influence. These points show cause, connection, and effect."
+            },
+            {
+              "step": 4,
+              "title": "Example or Indian connection",
+              "explanation": "A helpful example is: Respecting elders and helping others.. Examples make Social Science answers concrete and easy to remember."
+            },
+            {
+              "step": 5,
+              "title": "Importance",
+              "explanation": "This topic is important because it helps students understand how societies are organised, how people live together, how decisions are made, and how the past and present are connected."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "A complete answer on Values should include meaning, context, example, and importance."
+            }
+          ],
+          "examples": [
+            "Respecting elders and helping others."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Value",
+              "definition": "Belief guiding behaviour.",
+              "simpleExample": "Honesty."
+            },
+            {
+              "keyword": "Dharma",
+              "definition": "Right conduct or duty.",
+              "simpleExample": "Doing responsibility."
+            },
+            {
+              "keyword": "Seva",
+              "definition": "Selfless service.",
+              "simpleExample": "Helping community."
+            }
+          ],
+          "quickSummary": "Values: Values such as truth, respect, service and harmony guide social life.",
+          "revisionNotes": [
+            "Values should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        }
+      ]
+    },
+    {
+      "class": 6,
+      "board": "CBSE",
+      "subject": "Social Studies",
+      "chapterNumber": 8,
+      "chapter": "Unity in Diversity, or Many in the One",
+      "topics": [
+        {
+          "topicId": "c6_social_studies_ch8_diversity_in_india",
+          "topic": "Diversity in India",
+          "meaning": "India has variety in languages, foods, clothes, festivals, arts and ways of life.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Social Studies chapter 'Unity in Diversity, or Many in the One', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Diversity in India means india has variety in languages, foods, clothes, festivals, arts and ways of life. It can be remembered through examples such as Different foods in different states..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Diversity in India in society",
+              "explanation": "Diversity in India is connected with people, places, time, resources, culture, government, or economy. The topic becomes clear when it is linked with real human life."
+            },
+            {
+              "step": 2,
+              "title": "Basic meaning",
+              "explanation": "The basic meaning is: India has variety in languages, foods, clothes, festivals, arts and ways of life."
+            },
+            {
+              "step": 3,
+              "title": "How the idea works",
+              "explanation": "The idea works through this flow: many regions -> different practices -> mutual respect -> shared nation. These points show cause, connection, and effect."
+            },
+            {
+              "step": 4,
+              "title": "Example or Indian connection",
+              "explanation": "A helpful example is: Different foods in different states.. Examples make Social Science answers concrete and easy to remember."
+            },
+            {
+              "step": 5,
+              "title": "Importance",
+              "explanation": "This topic is important because it helps students understand how societies are organised, how people live together, how decisions are made, and how the past and present are connected."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "A complete answer on Diversity in India should include meaning, context, example, and importance."
+            }
+          ],
+          "examples": [
+            "Different foods in different states."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Diversity",
+              "definition": "Variety among people/practices.",
+              "simpleExample": "Many languages."
+            },
+            {
+              "keyword": "Region",
+              "definition": "Area with particular features.",
+              "simpleExample": "Coastal region."
+            },
+            {
+              "keyword": "Custom",
+              "definition": "Usual practice followed by people.",
+              "simpleExample": "Greeting elders."
+            }
+          ],
+          "quickSummary": "Diversity in India: India has variety in languages, foods, clothes, festivals, arts and ways of life.",
+          "revisionNotes": [
+            "Diversity in India should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_social_studies_ch8_unity_in_diversity",
+          "topic": "Unity in Diversity",
+          "meaning": "Unity in diversity means people remain connected despite differences.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Social Studies chapter 'Unity in Diversity, or Many in the One', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Unity in Diversity means unity in diversity means people remain connected despite differences. It can be remembered through examples such as People from many states celebrate national festivals..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Unity in Diversity in society",
+              "explanation": "Unity in Diversity is connected with people, places, time, resources, culture, government, or economy. The topic becomes clear when it is linked with real human life."
+            },
+            {
+              "step": 2,
+              "title": "Basic meaning",
+              "explanation": "The basic meaning is: Unity in diversity means people remain connected despite differences."
+            },
+            {
+              "step": 3,
+              "title": "How the idea works",
+              "explanation": "The idea works through this flow: different communities -> shared spaces -> shared values -> common identity. These points show cause, connection, and effect."
+            },
+            {
+              "step": 4,
+              "title": "Example or Indian connection",
+              "explanation": "A helpful example is: People from many states celebrate national festivals.. Examples make Social Science answers concrete and easy to remember."
+            },
+            {
+              "step": 5,
+              "title": "Importance",
+              "explanation": "This topic is important because it helps students understand how societies are organised, how people live together, how decisions are made, and how the past and present are connected."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "A complete answer on Unity in Diversity should include meaning, context, example, and importance."
+            }
+          ],
+          "examples": [
+            "People from many states celebrate national festivals."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Unity",
+              "definition": "Togetherness.",
+              "simpleExample": "Standing as citizens."
+            },
+            {
+              "keyword": "National Identity",
+              "definition": "Shared belonging to a nation.",
+              "simpleExample": "Being Indian."
+            },
+            {
+              "keyword": "Harmony",
+              "definition": "Peaceful living together.",
+              "simpleExample": "Respecting festivals."
+            }
+          ],
+          "quickSummary": "Unity in Diversity: Unity in diversity means people remain connected despite differences.",
+          "revisionNotes": [
+            "Unity in Diversity should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_social_studies_ch8_respect_for_differences",
+          "topic": "Respect for Differences",
+          "meaning": "Respecting differences means accepting different languages, food, dress, beliefs and ways of life.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Social Studies chapter 'Unity in Diversity, or Many in the One', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Respect for Differences means respecting differences means accepting different languages, food, dress, beliefs and ways of life. It can be remembered through examples such as Learning greetings in another language..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Respect for Differences in society",
+              "explanation": "Respect for Differences is connected with people, places, time, resources, culture, government, or economy. The topic becomes clear when it is linked with real human life."
+            },
+            {
+              "step": 2,
+              "title": "Basic meaning",
+              "explanation": "The basic meaning is: Respecting differences means accepting different languages, food, dress, beliefs and ways of life."
+            },
+            {
+              "step": 3,
+              "title": "How the idea works",
+              "explanation": "The idea works through this flow: notice difference -> avoid judgement -> learn meaning -> show respect -> live peacefully. These points show cause, connection, and effect."
+            },
+            {
+              "step": 4,
+              "title": "Example or Indian connection",
+              "explanation": "A helpful example is: Learning greetings in another language.. Examples make Social Science answers concrete and easy to remember."
+            },
+            {
+              "step": 5,
+              "title": "Importance",
+              "explanation": "This topic is important because it helps students understand how societies are organised, how people live together, how decisions are made, and how the past and present are connected."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "A complete answer on Respect for Differences should include meaning, context, example, and importance."
+            }
+          ],
+          "examples": [
+            "Learning greetings in another language."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Respect",
+              "definition": "Treating others with dignity.",
+              "simpleExample": "Listening politely."
+            },
+            {
+              "keyword": "Tolerance",
+              "definition": "Accepting differences without hatred.",
+              "simpleExample": "Different opinions."
+            },
+            {
+              "keyword": "Inclusion",
+              "definition": "Making space for everyone.",
+              "simpleExample": "Inviting all classmates."
+            }
+          ],
+          "quickSummary": "Respect for Differences: Respecting differences means accepting different languages, food, dress, beliefs and ways of life.",
+          "revisionNotes": [
+            "Respect for Differences should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        }
+      ]
+    },
+    {
+      "class": 6,
+      "board": "CBSE",
+      "subject": "Social Studies",
+      "chapterNumber": 9,
+      "chapter": "Family and Community",
+      "topics": [
+        {
+          "topicId": "c6_social_studies_ch9_family",
+          "topic": "Family",
+          "meaning": "A family is a group of related or caring people who support one another.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Social Studies chapter 'Family and Community', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Family means a family is a group of related or caring people who support one another. It can be remembered through examples such as Parents and grandparents caring for children..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Family in society",
+              "explanation": "Family is connected with people, places, time, resources, culture, government, or economy. The topic becomes clear when it is linked with real human life."
+            },
+            {
+              "step": 2,
+              "title": "Basic meaning",
+              "explanation": "The basic meaning is: A family is a group of related or caring people who support one another."
+            },
+            {
+              "step": 3,
+              "title": "How the idea works",
+              "explanation": "The idea works through this flow: members -> relationships -> care -> responsibility -> learning. These points show cause, connection, and effect."
+            },
+            {
+              "step": 4,
+              "title": "Example or Indian connection",
+              "explanation": "A helpful example is: Parents and grandparents caring for children.. Examples make Social Science answers concrete and easy to remember."
+            },
+            {
+              "step": 5,
+              "title": "Importance",
+              "explanation": "This topic is important because it helps students understand how societies are organised, how people live together, how decisions are made, and how the past and present are connected."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "A complete answer on Family should include meaning, context, example, and importance."
+            }
+          ],
+          "examples": [
+            "Parents and grandparents caring for children."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Family",
+              "definition": "Group of related/caring people.",
+              "simpleExample": "Parents and children."
+            },
+            {
+              "keyword": "Relationship",
+              "definition": "Connection between people.",
+              "simpleExample": "Brother-sister."
+            },
+            {
+              "keyword": "Responsibility",
+              "definition": "Duty to do something properly.",
+              "simpleExample": "Helping at home."
+            }
+          ],
+          "quickSummary": "Family: A family is a group of related or caring people who support one another.",
+          "revisionNotes": [
+            "Family should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_social_studies_ch9_community",
+          "topic": "Community",
+          "meaning": "A community is a group of people connected by place, work, interest or shared life.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Social Studies chapter 'Family and Community', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Community means a community is a group of people connected by place, work, interest or shared life. It can be remembered through examples such as School community or village community..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Community in society",
+              "explanation": "Community is connected with people, places, time, resources, culture, government, or economy. The topic becomes clear when it is linked with real human life."
+            },
+            {
+              "step": 2,
+              "title": "Basic meaning",
+              "explanation": "The basic meaning is: A community is a group of people connected by place, work, interest or shared life."
+            },
+            {
+              "step": 3,
+              "title": "How the idea works",
+              "explanation": "The idea works through this flow: people together -> shared place/interest -> cooperation -> support. These points show cause, connection, and effect."
+            },
+            {
+              "step": 4,
+              "title": "Example or Indian connection",
+              "explanation": "A helpful example is: School community or village community.. Examples make Social Science answers concrete and easy to remember."
+            },
+            {
+              "step": 5,
+              "title": "Importance",
+              "explanation": "This topic is important because it helps students understand how societies are organised, how people live together, how decisions are made, and how the past and present are connected."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "A complete answer on Community should include meaning, context, example, and importance."
+            }
+          ],
+          "examples": [
+            "School community or village community."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Community",
+              "definition": "Group connected by place or common life.",
+              "simpleExample": "Neighbourhood."
+            },
+            {
+              "keyword": "Cooperation",
+              "definition": "Working together for common purpose.",
+              "simpleExample": "Cleaning park."
+            },
+            {
+              "keyword": "Neighbourhood",
+              "definition": "Area around one’s home.",
+              "simpleExample": "Nearby houses."
+            }
+          ],
+          "quickSummary": "Community: A community is a group of people connected by place, work, interest or shared life.",
+          "revisionNotes": [
+            "Community should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_social_studies_ch9_roles_and_care",
+          "topic": "Roles and Care",
+          "meaning": "Family and community members perform roles that support daily life.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Social Studies chapter 'Family and Community', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Roles and Care means family and community members perform roles that support daily life. It can be remembered through examples such as Someone cooks, someone earns and someone cares for elders..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Roles and Care in society",
+              "explanation": "Roles and Care is connected with people, places, time, resources, culture, government, or economy. The topic becomes clear when it is linked with real human life."
+            },
+            {
+              "step": 2,
+              "title": "Basic meaning",
+              "explanation": "The basic meaning is: Family and community members perform roles that support daily life."
+            },
+            {
+              "step": 3,
+              "title": "How the idea works",
+              "explanation": "The idea works through this flow: role performed -> needs fulfilled -> care shared -> community improves. These points show cause, connection, and effect."
+            },
+            {
+              "step": 4,
+              "title": "Example or Indian connection",
+              "explanation": "A helpful example is: Someone cooks, someone earns and someone cares for elders.. Examples make Social Science answers concrete and easy to remember."
+            },
+            {
+              "step": 5,
+              "title": "Importance",
+              "explanation": "This topic is important because it helps students understand how societies are organised, how people live together, how decisions are made, and how the past and present are connected."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "A complete answer on Roles and Care should include meaning, context, example, and importance."
+            }
+          ],
+          "examples": [
+            "Someone cooks, someone earns and someone cares for elders."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Role",
+              "definition": "Part or responsibility performed by person.",
+              "simpleExample": "Teacher teaches."
+            },
+            {
+              "keyword": "Care Work",
+              "definition": "Work done to look after people/home.",
+              "simpleExample": "Caring for sick person."
+            },
+            {
+              "keyword": "Mutual Help",
+              "definition": "People helping each other.",
+              "simpleExample": "Neighbours help in emergency."
+            }
+          ],
+          "quickSummary": "Roles and Care: Family and community members perform roles that support daily life.",
+          "revisionNotes": [
+            "Roles and Care should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        }
+      ]
+    },
+    {
+      "class": 6,
+      "board": "CBSE",
+      "subject": "Social Studies",
+      "chapterNumber": 10,
+      "chapter": "Grassroots Democracy Part 1: Governance",
+      "topics": [
+        {
+          "topicId": "c6_social_studies_ch10_governance",
+          "topic": "Governance",
+          "meaning": "Governance is making decisions, creating rules and managing public life.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Social Studies chapter 'Grassroots Democracy Part 1: Governance', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Governance means governance is making decisions, creating rules and managing public life. It can be remembered through examples such as Managing water supply and traffic rules..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Governance in society",
+              "explanation": "Governance is connected with people, places, time, resources, culture, government, or economy. The topic becomes clear when it is linked with real human life."
+            },
+            {
+              "step": 2,
+              "title": "Basic meaning",
+              "explanation": "The basic meaning is: Governance is making decisions, creating rules and managing public life."
+            },
+            {
+              "step": 3,
+              "title": "How the idea works",
+              "explanation": "The idea works through this flow: common needs -> decision-making -> rules -> implementation -> public welfare. These points show cause, connection, and effect."
+            },
+            {
+              "step": 4,
+              "title": "Example or Indian connection",
+              "explanation": "A helpful example is: Managing water supply and traffic rules.. Examples make Social Science answers concrete and easy to remember."
+            },
+            {
+              "step": 5,
+              "title": "Importance",
+              "explanation": "This topic is important because it helps students understand how societies are organised, how people live together, how decisions are made, and how the past and present are connected."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "A complete answer on Governance should include meaning, context, example, and importance."
+            }
+          ],
+          "examples": [
+            "Managing water supply and traffic rules."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Governance",
+              "definition": "Managing public affairs and decisions.",
+              "simpleExample": "Running a village."
+            },
+            {
+              "keyword": "Rule",
+              "definition": "Instruction guiding behaviour.",
+              "simpleExample": "Stop at red light."
+            },
+            {
+              "keyword": "Public Service",
+              "definition": "Service for people.",
+              "simpleExample": "Roads and hospitals."
+            }
+          ],
+          "quickSummary": "Governance: Governance is making decisions, creating rules and managing public life.",
+          "revisionNotes": [
+            "Governance should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_social_studies_ch10_democracy",
+          "topic": "Democracy",
+          "meaning": "Democracy is a system where people participate directly or through elected representatives.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Social Studies chapter 'Grassroots Democracy Part 1: Governance', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Democracy means democracy is a system where people participate directly or through elected representatives. It can be remembered through examples such as Citizens vote in elections..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Democracy in society",
+              "explanation": "Democracy is connected with people, places, time, resources, culture, government, or economy. The topic becomes clear when it is linked with real human life."
+            },
+            {
+              "step": 2,
+              "title": "Basic meaning",
+              "explanation": "The basic meaning is: Democracy is a system where people participate directly or through elected representatives."
+            },
+            {
+              "step": 3,
+              "title": "How the idea works",
+              "explanation": "The idea works through this flow: people participate -> representatives elected -> decisions made -> leaders accountable. These points show cause, connection, and effect."
+            },
+            {
+              "step": 4,
+              "title": "Example or Indian connection",
+              "explanation": "A helpful example is: Citizens vote in elections.. Examples make Social Science answers concrete and easy to remember."
+            },
+            {
+              "step": 5,
+              "title": "Importance",
+              "explanation": "This topic is important because it helps students understand how societies are organised, how people live together, how decisions are made, and how the past and present are connected."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "A complete answer on Democracy should include meaning, context, example, and importance."
+            }
+          ],
+          "examples": [
+            "Citizens vote in elections."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Democracy",
+              "definition": "System where people have power to participate.",
+              "simpleExample": "Voting."
+            },
+            {
+              "keyword": "Election",
+              "definition": "Choosing representatives by voting.",
+              "simpleExample": "Panchayat election."
+            },
+            {
+              "keyword": "Representative",
+              "definition": "Person chosen to act for others.",
+              "simpleExample": "Councillor."
+            }
+          ],
+          "quickSummary": "Democracy: Democracy is a system where people participate directly or through elected representatives.",
+          "revisionNotes": [
+            "Democracy should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_social_studies_ch10_levels_of_government",
+          "topic": "Levels of Government",
+          "meaning": "Government works at local, state and national levels.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Social Studies chapter 'Grassroots Democracy Part 1: Governance', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Levels of Government means government works at local, state and national levels. It can be remembered through examples such as Municipality handles city waste; central government handles national matters..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Levels of Government in society",
+              "explanation": "Levels of Government is connected with people, places, time, resources, culture, government, or economy. The topic becomes clear when it is linked with real human life."
+            },
+            {
+              "step": 2,
+              "title": "Basic meaning",
+              "explanation": "The basic meaning is: Government works at local, state and national levels."
+            },
+            {
+              "step": 3,
+              "title": "How the idea works",
+              "explanation": "The idea works through this flow: local level -> state level -> national level -> responsibility division. These points show cause, connection, and effect."
+            },
+            {
+              "step": 4,
+              "title": "Example or Indian connection",
+              "explanation": "A helpful example is: Municipality handles city waste; central government handles national matters.. Examples make Social Science answers concrete and easy to remember."
+            },
+            {
+              "step": 5,
+              "title": "Importance",
+              "explanation": "This topic is important because it helps students understand how societies are organised, how people live together, how decisions are made, and how the past and present are connected."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "A complete answer on Levels of Government should include meaning, context, example, and importance."
+            }
+          ],
+          "examples": [
+            "Municipality handles city waste; central government handles national matters."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Local Government",
+              "definition": "Government managing local area.",
+              "simpleExample": "Panchayat."
+            },
+            {
+              "keyword": "State Government",
+              "definition": "Government of a state.",
+              "simpleExample": "Rajasthan government."
+            },
+            {
+              "keyword": "Central Government",
+              "definition": "National government.",
+              "simpleExample": "Government of India."
+            }
+          ],
+          "quickSummary": "Levels of Government: Government works at local, state and national levels.",
+          "revisionNotes": [
+            "Levels of Government should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        }
+      ]
+    },
+    {
+      "class": 6,
+      "board": "CBSE",
+      "subject": "Social Studies",
+      "chapterNumber": 11,
+      "chapter": "Grassroots Democracy Part 2: Local Government in Rural Areas",
+      "topics": [
+        {
+          "topicId": "c6_social_studies_ch11_panchayati_raj",
+          "topic": "Panchayati Raj",
+          "meaning": "Panchayati Raj is the system of local self-government in rural areas.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Social Studies chapter 'Grassroots Democracy Part 2: Local Government in Rural Areas', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Panchayati Raj means panchayati Raj is the system of local self-government in rural areas. It can be remembered through examples such as Village road repair by panchayat..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Panchayati Raj in society",
+              "explanation": "Panchayati Raj is connected with people, places, time, resources, culture, government, or economy. The topic becomes clear when it is linked with real human life."
+            },
+            {
+              "step": 2,
+              "title": "Basic meaning",
+              "explanation": "The basic meaning is: Panchayati Raj is the system of local self-government in rural areas."
+            },
+            {
+              "step": 3,
+              "title": "How the idea works",
+              "explanation": "The idea works through this flow: village people -> election -> gram panchayat -> local decisions -> development work. These points show cause, connection, and effect."
+            },
+            {
+              "step": 4,
+              "title": "Example or Indian connection",
+              "explanation": "A helpful example is: Village road repair by panchayat.. Examples make Social Science answers concrete and easy to remember."
+            },
+            {
+              "step": 5,
+              "title": "Importance",
+              "explanation": "This topic is important because it helps students understand how societies are organised, how people live together, how decisions are made, and how the past and present are connected."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "A complete answer on Panchayati Raj should include meaning, context, example, and importance."
+            }
+          ],
+          "examples": [
+            "Village road repair by panchayat."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Panchayati Raj",
+              "definition": "Rural local self-government system.",
+              "simpleExample": "Gram Panchayat."
+            },
+            {
+              "keyword": "Gram Panchayat",
+              "definition": "Elected village-level body.",
+              "simpleExample": "Village sanitation work."
+            },
+            {
+              "keyword": "Sarpanch",
+              "definition": "Elected head of Gram Panchayat.",
+              "simpleExample": "Leads village meeting."
+            }
+          ],
+          "quickSummary": "Panchayati Raj: Panchayati Raj is the system of local self-government in rural areas.",
+          "revisionNotes": [
+            "Panchayati Raj should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_social_studies_ch11_gram_sabha",
+          "topic": "Gram Sabha",
+          "meaning": "Gram Sabha includes adult village members who participate in discussions and decisions.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Social Studies chapter 'Grassroots Democracy Part 2: Local Government in Rural Areas', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Gram Sabha means gram Sabha includes adult village members who participate in discussions and decisions. It can be remembered through examples such as Villagers discuss water problem in Gram Sabha..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Gram Sabha in society",
+              "explanation": "Gram Sabha is connected with people, places, time, resources, culture, government, or economy. The topic becomes clear when it is linked with real human life."
+            },
+            {
+              "step": 2,
+              "title": "Basic meaning",
+              "explanation": "The basic meaning is: Gram Sabha includes adult village members who participate in discussions and decisions."
+            },
+            {
+              "step": 3,
+              "title": "How the idea works",
+              "explanation": "The idea works through this flow: adult villagers -> meeting -> discussion -> decision/review -> accountability. These points show cause, connection, and effect."
+            },
+            {
+              "step": 4,
+              "title": "Example or Indian connection",
+              "explanation": "A helpful example is: Villagers discuss water problem in Gram Sabha.. Examples make Social Science answers concrete and easy to remember."
+            },
+            {
+              "step": 5,
+              "title": "Importance",
+              "explanation": "This topic is important because it helps students understand how societies are organised, how people live together, how decisions are made, and how the past and present are connected."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "A complete answer on Gram Sabha should include meaning, context, example, and importance."
+            }
+          ],
+          "examples": [
+            "Villagers discuss water problem in Gram Sabha."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Gram Sabha",
+              "definition": "Assembly of adult village residents.",
+              "simpleExample": "Village meeting."
+            },
+            {
+              "keyword": "Participation",
+              "definition": "Taking part in decision-making.",
+              "simpleExample": "Speaking in meeting."
+            },
+            {
+              "keyword": "Accountability",
+              "definition": "Responsibility to explain actions.",
+              "simpleExample": "Panchayat reports work."
+            }
+          ],
+          "quickSummary": "Gram Sabha: Gram Sabha includes adult village members who participate in discussions and decisions.",
+          "revisionNotes": [
+            "Gram Sabha should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_social_studies_ch11_rural_development_work",
+          "topic": "Rural Development Work",
+          "meaning": "Rural local government works on roads, water, sanitation and public facilities.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Social Studies chapter 'Grassroots Democracy Part 2: Local Government in Rural Areas', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Rural Development Work means rural local government works on roads, water, sanitation and public facilities. It can be remembered through examples such as Repairing handpump..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Rural Development Work in society",
+              "explanation": "Rural Development Work is connected with people, places, time, resources, culture, government, or economy. The topic becomes clear when it is linked with real human life."
+            },
+            {
+              "step": 2,
+              "title": "Basic meaning",
+              "explanation": "The basic meaning is: Rural local government works on roads, water, sanitation and public facilities."
+            },
+            {
+              "step": 3,
+              "title": "How the idea works",
+              "explanation": "The idea works through this flow: identify need -> discuss -> plan work -> use funds -> monitor result. These points show cause, connection, and effect."
+            },
+            {
+              "step": 4,
+              "title": "Example or Indian connection",
+              "explanation": "A helpful example is: Repairing handpump.. Examples make Social Science answers concrete and easy to remember."
+            },
+            {
+              "step": 5,
+              "title": "Importance",
+              "explanation": "This topic is important because it helps students understand how societies are organised, how people live together, how decisions are made, and how the past and present are connected."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "A complete answer on Rural Development Work should include meaning, context, example, and importance."
+            }
+          ],
+          "examples": [
+            "Repairing handpump."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Development",
+              "definition": "Improvement in facilities/living conditions.",
+              "simpleExample": "Building road."
+            },
+            {
+              "keyword": "Sanitation",
+              "definition": "Cleanliness and waste management.",
+              "simpleExample": "Village drains."
+            },
+            {
+              "keyword": "Public Facility",
+              "definition": "Facility used collectively.",
+              "simpleExample": "Community well."
+            }
+          ],
+          "quickSummary": "Rural Development Work: Rural local government works on roads, water, sanitation and public facilities.",
+          "revisionNotes": [
+            "Rural Development Work should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        }
+      ]
+    },
+    {
+      "class": 6,
+      "board": "CBSE",
+      "subject": "Social Studies",
+      "chapterNumber": 12,
+      "chapter": "Grassroots Democracy Part 3: Local Government in Urban Areas",
+      "topics": [
+        {
+          "topicId": "c6_social_studies_ch12_urban_local_bodies",
+          "topic": "Urban Local Bodies",
+          "meaning": "Urban local bodies manage towns and cities through municipalities and corporations.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Social Studies chapter 'Grassroots Democracy Part 3: Local Government in Urban Areas', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Urban Local Bodies means urban local bodies manage towns and cities through municipalities and corporations. It can be remembered through examples such as Municipal corporation manages city garbage collection..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Urban Local Bodies in society",
+              "explanation": "Urban Local Bodies is connected with people, places, time, resources, culture, government, or economy. The topic becomes clear when it is linked with real human life."
+            },
+            {
+              "step": 2,
+              "title": "Basic meaning",
+              "explanation": "The basic meaning is: Urban local bodies manage towns and cities through municipalities and corporations."
+            },
+            {
+              "step": 3,
+              "title": "How the idea works",
+              "explanation": "The idea works through this flow: urban area -> elected body -> services -> funds -> maintenance. These points show cause, connection, and effect."
+            },
+            {
+              "step": 4,
+              "title": "Example or Indian connection",
+              "explanation": "A helpful example is: Municipal corporation manages city garbage collection.. Examples make Social Science answers concrete and easy to remember."
+            },
+            {
+              "step": 5,
+              "title": "Importance",
+              "explanation": "This topic is important because it helps students understand how societies are organised, how people live together, how decisions are made, and how the past and present are connected."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "A complete answer on Urban Local Bodies should include meaning, context, example, and importance."
+            }
+          ],
+          "examples": [
+            "Municipal corporation manages city garbage collection."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Urban Local Body",
+              "definition": "Local government for town/city.",
+              "simpleExample": "Municipality."
+            },
+            {
+              "keyword": "Municipal Corporation",
+              "definition": "Local body for large city.",
+              "simpleExample": "City corporation."
+            },
+            {
+              "keyword": "Municipality",
+              "definition": "Urban local body for smaller town/city.",
+              "simpleExample": "Town municipality."
+            }
+          ],
+          "quickSummary": "Urban Local Bodies: Urban local bodies manage towns and cities through municipalities and corporations.",
+          "revisionNotes": [
+            "Urban Local Bodies should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_social_studies_ch12_city_services",
+          "topic": "City Services",
+          "meaning": "City services include water supply, roads, streetlights, waste collection, drainage and public health.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Social Studies chapter 'Grassroots Democracy Part 3: Local Government in Urban Areas', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "City Services means city services include water supply, roads, streetlights, waste collection, drainage and public health. It can be remembered through examples such as Streetlights repaired by municipality..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "City Services in society",
+              "explanation": "City Services is connected with people, places, time, resources, culture, government, or economy. The topic becomes clear when it is linked with real human life."
+            },
+            {
+              "step": 2,
+              "title": "Basic meaning",
+              "explanation": "The basic meaning is: City services include water supply, roads, streetlights, waste collection, drainage and public health."
+            },
+            {
+              "step": 3,
+              "title": "How the idea works",
+              "explanation": "The idea works through this flow: people need service -> local body provides -> workers maintain -> citizens cooperate. These points show cause, connection, and effect."
+            },
+            {
+              "step": 4,
+              "title": "Example or Indian connection",
+              "explanation": "A helpful example is: Streetlights repaired by municipality.. Examples make Social Science answers concrete and easy to remember."
+            },
+            {
+              "step": 5,
+              "title": "Importance",
+              "explanation": "This topic is important because it helps students understand how societies are organised, how people live together, how decisions are made, and how the past and present are connected."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "A complete answer on City Services should include meaning, context, example, and importance."
+            }
+          ],
+          "examples": [
+            "Streetlights repaired by municipality."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Civic Service",
+              "definition": "Public service by local government.",
+              "simpleExample": "Waste collection."
+            },
+            {
+              "keyword": "Drainage",
+              "definition": "System carrying wastewater/rainwater away.",
+              "simpleExample": "City drains."
+            },
+            {
+              "keyword": "Public Health",
+              "definition": "Health conditions of community.",
+              "simpleExample": "Mosquito control."
+            }
+          ],
+          "quickSummary": "City Services: City services include water supply, roads, streetlights, waste collection, drainage and public health.",
+          "revisionNotes": [
+            "City Services should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_social_studies_ch12_citizens_in_urban_governance",
+          "topic": "Citizens in Urban Governance",
+          "meaning": "Citizens support city governance by following rules, paying taxes and reporting problems.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Social Studies chapter 'Grassroots Democracy Part 3: Local Government in Urban Areas', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Citizens in Urban Governance means citizens support city governance by following rules, paying taxes and reporting problems. It can be remembered through examples such as Reporting broken streetlight..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Citizens in Urban Governance in society",
+              "explanation": "Citizens in Urban Governance is connected with people, places, time, resources, culture, government, or economy. The topic becomes clear when it is linked with real human life."
+            },
+            {
+              "step": 2,
+              "title": "Basic meaning",
+              "explanation": "The basic meaning is: Citizens support city governance by following rules, paying taxes and reporting problems."
+            },
+            {
+              "step": 3,
+              "title": "How the idea works",
+              "explanation": "The idea works through this flow: citizen duty -> follow rules -> report problems -> participate -> improve city. These points show cause, connection, and effect."
+            },
+            {
+              "step": 4,
+              "title": "Example or Indian connection",
+              "explanation": "A helpful example is: Reporting broken streetlight.. Examples make Social Science answers concrete and easy to remember."
+            },
+            {
+              "step": 5,
+              "title": "Importance",
+              "explanation": "This topic is important because it helps students understand how societies are organised, how people live together, how decisions are made, and how the past and present are connected."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "A complete answer on Citizens in Urban Governance should include meaning, context, example, and importance."
+            }
+          ],
+          "examples": [
+            "Reporting broken streetlight."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Citizen",
+              "definition": "Member of a place/country with rights and duties.",
+              "simpleExample": "Resident who votes."
+            },
+            {
+              "keyword": "Tax",
+              "definition": "Money paid to government for services.",
+              "simpleExample": "Property tax."
+            },
+            {
+              "keyword": "Civic Responsibility",
+              "definition": "Duty towards public life.",
+              "simpleExample": "Keeping public places clean."
+            }
+          ],
+          "quickSummary": "Citizens in Urban Governance: Citizens support city governance by following rules, paying taxes and reporting problems.",
+          "revisionNotes": [
+            "Citizens in Urban Governance should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        }
+      ]
+    },
+    {
+      "class": 6,
+      "board": "CBSE",
+      "subject": "Social Studies",
+      "chapterNumber": 13,
+      "chapter": "The Value of Work",
+      "topics": [
+        {
+          "topicId": "c6_social_studies_ch13_meaning_of_work",
+          "topic": "Meaning of Work",
+          "meaning": "Work is any useful activity that produces goods, services, care, support or value.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Social Studies chapter 'The Value of Work', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Meaning of Work means work is any useful activity that produces goods, services, care, support or value. It can be remembered through examples such as Cooking, teaching and repairing are work..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Meaning of Work in society",
+              "explanation": "Meaning of Work is connected with people, places, time, resources, culture, government, or economy. The topic becomes clear when it is linked with real human life."
+            },
+            {
+              "step": 2,
+              "title": "Basic meaning",
+              "explanation": "The basic meaning is: Work is any useful activity that produces goods, services, care, support or value."
+            },
+            {
+              "step": 3,
+              "title": "How the idea works",
+              "explanation": "The idea works through this flow: activity -> effort -> useful result -> value. These points show cause, connection, and effect."
+            },
+            {
+              "step": 4,
+              "title": "Example or Indian connection",
+              "explanation": "A helpful example is: Cooking, teaching and repairing are work.. Examples make Social Science answers concrete and easy to remember."
+            },
+            {
+              "step": 5,
+              "title": "Importance",
+              "explanation": "This topic is important because it helps students understand how societies are organised, how people live together, how decisions are made, and how the past and present are connected."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "A complete answer on Meaning of Work should include meaning, context, example, and importance."
+            }
+          ],
+          "examples": [
+            "Cooking, teaching and repairing are work."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Work",
+              "definition": "Useful activity involving effort.",
+              "simpleExample": "Cleaning classroom."
+            },
+            {
+              "keyword": "Value",
+              "definition": "Importance or usefulness.",
+              "simpleExample": "Care work has value."
+            },
+            {
+              "keyword": "Service",
+              "definition": "Work done to help others.",
+              "simpleExample": "Doctor service."
+            }
+          ],
+          "quickSummary": "Meaning of Work: Work is any useful activity that produces goods, services, care, support or value.",
+          "revisionNotes": [
+            "Meaning of Work should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_social_studies_ch13_paid_and_unpaid_work",
+          "topic": "Paid and Unpaid Work",
+          "meaning": "Paid work earns money, while unpaid work may not earn money but still has value.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Social Studies chapter 'The Value of Work', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Paid and Unpaid Work means paid work earns money, while unpaid work may not earn money but still has value. It can be remembered through examples such as Family care work may be unpaid but valuable..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Paid and Unpaid Work in society",
+              "explanation": "Paid and Unpaid Work is connected with people, places, time, resources, culture, government, or economy. The topic becomes clear when it is linked with real human life."
+            },
+            {
+              "step": 2,
+              "title": "Basic meaning",
+              "explanation": "The basic meaning is: Paid work earns money, while unpaid work may not earn money but still has value."
+            },
+            {
+              "step": 3,
+              "title": "How the idea works",
+              "explanation": "The idea works through this flow: work done -> payment/no payment -> usefulness -> respect. These points show cause, connection, and effect."
+            },
+            {
+              "step": 4,
+              "title": "Example or Indian connection",
+              "explanation": "A helpful example is: Family care work may be unpaid but valuable.. Examples make Social Science answers concrete and easy to remember."
+            },
+            {
+              "step": 5,
+              "title": "Importance",
+              "explanation": "This topic is important because it helps students understand how societies are organised, how people live together, how decisions are made, and how the past and present are connected."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "A complete answer on Paid and Unpaid Work should include meaning, context, example, and importance."
+            }
+          ],
+          "examples": [
+            "Family care work may be unpaid but valuable."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Paid Work",
+              "definition": "Work for which money is received.",
+              "simpleExample": "Shopkeeper selling goods."
+            },
+            {
+              "keyword": "Unpaid Work",
+              "definition": "Useful work without direct payment.",
+              "simpleExample": "Cooking at home."
+            },
+            {
+              "keyword": "Care Work",
+              "definition": "Looking after people’s needs.",
+              "simpleExample": "Caring for child."
+            }
+          ],
+          "quickSummary": "Paid and Unpaid Work: Paid work earns money, while unpaid work may not earn money but still has value.",
+          "revisionNotes": [
+            "Paid and Unpaid Work should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_social_studies_ch13_dignity_of_labour",
+          "topic": "Dignity of Labour",
+          "meaning": "Dignity of labour means every honest and useful work deserves respect.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Social Studies chapter 'The Value of Work', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Dignity of Labour means dignity of labour means every honest and useful work deserves respect. It can be remembered through examples such as Respecting farmers, cleaners, drivers and teachers..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Dignity of Labour in society",
+              "explanation": "Dignity of Labour is connected with people, places, time, resources, culture, government, or economy. The topic becomes clear when it is linked with real human life."
+            },
+            {
+              "step": 2,
+              "title": "Basic meaning",
+              "explanation": "The basic meaning is: Dignity of labour means every honest and useful work deserves respect."
+            },
+            {
+              "step": 3,
+              "title": "How the idea works",
+              "explanation": "The idea works through this flow: work serves need -> worker gives effort -> society benefits -> respect worker. These points show cause, connection, and effect."
+            },
+            {
+              "step": 4,
+              "title": "Example or Indian connection",
+              "explanation": "A helpful example is: Respecting farmers, cleaners, drivers and teachers.. Examples make Social Science answers concrete and easy to remember."
+            },
+            {
+              "step": 5,
+              "title": "Importance",
+              "explanation": "This topic is important because it helps students understand how societies are organised, how people live together, how decisions are made, and how the past and present are connected."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "A complete answer on Dignity of Labour should include meaning, context, example, and importance."
+            }
+          ],
+          "examples": [
+            "Respecting farmers, cleaners, drivers and teachers."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Dignity",
+              "definition": "Worth and respect.",
+              "simpleExample": "Respecting every worker."
+            },
+            {
+              "keyword": "Labour",
+              "definition": "Physical or mental effort used in work.",
+              "simpleExample": "Farming labour."
+            },
+            {
+              "keyword": "Respect",
+              "definition": "Recognising someone’s value.",
+              "simpleExample": "Thanking sanitation worker."
+            }
+          ],
+          "quickSummary": "Dignity of Labour: Dignity of labour means every honest and useful work deserves respect.",
+          "revisionNotes": [
+            "Dignity of Labour should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        }
+      ]
+    },
+    {
+      "class": 6,
+      "board": "CBSE",
+      "subject": "Social Studies",
+      "chapterNumber": 14,
+      "chapter": "Economic Activities Around Us",
+      "topics": [
+        {
+          "topicId": "c6_social_studies_ch14_economic_activity",
+          "topic": "Economic Activity",
+          "meaning": "Economic activity is work related to producing, buying, selling or providing goods and services.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Social Studies chapter 'Economic Activities Around Us', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Economic Activity means economic activity is work related to producing, buying, selling or providing goods and services. It can be remembered through examples such as Farmer grows vegetables and shopkeeper sells notebooks..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Economic Activity in society",
+              "explanation": "Economic Activity is connected with people, places, time, resources, culture, government, or economy. The topic becomes clear when it is linked with real human life."
+            },
+            {
+              "step": 2,
+              "title": "Basic meaning",
+              "explanation": "The basic meaning is: Economic activity is work related to producing, buying, selling or providing goods and services."
+            },
+            {
+              "step": 3,
+              "title": "How the idea works",
+              "explanation": "The idea works through this flow: need/demand -> production/service -> exchange -> income -> consumption. These points show cause, connection, and effect."
+            },
+            {
+              "step": 4,
+              "title": "Example or Indian connection",
+              "explanation": "A helpful example is: Farmer grows vegetables and shopkeeper sells notebooks.. Examples make Social Science answers concrete and easy to remember."
+            },
+            {
+              "step": 5,
+              "title": "Importance",
+              "explanation": "This topic is important because it helps students understand how societies are organised, how people live together, how decisions are made, and how the past and present are connected."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "A complete answer on Economic Activity should include meaning, context, example, and importance."
+            }
+          ],
+          "examples": [
+            "Farmer grows vegetables and shopkeeper sells notebooks."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Economic Activity",
+              "definition": "Activity linked with production, exchange, income or service.",
+              "simpleExample": "Selling fruits."
+            },
+            {
+              "keyword": "Goods",
+              "definition": "Physical things produced or sold.",
+              "simpleExample": "Books."
+            },
+            {
+              "keyword": "Services",
+              "definition": "Helpful activities provided by people.",
+              "simpleExample": "Teaching."
+            }
+          ],
+          "quickSummary": "Economic Activity: Economic activity is work related to producing, buying, selling or providing goods and services.",
+          "revisionNotes": [
+            "Economic Activity should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_social_studies_ch14_production_and_consumption",
+          "topic": "Production and Consumption",
+          "meaning": "Production creates goods or services; consumption means using them to satisfy needs.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Social Studies chapter 'Economic Activities Around Us', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Production and Consumption means production creates goods or services; consumption means using them to satisfy needs. It can be remembered through examples such as A baker makes bread and people buy/eat it..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Production and Consumption in society",
+              "explanation": "Production and Consumption is connected with people, places, time, resources, culture, government, or economy. The topic becomes clear when it is linked with real human life."
+            },
+            {
+              "step": 2,
+              "title": "Basic meaning",
+              "explanation": "The basic meaning is: Production creates goods or services; consumption means using them to satisfy needs."
+            },
+            {
+              "step": 3,
+              "title": "How the idea works",
+              "explanation": "The idea works through this flow: resources -> production -> distribution/sale -> consumption. These points show cause, connection, and effect."
+            },
+            {
+              "step": 4,
+              "title": "Example or Indian connection",
+              "explanation": "A helpful example is: A baker makes bread and people buy/eat it.. Examples make Social Science answers concrete and easy to remember."
+            },
+            {
+              "step": 5,
+              "title": "Importance",
+              "explanation": "This topic is important because it helps students understand how societies are organised, how people live together, how decisions are made, and how the past and present are connected."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "A complete answer on Production and Consumption should include meaning, context, example, and importance."
+            }
+          ],
+          "examples": [
+            "A baker makes bread and people buy/eat it."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Production",
+              "definition": "Making goods or services.",
+              "simpleExample": "Weaving cloth."
+            },
+            {
+              "keyword": "Consumption",
+              "definition": "Using goods/services.",
+              "simpleExample": "Eating food."
+            },
+            {
+              "keyword": "Consumer",
+              "definition": "Person who uses goods/services.",
+              "simpleExample": "Student buying pen."
+            }
+          ],
+          "quickSummary": "Production and Consumption: Production creates goods or services; consumption means using them to satisfy needs.",
+          "revisionNotes": [
+            "Production and Consumption should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_social_studies_ch14_markets_and_exchange",
+          "topic": "Markets and Exchange",
+          "meaning": "Markets are places or systems where goods and services are exchanged, often using money.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Social Studies chapter 'Economic Activities Around Us', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Markets and Exchange means markets are places or systems where goods and services are exchanged, often using money. It can be remembered through examples such as Vegetable market..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Markets and Exchange in society",
+              "explanation": "Markets and Exchange is connected with people, places, time, resources, culture, government, or economy. The topic becomes clear when it is linked with real human life."
+            },
+            {
+              "step": 2,
+              "title": "Basic meaning",
+              "explanation": "The basic meaning is: Markets are places or systems where goods and services are exchanged, often using money."
+            },
+            {
+              "step": 3,
+              "title": "How the idea works",
+              "explanation": "The idea works through this flow: seller brings goods -> buyer needs goods -> price decided -> money exchanged. These points show cause, connection, and effect."
+            },
+            {
+              "step": 4,
+              "title": "Example or Indian connection",
+              "explanation": "A helpful example is: Vegetable market.. Examples make Social Science answers concrete and easy to remember."
+            },
+            {
+              "step": 5,
+              "title": "Importance",
+              "explanation": "This topic is important because it helps students understand how societies are organised, how people live together, how decisions are made, and how the past and present are connected."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "A complete answer on Markets and Exchange should include meaning, context, example, and importance."
+            }
+          ],
+          "examples": [
+            "Vegetable market."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Market",
+              "definition": "Place/system for buying and selling.",
+              "simpleExample": "Weekly market."
+            },
+            {
+              "keyword": "Exchange",
+              "definition": "Giving one thing to receive another.",
+              "simpleExample": "Money for vegetables."
+            },
+            {
+              "keyword": "Price",
+              "definition": "Money needed to buy something.",
+              "simpleExample": "₹20 for notebook."
+            }
+          ],
+          "quickSummary": "Markets and Exchange: Markets are places or systems where goods and services are exchanged, often using money.",
+          "revisionNotes": [
+            "Markets and Exchange should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        }
+      ]
+    }
+  ]
+}

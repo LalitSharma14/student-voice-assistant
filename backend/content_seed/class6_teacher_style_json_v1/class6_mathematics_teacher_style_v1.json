@@ -1,0 +1,2075 @@
+{
+  "subject": "Mathematics",
+  "chapters": [
+    {
+      "class": 6,
+      "board": "CBSE",
+      "subject": "Mathematics",
+      "chapterNumber": 1,
+      "chapter": "Patterns in Mathematics",
+      "topics": [
+        {
+          "topicId": "c6_mathematics_ch1_mathematics_as_patterns",
+          "topic": "Mathematics as Patterns",
+          "meaning": "Mathematics studies patterns and the reasons behind them.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Mathematics chapter 'Patterns in Mathematics', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Mathematics as Patterns means mathematics studies patterns and the reasons behind them. It can be remembered through examples such as Odd numbers: 1, 3, 5, 7..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Identify the given information",
+              "explanation": "A question on Mathematics as Patterns starts by finding the given numbers, shapes, measurements, or pattern. This prevents confusion before solving."
+            },
+            {
+              "step": 2,
+              "title": "Select the correct mathematical idea",
+              "explanation": "The required idea is: Mathematics studies patterns and the reasons behind them. This tells which rule, formula, comparison, or drawing method should be used."
+            },
+            {
+              "step": 3,
+              "title": "Apply the rule step by step",
+              "explanation": "The solution moves in this order: observe pattern -> identify rule -> extend pattern -> explain reason. Following the order keeps the working clean."
+            },
+            {
+              "step": 4,
+              "title": "Show calculation or construction clearly",
+              "explanation": "A clear working can be shown through this example: Odd numbers: 1, 3, 5, 7.. Each step should be written so that another student can follow it."
+            },
+            {
+              "step": 5,
+              "title": "Check the result",
+              "explanation": "The answer is checked by seeing whether it fits the question. Units, signs, order, and size of answer are checked carefully."
+            },
+            {
+              "step": 6,
+              "title": "Write the final answer",
+              "explanation": "The final answer should include the value or statement asked in the question, with correct unit or explanation wherever needed."
+            }
+          ],
+          "examples": [
+            "Odd numbers: 1, 3, 5, 7."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Pattern",
+              "definition": "Repeated or organised arrangement following a rule.",
+              "simpleExample": "2,4,6,8."
+            },
+            {
+              "keyword": "Rule",
+              "definition": "Method that explains how pattern continues.",
+              "simpleExample": "Add 2 each time."
+            },
+            {
+              "keyword": "Sequence",
+              "definition": "Numbers written in order according to rule.",
+              "simpleExample": "1,4,9,16."
+            }
+          ],
+          "quickSummary": "Mathematics as Patterns: Mathematics studies patterns and the reasons behind them.",
+          "revisionNotes": [
+            "Mathematics as Patterns should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_mathematics_ch1_number_sequences",
+          "topic": "Number Sequences",
+          "meaning": "A number sequence is a list of numbers arranged according to a rule.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Mathematics chapter 'Patterns in Mathematics', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Number Sequences means a number sequence is a list of numbers arranged according to a rule. It can be remembered through examples such as 1, 4, 9, 16 are square numbers..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Identify the given information",
+              "explanation": "A question on Number Sequences starts by finding the given numbers, shapes, measurements, or pattern. This prevents confusion before solving."
+            },
+            {
+              "step": 2,
+              "title": "Select the correct mathematical idea",
+              "explanation": "The required idea is: A number sequence is a list of numbers arranged according to a rule. This tells which rule, formula, comparison, or drawing method should be used."
+            },
+            {
+              "step": 3,
+              "title": "Apply the rule step by step",
+              "explanation": "The solution moves in this order: write terms -> compare terms -> find rule -> write next terms. Following the order keeps the working clean."
+            },
+            {
+              "step": 4,
+              "title": "Show calculation or construction clearly",
+              "explanation": "A clear working can be shown through this example: 1, 4, 9, 16 are square numbers.. Each step should be written so that another student can follow it."
+            },
+            {
+              "step": 5,
+              "title": "Check the result",
+              "explanation": "The answer is checked by seeing whether it fits the question. Units, signs, order, and size of answer are checked carefully."
+            },
+            {
+              "step": 6,
+              "title": "Write the final answer",
+              "explanation": "The final answer should include the value or statement asked in the question, with correct unit or explanation wherever needed."
+            }
+          ],
+          "examples": [
+            "1, 4, 9, 16 are square numbers."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Counting Numbers",
+              "definition": "Numbers used for counting.",
+              "simpleExample": "1,2,3."
+            },
+            {
+              "keyword": "Odd Number",
+              "definition": "Number not divisible by 2.",
+              "simpleExample": "7."
+            },
+            {
+              "keyword": "Even Number",
+              "definition": "Number divisible by 2.",
+              "simpleExample": "8."
+            }
+          ],
+          "quickSummary": "Number Sequences: A number sequence is a list of numbers arranged according to a rule.",
+          "revisionNotes": [
+            "Number Sequences should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_mathematics_ch1_visualising_sequences",
+          "topic": "Visualising Sequences",
+          "meaning": "Visualising sequences means representing numbers through dots, pictures or shapes.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Mathematics chapter 'Patterns in Mathematics', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Visualising Sequences means visualising sequences means representing numbers through dots, pictures or shapes. It can be remembered through examples such as 6 dots can form a triangle..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Identify the given information",
+              "explanation": "A question on Visualising Sequences starts by finding the given numbers, shapes, measurements, or pattern. This prevents confusion before solving."
+            },
+            {
+              "step": 2,
+              "title": "Select the correct mathematical idea",
+              "explanation": "The required idea is: Visualising sequences means representing numbers through dots, pictures or shapes. This tells which rule, formula, comparison, or drawing method should be used."
+            },
+            {
+              "step": 3,
+              "title": "Apply the rule step by step",
+              "explanation": "The solution moves in this order: choose number -> draw dots -> arrange shape -> see pattern -> extend. Following the order keeps the working clean."
+            },
+            {
+              "step": 4,
+              "title": "Show calculation or construction clearly",
+              "explanation": "A clear working can be shown through this example: 6 dots can form a triangle.. Each step should be written so that another student can follow it."
+            },
+            {
+              "step": 5,
+              "title": "Check the result",
+              "explanation": "The answer is checked by seeing whether it fits the question. Units, signs, order, and size of answer are checked carefully."
+            },
+            {
+              "step": 6,
+              "title": "Write the final answer",
+              "explanation": "The final answer should include the value or statement asked in the question, with correct unit or explanation wherever needed."
+            }
+          ],
+          "examples": [
+            "6 dots can form a triangle."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Triangular Number",
+              "definition": "Number arranged as triangle of dots.",
+              "simpleExample": "1,3,6."
+            },
+            {
+              "keyword": "Square Number",
+              "definition": "Number arranged as square.",
+              "simpleExample": "16=4×4."
+            },
+            {
+              "keyword": "Cube Number",
+              "definition": "Number arranged as cube.",
+              "simpleExample": "27=3×3×3."
+            }
+          ],
+          "quickSummary": "Visualising Sequences: Visualising sequences means representing numbers through dots, pictures or shapes.",
+          "revisionNotes": [
+            "Visualising Sequences should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        }
+      ]
+    },
+    {
+      "class": 6,
+      "board": "CBSE",
+      "subject": "Mathematics",
+      "chapterNumber": 2,
+      "chapter": "Lines and Angles",
+      "topics": [
+        {
+          "topicId": "c6_mathematics_ch2_point_line_and_segment",
+          "topic": "Point, Line and Segment",
+          "meaning": "A point shows position, a line extends endlessly, and a line segment has two endpoints.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Mathematics chapter 'Lines and Angles', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Point, Line and Segment means a point shows position, a line extends endlessly, and a line segment has two endpoints. It can be remembered through examples such as Side of a rectangle is a line segment..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Identify the given information",
+              "explanation": "A question on Point, Line and Segment starts by finding the given numbers, shapes, measurements, or pattern. This prevents confusion before solving."
+            },
+            {
+              "step": 2,
+              "title": "Select the correct mathematical idea",
+              "explanation": "The required idea is: A point shows position, a line extends endlessly, and a line segment has two endpoints. This tells which rule, formula, comparison, or drawing method should be used."
+            },
+            {
+              "step": 3,
+              "title": "Apply the rule step by step",
+              "explanation": "The solution moves in this order: mark point -> draw line -> identify endpoints -> name figure. Following the order keeps the working clean."
+            },
+            {
+              "step": 4,
+              "title": "Show calculation or construction clearly",
+              "explanation": "A clear working can be shown through this example: Side of a rectangle is a line segment.. Each step should be written so that another student can follow it."
+            },
+            {
+              "step": 5,
+              "title": "Check the result",
+              "explanation": "The answer is checked by seeing whether it fits the question. Units, signs, order, and size of answer are checked carefully."
+            },
+            {
+              "step": 6,
+              "title": "Write the final answer",
+              "explanation": "The final answer should include the value or statement asked in the question, with correct unit or explanation wherever needed."
+            }
+          ],
+          "examples": [
+            "Side of a rectangle is a line segment."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Point",
+              "definition": "Exact location with no size.",
+              "simpleExample": "Point A."
+            },
+            {
+              "keyword": "Line",
+              "definition": "Straight path extending endlessly.",
+              "simpleExample": "Line with arrows."
+            },
+            {
+              "keyword": "Line Segment",
+              "definition": "Part of line with two endpoints.",
+              "simpleExample": "AB."
+            }
+          ],
+          "quickSummary": "Point, Line and Segment: A point shows position, a line extends endlessly, and a line segment has two endpoints.",
+          "revisionNotes": [
+            "Point, Line and Segment should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_mathematics_ch2_angles",
+          "topic": "Angles",
+          "meaning": "An angle is formed when two rays meet at a common endpoint called vertex.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Mathematics chapter 'Lines and Angles', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Angles means an angle is formed when two rays meet at a common endpoint called vertex. It can be remembered through examples such as Clock hands form angles..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Identify the given information",
+              "explanation": "A question on Angles starts by finding the given numbers, shapes, measurements, or pattern. This prevents confusion before solving."
+            },
+            {
+              "step": 2,
+              "title": "Select the correct mathematical idea",
+              "explanation": "The required idea is: An angle is formed when two rays meet at a common endpoint called vertex. This tells which rule, formula, comparison, or drawing method should be used."
+            },
+            {
+              "step": 3,
+              "title": "Apply the rule step by step",
+              "explanation": "The solution moves in this order: two rays -> common endpoint -> opening between rays -> name angle. Following the order keeps the working clean."
+            },
+            {
+              "step": 4,
+              "title": "Show calculation or construction clearly",
+              "explanation": "A clear working can be shown through this example: Clock hands form angles.. Each step should be written so that another student can follow it."
+            },
+            {
+              "step": 5,
+              "title": "Check the result",
+              "explanation": "The answer is checked by seeing whether it fits the question. Units, signs, order, and size of answer are checked carefully."
+            },
+            {
+              "step": 6,
+              "title": "Write the final answer",
+              "explanation": "The final answer should include the value or statement asked in the question, with correct unit or explanation wherever needed."
+            }
+          ],
+          "examples": [
+            "Clock hands form angles."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Angle",
+              "definition": "Figure made by two rays with common endpoint.",
+              "simpleExample": "∠ABC."
+            },
+            {
+              "keyword": "Vertex",
+              "definition": "Common endpoint of rays forming angle.",
+              "simpleExample": "Point B."
+            },
+            {
+              "keyword": "Arm",
+              "definition": "Each ray forming an angle.",
+              "simpleExample": "BA and BC."
+            }
+          ],
+          "quickSummary": "Angles: An angle is formed when two rays meet at a common endpoint called vertex.",
+          "revisionNotes": [
+            "Angles should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_mathematics_ch2_types_of_angles",
+          "topic": "Types of Angles",
+          "meaning": "Angles are named according to size, such as acute, right, obtuse and straight.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Mathematics chapter 'Lines and Angles', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Types of Angles means angles are named according to size, such as acute, right, obtuse and straight. It can be remembered through examples such as 90° is a right angle..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Identify the given information",
+              "explanation": "A question on Types of Angles starts by finding the given numbers, shapes, measurements, or pattern. This prevents confusion before solving."
+            },
+            {
+              "step": 2,
+              "title": "Select the correct mathematical idea",
+              "explanation": "The required idea is: Angles are named according to size, such as acute, right, obtuse and straight. This tells which rule, formula, comparison, or drawing method should be used."
+            },
+            {
+              "step": 3,
+              "title": "Apply the rule step by step",
+              "explanation": "The solution moves in this order: observe opening -> compare with 90° -> compare with 180° -> name angle. Following the order keeps the working clean."
+            },
+            {
+              "step": 4,
+              "title": "Show calculation or construction clearly",
+              "explanation": "A clear working can be shown through this example: 90° is a right angle.. Each step should be written so that another student can follow it."
+            },
+            {
+              "step": 5,
+              "title": "Check the result",
+              "explanation": "The answer is checked by seeing whether it fits the question. Units, signs, order, and size of answer are checked carefully."
+            },
+            {
+              "step": 6,
+              "title": "Write the final answer",
+              "explanation": "The final answer should include the value or statement asked in the question, with correct unit or explanation wherever needed."
+            }
+          ],
+          "examples": [
+            "90° is a right angle."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Right Angle",
+              "definition": "Angle of 90 degrees.",
+              "simpleExample": "Corner of square."
+            },
+            {
+              "keyword": "Acute Angle",
+              "definition": "Angle smaller than 90 degrees.",
+              "simpleExample": "30°."
+            },
+            {
+              "keyword": "Obtuse Angle",
+              "definition": "Angle greater than 90° and less than 180°.",
+              "simpleExample": "120°."
+            }
+          ],
+          "quickSummary": "Types of Angles: Angles are named according to size, such as acute, right, obtuse and straight.",
+          "revisionNotes": [
+            "Types of Angles should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        }
+      ]
+    },
+    {
+      "class": 6,
+      "board": "CBSE",
+      "subject": "Mathematics",
+      "chapterNumber": 3,
+      "chapter": "Number Play",
+      "topics": [
+        {
+          "topicId": "c6_mathematics_ch3_place_value",
+          "topic": "Place Value",
+          "meaning": "Place value gives the value of a digit according to its position.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Mathematics chapter 'Number Play', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Place Value means place value gives the value of a digit according to its position. It can be remembered through examples such as In 5,432, 5 means 5000..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Identify the given information",
+              "explanation": "A question on Place Value starts by finding the given numbers, shapes, measurements, or pattern. This prevents confusion before solving."
+            },
+            {
+              "step": 2,
+              "title": "Select the correct mathematical idea",
+              "explanation": "The required idea is: Place value gives the value of a digit according to its position. This tells which rule, formula, comparison, or drawing method should be used."
+            },
+            {
+              "step": 3,
+              "title": "Apply the rule step by step",
+              "explanation": "The solution moves in this order: write number -> mark places -> find digit value -> read number. Following the order keeps the working clean."
+            },
+            {
+              "step": 4,
+              "title": "Show calculation or construction clearly",
+              "explanation": "A clear working can be shown through this example: In 5,432, 5 means 5000.. Each step should be written so that another student can follow it."
+            },
+            {
+              "step": 5,
+              "title": "Check the result",
+              "explanation": "The answer is checked by seeing whether it fits the question. Units, signs, order, and size of answer are checked carefully."
+            },
+            {
+              "step": 6,
+              "title": "Write the final answer",
+              "explanation": "The final answer should include the value or statement asked in the question, with correct unit or explanation wherever needed."
+            }
+          ],
+          "examples": [
+            "In 5,432, 5 means 5000."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Place Value",
+              "definition": "Value of a digit based on its position.",
+              "simpleExample": "7 in 7000."
+            },
+            {
+              "keyword": "Digit",
+              "definition": "Symbols 0 to 9 used to write numbers.",
+              "simpleExample": "5."
+            },
+            {
+              "keyword": "Face Value",
+              "definition": "Value of the digit itself.",
+              "simpleExample": "Face value of 8 is 8."
+            }
+          ],
+          "quickSummary": "Place Value: Place value gives the value of a digit according to its position.",
+          "revisionNotes": [
+            "Place Value should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_mathematics_ch3_rearranging_digits",
+          "topic": "Rearranging Digits",
+          "meaning": "Changing the position of digits creates different numbers.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Mathematics chapter 'Number Play', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Rearranging Digits means changing the position of digits creates different numbers. It can be remembered through examples such as Digits 1,3,5 can form 135, 315, 531..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Identify the given information",
+              "explanation": "A question on Rearranging Digits starts by finding the given numbers, shapes, measurements, or pattern. This prevents confusion before solving."
+            },
+            {
+              "step": 2,
+              "title": "Select the correct mathematical idea",
+              "explanation": "The required idea is: Changing the position of digits creates different numbers. This tells which rule, formula, comparison, or drawing method should be used."
+            },
+            {
+              "step": 3,
+              "title": "Apply the rule step by step",
+              "explanation": "The solution moves in this order: choose digits -> arrange -> compare values -> form smallest/largest. Following the order keeps the working clean."
+            },
+            {
+              "step": 4,
+              "title": "Show calculation or construction clearly",
+              "explanation": "A clear working can be shown through this example: Digits 1,3,5 can form 135, 315, 531.. Each step should be written so that another student can follow it."
+            },
+            {
+              "step": 5,
+              "title": "Check the result",
+              "explanation": "The answer is checked by seeing whether it fits the question. Units, signs, order, and size of answer are checked carefully."
+            },
+            {
+              "step": 6,
+              "title": "Write the final answer",
+              "explanation": "The final answer should include the value or statement asked in the question, with correct unit or explanation wherever needed."
+            }
+          ],
+          "examples": [
+            "Digits 1,3,5 can form 135, 315, 531."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Ascending Order",
+              "definition": "Smallest to largest order.",
+              "simpleExample": "123,231,312."
+            },
+            {
+              "keyword": "Descending Order",
+              "definition": "Largest to smallest order.",
+              "simpleExample": "531,315,135."
+            },
+            {
+              "keyword": "Rearrangement",
+              "definition": "Changing order of digits.",
+              "simpleExample": "246 to 642."
+            }
+          ],
+          "quickSummary": "Rearranging Digits: Changing the position of digits creates different numbers.",
+          "revisionNotes": [
+            "Rearranging Digits should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_mathematics_ch3_estimation",
+          "topic": "Estimation",
+          "meaning": "Estimation gives an approximate answer close to exact value.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Mathematics chapter 'Number Play', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Estimation means estimation gives an approximate answer close to exact value. It can be remembered through examples such as 198 + 302 is about 500..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Identify the given information",
+              "explanation": "A question on Estimation starts by finding the given numbers, shapes, measurements, or pattern. This prevents confusion before solving."
+            },
+            {
+              "step": 2,
+              "title": "Select the correct mathematical idea",
+              "explanation": "The required idea is: Estimation gives an approximate answer close to exact value. This tells which rule, formula, comparison, or drawing method should be used."
+            },
+            {
+              "step": 3,
+              "title": "Apply the rule step by step",
+              "explanation": "The solution moves in this order: round numbers -> calculate mentally -> compare with exact need -> state approximate answer. Following the order keeps the working clean."
+            },
+            {
+              "step": 4,
+              "title": "Show calculation or construction clearly",
+              "explanation": "A clear working can be shown through this example: 198 + 302 is about 500.. Each step should be written so that another student can follow it."
+            },
+            {
+              "step": 5,
+              "title": "Check the result",
+              "explanation": "The answer is checked by seeing whether it fits the question. Units, signs, order, and size of answer are checked carefully."
+            },
+            {
+              "step": 6,
+              "title": "Write the final answer",
+              "explanation": "The final answer should include the value or statement asked in the question, with correct unit or explanation wherever needed."
+            }
+          ],
+          "examples": [
+            "198 + 302 is about 500."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Estimate",
+              "definition": "Approximate value close to actual.",
+              "simpleExample": "49 is about 50."
+            },
+            {
+              "keyword": "Approximation",
+              "definition": "Process of finding near value.",
+              "simpleExample": "397 to 400."
+            },
+            {
+              "keyword": "Reasonable Answer",
+              "definition": "Answer that makes sense in context.",
+              "simpleExample": "Pencil cannot weigh 20 kg."
+            }
+          ],
+          "quickSummary": "Estimation: Estimation gives an approximate answer close to exact value.",
+          "revisionNotes": [
+            "Estimation should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        }
+      ]
+    },
+    {
+      "class": 6,
+      "board": "CBSE",
+      "subject": "Mathematics",
+      "chapterNumber": 4,
+      "chapter": "Data Handling and Presentation",
+      "topics": [
+        {
+          "topicId": "c6_mathematics_ch4_data",
+          "topic": "Data",
+          "meaning": "Data is collected information used for study or decision-making.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Mathematics chapter 'Data Handling and Presentation', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Data means data is collected information used for study or decision-making. It can be remembered through examples such as Favourite fruits of students..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Identify the given information",
+              "explanation": "A question on Data starts by finding the given numbers, shapes, measurements, or pattern. This prevents confusion before solving."
+            },
+            {
+              "step": 2,
+              "title": "Select the correct mathematical idea",
+              "explanation": "The required idea is: Data is collected information used for study or decision-making. This tells which rule, formula, comparison, or drawing method should be used."
+            },
+            {
+              "step": 3,
+              "title": "Apply the rule step by step",
+              "explanation": "The solution moves in this order: ask question -> collect information -> organise -> present -> interpret. Following the order keeps the working clean."
+            },
+            {
+              "step": 4,
+              "title": "Show calculation or construction clearly",
+              "explanation": "A clear working can be shown through this example: Favourite fruits of students.. Each step should be written so that another student can follow it."
+            },
+            {
+              "step": 5,
+              "title": "Check the result",
+              "explanation": "The answer is checked by seeing whether it fits the question. Units, signs, order, and size of answer are checked carefully."
+            },
+            {
+              "step": 6,
+              "title": "Write the final answer",
+              "explanation": "The final answer should include the value or statement asked in the question, with correct unit or explanation wherever needed."
+            }
+          ],
+          "examples": [
+            "Favourite fruits of students."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Data",
+              "definition": "Information collected for study.",
+              "simpleExample": "Heights of students."
+            },
+            {
+              "keyword": "Survey",
+              "definition": "Collecting information by asking people.",
+              "simpleExample": "Favourite sport survey."
+            },
+            {
+              "keyword": "Observation",
+              "definition": "Noticing and recording information.",
+              "simpleExample": "Counting vehicles."
+            }
+          ],
+          "quickSummary": "Data: Data is collected information used for study or decision-making.",
+          "revisionNotes": [
+            "Data should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_mathematics_ch4_tally_marks",
+          "topic": "Tally Marks",
+          "meaning": "Tally marks record counting quickly, usually in groups of five.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Mathematics chapter 'Data Handling and Presentation', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Tally Marks means tally marks record counting quickly, usually in groups of five. It can be remembered through examples such as |||| means 4..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Identify the given information",
+              "explanation": "A question on Tally Marks starts by finding the given numbers, shapes, measurements, or pattern. This prevents confusion before solving."
+            },
+            {
+              "step": 2,
+              "title": "Select the correct mathematical idea",
+              "explanation": "The required idea is: Tally marks record counting quickly, usually in groups of five. This tells which rule, formula, comparison, or drawing method should be used."
+            },
+            {
+              "step": 3,
+              "title": "Apply the rule step by step",
+              "explanation": "The solution moves in this order: make category -> put one mark per item -> group fifth mark -> count frequency. Following the order keeps the working clean."
+            },
+            {
+              "step": 4,
+              "title": "Show calculation or construction clearly",
+              "explanation": "A clear working can be shown through this example: |||| means 4.. Each step should be written so that another student can follow it."
+            },
+            {
+              "step": 5,
+              "title": "Check the result",
+              "explanation": "The answer is checked by seeing whether it fits the question. Units, signs, order, and size of answer are checked carefully."
+            },
+            {
+              "step": 6,
+              "title": "Write the final answer",
+              "explanation": "The final answer should include the value or statement asked in the question, with correct unit or explanation wherever needed."
+            }
+          ],
+          "examples": [
+            "|||| means 4."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Tally Mark",
+              "definition": "Counting mark used to record frequency.",
+              "simpleExample": "One stroke for one vote."
+            },
+            {
+              "keyword": "Frequency",
+              "definition": "Number of times an item occurs.",
+              "simpleExample": "10 students choose mango."
+            },
+            {
+              "keyword": "Category",
+              "definition": "Group in which data is counted.",
+              "simpleExample": "Fruit names."
+            }
+          ],
+          "quickSummary": "Tally Marks: Tally marks record counting quickly, usually in groups of five.",
+          "revisionNotes": [
+            "Tally Marks should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_mathematics_ch4_bar_graph_and_pictograph",
+          "topic": "Bar Graph and Pictograph",
+          "meaning": "Graphs show data visually using bars or pictures.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Mathematics chapter 'Data Handling and Presentation', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Bar Graph and Pictograph means graphs show data visually using bars or pictures. It can be remembered through examples such as One picture may represent 5 books..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Identify the given information",
+              "explanation": "A question on Bar Graph and Pictograph starts by finding the given numbers, shapes, measurements, or pattern. This prevents confusion before solving."
+            },
+            {
+              "step": 2,
+              "title": "Select the correct mathematical idea",
+              "explanation": "The required idea is: Graphs show data visually using bars or pictures. This tells which rule, formula, comparison, or drawing method should be used."
+            },
+            {
+              "step": 3,
+              "title": "Apply the rule step by step",
+              "explanation": "The solution moves in this order: choose scale/key -> draw bars/symbols -> read values -> compare. Following the order keeps the working clean."
+            },
+            {
+              "step": 4,
+              "title": "Show calculation or construction clearly",
+              "explanation": "A clear working can be shown through this example: One picture may represent 5 books.. Each step should be written so that another student can follow it."
+            },
+            {
+              "step": 5,
+              "title": "Check the result",
+              "explanation": "The answer is checked by seeing whether it fits the question. Units, signs, order, and size of answer are checked carefully."
+            },
+            {
+              "step": 6,
+              "title": "Write the final answer",
+              "explanation": "The final answer should include the value or statement asked in the question, with correct unit or explanation wherever needed."
+            }
+          ],
+          "examples": [
+            "One picture may represent 5 books."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Bar Graph",
+              "definition": "Graph using rectangular bars.",
+              "simpleExample": "Students in clubs."
+            },
+            {
+              "keyword": "Pictograph",
+              "definition": "Data shown with pictures.",
+              "simpleExample": "Stars for votes."
+            },
+            {
+              "keyword": "Scale",
+              "definition": "Fixed interval used on graph.",
+              "simpleExample": "1 division=5 students."
+            }
+          ],
+          "quickSummary": "Bar Graph and Pictograph: Graphs show data visually using bars or pictures.",
+          "revisionNotes": [
+            "Bar Graph and Pictograph should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        }
+      ]
+    },
+    {
+      "class": 6,
+      "board": "CBSE",
+      "subject": "Mathematics",
+      "chapterNumber": 5,
+      "chapter": "Prime Time",
+      "topics": [
+        {
+          "topicId": "c6_mathematics_ch5_factors_and_multiples",
+          "topic": "Factors and Multiples",
+          "meaning": "A factor divides a number exactly; a multiple is obtained by multiplying a number by whole numbers.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Mathematics chapter 'Prime Time', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Factors and Multiples means a factor divides a number exactly; a multiple is obtained by multiplying a number by whole numbers. It can be remembered through examples such as Factors of 12 are 1,2,3,4,6,12..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Identify the given information",
+              "explanation": "A question on Factors and Multiples starts by finding the given numbers, shapes, measurements, or pattern. This prevents confusion before solving."
+            },
+            {
+              "step": 2,
+              "title": "Select the correct mathematical idea",
+              "explanation": "The required idea is: A factor divides a number exactly; a multiple is obtained by multiplying a number by whole numbers. This tells which rule, formula, comparison, or drawing method should be used."
+            },
+            {
+              "step": 3,
+              "title": "Apply the rule step by step",
+              "explanation": "The solution moves in this order: divide to find factor -> multiply to find multiple -> list systematically -> compare. Following the order keeps the working clean."
+            },
+            {
+              "step": 4,
+              "title": "Show calculation or construction clearly",
+              "explanation": "A clear working can be shown through this example: Factors of 12 are 1,2,3,4,6,12.. Each step should be written so that another student can follow it."
+            },
+            {
+              "step": 5,
+              "title": "Check the result",
+              "explanation": "The answer is checked by seeing whether it fits the question. Units, signs, order, and size of answer are checked carefully."
+            },
+            {
+              "step": 6,
+              "title": "Write the final answer",
+              "explanation": "The final answer should include the value or statement asked in the question, with correct unit or explanation wherever needed."
+            }
+          ],
+          "examples": [
+            "Factors of 12 are 1,2,3,4,6,12."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Factor",
+              "definition": "Number that divides another exactly.",
+              "simpleExample": "3 is factor of 12."
+            },
+            {
+              "keyword": "Multiple",
+              "definition": "Product of a number and whole number.",
+              "simpleExample": "20 is multiple of 5."
+            },
+            {
+              "keyword": "Divisibility",
+              "definition": "Ability to divide exactly.",
+              "simpleExample": "18 divisible by 3."
+            }
+          ],
+          "quickSummary": "Factors and Multiples: A factor divides a number exactly; a multiple is obtained by multiplying a number by whole numbers.",
+          "revisionNotes": [
+            "Factors and Multiples should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_mathematics_ch5_prime_and_composite_numbers",
+          "topic": "Prime and Composite Numbers",
+          "meaning": "A prime number has exactly two factors, while a composite number has more than two factors.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Mathematics chapter 'Prime Time', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Prime and Composite Numbers means a prime number has exactly two factors, while a composite number has more than two factors. It can be remembered through examples such as 7 is prime; 12 is composite..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Identify the given information",
+              "explanation": "A question on Prime and Composite Numbers starts by finding the given numbers, shapes, measurements, or pattern. This prevents confusion before solving."
+            },
+            {
+              "step": 2,
+              "title": "Select the correct mathematical idea",
+              "explanation": "The required idea is: A prime number has exactly two factors, while a composite number has more than two factors. This tells which rule, formula, comparison, or drawing method should be used."
+            },
+            {
+              "step": 3,
+              "title": "Apply the rule step by step",
+              "explanation": "The solution moves in this order: list factors -> count factors -> two means prime -> more than two means composite. Following the order keeps the working clean."
+            },
+            {
+              "step": 4,
+              "title": "Show calculation or construction clearly",
+              "explanation": "A clear working can be shown through this example: 7 is prime; 12 is composite.. Each step should be written so that another student can follow it."
+            },
+            {
+              "step": 5,
+              "title": "Check the result",
+              "explanation": "The answer is checked by seeing whether it fits the question. Units, signs, order, and size of answer are checked carefully."
+            },
+            {
+              "step": 6,
+              "title": "Write the final answer",
+              "explanation": "The final answer should include the value or statement asked in the question, with correct unit or explanation wherever needed."
+            }
+          ],
+          "examples": [
+            "7 is prime; 12 is composite."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Prime Number",
+              "definition": "Number greater than 1 with exactly two factors.",
+              "simpleExample": "7."
+            },
+            {
+              "keyword": "Composite Number",
+              "definition": "Number greater than 1 with more than two factors.",
+              "simpleExample": "12."
+            },
+            {
+              "keyword": "Exactly",
+              "definition": "No more and no less.",
+              "simpleExample": "Exactly two factors."
+            }
+          ],
+          "quickSummary": "Prime and Composite Numbers: A prime number has exactly two factors, while a composite number has more than two factors.",
+          "revisionNotes": [
+            "Prime and Composite Numbers should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_mathematics_ch5_prime_factorisation",
+          "topic": "Prime Factorisation",
+          "meaning": "Prime factorisation writes a number as product of prime numbers.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Mathematics chapter 'Prime Time', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Prime Factorisation means prime factorisation writes a number as product of prime numbers. It can be remembered through examples such as 30 = 2 × 3 × 5..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Identify the given information",
+              "explanation": "A question on Prime Factorisation starts by finding the given numbers, shapes, measurements, or pattern. This prevents confusion before solving."
+            },
+            {
+              "step": 2,
+              "title": "Select the correct mathematical idea",
+              "explanation": "The required idea is: Prime factorisation writes a number as product of prime numbers. This tells which rule, formula, comparison, or drawing method should be used."
+            },
+            {
+              "step": 3,
+              "title": "Apply the rule step by step",
+              "explanation": "The solution moves in this order: start number -> divide by prime -> continue -> write product. Following the order keeps the working clean."
+            },
+            {
+              "step": 4,
+              "title": "Show calculation or construction clearly",
+              "explanation": "A clear working can be shown through this example: 30 = 2 × 3 × 5.. Each step should be written so that another student can follow it."
+            },
+            {
+              "step": 5,
+              "title": "Check the result",
+              "explanation": "The answer is checked by seeing whether it fits the question. Units, signs, order, and size of answer are checked carefully."
+            },
+            {
+              "step": 6,
+              "title": "Write the final answer",
+              "explanation": "The final answer should include the value or statement asked in the question, with correct unit or explanation wherever needed."
+            }
+          ],
+          "examples": [
+            "30 = 2 × 3 × 5."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Prime Factor",
+              "definition": "Factor that is prime.",
+              "simpleExample": "2 in 12."
+            },
+            {
+              "keyword": "Factor Tree",
+              "definition": "Diagram breaking number into factors.",
+              "simpleExample": "36 -> 6 and 6."
+            },
+            {
+              "keyword": "Product",
+              "definition": "Result of multiplication.",
+              "simpleExample": "2×3×5=30."
+            }
+          ],
+          "quickSummary": "Prime Factorisation: Prime factorisation writes a number as product of prime numbers.",
+          "revisionNotes": [
+            "Prime Factorisation should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        }
+      ]
+    },
+    {
+      "class": 6,
+      "board": "CBSE",
+      "subject": "Mathematics",
+      "chapterNumber": 6,
+      "chapter": "Perimeter and Area",
+      "topics": [
+        {
+          "topicId": "c6_mathematics_ch6_perimeter",
+          "topic": "Perimeter",
+          "meaning": "Perimeter is total distance around a closed figure.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Mathematics chapter 'Perimeter and Area', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Perimeter means perimeter is total distance around a closed figure. It can be remembered through examples such as Fence around garden uses perimeter..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Identify the given information",
+              "explanation": "A question on Perimeter starts by finding the given numbers, shapes, measurements, or pattern. This prevents confusion before solving."
+            },
+            {
+              "step": 2,
+              "title": "Select the correct mathematical idea",
+              "explanation": "The required idea is: Perimeter is total distance around a closed figure. This tells which rule, formula, comparison, or drawing method should be used."
+            },
+            {
+              "step": 3,
+              "title": "Apply the rule step by step",
+              "explanation": "The solution moves in this order: identify sides -> measure lengths -> add all sides -> write unit. Following the order keeps the working clean."
+            },
+            {
+              "step": 4,
+              "title": "Show calculation or construction clearly",
+              "explanation": "A clear working can be shown through this example: Fence around garden uses perimeter.. Each step should be written so that another student can follow it."
+            },
+            {
+              "step": 5,
+              "title": "Check the result",
+              "explanation": "The answer is checked by seeing whether it fits the question. Units, signs, order, and size of answer are checked carefully."
+            },
+            {
+              "step": 6,
+              "title": "Write the final answer",
+              "explanation": "The final answer should include the value or statement asked in the question, with correct unit or explanation wherever needed."
+            }
+          ],
+          "examples": [
+            "Fence around garden uses perimeter."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Perimeter",
+              "definition": "Total boundary length of closed figure.",
+              "simpleExample": "Adding sides of triangle."
+            },
+            {
+              "keyword": "Boundary",
+              "definition": "Outer edge of shape.",
+              "simpleExample": "Edge of field."
+            },
+            {
+              "keyword": "Unit Length",
+              "definition": "Unit for side length.",
+              "simpleExample": "cm or m."
+            }
+          ],
+          "quickSummary": "Perimeter: Perimeter is total distance around a closed figure.",
+          "revisionNotes": [
+            "Perimeter should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_mathematics_ch6_area",
+          "topic": "Area",
+          "meaning": "Area is the surface covered by a closed figure.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Mathematics chapter 'Perimeter and Area', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Area means area is the surface covered by a closed figure. It can be remembered through examples such as Tiles covering floor use area..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Identify the given information",
+              "explanation": "A question on Area starts by finding the given numbers, shapes, measurements, or pattern. This prevents confusion before solving."
+            },
+            {
+              "step": 2,
+              "title": "Select the correct mathematical idea",
+              "explanation": "The required idea is: Area is the surface covered by a closed figure. This tells which rule, formula, comparison, or drawing method should be used."
+            },
+            {
+              "step": 3,
+              "title": "Apply the rule step by step",
+              "explanation": "The solution moves in this order: cover with squares -> count squares -> use formula -> write square unit. Following the order keeps the working clean."
+            },
+            {
+              "step": 4,
+              "title": "Show calculation or construction clearly",
+              "explanation": "A clear working can be shown through this example: Tiles covering floor use area.. Each step should be written so that another student can follow it."
+            },
+            {
+              "step": 5,
+              "title": "Check the result",
+              "explanation": "The answer is checked by seeing whether it fits the question. Units, signs, order, and size of answer are checked carefully."
+            },
+            {
+              "step": 6,
+              "title": "Write the final answer",
+              "explanation": "The final answer should include the value or statement asked in the question, with correct unit or explanation wherever needed."
+            }
+          ],
+          "examples": [
+            "Tiles covering floor use area."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Area",
+              "definition": "Surface covered by a shape.",
+              "simpleExample": "Notebook cover area."
+            },
+            {
+              "keyword": "Square Unit",
+              "definition": "Unit used for area.",
+              "simpleExample": "cm²."
+            },
+            {
+              "keyword": "Grid",
+              "definition": "Network of squares for counting area.",
+              "simpleExample": "Graph paper grid."
+            }
+          ],
+          "quickSummary": "Area: Area is the surface covered by a closed figure.",
+          "revisionNotes": [
+            "Area should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_mathematics_ch6_perimeter_vs_area",
+          "topic": "Perimeter vs Area",
+          "meaning": "Perimeter measures boundary, while area measures surface.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Mathematics chapter 'Perimeter and Area', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Perimeter vs Area means perimeter measures boundary, while area measures surface. It can be remembered through examples such as Fencing needs perimeter; painting needs area..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Identify the given information",
+              "explanation": "A question on Perimeter vs Area starts by finding the given numbers, shapes, measurements, or pattern. This prevents confusion before solving."
+            },
+            {
+              "step": 2,
+              "title": "Select the correct mathematical idea",
+              "explanation": "The required idea is: Perimeter measures boundary, while area measures surface. This tells which rule, formula, comparison, or drawing method should be used."
+            },
+            {
+              "step": 3,
+              "title": "Apply the rule step by step",
+              "explanation": "The solution moves in this order: decide boundary or surface -> choose method -> calculate -> use correct unit. Following the order keeps the working clean."
+            },
+            {
+              "step": 4,
+              "title": "Show calculation or construction clearly",
+              "explanation": "A clear working can be shown through this example: Fencing needs perimeter; painting needs area.. Each step should be written so that another student can follow it."
+            },
+            {
+              "step": 5,
+              "title": "Check the result",
+              "explanation": "The answer is checked by seeing whether it fits the question. Units, signs, order, and size of answer are checked carefully."
+            },
+            {
+              "step": 6,
+              "title": "Write the final answer",
+              "explanation": "The final answer should include the value or statement asked in the question, with correct unit or explanation wherever needed."
+            }
+          ],
+          "examples": [
+            "Fencing needs perimeter; painting needs area."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Boundary Measurement",
+              "definition": "Measurement around a figure.",
+              "simpleExample": "Fence length."
+            },
+            {
+              "keyword": "Surface Measurement",
+              "definition": "Measurement of covered region.",
+              "simpleExample": "Carpet area."
+            },
+            {
+              "keyword": "Formula",
+              "definition": "Rule written using symbols.",
+              "simpleExample": "A=l×b."
+            }
+          ],
+          "quickSummary": "Perimeter vs Area: Perimeter measures boundary, while area measures surface.",
+          "revisionNotes": [
+            "Perimeter vs Area should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        }
+      ]
+    },
+    {
+      "class": 6,
+      "board": "CBSE",
+      "subject": "Mathematics",
+      "chapterNumber": 7,
+      "chapter": "Fractions",
+      "topics": [
+        {
+          "topicId": "c6_mathematics_ch7_meaning_of_fraction",
+          "topic": "Meaning of Fraction",
+          "meaning": "A fraction shows a part of a whole or group divided into equal parts.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Mathematics chapter 'Fractions', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Meaning of Fraction means a fraction shows a part of a whole or group divided into equal parts. It can be remembered through examples such as 1/2 of a roti..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Identify the given information",
+              "explanation": "A question on Meaning of Fraction starts by finding the given numbers, shapes, measurements, or pattern. This prevents confusion before solving."
+            },
+            {
+              "step": 2,
+              "title": "Select the correct mathematical idea",
+              "explanation": "The required idea is: A fraction shows a part of a whole or group divided into equal parts. This tells which rule, formula, comparison, or drawing method should be used."
+            },
+            {
+              "step": 3,
+              "title": "Apply the rule step by step",
+              "explanation": "The solution moves in this order: whole divided equally -> select parts -> write numerator -> write denominator. Following the order keeps the working clean."
+            },
+            {
+              "step": 4,
+              "title": "Show calculation or construction clearly",
+              "explanation": "A clear working can be shown through this example: 1/2 of a roti.. Each step should be written so that another student can follow it."
+            },
+            {
+              "step": 5,
+              "title": "Check the result",
+              "explanation": "The answer is checked by seeing whether it fits the question. Units, signs, order, and size of answer are checked carefully."
+            },
+            {
+              "step": 6,
+              "title": "Write the final answer",
+              "explanation": "The final answer should include the value or statement asked in the question, with correct unit or explanation wherever needed."
+            }
+          ],
+          "examples": [
+            "1/2 of a roti."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Fraction",
+              "definition": "Number showing part of whole/group.",
+              "simpleExample": "1/3 cake."
+            },
+            {
+              "keyword": "Numerator",
+              "definition": "Top number showing selected parts.",
+              "simpleExample": "3 in 3/5."
+            },
+            {
+              "keyword": "Denominator",
+              "definition": "Bottom number showing total equal parts.",
+              "simpleExample": "5 in 3/5."
+            }
+          ],
+          "quickSummary": "Meaning of Fraction: A fraction shows a part of a whole or group divided into equal parts.",
+          "revisionNotes": [
+            "Meaning of Fraction should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_mathematics_ch7_equivalent_fractions",
+          "topic": "Equivalent Fractions",
+          "meaning": "Equivalent fractions have different numerators and denominators but same value.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Mathematics chapter 'Fractions', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Equivalent Fractions means equivalent fractions have different numerators and denominators but same value. It can be remembered through examples such as 1/2 = 2/4 = 3/6..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Identify the given information",
+              "explanation": "A question on Equivalent Fractions starts by finding the given numbers, shapes, measurements, or pattern. This prevents confusion before solving."
+            },
+            {
+              "step": 2,
+              "title": "Select the correct mathematical idea",
+              "explanation": "The required idea is: Equivalent fractions have different numerators and denominators but same value. This tells which rule, formula, comparison, or drawing method should be used."
+            },
+            {
+              "step": 3,
+              "title": "Apply the rule step by step",
+              "explanation": "The solution moves in this order: start fraction -> multiply/divide both parts by same number -> compare value -> verify. Following the order keeps the working clean."
+            },
+            {
+              "step": 4,
+              "title": "Show calculation or construction clearly",
+              "explanation": "A clear working can be shown through this example: 1/2 = 2/4 = 3/6.. Each step should be written so that another student can follow it."
+            },
+            {
+              "step": 5,
+              "title": "Check the result",
+              "explanation": "The answer is checked by seeing whether it fits the question. Units, signs, order, and size of answer are checked carefully."
+            },
+            {
+              "step": 6,
+              "title": "Write the final answer",
+              "explanation": "The final answer should include the value or statement asked in the question, with correct unit or explanation wherever needed."
+            }
+          ],
+          "examples": [
+            "1/2 = 2/4 = 3/6."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Equivalent Fraction",
+              "definition": "Fraction equal in value to another.",
+              "simpleExample": "1/2 and 2/4."
+            },
+            {
+              "keyword": "Simplest Form",
+              "definition": "Fraction in lowest terms.",
+              "simpleExample": "2/4 becomes 1/2."
+            },
+            {
+              "keyword": "Common Factor",
+              "definition": "Factor shared by numerator and denominator.",
+              "simpleExample": "2 in 2/4."
+            }
+          ],
+          "quickSummary": "Equivalent Fractions: Equivalent fractions have different numerators and denominators but same value.",
+          "revisionNotes": [
+            "Equivalent Fractions should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_mathematics_ch7_fractions_on_number_line",
+          "topic": "Fractions on Number Line",
+          "meaning": "Fractions can be located as numbers between whole numbers on a number line.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Mathematics chapter 'Fractions', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Fractions on Number Line means fractions can be located as numbers between whole numbers on a number line. It can be remembered through examples such as 1/2 lies halfway between 0 and 1..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Identify the given information",
+              "explanation": "A question on Fractions on Number Line starts by finding the given numbers, shapes, measurements, or pattern. This prevents confusion before solving."
+            },
+            {
+              "step": 2,
+              "title": "Select the correct mathematical idea",
+              "explanation": "The required idea is: Fractions can be located as numbers between whole numbers on a number line. This tells which rule, formula, comparison, or drawing method should be used."
+            },
+            {
+              "step": 3,
+              "title": "Apply the rule step by step",
+              "explanation": "The solution moves in this order: draw line -> mark whole numbers -> divide interval equally -> locate fraction. Following the order keeps the working clean."
+            },
+            {
+              "step": 4,
+              "title": "Show calculation or construction clearly",
+              "explanation": "A clear working can be shown through this example: 1/2 lies halfway between 0 and 1.. Each step should be written so that another student can follow it."
+            },
+            {
+              "step": 5,
+              "title": "Check the result",
+              "explanation": "The answer is checked by seeing whether it fits the question. Units, signs, order, and size of answer are checked carefully."
+            },
+            {
+              "step": 6,
+              "title": "Write the final answer",
+              "explanation": "The final answer should include the value or statement asked in the question, with correct unit or explanation wherever needed."
+            }
+          ],
+          "examples": [
+            "1/2 lies halfway between 0 and 1."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Number Line",
+              "definition": "Line showing numbers in order.",
+              "simpleExample": "0,1/2,1."
+            },
+            {
+              "keyword": "Interval",
+              "definition": "Space between two numbers.",
+              "simpleExample": "0 to 1."
+            },
+            {
+              "keyword": "Equal Parts",
+              "definition": "Parts of same size.",
+              "simpleExample": "Four equal quarters."
+            }
+          ],
+          "quickSummary": "Fractions on Number Line: Fractions can be located as numbers between whole numbers on a number line.",
+          "revisionNotes": [
+            "Fractions on Number Line should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        }
+      ]
+    },
+    {
+      "class": 6,
+      "board": "CBSE",
+      "subject": "Mathematics",
+      "chapterNumber": 8,
+      "chapter": "Playing with Constructions",
+      "topics": [
+        {
+          "topicId": "c6_mathematics_ch8_geometrical_construction",
+          "topic": "Geometrical Construction",
+          "meaning": "Construction is accurate drawing of geometrical figures using tools.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Mathematics chapter 'Playing with Constructions', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Geometrical Construction means construction is accurate drawing of geometrical figures using tools. It can be remembered through examples such as Drawing a 6 cm line segment..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Identify the given information",
+              "explanation": "A question on Geometrical Construction starts by finding the given numbers, shapes, measurements, or pattern. This prevents confusion before solving."
+            },
+            {
+              "step": 2,
+              "title": "Select the correct mathematical idea",
+              "explanation": "The required idea is: Construction is accurate drawing of geometrical figures using tools. This tells which rule, formula, comparison, or drawing method should be used."
+            },
+            {
+              "step": 3,
+              "title": "Apply the rule step by step",
+              "explanation": "The solution moves in this order: read data -> choose tools -> draw base -> mark measurements -> complete figure. Following the order keeps the working clean."
+            },
+            {
+              "step": 4,
+              "title": "Show calculation or construction clearly",
+              "explanation": "A clear working can be shown through this example: Drawing a 6 cm line segment.. Each step should be written so that another student can follow it."
+            },
+            {
+              "step": 5,
+              "title": "Check the result",
+              "explanation": "The answer is checked by seeing whether it fits the question. Units, signs, order, and size of answer are checked carefully."
+            },
+            {
+              "step": 6,
+              "title": "Write the final answer",
+              "explanation": "The final answer should include the value or statement asked in the question, with correct unit or explanation wherever needed."
+            }
+          ],
+          "examples": [
+            "Drawing a 6 cm line segment."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Construction",
+              "definition": "Accurate geometrical drawing.",
+              "simpleExample": "Constructing triangle."
+            },
+            {
+              "keyword": "Ruler",
+              "definition": "Tool to draw/measure straight lines.",
+              "simpleExample": "Drawing 5 cm line."
+            },
+            {
+              "keyword": "Compass",
+              "definition": "Tool to draw circles/arcs.",
+              "simpleExample": "Circle of radius 3 cm."
+            }
+          ],
+          "quickSummary": "Geometrical Construction: Construction is accurate drawing of geometrical figures using tools.",
+          "revisionNotes": [
+            "Geometrical Construction should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_mathematics_ch8_circles_and_arcs",
+          "topic": "Circles and Arcs",
+          "meaning": "A circle is drawn from a fixed centre and radius; an arc is part of a circle.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Mathematics chapter 'Playing with Constructions', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Circles and Arcs means a circle is drawn from a fixed centre and radius; an arc is part of a circle. It can be remembered through examples such as Circle with centre O and radius 4 cm..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Identify the given information",
+              "explanation": "A question on Circles and Arcs starts by finding the given numbers, shapes, measurements, or pattern. This prevents confusion before solving."
+            },
+            {
+              "step": 2,
+              "title": "Select the correct mathematical idea",
+              "explanation": "The required idea is: A circle is drawn from a fixed centre and radius; an arc is part of a circle. This tells which rule, formula, comparison, or drawing method should be used."
+            },
+            {
+              "step": 3,
+              "title": "Apply the rule step by step",
+              "explanation": "The solution moves in this order: choose centre -> set radius -> rotate compass -> draw circle/arc. Following the order keeps the working clean."
+            },
+            {
+              "step": 4,
+              "title": "Show calculation or construction clearly",
+              "explanation": "A clear working can be shown through this example: Circle with centre O and radius 4 cm.. Each step should be written so that another student can follow it."
+            },
+            {
+              "step": 5,
+              "title": "Check the result",
+              "explanation": "The answer is checked by seeing whether it fits the question. Units, signs, order, and size of answer are checked carefully."
+            },
+            {
+              "step": 6,
+              "title": "Write the final answer",
+              "explanation": "The final answer should include the value or statement asked in the question, with correct unit or explanation wherever needed."
+            }
+          ],
+          "examples": [
+            "Circle with centre O and radius 4 cm."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Circle",
+              "definition": "Points at equal distance from a centre.",
+              "simpleExample": "Bangle shape."
+            },
+            {
+              "keyword": "Centre",
+              "definition": "Fixed point in middle of circle.",
+              "simpleExample": "Point O."
+            },
+            {
+              "keyword": "Radius",
+              "definition": "Distance from centre to circle.",
+              "simpleExample": "3 cm radius."
+            }
+          ],
+          "quickSummary": "Circles and Arcs: A circle is drawn from a fixed centre and radius; an arc is part of a circle.",
+          "revisionNotes": [
+            "Circles and Arcs should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_mathematics_ch8_constructing_shapes",
+          "topic": "Constructing Shapes",
+          "meaning": "Shapes are constructed by joining accurate line segments, arcs and points.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Mathematics chapter 'Playing with Constructions', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Constructing Shapes means shapes are constructed by joining accurate line segments, arcs and points. It can be remembered through examples such as Constructing a triangle from side lengths..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Identify the given information",
+              "explanation": "A question on Constructing Shapes starts by finding the given numbers, shapes, measurements, or pattern. This prevents confusion before solving."
+            },
+            {
+              "step": 2,
+              "title": "Select the correct mathematical idea",
+              "explanation": "The required idea is: Shapes are constructed by joining accurate line segments, arcs and points. This tells which rule, formula, comparison, or drawing method should be used."
+            },
+            {
+              "step": 3,
+              "title": "Apply the rule step by step",
+              "explanation": "The solution moves in this order: draw first element -> mark distances -> find intersections -> join points -> check. Following the order keeps the working clean."
+            },
+            {
+              "step": 4,
+              "title": "Show calculation or construction clearly",
+              "explanation": "A clear working can be shown through this example: Constructing a triangle from side lengths.. Each step should be written so that another student can follow it."
+            },
+            {
+              "step": 5,
+              "title": "Check the result",
+              "explanation": "The answer is checked by seeing whether it fits the question. Units, signs, order, and size of answer are checked carefully."
+            },
+            {
+              "step": 6,
+              "title": "Write the final answer",
+              "explanation": "The final answer should include the value or statement asked in the question, with correct unit or explanation wherever needed."
+            }
+          ],
+          "examples": [
+            "Constructing a triangle from side lengths."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Triangle",
+              "definition": "Closed figure with three sides.",
+              "simpleExample": "Triangle ABC."
+            },
+            {
+              "keyword": "Intersection Point",
+              "definition": "Point where lines/arcs meet.",
+              "simpleExample": "Point C from arcs."
+            },
+            {
+              "keyword": "Accuracy",
+              "definition": "Closeness to correct measurement.",
+              "simpleExample": "Exactly 5 cm side."
+            }
+          ],
+          "quickSummary": "Constructing Shapes: Shapes are constructed by joining accurate line segments, arcs and points.",
+          "revisionNotes": [
+            "Constructing Shapes should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        }
+      ]
+    },
+    {
+      "class": 6,
+      "board": "CBSE",
+      "subject": "Mathematics",
+      "chapterNumber": 9,
+      "chapter": "Symmetry",
+      "topics": [
+        {
+          "topicId": "c6_mathematics_ch9_meaning_of_symmetry",
+          "topic": "Meaning of Symmetry",
+          "meaning": "Symmetry is balanced matching of parts in a shape or object.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Mathematics chapter 'Symmetry', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Meaning of Symmetry means symmetry is balanced matching of parts in a shape or object. It can be remembered through examples such as Butterfly wings are symmetrical..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Identify the given information",
+              "explanation": "A question on Meaning of Symmetry starts by finding the given numbers, shapes, measurements, or pattern. This prevents confusion before solving."
+            },
+            {
+              "step": 2,
+              "title": "Select the correct mathematical idea",
+              "explanation": "The required idea is: Symmetry is balanced matching of parts in a shape or object. This tells which rule, formula, comparison, or drawing method should be used."
+            },
+            {
+              "step": 3,
+              "title": "Apply the rule step by step",
+              "explanation": "The solution moves in this order: observe shape -> try fold line -> compare halves -> decide symmetry. Following the order keeps the working clean."
+            },
+            {
+              "step": 4,
+              "title": "Show calculation or construction clearly",
+              "explanation": "A clear working can be shown through this example: Butterfly wings are symmetrical.. Each step should be written so that another student can follow it."
+            },
+            {
+              "step": 5,
+              "title": "Check the result",
+              "explanation": "The answer is checked by seeing whether it fits the question. Units, signs, order, and size of answer are checked carefully."
+            },
+            {
+              "step": 6,
+              "title": "Write the final answer",
+              "explanation": "The final answer should include the value or statement asked in the question, with correct unit or explanation wherever needed."
+            }
+          ],
+          "examples": [
+            "Butterfly wings are symmetrical."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Symmetry",
+              "definition": "Balanced matching arrangement.",
+              "simpleExample": "Butterfly halves."
+            },
+            {
+              "keyword": "Line of Symmetry",
+              "definition": "Line dividing figure into matching parts.",
+              "simpleExample": "Vertical line through heart."
+            },
+            {
+              "keyword": "Mirror Image",
+              "definition": "Reversed but matching image.",
+              "simpleExample": "Face in mirror."
+            }
+          ],
+          "quickSummary": "Meaning of Symmetry: Symmetry is balanced matching of parts in a shape or object.",
+          "revisionNotes": [
+            "Meaning of Symmetry should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_mathematics_ch9_line_symmetry",
+          "topic": "Line Symmetry",
+          "meaning": "Line symmetry occurs when one half matches the other after folding along a line.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Mathematics chapter 'Symmetry', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Line Symmetry means line symmetry occurs when one half matches the other after folding along a line. It can be remembered through examples such as Rectangle has two lines of symmetry..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Identify the given information",
+              "explanation": "A question on Line Symmetry starts by finding the given numbers, shapes, measurements, or pattern. This prevents confusion before solving."
+            },
+            {
+              "step": 2,
+              "title": "Select the correct mathematical idea",
+              "explanation": "The required idea is: Line symmetry occurs when one half matches the other after folding along a line. This tells which rule, formula, comparison, or drawing method should be used."
+            },
+            {
+              "step": 3,
+              "title": "Apply the rule step by step",
+              "explanation": "The solution moves in this order: draw possible line -> fold mentally -> match halves -> count lines. Following the order keeps the working clean."
+            },
+            {
+              "step": 4,
+              "title": "Show calculation or construction clearly",
+              "explanation": "A clear working can be shown through this example: Rectangle has two lines of symmetry.. Each step should be written so that another student can follow it."
+            },
+            {
+              "step": 5,
+              "title": "Check the result",
+              "explanation": "The answer is checked by seeing whether it fits the question. Units, signs, order, and size of answer are checked carefully."
+            },
+            {
+              "step": 6,
+              "title": "Write the final answer",
+              "explanation": "The final answer should include the value or statement asked in the question, with correct unit or explanation wherever needed."
+            }
+          ],
+          "examples": [
+            "Rectangle has two lines of symmetry."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Fold Line",
+              "definition": "Line along which shape is folded.",
+              "simpleExample": "Folding square."
+            },
+            {
+              "keyword": "Matching Halves",
+              "definition": "Parts that exactly cover each other.",
+              "simpleExample": "Two halves of rectangle."
+            },
+            {
+              "keyword": "Reflection Symmetry",
+              "definition": "Mirror-like matching symmetry.",
+              "simpleExample": "Letter A vertical symmetry."
+            }
+          ],
+          "quickSummary": "Line Symmetry: Line symmetry occurs when one half matches the other after folding along a line.",
+          "revisionNotes": [
+            "Line Symmetry should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_mathematics_ch9_creating_symmetric_figures",
+          "topic": "Creating Symmetric Figures",
+          "meaning": "A symmetric figure is completed by drawing the missing half as a mirror image.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Mathematics chapter 'Symmetry', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Creating Symmetric Figures means a symmetric figure is completed by drawing the missing half as a mirror image. It can be remembered through examples such as Completing half a butterfly drawing..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Identify the given information",
+              "explanation": "A question on Creating Symmetric Figures starts by finding the given numbers, shapes, measurements, or pattern. This prevents confusion before solving."
+            },
+            {
+              "step": 2,
+              "title": "Select the correct mathematical idea",
+              "explanation": "The required idea is: A symmetric figure is completed by drawing the missing half as a mirror image. This tells which rule, formula, comparison, or drawing method should be used."
+            },
+            {
+              "step": 3,
+              "title": "Apply the rule step by step",
+              "explanation": "The solution moves in this order: draw symmetry line -> locate points -> mark equal distance -> join points. Following the order keeps the working clean."
+            },
+            {
+              "step": 4,
+              "title": "Show calculation or construction clearly",
+              "explanation": "A clear working can be shown through this example: Completing half a butterfly drawing.. Each step should be written so that another student can follow it."
+            },
+            {
+              "step": 5,
+              "title": "Check the result",
+              "explanation": "The answer is checked by seeing whether it fits the question. Units, signs, order, and size of answer are checked carefully."
+            },
+            {
+              "step": 6,
+              "title": "Write the final answer",
+              "explanation": "The final answer should include the value or statement asked in the question, with correct unit or explanation wherever needed."
+            }
+          ],
+          "examples": [
+            "Completing half a butterfly drawing."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Mirror Line",
+              "definition": "Line across which image is formed.",
+              "simpleExample": "Vertical symmetry line."
+            },
+            {
+              "keyword": "Equal Distance",
+              "definition": "Same distance from symmetry line.",
+              "simpleExample": "Point and image point."
+            },
+            {
+              "keyword": "Image Point",
+              "definition": "Matching point opposite the line.",
+              "simpleExample": "A' for A."
+            }
+          ],
+          "quickSummary": "Creating Symmetric Figures: A symmetric figure is completed by drawing the missing half as a mirror image.",
+          "revisionNotes": [
+            "Creating Symmetric Figures should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        }
+      ]
+    },
+    {
+      "class": 6,
+      "board": "CBSE",
+      "subject": "Mathematics",
+      "chapterNumber": 10,
+      "chapter": "The Other Side of Zero",
+      "topics": [
+        {
+          "topicId": "c6_mathematics_ch10_negative_numbers",
+          "topic": "Negative Numbers",
+          "meaning": "Negative numbers show values below zero, opposite directions, debts or losses.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Mathematics chapter 'The Other Side of Zero', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Negative Numbers means negative numbers show values below zero, opposite directions, debts or losses. It can be remembered through examples such as Temperature -5°C..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Identify the given information",
+              "explanation": "A question on Negative Numbers starts by finding the given numbers, shapes, measurements, or pattern. This prevents confusion before solving."
+            },
+            {
+              "step": 2,
+              "title": "Select the correct mathematical idea",
+              "explanation": "The required idea is: Negative numbers show values below zero, opposite directions, debts or losses. This tells which rule, formula, comparison, or drawing method should be used."
+            },
+            {
+              "step": 3,
+              "title": "Apply the rule step by step",
+              "explanation": "The solution moves in this order: zero reference -> positive side -> negative side -> use context. Following the order keeps the working clean."
+            },
+            {
+              "step": 4,
+              "title": "Show calculation or construction clearly",
+              "explanation": "A clear working can be shown through this example: Temperature -5°C.. Each step should be written so that another student can follow it."
+            },
+            {
+              "step": 5,
+              "title": "Check the result",
+              "explanation": "The answer is checked by seeing whether it fits the question. Units, signs, order, and size of answer are checked carefully."
+            },
+            {
+              "step": 6,
+              "title": "Write the final answer",
+              "explanation": "The final answer should include the value or statement asked in the question, with correct unit or explanation wherever needed."
+            }
+          ],
+          "examples": [
+            "Temperature -5°C."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Negative Number",
+              "definition": "Number less than zero.",
+              "simpleExample": "-3."
+            },
+            {
+              "keyword": "Positive Number",
+              "definition": "Number greater than zero.",
+              "simpleExample": "+5."
+            },
+            {
+              "keyword": "Zero",
+              "definition": "Number separating positives and negatives.",
+              "simpleExample": "0."
+            }
+          ],
+          "quickSummary": "Negative Numbers: Negative numbers show values below zero, opposite directions, debts or losses.",
+          "revisionNotes": [
+            "Negative Numbers should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_mathematics_ch10_integers_on_number_line",
+          "topic": "Integers on Number Line",
+          "meaning": "Integers include negative whole numbers, zero and positive whole numbers shown on a number line.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Mathematics chapter 'The Other Side of Zero', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Integers on Number Line means integers include negative whole numbers, zero and positive whole numbers shown on a number line. It can be remembered through examples such as -2 lies left of 0..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Identify the given information",
+              "explanation": "A question on Integers on Number Line starts by finding the given numbers, shapes, measurements, or pattern. This prevents confusion before solving."
+            },
+            {
+              "step": 2,
+              "title": "Select the correct mathematical idea",
+              "explanation": "The required idea is: Integers include negative whole numbers, zero and positive whole numbers shown on a number line. This tells which rule, formula, comparison, or drawing method should be used."
+            },
+            {
+              "step": 3,
+              "title": "Apply the rule step by step",
+              "explanation": "The solution moves in this order: mark zero -> positive right -> negative left -> locate number -> compare. Following the order keeps the working clean."
+            },
+            {
+              "step": 4,
+              "title": "Show calculation or construction clearly",
+              "explanation": "A clear working can be shown through this example: -2 lies left of 0.. Each step should be written so that another student can follow it."
+            },
+            {
+              "step": 5,
+              "title": "Check the result",
+              "explanation": "The answer is checked by seeing whether it fits the question. Units, signs, order, and size of answer are checked carefully."
+            },
+            {
+              "step": 6,
+              "title": "Write the final answer",
+              "explanation": "The final answer should include the value or statement asked in the question, with correct unit or explanation wherever needed."
+            }
+          ],
+          "examples": [
+            "-2 lies left of 0."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Integer",
+              "definition": "Negative whole numbers, zero and positive whole numbers.",
+              "simpleExample": "-2,-1,0,1."
+            },
+            {
+              "keyword": "Number Line",
+              "definition": "Line showing numbers in order.",
+              "simpleExample": "Integers on line."
+            },
+            {
+              "keyword": "Opposite Numbers",
+              "definition": "Same distance from zero on opposite sides.",
+              "simpleExample": "-4 and +4."
+            }
+          ],
+          "quickSummary": "Integers on Number Line: Integers include negative whole numbers, zero and positive whole numbers shown on a number line.",
+          "revisionNotes": [
+            "Integers on Number Line should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_mathematics_ch10_comparing_and_using_integers",
+          "topic": "Comparing and Using Integers",
+          "meaning": "Integers are compared by position; right side is greater than left side.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Mathematics chapter 'The Other Side of Zero', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Comparing and Using Integers means integers are compared by position; right side is greater than left side. It can be remembered through examples such as -2 is greater than -5..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Identify the given information",
+              "explanation": "A question on Comparing and Using Integers starts by finding the given numbers, shapes, measurements, or pattern. This prevents confusion before solving."
+            },
+            {
+              "step": 2,
+              "title": "Select the correct mathematical idea",
+              "explanation": "The required idea is: Integers are compared by position; right side is greater than left side. This tells which rule, formula, comparison, or drawing method should be used."
+            },
+            {
+              "step": 3,
+              "title": "Apply the rule step by step",
+              "explanation": "The solution moves in this order: place numbers -> look left/right -> compare -> apply to daily situation. Following the order keeps the working clean."
+            },
+            {
+              "step": 4,
+              "title": "Show calculation or construction clearly",
+              "explanation": "A clear working can be shown through this example: -2 is greater than -5.. Each step should be written so that another student can follow it."
+            },
+            {
+              "step": 5,
+              "title": "Check the result",
+              "explanation": "The answer is checked by seeing whether it fits the question. Units, signs, order, and size of answer are checked carefully."
+            },
+            {
+              "step": 6,
+              "title": "Write the final answer",
+              "explanation": "The final answer should include the value or statement asked in the question, with correct unit or explanation wherever needed."
+            }
+          ],
+          "examples": [
+            "-2 is greater than -5."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Greater Than",
+              "definition": "Shows larger value.",
+              "simpleExample": ">."
+            },
+            {
+              "keyword": "Less Than",
+              "definition": "Shows smaller value.",
+              "simpleExample": "<."
+            },
+            {
+              "keyword": "Profit/Loss",
+              "definition": "Gain or loss shown with signs.",
+              "simpleExample": "+200 profit, -50 loss."
+            }
+          ],
+          "quickSummary": "Comparing and Using Integers: Integers are compared by position; right side is greater than left side.",
+          "revisionNotes": [
+            "Comparing and Using Integers should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2489 @@
+{
+  "subject": "Science",
+  "chapters": [
+    {
+      "class": 6,
+      "board": "CBSE",
+      "subject": "Science",
+      "chapterNumber": 1,
+      "chapter": "The Wonderful World of Science",
+      "topics": [
+        {
+          "topicId": "c6_science_ch1_what_is_science",
+          "topic": "What is Science",
+          "meaning": "Science is a systematic way of observing, questioning, testing, and explaining the world around us.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Science chapter 'The Wonderful World of Science', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "What is Science means science is a systematic way of observing, questioning, testing, and explaining the world around us. It can be remembered through examples such as Checking why a pen stopped writing by opening its refill..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "What is Science begins from observation",
+              "explanation": "What is Science starts with something that can be observed in nature, the body, the kitchen, the sky, or ordinary surroundings. The observation gives a clear base for the explanation: Science is a systematic way of observing, questioning, testing, and explaining the world around us."
+            },
+            {
+              "step": 2,
+              "title": "The main concept",
+              "explanation": "The central idea is that curiosity begins. This makes the topic easier because the learner first gets the actual scientific reason, not only a definition."
+            },
+            {
+              "step": 3,
+              "title": "How the process works",
+              "explanation": "The concept develops in this order: curiosity begins -> observation is made -> question is formed -> possible answer is tested -> result is analysed. Each stage explains what happens next and why the next stage is connected with the previous one."
+            },
+            {
+              "step": 4,
+              "title": "Connection with daily life",
+              "explanation": "In daily life, this can be seen in: Checking why a pen stopped writing by opening its refill.. This example shows the topic working outside the textbook."
+            },
+            {
+              "step": 5,
+              "title": "Why the concept is useful",
+              "explanation": "This topic is useful because it teaches students to use reasons, evidence, comparison, and correct words while answering science questions."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "The complete answer should explain the meaning of What is Science, the process behind it, and one correct example."
+            }
+          ],
+          "examples": [
+            "Checking why a pen stopped writing by opening its refill."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Science",
+              "definition": "A way of thinking, observing and testing to understand the world.",
+              "simpleExample": "Finding why water turns into steam."
+            },
+            {
+              "keyword": "Curiosity",
+              "definition": "The desire to know why or how something happens.",
+              "simpleExample": "Wondering why stars shine."
+            },
+            {
+              "keyword": "Observation",
+              "definition": "Carefully noticing something using senses or instruments.",
+              "simpleExample": "Seeing water droplets on a cold glass."
+            }
+          ],
+          "quickSummary": "What is Science: Science is a systematic way of observing, questioning, testing, and explaining the world around us.",
+          "revisionNotes": [
+            "What is Science should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_science_ch1_scientific_method",
+          "topic": "Scientific Method",
+          "meaning": "The scientific method is a step-by-step process used to find reliable answers to questions.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Science chapter 'The Wonderful World of Science', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Scientific Method means the scientific method is a step-by-step process used to find reliable answers to questions. It can be remembered through examples such as An electrician checks the bulb, switch and wire when a light does not glow..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Scientific Method begins from observation",
+              "explanation": "Scientific Method starts with something that can be observed in nature, the body, the kitchen, the sky, or ordinary surroundings. The observation gives a clear base for the explanation: The scientific method is a step-by-step process used to find reliable answers to questions."
+            },
+            {
+              "step": 2,
+              "title": "The main concept",
+              "explanation": "The central idea is that observe a problem. This makes the topic easier because the learner first gets the actual scientific reason, not only a definition."
+            },
+            {
+              "step": 3,
+              "title": "How the process works",
+              "explanation": "The concept develops in this order: observe a problem -> ask a clear question -> make a hypothesis -> test it -> analyse result -> make conclusion. Each stage explains what happens next and why the next stage is connected with the previous one."
+            },
+            {
+              "step": 4,
+              "title": "Connection with daily life",
+              "explanation": "In daily life, this can be seen in: An electrician checks the bulb, switch and wire when a light does not glow.. This example shows the topic working outside the textbook."
+            },
+            {
+              "step": 5,
+              "title": "Why the concept is useful",
+              "explanation": "This topic is useful because it teaches students to use reasons, evidence, comparison, and correct words while answering science questions."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "The complete answer should explain the meaning of Scientific Method, the process behind it, and one correct example."
+            }
+          ],
+          "examples": [
+            "An electrician checks the bulb, switch and wire when a light does not glow."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Scientific Method",
+              "definition": "A step-by-step process for solving questions using evidence.",
+              "simpleExample": "Checking the reason for a flat tyre."
+            },
+            {
+              "keyword": "Hypothesis",
+              "definition": "A possible explanation that can be tested.",
+              "simpleExample": "The pen stopped because ink finished."
+            },
+            {
+              "keyword": "Conclusion",
+              "definition": "The final answer after testing and analysing.",
+              "simpleExample": "The tyre was flat because air leaked through a puncture."
+            }
+          ],
+          "quickSummary": "Scientific Method: The scientific method is a step-by-step process used to find reliable answers to questions.",
+          "revisionNotes": [
+            "Scientific Method should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_science_ch1_science_in_daily_life",
+          "topic": "Science in Daily Life",
+          "meaning": "Science is used in ordinary activities such as cooking, repairing, measuring, farming, health care and using tools.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Science chapter 'The Wonderful World of Science', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Science in Daily Life means science is used in ordinary activities such as cooking, repairing, measuring, farming, health care and using tools. It can be remembered through examples such as A cook checks whether too much water made dal spill from a cooker..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Science in Daily Life begins from observation",
+              "explanation": "Science in Daily Life starts with something that can be observed in nature, the body, the kitchen, the sky, or ordinary surroundings. The observation gives a clear base for the explanation: Science is used in ordinary activities such as cooking, repairing, measuring, farming, health care and using tools."
+            },
+            {
+              "step": 2,
+              "title": "The main concept",
+              "explanation": "The central idea is that daily problem appears. This makes the topic easier because the learner first gets the actual scientific reason, not only a definition."
+            },
+            {
+              "step": 3,
+              "title": "How the process works",
+              "explanation": "The concept develops in this order: daily problem appears -> reason is searched -> test is done -> solution is found. Each stage explains what happens next and why the next stage is connected with the previous one."
+            },
+            {
+              "step": 4,
+              "title": "Connection with daily life",
+              "explanation": "In daily life, this can be seen in: A cook checks whether too much water made dal spill from a cooker.. This example shows the topic working outside the textbook."
+            },
+            {
+              "step": 5,
+              "title": "Why the concept is useful",
+              "explanation": "This topic is useful because it teaches students to use reasons, evidence, comparison, and correct words while answering science questions."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "The complete answer should explain the meaning of Science in Daily Life, the process behind it, and one correct example."
+            }
+          ],
+          "examples": [
+            "A cook checks whether too much water made dal spill from a cooker."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Evidence",
+              "definition": "Information that supports an answer.",
+              "simpleExample": "An empty refill shows no ink."
+            },
+            {
+              "keyword": "Experiment",
+              "definition": "A planned test to check an idea.",
+              "simpleExample": "Watering a dry plant to see improvement."
+            },
+            {
+              "keyword": "Analysis",
+              "definition": "Studying results to understand what they show.",
+              "simpleExample": "Comparing two plants after watering."
+            }
+          ],
+          "quickSummary": "Science in Daily Life: Science is used in ordinary activities such as cooking, repairing, measuring, farming, health care and using tools.",
+          "revisionNotes": [
+            "Science in Daily Life should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        }
+      ]
+    },
+    {
+      "class": 6,
+      "board": "CBSE",
+      "subject": "Science",
+      "chapterNumber": 2,
+      "chapter": "Diversity in the Living World",
+      "topics": [
+        {
+          "topicId": "c6_science_ch2_diversity_of_living_things",
+          "topic": "Diversity of Living Things",
+          "meaning": "Diversity is the variety of plants, animals and other organisms found in different places.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Science chapter 'Diversity in the Living World', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Diversity of Living Things means diversity is the variety of plants, animals and other organisms found in different places. It can be remembered through examples such as A cactus, fish, mango tree and bird are living things with different features..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Diversity of Living Things begins from observation",
+              "explanation": "Diversity of Living Things starts with something that can be observed in nature, the body, the kitchen, the sky, or ordinary surroundings. The observation gives a clear base for the explanation: Diversity is the variety of plants, animals and other organisms found in different places."
+            },
+            {
+              "step": 2,
+              "title": "The main concept",
+              "explanation": "The central idea is that many organisms exist. This makes the topic easier because the learner first gets the actual scientific reason, not only a definition."
+            },
+            {
+              "step": 3,
+              "title": "How the process works",
+              "explanation": "The concept develops in this order: many organisms exist -> features are compared -> habitats differ -> groups are formed. Each stage explains what happens next and why the next stage is connected with the previous one."
+            },
+            {
+              "step": 4,
+              "title": "Connection with daily life",
+              "explanation": "In daily life, this can be seen in: A cactus, fish, mango tree and bird are living things with different features.. This example shows the topic working outside the textbook."
+            },
+            {
+              "step": 5,
+              "title": "Why the concept is useful",
+              "explanation": "This topic is useful because it teaches students to use reasons, evidence, comparison, and correct words while answering science questions."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "The complete answer should explain the meaning of Diversity of Living Things, the process behind it, and one correct example."
+            }
+          ],
+          "examples": [
+            "A cactus, fish, mango tree and bird are living things with different features."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Diversity",
+              "definition": "Variety among living things.",
+              "simpleExample": "Different birds in a park."
+            },
+            {
+              "keyword": "Organism",
+              "definition": "Any living thing.",
+              "simpleExample": "A butterfly is an organism."
+            },
+            {
+              "keyword": "Classification",
+              "definition": "Grouping things based on common features.",
+              "simpleExample": "Grouping plants as herbs, shrubs and trees."
+            }
+          ],
+          "quickSummary": "Diversity of Living Things: Diversity is the variety of plants, animals and other organisms found in different places.",
+          "revisionNotes": [
+            "Diversity of Living Things should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_science_ch2_plant_classification",
+          "topic": "Plant Classification",
+          "meaning": "Plant classification groups plants by features such as stem, height, branches, leaves, flowers and seeds.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Science chapter 'Diversity in the Living World', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Plant Classification means plant classification groups plants by features such as stem, height, branches, leaves, flowers and seeds. It can be remembered through examples such as Tulsi is a herb, rose is a shrub and mango is a tree..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Plant Classification begins from observation",
+              "explanation": "Plant Classification starts with something that can be observed in nature, the body, the kitchen, the sky, or ordinary surroundings. The observation gives a clear base for the explanation: Plant classification groups plants by features such as stem, height, branches, leaves, flowers and seeds."
+            },
+            {
+              "step": 2,
+              "title": "The main concept",
+              "explanation": "The central idea is that observe plant. This makes the topic easier because the learner first gets the actual scientific reason, not only a definition."
+            },
+            {
+              "step": 3,
+              "title": "How the process works",
+              "explanation": "The concept develops in this order: observe plant -> check stem -> check height -> check support -> group the plant. Each stage explains what happens next and why the next stage is connected with the previous one."
+            },
+            {
+              "step": 4,
+              "title": "Connection with daily life",
+              "explanation": "In daily life, this can be seen in: Tulsi is a herb, rose is a shrub and mango is a tree.. This example shows the topic working outside the textbook."
+            },
+            {
+              "step": 5,
+              "title": "Why the concept is useful",
+              "explanation": "This topic is useful because it teaches students to use reasons, evidence, comparison, and correct words while answering science questions."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "The complete answer should explain the meaning of Plant Classification, the process behind it, and one correct example."
+            }
+          ],
+          "examples": [
+            "Tulsi is a herb, rose is a shrub and mango is a tree."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Herb",
+              "definition": "A small plant with a soft green stem.",
+              "simpleExample": "Coriander plant."
+            },
+            {
+              "keyword": "Shrub",
+              "definition": "A medium plant with branches near the base.",
+              "simpleExample": "Rose plant."
+            },
+            {
+              "keyword": "Tree",
+              "definition": "A tall plant with a strong woody trunk.",
+              "simpleExample": "Neem tree."
+            }
+          ],
+          "quickSummary": "Plant Classification: Plant classification groups plants by features such as stem, height, branches, leaves, flowers and seeds.",
+          "revisionNotes": [
+            "Plant Classification should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_science_ch2_habitats_and_adaptations",
+          "topic": "Habitats and Adaptations",
+          "meaning": "A habitat is the natural home of an organism, and adaptation is a feature that helps it survive there.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Science chapter 'Diversity in the Living World', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Habitats and Adaptations means a habitat is the natural home of an organism, and adaptation is a feature that helps it survive there. It can be remembered through examples such as Fish have fins for swimming in water..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Habitats and Adaptations begins from observation",
+              "explanation": "Habitats and Adaptations starts with something that can be observed in nature, the body, the kitchen, the sky, or ordinary surroundings. The observation gives a clear base for the explanation: A habitat is the natural home of an organism, and adaptation is a feature that helps it survive there."
+            },
+            {
+              "step": 2,
+              "title": "The main concept",
+              "explanation": "The central idea is that organism lives in a place. This makes the topic easier because the learner first gets the actual scientific reason, not only a definition."
+            },
+            {
+              "step": 3,
+              "title": "How the process works",
+              "explanation": "The concept develops in this order: organism lives in a place -> place has conditions -> body feature helps survival -> organism adapts. Each stage explains what happens next and why the next stage is connected with the previous one."
+            },
+            {
+              "step": 4,
+              "title": "Connection with daily life",
+              "explanation": "In daily life, this can be seen in: Fish have fins for swimming in water.. This example shows the topic working outside the textbook."
+            },
+            {
+              "step": 5,
+              "title": "Why the concept is useful",
+              "explanation": "This topic is useful because it teaches students to use reasons, evidence, comparison, and correct words while answering science questions."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "The complete answer should explain the meaning of Habitats and Adaptations, the process behind it, and one correct example."
+            }
+          ],
+          "examples": [
+            "Fish have fins for swimming in water."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Habitat",
+              "definition": "The natural place where an organism lives.",
+              "simpleExample": "Pond for fish."
+            },
+            {
+              "keyword": "Adaptation",
+              "definition": "A feature that helps survival in a habitat.",
+              "simpleExample": "Cactus spines reduce water loss."
+            },
+            {
+              "keyword": "Aquatic",
+              "definition": "Related to water.",
+              "simpleExample": "Lotus is an aquatic plant."
+            }
+          ],
+          "quickSummary": "Habitats and Adaptations: A habitat is the natural home of an organism, and adaptation is a feature that helps it survive there.",
+          "revisionNotes": [
+            "Habitats and Adaptations should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        }
+      ]
+    },
+    {
+      "class": 6,
+      "board": "CBSE",
+      "subject": "Science",
+      "chapterNumber": 3,
+      "chapter": "Mindful Eating: A Path to a Healthy Body",
+      "topics": [
+        {
+          "topicId": "c6_science_ch3_components_of_food",
+          "topic": "Components of Food",
+          "meaning": "Food contains nutrients such as carbohydrates, proteins, fats, vitamins, minerals, water and fibre.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Science chapter 'Mindful Eating: A Path to a Healthy Body', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Components of Food means food contains nutrients such as carbohydrates, proteins, fats, vitamins, minerals, water and fibre. It can be remembered through examples such as Rice gives carbohydrates and pulses give proteins..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Components of Food begins from observation",
+              "explanation": "Components of Food starts with something that can be observed in nature, the body, the kitchen, the sky, or ordinary surroundings. The observation gives a clear base for the explanation: Food contains nutrients such as carbohydrates, proteins, fats, vitamins, minerals, water and fibre."
+            },
+            {
+              "step": 2,
+              "title": "The main concept",
+              "explanation": "The central idea is that food is eaten. This makes the topic easier because the learner first gets the actual scientific reason, not only a definition."
+            },
+            {
+              "step": 3,
+              "title": "How the process works",
+              "explanation": "The concept develops in this order: food is eaten -> nutrients enter body -> energy/growth/protection happens -> health is maintained. Each stage explains what happens next and why the next stage is connected with the previous one."
+            },
+            {
+              "step": 4,
+              "title": "Connection with daily life",
+              "explanation": "In daily life, this can be seen in: Rice gives carbohydrates and pulses give proteins.. This example shows the topic working outside the textbook."
+            },
+            {
+              "step": 5,
+              "title": "Why the concept is useful",
+              "explanation": "This topic is useful because it teaches students to use reasons, evidence, comparison, and correct words while answering science questions."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "The complete answer should explain the meaning of Components of Food, the process behind it, and one correct example."
+            }
+          ],
+          "examples": [
+            "Rice gives carbohydrates and pulses give proteins."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Nutrient",
+              "definition": "A useful substance in food needed by the body.",
+              "simpleExample": "Protein in dal helps growth."
+            },
+            {
+              "keyword": "Carbohydrate",
+              "definition": "Nutrient that mainly gives energy.",
+              "simpleExample": "Rice has carbohydrates."
+            },
+            {
+              "keyword": "Protein",
+              "definition": "Nutrient needed for growth and repair.",
+              "simpleExample": "Pulses are protein-rich."
+            }
+          ],
+          "quickSummary": "Components of Food: Food contains nutrients such as carbohydrates, proteins, fats, vitamins, minerals, water and fibre.",
+          "revisionNotes": [
+            "Components of Food should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_science_ch3_balanced_diet",
+          "topic": "Balanced Diet",
+          "meaning": "A balanced diet contains all needed nutrients in proper amounts along with water and fibre.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Science chapter 'Mindful Eating: A Path to a Healthy Body', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Balanced Diet means a balanced diet contains all needed nutrients in proper amounts along with water and fibre. It can be remembered through examples such as Chapati, dal, vegetables, curd and fruit make a balanced meal..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Balanced Diet begins from observation",
+              "explanation": "Balanced Diet starts with something that can be observed in nature, the body, the kitchen, the sky, or ordinary surroundings. The observation gives a clear base for the explanation: A balanced diet contains all needed nutrients in proper amounts along with water and fibre."
+            },
+            {
+              "step": 2,
+              "title": "The main concept",
+              "explanation": "The central idea is that include food groups. This makes the topic easier because the learner first gets the actual scientific reason, not only a definition."
+            },
+            {
+              "step": 3,
+              "title": "How the process works",
+              "explanation": "The concept develops in this order: include food groups -> energy foods -> body-building foods -> protective foods -> water and fibre. Each stage explains what happens next and why the next stage is connected with the previous one."
+            },
+            {
+              "step": 4,
+              "title": "Connection with daily life",
+              "explanation": "In daily life, this can be seen in: Chapati, dal, vegetables, curd and fruit make a balanced meal.. This example shows the topic working outside the textbook."
+            },
+            {
+              "step": 5,
+              "title": "Why the concept is useful",
+              "explanation": "This topic is useful because it teaches students to use reasons, evidence, comparison, and correct words while answering science questions."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "The complete answer should explain the meaning of Balanced Diet, the process behind it, and one correct example."
+            }
+          ],
+          "examples": [
+            "Chapati, dal, vegetables, curd and fruit make a balanced meal."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Balanced Diet",
+              "definition": "Food containing all nutrients in right amounts.",
+              "simpleExample": "Dal, rice, vegetables and curd."
+            },
+            {
+              "keyword": "Vitamin",
+              "definition": "Nutrient needed in small amount for protection and body functions.",
+              "simpleExample": "Vitamin C in lemon."
+            },
+            {
+              "keyword": "Mineral",
+              "definition": "Nutrient needed for bones, blood and body functions.",
+              "simpleExample": "Calcium helps bones."
+            }
+          ],
+          "quickSummary": "Balanced Diet: A balanced diet contains all needed nutrients in proper amounts along with water and fibre.",
+          "revisionNotes": [
+            "Balanced Diet should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_science_ch3_mindful_eating",
+          "topic": "Mindful Eating",
+          "meaning": "Mindful eating means choosing food carefully by considering health, nutrition, cleanliness, hunger and amount.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Science chapter 'Mindful Eating: A Path to a Healthy Body', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Mindful Eating means mindful eating means choosing food carefully by considering health, nutrition, cleanliness, hunger and amount. It can be remembered through examples such as Washing hands before eating and taking only as much food as needed..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Mindful Eating begins from observation",
+              "explanation": "Mindful Eating starts with something that can be observed in nature, the body, the kitchen, the sky, or ordinary surroundings. The observation gives a clear base for the explanation: Mindful eating means choosing food carefully by considering health, nutrition, cleanliness, hunger and amount."
+            },
+            {
+              "step": 2,
+              "title": "The main concept",
+              "explanation": "The central idea is that notice hunger. This makes the topic easier because the learner first gets the actual scientific reason, not only a definition."
+            },
+            {
+              "step": 3,
+              "title": "How the process works",
+              "explanation": "The concept develops in this order: notice hunger -> choose healthy food -> eat variety -> avoid waste -> keep cleanliness. Each stage explains what happens next and why the next stage is connected with the previous one."
+            },
+            {
+              "step": 4,
+              "title": "Connection with daily life",
+              "explanation": "In daily life, this can be seen in: Washing hands before eating and taking only as much food as needed.. This example shows the topic working outside the textbook."
+            },
+            {
+              "step": 5,
+              "title": "Why the concept is useful",
+              "explanation": "This topic is useful because it teaches students to use reasons, evidence, comparison, and correct words while answering science questions."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "The complete answer should explain the meaning of Mindful Eating, the process behind it, and one correct example."
+            }
+          ],
+          "examples": [
+            "Washing hands before eating and taking only as much food as needed."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Mindful Eating",
+              "definition": "Eating with attention to health, amount and nutrition.",
+              "simpleExample": "Choosing fruit over too many chips."
+            },
+            {
+              "keyword": "Junk Food",
+              "definition": "Food high in fat, sugar or salt and low in useful nutrients.",
+              "simpleExample": "Chips and sugary drinks."
+            },
+            {
+              "keyword": "Fibre",
+              "definition": "Part of plant food that helps digestion.",
+              "simpleExample": "Vegetables contain fibre."
+            }
+          ],
+          "quickSummary": "Mindful Eating: Mindful eating means choosing food carefully by considering health, nutrition, cleanliness, hunger and amount.",
+          "revisionNotes": [
+            "Mindful Eating should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        }
+      ]
+    },
+    {
+      "class": 6,
+      "board": "CBSE",
+      "subject": "Science",
+      "chapterNumber": 4,
+      "chapter": "Exploring Magnets",
+      "topics": [
+        {
+          "topicId": "c6_science_ch4_magnets_and_magnetic_materials",
+          "topic": "Magnets and Magnetic Materials",
+          "meaning": "A magnet attracts magnetic materials such as iron, nickel and cobalt.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Science chapter 'Exploring Magnets', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Magnets and Magnetic Materials means a magnet attracts magnetic materials such as iron, nickel and cobalt. It can be remembered through examples such as A magnet attracts iron pins but not a plastic ruler..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Magnets and Magnetic Materials begins from observation",
+              "explanation": "Magnets and Magnetic Materials starts with something that can be observed in nature, the body, the kitchen, the sky, or ordinary surroundings. The observation gives a clear base for the explanation: A magnet attracts magnetic materials such as iron, nickel and cobalt."
+            },
+            {
+              "step": 2,
+              "title": "The main concept",
+              "explanation": "The central idea is that bring magnet near object. This makes the topic easier because the learner first gets the actual scientific reason, not only a definition."
+            },
+            {
+              "step": 3,
+              "title": "How the process works",
+              "explanation": "The concept develops in this order: bring magnet near object -> object is attracted or not -> material is classified -> property is used. Each stage explains what happens next and why the next stage is connected with the previous one."
+            },
+            {
+              "step": 4,
+              "title": "Connection with daily life",
+              "explanation": "In daily life, this can be seen in: A magnet attracts iron pins but not a plastic ruler.. This example shows the topic working outside the textbook."
+            },
+            {
+              "step": 5,
+              "title": "Why the concept is useful",
+              "explanation": "This topic is useful because it teaches students to use reasons, evidence, comparison, and correct words while answering science questions."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "The complete answer should explain the meaning of Magnets and Magnetic Materials, the process behind it, and one correct example."
+            }
+          ],
+          "examples": [
+            "A magnet attracts iron pins but not a plastic ruler."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Magnet",
+              "definition": "An object that attracts magnetic materials.",
+              "simpleExample": "Bar magnet attracting nails."
+            },
+            {
+              "keyword": "Magnetic Material",
+              "definition": "A material attracted by a magnet.",
+              "simpleExample": "Iron is magnetic."
+            },
+            {
+              "keyword": "Non-magnetic Material",
+              "definition": "A material not attracted by a magnet.",
+              "simpleExample": "Wood is non-magnetic."
+            }
+          ],
+          "quickSummary": "Magnets and Magnetic Materials: A magnet attracts magnetic materials such as iron, nickel and cobalt.",
+          "revisionNotes": [
+            "Magnets and Magnetic Materials should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_science_ch4_poles_of_a_magnet",
+          "topic": "Poles of a Magnet",
+          "meaning": "The two ends of a magnet where magnetic force is strongest are called poles.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Science chapter 'Exploring Magnets', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Poles of a Magnet means the two ends of a magnet where magnetic force is strongest are called poles. It can be remembered through examples such as Iron filings collect more near the ends of a bar magnet..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Poles of a Magnet begins from observation",
+              "explanation": "Poles of a Magnet starts with something that can be observed in nature, the body, the kitchen, the sky, or ordinary surroundings. The observation gives a clear base for the explanation: The two ends of a magnet where magnetic force is strongest are called poles."
+            },
+            {
+              "step": 2,
+              "title": "The main concept",
+              "explanation": "The central idea is that magnet has two ends. This makes the topic easier because the learner first gets the actual scientific reason, not only a definition."
+            },
+            {
+              "step": 3,
+              "title": "How the process works",
+              "explanation": "The concept develops in this order: magnet has two ends -> force is strongest at ends -> north and south poles are identified -> poles interact. Each stage explains what happens next and why the next stage is connected with the previous one."
+            },
+            {
+              "step": 4,
+              "title": "Connection with daily life",
+              "explanation": "In daily life, this can be seen in: Iron filings collect more near the ends of a bar magnet.. This example shows the topic working outside the textbook."
+            },
+            {
+              "step": 5,
+              "title": "Why the concept is useful",
+              "explanation": "This topic is useful because it teaches students to use reasons, evidence, comparison, and correct words while answering science questions."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "The complete answer should explain the meaning of Poles of a Magnet, the process behind it, and one correct example."
+            }
+          ],
+          "examples": [
+            "Iron filings collect more near the ends of a bar magnet."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Magnetic Pole",
+              "definition": "End of a magnet where attraction is strongest.",
+              "simpleExample": "End of bar magnet."
+            },
+            {
+              "keyword": "North Pole",
+              "definition": "Pole of a freely suspended magnet pointing north.",
+              "simpleExample": "Compass north end."
+            },
+            {
+              "keyword": "South Pole",
+              "definition": "The pole opposite to north pole.",
+              "simpleExample": "South end of compass needle."
+            }
+          ],
+          "quickSummary": "Poles of a Magnet: The two ends of a magnet where magnetic force is strongest are called poles.",
+          "revisionNotes": [
+            "Poles of a Magnet should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_science_ch4_attraction_and_repulsion",
+          "topic": "Attraction and Repulsion",
+          "meaning": "Unlike magnetic poles attract, while like magnetic poles repel.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Science chapter 'Exploring Magnets', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Attraction and Repulsion means unlike magnetic poles attract, while like magnetic poles repel. It can be remembered through examples such as North pole attracts south pole, but north repels north..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Attraction and Repulsion begins from observation",
+              "explanation": "Attraction and Repulsion starts with something that can be observed in nature, the body, the kitchen, the sky, or ordinary surroundings. The observation gives a clear base for the explanation: Unlike magnetic poles attract, while like magnetic poles repel."
+            },
+            {
+              "step": 2,
+              "title": "The main concept",
+              "explanation": "The central idea is that identify poles. This makes the topic easier because the learner first gets the actual scientific reason, not only a definition."
+            },
+            {
+              "step": 3,
+              "title": "How the process works",
+              "explanation": "The concept develops in this order: identify poles -> bring poles close -> unlike poles pull -> like poles push. Each stage explains what happens next and why the next stage is connected with the previous one."
+            },
+            {
+              "step": 4,
+              "title": "Connection with daily life",
+              "explanation": "In daily life, this can be seen in: North pole attracts south pole, but north repels north.. This example shows the topic working outside the textbook."
+            },
+            {
+              "step": 5,
+              "title": "Why the concept is useful",
+              "explanation": "This topic is useful because it teaches students to use reasons, evidence, comparison, and correct words while answering science questions."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "The complete answer should explain the meaning of Attraction and Repulsion, the process behind it, and one correct example."
+            }
+          ],
+          "examples": [
+            "North pole attracts south pole, but north repels north."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Attraction",
+              "definition": "Pulling force between objects.",
+              "simpleExample": "Magnet pulling a paper clip."
+            },
+            {
+              "keyword": "Repulsion",
+              "definition": "Pushing force between objects.",
+              "simpleExample": "Two north poles push apart."
+            },
+            {
+              "keyword": "Unlike Poles",
+              "definition": "Different poles of magnets.",
+              "simpleExample": "North and south poles."
+            }
+          ],
+          "quickSummary": "Attraction and Repulsion: Unlike magnetic poles attract, while like magnetic poles repel.",
+          "revisionNotes": [
+            "Attraction and Repulsion should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        }
+      ]
+    },
+    {
+      "class": 6,
+      "board": "CBSE",
+      "subject": "Science",
+      "chapterNumber": 5,
+      "chapter": "Measurement of Length and Motion",
+      "topics": [
+        {
+          "topicId": "c6_science_ch5_measurement_of_length",
+          "topic": "Measurement of Length",
+          "meaning": "Measurement of length means finding how long, wide, tall or far something is using a standard unit.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Science chapter 'Measurement of Length and Motion', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Measurement of Length means measurement of length means finding how long, wide, tall or far something is using a standard unit. It can be remembered through examples such as Measuring a notebook with a ruler..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Measurement of Length begins from observation",
+              "explanation": "Measurement of Length starts with something that can be observed in nature, the body, the kitchen, the sky, or ordinary surroundings. The observation gives a clear base for the explanation: Measurement of length means finding how long, wide, tall or far something is using a standard unit."
+            },
+            {
+              "step": 2,
+              "title": "The main concept",
+              "explanation": "The central idea is that choose tool. This makes the topic easier because the learner first gets the actual scientific reason, not only a definition."
+            },
+            {
+              "step": 3,
+              "title": "How the process works",
+              "explanation": "The concept develops in this order: choose tool -> place zero mark -> align object -> read value -> write unit. Each stage explains what happens next and why the next stage is connected with the previous one."
+            },
+            {
+              "step": 4,
+              "title": "Connection with daily life",
+              "explanation": "In daily life, this can be seen in: Measuring a notebook with a ruler.. This example shows the topic working outside the textbook."
+            },
+            {
+              "step": 5,
+              "title": "Why the concept is useful",
+              "explanation": "This topic is useful because it teaches students to use reasons, evidence, comparison, and correct words while answering science questions."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "The complete answer should explain the meaning of Measurement of Length, the process behind it, and one correct example."
+            }
+          ],
+          "examples": [
+            "Measuring a notebook with a ruler."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Length",
+              "definition": "Distance from one end of an object to the other.",
+              "simpleExample": "Length of a pencil."
+            },
+            {
+              "keyword": "Unit",
+              "definition": "A fixed quantity used for measurement.",
+              "simpleExample": "Centimetre."
+            },
+            {
+              "keyword": "Metre",
+              "definition": "Standard unit for longer lengths.",
+              "simpleExample": "Room length in metres."
+            }
+          ],
+          "quickSummary": "Measurement of Length: Measurement of length means finding how long, wide, tall or far something is using a standard unit.",
+          "revisionNotes": [
+            "Measurement of Length should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_science_ch5_correct_measurement",
+          "topic": "Correct Measurement",
+          "meaning": "Correct measurement needs a straight scale, correct zero mark, proper eye position and unit.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Science chapter 'Measurement of Length and Motion', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Correct Measurement means correct measurement needs a straight scale, correct zero mark, proper eye position and unit. It can be remembered through examples such as Using a broken scale by subtracting start reading from end reading..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Correct Measurement begins from observation",
+              "explanation": "Correct Measurement starts with something that can be observed in nature, the body, the kitchen, the sky, or ordinary surroundings. The observation gives a clear base for the explanation: Correct measurement needs a straight scale, correct zero mark, proper eye position and unit."
+            },
+            {
+              "step": 2,
+              "title": "The main concept",
+              "explanation": "The central idea is that keep scale straight. This makes the topic easier because the learner first gets the actual scientific reason, not only a definition."
+            },
+            {
+              "step": 3,
+              "title": "How the process works",
+              "explanation": "The concept develops in this order: keep scale straight -> start at zero -> look vertically -> read mark -> record unit. Each stage explains what happens next and why the next stage is connected with the previous one."
+            },
+            {
+              "step": 4,
+              "title": "Connection with daily life",
+              "explanation": "In daily life, this can be seen in: Using a broken scale by subtracting start reading from end reading.. This example shows the topic working outside the textbook."
+            },
+            {
+              "step": 5,
+              "title": "Why the concept is useful",
+              "explanation": "This topic is useful because it teaches students to use reasons, evidence, comparison, and correct words while answering science questions."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "The complete answer should explain the meaning of Correct Measurement, the process behind it, and one correct example."
+            }
+          ],
+          "examples": [
+            "Using a broken scale by subtracting start reading from end reading."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Scale",
+              "definition": "A tool marked with units for measurement.",
+              "simpleExample": "Ruler."
+            },
+            {
+              "keyword": "Zero Mark",
+              "definition": "Starting mark of a scale.",
+              "simpleExample": "Place pencil at zero."
+            },
+            {
+              "keyword": "Parallax Error",
+              "definition": "Wrong reading caused by looking from a slanting position.",
+              "simpleExample": "Eye not above the mark."
+            }
+          ],
+          "quickSummary": "Correct Measurement: Correct measurement needs a straight scale, correct zero mark, proper eye position and unit.",
+          "revisionNotes": [
+            "Correct Measurement should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_science_ch5_motion_and_rest",
+          "topic": "Motion and Rest",
+          "meaning": "An object is in motion when its position changes with time relative to a reference point.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Science chapter 'Measurement of Length and Motion', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Motion and Rest means an object is in motion when its position changes with time relative to a reference point. It can be remembered through examples such as A bus is moving with respect to road but a passenger is at rest inside the bus..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Motion and Rest begins from observation",
+              "explanation": "Motion and Rest starts with something that can be observed in nature, the body, the kitchen, the sky, or ordinary surroundings. The observation gives a clear base for the explanation: An object is in motion when its position changes with time relative to a reference point."
+            },
+            {
+              "step": 2,
+              "title": "The main concept",
+              "explanation": "The central idea is that choose reference point. This makes the topic easier because the learner first gets the actual scientific reason, not only a definition."
+            },
+            {
+              "step": 3,
+              "title": "How the process works",
+              "explanation": "The concept develops in this order: choose reference point -> observe position -> check time -> position changes or not -> decide motion/rest. Each stage explains what happens next and why the next stage is connected with the previous one."
+            },
+            {
+              "step": 4,
+              "title": "Connection with daily life",
+              "explanation": "In daily life, this can be seen in: A bus is moving with respect to road but a passenger is at rest inside the bus.. This example shows the topic working outside the textbook."
+            },
+            {
+              "step": 5,
+              "title": "Why the concept is useful",
+              "explanation": "This topic is useful because it teaches students to use reasons, evidence, comparison, and correct words while answering science questions."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "The complete answer should explain the meaning of Motion and Rest, the process behind it, and one correct example."
+            }
+          ],
+          "examples": [
+            "A bus is moving with respect to road but a passenger is at rest inside the bus."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Motion",
+              "definition": "Change in position with time.",
+              "simpleExample": "Running dog."
+            },
+            {
+              "keyword": "Rest",
+              "definition": "No change in position with respect to a reference point.",
+              "simpleExample": "Book on table."
+            },
+            {
+              "keyword": "Reference Point",
+              "definition": "A fixed point used to judge motion.",
+              "simpleExample": "Tree beside road."
+            }
+          ],
+          "quickSummary": "Motion and Rest: An object is in motion when its position changes with time relative to a reference point.",
+          "revisionNotes": [
+            "Motion and Rest should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        }
+      ]
+    },
+    {
+      "class": 6,
+      "board": "CBSE",
+      "subject": "Science",
+      "chapterNumber": 6,
+      "chapter": "Materials Around Us",
+      "topics": [
+        {
+          "topicId": "c6_science_ch6_materials_and_objects",
+          "topic": "Materials and Objects",
+          "meaning": "Objects are things we use, and materials are substances from which objects are made.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Science chapter 'Materials Around Us', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Materials and Objects means objects are things we use, and materials are substances from which objects are made. It can be remembered through examples such as A table is an object and wood is a material..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Materials and Objects begins from observation",
+              "explanation": "Materials and Objects starts with something that can be observed in nature, the body, the kitchen, the sky, or ordinary surroundings. The observation gives a clear base for the explanation: Objects are things we use, and materials are substances from which objects are made."
+            },
+            {
+              "step": 2,
+              "title": "The main concept",
+              "explanation": "The central idea is that observe object. This makes the topic easier because the learner first gets the actual scientific reason, not only a definition."
+            },
+            {
+              "step": 3,
+              "title": "How the process works",
+              "explanation": "The concept develops in this order: observe object -> identify material -> notice property -> choose use. Each stage explains what happens next and why the next stage is connected with the previous one."
+            },
+            {
+              "step": 4,
+              "title": "Connection with daily life",
+              "explanation": "In daily life, this can be seen in: A table is an object and wood is a material.. This example shows the topic working outside the textbook."
+            },
+            {
+              "step": 5,
+              "title": "Why the concept is useful",
+              "explanation": "This topic is useful because it teaches students to use reasons, evidence, comparison, and correct words while answering science questions."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "The complete answer should explain the meaning of Materials and Objects, the process behind it, and one correct example."
+            }
+          ],
+          "examples": [
+            "A table is an object and wood is a material."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Object",
+              "definition": "A thing with shape and use.",
+              "simpleExample": "Spoon."
+            },
+            {
+              "keyword": "Material",
+              "definition": "Substance used to make an object.",
+              "simpleExample": "Steel."
+            },
+            {
+              "keyword": "Property",
+              "definition": "A feature of a material.",
+              "simpleExample": "Glass is transparent."
+            }
+          ],
+          "quickSummary": "Materials and Objects: Objects are things we use, and materials are substances from which objects are made.",
+          "revisionNotes": [
+            "Materials and Objects should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_science_ch6_properties_of_materials",
+          "topic": "Properties of Materials",
+          "meaning": "Materials have properties such as hardness, transparency, solubility, strength and ability to float or sink.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Science chapter 'Materials Around Us', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Properties of Materials means materials have properties such as hardness, transparency, solubility, strength and ability to float or sink. It can be remembered through examples such as Glass is used in windows because it is transparent..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Properties of Materials begins from observation",
+              "explanation": "Properties of Materials starts with something that can be observed in nature, the body, the kitchen, the sky, or ordinary surroundings. The observation gives a clear base for the explanation: Materials have properties such as hardness, transparency, solubility, strength and ability to float or sink."
+            },
+            {
+              "step": 2,
+              "title": "The main concept",
+              "explanation": "The central idea is that select property. This makes the topic easier because the learner first gets the actual scientific reason, not only a definition."
+            },
+            {
+              "step": 3,
+              "title": "How the process works",
+              "explanation": "The concept develops in this order: select property -> test material -> compare result -> choose suitable use. Each stage explains what happens next and why the next stage is connected with the previous one."
+            },
+            {
+              "step": 4,
+              "title": "Connection with daily life",
+              "explanation": "In daily life, this can be seen in: Glass is used in windows because it is transparent.. This example shows the topic working outside the textbook."
+            },
+            {
+              "step": 5,
+              "title": "Why the concept is useful",
+              "explanation": "This topic is useful because it teaches students to use reasons, evidence, comparison, and correct words while answering science questions."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "The complete answer should explain the meaning of Properties of Materials, the process behind it, and one correct example."
+            }
+          ],
+          "examples": [
+            "Glass is used in windows because it is transparent."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Hardness",
+              "definition": "Ability to resist pressing or scratching.",
+              "simpleExample": "Stone is hard."
+            },
+            {
+              "keyword": "Transparency",
+              "definition": "Ability to allow light to pass clearly.",
+              "simpleExample": "Clear glass."
+            },
+            {
+              "keyword": "Solubility",
+              "definition": "Ability to dissolve in a liquid.",
+              "simpleExample": "Salt dissolves in water."
+            }
+          ],
+          "quickSummary": "Properties of Materials: Materials have properties such as hardness, transparency, solubility, strength and ability to float or sink.",
+          "revisionNotes": [
+            "Properties of Materials should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_science_ch6_choosing_suitable_materials",
+          "topic": "Choosing Suitable Materials",
+          "meaning": "Materials are chosen because their properties match the purpose of the object.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Science chapter 'Materials Around Us', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Choosing Suitable Materials means materials are chosen because their properties match the purpose of the object. It can be remembered through examples such as Raincoats use waterproof material..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Choosing Suitable Materials begins from observation",
+              "explanation": "Choosing Suitable Materials starts with something that can be observed in nature, the body, the kitchen, the sky, or ordinary surroundings. The observation gives a clear base for the explanation: Materials are chosen because their properties match the purpose of the object."
+            },
+            {
+              "step": 2,
+              "title": "The main concept",
+              "explanation": "The central idea is that purpose is known. This makes the topic easier because the learner first gets the actual scientific reason, not only a definition."
+            },
+            {
+              "step": 3,
+              "title": "How the process works",
+              "explanation": "The concept develops in this order: purpose is known -> needed property is identified -> material is selected -> object is made. Each stage explains what happens next and why the next stage is connected with the previous one."
+            },
+            {
+              "step": 4,
+              "title": "Connection with daily life",
+              "explanation": "In daily life, this can be seen in: Raincoats use waterproof material.. This example shows the topic working outside the textbook."
+            },
+            {
+              "step": 5,
+              "title": "Why the concept is useful",
+              "explanation": "This topic is useful because it teaches students to use reasons, evidence, comparison, and correct words while answering science questions."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "The complete answer should explain the meaning of Choosing Suitable Materials, the process behind it, and one correct example."
+            }
+          ],
+          "examples": [
+            "Raincoats use waterproof material."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Waterproof",
+              "definition": "Does not allow water to pass easily.",
+              "simpleExample": "Raincoat."
+            },
+            {
+              "keyword": "Conductor",
+              "definition": "Allows heat or electricity to pass.",
+              "simpleExample": "Copper wire."
+            },
+            {
+              "keyword": "Insulator",
+              "definition": "Does not allow heat/electricity to pass easily.",
+              "simpleExample": "Plastic covering on wire."
+            }
+          ],
+          "quickSummary": "Choosing Suitable Materials: Materials are chosen because their properties match the purpose of the object.",
+          "revisionNotes": [
+            "Choosing Suitable Materials should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        }
+      ]
+    },
+    {
+      "class": 6,
+      "board": "CBSE",
+      "subject": "Science",
+      "chapterNumber": 7,
+      "chapter": "Temperature and its Measurement",
+      "topics": [
+        {
+          "topicId": "c6_science_ch7_hot_and_cold",
+          "topic": "Hot and Cold",
+          "meaning": "Hot and cold describe temperature, but touch alone may not give accurate information.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Science chapter 'Temperature and its Measurement', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Hot and Cold means hot and cold describe temperature, but touch alone may not give accurate information. It can be remembered through examples such as Fever is checked with a thermometer, not only by touching forehead..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Hot and Cold begins from observation",
+              "explanation": "Hot and Cold starts with something that can be observed in nature, the body, the kitchen, the sky, or ordinary surroundings. The observation gives a clear base for the explanation: Hot and cold describe temperature, but touch alone may not give accurate information."
+            },
+            {
+              "step": 2,
+              "title": "The main concept",
+              "explanation": "The central idea is that object feels hot/cold. This makes the topic easier because the learner first gets the actual scientific reason, not only a definition."
+            },
+            {
+              "step": 3,
+              "title": "How the process works",
+              "explanation": "The concept develops in this order: object feels hot/cold -> touch may mislead -> thermometer is used -> temperature is read. Each stage explains what happens next and why the next stage is connected with the previous one."
+            },
+            {
+              "step": 4,
+              "title": "Connection with daily life",
+              "explanation": "In daily life, this can be seen in: Fever is checked with a thermometer, not only by touching forehead.. This example shows the topic working outside the textbook."
+            },
+            {
+              "step": 5,
+              "title": "Why the concept is useful",
+              "explanation": "This topic is useful because it teaches students to use reasons, evidence, comparison, and correct words while answering science questions."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "The complete answer should explain the meaning of Hot and Cold, the process behind it, and one correct example."
+            }
+          ],
+          "examples": [
+            "Fever is checked with a thermometer, not only by touching forehead."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Temperature",
+              "definition": "Measure of how hot or cold something is.",
+              "simpleExample": "Body temperature."
+            },
+            {
+              "keyword": "Hot",
+              "definition": "Having higher temperature.",
+              "simpleExample": "Boiling water."
+            },
+            {
+              "keyword": "Cold",
+              "definition": "Having lower temperature.",
+              "simpleExample": "Ice."
+            }
+          ],
+          "quickSummary": "Hot and Cold: Hot and cold describe temperature, but touch alone may not give accurate information.",
+          "revisionNotes": [
+            "Hot and Cold should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_science_ch7_thermometer",
+          "topic": "Thermometer",
+          "meaning": "A thermometer is an instrument used to measure temperature.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Science chapter 'Temperature and its Measurement', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Thermometer means a thermometer is an instrument used to measure temperature. It can be remembered through examples such as A clinical thermometer measures body temperature..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Thermometer begins from observation",
+              "explanation": "Thermometer starts with something that can be observed in nature, the body, the kitchen, the sky, or ordinary surroundings. The observation gives a clear base for the explanation: A thermometer is an instrument used to measure temperature."
+            },
+            {
+              "step": 2,
+              "title": "The main concept",
+              "explanation": "The central idea is that place thermometer correctly. This makes the topic easier because the learner first gets the actual scientific reason, not only a definition."
+            },
+            {
+              "step": 3,
+              "title": "How the process works",
+              "explanation": "The concept develops in this order: place thermometer correctly -> wait -> read scale -> write unit. Each stage explains what happens next and why the next stage is connected with the previous one."
+            },
+            {
+              "step": 4,
+              "title": "Connection with daily life",
+              "explanation": "In daily life, this can be seen in: A clinical thermometer measures body temperature.. This example shows the topic working outside the textbook."
+            },
+            {
+              "step": 5,
+              "title": "Why the concept is useful",
+              "explanation": "This topic is useful because it teaches students to use reasons, evidence, comparison, and correct words while answering science questions."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "The complete answer should explain the meaning of Thermometer, the process behind it, and one correct example."
+            }
+          ],
+          "examples": [
+            "A clinical thermometer measures body temperature."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Thermometer",
+              "definition": "Instrument used to measure temperature.",
+              "simpleExample": "Digital thermometer."
+            },
+            {
+              "keyword": "Degree Celsius",
+              "definition": "Common unit of temperature.",
+              "simpleExample": "37°C."
+            },
+            {
+              "keyword": "Scale",
+              "definition": "Marked divisions used to read measurement.",
+              "simpleExample": "Thermometer scale."
+            }
+          ],
+          "quickSummary": "Thermometer: A thermometer is an instrument used to measure temperature.",
+          "revisionNotes": [
+            "Thermometer should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_science_ch7_safe_temperature_measurement",
+          "topic": "Safe Temperature Measurement",
+          "meaning": "Temperature must be measured carefully to avoid wrong readings, burns or breakage.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Science chapter 'Temperature and its Measurement', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Safe Temperature Measurement means temperature must be measured carefully to avoid wrong readings, burns or breakage. It can be remembered through examples such as Using tongs to handle a hot vessel..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Safe Temperature Measurement begins from observation",
+              "explanation": "Safe Temperature Measurement starts with something that can be observed in nature, the body, the kitchen, the sky, or ordinary surroundings. The observation gives a clear base for the explanation: Temperature must be measured carefully to avoid wrong readings, burns or breakage."
+            },
+            {
+              "step": 2,
+              "title": "The main concept",
+              "explanation": "The central idea is that handle instrument carefully. This makes the topic easier because the learner first gets the actual scientific reason, not only a definition."
+            },
+            {
+              "step": 3,
+              "title": "How the process works",
+              "explanation": "The concept develops in this order: handle instrument carefully -> avoid hot contact -> read properly -> record safely. Each stage explains what happens next and why the next stage is connected with the previous one."
+            },
+            {
+              "step": 4,
+              "title": "Connection with daily life",
+              "explanation": "In daily life, this can be seen in: Using tongs to handle a hot vessel.. This example shows the topic working outside the textbook."
+            },
+            {
+              "step": 5,
+              "title": "Why the concept is useful",
+              "explanation": "This topic is useful because it teaches students to use reasons, evidence, comparison, and correct words while answering science questions."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "The complete answer should explain the meaning of Safe Temperature Measurement, the process behind it, and one correct example."
+            }
+          ],
+          "examples": [
+            "Using tongs to handle a hot vessel."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Safety",
+              "definition": "Protection from harm during an activity.",
+              "simpleExample": "Using gloves near heat."
+            },
+            {
+              "keyword": "Accurate Measurement",
+              "definition": "Measurement close to correct value.",
+              "simpleExample": "Reading at eye level."
+            },
+            {
+              "keyword": "Instrument",
+              "definition": "Tool used for measuring or observing.",
+              "simpleExample": "Thermometer."
+            }
+          ],
+          "quickSummary": "Safe Temperature Measurement: Temperature must be measured carefully to avoid wrong readings, burns or breakage.",
+          "revisionNotes": [
+            "Safe Temperature Measurement should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        }
+      ]
+    },
+    {
+      "class": 6,
+      "board": "CBSE",
+      "subject": "Science",
+      "chapterNumber": 8,
+      "chapter": "A Journey through States of Water",
+      "topics": [
+        {
+          "topicId": "c6_science_ch8_states_of_water",
+          "topic": "States of Water",
+          "meaning": "Water exists as solid ice, liquid water and gaseous water vapour.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Science chapter 'A Journey through States of Water', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "States of Water means water exists as solid ice, liquid water and gaseous water vapour. It can be remembered through examples such as Ice melts into water and water can become steam..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "States of Water begins from observation",
+              "explanation": "States of Water starts with something that can be observed in nature, the body, the kitchen, the sky, or ordinary surroundings. The observation gives a clear base for the explanation: Water exists as solid ice, liquid water and gaseous water vapour."
+            },
+            {
+              "step": 2,
+              "title": "The main concept",
+              "explanation": "The central idea is that solid. This makes the topic easier because the learner first gets the actual scientific reason, not only a definition."
+            },
+            {
+              "step": 3,
+              "title": "How the process works",
+              "explanation": "The concept develops in this order: solid -> liquid -> gas -> heating or cooling -> state changes. Each stage explains what happens next and why the next stage is connected with the previous one."
+            },
+            {
+              "step": 4,
+              "title": "Connection with daily life",
+              "explanation": "In daily life, this can be seen in: Ice melts into water and water can become steam.. This example shows the topic working outside the textbook."
+            },
+            {
+              "step": 5,
+              "title": "Why the concept is useful",
+              "explanation": "This topic is useful because it teaches students to use reasons, evidence, comparison, and correct words while answering science questions."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "The complete answer should explain the meaning of States of Water, the process behind it, and one correct example."
+            }
+          ],
+          "examples": [
+            "Ice melts into water and water can become steam."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Solid",
+              "definition": "State with fixed shape and volume.",
+              "simpleExample": "Ice."
+            },
+            {
+              "keyword": "Liquid",
+              "definition": "State with fixed volume but no fixed shape.",
+              "simpleExample": "Water."
+            },
+            {
+              "keyword": "Gas",
+              "definition": "State that spreads and has no fixed shape or volume.",
+              "simpleExample": "Water vapour."
+            }
+          ],
+          "quickSummary": "States of Water: Water exists as solid ice, liquid water and gaseous water vapour.",
+          "revisionNotes": [
+            "States of Water should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_science_ch8_melting_freezing_evaporation_and_condensation",
+          "topic": "Melting, Freezing, Evaporation and Condensation",
+          "meaning": "Water changes state through heating and cooling processes.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Science chapter 'A Journey through States of Water', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Melting, Freezing, Evaporation and Condensation means water changes state through heating and cooling processes. It can be remembered through examples such as Droplets form on a cold bottle because water vapour condenses..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Melting, Freezing, Evaporation and Condensation begins from observation",
+              "explanation": "Melting, Freezing, Evaporation and Condensation starts with something that can be observed in nature, the body, the kitchen, the sky, or ordinary surroundings. The observation gives a clear base for the explanation: Water changes state through heating and cooling processes."
+            },
+            {
+              "step": 2,
+              "title": "The main concept",
+              "explanation": "The central idea is that ice gains heat and melts. This makes the topic easier because the learner first gets the actual scientific reason, not only a definition."
+            },
+            {
+              "step": 3,
+              "title": "How the process works",
+              "explanation": "The concept develops in this order: ice gains heat and melts -> water loses heat and freezes -> water gains heat and evaporates -> vapour cools and condenses. Each stage explains what happens next and why the next stage is connected with the previous one."
+            },
+            {
+              "step": 4,
+              "title": "Connection with daily life",
+              "explanation": "In daily life, this can be seen in: Droplets form on a cold bottle because water vapour condenses.. This example shows the topic working outside the textbook."
+            },
+            {
+              "step": 5,
+              "title": "Why the concept is useful",
+              "explanation": "This topic is useful because it teaches students to use reasons, evidence, comparison, and correct words while answering science questions."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "The complete answer should explain the meaning of Melting, Freezing, Evaporation and Condensation, the process behind it, and one correct example."
+            }
+          ],
+          "examples": [
+            "Droplets form on a cold bottle because water vapour condenses."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Melting",
+              "definition": "Change from solid to liquid on heating.",
+              "simpleExample": "Ice melts."
+            },
+            {
+              "keyword": "Freezing",
+              "definition": "Change from liquid to solid on cooling.",
+              "simpleExample": "Water freezes."
+            },
+            {
+              "keyword": "Condensation",
+              "definition": "Change from vapour to liquid on cooling.",
+              "simpleExample": "Droplets on cold glass."
+            }
+          ],
+          "quickSummary": "Melting, Freezing, Evaporation and Condensation: Water changes state through heating and cooling processes.",
+          "revisionNotes": [
+            "Melting, Freezing, Evaporation and Condensation should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_science_ch8_water_cycle",
+          "topic": "Water Cycle",
+          "meaning": "The water cycle is the continuous movement of water between Earth and atmosphere.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Science chapter 'A Journey through States of Water', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Water Cycle means the water cycle is the continuous movement of water between Earth and atmosphere. It can be remembered through examples such as Rain fills rivers and lakes after clouds become heavy..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Water Cycle begins from observation",
+              "explanation": "Water Cycle starts with something that can be observed in nature, the body, the kitchen, the sky, or ordinary surroundings. The observation gives a clear base for the explanation: The water cycle is the continuous movement of water between Earth and atmosphere."
+            },
+            {
+              "step": 2,
+              "title": "The main concept",
+              "explanation": "The central idea is that sun heats water. This makes the topic easier because the learner first gets the actual scientific reason, not only a definition."
+            },
+            {
+              "step": 3,
+              "title": "How the process works",
+              "explanation": "The concept develops in this order: sun heats water -> evaporation -> condensation -> cloud formation -> rain -> collection. Each stage explains what happens next and why the next stage is connected with the previous one."
+            },
+            {
+              "step": 4,
+              "title": "Connection with daily life",
+              "explanation": "In daily life, this can be seen in: Rain fills rivers and lakes after clouds become heavy.. This example shows the topic working outside the textbook."
+            },
+            {
+              "step": 5,
+              "title": "Why the concept is useful",
+              "explanation": "This topic is useful because it teaches students to use reasons, evidence, comparison, and correct words while answering science questions."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "The complete answer should explain the meaning of Water Cycle, the process behind it, and one correct example."
+            }
+          ],
+          "examples": [
+            "Rain fills rivers and lakes after clouds become heavy."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Water Cycle",
+              "definition": "Continuous movement of water in nature.",
+              "simpleExample": "Evaporation, clouds and rain."
+            },
+            {
+              "keyword": "Evaporation",
+              "definition": "Change of liquid water into vapour.",
+              "simpleExample": "Wet clothes dry."
+            },
+            {
+              "keyword": "Precipitation",
+              "definition": "Water falling from clouds as rain, snow or hail.",
+              "simpleExample": "Rainfall."
+            }
+          ],
+          "quickSummary": "Water Cycle: The water cycle is the continuous movement of water between Earth and atmosphere.",
+          "revisionNotes": [
+            "Water Cycle should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        }
+      ]
+    },
+    {
+      "class": 6,
+      "board": "CBSE",
+      "subject": "Science",
+      "chapterNumber": 9,
+      "chapter": "Methods of Separation in Everyday Life",
+      "topics": [
+        {
+          "topicId": "c6_science_ch9_need_for_separation",
+          "topic": "Need for Separation",
+          "meaning": "Separation is needed to remove unwanted materials or obtain useful parts from a mixture.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Science chapter 'Methods of Separation in Everyday Life', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Need for Separation means separation is needed to remove unwanted materials or obtain useful parts from a mixture. It can be remembered through examples such as Removing stones from rice before cooking..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Need for Separation begins from observation",
+              "explanation": "Need for Separation starts with something that can be observed in nature, the body, the kitchen, the sky, or ordinary surroundings. The observation gives a clear base for the explanation: Separation is needed to remove unwanted materials or obtain useful parts from a mixture."
+            },
+            {
+              "step": 2,
+              "title": "The main concept",
+              "explanation": "The central idea is that mixture is present. This makes the topic easier because the learner first gets the actual scientific reason, not only a definition."
+            },
+            {
+              "step": 3,
+              "title": "How the process works",
+              "explanation": "The concept develops in this order: mixture is present -> components are identified -> method is chosen -> parts are separated. Each stage explains what happens next and why the next stage is connected with the previous one."
+            },
+            {
+              "step": 4,
+              "title": "Connection with daily life",
+              "explanation": "In daily life, this can be seen in: Removing stones from rice before cooking.. This example shows the topic working outside the textbook."
+            },
+            {
+              "step": 5,
+              "title": "Why the concept is useful",
+              "explanation": "This topic is useful because it teaches students to use reasons, evidence, comparison, and correct words while answering science questions."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "The complete answer should explain the meaning of Need for Separation, the process behind it, and one correct example."
+            }
+          ],
+          "examples": [
+            "Removing stones from rice before cooking."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Mixture",
+              "definition": "Two or more substances together without chemical joining.",
+              "simpleExample": "Rice with stones."
+            },
+            {
+              "keyword": "Separation",
+              "definition": "Taking components apart.",
+              "simpleExample": "Removing pebbles from dal."
+            },
+            {
+              "keyword": "Component",
+              "definition": "One part of a mixture.",
+              "simpleExample": "Salt in saltwater."
+            }
+          ],
+          "quickSummary": "Need for Separation: Separation is needed to remove unwanted materials or obtain useful parts from a mixture.",
+          "revisionNotes": [
+            "Need for Separation should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_science_ch9_handpicking_sieving_and_filtration",
+          "topic": "Handpicking, Sieving and Filtration",
+          "meaning": "Different separation methods are used depending on size, visibility and solubility of components.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Science chapter 'Methods of Separation in Everyday Life', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Handpicking, Sieving and Filtration means different separation methods are used depending on size, visibility and solubility of components. It can be remembered through examples such as Tea leaves are separated from tea using a strainer..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Handpicking, Sieving and Filtration begins from observation",
+              "explanation": "Handpicking, Sieving and Filtration starts with something that can be observed in nature, the body, the kitchen, the sky, or ordinary surroundings. The observation gives a clear base for the explanation: Different separation methods are used depending on size, visibility and solubility of components."
+            },
+            {
+              "step": 2,
+              "title": "The main concept",
+              "explanation": "The central idea is that large impurities picked. This makes the topic easier because the learner first gets the actual scientific reason, not only a definition."
+            },
+            {
+              "step": 3,
+              "title": "How the process works",
+              "explanation": "The concept develops in this order: large impurities picked -> different sizes sieved -> insoluble particles filtered -> useful part collected. Each stage explains what happens next and why the next stage is connected with the previous one."
+            },
+            {
+              "step": 4,
+              "title": "Connection with daily life",
+              "explanation": "In daily life, this can be seen in: Tea leaves are separated from tea using a strainer.. This example shows the topic working outside the textbook."
+            },
+            {
+              "step": 5,
+              "title": "Why the concept is useful",
+              "explanation": "This topic is useful because it teaches students to use reasons, evidence, comparison, and correct words while answering science questions."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "The complete answer should explain the meaning of Handpicking, Sieving and Filtration, the process behind it, and one correct example."
+            }
+          ],
+          "examples": [
+            "Tea leaves are separated from tea using a strainer."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Handpicking",
+              "definition": "Removing visible unwanted materials by hand.",
+              "simpleExample": "Picking stones from grains."
+            },
+            {
+              "keyword": "Sieving",
+              "definition": "Separating particles using a sieve based on size.",
+              "simpleExample": "Sieving flour."
+            },
+            {
+              "keyword": "Filtration",
+              "definition": "Separating insoluble solids using a filter.",
+              "simpleExample": "Filtering muddy water."
+            }
+          ],
+          "quickSummary": "Handpicking, Sieving and Filtration: Different separation methods are used depending on size, visibility and solubility of components.",
+          "revisionNotes": [
+            "Handpicking, Sieving and Filtration should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_science_ch9_sedimentation_decantation_and_evaporation",
+          "topic": "Sedimentation, Decantation and Evaporation",
+          "meaning": "Settling, pouring and evaporation separate mixtures using weight and change of state.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Science chapter 'Methods of Separation in Everyday Life', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Sedimentation, Decantation and Evaporation means settling, pouring and evaporation separate mixtures using weight and change of state. It can be remembered through examples such as Salt is obtained when seawater evaporates in salt pans..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Sedimentation, Decantation and Evaporation begins from observation",
+              "explanation": "Sedimentation, Decantation and Evaporation starts with something that can be observed in nature, the body, the kitchen, the sky, or ordinary surroundings. The observation gives a clear base for the explanation: Settling, pouring and evaporation separate mixtures using weight and change of state."
+            },
+            {
+              "step": 2,
+              "title": "The main concept",
+              "explanation": "The central idea is that heavy particles settle. This makes the topic easier because the learner first gets the actual scientific reason, not only a definition."
+            },
+            {
+              "step": 3,
+              "title": "How the process works",
+              "explanation": "The concept develops in this order: heavy particles settle -> clear liquid is poured -> liquid evaporates -> solid remains. Each stage explains what happens next and why the next stage is connected with the previous one."
+            },
+            {
+              "step": 4,
+              "title": "Connection with daily life",
+              "explanation": "In daily life, this can be seen in: Salt is obtained when seawater evaporates in salt pans.. This example shows the topic working outside the textbook."
+            },
+            {
+              "step": 5,
+              "title": "Why the concept is useful",
+              "explanation": "This topic is useful because it teaches students to use reasons, evidence, comparison, and correct words while answering science questions."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "The complete answer should explain the meaning of Sedimentation, Decantation and Evaporation, the process behind it, and one correct example."
+            }
+          ],
+          "examples": [
+            "Salt is obtained when seawater evaporates in salt pans."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Sedimentation",
+              "definition": "Settling of heavier particles at bottom.",
+              "simpleExample": "Mud settling in water."
+            },
+            {
+              "keyword": "Decantation",
+              "definition": "Pouring clear liquid after settling.",
+              "simpleExample": "Pouring clear water."
+            },
+            {
+              "keyword": "Evaporation",
+              "definition": "Liquid changing into vapour.",
+              "simpleExample": "Water evaporating from saltwater."
+            }
+          ],
+          "quickSummary": "Sedimentation, Decantation and Evaporation: Settling, pouring and evaporation separate mixtures using weight and change of state.",
+          "revisionNotes": [
+            "Sedimentation, Decantation and Evaporation should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        }
+      ]
+    },
+    {
+      "class": 6,
+      "board": "CBSE",
+      "subject": "Science",
+      "chapterNumber": 10,
+      "chapter": "Living Creatures: Exploring their Characteristics",
+      "topics": [
+        {
+          "topicId": "c6_science_ch10_characteristics_of_living_things",
+          "topic": "Characteristics of Living Things",
+          "meaning": "Living things grow, need food, breathe, respond, excrete, reproduce and have life processes.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Science chapter 'Living Creatures: Exploring their Characteristics', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Characteristics of Living Things means living things grow, need food, breathe, respond, excrete, reproduce and have life processes. It can be remembered through examples such as A seed grows into a plant and a dog responds to sound..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Characteristics of Living Things begins from observation",
+              "explanation": "Characteristics of Living Things starts with something that can be observed in nature, the body, the kitchen, the sky, or ordinary surroundings. The observation gives a clear base for the explanation: Living things grow, need food, breathe, respond, excrete, reproduce and have life processes."
+            },
+            {
+              "step": 2,
+              "title": "The main concept",
+              "explanation": "The central idea is that need food. This makes the topic easier because the learner first gets the actual scientific reason, not only a definition."
+            },
+            {
+              "step": 3,
+              "title": "How the process works",
+              "explanation": "The concept develops in this order: need food -> grow -> breathe -> respond -> reproduce -> excrete. Each stage explains what happens next and why the next stage is connected with the previous one."
+            },
+            {
+              "step": 4,
+              "title": "Connection with daily life",
+              "explanation": "In daily life, this can be seen in: A seed grows into a plant and a dog responds to sound.. This example shows the topic working outside the textbook."
+            },
+            {
+              "step": 5,
+              "title": "Why the concept is useful",
+              "explanation": "This topic is useful because it teaches students to use reasons, evidence, comparison, and correct words while answering science questions."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "The complete answer should explain the meaning of Characteristics of Living Things, the process behind it, and one correct example."
+            }
+          ],
+          "examples": [
+            "A seed grows into a plant and a dog responds to sound."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Living Thing",
+              "definition": "An organism that performs life processes.",
+              "simpleExample": "A plant."
+            },
+            {
+              "keyword": "Growth",
+              "definition": "Increase in size or development.",
+              "simpleExample": "Baby grows into adult."
+            },
+            {
+              "keyword": "Response",
+              "definition": "Reaction to a stimulus.",
+              "simpleExample": "Leaves folding when touched."
+            }
+          ],
+          "quickSummary": "Characteristics of Living Things: Living things grow, need food, breathe, respond, excrete, reproduce and have life processes.",
+          "revisionNotes": [
+            "Characteristics of Living Things should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_science_ch10_response_to_stimuli",
+          "topic": "Response to Stimuli",
+          "meaning": "Living things respond to changes such as light, touch, sound, heat and water.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Science chapter 'Living Creatures: Exploring their Characteristics', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Response to Stimuli means living things respond to changes such as light, touch, sound, heat and water. It can be remembered through examples such as A person pulls hand away from a hot object..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Response to Stimuli begins from observation",
+              "explanation": "Response to Stimuli starts with something that can be observed in nature, the body, the kitchen, the sky, or ordinary surroundings. The observation gives a clear base for the explanation: Living things respond to changes such as light, touch, sound, heat and water."
+            },
+            {
+              "step": 2,
+              "title": "The main concept",
+              "explanation": "The central idea is that stimulus occurs. This makes the topic easier because the learner first gets the actual scientific reason, not only a definition."
+            },
+            {
+              "step": 3,
+              "title": "How the process works",
+              "explanation": "The concept develops in this order: stimulus occurs -> organism senses it -> body reacts -> survival improves. Each stage explains what happens next and why the next stage is connected with the previous one."
+            },
+            {
+              "step": 4,
+              "title": "Connection with daily life",
+              "explanation": "In daily life, this can be seen in: A person pulls hand away from a hot object.. This example shows the topic working outside the textbook."
+            },
+            {
+              "step": 5,
+              "title": "Why the concept is useful",
+              "explanation": "This topic is useful because it teaches students to use reasons, evidence, comparison, and correct words while answering science questions."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "The complete answer should explain the meaning of Response to Stimuli, the process behind it, and one correct example."
+            }
+          ],
+          "examples": [
+            "A person pulls hand away from a hot object."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Stimulus",
+              "definition": "A change that causes a response.",
+              "simpleExample": "Bright light."
+            },
+            {
+              "keyword": "Response",
+              "definition": "Action caused by a stimulus.",
+              "simpleExample": "Blinking eyes."
+            },
+            {
+              "keyword": "Sensitivity",
+              "definition": "Ability to sense and respond.",
+              "simpleExample": "Skin senses heat."
+            }
+          ],
+          "quickSummary": "Response to Stimuli: Living things respond to changes such as light, touch, sound, heat and water.",
+          "revisionNotes": [
+            "Response to Stimuli should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_science_ch10_reproduction_and_life_cycle",
+          "topic": "Reproduction and Life Cycle",
+          "meaning": "Reproduction produces new individuals of the same kind and keeps life continuing.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Science chapter 'Living Creatures: Exploring their Characteristics', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Reproduction and Life Cycle means reproduction produces new individuals of the same kind and keeps life continuing. It can be remembered through examples such as A hen lays eggs and a plant produces seeds..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Reproduction and Life Cycle begins from observation",
+              "explanation": "Reproduction and Life Cycle starts with something that can be observed in nature, the body, the kitchen, the sky, or ordinary surroundings. The observation gives a clear base for the explanation: Reproduction produces new individuals of the same kind and keeps life continuing."
+            },
+            {
+              "step": 2,
+              "title": "The main concept",
+              "explanation": "The central idea is that adult organism. This makes the topic easier because the learner first gets the actual scientific reason, not only a definition."
+            },
+            {
+              "step": 3,
+              "title": "How the process works",
+              "explanation": "The concept develops in this order: adult organism -> produces young/seed/egg -> young grows -> life cycle continues. Each stage explains what happens next and why the next stage is connected with the previous one."
+            },
+            {
+              "step": 4,
+              "title": "Connection with daily life",
+              "explanation": "In daily life, this can be seen in: A hen lays eggs and a plant produces seeds.. This example shows the topic working outside the textbook."
+            },
+            {
+              "step": 5,
+              "title": "Why the concept is useful",
+              "explanation": "This topic is useful because it teaches students to use reasons, evidence, comparison, and correct words while answering science questions."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "The complete answer should explain the meaning of Reproduction and Life Cycle, the process behind it, and one correct example."
+            }
+          ],
+          "examples": [
+            "A hen lays eggs and a plant produces seeds."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Reproduction",
+              "definition": "Process of producing new individuals.",
+              "simpleExample": "A plant producing seeds."
+            },
+            {
+              "keyword": "Offspring",
+              "definition": "Young one of a living thing.",
+              "simpleExample": "Calf of a cow."
+            },
+            {
+              "keyword": "Life Cycle",
+              "definition": "Stages in life of an organism.",
+              "simpleExample": "Egg to adult bird."
+            }
+          ],
+          "quickSummary": "Reproduction and Life Cycle: Reproduction produces new individuals of the same kind and keeps life continuing.",
+          "revisionNotes": [
+            "Reproduction and Life Cycle should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        }
+      ]
+    },
+    {
+      "class": 6,
+      "board": "CBSE",
+      "subject": "Science",
+      "chapterNumber": 11,
+      "chapter": "Nature’s Treasures",
+      "topics": [
+        {
+          "topicId": "c6_science_ch11_natural_resources",
+          "topic": "Natural Resources",
+          "meaning": "Natural resources are useful things obtained from nature such as air, water, soil, forests, minerals and sunlight.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Science chapter 'Nature’s Treasures', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Natural Resources means natural resources are useful things obtained from nature such as air, water, soil, forests, minerals and sunlight. It can be remembered through examples such as Water is used for drinking and soil is used for growing crops..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Natural Resources begins from observation",
+              "explanation": "Natural Resources starts with something that can be observed in nature, the body, the kitchen, the sky, or ordinary surroundings. The observation gives a clear base for the explanation: Natural resources are useful things obtained from nature such as air, water, soil, forests, minerals and sunlight."
+            },
+            {
+              "step": 2,
+              "title": "The main concept",
+              "explanation": "The central idea is that resource comes from nature. This makes the topic easier because the learner first gets the actual scientific reason, not only a definition."
+            },
+            {
+              "step": 3,
+              "title": "How the process works",
+              "explanation": "The concept develops in this order: resource comes from nature -> living beings use it -> resource may be limited -> careful use is needed. Each stage explains what happens next and why the next stage is connected with the previous one."
+            },
+            {
+              "step": 4,
+              "title": "Connection with daily life",
+              "explanation": "In daily life, this can be seen in: Water is used for drinking and soil is used for growing crops.. This example shows the topic working outside the textbook."
+            },
+            {
+              "step": 5,
+              "title": "Why the concept is useful",
+              "explanation": "This topic is useful because it teaches students to use reasons, evidence, comparison, and correct words while answering science questions."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "The complete answer should explain the meaning of Natural Resources, the process behind it, and one correct example."
+            }
+          ],
+          "examples": [
+            "Water is used for drinking and soil is used for growing crops."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Natural Resource",
+              "definition": "Useful material or energy obtained from nature.",
+              "simpleExample": "Water."
+            },
+            {
+              "keyword": "Resource",
+              "definition": "Anything useful to living beings or humans.",
+              "simpleExample": "Wood."
+            },
+            {
+              "keyword": "Conservation",
+              "definition": "Careful use and protection of resources.",
+              "simpleExample": "Saving water."
+            }
+          ],
+          "quickSummary": "Natural Resources: Natural resources are useful things obtained from nature such as air, water, soil, forests, minerals and sunlight.",
+          "revisionNotes": [
+            "Natural Resources should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_science_ch11_renewable_and_non_renewable_resources",
+          "topic": "Renewable and Non-renewable Resources",
+          "meaning": "Renewable resources can be replaced naturally, while non-renewable resources take a very long time to form.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Science chapter 'Nature’s Treasures', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Renewable and Non-renewable Resources means renewable resources can be replaced naturally, while non-renewable resources take a very long time to form. It can be remembered through examples such as Sunlight is renewable; coal is non-renewable..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Renewable and Non-renewable Resources begins from observation",
+              "explanation": "Renewable and Non-renewable Resources starts with something that can be observed in nature, the body, the kitchen, the sky, or ordinary surroundings. The observation gives a clear base for the explanation: Renewable resources can be replaced naturally, while non-renewable resources take a very long time to form."
+            },
+            {
+              "step": 2,
+              "title": "The main concept",
+              "explanation": "The central idea is that identify resource. This makes the topic easier because the learner first gets the actual scientific reason, not only a definition."
+            },
+            {
+              "step": 3,
+              "title": "How the process works",
+              "explanation": "The concept develops in this order: identify resource -> check formation time -> compare use rate -> decide type -> conserve. Each stage explains what happens next and why the next stage is connected with the previous one."
+            },
+            {
+              "step": 4,
+              "title": "Connection with daily life",
+              "explanation": "In daily life, this can be seen in: Sunlight is renewable; coal is non-renewable.. This example shows the topic working outside the textbook."
+            },
+            {
+              "step": 5,
+              "title": "Why the concept is useful",
+              "explanation": "This topic is useful because it teaches students to use reasons, evidence, comparison, and correct words while answering science questions."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "The complete answer should explain the meaning of Renewable and Non-renewable Resources, the process behind it, and one correct example."
+            }
+          ],
+          "examples": [
+            "Sunlight is renewable; coal is non-renewable."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Renewable Resource",
+              "definition": "Resource that can be replaced naturally in reasonable time.",
+              "simpleExample": "Wind."
+            },
+            {
+              "keyword": "Non-renewable Resource",
+              "definition": "Resource that forms slowly and can be exhausted.",
+              "simpleExample": "Petroleum."
+            },
+            {
+              "keyword": "Exhaustion",
+              "definition": "Using up a resource dangerously or completely.",
+              "simpleExample": "Overuse of groundwater."
+            }
+          ],
+          "quickSummary": "Renewable and Non-renewable Resources: Renewable resources can be replaced naturally, while non-renewable resources take a very long time to form.",
+          "revisionNotes": [
+            "Renewable and Non-renewable Resources should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_science_ch11_protecting_nature",
+          "topic": "Protecting Nature",
+          "meaning": "Protecting nature means reducing waste, preventing pollution, planting trees and using resources responsibly.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Science chapter 'Nature’s Treasures', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Protecting Nature means protecting nature means reducing waste, preventing pollution, planting trees and using resources responsibly. It can be remembered through examples such as Turning off taps and planting trees..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Protecting Nature begins from observation",
+              "explanation": "Protecting Nature starts with something that can be observed in nature, the body, the kitchen, the sky, or ordinary surroundings. The observation gives a clear base for the explanation: Protecting nature means reducing waste, preventing pollution, planting trees and using resources responsibly."
+            },
+            {
+              "step": 2,
+              "title": "The main concept",
+              "explanation": "The central idea is that recognise value. This makes the topic easier because the learner first gets the actual scientific reason, not only a definition."
+            },
+            {
+              "step": 3,
+              "title": "How the process works",
+              "explanation": "The concept develops in this order: recognise value -> reduce waste -> reuse/recycle -> protect habitats -> share fairly. Each stage explains what happens next and why the next stage is connected with the previous one."
+            },
+            {
+              "step": 4,
+              "title": "Connection with daily life",
+              "explanation": "In daily life, this can be seen in: Turning off taps and planting trees.. This example shows the topic working outside the textbook."
+            },
+            {
+              "step": 5,
+              "title": "Why the concept is useful",
+              "explanation": "This topic is useful because it teaches students to use reasons, evidence, comparison, and correct words while answering science questions."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "The complete answer should explain the meaning of Protecting Nature, the process behind it, and one correct example."
+            }
+          ],
+          "examples": [
+            "Turning off taps and planting trees."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Pollution",
+              "definition": "Harmful change in air, water or land.",
+              "simpleExample": "Smoke pollutes air."
+            },
+            {
+              "keyword": "Recycle",
+              "definition": "Making useful material again from waste.",
+              "simpleExample": "Recycling paper."
+            },
+            {
+              "keyword": "Sustainable Use",
+              "definition": "Using resources without harming future availability.",
+              "simpleExample": "Using water carefully."
+            }
+          ],
+          "quickSummary": "Protecting Nature: Protecting nature means reducing waste, preventing pollution, planting trees and using resources responsibly.",
+          "revisionNotes": [
+            "Protecting Nature should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        }
+      ]
+    },
+    {
+      "class": 6,
+      "board": "CBSE",
+      "subject": "Science",
+      "chapterNumber": 12,
+      "chapter": "Beyond Earth",
+      "topics": [
+        {
+          "topicId": "c6_science_ch12_earth_and_space",
+          "topic": "Earth and Space",
+          "meaning": "Earth is a planet in space, and beyond Earth are the Moon, Sun, planets, stars and other celestial bodies.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Science chapter 'Beyond Earth', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Earth and Space means earth is a planet in space, and beyond Earth are the Moon, Sun, planets, stars and other celestial bodies. It can be remembered through examples such as The Moon is seen at night and the Sun gives light and heat..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Earth and Space begins from observation",
+              "explanation": "Earth and Space starts with something that can be observed in nature, the body, the kitchen, the sky, or ordinary surroundings. The observation gives a clear base for the explanation: Earth is a planet in space, and beyond Earth are the Moon, Sun, planets, stars and other celestial bodies."
+            },
+            {
+              "step": 2,
+              "title": "The main concept",
+              "explanation": "The central idea is that observe sky. This makes the topic easier because the learner first gets the actual scientific reason, not only a definition."
+            },
+            {
+              "step": 3,
+              "title": "How the process works",
+              "explanation": "The concept develops in this order: observe sky -> identify celestial body -> learn relation -> connect with Earth. Each stage explains what happens next and why the next stage is connected with the previous one."
+            },
+            {
+              "step": 4,
+              "title": "Connection with daily life",
+              "explanation": "In daily life, this can be seen in: The Moon is seen at night and the Sun gives light and heat.. This example shows the topic working outside the textbook."
+            },
+            {
+              "step": 5,
+              "title": "Why the concept is useful",
+              "explanation": "This topic is useful because it teaches students to use reasons, evidence, comparison, and correct words while answering science questions."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "The complete answer should explain the meaning of Earth and Space, the process behind it, and one correct example."
+            }
+          ],
+          "examples": [
+            "The Moon is seen at night and the Sun gives light and heat."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Space",
+              "definition": "The vast region beyond Earth’s atmosphere.",
+              "simpleExample": "Moon is in space."
+            },
+            {
+              "keyword": "Celestial Body",
+              "definition": "Natural object in space.",
+              "simpleExample": "Sun."
+            },
+            {
+              "keyword": "Planet",
+              "definition": "Large body that moves around a star.",
+              "simpleExample": "Earth."
+            }
+          ],
+          "quickSummary": "Earth and Space: Earth is a planet in space, and beyond Earth are the Moon, Sun, planets, stars and other celestial bodies.",
+          "revisionNotes": [
+            "Earth and Space should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_science_ch12_sun_moon_and_stars",
+          "topic": "Sun, Moon and Stars",
+          "meaning": "The Sun is a star that gives light and heat; the Moon reflects sunlight; stars are distant suns.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Science chapter 'Beyond Earth', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Sun, Moon and Stars means the Sun is a star that gives light and heat; the Moon reflects sunlight; stars are distant suns. It can be remembered through examples such as Moon appears bright because it reflects sunlight..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Sun, Moon and Stars begins from observation",
+              "explanation": "Sun, Moon and Stars starts with something that can be observed in nature, the body, the kitchen, the sky, or ordinary surroundings. The observation gives a clear base for the explanation: The Sun is a star that gives light and heat; the Moon reflects sunlight; stars are distant suns."
+            },
+            {
+              "step": 2,
+              "title": "The main concept",
+              "explanation": "The central idea is that sun produces light. This makes the topic easier because the learner first gets the actual scientific reason, not only a definition."
+            },
+            {
+              "step": 3,
+              "title": "How the process works",
+              "explanation": "The concept develops in this order: sun produces light -> moon reflects light -> stars are far -> sky is observed. Each stage explains what happens next and why the next stage is connected with the previous one."
+            },
+            {
+              "step": 4,
+              "title": "Connection with daily life",
+              "explanation": "In daily life, this can be seen in: Moon appears bright because it reflects sunlight.. This example shows the topic working outside the textbook."
+            },
+            {
+              "step": 5,
+              "title": "Why the concept is useful",
+              "explanation": "This topic is useful because it teaches students to use reasons, evidence, comparison, and correct words while answering science questions."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "The complete answer should explain the meaning of Sun, Moon and Stars, the process behind it, and one correct example."
+            }
+          ],
+          "examples": [
+            "Moon appears bright because it reflects sunlight."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Sun",
+              "definition": "Nearest star to Earth and main source of light and heat.",
+              "simpleExample": "Sunlight helps plants."
+            },
+            {
+              "keyword": "Moon",
+              "definition": "Earth’s natural satellite that reflects sunlight.",
+              "simpleExample": "Moon phases."
+            },
+            {
+              "keyword": "Star",
+              "definition": "Huge hot ball of gases giving light.",
+              "simpleExample": "The Sun is a star."
+            }
+          ],
+          "quickSummary": "Sun, Moon and Stars: The Sun is a star that gives light and heat; the Moon reflects sunlight; stars are distant suns.",
+          "revisionNotes": [
+            "Sun, Moon and Stars should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        },
+        {
+          "topicId": "c6_science_ch12_solar_system_and_exploration",
+          "topic": "Solar System and Exploration",
+          "meaning": "The solar system includes the Sun and objects moving around it, and space exploration studies them using instruments and missions.",
+          "ncertBasedExplanation": "In the NCERT Class 6 Science chapter 'Beyond Earth', this topic is developed through explanation, examples, activities, questions, and visual/contextual connections. The focus is on learning the concept clearly and using it in answers.",
+          "easyExplanation": "Solar System and Exploration means the solar system includes the Sun and objects moving around it, and space exploration studies them using instruments and missions. It can be remembered through examples such as Satellites help in weather forecasting..",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Solar System and Exploration begins from observation",
+              "explanation": "Solar System and Exploration starts with something that can be observed in nature, the body, the kitchen, the sky, or ordinary surroundings. The observation gives a clear base for the explanation: The solar system includes the Sun and objects moving around it, and space exploration studies them using instruments and missions."
+            },
+            {
+              "step": 2,
+              "title": "The main concept",
+              "explanation": "The central idea is that sun at centre. This makes the topic easier because the learner first gets the actual scientific reason, not only a definition."
+            },
+            {
+              "step": 3,
+              "title": "How the process works",
+              "explanation": "The concept develops in this order: sun at centre -> planets revolve -> satellites move around planets -> instruments collect data. Each stage explains what happens next and why the next stage is connected with the previous one."
+            },
+            {
+              "step": 4,
+              "title": "Connection with daily life",
+              "explanation": "In daily life, this can be seen in: Satellites help in weather forecasting.. This example shows the topic working outside the textbook."
+            },
+            {
+              "step": 5,
+              "title": "Why the concept is useful",
+              "explanation": "This topic is useful because it teaches students to use reasons, evidence, comparison, and correct words while answering science questions."
+            },
+            {
+              "step": 6,
+              "title": "Final learning",
+              "explanation": "The complete answer should explain the meaning of Solar System and Exploration, the process behind it, and one correct example."
+            }
+          ],
+          "examples": [
+            "Satellites help in weather forecasting."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Solar System",
+              "definition": "The Sun and all objects moving around it.",
+              "simpleExample": "Earth is part of solar system."
+            },
+            {
+              "keyword": "Revolution",
+              "definition": "Movement of one body around another.",
+              "simpleExample": "Earth revolves around Sun."
+            },
+            {
+              "keyword": "Telescope",
+              "definition": "Instrument used to see distant objects.",
+              "simpleExample": "Viewing Moon through telescope."
+            }
+          ],
+          "quickSummary": "Solar System and Exploration: The solar system includes the Sun and objects moving around it, and space exploration studies them using instruments and missions.",
+          "revisionNotes": [
+            "Solar System and Exploration should be revised with its meaning, process, and example.",
+            "The step-by-step explanation is the main part for understanding.",
+            "Important keywords should be learnt with definition and simple example.",
+            "A strong answer includes reason, example, and final learning."
+          ]
+        }
+      ]
+    }
+  ]
+}
