@@ -9,10 +9,10 @@ OUTPUT_PATH = BASE_DIR / "class_6_cbse_all_subjects.json"
 DEFAULT_SOURCE_DIR = BASE_DIR / "class6_teacher_style_json_v1"
 
 SOURCE_FILES = {
-    "English": "class6_english_teacher_style_v1.json",
-    "Maths": "class6_mathematics_teacher_style_v1.json",
-    "Science": "class6_science_teacher_style_v1.json",
-    "Social Science": "class6_social_studies_teacher_style_v1.json",
+    "English": "class6_english.json",
+    "Maths": "class6_mathematics.json",
+    "Science": "class6_science.json",
+    "Social Science": "class6_social_science.json",
 }
 
 SUBJECT_LABELS = {

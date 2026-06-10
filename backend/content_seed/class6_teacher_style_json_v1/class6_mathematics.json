@@ -1,0 +1,3619 @@
+{
+  "class": 6,
+  "board": "CBSE",
+  "source": "NCERT",
+  "subject": "Mathematics",
+  "bookName": "Ganita Prakash",
+  "chapters": [
+    {
+      "chapterNumber": 1,
+      "chapter": "Patterns in Mathematics",
+      "topics": [
+        {
+          "topicId": "math_ch1_topic1",
+          "topic": "What is Mathematics?",
+          "meaning": "Mathematics is the study of patterns, numbers, shapes and the logical relationships between them.",
+          "ncertBasedExplanation": "Mathematics is often described as the study of patterns. Almost everything in mathematics, from numbers to shapes, is connected by patterns and rules. Mathematics helps us understand the world, solve everyday problems, and is used in science, art, music, sports and technology. Learning to notice patterns, ask questions and reason logically is what doing mathematics really means. It is not only about calculation but about discovering how things are related and why.",
+          "easyExplanation": "Maths is all about spotting patterns and understanding how numbers and shapes connect. It is used everywhere, from building bridges to making music.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Maths is about patterns",
+              "explanation": "At its heart, mathematics is the search for patterns and the rules behind them."
+            },
+            {
+              "step": 2,
+              "title": "It is everywhere",
+              "explanation": "Mathematics is used in science, art, music, sports and technology."
+            },
+            {
+              "step": 3,
+              "title": "It builds reasoning",
+              "explanation": "Doing maths means noticing patterns, asking questions and reasoning logically."
+            },
+            {
+              "step": 4,
+              "title": "It is more than calculation",
+              "explanation": "Maths is not only about getting answers but about understanding why things are related."
+            }
+          ],
+          "examples": [
+            "The way petals are arranged on a flower follows a mathematical pattern.",
+            "Counting days in a week (7, 14, 21...) is a simple number pattern."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Pattern",
+              "definition": "A repeating or regular arrangement that follows a rule.",
+              "simpleExample": "2, 4, 6, 8 is a number pattern."
+            },
+            {
+              "keyword": "Mathematics",
+              "definition": "The study of numbers, shapes, patterns and their relationships.",
+              "simpleExample": "Adding numbers and finding shapes are part of mathematics."
+            }
+          ],
+          "quickSummary": "Mathematics is the study of patterns, numbers and shapes and the logical relationships among them; it is used everywhere and is about reasoning, not just calculation.",
+          "revisionNotes": [
+            "Maths is the study of patterns.",
+            "It connects numbers, shapes and relationships.",
+            "Used in science, art, music, sports, technology.",
+            "It develops logical reasoning, not just calculation."
+          ]
+        },
+        {
+          "topicId": "math_ch1_topic2",
+          "topic": "Patterns in Numbers",
+          "meaning": "A number pattern (number sequence) is a list of numbers arranged according to a fixed rule.",
+          "ncertBasedExplanation": "Numbers can be arranged in sequences that follow a rule, called number patterns or number sequences. Some important sequences are the counting numbers (1, 2, 3, ...), the odd numbers (1, 3, 5, ...), the even numbers (2, 4, 6, ...), the multiples of a number, the square numbers (1, 4, 9, 16, ...) and the triangular numbers (1, 3, 6, 10, ...). By studying a sequence, we can find its rule and use the rule to write the next numbers. Recognising the rule is the key to continuing or understanding a pattern.",
+          "easyExplanation": "A number pattern is a list of numbers that follows a rule, like 1, 3, 5, 7 (odd numbers). Once you find the rule, you can write the next numbers.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "See the sequence",
+              "explanation": "A number sequence is a list of numbers arranged by a rule, such as 2, 4, 6, 8."
+            },
+            {
+              "step": 2,
+              "title": "Learn key sequences",
+              "explanation": "Important ones include odd, even, multiples, square and triangular numbers."
+            },
+            {
+              "step": 3,
+              "title": "Find the rule",
+              "explanation": "Look at how each number relates to the next to discover the rule."
+            },
+            {
+              "step": 4,
+              "title": "Continue the pattern",
+              "explanation": "Use the rule to write the next numbers in the sequence."
+            }
+          ],
+          "examples": [
+            "Odd numbers: 1, 3, 5, 7, 9 (add 2 each time).",
+            "Square numbers: 1, 4, 9, 16, 25 (1x1, 2x2, 3x3, ...)."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Number sequence",
+              "definition": "A list of numbers arranged by a rule.",
+              "simpleExample": "5, 10, 15, 20 is a number sequence of multiples of 5."
+            },
+            {
+              "keyword": "Square number",
+              "definition": "A number got by multiplying a whole number by itself.",
+              "simpleExample": "9 is a square number because 3x3 = 9."
+            },
+            {
+              "keyword": "Triangular number",
+              "definition": "A number that can be drawn as a triangle of dots.",
+              "simpleExample": "1, 3, 6, 10 are triangular numbers."
+            }
+          ],
+          "quickSummary": "Number patterns are sequences of numbers that follow a rule, like odd, even, square and triangular numbers; finding the rule lets us continue the sequence.",
+          "revisionNotes": [
+            "Number sequence = numbers arranged by a rule.",
+            "Key types: odd, even, multiples, squares, triangular.",
+            "Find the rule from how numbers relate.",
+            "Use the rule to write the next numbers."
+          ]
+        },
+        {
+          "topicId": "math_ch1_topic3",
+          "topic": "Visualising Number Sequences",
+          "meaning": "Number sequences can be shown using pictures or dots, helping us see why a pattern works.",
+          "ncertBasedExplanation": "Many number sequences become easier to understand when we draw them as pictures using dots or shapes. For example, square numbers (1, 4, 9, 16) can be drawn as dots forming squares, and triangular numbers (1, 3, 6, 10) as dots forming triangles. Visualising a sequence this way helps us see why the pattern grows the way it does. It also helps us discover new relationships, such as how a square can be split into two triangles. Pictures turn abstract numbers into something we can actually see.",
+          "easyExplanation": "We can draw number patterns as dots. Square numbers make square shapes and triangular numbers make triangles, which helps us 'see' the pattern.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Draw the numbers",
+              "explanation": "Represent each number in a sequence using dots or small shapes."
+            },
+            {
+              "step": 2,
+              "title": "Square numbers as squares",
+              "explanation": "1, 4, 9, 16 dots can be arranged into perfect squares."
+            },
+            {
+              "step": 3,
+              "title": "Triangular numbers as triangles",
+              "explanation": "1, 3, 6, 10 dots can be arranged into triangles."
+            },
+            {
+              "step": 4,
+              "title": "Discover relationships",
+              "explanation": "Pictures reveal links, such as a square splitting into two triangular-number patterns."
+            }
+          ],
+          "examples": [
+            "4 dots arranged in a 2x2 square shows the square number 4.",
+            "6 dots arranged as a triangle (rows of 1, 2, 3) shows the triangular number 6."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Visualising",
+              "definition": "Showing numbers or ideas using pictures or dots.",
+              "simpleExample": "Drawing 9 as a 3x3 square is visualising a square number."
+            },
+            {
+              "keyword": "Dot pattern",
+              "definition": "An arrangement of dots that represents a number.",
+              "simpleExample": "A triangle of dots shows a triangular number."
+            }
+          ],
+          "quickSummary": "Number sequences can be visualised as dot pictures: square numbers form squares and triangular numbers form triangles, helping us see and understand patterns.",
+          "revisionNotes": [
+            "Draw number sequences as dots/shapes.",
+            "Square numbers form square dot patterns.",
+            "Triangular numbers form triangle dot patterns.",
+            "Pictures reveal why patterns grow and how they relate."
+          ]
+        },
+        {
+          "topicId": "math_ch1_topic4",
+          "topic": "Relations among Number Sequences",
+          "meaning": "Different number sequences are connected; combining or comparing them reveals interesting relationships.",
+          "ncertBasedExplanation": "Number sequences are not separate; they are often linked to one another. For example, adding consecutive odd numbers gives square numbers (1 = 1, 1+3 = 4, 1+3+5 = 9), and adding two consecutive triangular numbers gives a square number (1+3 = 4, 3+6 = 9). Discovering these relations helps us understand numbers more deeply and predict results without long calculations. Finding how one sequence connects to another is a powerful part of mathematical thinking.",
+          "easyExplanation": "Number patterns are linked. For example, adding odd numbers gives square numbers (1+3+5 = 9), and two triangular numbers add up to a square number.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Sequences are linked",
+              "explanation": "Different number sequences relate to and build on one another."
+            },
+            {
+              "step": 2,
+              "title": "Odd numbers make squares",
+              "explanation": "Adding consecutive odd numbers gives square numbers: 1+3+5 = 9."
+            },
+            {
+              "step": 3,
+              "title": "Triangular numbers make squares",
+              "explanation": "Adding two consecutive triangular numbers gives a square number: 3+6 = 9."
+            },
+            {
+              "step": 4,
+              "title": "Use relations to predict",
+              "explanation": "Knowing these links lets us find results quickly without long working."
+            }
+          ],
+          "examples": [
+            "1 + 3 + 5 + 7 = 16, which is the square number 4x4.",
+            "Triangular numbers 6 and 10 add to give 16, a square number."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Relation",
+              "definition": "A connection or link between two things.",
+              "simpleExample": "Odd numbers adding up to squares is a relation."
+            },
+            {
+              "keyword": "Consecutive",
+              "definition": "Following one after another in order.",
+              "simpleExample": "3 and 5 are consecutive odd numbers."
+            }
+          ],
+          "quickSummary": "Number sequences are connected: adding consecutive odd numbers gives square numbers, and adding two consecutive triangular numbers also gives a square number.",
+          "revisionNotes": [
+            "Sequences relate to one another.",
+            "Sum of consecutive odd numbers = square number.",
+            "Sum of two consecutive triangular numbers = square number.",
+            "Relations help predict results quickly."
+          ]
+        },
+        {
+          "topicId": "math_ch1_topic5",
+          "topic": "Patterns in Shapes",
+          "meaning": "Patterns also appear in shapes, which can grow or repeat according to a rule.",
+          "ncertBasedExplanation": "Patterns are not limited to numbers; they also appear in shapes. A shape sequence is a set of shapes arranged by a rule, where each new shape follows from the previous ones. Examples include regular polygons (triangle, square, pentagon, hexagon, with more and more sides) and sequences of growing patterns made from dots or sticks. By studying a shape pattern, we can predict what the next shape will look like and count its parts, such as the number of sides or corners.",
+          "easyExplanation": "Shapes can form patterns too, like polygons with more and more sides (triangle, square, pentagon). Finding the rule lets us draw the next shape.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Shapes form patterns",
+              "explanation": "A shape sequence is a set of shapes arranged according to a rule."
+            },
+            {
+              "step": 2,
+              "title": "See growing polygons",
+              "explanation": "Triangle, square, pentagon, hexagon form a pattern with an increasing number of sides."
+            },
+            {
+              "step": 3,
+              "title": "Find the rule",
+              "explanation": "Notice how each shape changes from the one before, such as adding a side."
+            },
+            {
+              "step": 4,
+              "title": "Predict the next shape",
+              "explanation": "Use the rule to draw the next shape and count its sides or corners."
+            }
+          ],
+          "examples": [
+            "Triangle (3 sides), square (4 sides), pentagon (5 sides) form a growing shape pattern.",
+            "A pattern of dots forming bigger and bigger triangles is a shape pattern."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Shape sequence",
+              "definition": "A set of shapes arranged according to a rule.",
+              "simpleExample": "Triangle, square, pentagon is a shape sequence."
+            },
+            {
+              "keyword": "Polygon",
+              "definition": "A closed shape made of straight sides.",
+              "simpleExample": "A hexagon is a polygon with six sides."
+            }
+          ],
+          "quickSummary": "Patterns appear in shapes too, such as polygons with increasing sides; finding the rule of a shape sequence lets us predict and draw the next shape.",
+          "revisionNotes": [
+            "Shapes form patterns by a rule.",
+            "Polygons can grow: triangle, square, pentagon, hexagon.",
+            "Find how each shape changes from the last.",
+            "Use the rule to predict the next shape."
+          ]
+        },
+        {
+          "topicId": "math_ch1_topic6",
+          "topic": "Relation between Shape and Number Sequences",
+          "meaning": "Shape patterns and number patterns are connected, as counting parts of shapes often gives number sequences.",
+          "ncertBasedExplanation": "Shape patterns and number patterns are deeply linked. When we count parts of a growing shape pattern, such as the number of dots, sides or small squares, we often get a familiar number sequence. For example, the number of dots in a triangular pattern gives the triangular numbers (1, 3, 6, 10), and counting dots in square patterns gives the square numbers (1, 4, 9, 16). This shows that shapes and numbers are two ways of looking at the same pattern, and each helps us understand the other.",
+          "easyExplanation": "Shapes and numbers are linked: counting dots in triangle patterns gives triangular numbers, and counting dots in square patterns gives square numbers.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Count parts of shapes",
+              "explanation": "Count the dots, sides or squares in each step of a shape pattern."
+            },
+            {
+              "step": 2,
+              "title": "Get a number sequence",
+              "explanation": "These counts often form a known number sequence."
+            },
+            {
+              "step": 3,
+              "title": "Triangles give triangular numbers",
+              "explanation": "Dots in a triangular pattern give 1, 3, 6, 10, the triangular numbers."
+            },
+            {
+              "step": 4,
+              "title": "Squares give square numbers",
+              "explanation": "Dots in a square pattern give 1, 4, 9, 16, the square numbers."
+            }
+          ],
+          "examples": [
+            "Counting dots in growing triangles gives 1, 3, 6, 10 (triangular numbers).",
+            "Counting dots in growing squares gives 1, 4, 9, 16 (square numbers)."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Triangular number",
+              "definition": "A number shown by a triangle of dots.",
+              "simpleExample": "10 is a triangular number."
+            },
+            {
+              "keyword": "Square number",
+              "definition": "A number shown by a square of dots.",
+              "simpleExample": "16 is a square number."
+            }
+          ],
+          "quickSummary": "Shape and number patterns are connected: counting parts of shape patterns gives number sequences, like triangular numbers from triangles and square numbers from squares.",
+          "revisionNotes": [
+            "Shape and number patterns are linked.",
+            "Counting shape parts gives number sequences.",
+            "Triangle dot patterns -> triangular numbers.",
+            "Square dot patterns -> square numbers."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 2,
+      "chapter": "Lines and Angles",
+      "topics": [
+        {
+          "topicId": "math_ch2_topic1",
+          "topic": "Point",
+          "meaning": "A point is an exact location or position, shown by a tiny dot, and it has no length, breadth or thickness.",
+          "ncertBasedExplanation": "A point is the most basic idea in geometry. It marks an exact position or location in space and is shown by a small dot. A point has no size at all, meaning it has no length, no breadth and no thickness. Points are named using capital letters such as A, B or P. Everything in geometry, like lines and shapes, is built up from points.",
+          "easyExplanation": "A point is just an exact spot, shown as a tiny dot. It has no size and is named with a capital letter like A.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Mark a location",
+              "explanation": "A point shows an exact position or location in space."
+            },
+            {
+              "step": 2,
+              "title": "Use a dot",
+              "explanation": "We draw a point as a tiny dot."
+            },
+            {
+              "step": 3,
+              "title": "It has no size",
+              "explanation": "A point has no length, breadth or thickness."
+            },
+            {
+              "step": 4,
+              "title": "Name it",
+              "explanation": "Points are named with capital letters like A, B or P."
+            }
+          ],
+          "examples": [
+            "The tip of a sharp pencil touching paper marks a point.",
+            "The corner of this page can be thought of as a point."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Point",
+              "definition": "An exact location with no size, shown by a dot.",
+              "simpleExample": "A dot labelled P is a point."
+            },
+            {
+              "keyword": "Location",
+              "definition": "A particular position or place.",
+              "simpleExample": "A point shows a location on paper."
+            }
+          ],
+          "quickSummary": "A point marks an exact location, is shown by a tiny dot, has no length, breadth or thickness, and is named with a capital letter.",
+          "revisionNotes": [
+            "A point shows an exact position.",
+            "Drawn as a tiny dot.",
+            "Has no length, breadth or thickness.",
+            "Named using capital letters (A, B, P)."
+          ]
+        },
+        {
+          "topicId": "math_ch2_topic2",
+          "topic": "Line Segment",
+          "meaning": "A line segment is the straight path between two points, having two endpoints and a fixed length.",
+          "ncertBasedExplanation": "A line segment is a straight path joining two points. These two points are called its endpoints. A line segment has a definite, fixed length that can be measured, because it has a clear beginning and end. A line segment between points A and B is written as segment AB. It is the shortest straight path between the two points.",
+          "easyExplanation": "A line segment is a straight line joining two points. It has two ends and a fixed length you can measure, like the edge of a ruler.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Join two points",
+              "explanation": "A line segment is the straight path joining two points."
+            },
+            {
+              "step": 2,
+              "title": "Note the endpoints",
+              "explanation": "The two points where it begins and ends are its endpoints."
+            },
+            {
+              "step": 3,
+              "title": "It has a fixed length",
+              "explanation": "Because it has two ends, a line segment has a definite length that can be measured."
+            },
+            {
+              "step": 4,
+              "title": "Name it",
+              "explanation": "A line segment from A to B is written as AB."
+            }
+          ],
+          "examples": [
+            "The edge of a ruler is a line segment.",
+            "A line drawn between two dots A and B is the line segment AB."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Line segment",
+              "definition": "The straight path between two endpoints with a fixed length.",
+              "simpleExample": "AB joining points A and B is a line segment."
+            },
+            {
+              "keyword": "Endpoint",
+              "definition": "A point at the end of a line segment.",
+              "simpleExample": "A and B are the endpoints of segment AB."
+            }
+          ],
+          "quickSummary": "A line segment is the straight path between two endpoints; it has a definite, measurable length and is named by its two endpoints, like AB.",
+          "revisionNotes": [
+            "Line segment = straight path between two points.",
+            "Has two endpoints.",
+            "Has a fixed, measurable length.",
+            "Written as AB."
+          ]
+        },
+        {
+          "topicId": "math_ch2_topic3",
+          "topic": "Line",
+          "meaning": "A line is a straight path that extends endlessly in both directions and has no endpoints.",
+          "ncertBasedExplanation": "A line is a straight path that goes on forever in both directions, with no beginning and no end. Because it never stops, a line has no fixed length and cannot be measured. We show a line by drawing a straight line with arrowheads at both ends to mean it continues endlessly. A line through two points A and B can be written as line AB. Through a single point, many lines can pass, but through two points, only one straight line can be drawn.",
+          "easyExplanation": "A line is a straight path that never ends in either direction. It has arrows on both ends and cannot be measured because it goes on forever.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Extend endlessly",
+              "explanation": "A line is a straight path that goes on forever in both directions."
+            },
+            {
+              "step": 2,
+              "title": "No endpoints",
+              "explanation": "A line has no beginning and no end, so it cannot be measured."
+            },
+            {
+              "step": 3,
+              "title": "Show with arrows",
+              "explanation": "We draw arrowheads at both ends to show it continues endlessly."
+            },
+            {
+              "step": 4,
+              "title": "Know the rule",
+              "explanation": "Only one straight line can pass through any two given points."
+            }
+          ],
+          "examples": [
+            "A taut thread imagined to continue forever both ways is like a line.",
+            "Through points A and B, exactly one straight line can be drawn."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Line",
+              "definition": "A straight path extending endlessly in both directions.",
+              "simpleExample": "A straight path with arrows on both ends is a line."
+            },
+            {
+              "keyword": "Endless",
+              "definition": "Continuing without stopping.",
+              "simpleExample": "A line is endless in both directions."
+            }
+          ],
+          "quickSummary": "A line is a straight path that extends endlessly in both directions, has no endpoints, cannot be measured, and only one line passes through two given points.",
+          "revisionNotes": [
+            "Line = straight path endless both ways.",
+            "Has no endpoints; cannot be measured.",
+            "Shown with arrowheads at both ends.",
+            "Only one line passes through two points."
+          ]
+        },
+        {
+          "topicId": "math_ch2_topic4",
+          "topic": "Ray",
+          "meaning": "A ray is a straight path that starts at one point and extends endlessly in one direction.",
+          "ncertBasedExplanation": "A ray is a part of a line that has one endpoint and goes on forever in one direction. The fixed starting point is called the initial point, and the ray stretches endlessly the other way, shown by an arrowhead. Because it has no end on one side, a ray cannot be measured. A ray starting at A and passing through B is written as ray AB, with A as the starting point.",
+          "easyExplanation": "A ray starts at one point and shoots off forever in one direction, like a beam of light from a torch. It has one end and one arrow.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Start at a point",
+              "explanation": "A ray begins at a fixed point called the initial point."
+            },
+            {
+              "step": 2,
+              "title": "Extend one way",
+              "explanation": "From its starting point, a ray goes on forever in one direction."
+            },
+            {
+              "step": 3,
+              "title": "Show with an arrow",
+              "explanation": "We draw an arrowhead at the endless end of the ray."
+            },
+            {
+              "step": 4,
+              "title": "Name it",
+              "explanation": "A ray starting at A through B is written as ray AB, with A first."
+            }
+          ],
+          "examples": [
+            "A beam of light from a torch is like a ray.",
+            "A ray starting at point A and going through B is ray AB."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Ray",
+              "definition": "A straight path with one endpoint that extends endlessly one way.",
+              "simpleExample": "A torch beam is like a ray."
+            },
+            {
+              "keyword": "Initial point",
+              "definition": "The fixed starting point of a ray.",
+              "simpleExample": "A is the initial point of ray AB."
+            }
+          ],
+          "quickSummary": "A ray starts at one fixed point (the initial point) and extends endlessly in one direction; it cannot be measured and is named with its starting point first, like ray AB.",
+          "revisionNotes": [
+            "Ray = starts at one point, endless one way.",
+            "Has one endpoint (initial point).",
+            "Shown with one arrowhead.",
+            "Named with the starting point first (ray AB)."
+          ]
+        },
+        {
+          "topicId": "math_ch2_topic5",
+          "topic": "Angle",
+          "meaning": "An angle is formed when two rays start from the same point, called the vertex.",
+          "ncertBasedExplanation": "An angle is formed when two rays share the same starting point. The common starting point is called the vertex of the angle, and the two rays are called the arms or sides of the angle. An angle tells us how much one arm is turned from the other. An angle with vertex B and arms BA and BC is written as angle ABC, with the vertex letter in the middle. Angles are all around us, in the corners of books, the hands of a clock and the opening of a pair of scissors.",
+          "easyExplanation": "An angle is made when two rays meet at a point. That point is the vertex, and the rays are the arms. It shows how much one arm has turned.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Two rays meet",
+              "explanation": "An angle is formed when two rays start from the same point."
+            },
+            {
+              "step": 2,
+              "title": "Name the vertex",
+              "explanation": "The shared starting point of the two rays is called the vertex."
+            },
+            {
+              "step": 3,
+              "title": "Name the arms",
+              "explanation": "The two rays forming the angle are called its arms or sides."
+            },
+            {
+              "step": 4,
+              "title": "Write it correctly",
+              "explanation": "An angle is named with the vertex letter in the middle, like angle ABC."
+            }
+          ],
+          "examples": [
+            "The corner of a book forms an angle.",
+            "The two hands of a clock meeting at the centre form an angle at the centre (the vertex)."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Angle",
+              "definition": "The figure formed by two rays with a common starting point.",
+              "simpleExample": "The corner of a square is an angle."
+            },
+            {
+              "keyword": "Vertex",
+              "definition": "The common starting point of the two rays of an angle.",
+              "simpleExample": "B is the vertex of angle ABC."
+            },
+            {
+              "keyword": "Arm",
+              "definition": "One of the two rays that form an angle.",
+              "simpleExample": "BA and BC are the arms of angle ABC."
+            }
+          ],
+          "quickSummary": "An angle is formed by two rays meeting at a common point called the vertex; the rays are its arms, and it is named with the vertex in the middle, like angle ABC.",
+          "revisionNotes": [
+            "Angle = two rays from a common point.",
+            "Common point = vertex.",
+            "The two rays = arms.",
+            "Named with vertex in the middle (angle ABC)."
+          ]
+        },
+        {
+          "topicId": "math_ch2_topic6",
+          "topic": "Comparing Angles",
+          "meaning": "Angles are compared by how much they are 'open': a wider opening means a larger angle.",
+          "ncertBasedExplanation": "We can compare two angles to see which is larger. The size of an angle depends only on how much the arms are opened apart, not on the length of the arms. A wider opening between the arms means a bigger angle. We can compare angles by placing one on top of the other so their vertices and one arm match, and then seeing which angle's second arm is more open. This helps us decide which angle is greater, smaller or whether they are equal.",
+          "easyExplanation": "To compare angles, look at how wide they open, not how long the arms are. The one that opens wider is the bigger angle.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Look at the opening",
+              "explanation": "The size of an angle depends on how much its arms are opened apart."
+            },
+            {
+              "step": 2,
+              "title": "Ignore arm length",
+              "explanation": "The length of the arms does not change the size of the angle."
+            },
+            {
+              "step": 3,
+              "title": "Place one on another",
+              "explanation": "To compare, put the angles so their vertices and one arm match."
+            },
+            {
+              "step": 4,
+              "title": "Decide which is bigger",
+              "explanation": "The angle whose other arm is more open is the larger one."
+            }
+          ],
+          "examples": [
+            "A wide-open pair of scissors makes a bigger angle than a slightly open pair.",
+            "Two angles that match exactly when placed on top of each other are equal."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Comparing angles",
+              "definition": "Deciding which of two angles is larger by their opening.",
+              "simpleExample": "A wider angle is larger when comparing."
+            },
+            {
+              "keyword": "Opening",
+              "definition": "How far apart the arms of an angle are.",
+              "simpleExample": "A bigger opening means a bigger angle."
+            }
+          ],
+          "quickSummary": "Angles are compared by how wide their arms open, not by arm length; placing one angle over another shows which is larger, smaller or equal.",
+          "revisionNotes": [
+            "Angle size depends on the opening of the arms.",
+            "Arm length does not affect angle size.",
+            "Compare by placing one angle over another.",
+            "Wider opening = larger angle."
+          ]
+        },
+        {
+          "topicId": "math_ch2_topic7",
+          "topic": "Making Rotating Arms",
+          "meaning": "A rotating arm model shows how an angle changes as one arm turns about the vertex.",
+          "ncertBasedExplanation": "We can understand angles better by making a simple model with two arms (strips) joined at one point so that one arm can rotate. As we rotate one arm about the joined point (the vertex), the angle between the two arms increases. This shows that an angle is really a measure of turning or rotation. The more we rotate the arm, the larger the angle becomes, until a full turn brings the arm back to where it started.",
+          "easyExplanation": "If you pin two strips at one end and turn one, the angle between them grows. This shows an angle is really an amount of turning.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Make two arms",
+              "explanation": "Join two strips at one point so that one strip can turn freely."
+            },
+            {
+              "step": 2,
+              "title": "Rotate one arm",
+              "explanation": "Keep one arm fixed and rotate the other about the joined point (vertex)."
+            },
+            {
+              "step": 3,
+              "title": "Watch the angle grow",
+              "explanation": "As the arm turns, the angle between the two arms increases."
+            },
+            {
+              "step": 4,
+              "title": "Understand turning",
+              "explanation": "This shows that an angle measures the amount of turning or rotation."
+            }
+          ],
+          "examples": [
+            "Turning the minute hand of a clock away from the hour hand increases the angle between them.",
+            "Opening a door wider increases the angle the door makes with the wall."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Rotation",
+              "definition": "Turning around a fixed point.",
+              "simpleExample": "The arm rotates about the vertex to make an angle."
+            },
+            {
+              "keyword": "Rotating arm",
+              "definition": "An arm that turns about a fixed point to form angles.",
+              "simpleExample": "A clock hand is like a rotating arm."
+            }
+          ],
+          "quickSummary": "A rotating-arm model shows that an angle is an amount of turning: as one arm rotates about the vertex, the angle between the arms grows.",
+          "revisionNotes": [
+            "Join two arms at a point; rotate one.",
+            "The angle grows as the arm turns.",
+            "An angle measures turning/rotation.",
+            "A full turn returns the arm to the start."
+          ]
+        },
+        {
+          "topicId": "math_ch2_topic8",
+          "topic": "Special Types of Angles",
+          "meaning": "Some angles are special: a right angle is a quarter turn, a straight angle is a half turn, and a complete angle is a full turn.",
+          "ncertBasedExplanation": "Certain angles have special names because they come from simple amounts of turning. A right angle is a quarter of a full turn and looks like a perfect corner, such as the corner of a book. A straight angle is half a full turn, making a straight line. A complete angle (or full angle) is one full turn that brings the arm back to its starting position. These special angles help us describe and measure other angles.",
+          "easyExplanation": "Special angles come from simple turns: a right angle is a quarter turn (a corner), a straight angle is a half turn (a straight line), and a full angle is a complete turn.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Right angle",
+              "explanation": "A quarter of a full turn, like the square corner of a book."
+            },
+            {
+              "step": 2,
+              "title": "Straight angle",
+              "explanation": "Half of a full turn, which forms a straight line."
+            },
+            {
+              "step": 3,
+              "title": "Complete angle",
+              "explanation": "One full turn, bringing the arm back to its starting point."
+            },
+            {
+              "step": 4,
+              "title": "Use them as guides",
+              "explanation": "These special angles help us compare and measure other angles."
+            }
+          ],
+          "examples": [
+            "The corner of a table is a right angle.",
+            "Two opposite directions on a straight road make a straight angle."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Right angle",
+              "definition": "A quarter-turn angle, like a square corner.",
+              "simpleExample": "The corner of a book is a right angle."
+            },
+            {
+              "keyword": "Straight angle",
+              "definition": "A half-turn angle that forms a straight line.",
+              "simpleExample": "A flat, straight line shows a straight angle."
+            },
+            {
+              "keyword": "Complete angle",
+              "definition": "A full-turn angle.",
+              "simpleExample": "One full rotation makes a complete angle."
+            }
+          ],
+          "quickSummary": "Special angles come from simple turns: a right angle (quarter turn), a straight angle (half turn) and a complete angle (full turn), which help us describe other angles.",
+          "revisionNotes": [
+            "Right angle = quarter turn (a corner).",
+            "Straight angle = half turn (straight line).",
+            "Complete angle = full turn.",
+            "These help compare and measure angles."
+          ]
+        },
+        {
+          "topicId": "math_ch2_topic9",
+          "topic": "Measuring Angles",
+          "meaning": "Angles are measured in degrees using a protractor, where a full turn is 360 degrees.",
+          "ncertBasedExplanation": "To measure angles exactly, we use a unit called the degree, written with the symbol for degrees. A full turn (complete angle) is 360 degrees, a half turn (straight angle) is 180 degrees, and a quarter turn (right angle) is 90 degrees. We measure an angle using an instrument called a protractor. We place the centre of the protractor on the vertex, line up one arm with the zero line, and read the mark where the other arm crosses the scale. This gives the angle's measure in degrees.",
+          "easyExplanation": "Angles are measured in degrees with a protractor. A full turn is 360 degrees, a straight angle 180, and a right angle 90.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Use degrees",
+              "explanation": "Angles are measured in units called degrees; a full turn is 360 degrees."
+            },
+            {
+              "step": 2,
+              "title": "Know key values",
+              "explanation": "A straight angle is 180 degrees and a right angle is 90 degrees."
+            },
+            {
+              "step": 3,
+              "title": "Place the protractor",
+              "explanation": "Put the protractor's centre on the vertex and one arm along the zero line."
+            },
+            {
+              "step": 4,
+              "title": "Read the scale",
+              "explanation": "Read the number where the other arm crosses the protractor's scale."
+            }
+          ],
+          "examples": [
+            "A right angle measures 90 degrees on a protractor.",
+            "An angle that opens to a straight line measures 180 degrees."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Degree",
+              "definition": "The unit used to measure angles.",
+              "simpleExample": "A right angle is 90 degrees."
+            },
+            {
+              "keyword": "Protractor",
+              "definition": "An instrument used to measure angles.",
+              "simpleExample": "We use a protractor to measure an angle in degrees."
+            },
+            {
+              "keyword": "Full turn",
+              "definition": "A complete rotation equal to 360 degrees.",
+              "simpleExample": "One full turn is 360 degrees."
+            }
+          ],
+          "quickSummary": "Angles are measured in degrees using a protractor; a full turn is 360 degrees, a straight angle 180 degrees and a right angle 90 degrees.",
+          "revisionNotes": [
+            "Angles measured in degrees.",
+            "Full turn = 360 degrees; straight = 180; right = 90.",
+            "Use a protractor: centre on vertex, one arm on zero.",
+            "Read the scale where the other arm crosses."
+          ]
+        },
+        {
+          "topicId": "math_ch2_topic10",
+          "topic": "Drawing Angles",
+          "meaning": "We can draw an angle of a given measure using a protractor and a ruler.",
+          "ncertBasedExplanation": "To draw an angle of a particular size, we use a protractor and a ruler. First we draw a ray to be one arm of the angle and mark its starting point as the vertex. We place the centre of the protractor on the vertex and align the ray with the zero line. We then find the required degree mark on the protractor and put a dot there. Finally, we join the vertex to this dot with a ruler to draw the second arm. The angle between the two arms is the angle we wanted.",
+          "easyExplanation": "To draw an angle, draw one arm, put the protractor on its end, mark the needed degree, and join the mark to make the second arm.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Draw the first arm",
+              "explanation": "Draw a ray and mark its starting point as the vertex."
+            },
+            {
+              "step": 2,
+              "title": "Place the protractor",
+              "explanation": "Put the protractor's centre on the vertex and align the ray with the zero line."
+            },
+            {
+              "step": 3,
+              "title": "Mark the degree",
+              "explanation": "Find the required degree on the scale and make a small dot there."
+            },
+            {
+              "step": 4,
+              "title": "Draw the second arm",
+              "explanation": "Join the vertex to the dot with a ruler to complete the angle."
+            }
+          ],
+          "examples": [
+            "To draw a 60-degree angle, mark 60 on the protractor and join it to the vertex.",
+            "Drawing a 90-degree angle gives a perfect right-angle corner."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Protractor",
+              "definition": "An instrument for measuring and drawing angles.",
+              "simpleExample": "Use a protractor to draw a 45-degree angle."
+            },
+            {
+              "keyword": "Vertex",
+              "definition": "The corner point of the angle being drawn.",
+              "simpleExample": "The protractor centre is placed on the vertex."
+            }
+          ],
+          "quickSummary": "To draw an angle of a given measure, draw one arm, place the protractor on the vertex, mark the required degree, and join it to form the second arm.",
+          "revisionNotes": [
+            "Draw the first arm and mark the vertex.",
+            "Place protractor centre on vertex, arm on zero.",
+            "Mark the required degree.",
+            "Join vertex to the mark for the second arm."
+          ]
+        },
+        {
+          "topicId": "math_ch2_topic11",
+          "topic": "Types of Angles and their Measures",
+          "meaning": "Angles are classified by their measure as acute, right, obtuse, straight, reflex or complete.",
+          "ncertBasedExplanation": "Angles are grouped into types based on how big they are. An acute angle is less than 90 degrees. A right angle is exactly 90 degrees. An obtuse angle is more than 90 degrees but less than 180 degrees. A straight angle is exactly 180 degrees. A reflex angle is more than 180 degrees but less than 360 degrees. A complete angle is exactly 360 degrees. Knowing these types helps us quickly describe any angle by its size.",
+          "easyExplanation": "Angles have types by size: acute (less than 90), right (90), obtuse (90 to 180), straight (180), reflex (180 to 360) and complete (360).",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Acute angle",
+              "explanation": "An angle less than 90 degrees, like a narrow opening."
+            },
+            {
+              "step": 2,
+              "title": "Right and obtuse",
+              "explanation": "A right angle is exactly 90 degrees; an obtuse angle is between 90 and 180 degrees."
+            },
+            {
+              "step": 3,
+              "title": "Straight angle",
+              "explanation": "An angle of exactly 180 degrees, forming a straight line."
+            },
+            {
+              "step": 4,
+              "title": "Reflex and complete",
+              "explanation": "A reflex angle is between 180 and 360 degrees; a complete angle is 360 degrees."
+            }
+          ],
+          "examples": [
+            "A 45-degree angle is acute, while a 120-degree angle is obtuse.",
+            "A 250-degree angle is a reflex angle."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Acute angle",
+              "definition": "An angle less than 90 degrees.",
+              "simpleExample": "A 30-degree angle is acute."
+            },
+            {
+              "keyword": "Obtuse angle",
+              "definition": "An angle between 90 and 180 degrees.",
+              "simpleExample": "A 110-degree angle is obtuse."
+            },
+            {
+              "keyword": "Reflex angle",
+              "definition": "An angle between 180 and 360 degrees.",
+              "simpleExample": "A 200-degree angle is reflex."
+            }
+          ],
+          "quickSummary": "Angles are classified by measure: acute (less than 90), right (90), obtuse (90 to 180), straight (180), reflex (180 to 360) and complete (360 degrees).",
+          "revisionNotes": [
+            "Acute: less than 90 degrees.",
+            "Right: 90; Obtuse: 90 to 180; Straight: 180.",
+            "Reflex: 180 to 360; Complete: 360.",
+            "Types let us describe any angle by size."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 3,
+      "chapter": "Number Play",
+      "topics": [
+        {
+          "topicId": "math_ch3_topic1",
+          "topic": "Numbers can Tell us Things",
+          "meaning": "Numbers can describe and compare situations, such as how many people are taller than each person standing in a line.",
+          "ncertBasedExplanation": "Numbers do more than count; they can tell us useful information about a situation. In the book, children stand in a line and each says a number telling how many of the others are taller than them. By reading these numbers, we can figure out the arrangement and check whether the numbers make sense. This shows that numbers can carry information and that we can reason logically using them. Looking carefully at what each number means helps us solve interesting puzzles.",
+          "easyExplanation": "Numbers can describe situations, like each person saying how many people near them are taller. Reading those numbers tells us how everyone is arranged.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Numbers carry information",
+              "explanation": "A number can describe a situation, not just count objects."
+            },
+            {
+              "step": 2,
+              "title": "Read the meaning",
+              "explanation": "For example, each child's number tells how many others are taller than them."
+            },
+            {
+              "step": 3,
+              "title": "Reason logically",
+              "explanation": "We use the numbers to work out the arrangement and check it makes sense."
+            },
+            {
+              "step": 4,
+              "title": "Solve the puzzle",
+              "explanation": "Careful thinking about what each number means helps us solve the problem."
+            }
+          ],
+          "examples": [
+            "If a child says '2', it means two people taller than them are standing nearby.",
+            "Using everyone's numbers, we can decide the order in which they stand."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Information",
+              "definition": "Useful facts that a number can carry.",
+              "simpleExample": "A number telling how many are taller gives information."
+            },
+            {
+              "keyword": "Reasoning",
+              "definition": "Thinking logically to reach a conclusion.",
+              "simpleExample": "We use reasoning to arrange people from their numbers."
+            }
+          ],
+          "quickSummary": "Numbers can carry information about a situation, such as how many people are taller than each person; reading and reasoning about them helps solve puzzles.",
+          "revisionNotes": [
+            "Numbers do more than count.",
+            "They can describe situations.",
+            "Example: how many others are taller than you.",
+            "Reasoning with numbers solves puzzles."
+          ]
+        },
+        {
+          "topicId": "math_ch3_topic2",
+          "topic": "Supercells",
+          "meaning": "A supercell is a cell in a grid whose number is greater than all the numbers next to it.",
+          "ncertBasedExplanation": "In a grid filled with numbers, a supercell is a cell whose number is larger than the numbers in all the cells immediately next to it. To find supercells, we compare each number with its neighbours. This activity helps us practise comparing numbers and noticing the largest values in different parts of a grid. Filling grids so that they have a certain number of supercells is an interesting puzzle that builds our understanding of comparing big numbers.",
+          "easyExplanation": "A supercell is a box in a grid holding a number bigger than all its neighbours. Finding them is a game of comparing numbers.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Look at a grid",
+              "explanation": "Start with a grid of cells, each containing a number."
+            },
+            {
+              "step": 2,
+              "title": "Compare with neighbours",
+              "explanation": "For each cell, compare its number with the numbers in the cells next to it."
+            },
+            {
+              "step": 3,
+              "title": "Find the supercells",
+              "explanation": "A cell is a supercell if its number is greater than all its neighbours."
+            },
+            {
+              "step": 4,
+              "title": "Practise comparing",
+              "explanation": "Identifying supercells builds skill in comparing larger and larger numbers."
+            }
+          ],
+          "examples": [
+            "In a row 3, 9, 5, the cell with 9 is a supercell because 9 > 3 and 9 > 5.",
+            "Filling a grid so that exactly three cells are supercells is a number puzzle."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Supercell",
+              "definition": "A cell whose number is greater than all its neighbouring cells.",
+              "simpleExample": "In 4, 8, 2, the 8 is a supercell."
+            },
+            {
+              "keyword": "Neighbour",
+              "definition": "A cell next to a given cell.",
+              "simpleExample": "In a row, the cells on either side are neighbours."
+            }
+          ],
+          "quickSummary": "A supercell is a grid cell whose number is greater than all its neighbours; finding supercells builds skill in comparing numbers.",
+          "revisionNotes": [
+            "Supercell = number bigger than all neighbours.",
+            "Compare each cell with its neighbours.",
+            "Builds number-comparison skills.",
+            "Used in grid puzzles."
+          ]
+        },
+        {
+          "topicId": "math_ch3_topic3",
+          "topic": "Patterns of Numbers on the Number Line",
+          "meaning": "A number line is a straight line on which numbers are marked in order, helping us see and compare numbers.",
+          "ncertBasedExplanation": "A number line is a straight line with numbers marked on it at equal distances, increasing as we move to the right. It helps us picture numbers, see their order, and compare them, since a number to the right is always greater than one to its left. We can also use the number line to mark patterns, find numbers between others, and estimate positions. The number line is a simple but powerful tool for understanding numbers and their relationships.",
+          "easyExplanation": "A number line is a straight line with numbers marked in order. Numbers grow as you go right, so it helps you compare and place numbers easily.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Draw the line",
+              "explanation": "Mark numbers at equal distances along a straight line."
+            },
+            {
+              "step": 2,
+              "title": "Numbers increase right",
+              "explanation": "Numbers get larger as we move to the right along the line."
+            },
+            {
+              "step": 3,
+              "title": "Compare positions",
+              "explanation": "A number further right is greater than one to its left."
+            },
+            {
+              "step": 4,
+              "title": "Find and estimate",
+              "explanation": "We use the number line to spot patterns, find in-between numbers and estimate positions."
+            }
+          ],
+          "examples": [
+            "On a number line, 7 lies to the right of 3, so 7 is greater than 3.",
+            "The number 5 lies exactly halfway between 0 and 10 on the number line."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Number line",
+              "definition": "A straight line with numbers marked in order.",
+              "simpleExample": "0, 1, 2, 3 marked on a line is a number line."
+            },
+            {
+              "keyword": "Order",
+              "definition": "The arrangement of numbers from smaller to larger.",
+              "simpleExample": "On a number line, numbers are in order."
+            }
+          ],
+          "quickSummary": "A number line marks numbers in order at equal distances; numbers increase to the right, making it easy to compare numbers and see patterns.",
+          "revisionNotes": [
+            "Number line = numbers marked in order on a line.",
+            "Numbers increase to the right.",
+            "Right number is greater than left.",
+            "Helps compare numbers and find in-between values."
+          ]
+        },
+        {
+          "topicId": "math_ch3_topic4",
+          "topic": "Playing with Digits",
+          "meaning": "The number of digits and the place of each digit decide how large a number is.",
+          "ncertBasedExplanation": "Every number is made of digits, and the position (place) of each digit decides its value. A number with more digits is generally larger than one with fewer digits. By rearranging the digits of a number, we can make the largest and smallest possible numbers: putting the biggest digits in the highest places makes the largest number, and the smallest digits in the highest places (avoiding a leading zero) makes the smallest. Understanding digits and place value helps us read, write and compare large numbers correctly.",
+          "easyExplanation": "Numbers are built from digits, and where a digit sits decides its value. Arranging digits cleverly makes the biggest or smallest number.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Numbers are made of digits",
+              "explanation": "Every number is built from digits 0 to 9."
+            },
+            {
+              "step": 2,
+              "title": "Place decides value",
+              "explanation": "The position of a digit (ones, tens, hundreds) decides its value."
+            },
+            {
+              "step": 3,
+              "title": "More digits, bigger number",
+              "explanation": "A number with more digits is generally larger."
+            },
+            {
+              "step": 4,
+              "title": "Make largest/smallest",
+              "explanation": "Put big digits in high places for the largest number, small digits high (no leading zero) for the smallest."
+            }
+          ],
+          "examples": [
+            "Using digits 5, 2, 9, the largest number is 952 and the smallest is 259.",
+            "In 374, the digit 3 stands for 300 because of its place."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Digit",
+              "definition": "Any of the symbols 0 to 9 used to write numbers.",
+              "simpleExample": "The number 58 has the digits 5 and 8."
+            },
+            {
+              "keyword": "Place value",
+              "definition": "The value of a digit based on its position.",
+              "simpleExample": "In 360, the 3 has a place value of 300."
+            }
+          ],
+          "quickSummary": "Numbers are built from digits whose place decides their value; more digits usually means a larger number, and arranging digits cleverly gives the largest or smallest number.",
+          "revisionNotes": [
+            "Numbers are made of digits 0 to 9.",
+            "Place (position) decides a digit's value.",
+            "More digits usually means a bigger number.",
+            "Arrange digits to form largest/smallest numbers."
+          ]
+        },
+        {
+          "topicId": "math_ch3_topic5",
+          "topic": "Pretty Palindromic Patterns",
+          "meaning": "A palindrome is a number that reads the same forwards and backwards.",
+          "ncertBasedExplanation": "A palindromic number, or palindrome, is a number that stays the same when its digits are reversed, like 121 or 4554. We can create palindromes through a fun process: take a number, reverse its digits, add the two numbers, and repeat the process with the result; for many numbers, this eventually gives a palindrome. Exploring palindromes helps us practise addition and notice patterns in numbers. Palindromes appear in numbers, words and even dates.",
+          "easyExplanation": "A palindrome reads the same forwards and backwards, like 121. You can often make one by reversing a number and adding, again and again.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Know a palindrome",
+              "explanation": "A palindrome is a number that reads the same forwards and backwards, like 343."
+            },
+            {
+              "step": 2,
+              "title": "Reverse the digits",
+              "explanation": "Take a number and write its digits in reverse order."
+            },
+            {
+              "step": 3,
+              "title": "Add them",
+              "explanation": "Add the original number and its reverse."
+            },
+            {
+              "step": 4,
+              "title": "Repeat to get a palindrome",
+              "explanation": "Repeat reversing and adding; for many numbers this eventually gives a palindrome."
+            }
+          ],
+          "examples": [
+            "121 and 4554 are palindromic numbers.",
+            "Starting with 56: 56 + 65 = 121, which is a palindrome."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Palindrome",
+              "definition": "A number that reads the same forwards and backwards.",
+              "simpleExample": "232 is a palindrome."
+            },
+            {
+              "keyword": "Reverse",
+              "definition": "To write the digits in the opposite order.",
+              "simpleExample": "The reverse of 17 is 71."
+            }
+          ],
+          "quickSummary": "A palindrome reads the same forwards and backwards, like 121; reversing a number and adding repeatedly often produces a palindrome, giving fun addition practice.",
+          "revisionNotes": [
+            "Palindrome = same forwards and backwards (e.g. 121).",
+            "Reverse the digits and add.",
+            "Repeat to often reach a palindrome.",
+            "Builds addition and pattern skills."
+          ]
+        },
+        {
+          "topicId": "math_ch3_topic6",
+          "topic": "The Magic Number of Kaprekar",
+          "meaning": "Kaprekar's magic number is 6174, reached by a special process on any four-digit number with different digits.",
+          "ncertBasedExplanation": "The Indian mathematician D. R. Kaprekar discovered a special number, 6174, called Kaprekar's constant. Take any four-digit number that has at least two different digits. Arrange its digits in descending order to make the largest number, then in ascending order to make the smallest, and subtract the smaller from the larger. Repeat the process with each new result. Surprisingly, within a few steps you always reach 6174, and then it keeps repeating. This shows the hidden patterns and magic inside ordinary numbers.",
+          "easyExplanation": "Kaprekar's magic number is 6174. Pick any 4-digit number, make the biggest and smallest from its digits, subtract, and repeat. You always reach 6174.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Pick a four-digit number",
+              "explanation": "Choose any four-digit number with at least two different digits, like 3524."
+            },
+            {
+              "step": 2,
+              "title": "Make largest and smallest",
+              "explanation": "Arrange the digits in descending order (largest) and ascending order (smallest)."
+            },
+            {
+              "step": 3,
+              "title": "Subtract",
+              "explanation": "Subtract the smaller number from the larger number."
+            },
+            {
+              "step": 4,
+              "title": "Repeat to reach 6174",
+              "explanation": "Repeat the process with each result; you always reach 6174 within a few steps."
+            }
+          ],
+          "examples": [
+            "From 3524: 5432 - 2345 = 3087, and repeating the process leads to 6174.",
+            "6174 is called Kaprekar's constant after mathematician D. R. Kaprekar."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Kaprekar's constant",
+              "definition": "The number 6174 reached by Kaprekar's process.",
+              "simpleExample": "Repeating Kaprekar's steps always gives 6174."
+            },
+            {
+              "keyword": "Descending order",
+              "definition": "Arranging digits from largest to smallest.",
+              "simpleExample": "Digits of 3524 in descending order: 5432."
+            }
+          ],
+          "quickSummary": "Kaprekar's magic number is 6174: making the largest and smallest numbers from a four-digit number's digits and subtracting, repeatedly, always reaches 6174.",
+          "revisionNotes": [
+            "Kaprekar's constant = 6174.",
+            "Use any 4-digit number with different digits.",
+            "Largest minus smallest, repeated.",
+            "Always reaches 6174 in a few steps."
+          ]
+        },
+        {
+          "topicId": "math_ch3_topic7",
+          "topic": "Clock and Calendar Numbers",
+          "meaning": "Numbers on clocks and calendars follow patterns that we can explore and play with.",
+          "ncertBasedExplanation": "Clocks and calendars are full of numbers arranged in regular patterns. On a clock, the numbers 1 to 12 repeat every 12 hours, and the hands move in fixed ways. On a calendar, dates are arranged in rows and columns, so numbers in the same column differ by 7 (the days in a week). We can find many number patterns in these arrangements, such as adding dates in a small square on the calendar. Exploring clock and calendar numbers connects mathematics to everyday timekeeping.",
+          "easyExplanation": "Clocks and calendars are full of number patterns. Dates in the same calendar column jump by 7, and clock numbers repeat every 12 hours.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Look at the clock",
+              "explanation": "A clock shows numbers 1 to 12 that repeat every 12 hours."
+            },
+            {
+              "step": 2,
+              "title": "Look at the calendar",
+              "explanation": "A calendar arranges dates in rows and columns."
+            },
+            {
+              "step": 3,
+              "title": "Spot the patterns",
+              "explanation": "Dates in the same column differ by 7, the number of days in a week."
+            },
+            {
+              "step": 4,
+              "title": "Play with the numbers",
+              "explanation": "We can explore sums and patterns in small squares of calendar dates."
+            }
+          ],
+          "examples": [
+            "On a calendar, 3, 10, 17, 24 lie in the same column, each 7 more than the last.",
+            "A clock's numbers go from 1 to 12 and then repeat."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Calendar",
+              "definition": "A chart showing the days, weeks and months of a year.",
+              "simpleExample": "We find dates on a calendar."
+            },
+            {
+              "keyword": "Pattern",
+              "definition": "A regular, repeating arrangement.",
+              "simpleExample": "Calendar columns differ by 7, which is a pattern."
+            }
+          ],
+          "quickSummary": "Clocks and calendars contain number patterns: clock numbers repeat every 12 hours and calendar dates in a column differ by 7, connecting maths to timekeeping.",
+          "revisionNotes": [
+            "Clocks and calendars are full of patterns.",
+            "Clock numbers 1 to 12 repeat every 12 hours.",
+            "Calendar column dates differ by 7.",
+            "We can explore sums in calendar squares."
+          ]
+        },
+        {
+          "topicId": "math_ch3_topic8",
+          "topic": "Mental Math",
+          "meaning": "Mental math means doing calculations quickly in the head using clever strategies instead of writing every step.",
+          "ncertBasedExplanation": "Mental math is the skill of calculating in our head, without paper, by using smart strategies. For example, to add numbers we can group them into easy tens and hundreds, and to multiply we can break numbers into convenient parts. Adding numbers that make round figures first, or adjusting a number to a nearby round number and correcting later, makes calculation faster. Practising mental math builds confidence and speed and helps us estimate and check answers in daily life.",
+          "easyExplanation": "Mental math is doing sums in your head using clever tricks, like rounding to tens or breaking numbers into easy parts.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Calculate in the head",
+              "explanation": "Mental math means working out answers without writing every step."
+            },
+            {
+              "step": 2,
+              "title": "Group into easy numbers",
+              "explanation": "Combine numbers that make round tens or hundreds for quick addition."
+            },
+            {
+              "step": 3,
+              "title": "Break numbers up",
+              "explanation": "Split numbers into convenient parts to add or multiply more easily."
+            },
+            {
+              "step": 4,
+              "title": "Practise for speed",
+              "explanation": "Regular practice builds speed, confidence and the ability to check answers."
+            }
+          ],
+          "examples": [
+            "To add 47 + 38, think 47 + 40 = 87, then subtract 2 to get 85.",
+            "To find 6 x 25, think 6 x 25 = 150 by using 25 x 4 = 100 facts."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Mental math",
+              "definition": "Calculating in the head without writing every step.",
+              "simpleExample": "Adding 19 + 19 as 20 + 20 - 2 is mental math."
+            },
+            {
+              "keyword": "Estimation",
+              "definition": "Finding an answer that is close to the exact value.",
+              "simpleExample": "Estimating 49 + 52 as about 100."
+            }
+          ],
+          "quickSummary": "Mental math is calculating in the head using clever strategies like grouping into round numbers and breaking numbers into parts, which builds speed and confidence.",
+          "revisionNotes": [
+            "Mental math = calculating in the head.",
+            "Group numbers into easy tens/hundreds.",
+            "Break numbers into convenient parts.",
+            "Practice builds speed and helps checking answers."
+          ]
+        },
+        {
+          "topicId": "math_ch3_topic9",
+          "topic": "Playing with Number Patterns",
+          "meaning": "Many number puzzles and tricks are based on hidden patterns that can be discovered and explained.",
+          "ncertBasedExplanation": "Numbers hide many surprising patterns that we can discover by playing with them. For example, certain sequences of additions or multiplications produce neat, predictable results, and some number tricks always give the same answer because of an underlying pattern. By trying examples, noticing what repeats, and reasoning about why, we can explain these patterns. Playing with number patterns makes mathematics fun and strengthens our ability to observe and reason.",
+          "easyExplanation": "Numbers hide cool patterns and tricks. By trying examples and spotting what repeats, we can discover and explain why these patterns work.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Try some examples",
+              "explanation": "Work out several examples of a number trick or pattern."
+            },
+            {
+              "step": 2,
+              "title": "Notice what repeats",
+              "explanation": "Look for results or steps that repeat in a regular way."
+            },
+            {
+              "step": 3,
+              "title": "Find the rule",
+              "explanation": "Identify the pattern or rule that explains the results."
+            },
+            {
+              "step": 4,
+              "title": "Explain why",
+              "explanation": "Reason about why the pattern works to truly understand it."
+            }
+          ],
+          "examples": [
+            "Adding 1 + 2 + 3 + ... + 9 always gives 45.",
+            "Some 'think of a number' tricks always end at the same answer because of a hidden pattern."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Number pattern",
+              "definition": "A regular, predictable arrangement in numbers.",
+              "simpleExample": "1, 4, 9, 16 is a number pattern."
+            },
+            {
+              "keyword": "Trick",
+              "definition": "A surprising result that works because of a pattern.",
+              "simpleExample": "A number trick that always gives 5."
+            }
+          ],
+          "quickSummary": "Number puzzles and tricks rely on hidden patterns; by trying examples, spotting what repeats and reasoning why, we can discover and explain them.",
+          "revisionNotes": [
+            "Numbers hide surprising patterns.",
+            "Try examples and notice what repeats.",
+            "Find and explain the underlying rule.",
+            "Makes maths fun and builds reasoning."
+          ]
+        },
+        {
+          "topicId": "math_ch3_topic10",
+          "topic": "An Unsolved Mystery (the Collatz Problem)",
+          "meaning": "Some number problems, like the Collatz problem, are simple to state but no one has yet proved them.",
+          "ncertBasedExplanation": "Mathematics still has mysteries that nobody has solved. One famous example is the Collatz problem, also called the 3n+1 problem. Take any whole number: if it is even, halve it; if it is odd, multiply by 3 and add 1. Repeat the process with each result. For every number people have tried, the process eventually reaches 1, but no one has ever proved that it always works for every number. This shows that even simple-looking maths can hold deep, unsolved questions, and that there is always more to discover.",
+          "easyExplanation": "Some maths problems are easy to state but unsolved. In the Collatz problem, you halve even numbers and do 3n+1 for odd ones; it always seems to reach 1, but no one has proved it.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Pick a number",
+              "explanation": "Start with any whole number."
+            },
+            {
+              "step": 2,
+              "title": "Apply the rule",
+              "explanation": "If it is even, halve it; if it is odd, multiply by 3 and add 1."
+            },
+            {
+              "step": 3,
+              "title": "Repeat",
+              "explanation": "Keep applying the rule to each new result."
+            },
+            {
+              "step": 4,
+              "title": "See the mystery",
+              "explanation": "Every tried number reaches 1, but no one has proved it always will."
+            }
+          ],
+          "examples": [
+            "Starting with 6: 6 -> 3 -> 10 -> 5 -> 16 -> 8 -> 4 -> 2 -> 1.",
+            "No one has yet proved the Collatz process reaches 1 for every number."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Collatz problem",
+              "definition": "An unsolved problem using the 3n+1 rule.",
+              "simpleExample": "The Collatz problem always seems to reach 1."
+            },
+            {
+              "keyword": "Unsolved problem",
+              "definition": "A question mathematicians have not yet answered.",
+              "simpleExample": "The Collatz problem is unsolved."
+            }
+          ],
+          "quickSummary": "The Collatz (3n+1) problem is a simple-to-state but unsolved problem: halving even numbers and doing 3n+1 for odd ones always seems to reach 1, but no one has proved it.",
+          "revisionNotes": [
+            "Some maths problems remain unsolved.",
+            "Collatz rule: even -> halve, odd -> 3n+1.",
+            "Always seems to reach 1.",
+            "No proof exists yet that it always does."
+          ]
+        },
+        {
+          "topicId": "math_ch3_topic11",
+          "topic": "Simple Estimation",
+          "meaning": "Estimation means finding an answer that is close to the exact value, useful when an exact answer is not needed.",
+          "ncertBasedExplanation": "Estimation is the skill of quickly finding an approximate answer that is close enough for our needs. We estimate by rounding numbers to convenient values, such as the nearest ten, hundred or thousand, and then calculating with these rounded numbers. Estimation is useful in daily life, for example to guess the total cost of shopping or the time a journey will take. It also helps us check whether an exact answer is reasonable. A good estimate is close to the real value without needing exact calculation.",
+          "easyExplanation": "Estimation means getting a close-enough answer fast, by rounding numbers. It is handy for guessing totals and checking if answers make sense.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Understand estimation",
+              "explanation": "Estimation finds an answer close to the exact value, when exactness is not needed."
+            },
+            {
+              "step": 2,
+              "title": "Round the numbers",
+              "explanation": "Round numbers to a convenient value like the nearest ten or hundred."
+            },
+            {
+              "step": 3,
+              "title": "Calculate with rounded numbers",
+              "explanation": "Do the calculation using the rounded numbers for a quick result."
+            },
+            {
+              "step": 4,
+              "title": "Use it to check",
+              "explanation": "Estimates help guess totals and check if an exact answer is reasonable."
+            }
+          ],
+          "examples": [
+            "To estimate 298 + 405, round to 300 + 400 = 700.",
+            "Estimating the cost of items priced 49, 99 and 152 as about 50 + 100 + 150 = 300."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Estimation",
+              "definition": "Finding an answer close to the exact value.",
+              "simpleExample": "Estimating 31 x 19 as about 30 x 20 = 600."
+            },
+            {
+              "keyword": "Rounding",
+              "definition": "Replacing a number with a nearby convenient value.",
+              "simpleExample": "Rounding 47 to 50."
+            },
+            {
+              "keyword": "Approximate",
+              "definition": "Close to but not exactly equal.",
+              "simpleExample": "700 is the approximate sum of 298 and 405."
+            }
+          ],
+          "quickSummary": "Estimation finds an answer close to the exact value by rounding numbers to convenient values; it is useful for quick guesses and for checking if answers are reasonable.",
+          "revisionNotes": [
+            "Estimation = a close-enough answer.",
+            "Round numbers to convenient values.",
+            "Calculate with the rounded numbers.",
+            "Useful for guessing totals and checking answers."
+          ]
+        },
+        {
+          "topicId": "math_ch3_topic12",
+          "topic": "Games and Winning Strategies",
+          "meaning": "Some number games can be won every time by following a clever mathematical strategy.",
+          "ncertBasedExplanation": "Many simple games that use numbers can be won by thinking mathematically and finding a winning strategy. By exploring a game, trying different moves, and noticing which positions lead to a win, we can discover a rule that lets a player win every time, no matter what the opponent does. For example, in games where players take turns adding numbers up to a target, the winner can control the game by always reaching certain key totals. Finding winning strategies teaches us logical thinking and planning ahead.",
+          "easyExplanation": "Some number games can be won every time if you find the secret strategy. Exploring moves and spotting winning positions reveals the trick.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Play the game",
+              "explanation": "Try a simple number game and make different moves."
+            },
+            {
+              "step": 2,
+              "title": "Notice winning positions",
+              "explanation": "Observe which positions or totals always lead to a win."
+            },
+            {
+              "step": 3,
+              "title": "Find the strategy",
+              "explanation": "Discover the rule that lets a player win whatever the opponent does."
+            },
+            {
+              "step": 4,
+              "title": "Plan ahead",
+              "explanation": "Use the strategy by thinking ahead and controlling key moves."
+            }
+          ],
+          "examples": [
+            "In a game adding up to 21, reaching certain totals first guarantees a win.",
+            "By always leaving your opponent a losing position, you can win every time."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Strategy",
+              "definition": "A planned way of playing to win.",
+              "simpleExample": "Always reaching a key total is a winning strategy."
+            },
+            {
+              "keyword": "Winning position",
+              "definition": "A position from which a player can always win.",
+              "simpleExample": "Reaching 18 first may be a winning position."
+            }
+          ],
+          "quickSummary": "Some number games have winning strategies: by exploring moves and finding which positions lead to a win, a player can win every time, teaching logical planning.",
+          "revisionNotes": [
+            "Some number games can always be won.",
+            "Explore moves and spot winning positions.",
+            "Find the rule that guarantees a win.",
+            "Builds logical thinking and planning."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 4,
+      "chapter": "Data Handling and Presentation",
+      "topics": [
+        {
+          "topicId": "math_ch4_topic1",
+          "topic": "Collecting and Organising Data",
+          "meaning": "Data is a collection of facts or numbers, and organising it neatly makes it easier to understand.",
+          "ncertBasedExplanation": "Data means a collection of information, often in the form of numbers or facts, gathered for a purpose. For example, the favourite fruits of students in a class is data. Raw data collected just as it comes is hard to read, so we organise it, often using a tally marks table that records how many times each item occurs. The number of times something occurs is called its frequency. Organising data into a table makes it clear and ready for drawing graphs. Good data handling starts with collecting and organising data carefully.",
+          "easyExplanation": "Data is collected information, like everyone's favourite fruit. We organise it neatly using tally marks so it is easy to read and use.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Collect the data",
+              "explanation": "Gather information, such as the favourite fruit of each student."
+            },
+            {
+              "step": 2,
+              "title": "Use tally marks",
+              "explanation": "Record each occurrence with a tally mark in a table."
+            },
+            {
+              "step": 3,
+              "title": "Find the frequency",
+              "explanation": "Count the tallies to find how many times each item occurs, called its frequency."
+            },
+            {
+              "step": 4,
+              "title": "Organise into a table",
+              "explanation": "Arrange the data in a neat table so it is easy to read and use."
+            }
+          ],
+          "examples": [
+            "Recording how many students like apples, bananas and mangoes is collecting data.",
+            "A tally table showing 'apple |||| ' means apple was chosen four times."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Data",
+              "definition": "A collection of facts or numbers gathered for a purpose.",
+              "simpleExample": "Students' marks in a test are data."
+            },
+            {
+              "keyword": "Tally marks",
+              "definition": "Small lines used to count occurrences.",
+              "simpleExample": "Four tally marks and a cross means five."
+            },
+            {
+              "keyword": "Frequency",
+              "definition": "The number of times something occurs.",
+              "simpleExample": "If 6 students like mango, mango's frequency is 6."
+            }
+          ],
+          "quickSummary": "Data is collected information; organising it with tally marks and frequencies in a table makes it clear and ready for making graphs.",
+          "revisionNotes": [
+            "Data = collected facts or numbers.",
+            "Use tally marks to record occurrences.",
+            "Frequency = how many times something occurs.",
+            "Organise data into a neat table."
+          ]
+        },
+        {
+          "topicId": "math_ch4_topic2",
+          "topic": "Pictographs",
+          "meaning": "A pictograph represents data using pictures or symbols, where each symbol stands for a fixed number.",
+          "ncertBasedExplanation": "A pictograph (or pictogram) is a way of showing data using pictures or symbols. Each symbol stands for a certain number of items, given by a key, for example one picture of an apple may stand for 5 apples. To read a pictograph, we count the symbols in each row and multiply by the value of one symbol. Pictographs make data easy and attractive to understand at a glance. They are useful for comparing quantities quickly, though they suit whole-number multiples of the symbol value best.",
+          "easyExplanation": "A pictograph shows data with pictures, where each picture stands for a set number. You count the pictures and multiply by the key to read it.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Use symbols for data",
+              "explanation": "A pictograph shows data using pictures or symbols."
+            },
+            {
+              "step": 2,
+              "title": "Read the key",
+              "explanation": "A key tells how many items one symbol stands for, such as one symbol = 5."
+            },
+            {
+              "step": 3,
+              "title": "Count the symbols",
+              "explanation": "Count how many symbols are in each row."
+            },
+            {
+              "step": 4,
+              "title": "Multiply by the key",
+              "explanation": "Multiply the number of symbols by the value of one symbol to find the quantity."
+            }
+          ],
+          "examples": [
+            "If one apple symbol stands for 5 apples, then 4 symbols mean 20 apples.",
+            "A pictograph of fruits sold uses rows of fruit pictures for each fruit."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Pictograph",
+              "definition": "A representation of data using pictures or symbols.",
+              "simpleExample": "A chart using book symbols to show books read is a pictograph."
+            },
+            {
+              "keyword": "Key",
+              "definition": "A note showing how many items each symbol represents.",
+              "simpleExample": "The key 'one star = 10' tells the symbol's value."
+            }
+          ],
+          "quickSummary": "A pictograph shows data using symbols, each standing for a fixed number given by a key; we read it by counting symbols and multiplying by the key value.",
+          "revisionNotes": [
+            "Pictograph = data shown with pictures/symbols.",
+            "A key gives the value of one symbol.",
+            "Count symbols in each row.",
+            "Multiply by the key to find the quantity."
+          ]
+        },
+        {
+          "topicId": "math_ch4_topic3",
+          "topic": "Bar Graphs",
+          "meaning": "A bar graph shows data using rectangular bars whose lengths represent the values.",
+          "ncertBasedExplanation": "A bar graph is a way of showing data using bars of equal width, where the length (or height) of each bar represents the value of the item it stands for. The bars are drawn on a graph with two lines (axes): one shows the items and the other shows the values, with a chosen scale. A longer bar means a larger value, so we can compare quantities easily just by looking at the bar lengths. Bar graphs are clear, neat and very common for presenting data.",
+          "easyExplanation": "A bar graph uses bars to show data. The taller or longer the bar, the bigger the value, so you can compare amounts at a glance.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Use bars for data",
+              "explanation": "A bar graph shows data using bars of equal width."
+            },
+            {
+              "step": 2,
+              "title": "Length shows value",
+              "explanation": "The length or height of each bar represents the value of that item."
+            },
+            {
+              "step": 3,
+              "title": "Read the axes",
+              "explanation": "One axis lists the items and the other shows the values using a scale."
+            },
+            {
+              "step": 4,
+              "title": "Compare the bars",
+              "explanation": "Longer bars mean larger values, so bars are easy to compare."
+            }
+          ],
+          "examples": [
+            "A bar graph of favourite sports has a taller bar for the most popular sport.",
+            "Comparing rainfall in different months is easy with a bar graph."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Bar graph",
+              "definition": "A graph that shows data using bars.",
+              "simpleExample": "A bar graph compares the number of students in each class."
+            },
+            {
+              "keyword": "Axis",
+              "definition": "A reference line on a graph.",
+              "simpleExample": "The bottom axis of a bar graph lists the items."
+            },
+            {
+              "keyword": "Scale",
+              "definition": "The fixed value each unit on the axis represents.",
+              "simpleExample": "A scale of 1 unit = 10 makes bars easier to draw."
+            }
+          ],
+          "quickSummary": "A bar graph shows data using equal-width bars whose lengths represent values; longer bars mean larger values, making comparisons easy.",
+          "revisionNotes": [
+            "Bar graph = data shown with bars.",
+            "Bar length/height shows the value.",
+            "Axes show items and values with a scale.",
+            "Longer bar = larger value; easy to compare."
+          ]
+        },
+        {
+          "topicId": "math_ch4_topic4",
+          "topic": "Drawing a Bar Graph",
+          "meaning": "To draw a bar graph, we choose a scale and draw bars of equal width with lengths matching the values.",
+          "ncertBasedExplanation": "Drawing a bar graph follows clear steps. First, we draw two perpendicular lines (axes); along one we write the items and along the other we mark values using a suitable scale chosen to fit the data. Then, for each item, we draw a bar of equal width, with its length matching the item's value according to the scale. We leave equal gaps between bars and label both axes and the graph. A carefully drawn and labelled bar graph clearly presents the data.",
+          "easyExplanation": "To draw a bar graph: draw two axes, pick a scale, then draw equal-width bars whose lengths match the values, leaving equal gaps and adding labels.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Draw the axes",
+              "explanation": "Draw two perpendicular lines: one for items, one for values."
+            },
+            {
+              "step": 2,
+              "title": "Choose a scale",
+              "explanation": "Pick a suitable scale on the value axis so all data fits neatly."
+            },
+            {
+              "step": 3,
+              "title": "Draw the bars",
+              "explanation": "For each item, draw an equal-width bar whose length matches its value."
+            },
+            {
+              "step": 4,
+              "title": "Label everything",
+              "explanation": "Leave equal gaps between bars and label both axes and the graph."
+            }
+          ],
+          "examples": [
+            "With a scale of 1 unit = 5, a value of 20 is drawn as a bar 4 units tall.",
+            "A bar graph of pets owned needs a bar for each kind of pet, equally spaced."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Scale",
+              "definition": "The fixed value each unit on the axis represents.",
+              "simpleExample": "A scale of 1 cm = 10 books."
+            },
+            {
+              "keyword": "Bar graph",
+              "definition": "A graph using bars to show data.",
+              "simpleExample": "We drew a bar graph of monthly sales."
+            },
+            {
+              "keyword": "Label",
+              "definition": "A name written to explain part of a graph.",
+              "simpleExample": "Each axis of a bar graph needs a label."
+            }
+          ],
+          "quickSummary": "To draw a bar graph, draw the axes, choose a suitable scale, draw equal-width bars matching the values, leave equal gaps, and label the axes and graph.",
+          "revisionNotes": [
+            "Draw two axes (items and values).",
+            "Choose a suitable scale.",
+            "Draw equal-width bars matching values.",
+            "Equal gaps between bars; label everything."
+          ]
+        },
+        {
+          "topicId": "math_ch4_topic5",
+          "topic": "Artistic and Aesthetic Considerations",
+          "meaning": "When presenting data, the design should be clear and honest, so graphs are easy to read and not misleading.",
+          "ncertBasedExplanation": "How we present data matters as much as the data itself. A good graph is clear, neat and attractive, with proper labels, a sensible scale and tidy bars or symbols. We should design data presentations so they are easy to understand at a glance. At the same time, we must be honest: using an unfair scale or uneven symbols can make data look misleading, suggesting differences that are not real. Good data presentation is both pleasing to look at and truthful, helping the reader understand the data correctly.",
+          "easyExplanation": "A good graph looks neat and clear, with proper labels and a fair scale. We must design it honestly so it does not trick the reader.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Make it clear",
+              "explanation": "A good graph is neat, with proper labels and a sensible scale."
+            },
+            {
+              "step": 2,
+              "title": "Make it attractive",
+              "explanation": "A tidy, well-designed graph is easy and pleasant to read."
+            },
+            {
+              "step": 3,
+              "title": "Be honest",
+              "explanation": "Avoid unfair scales or uneven symbols that make data look misleading."
+            },
+            {
+              "step": 4,
+              "title": "Help the reader",
+              "explanation": "Good presentation helps the reader understand the data correctly at a glance."
+            }
+          ],
+          "examples": [
+            "Using equal-sized symbols in a pictograph keeps it fair and clear.",
+            "Starting a bar graph's scale at zero avoids exaggerating small differences."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Aesthetic",
+              "definition": "Concerned with being pleasing to look at.",
+              "simpleExample": "Neat colours make a graph more aesthetic."
+            },
+            {
+              "keyword": "Misleading",
+              "definition": "Giving a wrong or false impression.",
+              "simpleExample": "An unfair scale can make a graph misleading."
+            }
+          ],
+          "quickSummary": "Good data presentation is clear, neat, attractive and honest; fair scales and even symbols help the reader understand the data correctly without being misled.",
+          "revisionNotes": [
+            "Graphs should be clear, neat and labelled.",
+            "Use a sensible, fair scale.",
+            "Avoid unfair scales/symbols that mislead.",
+            "Good presentation is attractive and truthful."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 5,
+      "chapter": "Prime Time",
+      "topics": [
+        {
+          "topicId": "math_ch5_topic1",
+          "topic": "Common Multiples and Common Factors",
+          "meaning": "A common multiple is shared by two numbers' multiples, and a common factor divides both numbers exactly.",
+          "ncertBasedExplanation": "A factor of a number divides it exactly with no remainder, and a multiple of a number is got by multiplying it by whole numbers. When two numbers share a factor, it is called a common factor; for example, 1, 2, 3 and 6 are common factors of 12 and 18. When two numbers share a multiple, it is a common multiple; for example, 12 and 24 are common multiples of 4 and 6. The largest common factor and the smallest common multiple are especially useful for comparing and combining numbers.",
+          "easyExplanation": "A common factor divides two numbers exactly (like 6 divides 12 and 18). A common multiple is in both numbers' times-tables (like 12 for 4 and 6).",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Recall factors and multiples",
+              "explanation": "A factor divides a number exactly; a multiple is got by multiplying a number by whole numbers."
+            },
+            {
+              "step": 2,
+              "title": "Find common factors",
+              "explanation": "Numbers that divide both given numbers exactly are common factors."
+            },
+            {
+              "step": 3,
+              "title": "Find common multiples",
+              "explanation": "Numbers that appear in both numbers' multiples are common multiples."
+            },
+            {
+              "step": 4,
+              "title": "Pick the special ones",
+              "explanation": "The greatest common factor and least common multiple are the most useful."
+            }
+          ],
+          "examples": [
+            "Common factors of 12 and 18 are 1, 2, 3 and 6.",
+            "Common multiples of 4 and 6 include 12, 24 and 36."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Factor",
+              "definition": "A number that divides another exactly.",
+              "simpleExample": "3 is a factor of 12."
+            },
+            {
+              "keyword": "Multiple",
+              "definition": "A number got by multiplying a number by whole numbers.",
+              "simpleExample": "15 is a multiple of 5."
+            },
+            {
+              "keyword": "Common factor",
+              "definition": "A factor shared by two or more numbers.",
+              "simpleExample": "6 is a common factor of 12 and 18."
+            }
+          ],
+          "quickSummary": "Common factors divide two numbers exactly, and common multiples appear in both numbers' multiples; the greatest common factor and least common multiple are especially useful.",
+          "revisionNotes": [
+            "Factor divides exactly; multiple comes from times-tables.",
+            "Common factor divides both numbers.",
+            "Common multiple is in both numbers' multiples.",
+            "Greatest common factor and least common multiple are key."
+          ]
+        },
+        {
+          "topicId": "math_ch5_topic2",
+          "topic": "Prime Numbers",
+          "meaning": "A prime number has exactly two factors, 1 and itself, while a composite number has more than two factors.",
+          "ncertBasedExplanation": "Numbers can be sorted by how many factors they have. A prime number is a number greater than 1 that has exactly two factors: 1 and the number itself, such as 2, 3, 5, 7 and 11. A composite number has more than two factors, such as 4, 6, 8 and 9. The number 1 is special: it has only one factor, so it is neither prime nor composite. The number 2 is the only even prime number. Prime numbers are the building blocks of all other numbers.",
+          "easyExplanation": "A prime number has only two factors: 1 and itself (like 2, 3, 5, 7). A composite number has more factors (like 4, 6, 8). The number 1 is neither.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Count the factors",
+              "explanation": "Sort numbers by how many factors they have."
+            },
+            {
+              "step": 2,
+              "title": "Identify primes",
+              "explanation": "A prime number greater than 1 has exactly two factors: 1 and itself."
+            },
+            {
+              "step": 3,
+              "title": "Identify composites",
+              "explanation": "A composite number has more than two factors."
+            },
+            {
+              "step": 4,
+              "title": "Note special cases",
+              "explanation": "1 is neither prime nor composite, and 2 is the only even prime."
+            }
+          ],
+          "examples": [
+            "7 is prime because its only factors are 1 and 7.",
+            "12 is composite because it has factors 1, 2, 3, 4, 6 and 12."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Prime number",
+              "definition": "A number greater than 1 with exactly two factors.",
+              "simpleExample": "5 is a prime number."
+            },
+            {
+              "keyword": "Composite number",
+              "definition": "A number with more than two factors.",
+              "simpleExample": "9 is a composite number."
+            },
+            {
+              "keyword": "Factor",
+              "definition": "A number that divides another exactly.",
+              "simpleExample": "2 is a factor of 8."
+            }
+          ],
+          "quickSummary": "A prime number has exactly two factors (1 and itself), while a composite number has more than two; 1 is neither, and 2 is the only even prime.",
+          "revisionNotes": [
+            "Prime: exactly two factors (1 and itself).",
+            "Composite: more than two factors.",
+            "1 is neither prime nor composite.",
+            "2 is the only even prime number."
+          ]
+        },
+        {
+          "topicId": "math_ch5_topic3",
+          "topic": "Co-prime Numbers",
+          "meaning": "Two numbers are co-prime if their only common factor is 1.",
+          "ncertBasedExplanation": "Two numbers are called co-prime (or relatively prime) if the only factor they share is 1, meaning they have no other common factor. For example, 8 and 9 are co-prime because their only common factor is 1, even though neither of them is a prime number. Co-prime numbers need not be prime themselves. Recognising co-prime numbers is useful in many areas of mathematics, such as simplifying fractions and, as the book describes, in clever ways of safekeeping treasures using numbers.",
+          "easyExplanation": "Two numbers are co-prime if the only number that divides both is 1, like 8 and 9. They do not have to be prime themselves.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Find common factors",
+              "explanation": "List the factors that two numbers share."
+            },
+            {
+              "step": 2,
+              "title": "Check for only 1",
+              "explanation": "If their only common factor is 1, the numbers are co-prime."
+            },
+            {
+              "step": 3,
+              "title": "Note they need not be prime",
+              "explanation": "Co-prime numbers like 8 and 9 need not be prime themselves."
+            },
+            {
+              "step": 4,
+              "title": "See the use",
+              "explanation": "Co-prime numbers help in simplifying fractions and other clever number uses."
+            }
+          ],
+          "examples": [
+            "8 and 9 are co-prime because their only common factor is 1.",
+            "15 and 28 are co-prime, since they share no factor except 1."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Co-prime",
+              "definition": "Two numbers whose only common factor is 1.",
+              "simpleExample": "4 and 9 are co-prime."
+            },
+            {
+              "keyword": "Common factor",
+              "definition": "A factor shared by two numbers.",
+              "simpleExample": "The only common factor of co-prime numbers is 1."
+            }
+          ],
+          "quickSummary": "Two numbers are co-prime if their only common factor is 1, like 8 and 9; they need not be prime themselves and are useful in simplifying fractions and other applications.",
+          "revisionNotes": [
+            "Co-prime = only common factor is 1.",
+            "Example: 8 and 9 are co-prime.",
+            "Co-prime numbers need not be prime.",
+            "Useful in simplifying fractions."
+          ]
+        },
+        {
+          "topicId": "math_ch5_topic4",
+          "topic": "Prime Factorisation",
+          "meaning": "Prime factorisation is writing a number as a product of its prime factors.",
+          "ncertBasedExplanation": "Every composite number can be written as a product of prime numbers, and this is called its prime factorisation. To find it, we keep dividing the number by prime numbers until only primes are left, then write the number as the product of these primes. For example, 12 = 2 x 2 x 3. The prime factorisation of a number is unique, except for the order of the factors. Prime factorisation is very useful for finding common factors, common multiples and for understanding the structure of numbers.",
+          "easyExplanation": "Prime factorisation means breaking a number down into the primes that multiply to make it, like 12 = 2 x 2 x 3.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Start with the number",
+              "explanation": "Take the composite number you want to factorise, such as 12."
+            },
+            {
+              "step": 2,
+              "title": "Divide by primes",
+              "explanation": "Keep dividing by prime numbers (2, 3, 5, ...) until only primes remain."
+            },
+            {
+              "step": 3,
+              "title": "Write the product",
+              "explanation": "Express the number as the product of these prime factors, like 12 = 2 x 2 x 3."
+            },
+            {
+              "step": 4,
+              "title": "Note it is unique",
+              "explanation": "The prime factorisation of a number is the same except for the order of factors."
+            }
+          ],
+          "examples": [
+            "12 = 2 x 2 x 3.",
+            "30 = 2 x 3 x 5."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Prime factorisation",
+              "definition": "Writing a number as a product of primes.",
+              "simpleExample": "18 = 2 x 3 x 3 is its prime factorisation."
+            },
+            {
+              "keyword": "Prime factor",
+              "definition": "A factor that is a prime number.",
+              "simpleExample": "3 is a prime factor of 12."
+            }
+          ],
+          "quickSummary": "Prime factorisation writes a number as a product of its prime factors, found by repeated division by primes; it is unique and helps find common factors and multiples.",
+          "revisionNotes": [
+            "Prime factorisation = number as a product of primes.",
+            "Divide repeatedly by primes.",
+            "Example: 12 = 2 x 2 x 3.",
+            "Unique except for order; helps find factors/multiples."
+          ]
+        },
+        {
+          "topicId": "math_ch5_topic5",
+          "topic": "Divisibility Tests",
+          "meaning": "Divisibility tests are quick rules to check whether a number is divisible by another without actually dividing.",
+          "ncertBasedExplanation": "Divisibility tests are handy rules that tell us if a number can be divided exactly by another, without doing the full division. A number is divisible by 2 if its last digit is even; by 5 if it ends in 0 or 5; by 10 if it ends in 0; by 3 if the sum of its digits is divisible by 3; by 9 if the sum of its digits is divisible by 9; and by 4 if the number formed by its last two digits is divisible by 4. These tests save time and help in factorisation and checking calculations.",
+          "easyExplanation": "Divisibility tests are quick checks, like: a number is divisible by 2 if it ends in an even digit, or by 3 if its digit-sum is divisible by 3.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Divisible by 2, 5, 10",
+              "explanation": "By 2 if it ends in an even digit; by 5 if it ends in 0 or 5; by 10 if it ends in 0."
+            },
+            {
+              "step": 2,
+              "title": "Divisible by 3 and 9",
+              "explanation": "By 3 if the sum of digits is divisible by 3; by 9 if the digit sum is divisible by 9."
+            },
+            {
+              "step": 3,
+              "title": "Divisible by 4",
+              "explanation": "By 4 if the number formed by the last two digits is divisible by 4."
+            },
+            {
+              "step": 4,
+              "title": "Use the tests",
+              "explanation": "These quick rules save time in factorisation and checking answers."
+            }
+          ],
+          "examples": [
+            "246 is divisible by 3 because 2 + 4 + 6 = 12, which is divisible by 3.",
+            "130 is divisible by 10 because it ends in 0."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Divisible",
+              "definition": "Able to be divided exactly with no remainder.",
+              "simpleExample": "12 is divisible by 4."
+            },
+            {
+              "keyword": "Divisibility test",
+              "definition": "A rule to check divisibility quickly.",
+              "simpleExample": "The test for 5 is that the number ends in 0 or 5."
+            }
+          ],
+          "quickSummary": "Divisibility tests are quick rules to check exact division: by 2 (even last digit), 5 (ends 0/5), 10 (ends 0), 3 and 9 (digit sums), and 4 (last two digits).",
+          "revisionNotes": [
+            "Divisibility tests check division without dividing.",
+            "By 2: even last digit; by 5: ends 0/5; by 10: ends 0.",
+            "By 3/9: digit sum divisible by 3/9.",
+            "By 4: last two digits divisible by 4."
+          ]
+        },
+        {
+          "topicId": "math_ch5_topic6",
+          "topic": "Fun with Numbers",
+          "meaning": "Prime numbers and factors lead to many interesting patterns and puzzles to explore.",
+          "ncertBasedExplanation": "Once we understand primes, factors and multiples, we can explore many fascinating number patterns and puzzles. For example, we can look for prime numbers using the Sieve of Eratosthenes, study pairs of primes that differ by 2 (called twin primes, like 11 and 13), and investigate interesting facts about how primes are spread among numbers. Playing with these ideas shows that numbers are full of surprises and deepens our understanding of how numbers are built from primes.",
+          "easyExplanation": "Primes and factors hide fun patterns, like twin primes (11 and 13) and the Sieve of Eratosthenes for finding primes. Numbers are full of surprises.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Use primes and factors",
+              "explanation": "Apply what we know about primes, factors and multiples."
+            },
+            {
+              "step": 2,
+              "title": "Find primes with a sieve",
+              "explanation": "The Sieve of Eratosthenes is a method to find prime numbers up to a limit."
+            },
+            {
+              "step": 3,
+              "title": "Explore twin primes",
+              "explanation": "Twin primes are pairs of primes that differ by 2, like 11 and 13."
+            },
+            {
+              "step": 4,
+              "title": "Enjoy the patterns",
+              "explanation": "Exploring these ideas shows numbers are full of surprises and patterns."
+            }
+          ],
+          "examples": [
+            "11 and 13 are twin primes because they are both prime and differ by 2.",
+            "The Sieve of Eratosthenes finds primes by crossing out multiples."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Twin primes",
+              "definition": "A pair of primes that differ by 2.",
+              "simpleExample": "17 and 19 are twin primes."
+            },
+            {
+              "keyword": "Sieve of Eratosthenes",
+              "definition": "A method to find prime numbers by crossing out multiples.",
+              "simpleExample": "We use the sieve to list primes up to 50."
+            }
+          ],
+          "quickSummary": "Primes, factors and multiples lead to many patterns and puzzles, such as the Sieve of Eratosthenes and twin primes, showing how numbers are built and full of surprises.",
+          "revisionNotes": [
+            "Primes and factors create fun patterns.",
+            "Sieve of Eratosthenes finds primes.",
+            "Twin primes differ by 2 (e.g. 11, 13).",
+            "Exploring these deepens number understanding."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 6,
+      "chapter": "Perimeter and Area",
+      "topics": [
+        {
+          "topicId": "math_ch6_topic1",
+          "topic": "Perimeter",
+          "meaning": "Perimeter is the total length of the boundary of a closed flat shape.",
+          "ncertBasedExplanation": "The perimeter of a closed flat shape is the total distance around its boundary. We find it by adding the lengths of all its sides. For a rectangle, the perimeter is 2 times (length plus breadth), and for a square it is 4 times the length of one side, since all sides are equal. Perimeter is measured in units of length such as centimetres or metres. Knowing perimeter is useful in real life, for example to find how much fencing is needed around a field or how much lace is needed to border a cloth.",
+          "easyExplanation": "Perimeter is the total length around the edge of a shape. Add up all the sides. For a square it is 4 times one side; for a rectangle, 2 x (length + breadth).",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Understand perimeter",
+              "explanation": "Perimeter is the total length of the boundary of a closed shape."
+            },
+            {
+              "step": 2,
+              "title": "Add the sides",
+              "explanation": "Find the perimeter by adding the lengths of all the sides."
+            },
+            {
+              "step": 3,
+              "title": "Use the rectangle rule",
+              "explanation": "Perimeter of a rectangle = 2 x (length + breadth)."
+            },
+            {
+              "step": 4,
+              "title": "Use the square rule",
+              "explanation": "Perimeter of a square = 4 x side, since all four sides are equal."
+            }
+          ],
+          "examples": [
+            "A rectangle 5 cm by 3 cm has perimeter 2 x (5 + 3) = 16 cm.",
+            "A square of side 4 cm has perimeter 4 x 4 = 16 cm."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Perimeter",
+              "definition": "The total length of the boundary of a closed shape.",
+              "simpleExample": "The perimeter of a triangle is the sum of its three sides."
+            },
+            {
+              "keyword": "Boundary",
+              "definition": "The outer edge of a shape.",
+              "simpleExample": "We measure along the boundary to find perimeter."
+            },
+            {
+              "keyword": "Rectangle",
+              "definition": "A shape with four right angles and opposite sides equal.",
+              "simpleExample": "A door is shaped like a rectangle."
+            }
+          ],
+          "quickSummary": "Perimeter is the total length of the boundary of a closed shape, found by adding all sides; a rectangle's is 2 x (length + breadth) and a square's is 4 x side.",
+          "revisionNotes": [
+            "Perimeter = total length around a shape.",
+            "Add the lengths of all sides.",
+            "Rectangle: 2 x (length + breadth).",
+            "Square: 4 x side; measured in length units."
+          ]
+        },
+        {
+          "topicId": "math_ch6_topic2",
+          "topic": "Area",
+          "meaning": "Area is the amount of flat surface a shape covers, measured in square units.",
+          "ncertBasedExplanation": "The area of a closed flat shape is the amount of surface it covers. Area is measured in square units, such as square centimetres or square metres. For a rectangle, the area is length multiplied by breadth, and for a square it is side multiplied by side. We can also find the area of a shape drawn on squared paper by counting the unit squares it covers, counting full squares as one and pairing up half squares. Area is useful for finding how much carpet covers a floor or how much paint covers a wall.",
+          "easyExplanation": "Area is how much flat surface a shape covers, measured in square units. For a rectangle it is length x breadth; for a square, side x side.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Understand area",
+              "explanation": "Area is the amount of flat surface a shape covers."
+            },
+            {
+              "step": 2,
+              "title": "Use square units",
+              "explanation": "Area is measured in square units like square centimetres or square metres."
+            },
+            {
+              "step": 3,
+              "title": "Use the rectangle rule",
+              "explanation": "Area of a rectangle = length x breadth."
+            },
+            {
+              "step": 4,
+              "title": "Use the square rule",
+              "explanation": "Area of a square = side x side; on squared paper, count the unit squares covered."
+            }
+          ],
+          "examples": [
+            "A rectangle 5 cm by 3 cm has area 5 x 3 = 15 square cm.",
+            "A square of side 4 cm has area 4 x 4 = 16 square cm."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Area",
+              "definition": "The amount of flat surface a shape covers.",
+              "simpleExample": "The area of a square of side 2 cm is 4 square cm."
+            },
+            {
+              "keyword": "Square unit",
+              "definition": "A unit used to measure area, like a square centimetre.",
+              "simpleExample": "Area is measured in square units."
+            },
+            {
+              "keyword": "Length and breadth",
+              "definition": "The two side lengths of a rectangle.",
+              "simpleExample": "Area of a rectangle = length x breadth."
+            }
+          ],
+          "quickSummary": "Area is the amount of flat surface a shape covers, measured in square units; a rectangle's area is length x breadth and a square's is side x side.",
+          "revisionNotes": [
+            "Area = flat surface covered by a shape.",
+            "Measured in square units.",
+            "Rectangle: length x breadth.",
+            "Square: side x side; count unit squares on grid paper."
+          ]
+        },
+        {
+          "topicId": "math_ch6_topic3",
+          "topic": "Area of a Triangle",
+          "meaning": "The area of a triangle is related to the area of a rectangle, and equals half of base times height.",
+          "ncertBasedExplanation": "We can find the area of a triangle by relating it to a rectangle. A right-angled triangle is exactly half of a rectangle, so its area is half of length times breadth. More generally, the area of any triangle is half of its base multiplied by its height (the perpendicular distance from the base to the opposite corner). On squared paper, we can also estimate a triangle's area by counting the unit squares it covers. Understanding the area of a triangle helps us find areas of many shapes that can be split into triangles.",
+          "easyExplanation": "A triangle is half of a rectangle, so its area is half of base x height. You can also count squares on grid paper to estimate it.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Relate to a rectangle",
+              "explanation": "A right-angled triangle is half of a rectangle."
+            },
+            {
+              "step": 2,
+              "title": "Use base and height",
+              "explanation": "The area of any triangle is half of its base multiplied by its height."
+            },
+            {
+              "step": 3,
+              "title": "Apply the rule",
+              "explanation": "Area of a triangle = (1/2) x base x height."
+            },
+            {
+              "step": 4,
+              "title": "Estimate by counting",
+              "explanation": "On squared paper, count the unit squares the triangle covers to estimate its area."
+            }
+          ],
+          "examples": [
+            "A triangle with base 6 cm and height 4 cm has area (1/2) x 6 x 4 = 12 square cm.",
+            "A right-angled triangle is exactly half of the rectangle around it."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Base",
+              "definition": "The side of a triangle on which it appears to rest.",
+              "simpleExample": "The bottom side of a triangle is its base."
+            },
+            {
+              "keyword": "Height",
+              "definition": "The perpendicular distance from the base to the opposite corner.",
+              "simpleExample": "The height is measured straight up from the base."
+            },
+            {
+              "keyword": "Area of triangle",
+              "definition": "Half of base times height.",
+              "simpleExample": "Area = (1/2) x base x height."
+            }
+          ],
+          "quickSummary": "The area of a triangle is half of its base times its height, since a triangle is half of a rectangle; on grid paper it can be estimated by counting squares.",
+          "revisionNotes": [
+            "A triangle is half of a rectangle.",
+            "Area of triangle = (1/2) x base x height.",
+            "Height is perpendicular to the base.",
+            "Estimate by counting squares on grid paper."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 7,
+      "chapter": "Fractions",
+      "topics": [
+        {
+          "topicId": "math_ch7_topic1",
+          "topic": "Fractional Units and Equal Shares",
+          "meaning": "A fraction represents equal shares of a whole, where the whole is divided into equal parts.",
+          "ncertBasedExplanation": "A fraction is a way of showing equal parts of a whole. When something is divided into equal shares, each share is a fraction of the whole. The number of equal parts the whole is divided into is shown by the bottom number (denominator), and the number of those parts we take is shown by the top number (numerator). For example, if a chapati is shared equally among 4 children, each gets one-fourth, written 1/4. Sharing equally is the basic idea behind fractions.",
+          "easyExplanation": "A fraction shows equal parts of a whole. If you split something into equal shares, each share is a fraction, like 1/4 of a chapati.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Divide into equal parts",
+              "explanation": "A whole is divided into equal shares to form fractions."
+            },
+            {
+              "step": 2,
+              "title": "Bottom number = parts",
+              "explanation": "The denominator (bottom) shows how many equal parts the whole is divided into."
+            },
+            {
+              "step": 3,
+              "title": "Top number = taken",
+              "explanation": "The numerator (top) shows how many of those parts we take."
+            },
+            {
+              "step": 4,
+              "title": "Read the fraction",
+              "explanation": "For example, sharing one chapati among 4 gives 1/4 to each child."
+            }
+          ],
+          "examples": [
+            "Sharing one chapati equally among 4 children gives each 1/4.",
+            "If a chocolate has 8 equal pieces and you eat 3, you ate 3/8 of it."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Fraction",
+              "definition": "A number that shows equal parts of a whole.",
+              "simpleExample": "1/2 means one of two equal parts."
+            },
+            {
+              "keyword": "Numerator",
+              "definition": "The top number of a fraction, showing parts taken.",
+              "simpleExample": "In 3/4, the numerator is 3."
+            },
+            {
+              "keyword": "Denominator",
+              "definition": "The bottom number, showing total equal parts.",
+              "simpleExample": "In 3/4, the denominator is 4."
+            }
+          ],
+          "quickSummary": "A fraction shows equal shares of a whole; the denominator tells how many equal parts the whole is split into, and the numerator how many parts are taken.",
+          "revisionNotes": [
+            "Fraction = equal parts of a whole.",
+            "Denominator (bottom) = total equal parts.",
+            "Numerator (top) = parts taken.",
+            "Example: 1 chapati shared by 4 = 1/4 each."
+          ]
+        },
+        {
+          "topicId": "math_ch7_topic2",
+          "topic": "Fractional Units as Parts of a Whole",
+          "meaning": "A unit fraction has 1 as its numerator and represents one equal part of a whole.",
+          "ncertBasedExplanation": "A fractional unit, or unit fraction, is a fraction with 1 on top, such as 1/2, 1/3 or 1/4. It represents exactly one of the equal parts into which a whole is divided. The more parts the whole is divided into, the smaller each part becomes, so 1/8 is smaller than 1/4. Any fraction can be thought of as a number of these fractional units; for example, 3/4 means three units of 1/4. Understanding fractional units helps us understand all other fractions.",
+          "easyExplanation": "A unit fraction is one with 1 on top, like 1/4. It is one equal piece of a whole. The more pieces, the smaller each one, so 1/8 is smaller than 1/4.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Define a unit fraction",
+              "explanation": "A unit fraction has 1 as its numerator, like 1/2 or 1/5."
+            },
+            {
+              "step": 2,
+              "title": "It is one part",
+              "explanation": "It represents exactly one of the equal parts of a whole."
+            },
+            {
+              "step": 3,
+              "title": "More parts means smaller",
+              "explanation": "Dividing into more parts makes each part smaller, so 1/8 is less than 1/4."
+            },
+            {
+              "step": 4,
+              "title": "Build other fractions",
+              "explanation": "Any fraction is a number of unit fractions, like 3/4 = three 1/4 units."
+            }
+          ],
+          "examples": [
+            "1/4 is one of four equal parts of a whole.",
+            "3/5 means three units of 1/5 added together."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Unit fraction",
+              "definition": "A fraction with 1 as the numerator.",
+              "simpleExample": "1/6 is a unit fraction."
+            },
+            {
+              "keyword": "Whole",
+              "definition": "A complete object or quantity.",
+              "simpleExample": "One full pizza is a whole."
+            },
+            {
+              "keyword": "Equal part",
+              "definition": "One of the identical parts a whole is split into.",
+              "simpleExample": "Each of 4 equal parts is 1/4."
+            }
+          ],
+          "quickSummary": "A unit fraction has 1 as its numerator and is one equal part of a whole; the more parts a whole is divided into, the smaller each unit, and other fractions are built from these units.",
+          "revisionNotes": [
+            "Unit fraction = 1 on top (e.g. 1/4).",
+            "It is one equal part of a whole.",
+            "More parts = smaller each part (1/8 < 1/4).",
+            "Other fractions are made of unit fractions."
+          ]
+        },
+        {
+          "topicId": "math_ch7_topic3",
+          "topic": "Measuring Using Fractional Units",
+          "meaning": "Fractions let us measure quantities that are between whole numbers, using fractional units.",
+          "ncertBasedExplanation": "Not everything can be measured in whole numbers; often a length or quantity falls between two whole numbers. Fractions let us measure these in-between amounts using fractional units. For example, a length might be 2 and a half units, written 2 1/2. By dividing each unit into equal fractional parts, we can measure more precisely. This is why fractions are essential in measuring lengths, weights and amounts in everyday life, where exact whole numbers are rare.",
+          "easyExplanation": "Fractions help us measure amounts that fall between whole numbers, like 2 and a half metres, by splitting each unit into equal fractional parts.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "See the need",
+              "explanation": "Many quantities fall between two whole numbers and cannot be measured in wholes alone."
+            },
+            {
+              "step": 2,
+              "title": "Use fractional units",
+              "explanation": "Divide each unit into equal fractional parts to measure in-between amounts."
+            },
+            {
+              "step": 3,
+              "title": "Measure precisely",
+              "explanation": "For example, a length can be measured as 2 1/2 units."
+            },
+            {
+              "step": 4,
+              "title": "Apply to daily life",
+              "explanation": "Fractions are essential for measuring lengths, weights and amounts accurately."
+            }
+          ],
+          "examples": [
+            "A ribbon may be 3 and a half units long, written 3 1/2.",
+            "Half a litre of milk is measured using the fraction 1/2."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Fractional unit",
+              "definition": "An equal part of a unit used for measuring.",
+              "simpleExample": "Half a metre uses the fractional unit 1/2."
+            },
+            {
+              "keyword": "Measure",
+              "definition": "To find the size or amount of something.",
+              "simpleExample": "We measure a ribbon's length using fractions."
+            },
+            {
+              "keyword": "In-between amount",
+              "definition": "A quantity falling between two whole numbers.",
+              "simpleExample": "2 1/2 is an in-between amount."
+            }
+          ],
+          "quickSummary": "Fractions let us measure quantities between whole numbers by dividing each unit into equal fractional parts, making precise measurement possible in daily life.",
+          "revisionNotes": [
+            "Many amounts fall between whole numbers.",
+            "Fractional units measure in-between amounts.",
+            "Example: 2 1/2 units.",
+            "Fractions are essential for accurate measuring."
+          ]
+        },
+        {
+          "topicId": "math_ch7_topic4",
+          "topic": "Marking Fraction Lengths on the Number Line",
+          "meaning": "Fractions can be shown as points on the number line by dividing each unit into equal parts.",
+          "ncertBasedExplanation": "Fractions are numbers, so they have their own places on the number line. To mark a fraction, we divide the gap between two whole numbers into as many equal parts as the denominator shows, then count the parts given by the numerator. For example, to mark 3/4, we divide the gap between 0 and 1 into 4 equal parts and count 3 parts from 0. This shows clearly that fractions lie between whole numbers and helps us compare and order them by their positions.",
+          "easyExplanation": "To put a fraction on the number line, split each unit into equal parts (the denominator) and count up (the numerator). So 3/4 is 3 of 4 parts between 0 and 1.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Fractions are numbers",
+              "explanation": "Every fraction has its own place on the number line."
+            },
+            {
+              "step": 2,
+              "title": "Divide the unit",
+              "explanation": "Split the gap between two whole numbers into equal parts equal to the denominator."
+            },
+            {
+              "step": 3,
+              "title": "Count the parts",
+              "explanation": "Count the number of parts shown by the numerator from the left whole number."
+            },
+            {
+              "step": 4,
+              "title": "Mark the point",
+              "explanation": "For 3/4, divide 0 to 1 into 4 parts and count 3 to mark the fraction."
+            }
+          ],
+          "examples": [
+            "To mark 1/2, divide the space between 0 and 1 into two equal parts and take one.",
+            "To mark 3/4, divide 0 to 1 into 4 equal parts and count 3 from 0."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Number line",
+              "definition": "A straight line with numbers marked in order.",
+              "simpleExample": "Fractions are placed on the number line."
+            },
+            {
+              "keyword": "Denominator",
+              "definition": "The bottom number showing equal parts.",
+              "simpleExample": "For 3/4, divide the unit into 4 parts."
+            },
+            {
+              "keyword": "Numerator",
+              "definition": "The top number showing parts counted.",
+              "simpleExample": "For 3/4, count 3 parts."
+            }
+          ],
+          "quickSummary": "Fractions are marked on the number line by dividing each unit into equal parts equal to the denominator and counting parts equal to the numerator, showing they lie between whole numbers.",
+          "revisionNotes": [
+            "Fractions have places on the number line.",
+            "Divide the unit into denominator parts.",
+            "Count numerator parts from the left.",
+            "Example: 3/4 = 3 of 4 parts between 0 and 1."
+          ]
+        },
+        {
+          "topicId": "math_ch7_topic5",
+          "topic": "Mixed Fractions",
+          "meaning": "A mixed fraction has a whole number part and a fractional part, and equals an improper fraction.",
+          "ncertBasedExplanation": "Fractions can be of different kinds. A proper fraction has a numerator smaller than its denominator, like 3/4, and is less than 1. An improper fraction has a numerator equal to or greater than its denominator, like 7/4, and is 1 or more. A mixed fraction (mixed number) combines a whole number and a proper fraction, like 1 3/4. Every improper fraction can be written as a mixed fraction and the other way round, for example 7/4 = 1 3/4. This helps us read and use fractions greater than 1 more easily.",
+          "easyExplanation": "A mixed fraction is a whole number plus a fraction, like 1 3/4. It is the same as an improper fraction like 7/4.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Proper fraction",
+              "explanation": "A fraction less than 1, with numerator smaller than denominator, like 3/4."
+            },
+            {
+              "step": 2,
+              "title": "Improper fraction",
+              "explanation": "A fraction of 1 or more, with numerator at least the denominator, like 7/4."
+            },
+            {
+              "step": 3,
+              "title": "Mixed fraction",
+              "explanation": "A whole number plus a proper fraction, like 1 3/4."
+            },
+            {
+              "step": 4,
+              "title": "Convert between them",
+              "explanation": "Every improper fraction equals a mixed fraction, for example 7/4 = 1 3/4."
+            }
+          ],
+          "examples": [
+            "7/4 written as a mixed fraction is 1 3/4.",
+            "2 1/2 written as an improper fraction is 5/2."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Proper fraction",
+              "definition": "A fraction less than 1.",
+              "simpleExample": "3/5 is a proper fraction."
+            },
+            {
+              "keyword": "Improper fraction",
+              "definition": "A fraction equal to or greater than 1.",
+              "simpleExample": "9/4 is an improper fraction."
+            },
+            {
+              "keyword": "Mixed fraction",
+              "definition": "A whole number with a proper fraction.",
+              "simpleExample": "1 1/2 is a mixed fraction."
+            }
+          ],
+          "quickSummary": "A mixed fraction combines a whole number and a proper fraction (like 1 3/4) and equals an improper fraction (like 7/4); the two forms can be converted into each other.",
+          "revisionNotes": [
+            "Proper fraction < 1 (e.g. 3/4).",
+            "Improper fraction >= 1 (e.g. 7/4).",
+            "Mixed fraction = whole + proper fraction (1 3/4).",
+            "Improper and mixed forms convert into each other."
+          ]
+        },
+        {
+          "topicId": "math_ch7_topic6",
+          "topic": "Equivalent Fractions",
+          "meaning": "Equivalent fractions are different fractions that represent the same value.",
+          "ncertBasedExplanation": "Equivalent fractions are fractions that look different but stand for the same amount, like 1/2, 2/4 and 4/8. We get an equivalent fraction by multiplying or dividing both the numerator and the denominator by the same number (not zero). For example, multiplying 1/2 by 3/3 gives 3/6. Dividing both parts by their common factor gives a simpler equivalent fraction; when no common factor (other than 1) is left, the fraction is in its simplest form. Equivalent fractions help us compare, add and subtract fractions.",
+          "easyExplanation": "Equivalent fractions are different-looking fractions worth the same, like 1/2 = 2/4. Multiply or divide top and bottom by the same number to make them.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Same value, different form",
+              "explanation": "Equivalent fractions represent the same amount, like 1/2 and 2/4."
+            },
+            {
+              "step": 2,
+              "title": "Multiply both parts",
+              "explanation": "Multiply numerator and denominator by the same number to get an equivalent fraction."
+            },
+            {
+              "step": 3,
+              "title": "Divide both parts",
+              "explanation": "Divide numerator and denominator by a common factor to simplify."
+            },
+            {
+              "step": 4,
+              "title": "Reach simplest form",
+              "explanation": "When only 1 is the common factor, the fraction is in its simplest form."
+            }
+          ],
+          "examples": [
+            "1/2, 2/4 and 3/6 are equivalent fractions.",
+            "6/8 simplifies to 3/4 by dividing both parts by 2."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Equivalent fractions",
+              "definition": "Different fractions with the same value.",
+              "simpleExample": "2/4 and 1/2 are equivalent."
+            },
+            {
+              "keyword": "Simplest form",
+              "definition": "A fraction with no common factor (except 1) in numerator and denominator.",
+              "simpleExample": "3/4 is in simplest form."
+            },
+            {
+              "keyword": "Common factor",
+              "definition": "A number dividing both numerator and denominator.",
+              "simpleExample": "2 is a common factor of 6 and 8."
+            }
+          ],
+          "quickSummary": "Equivalent fractions are different fractions with the same value, made by multiplying or dividing both parts by the same number; dividing to remove common factors gives the simplest form.",
+          "revisionNotes": [
+            "Equivalent fractions have the same value (1/2 = 2/4).",
+            "Multiply both parts by the same number.",
+            "Divide both parts to simplify.",
+            "No common factor left = simplest form."
+          ]
+        },
+        {
+          "topicId": "math_ch7_topic7",
+          "topic": "Comparing Fractions",
+          "meaning": "Fractions are compared by making their denominators the same or by using equivalent fractions.",
+          "ncertBasedExplanation": "To compare two fractions and find which is greater, it is easiest when they have the same denominator: then the fraction with the larger numerator is greater. If the denominators are different, we change the fractions into equivalent fractions with a common denominator and then compare the numerators. For fractions with the same numerator, the one with the smaller denominator is greater, because fewer parts means bigger parts. Comparing fractions lets us order them from smallest to largest.",
+          "easyExplanation": "To compare fractions, make their bottoms the same, then the bigger top wins. If the tops are equal, the smaller bottom is the bigger fraction.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Same denominator is easy",
+              "explanation": "When denominators are equal, the fraction with the larger numerator is greater."
+            },
+            {
+              "step": 2,
+              "title": "Make a common denominator",
+              "explanation": "If denominators differ, change to equivalent fractions with the same denominator."
+            },
+            {
+              "step": 3,
+              "title": "Then compare numerators",
+              "explanation": "With a common denominator, compare the numerators to decide which is greater."
+            },
+            {
+              "step": 4,
+              "title": "Same numerator rule",
+              "explanation": "If numerators are equal, the smaller denominator gives the greater fraction."
+            }
+          ],
+          "examples": [
+            "3/5 is greater than 2/5 because they share a denominator and 3 > 2.",
+            "1/3 is greater than 1/4 because, with equal numerators, the smaller denominator wins."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Common denominator",
+              "definition": "The same denominator made for two fractions.",
+              "simpleExample": "For 1/2 and 1/3, a common denominator is 6."
+            },
+            {
+              "keyword": "Compare",
+              "definition": "To decide which value is greater.",
+              "simpleExample": "We compare 2/3 and 3/4 by using a common denominator."
+            }
+          ],
+          "quickSummary": "Fractions are compared by giving them a common denominator and comparing numerators; with equal numerators, the smaller denominator gives the larger fraction.",
+          "revisionNotes": [
+            "Same denominator: larger numerator wins.",
+            "Different denominators: make them common first.",
+            "Same numerator: smaller denominator is larger.",
+            "Comparing lets us order fractions."
+          ]
+        },
+        {
+          "topicId": "math_ch7_topic8",
+          "topic": "Addition and Subtraction of Fractions",
+          "meaning": "Fractions are added or subtracted by making their denominators the same, then adding or subtracting the numerators.",
+          "ncertBasedExplanation": "To add or subtract fractions, they must have the same denominator. If the denominators are already the same, we simply add or subtract the numerators and keep the denominator unchanged. If the denominators are different, we first change the fractions into equivalent fractions with a common denominator, then add or subtract the numerators. For mixed fractions, we can add the whole parts and the fractional parts separately, or first convert to improper fractions. The final answer is usually written in its simplest form.",
+          "easyExplanation": "To add or subtract fractions, make the bottoms the same, then add or subtract the tops. Keep the bottom the same and simplify the answer.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Need same denominator",
+              "explanation": "Fractions can be added or subtracted only when their denominators are the same."
+            },
+            {
+              "step": 2,
+              "title": "Make denominators equal",
+              "explanation": "If denominators differ, convert to equivalent fractions with a common denominator."
+            },
+            {
+              "step": 3,
+              "title": "Add or subtract numerators",
+              "explanation": "Add or subtract the numerators and keep the common denominator."
+            },
+            {
+              "step": 4,
+              "title": "Simplify the answer",
+              "explanation": "Write the result in its simplest form, converting to a mixed fraction if needed."
+            }
+          ],
+          "examples": [
+            "1/4 + 2/4 = 3/4.",
+            "1/2 + 1/3 = 3/6 + 2/6 = 5/6."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Common denominator",
+              "definition": "The shared denominator used to add or subtract fractions.",
+              "simpleExample": "For 1/2 + 1/3, use 6."
+            },
+            {
+              "keyword": "Sum",
+              "definition": "The result of adding.",
+              "simpleExample": "The sum of 1/4 and 2/4 is 3/4."
+            },
+            {
+              "keyword": "Simplest form",
+              "definition": "A fraction reduced fully.",
+              "simpleExample": "4/8 in simplest form is 1/2."
+            }
+          ],
+          "quickSummary": "Fractions are added or subtracted by giving them a common denominator, then adding or subtracting the numerators and keeping the denominator, with the answer in simplest form.",
+          "revisionNotes": [
+            "Need the same denominator first.",
+            "Make equivalent fractions with a common denominator.",
+            "Add/subtract numerators; keep denominator.",
+            "Simplify the final answer."
+          ]
+        },
+        {
+          "topicId": "math_ch7_topic9",
+          "topic": "A Pinch of History (of Fractions)",
+          "meaning": "Fractions have a long history, and ancient civilisations, including in India, developed ways to write and use them.",
+          "ncertBasedExplanation": "Fractions are a very old idea. Ancient civilisations such as the Egyptians, Babylonians and Indians used fractions thousands of years ago for trade, measuring land and sharing goods. Indian mathematicians made important contributions to how fractions are written and worked with, including ways of writing mixed numbers. Learning about the history of fractions shows that mathematics has grown over a long time through the work of many cultures, and that ideas we use today were built up gradually by people across the world.",
+          "easyExplanation": "Fractions are very old. Egyptians, Babylonians and Indians all used them long ago for trade and measuring, and Indian mathematicians helped shape how we write them.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Fractions are ancient",
+              "explanation": "Fractions have been used for thousands of years."
+            },
+            {
+              "step": 2,
+              "title": "Many cultures used them",
+              "explanation": "Egyptians, Babylonians and Indians used fractions for trade and measuring."
+            },
+            {
+              "step": 3,
+              "title": "India's contribution",
+              "explanation": "Indian mathematicians helped develop ways of writing and working with fractions."
+            },
+            {
+              "step": 4,
+              "title": "Maths grows over time",
+              "explanation": "The history shows mathematics developed gradually through many cultures."
+            }
+          ],
+          "examples": [
+            "Ancient Egyptians wrote fractions in a special way using unit fractions.",
+            "Indian mathematicians contributed to writing mixed numbers and fractions."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "History",
+              "definition": "The story of how something developed over time.",
+              "simpleExample": "The history of fractions spans thousands of years."
+            },
+            {
+              "keyword": "Civilisation",
+              "definition": "An advanced society with its own culture and knowledge.",
+              "simpleExample": "The Egyptian civilisation used fractions."
+            }
+          ],
+          "quickSummary": "Fractions have an ancient history, used by Egyptian, Babylonian and Indian civilisations for trade and measuring, with Indian mathematicians contributing to how they are written.",
+          "revisionNotes": [
+            "Fractions are thousands of years old.",
+            "Used by Egyptians, Babylonians and Indians.",
+            "Indian mathematicians shaped fraction writing.",
+            "Maths grew through many cultures over time."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 8,
+      "chapter": "Playing with Constructions",
+      "topics": [
+        {
+          "topicId": "math_ch8_topic1",
+          "topic": "Artwork (Constructions with Compass and Ruler)",
+          "meaning": "Many beautiful designs can be drawn precisely using only a compass and a ruler.",
+          "ncertBasedExplanation": "Geometric constructions let us draw accurate figures using simple tools: a ruler (straightedge) for straight lines and a compass for circles and arcs. By combining circles and lines, we can create attractive artwork and patterns, such as flower-like designs made from overlapping circles of the same radius. These activities show that careful use of a compass and ruler can produce precise and beautiful shapes. Learning to construct figures builds accuracy and prepares us for more advanced geometry.",
+          "easyExplanation": "With just a compass and ruler you can draw precise, beautiful designs, like flower patterns made from overlapping circles.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Use the right tools",
+              "explanation": "A ruler draws straight lines and a compass draws circles and arcs."
+            },
+            {
+              "step": 2,
+              "title": "Combine lines and circles",
+              "explanation": "Beautiful patterns come from combining straight lines and circles."
+            },
+            {
+              "step": 3,
+              "title": "Draw overlapping circles",
+              "explanation": "Flower-like designs are made by drawing overlapping circles of equal radius."
+            },
+            {
+              "step": 4,
+              "title": "Build accuracy",
+              "explanation": "Careful construction produces precise, attractive shapes and builds drawing skill."
+            }
+          ],
+          "examples": [
+            "A flower pattern can be drawn using several overlapping circles of the same radius.",
+            "A straight border with circular arcs makes an attractive design."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Compass",
+              "definition": "An instrument used to draw circles and arcs.",
+              "simpleExample": "We draw a circle using a compass."
+            },
+            {
+              "keyword": "Ruler",
+              "definition": "A straightedge used to draw straight lines.",
+              "simpleExample": "We draw a line segment with a ruler."
+            },
+            {
+              "keyword": "Construction",
+              "definition": "Drawing an accurate figure using geometric tools.",
+              "simpleExample": "Drawing a square with compass and ruler is a construction."
+            }
+          ],
+          "quickSummary": "Using only a compass and ruler, we can draw precise figures and beautiful designs, such as flower patterns from overlapping circles, building accuracy in geometry.",
+          "revisionNotes": [
+            "Ruler draws lines; compass draws circles/arcs.",
+            "Combine lines and circles for designs.",
+            "Overlapping equal circles make flower patterns.",
+            "Constructions build accuracy."
+          ]
+        },
+        {
+          "topicId": "math_ch8_topic2",
+          "topic": "Squares and Rectangles",
+          "meaning": "Squares and rectangles have special properties of equal sides and right angles that define them.",
+          "ncertBasedExplanation": "A rectangle is a four-sided figure in which all four angles are right angles (90 degrees) and opposite sides are equal in length. A square is a special rectangle in which all four sides are also equal. Both shapes have their opposite sides parallel. Knowing these properties, the right angles and the equal sides, is essential before we can construct them accurately. Understanding what makes a square and a rectangle special is the first step to drawing them.",
+          "easyExplanation": "A rectangle has four right angles and equal opposite sides. A square is a rectangle with all four sides equal too.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Define a rectangle",
+              "explanation": "A rectangle has four right angles and opposite sides equal."
+            },
+            {
+              "step": 2,
+              "title": "Define a square",
+              "explanation": "A square is a rectangle with all four sides equal."
+            },
+            {
+              "step": 3,
+              "title": "Note parallel sides",
+              "explanation": "Both shapes have their opposite sides parallel."
+            },
+            {
+              "step": 4,
+              "title": "Use the properties",
+              "explanation": "These properties of right angles and equal sides guide how we construct the shapes."
+            }
+          ],
+          "examples": [
+            "A book cover is shaped like a rectangle with right-angled corners.",
+            "A carrom board is shaped like a square with all four sides equal."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Rectangle",
+              "definition": "A four-sided shape with four right angles and equal opposite sides.",
+              "simpleExample": "A door is a rectangle."
+            },
+            {
+              "keyword": "Square",
+              "definition": "A rectangle with all four sides equal.",
+              "simpleExample": "A chessboard is a square."
+            },
+            {
+              "keyword": "Right angle",
+              "definition": "An angle of exactly 90 degrees.",
+              "simpleExample": "Each corner of a rectangle is a right angle."
+            }
+          ],
+          "quickSummary": "A rectangle has four right angles and equal opposite sides, and a square is a rectangle with all sides equal; both have parallel opposite sides, which guides their construction.",
+          "revisionNotes": [
+            "Rectangle: 4 right angles, opposite sides equal.",
+            "Square: a rectangle with all sides equal.",
+            "Opposite sides are parallel.",
+            "These properties guide construction."
+          ]
+        },
+        {
+          "topicId": "math_ch8_topic3",
+          "topic": "Constructing Squares and Rectangles",
+          "meaning": "Squares and rectangles can be constructed accurately using a ruler, compass and right angles.",
+          "ncertBasedExplanation": "To construct a rectangle of given side lengths, we draw one side with a ruler, then make right angles at its ends (using a protractor or compass), draw the other sides of the correct lengths, and join them. For a square, all four sides are equal, so we use the same length for each side. The key is to make accurate right angles and measure side lengths carefully. Following the steps in order gives a precise square or rectangle.",
+          "easyExplanation": "To construct a rectangle: draw one side, make right angles at its ends, draw the other sides to the right length, and join. For a square, all sides are equal.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Draw the first side",
+              "explanation": "Use a ruler to draw one side of the correct length."
+            },
+            {
+              "step": 2,
+              "title": "Make right angles",
+              "explanation": "At each end, construct a right angle (90 degrees) using a protractor or compass."
+            },
+            {
+              "step": 3,
+              "title": "Draw the other sides",
+              "explanation": "Draw the remaining sides to the correct lengths along the right angles."
+            },
+            {
+              "step": 4,
+              "title": "Join and check",
+              "explanation": "Join the sides to complete the figure; for a square, make all sides equal."
+            }
+          ],
+          "examples": [
+            "Constructing a rectangle 5 cm by 3 cm using right angles at each corner.",
+            "Constructing a square of side 4 cm with all four sides equal."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Construct",
+              "definition": "To draw accurately using geometric tools.",
+              "simpleExample": "We construct a rectangle with a ruler and protractor."
+            },
+            {
+              "keyword": "Right angle",
+              "definition": "An angle of 90 degrees.",
+              "simpleExample": "Each corner of the rectangle is a right angle."
+            },
+            {
+              "keyword": "Side",
+              "definition": "One of the straight edges of a shape.",
+              "simpleExample": "A square has four equal sides."
+            }
+          ],
+          "quickSummary": "Squares and rectangles are constructed by drawing a side, making right angles at its ends, drawing the other sides to correct lengths and joining them; a square has all sides equal.",
+          "revisionNotes": [
+            "Draw one side accurately.",
+            "Make right angles at the ends.",
+            "Draw other sides to correct lengths.",
+            "Square: all sides equal; join and check."
+          ]
+        },
+        {
+          "topicId": "math_ch8_topic4",
+          "topic": "An Exploration in Rectangles",
+          "meaning": "Exploring rectangles reveals relationships, such as how different rectangles can have the same perimeter or area.",
+          "ncertBasedExplanation": "By exploring rectangles, we discover interesting relationships. Different rectangles can have the same perimeter but different areas, and rectangles with the same area can have different perimeters. For example, rectangles measuring 1 by 6 and 2 by 3 both have an area of 6 square units but different perimeters. Among all rectangles with a fixed perimeter, the one closest to a square has the largest area. Exploring such relationships deepens our understanding of perimeter, area and the special nature of the square.",
+          "easyExplanation": "Exploring rectangles shows that ones with the same perimeter can have different areas, and the most 'square-like' rectangle has the biggest area.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Compare rectangles",
+              "explanation": "Look at different rectangles and their perimeters and areas."
+            },
+            {
+              "step": 2,
+              "title": "Same perimeter, different area",
+              "explanation": "Rectangles with equal perimeters can have different areas."
+            },
+            {
+              "step": 3,
+              "title": "Same area, different perimeter",
+              "explanation": "Rectangles with equal areas can have different perimeters."
+            },
+            {
+              "step": 4,
+              "title": "Find the largest area",
+              "explanation": "Among rectangles of a fixed perimeter, the most square-like one has the largest area."
+            }
+          ],
+          "examples": [
+            "Rectangles 1 by 6 and 2 by 3 both have area 6 but different perimeters.",
+            "Of all rectangles with perimeter 12, the 3 by 3 square has the largest area."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Perimeter",
+              "definition": "The total length of the boundary.",
+              "simpleExample": "A 2 by 3 rectangle has perimeter 10."
+            },
+            {
+              "keyword": "Area",
+              "definition": "The surface a shape covers.",
+              "simpleExample": "A 2 by 3 rectangle has area 6 square units."
+            },
+            {
+              "keyword": "Exploration",
+              "definition": "Investigating to discover relationships.",
+              "simpleExample": "Comparing rectangles is an exploration."
+            }
+          ],
+          "quickSummary": "Exploring rectangles shows that equal perimeters can give different areas and equal areas different perimeters, and the most square-like rectangle of a fixed perimeter has the largest area.",
+          "revisionNotes": [
+            "Same perimeter can give different areas.",
+            "Same area can give different perimeters.",
+            "Most square-like rectangle = largest area for fixed perimeter.",
+            "Exploration deepens area/perimeter understanding."
+          ]
+        },
+        {
+          "topicId": "math_ch8_topic5",
+          "topic": "Exploring Diagonals of Rectangles and Squares",
+          "meaning": "The diagonals of rectangles and squares have special properties, such as being equal in length.",
+          "ncertBasedExplanation": "A diagonal is a straight line joining two opposite corners of a shape. A rectangle has two diagonals, and they are always equal in length and cut each other into two equal parts at their crossing point (they bisect each other). In a square, the two diagonals are not only equal and bisect each other, but they also cross at right angles. Exploring diagonals by drawing and measuring them helps us discover and confirm these special properties of squares and rectangles.",
+          "easyExplanation": "A diagonal joins opposite corners. In a rectangle, the two diagonals are equal and cross at their middles. In a square, they also cross at right angles.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Define a diagonal",
+              "explanation": "A diagonal joins two opposite corners of a shape."
+            },
+            {
+              "step": 2,
+              "title": "Rectangle diagonals are equal",
+              "explanation": "A rectangle's two diagonals are equal in length."
+            },
+            {
+              "step": 3,
+              "title": "They bisect each other",
+              "explanation": "The diagonals cross and cut each other into two equal halves."
+            },
+            {
+              "step": 4,
+              "title": "Square diagonals cross at right angles",
+              "explanation": "In a square, the diagonals are also equal and cross at right angles."
+            }
+          ],
+          "examples": [
+            "Drawing both diagonals of a rectangle shows they are the same length.",
+            "The diagonals of a square cross each other at 90 degrees."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Diagonal",
+              "definition": "A line joining two opposite corners of a shape.",
+              "simpleExample": "A rectangle has two diagonals."
+            },
+            {
+              "keyword": "Bisect",
+              "definition": "To cut into two equal parts.",
+              "simpleExample": "The diagonals of a rectangle bisect each other."
+            },
+            {
+              "keyword": "Square",
+              "definition": "A rectangle with all sides equal.",
+              "simpleExample": "A square's diagonals cross at right angles."
+            }
+          ],
+          "quickSummary": "A diagonal joins opposite corners; a rectangle's diagonals are equal and bisect each other, and a square's diagonals also cross at right angles.",
+          "revisionNotes": [
+            "Diagonal = joins opposite corners.",
+            "Rectangle diagonals are equal.",
+            "Diagonals bisect each other.",
+            "Square diagonals also cross at right angles."
+          ]
+        },
+        {
+          "topicId": "math_ch8_topic6",
+          "topic": "Points Equidistant from Two Given Points",
+          "meaning": "The points that are equally far from two given points lie on the perpendicular bisector of the segment joining them.",
+          "ncertBasedExplanation": "If we look for all the points that are the same distance from two given points, we find that they form a straight line. This line passes through the midpoint of the segment joining the two points and is perpendicular to it; it is called the perpendicular bisector. Every point on this line is equidistant (equally distant) from the two given points. We can construct this line using a compass, by drawing equal arcs from both points and joining their crossing points. This idea is useful in many geometric constructions.",
+          "easyExplanation": "All points equally far from two points lie on one line: the perpendicular bisector. It cuts the joining segment in half at a right angle.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Look for equal distances",
+              "explanation": "Find points that are the same distance from two given points."
+            },
+            {
+              "step": 2,
+              "title": "They form a line",
+              "explanation": "These points all lie on one straight line."
+            },
+            {
+              "step": 3,
+              "title": "It is the perpendicular bisector",
+              "explanation": "This line passes through the midpoint of the segment and is perpendicular to it."
+            },
+            {
+              "step": 4,
+              "title": "Construct with a compass",
+              "explanation": "Draw equal arcs from both points and join where they cross to make this line."
+            }
+          ],
+          "examples": [
+            "The point exactly between two houses, equally far from both, lies on their perpendicular bisector.",
+            "Drawing equal arcs from points A and B and joining their crossings gives the perpendicular bisector of AB."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Equidistant",
+              "definition": "Equally distant from two or more points.",
+              "simpleExample": "A point on the perpendicular bisector is equidistant from both ends."
+            },
+            {
+              "keyword": "Perpendicular bisector",
+              "definition": "A line that cuts a segment in half at a right angle.",
+              "simpleExample": "The perpendicular bisector of AB passes through its midpoint."
+            },
+            {
+              "keyword": "Midpoint",
+              "definition": "The point exactly halfway along a segment.",
+              "simpleExample": "The midpoint of AB is its centre."
+            }
+          ],
+          "quickSummary": "All points equidistant from two given points lie on the perpendicular bisector of the segment joining them, which passes through its midpoint at a right angle and is built using equal compass arcs.",
+          "revisionNotes": [
+            "Points equally far from two points form a line.",
+            "That line is the perpendicular bisector.",
+            "It passes through the midpoint at a right angle.",
+            "Construct it with equal arcs from both points."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 9,
+      "chapter": "Symmetry",
+      "topics": [
+        {
+          "topicId": "math_ch9_topic1",
+          "topic": "Line of Symmetry",
+          "meaning": "A line of symmetry divides a figure into two identical halves that are mirror images of each other.",
+          "ncertBasedExplanation": "A figure has line symmetry (reflection symmetry) if a line can be drawn through it so that one half is the exact mirror image of the other. This line is called the line of symmetry or axis of symmetry. If we fold the figure along this line, the two halves match exactly. A shape can have no line of symmetry, one, or many: a rectangle has two lines of symmetry, a square has four, and a circle has countless lines of symmetry. Many shapes in nature and design, like leaves and the letter A, have line symmetry.",
+          "easyExplanation": "A line of symmetry splits a shape into two matching mirror halves. Fold along it and the halves overlap exactly. A square has four such lines.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Define line symmetry",
+              "explanation": "A figure has line symmetry if a line divides it into two mirror-image halves."
+            },
+            {
+              "step": 2,
+              "title": "Name the line",
+              "explanation": "This dividing line is called the line of symmetry or axis of symmetry."
+            },
+            {
+              "step": 3,
+              "title": "Test by folding",
+              "explanation": "Folding the figure along the line makes the two halves match exactly."
+            },
+            {
+              "step": 4,
+              "title": "Count the lines",
+              "explanation": "Shapes vary: a rectangle has 2 lines, a square has 4, and a circle has countless."
+            }
+          ],
+          "examples": [
+            "The letter A has one vertical line of symmetry.",
+            "A square has four lines of symmetry: two diagonals and two through the midpoints of opposite sides."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Line of symmetry",
+              "definition": "A line dividing a figure into two mirror-image halves.",
+              "simpleExample": "A butterfly has a line of symmetry down its middle."
+            },
+            {
+              "keyword": "Mirror image",
+              "definition": "An exact reversed copy, as seen in a mirror.",
+              "simpleExample": "Each half across a line of symmetry is a mirror image."
+            },
+            {
+              "keyword": "Symmetry",
+              "definition": "Balanced, matching arrangement of parts.",
+              "simpleExample": "A square shows symmetry."
+            }
+          ],
+          "quickSummary": "A line of symmetry divides a figure into two identical mirror-image halves that match when folded; shapes may have none, one or many lines (square has 4, circle countless).",
+          "revisionNotes": [
+            "Line of symmetry splits a shape into mirror halves.",
+            "Folding along it makes halves match.",
+            "Also called the axis of symmetry.",
+            "Rectangle: 2 lines; square: 4; circle: countless."
+          ]
+        },
+        {
+          "topicId": "math_ch9_topic2",
+          "topic": "Rotational Symmetry",
+          "meaning": "A figure has rotational symmetry if it looks the same after being turned by less than a full turn about its centre.",
+          "ncertBasedExplanation": "A figure has rotational symmetry if, when it is rotated about a fixed central point by some angle less than a full turn, it looks exactly the same as before. The fixed point is the centre of rotation. The number of times the figure matches its original position during one full turn is called the order of rotational symmetry. For example, a square has rotational symmetry of order 4, because it looks the same after every quarter turn, and a equilateral triangle has order 3. Every figure looks the same after a full turn, but only special figures match before completing the full turn.",
+          "easyExplanation": "A shape has rotational symmetry if it looks the same when turned part of the way around its centre. A square matches 4 times in a full turn (order 4).",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Rotate about a centre",
+              "explanation": "Turn the figure about a fixed central point called the centre of rotation."
+            },
+            {
+              "step": 2,
+              "title": "Check if it matches",
+              "explanation": "If it looks the same after a turn less than full, it has rotational symmetry."
+            },
+            {
+              "step": 3,
+              "title": "Count the matches",
+              "explanation": "The number of matches in one full turn is the order of rotational symmetry."
+            },
+            {
+              "step": 4,
+              "title": "See examples",
+              "explanation": "A square has order 4 (quarter turns) and an equilateral triangle has order 3."
+            }
+          ],
+          "examples": [
+            "A square looks the same after every 90-degree turn, so its order of rotational symmetry is 4.",
+            "A windmill or fan with equal blades has rotational symmetry."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Rotational symmetry",
+              "definition": "Looking the same after a partial turn about a centre.",
+              "simpleExample": "A square has rotational symmetry."
+            },
+            {
+              "keyword": "Centre of rotation",
+              "definition": "The fixed point a figure is turned about.",
+              "simpleExample": "The centre of a square is its centre of rotation."
+            },
+            {
+              "keyword": "Order of symmetry",
+              "definition": "The number of matches in one full turn.",
+              "simpleExample": "A square has order 4."
+            }
+          ],
+          "quickSummary": "A figure has rotational symmetry if it looks the same after turning less than a full turn about its centre; the number of matches in a full turn is its order (square = 4, triangle = 3).",
+          "revisionNotes": [
+            "Rotational symmetry = looks same after a partial turn.",
+            "Turned about the centre of rotation.",
+            "Order = matches in one full turn.",
+            "Square: order 4; equilateral triangle: order 3."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 10,
+      "chapter": "The Other Side of Zero",
+      "topics": [
+        {
+          "topicId": "math_ch10_topic1",
+          "topic": "Bela's Building of Fun (Above and Below Zero)",
+          "meaning": "Numbers can go below zero; floors above the ground and below it (basements) show positive and negative numbers.",
+          "ncertBasedExplanation": "The chapter begins with a building that has floors above the ground and floors below the ground (basements). The ground floor is taken as zero. Floors above zero are counted as positive numbers (1, 2, 3, ...) and floors below zero, the basements, are counted as negative numbers (-1, -2, -3, ...). This everyday picture shows that numbers can go below zero. Moving up means adding (going towards positive) and moving down means subtracting (going towards negative), which introduces the idea of negative numbers and integers.",
+          "easyExplanation": "Think of a building where the ground floor is zero. Floors above are positive numbers and basements below are negative numbers. This shows numbers can go below zero.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Set zero at the ground",
+              "explanation": "The ground floor of the building is taken as zero."
+            },
+            {
+              "step": 2,
+              "title": "Floors above are positive",
+              "explanation": "Floors above the ground are positive numbers: 1, 2, 3, ..."
+            },
+            {
+              "step": 3,
+              "title": "Basements are negative",
+              "explanation": "Floors below the ground (basements) are negative numbers: -1, -2, -3, ..."
+            },
+            {
+              "step": 4,
+              "title": "Up and down",
+              "explanation": "Going up adds (towards positive) and going down subtracts (towards negative)."
+            }
+          ],
+          "examples": [
+            "The second basement of a building can be labelled -2.",
+            "Going from floor 2 down to basement 1 (-1) is like subtracting."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Negative number",
+              "definition": "A number less than zero, written with a minus sign.",
+              "simpleExample": "-3 is a negative number."
+            },
+            {
+              "keyword": "Positive number",
+              "definition": "A number greater than zero.",
+              "simpleExample": "5 is a positive number."
+            },
+            {
+              "keyword": "Zero",
+              "definition": "The number that separates positive and negative numbers.",
+              "simpleExample": "Zero is neither positive nor negative."
+            }
+          ],
+          "quickSummary": "Using a building with floors above and basements below the ground (zero), we see numbers can be positive (above) or negative (below), introducing negative numbers and integers.",
+          "revisionNotes": [
+            "Ground floor = zero.",
+            "Floors above = positive numbers.",
+            "Basements below = negative numbers.",
+            "Up adds; down subtracts."
+          ]
+        },
+        {
+          "topicId": "math_ch10_topic2",
+          "topic": "The Token Model",
+          "meaning": "Positive and negative tokens model integers, where one positive and one negative token cancel out to zero.",
+          "ncertBasedExplanation": "The token model is a simple way to understand integers and their addition. We use two kinds of tokens: positive tokens (standing for +1) and negative tokens (standing for -1). A pair of one positive and one negative token cancels out to make zero, called a zero pair. To find the value of a collection of tokens, we cancel out all zero pairs and count what is left. This model makes it easy to see how adding positive and negative numbers works, for example how 3 + (-2) leaves 1.",
+          "easyExplanation": "Use positive and negative tokens for numbers. One positive and one negative token cancel to zero. Cancel pairs and count what is left to add integers.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Use two kinds of tokens",
+              "explanation": "Positive tokens stand for +1 and negative tokens stand for -1."
+            },
+            {
+              "step": 2,
+              "title": "Make zero pairs",
+              "explanation": "One positive and one negative token together make zero, a zero pair."
+            },
+            {
+              "step": 3,
+              "title": "Cancel the pairs",
+              "explanation": "Remove all zero pairs from a collection of tokens."
+            },
+            {
+              "step": 4,
+              "title": "Count what remains",
+              "explanation": "The leftover tokens give the value, showing how integer addition works."
+            }
+          ],
+          "examples": [
+            "3 positive and 2 negative tokens cancel to leave 1, so 3 + (-2) = 1.",
+            "4 negative and 4 positive tokens cancel completely to make zero."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Token model",
+              "definition": "Using positive and negative tokens to represent integers.",
+              "simpleExample": "The token model shows 2 + (-2) = 0."
+            },
+            {
+              "keyword": "Zero pair",
+              "definition": "One positive and one negative token that cancel to zero.",
+              "simpleExample": "A +1 and a -1 token make a zero pair."
+            },
+            {
+              "keyword": "Integer",
+              "definition": "A whole number that can be positive, negative or zero.",
+              "simpleExample": "-2 is an integer."
+            }
+          ],
+          "quickSummary": "The token model represents integers with positive and negative tokens; a positive and a negative token form a zero pair, and cancelling pairs and counting the rest shows integer addition.",
+          "revisionNotes": [
+            "Positive tokens = +1, negative tokens = -1.",
+            "A positive and a negative token = zero pair.",
+            "Cancel zero pairs.",
+            "Count remaining tokens for the value."
+          ]
+        },
+        {
+          "topicId": "math_ch10_topic3",
+          "topic": "Integers in Other Places",
+          "meaning": "Integers, including negative numbers, are used in real life for temperature, money, depth and direction.",
+          "ncertBasedExplanation": "Negative numbers and integers appear in many real-life situations, not just in textbooks. Temperatures below zero degrees are written as negative numbers, like -5 degrees Celsius on a cold day. In money, what we owe (debt) can be shown as a negative amount, while savings are positive. Depths below sea level are negative while heights above sea level are positive. Even directions, like moving left or right, can be shown with positive and negative numbers. Recognising integers around us shows why negative numbers are useful and important.",
+          "easyExplanation": "Negative numbers are everywhere: freezing temperatures (-5 degrees), money owed, depths below sea level, and directions all use integers.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Temperature",
+              "explanation": "Temperatures below zero are written as negative numbers, like -5 degrees Celsius."
+            },
+            {
+              "step": 2,
+              "title": "Money",
+              "explanation": "Money owed (debt) is shown as negative; savings are positive."
+            },
+            {
+              "step": 3,
+              "title": "Depth and height",
+              "explanation": "Depths below sea level are negative; heights above sea level are positive."
+            },
+            {
+              "step": 4,
+              "title": "Direction",
+              "explanation": "Opposite directions, like left and right, can be shown using negative and positive numbers."
+            }
+          ],
+          "examples": [
+            "A temperature of 4 degrees below zero is written as -4 degrees Celsius.",
+            "A place 200 metres below sea level can be shown as -200 metres."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Integer",
+              "definition": "A whole number that is positive, negative or zero.",
+              "simpleExample": "-7 is an integer."
+            },
+            {
+              "keyword": "Below sea level",
+              "definition": "A depth lower than the sea surface, shown as negative.",
+              "simpleExample": "-100 m means 100 m below sea level."
+            },
+            {
+              "keyword": "Debt",
+              "definition": "Money that is owed, shown as a negative amount.",
+              "simpleExample": "Owing 50 rupees can be written as -50."
+            }
+          ],
+          "quickSummary": "Integers, including negative numbers, are used in real life for temperatures below zero, money owed, depths below sea level and directions, showing why they are useful.",
+          "revisionNotes": [
+            "Negative numbers appear in real life.",
+            "Temperature below zero = negative.",
+            "Debt negative, savings positive.",
+            "Below sea level negative; directions use integers."
+          ]
+        },
+        {
+          "topicId": "math_ch10_topic4",
+          "topic": "Explorations with Integers (Adding and Subtracting)",
+          "meaning": "Integers can be added and subtracted using the number line or token model, following clear rules.",
+          "ncertBasedExplanation": "We can add and subtract integers using the number line or the token model. On the number line, adding a positive number means moving to the right and adding a negative number means moving to the left; subtracting reverses the direction. Using tokens, we combine tokens and cancel zero pairs. From these, we see rules such as: adding two negatives gives a negative, and adding a positive and a negative gives the difference with the sign of the larger. Exploring these helps us calculate confidently with positive and negative numbers.",
+          "easyExplanation": "Add and subtract integers using a number line (right for positive, left for negative) or tokens. Two negatives add to a negative; mixed signs give the difference.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Use the number line",
+              "explanation": "Adding a positive moves right; adding a negative moves left on the number line."
+            },
+            {
+              "step": 2,
+              "title": "Subtract by reversing",
+              "explanation": "Subtracting an integer reverses the direction of movement."
+            },
+            {
+              "step": 3,
+              "title": "Use tokens",
+              "explanation": "Combine positive and negative tokens and cancel zero pairs to find the result."
+            },
+            {
+              "step": 4,
+              "title": "Notice the rules",
+              "explanation": "Two negatives add to a negative; a positive and a negative give the difference with the larger one's sign."
+            }
+          ],
+          "examples": [
+            "On a number line, 3 + (-5) moves left to give -2.",
+            "(-4) + (-3) = -7, since two negatives add to a negative."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Number line",
+              "definition": "A line with numbers in order used to add/subtract.",
+              "simpleExample": "We add integers by moving along the number line."
+            },
+            {
+              "keyword": "Integer addition",
+              "definition": "Combining integers to get a sum.",
+              "simpleExample": "2 + (-5) = -3."
+            },
+            {
+              "keyword": "Sign",
+              "definition": "Whether a number is positive (+) or negative (-).",
+              "simpleExample": "The sign of -6 is negative."
+            }
+          ],
+          "quickSummary": "Integers are added and subtracted using the number line (right for positive, left for negative) or the token model; rules emerge, like two negatives giving a negative.",
+          "revisionNotes": [
+            "Number line: right for +, left for -.",
+            "Subtracting reverses the direction.",
+            "Tokens: combine and cancel zero pairs.",
+            "Two negatives add to a negative."
+          ]
+        },
+        {
+          "topicId": "math_ch10_topic5",
+          "topic": "A Pinch of History (of Zero and Negative Numbers)",
+          "meaning": "Zero and negative numbers have a rich history, with India playing a key role in developing the idea of zero.",
+          "ncertBasedExplanation": "The ideas of zero and negative numbers took a long time to develop in history. Ancient Indian mathematicians, especially Brahmagupta, made major contributions by treating zero as a number and giving rules for working with positive and negative numbers (which he linked to fortunes and debts). The concept of zero, developed in India, later spread to the rest of the world and became essential to all of mathematics. Learning this history shows the great contribution of Indian mathematics and how important ideas grow over time.",
+          "easyExplanation": "Zero and negative numbers have a long history. Indian mathematicians like Brahmagupta first treated zero as a number and gave rules for negatives, ideas that spread worldwide.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Ideas took time",
+              "explanation": "Zero and negative numbers developed gradually over a long history."
+            },
+            {
+              "step": 2,
+              "title": "India's key role",
+              "explanation": "Indian mathematicians, especially Brahmagupta, treated zero as a number."
+            },
+            {
+              "step": 3,
+              "title": "Rules for negatives",
+              "explanation": "Brahmagupta gave rules for positive and negative numbers, linked to fortunes and debts."
+            },
+            {
+              "step": 4,
+              "title": "Spread worldwide",
+              "explanation": "The Indian idea of zero spread across the world and became essential to mathematics."
+            }
+          ],
+          "examples": [
+            "Brahmagupta, an Indian mathematician, wrote rules for using zero and negative numbers.",
+            "The concept of zero developed in India and spread to the rest of the world."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Zero",
+              "definition": "The number that separates positive and negative numbers.",
+              "simpleExample": "Zero was developed as a number in India."
+            },
+            {
+              "keyword": "Brahmagupta",
+              "definition": "An ancient Indian mathematician who worked with zero and negatives.",
+              "simpleExample": "Brahmagupta gave rules for negative numbers."
+            },
+            {
+              "keyword": "Negative number",
+              "definition": "A number less than zero.",
+              "simpleExample": "-5 is a negative number."
+            }
+          ],
+          "quickSummary": "Zero and negative numbers have a rich history, with Indian mathematicians like Brahmagupta first treating zero as a number and giving rules for negatives, ideas that spread worldwide.",
+          "revisionNotes": [
+            "Zero and negatives developed over a long history.",
+            "India, especially Brahmagupta, treated zero as a number.",
+            "Brahmagupta gave rules for negative numbers.",
+            "The idea of zero spread worldwide from India."
+          ]
+        }
+      ]
+    }
+  ]
+}

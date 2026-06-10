@@ -1,0 +1,1031 @@
+{
+  "class": 6,
+  "board": "CBSE",
+  "source": "NCERT",
+  "subject": "English",
+  "bookName": "Poorvi",
+  "chapters": [
+    {
+      "chapterNumber": 1,
+      "chapter": "Unit 1: Fables and Folk Tales",
+      "topics": [
+        {
+          "topicId": "eng_unit1_topic1",
+          "topic": "A Bottle of Dew (Prose)",
+          "meaning": "A folk tale about a lazy man who learns that there is no shortcut to success and that hard work is the real magic.",
+          "ncertBasedExplanation": "This is a folk tale about a man named Rama Natha who believed there was a magic potion that would make him rich without any effort. He goes to a wise sage for help. The clever sage tells him that to make the potion he must collect five litres of dew from banana leaves, but he must plant the banana trees and collect the dew with his own hands. Rama Natha plants rows of banana plants, tends them carefully with his wife Madhumati's help, sells the bananas, and after six years of hard work he becomes prosperous and finally collects the five litres of dew. The sage then reveals that the real 'magic' was Rama Natha's own hard work. The story teaches that there is no shortcut to success.",
+          "easyExplanation": "A lazy man wanted a magic potion to get rich. A wise sage made him grow banana trees and collect dew for years. The hard work itself made him rich, showing there is no shortcut to success.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Beginning",
+              "explanation": "Rama Natha believes in a magic potion that will make him rich without effort and asks a sage for help."
+            },
+            {
+              "step": 2,
+              "title": "The sage's clever trick",
+              "explanation": "The sage tells him to collect five litres of dew from banana plants he must grow and tend himself."
+            },
+            {
+              "step": 3,
+              "title": "Years of hard work",
+              "explanation": "Rama Natha plants and tends banana trees with his wife's help and sells the crop, slowly growing prosperous."
+            },
+            {
+              "step": 4,
+              "title": "The lesson revealed",
+              "explanation": "After six years he succeeds, and the sage reveals the real magic was his own hard work."
+            }
+          ],
+          "examples": [
+            "Rama Natha's wife Madhumati helps gather and sell the bananas at a good price.",
+            "The moral of the story is that hard work is the true secret to success, with no shortcuts."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Folk tale",
+              "definition": "A traditional story passed down among people, often with a lesson.",
+              "simpleExample": "'A Bottle of Dew' is a folk tale."
+            },
+            {
+              "keyword": "Potion",
+              "definition": "A liquid believed to have magical powers.",
+              "simpleExample": "Rama Natha wanted a magic potion."
+            },
+            {
+              "keyword": "Dew",
+              "definition": "Tiny drops of water that form on leaves at night.",
+              "simpleExample": "He collected dew from banana leaves."
+            },
+            {
+              "keyword": "Tended",
+              "definition": "Looked after carefully.",
+              "simpleExample": "He tended his banana plants every day."
+            }
+          ],
+          "quickSummary": "In the folk tale 'A Bottle of Dew', a man seeking a magic potion to get rich is cleverly led by a sage to work hard growing bananas for six years, learning that hard work itself is the real magic.",
+          "revisionNotes": [
+            "Genre: folk tale (prose).",
+            "Main characters: Rama Natha, his wife Madhumati, the sage.",
+            "Plot: man wants easy riches; sage makes him work.",
+            "Moral: hard work is the real magic; no shortcut to success."
+          ]
+        },
+        {
+          "topicId": "eng_unit1_topic2",
+          "topic": "The Raven and the Fox (Poem)",
+          "meaning": "A fable-poem by Jean de La Fontaine warning that we should not be fooled by flattery and sweet words.",
+          "ncertBasedExplanation": "This is a fable in the form of a poem, retold from Jean de La Fontaine. A raven sits on a tree holding a piece of food (a morsel) in his beak. A cunning fox, named Reynard, wants the food. The fox flatters the raven, praising his beautiful feathers and saying he would be called the king of birds if only he could sing. The proud raven, forgetting that his voice is only a croak, opens his beak to sing, and the food drops down. The fox quickly grabs it and laughs, teaching the raven a lesson: ignore sweet words that flatter you, because pride is unwise. The poem warns us against being fooled by flattery.",
+          "easyExplanation": "A clever fox flatters a raven holding food, praising his voice. The proud raven opens his beak to sing, drops the food, and the fox grabs it. Lesson: don't be fooled by flattery.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "The raven with food",
+              "explanation": "A raven sits on a tree holding a tasty morsel in his beak."
+            },
+            {
+              "step": 2,
+              "title": "The fox flatters him",
+              "explanation": "The cunning fox praises the raven's feathers and asks him to sing, calling him king of birds."
+            },
+            {
+              "step": 3,
+              "title": "The raven is fooled",
+              "explanation": "Forgetting his croaky voice, the proud raven opens his beak to sing and drops the food."
+            },
+            {
+              "step": 4,
+              "title": "The fox's lesson",
+              "explanation": "The fox grabs the food and warns that pride is unwise and one should ignore flattering words."
+            }
+          ],
+          "examples": [
+            "The fox calls the raven a 'handsome bird' to trick him into singing.",
+            "The moral is to beware of flattery and not let pride make us foolish."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Fable",
+              "definition": "A short story, often with animals, that teaches a moral.",
+              "simpleExample": "'The Raven and the Fox' is a fable."
+            },
+            {
+              "keyword": "Flattery",
+              "definition": "Excessive praise meant to please or trick someone.",
+              "simpleExample": "The fox used flattery to fool the raven."
+            },
+            {
+              "keyword": "Morsel",
+              "definition": "A small piece of food.",
+              "simpleExample": "The raven held a morsel in his beak."
+            },
+            {
+              "keyword": "Pride",
+              "definition": "Too high an opinion of oneself.",
+              "simpleExample": "The raven's pride made him lose his food."
+            }
+          ],
+          "quickSummary": "In the fable-poem 'The Raven and the Fox' by La Fontaine, a fox flatters a raven into singing so he drops his food; it teaches us to beware of flattery and not let pride make us foolish.",
+          "revisionNotes": [
+            "Genre: fable in verse (poem). Poet: Jean de La Fontaine.",
+            "Characters: the raven and the fox (Reynard).",
+            "Plot: fox flatters raven, raven drops food, fox grabs it.",
+            "Moral: beware of flattery; pride is unwise."
+          ]
+        },
+        {
+          "topicId": "eng_unit1_topic3",
+          "topic": "Rama to the Rescue (Prose)",
+          "meaning": "A clever folk tale in which quick thinking helps a family outwit a thief who has entered their home.",
+          "ncertBasedExplanation": "This is a folk tale about how quick thinking and presence of mind can solve a difficult problem. The word 'rescue' means to save someone from danger. In the story, a thief enters a family's house at night. Instead of panicking, the husband cleverly talks loudly to his wife so the thief overhears, and he uses his cleverness (and the help of the kotwal, the policeman) to trap and catch the thief. The story shows that staying calm and thinking quickly is far better than being frightened and giving up. It encourages us to face problems bravely and find smart solutions.",
+          "easyExplanation": "A thief sneaks into a family's house. Instead of panicking, the clever husband tricks the thief and, with the kotwal's help, gets him caught. It shows that quick thinking solves problems.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "A problem appears",
+              "explanation": "A thief enters the family's house at night, creating danger."
+            },
+            {
+              "step": 2,
+              "title": "Stay calm, think fast",
+              "explanation": "Instead of panicking, the husband thinks quickly about how to handle the thief."
+            },
+            {
+              "step": 3,
+              "title": "A clever plan",
+              "explanation": "He cleverly talks and acts to trap the thief, using the help of the kotwal (policeman)."
+            },
+            {
+              "step": 4,
+              "title": "The lesson",
+              "explanation": "The thief is caught, showing that quick thinking and courage beat fear and giving up."
+            }
+          ],
+          "examples": [
+            "The policeman in the story is called the kotwal (also thaanedar).",
+            "The story teaches us to think quickly and stay brave when facing a problem."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Rescue",
+              "definition": "To save someone from danger.",
+              "simpleExample": "Firefighters rescue people from a fire."
+            },
+            {
+              "keyword": "Kotwal",
+              "definition": "A word for a policeman.",
+              "simpleExample": "The kotwal helped catch the thief."
+            },
+            {
+              "keyword": "Presence of mind",
+              "definition": "The ability to think and act calmly in a difficult situation.",
+              "simpleExample": "Her presence of mind saved the day."
+            },
+            {
+              "keyword": "Folk tale",
+              "definition": "A traditional story passed down through generations.",
+              "simpleExample": "'Rama to the Rescue' is a folk tale."
+            }
+          ],
+          "quickSummary": "In the folk tale 'Rama to the Rescue', a family cleverly outwits a thief who breaks into their home with quick thinking and the kotwal's help, showing that calm, clever action beats panic.",
+          "revisionNotes": [
+            "Genre: folk tale (prose).",
+            "'Rescue' means to save someone from danger.",
+            "Plot: a thief enters; the family cleverly traps him.",
+            "Theme: quick thinking and courage solve problems."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 2,
+      "chapter": "Unit 2: Friendship",
+      "topics": [
+        {
+          "topicId": "eng_unit2_topic1",
+          "topic": "The Unlikely Best Friends (Prose)",
+          "meaning": "A story about a lonely royal elephant and a stray dog who become the best of friends, showing friendship can cross all differences.",
+          "ncertBasedExplanation": "This is a heart-warming story about friendship between two very different animals. Gajaraj, a royal elephant, lives in the best stable and has every comfort, but he is sad because he has no friends; only the kind mahout (elephant trainer) looks after him. One evening a tired, hungry stray dog wanders into the stable. Gajaraj kindly shares his food, and the two animals slowly become close, playful friends. When the dog is one day taken away, Gajaraj becomes very sad and stops eating, until the dog is brought back and their friendship is restored. The story shows that true friendship can grow between the most unlikely companions and that friends are very important for happiness.",
+          "easyExplanation": "A lonely royal elephant, Gajaraj, befriends a stray dog who wanders into his stable. They become best friends, showing that friendship can grow between very different creatures.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "A lonely elephant",
+              "explanation": "Gajaraj the royal elephant has every comfort but is sad because he has no friend."
+            },
+            {
+              "step": 2,
+              "title": "A stray dog arrives",
+              "explanation": "A tired, hungry stray dog wanders into the stable, and Gajaraj kindly shares his food."
+            },
+            {
+              "step": 3,
+              "title": "A close friendship",
+              "explanation": "The elephant and the dog become playful best friends and are happy together."
+            },
+            {
+              "step": 4,
+              "title": "Friendship restored",
+              "explanation": "When the dog is taken away, the sad Gajaraj stops eating until his friend is returned."
+            }
+          ],
+          "examples": [
+            "Gajaraj shares his food with the hungry stray dog, beginning their friendship.",
+            "The story shows that true friends can come from the most unlikely places."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Stray",
+              "definition": "An animal that has no home and wanders about.",
+              "simpleExample": "A stray dog came into the stable."
+            },
+            {
+              "keyword": "Mahout",
+              "definition": "A person who looks after and trains an elephant.",
+              "simpleExample": "The mahout fed and bathed Gajaraj."
+            },
+            {
+              "keyword": "Stable",
+              "definition": "A building where animals like horses or elephants are kept.",
+              "simpleExample": "Gajaraj lived in the royal stable."
+            },
+            {
+              "keyword": "Companion",
+              "definition": "A friend who spends time with you.",
+              "simpleExample": "The dog became Gajaraj's companion."
+            }
+          ],
+          "quickSummary": "In 'The Unlikely Best Friends', a lonely royal elephant named Gajaraj and a stray dog become devoted friends, showing that true friendship can grow between the most different of creatures.",
+          "revisionNotes": [
+            "Genre: short story (prose).",
+            "Characters: Gajaraj the elephant, a stray dog, the mahout.",
+            "Plot: lonely elephant befriends a stray dog.",
+            "Theme: friendship can cross all differences."
+          ]
+        },
+        {
+          "topicId": "eng_unit2_topic2",
+          "topic": "A Friend's Prayer (Poem)",
+          "meaning": "A poem by Jill Wolf in which the speaker prays to be a true, loving friend who accepts friends as they are.",
+          "ncertBasedExplanation": "This is a gentle poem by Jill Wolf about what it means to be a good friend. In the poem, the speaker prays that friendships will always be the most important thing to them, and that they will give their very best to their friends. The speaker wishes to do more than just share hopes and plans; they want to help make their friends' wishes come true. Most importantly, the speaker prays to use the heart to understand friends, to make no judgements 'from afar', and to love friends just the way they are. The poem teaches that true friendship means giving, understanding and accepting friends without judging them.",
+          "easyExplanation": "In this poem, the speaker prays to be a true friend: to give their best, help friends' wishes come true, and love friends just as they are, without judging them.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Friendship comes first",
+              "explanation": "The speaker prays that friendships will always be the most important thing to them."
+            },
+            {
+              "step": 2,
+              "title": "Giving your best",
+              "explanation": "The speaker promises to give their very best and do all that a friend can do."
+            },
+            {
+              "step": 3,
+              "title": "Helping friends",
+              "explanation": "The speaker wishes to help make their friends' hopes and wishes come true."
+            },
+            {
+              "step": 4,
+              "title": "Accepting friends",
+              "explanation": "The speaker prays to understand friends with the heart and love them just the way they are."
+            }
+          ],
+          "examples": [
+            "The speaker promises to 'make no judgements from afar' but love friends as they are.",
+            "The poem shows that a true friend gives their best and accepts friends without judging."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Prayer",
+              "definition": "A wish or hope expressed sincerely.",
+              "simpleExample": "The poem is a friend's prayer."
+            },
+            {
+              "keyword": "Blessed",
+              "definition": "Lucky or fortunate.",
+              "simpleExample": "The speaker feels blessed to have special friends."
+            },
+            {
+              "keyword": "Judgement",
+              "definition": "Forming an opinion about someone, often critically.",
+              "simpleExample": "The speaker makes no judgement of friends."
+            },
+            {
+              "keyword": "Realise",
+              "definition": "To understand or become aware of something.",
+              "simpleExample": "She came to realise what friends can be."
+            }
+          ],
+          "quickSummary": "'A Friend's Prayer' by Jill Wolf is a poem in which the speaker prays to be a true friend who gives their best, helps friends' wishes come true, and loves friends just as they are.",
+          "revisionNotes": [
+            "Genre: poem. Poet: Jill Wolf.",
+            "Theme: being a true, giving and understanding friend.",
+            "Key idea: love friends as they are, without judging.",
+            "Message: friendship means giving your best."
+          ]
+        },
+        {
+          "topicId": "eng_unit2_topic3",
+          "topic": "The Chair (Prose)",
+          "meaning": "A story about a show-off boy named Mario who learns the difference between many acquaintances and a few true friends.",
+          "ncertBasedExplanation": "This is a story about a boy named Mario who loved to have lots of friends and showed off a great deal, always boasting about how much he had. Through the events of the story, Mario comes to understand that having many people around who are impressed by his showing off is not the same as having true friends. He learns that real friends are those who care about you for who you are, not for what you have. The story, along with its activities on words for 'friend' (like partner, buddies, companion, classmates), helps us think about the true meaning of friendship and the value of genuine friends over mere show.",
+          "easyExplanation": "Mario loved showing off and having lots of friends. He learns that boasting does not win true friends; real friends care about who you are, not what you have.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Mario shows off",
+              "explanation": "Mario loves having many friends and shows off, boasting about all he has."
+            },
+            {
+              "step": 2,
+              "title": "Lots of admirers",
+              "explanation": "Many people are around him, impressed by his showing off."
+            },
+            {
+              "step": 3,
+              "title": "A realisation",
+              "explanation": "Mario learns that being admired for showing off is not the same as having true friends."
+            },
+            {
+              "step": 4,
+              "title": "True friendship",
+              "explanation": "He understands that real friends care about who you are, not what you own."
+            }
+          ],
+          "examples": [
+            "The lesson uses many words for friend: partner, buddies, companion, classmates.",
+            "The story shows that true friends value you for yourself, not for what you have."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Show off",
+              "definition": "To try to impress others by boasting.",
+              "simpleExample": "Mario liked to show off his things."
+            },
+            {
+              "keyword": "Companion",
+              "definition": "A person you spend a lot of time with.",
+              "simpleExample": "A good companion is a kind of friend."
+            },
+            {
+              "keyword": "Genuine",
+              "definition": "Real and sincere.",
+              "simpleExample": "A genuine friend cares about you truly."
+            },
+            {
+              "keyword": "Acquaintance",
+              "definition": "Someone you know slightly, but not a close friend.",
+              "simpleExample": "Many were acquaintances, not real friends."
+            }
+          ],
+          "quickSummary": "'The Chair' is a story about Mario, a boy who shows off to win friends but learns that true friends value him for who he is, not for what he has.",
+          "revisionNotes": [
+            "Genre: short story (prose).",
+            "Main character: Mario, who loves to show off.",
+            "Plot: Mario learns what true friendship means.",
+            "Theme: real friends care for who you are, not what you own."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 3,
+      "chapter": "Unit 3: Nurturing Nature",
+      "topics": [
+        {
+          "topicId": "eng_unit3_topic1",
+          "topic": "Neem Baba (Poem)",
+          "meaning": "A poem in the form of a conversation between a girl, Amber, and a neem tree, celebrating the neem's many medicinal and useful qualities.",
+          "ncertBasedExplanation": "This is a poem written as a friendly conversation between a girl named Amber and a neem tree she lovingly calls 'Neem Baba'. Sitting in the shade of the neem tree in her courtyard, Amber feels the tree is whispering to her and begins to talk with it. Through their conversation, the neem tree tells Amber about its many uses: how its leaves, bark and other parts are used to make medicines, how it keeps people healthy, and how it has served people for a very long time. The poem teaches us to value and respect trees, especially the neem, and reminds us how important nature is to our health and daily life.",
+          "easyExplanation": "A girl named Amber talks to a neem tree she calls 'Neem Baba'. The tree tells her about its many medicinal uses. The poem celebrates the neem tree and the value of nature.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Amber meets the tree",
+              "explanation": "Amber sits in the shade of the neem tree and feels it whispering to her."
+            },
+            {
+              "step": 2,
+              "title": "A friendly talk",
+              "explanation": "She politely greets the tree, calling it 'Neem Baba', and begins a conversation."
+            },
+            {
+              "step": 3,
+              "title": "The neem's uses",
+              "explanation": "The tree describes how its leaves and bark are used to make medicines and keep people healthy."
+            },
+            {
+              "step": 4,
+              "title": "Respecting nature",
+              "explanation": "The poem reminds us to value and respect trees like the neem for all they give us."
+            }
+          ],
+          "examples": [
+            "Parts of the neem tree are used to prepare natural medicines.",
+            "The poem shows respect for nature by treating the neem tree like a wise elder, 'Neem Baba'."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Neem",
+              "definition": "A common Indian tree known for its medicinal uses.",
+              "simpleExample": "Neem leaves are used in medicines."
+            },
+            {
+              "keyword": "Medicinal",
+              "definition": "Having healing or curing properties.",
+              "simpleExample": "The neem has medicinal qualities."
+            },
+            {
+              "keyword": "Courtyard",
+              "definition": "An open space inside or beside a house.",
+              "simpleExample": "The neem tree grew in Amber's courtyard."
+            },
+            {
+              "keyword": "Respect",
+              "definition": "To treat with care and high regard.",
+              "simpleExample": "We should respect trees and nature."
+            }
+          ],
+          "quickSummary": "'Neem Baba' is a poem in which a girl, Amber, talks with a neem tree about its many medicinal uses, celebrating the neem and teaching us to respect nature.",
+          "revisionNotes": [
+            "Genre: poem (conversation form).",
+            "Characters: Amber and the neem tree ('Neem Baba').",
+            "Content: the neem's medicinal and useful qualities.",
+            "Theme: valuing and respecting nature and trees."
+          ]
+        },
+        {
+          "topicId": "eng_unit3_topic2",
+          "topic": "What a Bird Thought (Poem)",
+          "meaning": "A poem that describes the world from a baby bird's point of view as it grows from its egg and nest and learns to fly out into the wide world.",
+          "ncertBasedExplanation": "This is an imaginative poem that shows the world through the eyes of a baby bird. At first, the little bird lives in a tiny 'house' (its egg or nest) and thinks that small world is all there is, and it is quite happy there. As it grows, the bird begins to look out and sees a much bigger and more beautiful world outside. Finally, the bird learns to fly and goes out to explore the wide world beyond its nest. The poem gently shows how living things grow, become curious and brave, and discover that the world is much larger than they first thought. It celebrates growth, curiosity and the joy of exploring.",
+          "easyExplanation": "A baby bird first thinks its tiny nest is the whole world. As it grows, it sees a bigger world outside and finally flies out to explore it. The poem celebrates growth and curiosity.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "A tiny world",
+              "explanation": "At first the baby bird lives in its little 'house' and thinks that small world is all there is."
+            },
+            {
+              "step": 2,
+              "title": "Looking out",
+              "explanation": "As it grows, the bird begins to notice a much bigger world outside its nest."
+            },
+            {
+              "step": 3,
+              "title": "Learning to fly",
+              "explanation": "The bird grows braver and learns to fly out from its nest."
+            },
+            {
+              "step": 4,
+              "title": "Exploring the world",
+              "explanation": "Finally it goes out to explore the wide, beautiful world beyond, full of curiosity."
+            }
+          ],
+          "examples": [
+            "The bird first thinks its little nest is the whole world.",
+            "The poem celebrates growing up, curiosity and the courage to explore."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Pale",
+              "definition": "Light in colour, not dark.",
+              "simpleExample": "The feather's colour was pale."
+            },
+            {
+              "keyword": "Fluttered",
+              "definition": "Moved the wings lightly and quickly.",
+              "simpleExample": "The butterfly fluttered onto the flower."
+            },
+            {
+              "keyword": "Curiosity",
+              "definition": "A strong wish to learn or know.",
+              "simpleExample": "The bird's curiosity led it to explore."
+            },
+            {
+              "keyword": "Explore",
+              "definition": "To travel and discover new places.",
+              "simpleExample": "The bird flew out to explore the world."
+            }
+          ],
+          "quickSummary": "'What a Bird Thought' is a poem describing the world from a baby bird's view as it grows from its tiny nest, learns to fly and discovers the wide world, celebrating growth and curiosity.",
+          "revisionNotes": [
+            "Genre: poem.",
+            "Point of view: a baby bird's.",
+            "Plot: bird grows from its nest and flies out to explore.",
+            "Theme: growth, curiosity and exploring the world."
+          ]
+        },
+        {
+          "topicId": "eng_unit3_topic3",
+          "topic": "Spices that Heal Us (Prose)",
+          "meaning": "An informative letter explaining how common Indian spices are not only used in cooking but also work as natural home remedies.",
+          "ncertBasedExplanation": "This lesson is written as a friendly letter that explains how common Indian spices are used to heal us, not just to add taste and colour to food. The writer is happy that some natural cures shared earlier helped the readers (Vikram and Vaibhavi) get better. The letter describes many everyday spices, such as turmeric, fenugreek, cumin, ginger, black pepper, cinnamon, clove and cardamom, and explains how they can be used as simple home remedies for common problems. The writer learnt these cures as a child and encourages the readers to remember them and share them with friends. The lesson highlights the value of traditional Indian knowledge about spices and health.",
+          "easyExplanation": "Written as a letter, this lesson explains how common Indian spices like turmeric, ginger and cumin are used as natural home remedies, not just for cooking. It values traditional knowledge.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Spices in cooking",
+              "explanation": "Spices are used to give taste and colour to our food."
+            },
+            {
+              "step": 2,
+              "title": "Spices as medicine",
+              "explanation": "The letter explains that many spices can also be used as natural cures."
+            },
+            {
+              "step": 3,
+              "title": "Common examples",
+              "explanation": "It names spices like turmeric, fenugreek, cumin, ginger, cinnamon and cardamom and their healing uses."
+            },
+            {
+              "step": 4,
+              "title": "Passing on knowledge",
+              "explanation": "The writer learnt these cures as a child and encourages readers to remember and share them."
+            }
+          ],
+          "examples": [
+            "Turmeric, ginger and cumin are spices used both in cooking and as home remedies.",
+            "The lesson values traditional Indian knowledge about using spices for health."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Spice",
+              "definition": "A part of a plant used to flavour food, often with healing uses.",
+              "simpleExample": "Turmeric is a spice."
+            },
+            {
+              "keyword": "Remedy",
+              "definition": "A cure or treatment for an illness.",
+              "simpleExample": "Ginger tea is a remedy for a cold."
+            },
+            {
+              "keyword": "Heal",
+              "definition": "To make healthy or well again.",
+              "simpleExample": "Some spices help heal us."
+            },
+            {
+              "keyword": "Natural cure",
+              "definition": "A treatment using natural things like herbs or spices.",
+              "simpleExample": "The letter shared natural cures."
+            }
+          ],
+          "quickSummary": "'Spices that Heal Us' is an informative letter explaining how common Indian spices like turmeric, ginger and cumin are used as natural home remedies, valuing traditional knowledge about health.",
+          "revisionNotes": [
+            "Genre: informative letter (prose).",
+            "Content: spices used as natural home remedies.",
+            "Examples: turmeric, fenugreek, cumin, ginger, cardamom.",
+            "Theme: traditional Indian knowledge of spices and health."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 4,
+      "chapter": "Unit 4: Sports and Wellness",
+      "topics": [
+        {
+          "topicId": "eng_unit4_topic1",
+          "topic": "Change of Heart (Prose)",
+          "meaning": "A story about a boy named Prabhat who always wanted to win and could not bear losing, until he learns the value of sporting spirit.",
+          "ncertBasedExplanation": "This is a story about a boy named Prabhat who always wanted to win and simply could not bear to lose, not even at a game of marbles. Winning made him feel so good that he never wanted to give up that feeling, and losing upset him greatly. His parents, teachers and friends felt that he did not know how to accept defeat. Through the events of the story, Prabhat has a 'change of heart': he learns that games are meant to be enjoyed, that losing is a part of playing, and that true sporting spirit means being fair, respecting other players and accepting both winning and losing gracefully. The story teaches the importance of good sportsmanship.",
+          "easyExplanation": "Prabhat always wanted to win and hated losing, even at marbles. Through the story he has a change of heart and learns sporting spirit: to play fairly and accept defeat gracefully.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Prabhat hates losing",
+              "explanation": "Prabhat always wanted to win and could not bear losing, even at marbles."
+            },
+            {
+              "step": 2,
+              "title": "Others notice",
+              "explanation": "His parents, teachers and friends feel he does not know how to accept defeat."
+            },
+            {
+              "step": 3,
+              "title": "A change of heart",
+              "explanation": "Through the events of the story, Prabhat slowly changes his attitude towards winning and losing."
+            },
+            {
+              "step": 4,
+              "title": "Sporting spirit",
+              "explanation": "He learns that good sportsmanship means being fair and accepting both victory and defeat gracefully."
+            }
+          ],
+          "examples": [
+            "Prabhat could not bear to lose even a simple game of marbles.",
+            "The story teaches sporting spirit: being fair and respecting every player."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Opponent",
+              "definition": "Someone you compete against in a game.",
+              "simpleExample": "He shook hands with his opponent after the match."
+            },
+            {
+              "keyword": "Sporting spirit",
+              "definition": "Being fair and respecting all players in a game.",
+              "simpleExample": "Good players show sporting spirit."
+            },
+            {
+              "keyword": "Defeat",
+              "definition": "A loss in a game or contest.",
+              "simpleExample": "He learned to accept defeat gracefully."
+            },
+            {
+              "keyword": "Friendly match",
+              "definition": "A game played for fun, not competition.",
+              "simpleExample": "They played a friendly match in the park."
+            }
+          ],
+          "quickSummary": "'Change of Heart' is a story about Prabhat, who hates losing but has a change of heart and learns sporting spirit, accepting both winning and losing with grace.",
+          "revisionNotes": [
+            "Genre: short story (prose).",
+            "Main character: Prabhat, who hates losing.",
+            "Plot: he learns to accept defeat.",
+            "Theme: sporting spirit and good sportsmanship."
+          ]
+        },
+        {
+          "topicId": "eng_unit4_topic2",
+          "topic": "The Winner (Poem)",
+          "meaning": "A playful poem by Georgia Heard about children enjoying a game outdoors until darkness falls and 'Night wins'.",
+          "ncertBasedExplanation": "This is a lively, playful poem by Georgia Heard about the simple joy of playing outdoors. The poem describes children playing ball in the evening next to a creek in their neighbour's field. They run so fast that they can hardly catch their breath. As evening turns to night, the 'blue dark' turns to black, the cold grass aches their feet, and the trees seem to 'creep close' in the dark. Finally, when it becomes too dark to play, the game is over, and the poet cleverly says 'Night wins!'. The real winner of the game is not a player but the night itself. The poem captures the fun of outdoor play and the beauty of evening turning into night.",
+          "easyExplanation": "Children play ball outdoors in the evening until it gets dark. When night falls and they have to stop, the poet says 'Night wins!' The poem captures the joy of outdoor play.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Evening play",
+              "explanation": "Children play ball in the evening next to a creek in a neighbour's field."
+            },
+            {
+              "step": 2,
+              "title": "Running fast",
+              "explanation": "They run so fast that they can hardly catch their breath, enjoying the game."
+            },
+            {
+              "step": 3,
+              "title": "Darkness falls",
+              "explanation": "Evening turns to night: the blue dark turns black, the cold grass aches their feet, and trees seem to creep close."
+            },
+            {
+              "step": 4,
+              "title": "Night wins",
+              "explanation": "When it is too dark to play, the game ends and the poet says the real winner is the night."
+            }
+          ],
+          "examples": [
+            "The children run so fast they 'can't even catch their breath'.",
+            "The clever ending says 'Night wins!' because darkness ends the game."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Creek",
+              "definition": "A small stream of water.",
+              "simpleExample": "They played near the creek."
+            },
+            {
+              "keyword": "Aches",
+              "definition": "Feels a dull, continuous pain.",
+              "simpleExample": "The cold grass aches their feet."
+            },
+            {
+              "keyword": "Dusk",
+              "definition": "The time of evening when it grows dark.",
+              "simpleExample": "They played until dusk."
+            },
+            {
+              "keyword": "Imagery",
+              "definition": "Words that create a picture in the mind.",
+              "simpleExample": "'Trees creep close' is an example of imagery."
+            }
+          ],
+          "quickSummary": "'The Winner' by Georgia Heard is a playful poem about children playing outdoors in the evening until darkness ends the game, so the poet declares that 'Night wins'.",
+          "revisionNotes": [
+            "Genre: poem. Poet: Georgia Heard.",
+            "Content: children playing ball until dark.",
+            "Clever ending: 'Night wins!' as darkness stops play.",
+            "Theme: joy of outdoor play and evening turning to night."
+          ]
+        },
+        {
+          "topicId": "eng_unit4_topic3",
+          "topic": "Yoga - A Way of Life (Prose)",
+          "meaning": "An informative lesson explaining what yoga is, its ancient Indian origin, and its benefits for the body, mind and spirit.",
+          "ncertBasedExplanation": "This is an informative lesson about yoga as a way of life. It explains that yoga is a physical, mental and spiritual practice that began in ancient India. The word 'Yoga' comes from the Sanskrit root 'yuj', which means 'to join' or 'to unite', symbolising the unity of mind and body, thought and action, and harmony between human beings and nature. The lesson notes that the sage Patanjali presented the ancient tradition of yoga in a systematic way in the 'Yoga Sutras'. It describes yoga as a holistic approach to health and well-being. The lesson also reminds us that 21st June is celebrated as International Day of Yoga, highlighting yoga as a proud part of India's heritage and a path to wellness.",
+          "easyExplanation": "Yoga is an ancient Indian practice for body, mind and spirit. The word means 'to unite'. Sage Patanjali wrote the Yoga Sutras, and 21st June is International Yoga Day.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "What yoga is",
+              "explanation": "Yoga is a physical, mental and spiritual practice that began in ancient India."
+            },
+            {
+              "step": 2,
+              "title": "Meaning of the word",
+              "explanation": "'Yoga' comes from the Sanskrit 'yuj', meaning 'to join' or 'to unite' mind and body."
+            },
+            {
+              "step": 3,
+              "title": "Patanjali's Yoga Sutras",
+              "explanation": "The sage Patanjali presented yoga systematically in the 'Yoga Sutras'."
+            },
+            {
+              "step": 4,
+              "title": "Yoga for wellness",
+              "explanation": "Yoga is a holistic path to health, and 21st June is celebrated as International Day of Yoga."
+            }
+          ],
+          "examples": [
+            "The word 'Yoga' comes from the Sanskrit root 'yuj', meaning 'to unite'.",
+            "21st June is celebrated worldwide as the International Day of Yoga."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Yoga",
+              "definition": "An ancient Indian practice uniting body, mind and spirit.",
+              "simpleExample": "Yoga keeps the body and mind healthy."
+            },
+            {
+              "keyword": "Unite",
+              "definition": "To join together as one.",
+              "simpleExample": "Yoga unites the mind and body."
+            },
+            {
+              "keyword": "Holistic",
+              "definition": "Concerned with the whole person, body and mind.",
+              "simpleExample": "Yoga is a holistic practice."
+            },
+            {
+              "keyword": "Sage",
+              "definition": "A wise person.",
+              "simpleExample": "The sage Patanjali wrote the Yoga Sutras."
+            }
+          ],
+          "quickSummary": "'Yoga - A Way of Life' explains that yoga is an ancient Indian practice uniting body, mind and spirit; the word means 'to unite', Patanjali wrote the Yoga Sutras, and 21st June is International Yoga Day.",
+          "revisionNotes": [
+            "Genre: informative prose.",
+            "Yoga = ancient Indian practice for body, mind, spirit.",
+            "Word 'yoga' (Sanskrit 'yuj') means 'to unite'.",
+            "Patanjali's Yoga Sutras; 21 June = International Yoga Day."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 5,
+      "chapter": "Unit 5: Culture and Tradition",
+      "topics": [
+        {
+          "topicId": "eng_unit5_topic1",
+          "topic": "Hamara Bharat - Incredible India! (Prose)",
+          "meaning": "An informative passage celebrating India (Bharat) as a land of wise and heroic people, rich culture, and great natural beauty.",
+          "ncertBasedExplanation": "This lesson is a proud celebration of our country, Bharat. It explains that Bharat has been known worldwide as a land of wise and heroic individuals, and that its rich and diverse culture has attracted many travellers since ancient times. The people of Bharat live together in unison, presenting to the world the idea of 'unity in diversity'. The passage describes Bharat as a land rich with rivers, lakes and high mountains, with green forests that are home to many plants, insects, birds and animals. It ends with the advice that, as inhabitants of this great land, we must keep working hard to make sure that Bharat prospers and is respected globally. The lesson fills us with love and pride for our country.",
+          "easyExplanation": "This lesson celebrates Bharat (India) as a land of wise, heroic people with rich culture, rivers, mountains and forests. It teaches unity in diversity and pride in our country.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Land of wise and heroic people",
+              "explanation": "Bharat has been known worldwide as a land of wise and heroic individuals."
+            },
+            {
+              "step": 2,
+              "title": "Rich, diverse culture",
+              "explanation": "Its rich and diverse culture has attracted travellers since ancient times, showing unity in diversity."
+            },
+            {
+              "step": 3,
+              "title": "Natural beauty",
+              "explanation": "Bharat is rich with rivers, lakes, high mountains and green forests full of wildlife."
+            },
+            {
+              "step": 4,
+              "title": "Our duty",
+              "explanation": "As inhabitants, we must work hard so that Bharat prospers and is respected globally."
+            }
+          ],
+          "examples": [
+            "India's people live in unison, presenting 'unity in diversity' to the world.",
+            "The passage advises everyone to work hard for the country's prosperity."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Bharat",
+              "definition": "Another name for India.",
+              "simpleExample": "Bharat is our country."
+            },
+            {
+              "keyword": "Diverse",
+              "definition": "Showing a lot of variety.",
+              "simpleExample": "India has a diverse culture."
+            },
+            {
+              "keyword": "Unison",
+              "definition": "Together, in agreement.",
+              "simpleExample": "The people live in unison."
+            },
+            {
+              "keyword": "Prosper",
+              "definition": "To grow successful and do well.",
+              "simpleExample": "We work hard so our country can prosper."
+            }
+          ],
+          "quickSummary": "'Hamara Bharat - Incredible India!' is a passage celebrating India as a land of wise, heroic people, rich diverse culture, and natural beauty, teaching unity in diversity and pride in our nation.",
+          "revisionNotes": [
+            "Genre: informative prose.",
+            "Theme: pride in India (Bharat) and unity in diversity.",
+            "Content: India's wise people, culture, rivers, mountains, forests.",
+            "Message: work hard for the country's prosperity."
+          ]
+        },
+        {
+          "topicId": "eng_unit5_topic2",
+          "topic": "The Kites (Poem)",
+          "meaning": "A poem by Daphne Lister in which a child watches colourful kites and wishes to fly high in the sky like them.",
+          "ncertBasedExplanation": "This is an imaginative poem by Daphne Lister about a child who watches colourful kites flying in the sky. The poet compares the kites to coloured birds in the sky. The child wishes to be small and as light as air, so that they too could ride high up on a kite. The child imagines how much fun it would be to look right down over the park and the rooftops of the town from up in the air, while the people below stand and stare, wishing they could be up there too. The poem beautifully captures a child's imagination, the wish to fly, and the simple joy and freedom of watching kites soar in the sky.",
+          "easyExplanation": "A child watches colourful kites, which look like coloured birds, and wishes to be light as air to ride high on a kite, looking down over the town. The poem is about imagination and the wish to fly.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Watching the kites",
+              "explanation": "A child watches colourful kites flying high, comparing them to coloured birds in the sky."
+            },
+            {
+              "step": 2,
+              "title": "Wishing to be light",
+              "explanation": "The child wishes to be small and as light as air so they could ride a kite."
+            },
+            {
+              "step": 3,
+              "title": "Flying high",
+              "explanation": "The child imagines the fun of looking down over the park and rooftops from high in the air."
+            },
+            {
+              "step": 4,
+              "title": "People staring below",
+              "explanation": "The child imagines the people below standing, staring and wishing they were up there too."
+            }
+          ],
+          "examples": [
+            "The kites are compared to 'coloured birds in the sky'.",
+            "The child wishes to be 'as light as air' to ride high on a kite."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Kite",
+              "definition": "A light frame covered with paper or cloth, flown in the wind.",
+              "simpleExample": "The child flew a colourful kite."
+            },
+            {
+              "keyword": "Soar",
+              "definition": "To fly high in the air.",
+              "simpleExample": "The kites soar in the sky."
+            },
+            {
+              "keyword": "Imagination",
+              "definition": "Forming pictures or ideas in the mind.",
+              "simpleExample": "The poem shows the child's imagination."
+            },
+            {
+              "keyword": "Stare",
+              "definition": "To look at something for a long time.",
+              "simpleExample": "People below stare at the kites."
+            }
+          ],
+          "quickSummary": "'The Kites' by Daphne Lister is a poem in which a child watches colourful kites, compares them to coloured birds, and wishes to fly high on a kite over the town, capturing imagination and the wish to fly.",
+          "revisionNotes": [
+            "Genre: poem. Poet: Daphne Lister.",
+            "Kites compared to coloured birds.",
+            "Child wishes to be light as air and fly high.",
+            "Theme: imagination, freedom and the wish to fly."
+          ]
+        },
+        {
+          "topicId": "eng_unit5_topic3",
+          "topic": "Ila Sachani: Embroidering Dreams with her Feet (Prose)",
+          "meaning": "An inspiring true story about Ila Sachani, who, born without the use of her hands, became a skilled embroidery artist using her feet.",
+          "ncertBasedExplanation": "This is an inspiring real-life story about Ila Sachani, who lives in Moti Vavdi village, Bhavnagar, Gujarat. Ila was born without the use of her hands, but she did not let this stop her. With great determination and practice, she learned to do beautiful Kathiawar embroidery using her feet. The lesson invites us to think about how difficult tasks like embroidery, normally done with the hands, can be mastered with the feet through hard work. It also mentions other inspiring people, like Pranav, who achieved great things despite being born without hands. Ila Sachani's story teaches us about courage, determination and never giving up, and shows that disability cannot stop a strong will.",
+          "easyExplanation": "Ila Sachani from Gujarat was born without the use of her hands but learned to do beautiful Kathiawar embroidery with her feet. Her story shows courage and determination.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Meet Ila Sachani",
+              "explanation": "Ila Sachani lives in Moti Vavdi village, Bhavnagar, Gujarat, and was born without the use of her hands."
+            },
+            {
+              "step": 2,
+              "title": "Her challenge",
+              "explanation": "Embroidery is usually done with the hands, which made it very hard for Ila."
+            },
+            {
+              "step": 3,
+              "title": "Her determination",
+              "explanation": "Through great practice and determination, Ila learned to do Kathiawar embroidery with her feet."
+            },
+            {
+              "step": 4,
+              "title": "An inspiration",
+              "explanation": "Her story, like that of Pranav, inspires us to be brave, determined and never give up."
+            }
+          ],
+          "examples": [
+            "Ila Sachani does beautiful Kathiawar embroidery using her feet instead of her hands.",
+            "Her story, and Pranav's, shows that determination can overcome any difficulty."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Embroidery",
+              "definition": "Decorative designs sewn onto cloth with thread.",
+              "simpleExample": "Ila does Kathiawar embroidery."
+            },
+            {
+              "keyword": "Determination",
+              "definition": "Firmness of purpose; not giving up.",
+              "simpleExample": "Ila's determination made her succeed."
+            },
+            {
+              "keyword": "Disability",
+              "definition": "A condition that limits a person's movements or senses.",
+              "simpleExample": "Ila overcame her disability."
+            },
+            {
+              "keyword": "Inspire",
+              "definition": "To fill someone with the urge to do something.",
+              "simpleExample": "Ila's story inspires us."
+            }
+          ],
+          "quickSummary": "'Ila Sachani: Embroidering Dreams with her Feet' is an inspiring true story of a woman who, born without the use of her hands, learned to do beautiful Kathiawar embroidery with her feet, showing courage and determination.",
+          "revisionNotes": [
+            "Genre: biographical prose (true story).",
+            "Subject: Ila Sachani of Bhavnagar, Gujarat.",
+            "She does Kathiawar embroidery with her feet.",
+            "Theme: courage, determination and never giving up."
+          ]
+        },
+        {
+          "topicId": "eng_unit5_topic4",
+          "topic": "National War Memorial (Poem)",
+          "meaning": "A patriotic poem honouring the brave soldiers of India remembered at the National War Memorial in New Delhi.",
+          "ncertBasedExplanation": "This is a patriotic poem about the National War Memorial, which was built by the Government of India in honour of our brave soldiers. The poem describes the memorial as a grand and respectful sight in the heart of Bharat, where the names of the soldiers are etched in stone, each name telling a story of courage. The soldiers fought for the country on land, in the skies and on the oceans, standing together side by side for Bharat. The poem speaks of the eternal flame (the Amar Jawan Jyoti) that glows in silence, paying homage to their courage and sacrifice. The poem reminds us to always remember, with pride and respect, the soldiers who gave their lives for the nation.",
+          "easyExplanation": "This patriotic poem honours India's brave soldiers at the National War Memorial in Delhi, where their names are etched in stone and an eternal flame glows in their memory.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Built for soldiers",
+              "explanation": "The National War Memorial was built by the Government of India to honour brave soldiers."
+            },
+            {
+              "step": 2,
+              "title": "Names etched in stone",
+              "explanation": "Each soldier's name is etched in stone, with each name telling a story of courage."
+            },
+            {
+              "step": 3,
+              "title": "Sacrifice everywhere",
+              "explanation": "The soldiers fought for Bharat on land, in the skies and on the oceans, side by side."
+            },
+            {
+              "step": 4,
+              "title": "Eternal flame",
+              "explanation": "The eternal flame (Amar Jawan Jyoti) glows in silence, and the poem asks us to always remember their sacrifice."
+            }
+          ],
+          "examples": [
+            "The names of brave soldiers are etched in stone at the National War Memorial.",
+            "The eternal flame (Amar Jawan Jyoti) glows in silence to honour the soldiers' sacrifice."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Memorial",
+              "definition": "A structure built to remember a person or event.",
+              "simpleExample": "The National War Memorial honours soldiers."
+            },
+            {
+              "keyword": "Sacrifice",
+              "definition": "Giving up something precious, like one's life, for others.",
+              "simpleExample": "We honour the soldiers' sacrifice."
+            },
+            {
+              "keyword": "Homage",
+              "definition": "Special honour or respect shown publicly.",
+              "simpleExample": "The flame pays homage to the soldiers."
+            },
+            {
+              "keyword": "Eternal",
+              "definition": "Lasting forever.",
+              "simpleExample": "The eternal flame never goes out."
+            }
+          ],
+          "quickSummary": "'National War Memorial' is a patriotic poem honouring India's brave soldiers remembered at the National War Memorial in Delhi, where their names are etched in stone and an eternal flame glows in their memory.",
+          "revisionNotes": [
+            "Genre: patriotic poem.",
+            "Subject: the National War Memorial, New Delhi.",
+            "Honours soldiers who fought on land, sky and sea.",
+            "Theme: courage, sacrifice and remembering our soldiers."
+          ]
+        }
+      ]
+    }
+  ]
+}

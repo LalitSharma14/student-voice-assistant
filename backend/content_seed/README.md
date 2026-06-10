@@ -10,7 +10,7 @@ Current seed:
 - Class 5 subjects: EVS, Maths, English, Hindi
 - Class 6 subjects: Maths, Science, Social Science, English, Hindi
 - Class 5 topics: 173 total topic documents generated from the reviewed NCERT JSON note files in `class5_ncert_json_notes`
-- Class 6 topics: 204 total topic documents. Maths, Science, Social Science, and English are generated from teacher-style v1 JSON files in `class6_teacher_style_json_v1`; Hindi is preserved from the existing Class 6 syllabus until a detailed Hindi JSON is added.
+- Class 6 topics: 243 total topic documents. Maths, Science, Social Science, and English are generated from the detailed JSON files in `class6_teacher_style_json_v1`; Hindi is preserved from the existing Class 6 syllabus until a detailed Hindi JSON is added.
 
 The older `class_5_cbse_science.json` file is kept only as an early demo seed. The active Class 5 seed is generated from the NCERT JSON notes in `class5_ncert_json_notes` using `generate_class_5_cbse_all_subjects.py`. EVS uses `class5_evs_detailed_notes_teacher_style_v4.json`; Maths, English, and Hindi use the teacher-style v3 detailed notes files.
 The Class 6 seed is generated from `generate_class_6_cbse_all_subjects.py`.

@@ -1,0 +1,2808 @@
+{
+  "class": 6,
+  "board": "CBSE",
+  "source": "NCERT",
+  "subject": "Social Science",
+  "bookName": "Exploring Society: India and Beyond",
+  "chapters": [
+    {
+      "chapterNumber": 0,
+      "chapter": "Introduction: Why Social Science?",
+      "topics": [
+        {
+          "topicId": "sst_ch0_topic1",
+          "topic": "Why Social Science?",
+          "meaning": "Social Science is the study of human society, including how people live, their past, their surroundings, their governance and their economic life.",
+          "ncertBasedExplanation": "Social Science helps us understand the world of human beings: how people live together, how societies developed in the past, how the land and environment shape our lives, how we are governed, and how we earn a living. It is made up of several branches that work together. History studies the past, Geography studies the Earth and our environment, Political Science studies government and rights, and Economics studies work, money and resources. By studying Social Science, we learn to understand our society, value our heritage, become responsible citizens and make sense of the world around us.",
+          "easyExplanation": "Social Science is the study of people and society, past and present. It combines history, geography, political science and economics to help us understand our world.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Study human society",
+              "explanation": "Social Science studies how people live together, their past, surroundings, governance and economic life."
+            },
+            {
+              "step": 2,
+              "title": "Know the branches",
+              "explanation": "Its main branches are History, Geography, Political Science and Economics."
+            },
+            {
+              "step": 3,
+              "title": "See how they connect",
+              "explanation": "These branches work together to give a full picture of human life."
+            },
+            {
+              "step": 4,
+              "title": "Understand its value",
+              "explanation": "Studying Social Science helps us value our heritage and become responsible citizens."
+            }
+          ],
+          "examples": [
+            "Learning how the Harappans lived is part of History.",
+            "Studying mountains, rivers and maps is part of Geography."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Social Science",
+              "definition": "The study of human society and how people live, past and present.",
+              "simpleExample": "Learning about families and government is Social Science."
+            },
+            {
+              "keyword": "History",
+              "definition": "The study of the human past.",
+              "simpleExample": "History tells us about ancient civilisations."
+            },
+            {
+              "keyword": "Geography",
+              "definition": "The study of the Earth and its environment.",
+              "simpleExample": "Geography studies oceans and landforms."
+            },
+            {
+              "keyword": "Economics",
+              "definition": "The study of work, money and resources.",
+              "simpleExample": "Economics looks at how people earn a living."
+            }
+          ],
+          "quickSummary": "Social Science is the study of human society through branches like History, Geography, Political Science and Economics, helping us understand our world and become responsible citizens.",
+          "revisionNotes": [
+            "Social Science = study of human society.",
+            "Branches: History, Geography, Political Science, Economics.",
+            "They work together to explain human life.",
+            "It helps us value heritage and be good citizens."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 1,
+      "chapter": "Locating Places on the Earth",
+      "topics": [
+        {
+          "topicId": "sst_ch1_topic1",
+          "topic": "A Map and Its Components",
+          "meaning": "A map is a drawing of the Earth or a part of it on a flat surface, and its main components are distance (scale), direction and symbols.",
+          "ncertBasedExplanation": "A map is a representation of the Earth, or a part of it, drawn to scale on a flat surface. Maps help us find places and understand an area. Every map has three main components. The first is distance, shown using a scale, which tells us how a small distance on the map relates to the real distance on the ground. The second is direction, usually shown with the four main directions (north, south, east, west) and a north arrow. The third is symbols, which are signs and colours used to show features like roads, rivers, railways and buildings, explained in a key or legend. Maps are more useful than a globe for studying small areas in detail.",
+          "easyExplanation": "A map is a flat drawing of the Earth. It uses a scale for distance, directions like north and south, and symbols (with a key) to show roads, rivers and places.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "What a map is",
+              "explanation": "A map is a drawing of the Earth or a part of it on a flat surface, drawn to scale."
+            },
+            {
+              "step": 2,
+              "title": "Distance and scale",
+              "explanation": "A scale shows how distance on the map relates to the real distance on the ground."
+            },
+            {
+              "step": 3,
+              "title": "Direction",
+              "explanation": "Maps show direction using north, south, east and west, often with a north arrow."
+            },
+            {
+              "step": 4,
+              "title": "Symbols and key",
+              "explanation": "Symbols and colours show features like roads and rivers, explained in a key or legend."
+            }
+          ],
+          "examples": [
+            "A map of your town uses symbols for the school, hospital and railway station.",
+            "A scale of 1 cm = 1 km means 1 cm on the map is 1 kilometre on the ground."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Map",
+              "definition": "A drawing of the Earth or a part of it on a flat surface.",
+              "simpleExample": "We use a map to find a city."
+            },
+            {
+              "keyword": "Scale",
+              "definition": "The relation between map distance and real distance.",
+              "simpleExample": "A scale of 1 cm = 5 km helps measure distances."
+            },
+            {
+              "keyword": "Symbol",
+              "definition": "A sign used on a map to show a feature.",
+              "simpleExample": "A blue line is the symbol for a river."
+            },
+            {
+              "keyword": "Key",
+              "definition": "A list explaining the symbols on a map.",
+              "simpleExample": "The key tells us what each map symbol means."
+            }
+          ],
+          "quickSummary": "A map is a scaled, flat drawing of the Earth whose three main components are distance (scale), direction and symbols (explained in a key), used to find and study places.",
+          "revisionNotes": [
+            "Map = flat drawing of Earth to scale.",
+            "Three components: distance (scale), direction, symbols.",
+            "Scale links map distance to real distance.",
+            "Symbols are explained in the key/legend."
+          ]
+        },
+        {
+          "topicId": "sst_ch1_topic2",
+          "topic": "The Globe: Latitudes and Longitudes",
+          "meaning": "A globe is a model of the Earth, and a grid of lines called latitudes and longitudes helps us locate any place on it.",
+          "ncertBasedExplanation": "A globe is a small, round model of the Earth that shows the correct shapes and positions of land and water. To locate places exactly, a network of imaginary lines is drawn on the globe. The lines running from east to west are called latitudes (or parallels), and the lines running from north to south, joining the two poles, are called longitudes (or meridians). Together these lines form a grid. Using the latitude and longitude of a place, we can find its exact location on the Earth, just like an address.",
+          "easyExplanation": "A globe is a model of the Earth. Imaginary lines called latitudes (east-west) and longitudes (north-south) form a grid that helps us find any place's exact location.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Use a globe",
+              "explanation": "A globe is a round model of the Earth showing land and water correctly."
+            },
+            {
+              "step": 2,
+              "title": "Latitudes",
+              "explanation": "Lines running east to west around the globe are latitudes, also called parallels."
+            },
+            {
+              "step": 3,
+              "title": "Longitudes",
+              "explanation": "Lines running north to south from pole to pole are longitudes, also called meridians."
+            },
+            {
+              "step": 4,
+              "title": "Form a grid",
+              "explanation": "Together, latitudes and longitudes make a grid used to locate any place exactly."
+            }
+          ],
+          "examples": [
+            "The latitude and longitude of a city act like its address on the Earth.",
+            "A globe shows the round shape of the Earth better than a flat map."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Globe",
+              "definition": "A round model of the Earth.",
+              "simpleExample": "A globe shows the Earth's true shape."
+            },
+            {
+              "keyword": "Latitude",
+              "definition": "An imaginary line running east to west around the Earth.",
+              "simpleExample": "The Equator is a latitude."
+            },
+            {
+              "keyword": "Longitude",
+              "definition": "An imaginary line running north to south from pole to pole.",
+              "simpleExample": "The Prime Meridian is a longitude."
+            },
+            {
+              "keyword": "Grid",
+              "definition": "The network formed by latitudes and longitudes.",
+              "simpleExample": "We locate places using the grid."
+            }
+          ],
+          "quickSummary": "A globe is a model of the Earth on which latitudes (east-west) and longitudes (north-south) form a grid that lets us locate any place exactly, like an address.",
+          "revisionNotes": [
+            "Globe = round model of the Earth.",
+            "Latitudes run east-west (parallels).",
+            "Longitudes run north-south (meridians).",
+            "Together they form a locating grid."
+          ]
+        },
+        {
+          "topicId": "sst_ch1_topic3",
+          "topic": "Latitudes and Important Parallels",
+          "meaning": "Latitudes are measured in degrees from the Equator, and some important latitudes include the Equator, the Tropics and the Poles.",
+          "ncertBasedExplanation": "Latitudes are measured in degrees north or south of the Equator. The Equator is the most important latitude, at 0 degrees, and it divides the Earth into the Northern Hemisphere and the Southern Hemisphere. Latitudes increase from 0 degrees at the Equator to 90 degrees at the North Pole and 90 degrees at the South Pole. Some special latitudes are the Tropic of Cancer (north of the Equator), the Tropic of Capricorn (south of the Equator), and the Arctic and Antarctic Circles near the poles. These important latitudes help us understand the Earth's heat zones and climate.",
+          "easyExplanation": "Latitudes are measured in degrees from the Equator (0 degrees) up to 90 degrees at the poles. Special ones include the Equator, the two Tropics and the polar circles.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Measure from the Equator",
+              "explanation": "Latitudes are measured in degrees north or south of the Equator."
+            },
+            {
+              "step": 2,
+              "title": "The Equator",
+              "explanation": "The Equator at 0 degrees divides the Earth into Northern and Southern Hemispheres."
+            },
+            {
+              "step": 3,
+              "title": "Up to the poles",
+              "explanation": "Latitudes increase to 90 degrees at the North Pole and 90 degrees at the South Pole."
+            },
+            {
+              "step": 4,
+              "title": "Special latitudes",
+              "explanation": "Important ones include the Tropic of Cancer, Tropic of Capricorn and the Arctic and Antarctic Circles."
+            }
+          ],
+          "examples": [
+            "The Equator (0 degrees) passes through countries like Kenya and Indonesia.",
+            "The Tropic of Cancer passes through India."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Equator",
+              "definition": "The 0-degree latitude dividing the Earth into two hemispheres.",
+              "simpleExample": "The Equator is the longest latitude."
+            },
+            {
+              "keyword": "Hemisphere",
+              "definition": "Half of the Earth, such as the Northern Hemisphere.",
+              "simpleExample": "India is in the Northern Hemisphere."
+            },
+            {
+              "keyword": "Tropic of Cancer",
+              "definition": "An important latitude north of the Equator.",
+              "simpleExample": "The Tropic of Cancer crosses India."
+            }
+          ],
+          "quickSummary": "Latitudes are measured in degrees from the Equator (0 degrees) to 90 degrees at the poles; key latitudes include the Equator, the two Tropics and the Arctic and Antarctic Circles.",
+          "revisionNotes": [
+            "Latitudes measured in degrees from the Equator.",
+            "Equator (0 degrees) splits Earth into two hemispheres.",
+            "Reach 90 degrees at the poles.",
+            "Special: Tropics of Cancer & Capricorn, polar circles."
+          ]
+        },
+        {
+          "topicId": "sst_ch1_topic4",
+          "topic": "Longitudes and the Prime Meridian",
+          "meaning": "Longitudes are measured in degrees east or west of the Prime Meridian, which is the 0-degree longitude.",
+          "ncertBasedExplanation": "Longitudes are the lines running from the North Pole to the South Pole. They are measured in degrees east or west of a starting line called the Prime Meridian, which is at 0 degrees and passes through Greenwich in London. Unlike latitudes, all longitudes are of equal length. Longitudes go up to 180 degrees east and 180 degrees west, which meet on the opposite side of the Earth. The Prime Meridian divides the Earth into the Eastern Hemisphere and the Western Hemisphere. Longitudes are closely connected to the measurement of time around the world.",
+          "easyExplanation": "Longitudes run from pole to pole and are measured east or west of the Prime Meridian (0 degrees) at Greenwich. They are all equal in length and relate to time.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Run pole to pole",
+              "explanation": "Longitudes are lines joining the North and South Poles."
+            },
+            {
+              "step": 2,
+              "title": "The Prime Meridian",
+              "explanation": "The 0-degree longitude, called the Prime Meridian, passes through Greenwich, London."
+            },
+            {
+              "step": 3,
+              "title": "Measured east and west",
+              "explanation": "Longitudes are measured up to 180 degrees east and 180 degrees west of the Prime Meridian."
+            },
+            {
+              "step": 4,
+              "title": "Divide into hemispheres",
+              "explanation": "The Prime Meridian divides the Earth into the Eastern and Western Hemispheres."
+            }
+          ],
+          "examples": [
+            "The Prime Meridian (0 degrees) passes through Greenwich in London.",
+            "All longitude lines are equal in length, unlike latitudes."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Longitude",
+              "definition": "A line running from pole to pole, measured east or west.",
+              "simpleExample": "The Prime Meridian is a longitude."
+            },
+            {
+              "keyword": "Prime Meridian",
+              "definition": "The 0-degree longitude passing through Greenwich.",
+              "simpleExample": "Longitudes are measured from the Prime Meridian."
+            },
+            {
+              "keyword": "Meridian",
+              "definition": "Another name for a line of longitude.",
+              "simpleExample": "Each meridian joins the two poles."
+            }
+          ],
+          "quickSummary": "Longitudes run from pole to pole and are measured east or west of the Prime Meridian (0 degrees, at Greenwich); they are all equal in length and divide the Earth into Eastern and Western Hemispheres.",
+          "revisionNotes": [
+            "Longitudes run pole to pole.",
+            "Prime Meridian = 0 degrees, through Greenwich.",
+            "Measured up to 180 degrees east and west.",
+            "All longitudes are equal in length."
+          ]
+        },
+        {
+          "topicId": "sst_ch1_topic5",
+          "topic": "Time and Time Zones",
+          "meaning": "Because the Earth rotates, different places have different local times, so the world is divided into time zones based on longitude.",
+          "ncertBasedExplanation": "The Earth rotates from west to east, so the Sun appears to rise earlier in places to the east. This means different longitudes have different local times. To manage this, the world is divided into time zones, each based on longitude and measured from the time at the Prime Meridian, called Greenwich Mean Time (GMT). A large country may choose one standard time for the whole country; India follows Indian Standard Time (IST), based on a longitude passing near Mirzapur. Understanding time zones helps us know the time in different parts of the world.",
+          "easyExplanation": "The Earth spins, so different places have different times. The world is split into time zones based on longitude. India uses one standard time, IST.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Earth rotates",
+              "explanation": "The Earth spins from west to east, so the Sun rises earlier in eastern places."
+            },
+            {
+              "step": 2,
+              "title": "Different local times",
+              "explanation": "Because of rotation, places on different longitudes have different local times."
+            },
+            {
+              "step": 3,
+              "title": "Time zones and GMT",
+              "explanation": "The world is divided into time zones measured from Greenwich Mean Time (GMT) at the Prime Meridian."
+            },
+            {
+              "step": 4,
+              "title": "Standard time",
+              "explanation": "A large country uses one standard time; India follows Indian Standard Time (IST)."
+            }
+          ],
+          "examples": [
+            "When it is noon in India, it is a different time in London because of time zones.",
+            "India follows one Indian Standard Time (IST) across the whole country."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Time zone",
+              "definition": "A region that uses the same standard time.",
+              "simpleExample": "India is in one time zone."
+            },
+            {
+              "keyword": "GMT",
+              "definition": "Greenwich Mean Time, measured at the Prime Meridian.",
+              "simpleExample": "Time zones are measured from GMT."
+            },
+            {
+              "keyword": "Indian Standard Time",
+              "definition": "The single standard time used across India.",
+              "simpleExample": "IST is the same in Delhi and Chennai."
+            }
+          ],
+          "quickSummary": "The Earth's rotation gives places different local times, so the world is divided into time zones based on longitude, measured from GMT; India uses one standard time, IST.",
+          "revisionNotes": [
+            "Earth rotates west to east; Sun rises earlier in the east.",
+            "Different longitudes have different local times.",
+            "World divided into time zones, measured from GMT.",
+            "India follows one Indian Standard Time (IST)."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 2,
+      "chapter": "Oceans and Continents",
+      "topics": [
+        {
+          "topicId": "sst_ch2_topic1",
+          "topic": "The Earth: Land and Water",
+          "meaning": "The Earth's surface is made up of large landmasses called continents and huge water bodies called oceans, with much more water than land.",
+          "ncertBasedExplanation": "When we look at the Earth from space, we see that most of its surface is covered with water, which is why it is often called the 'Blue Planet'. The Earth's surface is divided into two main kinds of features: land and water. The very large stretches of land are called continents, and the very large bodies of salt water are called oceans. About two-thirds of the Earth's surface is water and only about one-third is land. Continents and oceans are located using latitudes and longitudes.",
+          "easyExplanation": "Most of the Earth is covered by water, so it is called the Blue Planet. Its big lands are continents and its big water bodies are oceans.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "View from space",
+              "explanation": "From space, the Earth looks mostly blue because of its water, earning it the name 'Blue Planet'."
+            },
+            {
+              "step": 2,
+              "title": "Land and water",
+              "explanation": "The Earth's surface is made of land and water features."
+            },
+            {
+              "step": 3,
+              "title": "Continents and oceans",
+              "explanation": "Very large lands are continents and very large salt-water bodies are oceans."
+            },
+            {
+              "step": 4,
+              "title": "More water than land",
+              "explanation": "About two-thirds of the Earth is water and one-third is land."
+            }
+          ],
+          "examples": [
+            "The Earth looks blue from space because most of it is ocean.",
+            "Land covers only about one-third of the Earth's surface."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Continent",
+              "definition": "A very large stretch of land on the Earth.",
+              "simpleExample": "Asia is a continent."
+            },
+            {
+              "keyword": "Ocean",
+              "definition": "A very large body of salt water.",
+              "simpleExample": "The Pacific is an ocean."
+            },
+            {
+              "keyword": "Blue Planet",
+              "definition": "A nickname for the Earth because of its water.",
+              "simpleExample": "The Earth is called the Blue Planet."
+            }
+          ],
+          "quickSummary": "The Earth's surface is land (continents) and water (oceans); about two-thirds is water, which is why the Earth is called the Blue Planet.",
+          "revisionNotes": [
+            "Earth = continents (land) + oceans (water).",
+            "About two-thirds water, one-third land.",
+            "Called the 'Blue Planet'.",
+            "Located using latitudes and longitudes."
+          ]
+        },
+        {
+          "topicId": "sst_ch2_topic2",
+          "topic": "The Continents",
+          "meaning": "There are seven continents on the Earth: Asia, Africa, North America, South America, Antarctica, Europe and Australia.",
+          "ncertBasedExplanation": "The large landmasses of the Earth are divided into seven continents. In order of size, they are Asia (the largest), Africa, North America, South America, Antarctica, Europe and Australia (the smallest). Asia is the largest continent and is home to India. Antarctica, around the South Pole, is covered with thick ice and has no permanent human population. Each continent has its own landforms, climate, plants, animals and people. The continents are separated by oceans but some are joined by land.",
+          "easyExplanation": "There are seven continents: Asia, Africa, North America, South America, Antarctica, Europe and Australia. Asia is the biggest, Australia the smallest.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Seven continents",
+              "explanation": "The Earth has seven continents of different sizes."
+            },
+            {
+              "step": 2,
+              "title": "Largest to smallest",
+              "explanation": "Asia is the largest, followed by Africa, the Americas, Antarctica, Europe and Australia."
+            },
+            {
+              "step": 3,
+              "title": "India's continent",
+              "explanation": "India lies in Asia, the largest continent."
+            },
+            {
+              "step": 4,
+              "title": "Special features",
+              "explanation": "Each continent has its own landforms, climate, plants, animals and people; Antarctica is ice-covered."
+            }
+          ],
+          "examples": [
+            "India is located in the continent of Asia.",
+            "Antarctica, around the South Pole, is covered with thick ice."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Continent",
+              "definition": "A very large landmass on the Earth.",
+              "simpleExample": "Africa is a continent."
+            },
+            {
+              "keyword": "Asia",
+              "definition": "The largest continent, where India is located.",
+              "simpleExample": "India is in Asia."
+            },
+            {
+              "keyword": "Antarctica",
+              "definition": "The ice-covered continent around the South Pole.",
+              "simpleExample": "No one lives permanently in Antarctica."
+            }
+          ],
+          "quickSummary": "The Earth has seven continents: Asia, Africa, North America, South America, Antarctica, Europe and Australia; Asia is the largest and India lies in it.",
+          "revisionNotes": [
+            "Seven continents on Earth.",
+            "Asia (largest) to Australia (smallest).",
+            "India is in Asia.",
+            "Antarctica is ice-covered with no permanent people."
+          ]
+        },
+        {
+          "topicId": "sst_ch2_topic3",
+          "topic": "The Oceans",
+          "meaning": "There are five oceans on the Earth: the Pacific, Atlantic, Indian, Southern and Arctic Oceans.",
+          "ncertBasedExplanation": "The huge bodies of salt water on the Earth are divided into five oceans. The Pacific Ocean is the largest and deepest, followed by the Atlantic Ocean, the Indian Ocean (which touches India's southern coast), the Southern Ocean (around Antarctica) and the Arctic Ocean (around the North Pole, the smallest). All the oceans are connected to one another, forming one continuous body of water. Oceans are very important: they affect climate and weather, are home to countless living things, and are used for trade, fishing and travel.",
+          "easyExplanation": "There are five oceans: Pacific (biggest), Atlantic, Indian, Southern and Arctic (smallest). They are all connected and very important for life and trade.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Five oceans",
+              "explanation": "The Earth's salt water is divided into five oceans."
+            },
+            {
+              "step": 2,
+              "title": "Largest to smallest",
+              "explanation": "The Pacific is the largest, then the Atlantic, Indian, Southern and the small Arctic."
+            },
+            {
+              "step": 3,
+              "title": "India's ocean",
+              "explanation": "The Indian Ocean touches the southern coast of India."
+            },
+            {
+              "step": 4,
+              "title": "All connected",
+              "explanation": "The oceans are joined to form one continuous body of water and are vital for climate, life and trade."
+            }
+          ],
+          "examples": [
+            "The Indian Ocean lies to the south of India.",
+            "The Pacific Ocean is the largest and deepest ocean on Earth."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Ocean",
+              "definition": "A very large body of salt water.",
+              "simpleExample": "The Atlantic is an ocean."
+            },
+            {
+              "keyword": "Pacific Ocean",
+              "definition": "The largest and deepest ocean.",
+              "simpleExample": "The Pacific Ocean is the biggest ocean."
+            },
+            {
+              "keyword": "Indian Ocean",
+              "definition": "The ocean to the south of India.",
+              "simpleExample": "India is named after the Indian Ocean region."
+            }
+          ],
+          "quickSummary": "The Earth has five connected oceans: the Pacific (largest), Atlantic, Indian, Southern and Arctic (smallest); they are vital for climate, marine life and trade.",
+          "revisionNotes": [
+            "Five oceans: Pacific, Atlantic, Indian, Southern, Arctic.",
+            "Pacific is largest; Arctic smallest.",
+            "Indian Ocean lies south of India.",
+            "All oceans are connected; vital for climate, life, trade."
+          ]
+        },
+        {
+          "topicId": "sst_ch2_topic4",
+          "topic": "Importance of Oceans and Continents",
+          "meaning": "Oceans and continents support life by providing land to live on, water, food, resources, climate balance and routes for trade.",
+          "ncertBasedExplanation": "Continents and oceans together make life on Earth possible. The continents provide land where people, plants and animals live, and give us soil for farming, forests, minerals and other resources. The oceans provide a home to a vast variety of sea life, supply fish and other food, influence the climate and rainfall, and serve as important routes for ships carrying goods and people. Both continents and oceans are precious, and we must protect them from pollution and damage so that they can continue to support life.",
+          "easyExplanation": "Continents give us land, soil and resources to live, while oceans give food, control climate and carry ships. Both are precious and must be protected.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Continents give land",
+              "explanation": "Continents provide land to live on, plus soil, forests, minerals and resources."
+            },
+            {
+              "step": 2,
+              "title": "Oceans give food and life",
+              "explanation": "Oceans are home to sea life, supply fish and food, and support living things."
+            },
+            {
+              "step": 3,
+              "title": "They shape climate and trade",
+              "explanation": "Oceans influence climate and rainfall and serve as routes for trade and travel."
+            },
+            {
+              "step": 4,
+              "title": "Protect them",
+              "explanation": "Both continents and oceans must be protected from pollution and damage."
+            }
+          ],
+          "examples": [
+            "Ships carry goods across oceans between continents.",
+            "Forests and minerals on the continents are important natural resources."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Resource",
+              "definition": "A useful material obtained from nature.",
+              "simpleExample": "Minerals from the continents are resources."
+            },
+            {
+              "keyword": "Marine life",
+              "definition": "The plants and animals living in the sea.",
+              "simpleExample": "Fish are part of marine life."
+            },
+            {
+              "keyword": "Trade route",
+              "definition": "A path used to carry goods between places.",
+              "simpleExample": "Oceans are major trade routes."
+            }
+          ],
+          "quickSummary": "Continents and oceans support life by providing land, soil, resources, food, climate balance and trade routes, so both must be protected from pollution and damage.",
+          "revisionNotes": [
+            "Continents give land, soil and resources.",
+            "Oceans give food and support sea life.",
+            "Oceans shape climate and carry trade.",
+            "Both are precious; protect from pollution."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 3,
+      "chapter": "Landforms and Life",
+      "topics": [
+        {
+          "topicId": "sst_ch3_topic1",
+          "topic": "Major Landforms of the Earth",
+          "meaning": "The main landforms of the Earth are mountains, plateaus and plains, which differ in height and shape.",
+          "ncertBasedExplanation": "The surface of the Earth is not flat everywhere; it has different shapes called landforms. The three major landforms are mountains, plateaus and plains. Mountains are very high landforms with steep slopes and pointed peaks. Plateaus are raised areas of fairly level land that stand higher than the land around them, like a tabletop. Plains are large stretches of flat, low land. These landforms are created over a very long time by natural forces, and each one offers a different kind of place for people, plants and animals to live.",
+          "easyExplanation": "The Earth has three main landforms: mountains (high and steep), plateaus (raised flat lands) and plains (low flat lands). Each is a different place to live.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Earth is not flat",
+              "explanation": "The Earth's surface has different shapes called landforms."
+            },
+            {
+              "step": 2,
+              "title": "Mountains",
+              "explanation": "Mountains are very high landforms with steep slopes and peaks."
+            },
+            {
+              "step": 3,
+              "title": "Plateaus",
+              "explanation": "Plateaus are raised areas of fairly level land, higher than their surroundings."
+            },
+            {
+              "step": 4,
+              "title": "Plains",
+              "explanation": "Plains are large stretches of flat, low land, formed over a long time."
+            }
+          ],
+          "examples": [
+            "The Himalayas are mountains, while the Deccan is a plateau.",
+            "The Northern Plains of India are a vast area of flat land."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Landform",
+              "definition": "A natural shape of the Earth's surface.",
+              "simpleExample": "A mountain is a landform."
+            },
+            {
+              "keyword": "Mountain",
+              "definition": "A very high landform with steep slopes.",
+              "simpleExample": "Mount Everest is a mountain."
+            },
+            {
+              "keyword": "Plateau",
+              "definition": "A raised area of fairly level land.",
+              "simpleExample": "The Deccan is a plateau."
+            },
+            {
+              "keyword": "Plain",
+              "definition": "A large area of flat, low land.",
+              "simpleExample": "The Ganga plains are very fertile."
+            }
+          ],
+          "quickSummary": "The Earth's three major landforms are mountains (high, steep), plateaus (raised flat land) and plains (low flat land), each offering a different place for life.",
+          "revisionNotes": [
+            "Three major landforms: mountains, plateaus, plains.",
+            "Mountains = high, steep, peaked.",
+            "Plateaus = raised, fairly level land.",
+            "Plains = flat, low land."
+          ]
+        },
+        {
+          "topicId": "sst_ch3_topic2",
+          "topic": "Mountains and Life",
+          "meaning": "Mountains are high landforms that influence climate, rivers and the way people live in mountain regions.",
+          "ncertBasedExplanation": "Mountains are the highest landforms, often with snow-covered peaks. They have a great effect on life. Many rivers begin in the mountains from melting snow and glaciers, supplying water to the lands below. Mountains also affect the climate and can cause rainfall. Living in the mountains is challenging because of steep slopes, cold weather and thin air, so the population is usually small. People in mountain regions practise terrace farming, rear animals, and the beautiful scenery supports tourism. Mountains are also rich in forests and wildlife.",
+          "easyExplanation": "Mountains are the highest landforms. They give us rivers from melting snow, affect climate, and people there do terrace farming, rear animals and welcome tourists.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Highest landforms",
+              "explanation": "Mountains are the highest landforms, often with snow-covered peaks."
+            },
+            {
+              "step": 2,
+              "title": "Source of rivers",
+              "explanation": "Many rivers begin in the mountains from melting snow and glaciers."
+            },
+            {
+              "step": 3,
+              "title": "Affect climate",
+              "explanation": "Mountains influence the climate and can cause rainfall."
+            },
+            {
+              "step": 4,
+              "title": "Life in the mountains",
+              "explanation": "People practise terrace farming, rear animals, and the scenery supports tourism, though life is challenging."
+            }
+          ],
+          "examples": [
+            "The Ganga and other rivers start from the Himalayan mountains.",
+            "Farmers on mountain slopes grow crops using terrace farming."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Mountain",
+              "definition": "A very high landform with steep slopes.",
+              "simpleExample": "The Himalayas are mountains."
+            },
+            {
+              "keyword": "Glacier",
+              "definition": "A large mass of slow-moving ice on mountains.",
+              "simpleExample": "Rivers begin from melting glaciers."
+            },
+            {
+              "keyword": "Terrace farming",
+              "definition": "Farming on flat steps cut into a hillside.",
+              "simpleExample": "Mountain farmers use terrace farming."
+            }
+          ],
+          "quickSummary": "Mountains are the highest landforms; they are the source of many rivers, affect climate and rainfall, and shape mountain life through terrace farming, animal rearing and tourism.",
+          "revisionNotes": [
+            "Mountains = highest landforms with peaks.",
+            "Source of rivers (melting snow/glaciers).",
+            "Affect climate and cause rainfall.",
+            "Life: terrace farming, animal rearing, tourism."
+          ]
+        },
+        {
+          "topicId": "sst_ch3_topic3",
+          "topic": "Plateaus and Life",
+          "meaning": "Plateaus are raised, fairly level lands that are often rich in minerals and support farming and mining.",
+          "ncertBasedExplanation": "A plateau is a raised area of land with a fairly flat top, standing higher than the land around it, which is why it is sometimes called a tableland. Plateaus are often rich in minerals such as iron, coal and gold, so mining is an important activity in many plateau regions. The soil on some plateaus, like the black soil of the Deccan Plateau, is good for growing crops such as cotton. Waterfalls are also common where rivers drop from the edge of a plateau. Plateaus thus support mining, farming and sometimes the generation of electricity.",
+          "easyExplanation": "Plateaus are raised flat lands, like tabletops. They are rich in minerals for mining, have good soil for crops, and often have waterfalls.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Raised flat land",
+              "explanation": "A plateau is a raised area with a fairly flat top, higher than its surroundings."
+            },
+            {
+              "step": 2,
+              "title": "Rich in minerals",
+              "explanation": "Plateaus often contain minerals like iron, coal and gold, so mining is important."
+            },
+            {
+              "step": 3,
+              "title": "Good for some crops",
+              "explanation": "Some plateaus, like the Deccan, have soil suited to crops such as cotton."
+            },
+            {
+              "step": 4,
+              "title": "Waterfalls and power",
+              "explanation": "Rivers dropping from plateau edges form waterfalls, which can generate electricity."
+            }
+          ],
+          "examples": [
+            "The Deccan Plateau has black soil good for growing cotton.",
+            "Many minerals like coal and iron are mined from plateau regions."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Plateau",
+              "definition": "A raised area of fairly level land.",
+              "simpleExample": "The Deccan is a plateau."
+            },
+            {
+              "keyword": "Mineral",
+              "definition": "A useful natural substance from the Earth.",
+              "simpleExample": "Coal is a mineral mined on plateaus."
+            },
+            {
+              "keyword": "Tableland",
+              "definition": "Another name for a plateau because of its flat top.",
+              "simpleExample": "A plateau is called a tableland."
+            }
+          ],
+          "quickSummary": "Plateaus are raised, fairly level lands often rich in minerals, supporting mining, farming on fertile soils like the Deccan's, and waterfalls used for electricity.",
+          "revisionNotes": [
+            "Plateau = raised flat land (tableland).",
+            "Often rich in minerals; mining is important.",
+            "Some have fertile soil (e.g., Deccan black soil).",
+            "Waterfalls at edges can make electricity."
+          ]
+        },
+        {
+          "topicId": "sst_ch3_topic4",
+          "topic": "Plains and Life",
+          "meaning": "Plains are flat, low and fertile lands where most people live and where farming is the main activity.",
+          "ncertBasedExplanation": "Plains are large stretches of flat, low-lying land. Many plains are formed by rivers depositing fertile soil, which makes them very good for farming. Because the land is flat and the soil is fertile, plains are the most thickly populated landforms, with many villages, towns and cities. The flat land also makes it easy to build roads, railways and houses, and to carry out transport and trade. Most of the world's food is grown on plains, which is why they are sometimes called the food bowls of the world.",
+          "easyExplanation": "Plains are flat, low, fertile lands. Most people live here because farming is easy and it is simple to build roads and cities. They grow most of our food.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Flat, low land",
+              "explanation": "Plains are large stretches of flat, low-lying land."
+            },
+            {
+              "step": 2,
+              "title": "Fertile and good for farming",
+              "explanation": "Many plains are formed by rivers depositing fertile soil, ideal for farming."
+            },
+            {
+              "step": 3,
+              "title": "Most people live here",
+              "explanation": "Because the land is flat and fertile, plains are the most densely populated landforms."
+            },
+            {
+              "step": 4,
+              "title": "Easy to build and travel",
+              "explanation": "Flat land makes it easy to build roads, railways and cities and to carry out trade."
+            }
+          ],
+          "examples": [
+            "The Northern Plains of India are very fertile and densely populated.",
+            "Most of the country's food crops are grown on the plains."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Plain",
+              "definition": "A large area of flat, low land.",
+              "simpleExample": "The Ganga plain is fertile."
+            },
+            {
+              "keyword": "Fertile",
+              "definition": "Land that is rich and good for growing crops.",
+              "simpleExample": "Plains have fertile soil."
+            },
+            {
+              "keyword": "Densely populated",
+              "definition": "Having many people living closely together.",
+              "simpleExample": "Plains are densely populated."
+            }
+          ],
+          "quickSummary": "Plains are flat, low, fertile lands, usually formed by rivers, where most people live; they are ideal for farming, building and trade, and grow most of the world's food.",
+          "revisionNotes": [
+            "Plains = flat, low, fertile land.",
+            "Often formed by river-deposited soil.",
+            "Most densely populated landform.",
+            "Ideal for farming, building and trade."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 4,
+      "chapter": "Timeline and Sources of History",
+      "topics": [
+        {
+          "topicId": "sst_ch4_topic1",
+          "topic": "Measuring Historical Time",
+          "meaning": "History measures time over long periods using a timeline and the terms BCE (Before Common Era) and CE (Common Era).",
+          "ncertBasedExplanation": "History deals with events that happened over thousands of years, so we need a way to measure and order time. A timeline is a line on which events are marked in the order they happened, helping us see what came before and after. Years are counted from a fixed point. Years before this point are written as BCE (Before Common Era) and years after it as CE (Common Era). In the BCE period, larger numbers mean longer ago, so 2000 BCE is earlier than 500 BCE. We also group long periods into units like decades (10 years), centuries (100 years) and millennia (1000 years). This helps us place historical events correctly in time.",
+          "easyExplanation": "History uses a timeline to order events, and counts years as BCE (before a fixed point) and CE (after it). Bigger BCE numbers mean longer ago.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Need to measure time",
+              "explanation": "History covers thousands of years, so we need a way to measure and order time."
+            },
+            {
+              "step": 2,
+              "title": "Use a timeline",
+              "explanation": "A timeline marks events in the order they happened, showing what came before and after."
+            },
+            {
+              "step": 3,
+              "title": "BCE and CE",
+              "explanation": "Years before a fixed point are BCE (Before Common Era); years after are CE (Common Era)."
+            },
+            {
+              "step": 4,
+              "title": "Group the years",
+              "explanation": "Long periods are grouped into decades (10), centuries (100) and millennia (1000 years)."
+            }
+          ],
+          "examples": [
+            "2500 BCE is earlier in time than 1500 BCE.",
+            "A timeline can show the Harappan Civilisation came before the Vedic period."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Timeline",
+              "definition": "A line showing events in the order they happened.",
+              "simpleExample": "A timeline orders historical events."
+            },
+            {
+              "keyword": "BCE",
+              "definition": "Before Common Era, used for years before a fixed point.",
+              "simpleExample": "2000 BCE is a year long ago."
+            },
+            {
+              "keyword": "CE",
+              "definition": "Common Era, used for years after the fixed point.",
+              "simpleExample": "The year 2025 CE is recent."
+            },
+            {
+              "keyword": "Century",
+              "definition": "A period of 100 years.",
+              "simpleExample": "The 20th century is the 1900s."
+            }
+          ],
+          "quickSummary": "History measures long periods of time using a timeline and the terms BCE (before a fixed point) and CE (after it), grouping years into decades, centuries and millennia.",
+          "revisionNotes": [
+            "Timeline orders events by when they happened.",
+            "BCE = before a fixed point; CE = after.",
+            "Bigger BCE number = longer ago.",
+            "Decade = 10, century = 100, millennium = 1000 years."
+          ]
+        },
+        {
+          "topicId": "sst_ch4_topic2",
+          "topic": "Sources of History",
+          "meaning": "We learn about the past from sources, which are mainly archaeological sources (objects and remains) and literary sources (written records).",
+          "ncertBasedExplanation": "Historians find out about the past using clues called sources. There are two main kinds. Archaeological sources are physical remains from the past, such as tools, pottery, coins, buildings, monuments and bones, which are often dug out of the ground. Literary sources are written records, such as old books, manuscripts, inscriptions on stone or metal, and letters. By studying and comparing these sources carefully, historians piece together the story of the past. Each source gives us part of the picture, and using many sources together makes our understanding of history more reliable.",
+          "easyExplanation": "We learn about the past from sources: archaeological ones (objects like tools, coins, buildings) and literary ones (written records like books and inscriptions).",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "History needs sources",
+              "explanation": "Historians learn about the past from clues called sources."
+            },
+            {
+              "step": 2,
+              "title": "Archaeological sources",
+              "explanation": "These are physical remains like tools, pottery, coins, buildings and bones."
+            },
+            {
+              "step": 3,
+              "title": "Literary sources",
+              "explanation": "These are written records like books, manuscripts, inscriptions and letters."
+            },
+            {
+              "step": 4,
+              "title": "Combine the sources",
+              "explanation": "Historians compare many sources together to build a reliable story of the past."
+            }
+          ],
+          "examples": [
+            "Coins, pottery and ruins of buildings are archaeological sources.",
+            "Old manuscripts and stone inscriptions are literary sources."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Source",
+              "definition": "A clue used to learn about the past.",
+              "simpleExample": "A coin is a source of history."
+            },
+            {
+              "keyword": "Archaeological source",
+              "definition": "A physical remain from the past, like a tool or building.",
+              "simpleExample": "Pottery is an archaeological source."
+            },
+            {
+              "keyword": "Literary source",
+              "definition": "A written record from the past.",
+              "simpleExample": "An old manuscript is a literary source."
+            },
+            {
+              "keyword": "Inscription",
+              "definition": "Writing carved on stone or metal.",
+              "simpleExample": "An inscription on a pillar tells us about a king."
+            }
+          ],
+          "quickSummary": "History is reconstructed from sources: archaeological sources (physical remains like tools, coins and buildings) and literary sources (written records like books and inscriptions), used together for reliability.",
+          "revisionNotes": [
+            "Sources are clues to the past.",
+            "Archaeological sources = objects and remains.",
+            "Literary sources = written records.",
+            "Many sources together make history reliable."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 5,
+      "chapter": "India, That Is Bharat",
+      "topics": [
+        {
+          "topicId": "sst_ch5_topic1",
+          "topic": "The Many Names of India",
+          "meaning": "Our country has several names, including Bharat, India and Hindustan, each with its own history.",
+          "ncertBasedExplanation": "Our country is known by more than one name. The name Bharat comes from ancient texts and is linked to legendary figures and tribes mentioned in old Indian literature; it is the name used in many Indian languages and in the Constitution. The name India comes from the river Sindhu (the Indus); the Persians called it Hindu, the Greeks called the land beyond it Indos or India, and so the name India developed. The name Hindustan also grew from the word Hindu used for the land around the Sindhu river. So all these names are connected to the land, its rivers and its long history.",
+          "easyExplanation": "India has several names: Bharat (from ancient texts), India and Hindustan (both linked to the Sindhu/Indus river). Each name comes from our land and history.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "More than one name",
+              "explanation": "Our country is known by several names, including Bharat, India and Hindustan."
+            },
+            {
+              "step": 2,
+              "title": "Bharat",
+              "explanation": "The name Bharat comes from ancient Indian texts and is used in many Indian languages and the Constitution."
+            },
+            {
+              "step": 3,
+              "title": "India",
+              "explanation": "The name India comes from the river Sindhu, called Hindu by the Persians and Indos by the Greeks."
+            },
+            {
+              "step": 4,
+              "title": "Hindustan",
+              "explanation": "The name Hindustan also grew from the word Hindu for the land around the Sindhu river."
+            }
+          ],
+          "examples": [
+            "The name 'India' comes from the river Sindhu (Indus).",
+            "The Constitution of India begins with the words 'India, that is Bharat'."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Bharat",
+              "definition": "An ancient name of our country, used in the Constitution.",
+              "simpleExample": "Bharat is the Hindi name for India."
+            },
+            {
+              "keyword": "Sindhu",
+              "definition": "The old name of the Indus river, source of the name India.",
+              "simpleExample": "The Sindhu river gave us the name India."
+            },
+            {
+              "keyword": "Hindustan",
+              "definition": "Another name for India, from the word Hindu.",
+              "simpleExample": "Hindustan refers to the land around the Sindhu."
+            }
+          ],
+          "quickSummary": "Our country has several connected names, Bharat (from ancient texts), India and Hindustan (both linked to the Sindhu/Indus river), reflecting its land, rivers and long history.",
+          "revisionNotes": [
+            "India has several names: Bharat, India, Hindustan.",
+            "Bharat comes from ancient texts; used in the Constitution.",
+            "India and Hindustan come from the Sindhu (Indus) river.",
+            "All names link to the land and its history."
+          ]
+        },
+        {
+          "topicId": "sst_ch5_topic2",
+          "topic": "What These Names Tell Us",
+          "meaning": "The different names of India show how outsiders and insiders saw the land, and reflect its unity and long, continuous history.",
+          "ncertBasedExplanation": "The many names of our country tell us a great deal about its history. They show that India has been known to many peoples, such as the Persians and the Greeks, for thousands of years, often through its great river the Sindhu. They also show a sense of unity, as the whole land came to be known by shared names. The continued use of the name Bharat connects modern India to its ancient past and culture. Studying these names helps us understand that India is one of the world's oldest civilisations with a long and continuous identity.",
+          "easyExplanation": "India's names show it was known to many ancient peoples and has a long, continuous history. The name Bharat links modern India to its ancient roots.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Names carry history",
+              "explanation": "The names of India tell us about its long and rich history."
+            },
+            {
+              "step": 2,
+              "title": "Known to many peoples",
+              "explanation": "Names like India show the land was known to the Persians, Greeks and others long ago."
+            },
+            {
+              "step": 3,
+              "title": "A sense of unity",
+              "explanation": "Shared names for the whole land reflect a sense of unity."
+            },
+            {
+              "step": 4,
+              "title": "Ancient and continuous",
+              "explanation": "The name Bharat links modern India to its ancient past and culture."
+            }
+          ],
+          "examples": [
+            "The Greeks knew the land beyond the Sindhu river as 'India'.",
+            "Using 'Bharat' today connects us to ancient Indian texts and culture."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Civilisation",
+              "definition": "An advanced society with its own culture.",
+              "simpleExample": "India is one of the world's oldest civilisations."
+            },
+            {
+              "keyword": "Identity",
+              "definition": "What makes a country or people distinct.",
+              "simpleExample": "India has a long, continuous identity."
+            },
+            {
+              "keyword": "Unity",
+              "definition": "The state of being united or one.",
+              "simpleExample": "Shared names reflect India's unity."
+            }
+          ],
+          "quickSummary": "India's many names reveal that the land was known to many ancient peoples, reflect a sense of unity, and connect modern India to its ancient, continuous civilisation.",
+          "revisionNotes": [
+            "Names reveal India's long history.",
+            "India was known to Persians, Greeks and others.",
+            "Shared names reflect unity.",
+            "'Bharat' links modern India to its ancient roots."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 6,
+      "chapter": "The Beginnings of Indian Civilisation",
+      "topics": [
+        {
+          "topicId": "sst_ch6_topic1",
+          "topic": "From Hunting to the First Crops",
+          "meaning": "Early humans first lived by hunting and gathering, then learned farming and herding, which led to settled village life.",
+          "ncertBasedExplanation": "The earliest humans were hunter-gatherers, who got their food by hunting animals and gathering fruits, roots and seeds, and moved from place to place in search of food. Over a very long time, people learned to grow crops and to tame and rear animals. This was a huge change: once people could grow their own food, they no longer needed to wander, and they began to settle down in one place. Growing the first crops led to the rise of permanent villages, new tools, pottery and a more organised way of life. This shift from hunting to farming was the first step towards civilisation.",
+          "easyExplanation": "Early humans hunted and gathered food and kept moving. When they learned to grow crops and rear animals, they settled in villages, the first step to civilisation.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Hunter-gatherers",
+              "explanation": "The earliest humans hunted animals and gathered plants, moving from place to place."
+            },
+            {
+              "step": 2,
+              "title": "Learning to farm",
+              "explanation": "Over time, people learned to grow crops and to tame and rear animals."
+            },
+            {
+              "step": 3,
+              "title": "Settling down",
+              "explanation": "Growing their own food meant people could settle in one place instead of wandering."
+            },
+            {
+              "step": 4,
+              "title": "Rise of villages",
+              "explanation": "Farming led to permanent villages, new tools, pottery and an organised way of life."
+            }
+          ],
+          "examples": [
+            "Early people gathered wild fruits and hunted deer for food.",
+            "Learning to grow wheat and barley allowed people to live in one place."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Hunter-gatherer",
+              "definition": "An early human who hunted animals and gathered plants for food.",
+              "simpleExample": "Hunter-gatherers moved in search of food."
+            },
+            {
+              "keyword": "Agriculture",
+              "definition": "The growing of crops and rearing of animals.",
+              "simpleExample": "Agriculture allowed people to settle down."
+            },
+            {
+              "keyword": "Settlement",
+              "definition": "A place where people live permanently.",
+              "simpleExample": "Farming led to the first settlements."
+            }
+          ],
+          "quickSummary": "Early humans were hunter-gatherers who moved for food; learning to grow crops and rear animals let them settle in permanent villages, the first step towards civilisation.",
+          "revisionNotes": [
+            "Earliest humans were hunter-gatherers.",
+            "They later learned farming and herding.",
+            "Growing food allowed settled life.",
+            "Farming led to villages, tools and pottery."
+          ]
+        },
+        {
+          "topicId": "sst_ch6_topic2",
+          "topic": "The Indus-Sarasvati (Harappan) Civilisation",
+          "meaning": "The Indus-Sarasvati or Harappan Civilisation was one of the world's earliest civilisations, which grew along the Sindhu and Sarasvati rivers.",
+          "ncertBasedExplanation": "About 5,000 years ago, one of the world's earliest civilisations developed in the north-western part of the Indian subcontinent. It is called the Harappan Civilisation, after the first city found at Harappa, and also the Indus-Sarasvati Civilisation because its cities grew along the Sindhu (Indus) and the now-dried-up Sarasvati rivers. It had many well-planned cities, such as Harappa, Mohenjo-daro and Rakhigarhi (in present-day Haryana). The people grew crops, kept animals, made beautiful pottery and ornaments, and traded goods. This civilisation shows that India had advanced cities thousands of years ago.",
+          "easyExplanation": "About 5,000 years ago, the Harappan (Indus-Sarasvati) Civilisation grew along the Sindhu and Sarasvati rivers, with planned cities like Harappa, Mohenjo-daro and Rakhigarhi.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "One of the earliest",
+              "explanation": "About 5,000 years ago, one of the world's earliest civilisations grew in north-west India."
+            },
+            {
+              "step": 2,
+              "title": "Its names",
+              "explanation": "It is called Harappan (after Harappa) and Indus-Sarasvati (after its rivers)."
+            },
+            {
+              "step": 3,
+              "title": "Its rivers and cities",
+              "explanation": "Its cities grew along the Sindhu and Sarasvati rivers, including Harappa, Mohenjo-daro and Rakhigarhi."
+            },
+            {
+              "step": 4,
+              "title": "Advanced life",
+              "explanation": "People farmed, kept animals, made pottery and ornaments, and traded goods."
+            }
+          ],
+          "examples": [
+            "Rakhigarhi in Haryana is an important Harappan site.",
+            "Mohenjo-daro and Harappa were major cities of this civilisation."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Civilisation",
+              "definition": "An advanced, organised society with cities.",
+              "simpleExample": "The Harappan Civilisation had great cities."
+            },
+            {
+              "keyword": "Harappan Civilisation",
+              "definition": "An early civilisation named after the city of Harappa.",
+              "simpleExample": "Mohenjo-daro was a Harappan city."
+            },
+            {
+              "keyword": "Sarasvati",
+              "definition": "An ancient, now dried-up river of the civilisation.",
+              "simpleExample": "Many sites lie along the Sarasvati river."
+            }
+          ],
+          "quickSummary": "The Indus-Sarasvati or Harappan Civilisation, about 5,000 years old, grew along the Sindhu and Sarasvati rivers with planned cities like Harappa, Mohenjo-daro and Rakhigarhi.",
+          "revisionNotes": [
+            "One of the world's earliest civilisations (~5,000 years ago).",
+            "Called Harappan and Indus-Sarasvati.",
+            "Grew along the Sindhu and Sarasvati rivers.",
+            "Cities: Harappa, Mohenjo-daro, Rakhigarhi."
+          ]
+        },
+        {
+          "topicId": "sst_ch6_topic3",
+          "topic": "Harappan Town Planning and Life",
+          "meaning": "Harappan cities were famous for their excellent town planning, with well-laid streets, brick houses and good drainage.",
+          "ncertBasedExplanation": "The Harappans were remarkable town planners. Their cities were carefully laid out, with streets that crossed each other at right angles, dividing the city into neat blocks. Houses were built of baked bricks of standard sizes, and many had their own wells and bathrooms. A striking feature was the well-planned drainage system, with covered drains running along the streets to carry away waste water. Cities often had a raised area (citadel) and a lower town, and large structures like the Great Bath. The Harappans also made fine pottery, jewellery, seals and toys, showing skilled craftsmanship.",
+          "easyExplanation": "Harappan cities were very well planned: straight streets in a grid, brick houses with bathrooms, and covered drains. They also made fine pottery, seals and jewellery.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Planned streets",
+              "explanation": "Streets crossed at right angles, dividing the city into neat blocks."
+            },
+            {
+              "step": 2,
+              "title": "Brick houses",
+              "explanation": "Houses were made of baked bricks of standard sizes, many with wells and bathrooms."
+            },
+            {
+              "step": 3,
+              "title": "Drainage system",
+              "explanation": "Covered drains along the streets carried away waste water, a remarkable feature."
+            },
+            {
+              "step": 4,
+              "title": "Crafts and structures",
+              "explanation": "Cities had citadels, the Great Bath, and people made fine pottery, seals and jewellery."
+            }
+          ],
+          "examples": [
+            "Harappan cities had covered drains running along straight streets.",
+            "The Great Bath at Mohenjo-daro is a famous Harappan structure."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Town planning",
+              "definition": "Designing a city in an organised way.",
+              "simpleExample": "Harappan town planning used a grid of streets."
+            },
+            {
+              "keyword": "Drainage system",
+              "definition": "A system of drains to carry away waste water.",
+              "simpleExample": "Harappan cities had covered drains."
+            },
+            {
+              "keyword": "Seal",
+              "definition": "A small carved object used to stamp marks.",
+              "simpleExample": "Harappan seals often show animals."
+            }
+          ],
+          "quickSummary": "Harappan cities were excellently planned, with grid-pattern streets, standard brick houses, bathrooms and covered drains, plus fine crafts like pottery, seals and jewellery.",
+          "revisionNotes": [
+            "Streets crossed at right angles (grid pattern).",
+            "Houses of standard baked bricks, with bathrooms.",
+            "Advanced covered drainage system.",
+            "Fine pottery, seals, jewellery; Great Bath."
+          ]
+        },
+        {
+          "topicId": "sst_ch6_topic4",
+          "topic": "Decline of the Harappan Civilisation",
+          "meaning": "After flourishing for centuries, the Harappan Civilisation slowly declined, likely due to climate and river changes.",
+          "ncertBasedExplanation": "The Harappan Civilisation flourished for many centuries and then slowly declined. Historians are not fully certain why, but several reasons are suggested. Major changes in climate may have made the region drier. The drying up of the Sarasvati river and changes in the course of rivers would have harmed farming and water supply. There may also have been floods or a fall in trade. As conditions worsened, people gradually left the great cities and moved to smaller settlements, often towards the east. The decline reminds us how closely human life depends on rivers and climate.",
+          "easyExplanation": "The Harappan Civilisation slowly declined, probably because of climate change and rivers like the Sarasvati drying up, so people left the big cities.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Flourished then declined",
+              "explanation": "The civilisation thrived for centuries before slowly declining."
+            },
+            {
+              "step": 2,
+              "title": "Climate change",
+              "explanation": "Major climate changes may have made the region drier and harmed farming."
+            },
+            {
+              "step": 3,
+              "title": "Rivers changed",
+              "explanation": "The drying of the Sarasvati and shifting river courses affected water and crops."
+            },
+            {
+              "step": 4,
+              "title": "People moved away",
+              "explanation": "As conditions worsened, people gradually left the great cities for smaller settlements."
+            }
+          ],
+          "examples": [
+            "The drying up of the Sarasvati river may have caused people to leave Harappan cities.",
+            "People gradually moved from large cities to smaller villages."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Decline",
+              "definition": "A slow fall or weakening over time.",
+              "simpleExample": "The Harappan Civilisation went into decline."
+            },
+            {
+              "keyword": "Climate change",
+              "definition": "A long-term change in weather patterns.",
+              "simpleExample": "Climate change may have dried the region."
+            },
+            {
+              "keyword": "Migration",
+              "definition": "The movement of people from one place to another.",
+              "simpleExample": "People migrated away from the cities."
+            }
+          ],
+          "quickSummary": "After flourishing for centuries, the Harappan Civilisation slowly declined, likely due to climate change and the drying of rivers like the Sarasvati, causing people to leave the cities.",
+          "revisionNotes": [
+            "Flourished, then slowly declined.",
+            "Likely causes: climate change and drier conditions.",
+            "Sarasvati drying and shifting rivers hurt farming.",
+            "People left big cities for smaller settlements."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 7,
+      "chapter": "India's Cultural Roots",
+      "topics": [
+        {
+          "topicId": "sst_ch7_topic1",
+          "topic": "The Vedas and Vedic Culture",
+          "meaning": "The Vedas are the oldest sacred texts of India, and Vedic culture shaped much of India's early thought and way of life.",
+          "ncertBasedExplanation": "The Vedas are among the oldest texts in the world and are the foundation of much of Indian culture. There are four Vedas, the oldest being the Rigveda, which is a collection of hymns. The Vedas were composed in Sanskrit and were passed down by being carefully memorised and recited aloud for many generations before being written down. They tell us about the beliefs, prayers, daily life, and ideas of the people of the Vedic period. Vedic culture valued nature, truth and learning, and many of its ideas, prayers and values continue to influence Indian life and thought today.",
+          "easyExplanation": "The Vedas are India's oldest sacred texts, with the Rigveda the oldest. They were memorised and recited for generations and shaped Indian culture and values.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Oldest texts",
+              "explanation": "The Vedas are among the oldest texts in the world and the base of Indian culture."
+            },
+            {
+              "step": 2,
+              "title": "Four Vedas",
+              "explanation": "There are four Vedas, the oldest being the Rigveda, a collection of hymns."
+            },
+            {
+              "step": 3,
+              "title": "Passed down orally",
+              "explanation": "Composed in Sanskrit, the Vedas were memorised and recited aloud for generations."
+            },
+            {
+              "step": 4,
+              "title": "Lasting influence",
+              "explanation": "Vedic culture valued nature, truth and learning, and still influences Indian life today."
+            }
+          ],
+          "examples": [
+            "The Rigveda is the oldest of the four Vedas.",
+            "The Vedas were memorised and recited carefully before being written down."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Veda",
+              "definition": "One of the oldest sacred texts of India.",
+              "simpleExample": "The Rigveda is a Veda."
+            },
+            {
+              "keyword": "Sanskrit",
+              "definition": "The ancient language in which the Vedas were composed.",
+              "simpleExample": "The Vedas are written in Sanskrit."
+            },
+            {
+              "keyword": "Hymn",
+              "definition": "A song or verse of prayer or praise.",
+              "simpleExample": "The Rigveda is a collection of hymns."
+            }
+          ],
+          "quickSummary": "The Vedas are India's oldest sacred texts (the Rigveda being the oldest), composed in Sanskrit and passed down orally for generations, shaping India's culture and values.",
+          "revisionNotes": [
+            "Vedas = oldest sacred texts of India.",
+            "Four Vedas; Rigveda is the oldest.",
+            "Composed in Sanskrit, passed down orally.",
+            "Vedic culture still influences Indian life."
+          ]
+        },
+        {
+          "topicId": "sst_ch7_topic2",
+          "topic": "Other Roots: New Ideas and Teachers",
+          "meaning": "India's cultural roots also include new schools of thought and great teachers, such as those of Jainism and Buddhism.",
+          "ncertBasedExplanation": "Besides the Vedic tradition, India's cultural roots include many other ideas and great teachers who explored deep questions about life, truth and right conduct. Among them were the founders and teachers of Jainism and Buddhism. Mahavira spread the teachings of Jainism, which stresses non-violence (ahimsa) and truth. Gautama Buddha founded Buddhism, teaching the middle path, kindness and the end of suffering. These teachers used simple languages so ordinary people could understand them. Together with the Vedic tradition, these ideas made India a land of many philosophies and a great centre of thought and learning.",
+          "easyExplanation": "India's roots also include teachers like Mahavira (Jainism) and Gautama Buddha (Buddhism), who taught non-violence, truth and kindness in simple language.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Many ideas",
+              "explanation": "Besides the Vedas, India had many other ideas and great teachers."
+            },
+            {
+              "step": 2,
+              "title": "Jainism",
+              "explanation": "Mahavira spread Jainism, which stresses non-violence (ahimsa) and truth."
+            },
+            {
+              "step": 3,
+              "title": "Buddhism",
+              "explanation": "Gautama Buddha founded Buddhism, teaching the middle path, kindness and the end of suffering."
+            },
+            {
+              "step": 4,
+              "title": "For everyone",
+              "explanation": "These teachers used simple languages so that ordinary people could understand them."
+            }
+          ],
+          "examples": [
+            "Mahavira taught the importance of non-violence (ahimsa).",
+            "Gautama Buddha taught the middle path and kindness to all."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Jainism",
+              "definition": "A religion that stresses non-violence and truth.",
+              "simpleExample": "Mahavira spread Jainism."
+            },
+            {
+              "keyword": "Buddhism",
+              "definition": "A religion founded by Gautama Buddha.",
+              "simpleExample": "Buddhism teaches kindness and peace."
+            },
+            {
+              "keyword": "Ahimsa",
+              "definition": "The principle of non-violence.",
+              "simpleExample": "Ahimsa means not harming any living being."
+            }
+          ],
+          "quickSummary": "India's cultural roots include great teachers and schools of thought beyond the Vedas, such as Mahavira's Jainism and Gautama Buddha's Buddhism, which taught non-violence, truth and kindness.",
+          "revisionNotes": [
+            "Roots include ideas beyond the Vedas.",
+            "Mahavira spread Jainism (non-violence, truth).",
+            "Gautama Buddha founded Buddhism (middle path, kindness).",
+            "Teachers used simple language for all."
+          ]
+        },
+        {
+          "topicId": "sst_ch7_topic3",
+          "topic": "A Land of Sacred Geography",
+          "meaning": "India's culture is connected to its land, with many rivers, mountains and places treated as sacred and linking the country together.",
+          "ncertBasedExplanation": "An important part of India's cultural roots is its sacred geography, the idea that the land itself is holy. Across India, rivers such as the Ganga and Yamuna, mountains like the Himalayas, and many towns and places are regarded as sacred. People travel on pilgrimages to these places from all over the country. This network of sacred sites, spread from the north to the south and the east to the west, has helped tie the different parts of India together over thousands of years. Sacred geography shows how India's culture, faith and land are deeply connected.",
+          "easyExplanation": "In India, many rivers, mountains and places are seen as sacred. People go on pilgrimages to them, and these sacred sites help connect the whole country.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "The land is sacred",
+              "explanation": "India's sacred geography is the idea that the land itself is holy."
+            },
+            {
+              "step": 2,
+              "title": "Sacred rivers and mountains",
+              "explanation": "Rivers like the Ganga and mountains like the Himalayas are regarded as sacred."
+            },
+            {
+              "step": 3,
+              "title": "Pilgrimages",
+              "explanation": "People travel on pilgrimages to sacred places across the country."
+            },
+            {
+              "step": 4,
+              "title": "Connecting India",
+              "explanation": "This network of sacred sites from north to south has helped tie India together."
+            }
+          ],
+          "examples": [
+            "The river Ganga is considered sacred across India.",
+            "People go on pilgrimages to holy places from all parts of the country."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Sacred geography",
+              "definition": "The idea that the land and its features are holy.",
+              "simpleExample": "India's rivers are part of its sacred geography."
+            },
+            {
+              "keyword": "Pilgrimage",
+              "definition": "A journey to a holy place.",
+              "simpleExample": "Visiting a sacred river is a pilgrimage."
+            },
+            {
+              "keyword": "Sacred",
+              "definition": "Holy or treated with great respect.",
+              "simpleExample": "The Ganga is a sacred river."
+            }
+          ],
+          "quickSummary": "India's sacred geography treats rivers, mountains and places as holy; pilgrimages to these sites, spread across the country, have helped connect India's diverse regions for thousands of years.",
+          "revisionNotes": [
+            "Sacred geography = the land seen as holy.",
+            "Rivers (Ganga), mountains (Himalayas), towns are sacred.",
+            "People go on pilgrimages to them.",
+            "Sacred sites help connect all of India."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 8,
+      "chapter": "Unity in Diversity, or 'Many in the One'",
+      "topics": [
+        {
+          "topicId": "sst_ch8_topic1",
+          "topic": "India's Great Diversity",
+          "meaning": "India has enormous diversity in its languages, religions, food, clothing, festivals and ways of life.",
+          "ncertBasedExplanation": "India is one of the most diverse countries in the world. Its people speak hundreds of different languages and dialects, follow many religions, and celebrate a huge number of festivals. Food, clothing, music, dance and customs change from one region to another, so the way of life in one part of India can look very different from another. This variety is found not only between regions but even within a single town or village. India's diversity is one of its greatest features and makes it a colourful and fascinating country.",
+          "easyExplanation": "India is full of variety: many languages, religions, festivals, foods and clothes. Life can look very different from one region to another.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Many languages",
+              "explanation": "Indians speak hundreds of different languages and dialects."
+            },
+            {
+              "step": 2,
+              "title": "Many religions and festivals",
+              "explanation": "People follow many religions and celebrate a huge number of festivals."
+            },
+            {
+              "step": 3,
+              "title": "Regional variety",
+              "explanation": "Food, clothing, music, dance and customs change from region to region."
+            },
+            {
+              "step": 4,
+              "title": "Diversity everywhere",
+              "explanation": "This variety appears not only between regions but even within a single town."
+            }
+          ],
+          "examples": [
+            "People in different states of India speak different languages and wear different clothes.",
+            "Festivals like Diwali, Eid, Christmas and Pongal are celebrated across India."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Diversity",
+              "definition": "A great variety of different things.",
+              "simpleExample": "India has language and food diversity."
+            },
+            {
+              "keyword": "Dialect",
+              "definition": "A local form of a language.",
+              "simpleExample": "Each region may have its own dialect."
+            },
+            {
+              "keyword": "Festival",
+              "definition": "A special day of celebration.",
+              "simpleExample": "Diwali is an Indian festival."
+            }
+          ],
+          "quickSummary": "India has enormous diversity in languages, religions, food, clothing, festivals and customs, varying from region to region and even within a single place.",
+          "revisionNotes": [
+            "India is one of the most diverse countries.",
+            "Hundreds of languages and many religions.",
+            "Food, clothing and festivals vary by region.",
+            "Diversity even within a single town."
+          ]
+        },
+        {
+          "topicId": "sst_ch8_topic2",
+          "topic": "The Threads of Unity",
+          "meaning": "Despite its diversity, India is bound together by shared values, festivals, sacred geography, history and a sense of being one nation.",
+          "ncertBasedExplanation": "Even though India is so diverse, many threads bind its people together into one nation. These include a shared history and culture, common values such as respect for elders and hospitality, and the sacred geography that links holy places across the land. Many festivals, stories from the great epics like the Ramayana and Mahabharata, and similar customs are found in different forms all over India. The Constitution and a shared sense of being Indian also unite people. These common threads running through India's diversity create its famous 'unity in diversity'.",
+          "easyExplanation": "Even with so much variety, Indians share values, festivals, epics, sacred places and history. These shared threads bind the country into one nation.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Shared history and culture",
+              "explanation": "A common history and culture connect people across India."
+            },
+            {
+              "step": 2,
+              "title": "Shared values",
+              "explanation": "Values like respect for elders and hospitality are found everywhere."
+            },
+            {
+              "step": 3,
+              "title": "Shared stories and sacred places",
+              "explanation": "Epics like the Ramayana and Mahabharata and sacred geography link the whole land."
+            },
+            {
+              "step": 4,
+              "title": "One nation",
+              "explanation": "The Constitution and a shared sense of being Indian unite the people."
+            }
+          ],
+          "examples": [
+            "The epics Ramayana and Mahabharata are known across all of India.",
+            "Respect for elders and guests is a value shared throughout the country."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Unity",
+              "definition": "The state of being united as one.",
+              "simpleExample": "Shared values give India unity."
+            },
+            {
+              "keyword": "Epic",
+              "definition": "A long story about heroes, like the Ramayana.",
+              "simpleExample": "The Mahabharata is an Indian epic."
+            },
+            {
+              "keyword": "Values",
+              "definition": "Shared ideas about what is good and important.",
+              "simpleExample": "Hospitality is an Indian value."
+            }
+          ],
+          "quickSummary": "Despite its diversity, India is united by shared history, values, festivals, epics, sacred geography and the Constitution, which together bind its people into one nation.",
+          "revisionNotes": [
+            "Many threads unite India's diversity.",
+            "Shared history, culture and values.",
+            "Common epics, festivals and sacred geography.",
+            "Constitution and shared identity unite all."
+          ]
+        },
+        {
+          "topicId": "sst_ch8_topic3",
+          "topic": "Unity in Diversity",
+          "meaning": "'Unity in diversity' means that India's many differences exist together within one united nation.",
+          "ncertBasedExplanation": "The phrase 'unity in diversity' describes India perfectly. It means that even though Indians differ greatly in language, religion, food and customs, they live together as one united nation, sharing common bonds and a single identity. The idea is also expressed as 'many in the one', many different parts forming one whole. This unity in diversity is a great strength: it makes India rich and colourful while keeping it together. To keep this strength, people must respect one another's differences and live together with harmony, tolerance and friendship.",
+          "easyExplanation": "'Unity in diversity' means India's many differences live together as one nation. It is a strength, kept alive by respect, tolerance and harmony.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Meaning of the phrase",
+              "explanation": "'Unity in diversity' means many differences existing together in one united nation."
+            },
+            {
+              "step": 2,
+              "title": "Many in the one",
+              "explanation": "It is also described as 'many in the one', many parts forming a single whole."
+            },
+            {
+              "step": 3,
+              "title": "A great strength",
+              "explanation": "This unity in diversity makes India rich, colourful and strong."
+            },
+            {
+              "step": 4,
+              "title": "Keeping it alive",
+              "explanation": "It is preserved by respecting differences and living with harmony and tolerance."
+            }
+          ],
+          "examples": [
+            "People of many languages and religions live together as one Indian nation.",
+            "India's motto 'unity in diversity' is seen in its many festivals celebrated by all."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Unity in diversity",
+              "definition": "Many differences existing together in one united nation.",
+              "simpleExample": "India is famous for unity in diversity."
+            },
+            {
+              "keyword": "Tolerance",
+              "definition": "Accepting and respecting differences.",
+              "simpleExample": "Tolerance helps people of different faiths live together."
+            },
+            {
+              "keyword": "Harmony",
+              "definition": "Living together peacefully.",
+              "simpleExample": "Communities living in harmony respect each other."
+            }
+          ],
+          "quickSummary": "'Unity in diversity' means India's many differences in language, religion and custom exist together within one united nation, a strength preserved through respect, tolerance and harmony.",
+          "revisionNotes": [
+            "'Unity in diversity' = differences within one nation.",
+            "Also called 'many in the one'.",
+            "A great strength of India.",
+            "Kept alive by respect, tolerance and harmony."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 9,
+      "chapter": "Family and Community",
+      "topics": [
+        {
+          "topicId": "sst_ch9_topic1",
+          "topic": "The Family",
+          "meaning": "A family is a group of people related by blood or marriage, and families can be of different types, such as nuclear and joint families.",
+          "ncertBasedExplanation": "A family is one of the first and most important groups a person belongs to. It is a group of people connected by blood, marriage or adoption, who usually live together and care for one another. Families can be of different kinds. A nuclear family is small, with parents and their children. A joint family is larger, with parents, children, grandparents and other relatives like uncles and aunts living together. Families give us love, support, food, shelter and our first lessons in values and behaviour. Over time, family structures change, but the family remains a basic unit of society.",
+          "easyExplanation": "A family is people related by blood or marriage who live together and care for each other. A nuclear family is small (parents and children); a joint family is bigger.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "What a family is",
+              "explanation": "A family is a group related by blood, marriage or adoption who care for one another."
+            },
+            {
+              "step": 2,
+              "title": "Nuclear family",
+              "explanation": "A small family of parents and their children."
+            },
+            {
+              "step": 3,
+              "title": "Joint family",
+              "explanation": "A larger family of parents, children, grandparents and other relatives together."
+            },
+            {
+              "step": 4,
+              "title": "Why family matters",
+              "explanation": "Families give love, support, shelter and our first lessons in values."
+            }
+          ],
+          "examples": [
+            "A mother, father and their children form a nuclear family.",
+            "Grandparents, parents, children, uncles and aunts living together form a joint family."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Family",
+              "definition": "A group of people related by blood, marriage or adoption.",
+              "simpleExample": "Parents and children form a family."
+            },
+            {
+              "keyword": "Nuclear family",
+              "definition": "A small family of parents and children.",
+              "simpleExample": "A nuclear family has parents and kids only."
+            },
+            {
+              "keyword": "Joint family",
+              "definition": "A large family with several generations together.",
+              "simpleExample": "A joint family includes grandparents and relatives."
+            }
+          ],
+          "quickSummary": "A family is a group related by blood, marriage or adoption who live together and care for one another; it can be a small nuclear family or a larger joint family.",
+          "revisionNotes": [
+            "Family = people related by blood/marriage/adoption.",
+            "Nuclear family = parents and children.",
+            "Joint family = several generations together.",
+            "Family gives love, support and first values."
+          ]
+        },
+        {
+          "topicId": "sst_ch9_topic2",
+          "topic": "The Community",
+          "meaning": "A community is a larger group of people who live in the same area or share something in common, and it helps and supports its members.",
+          "ncertBasedExplanation": "Beyond the family is a larger group called the community. A community is a group of people who live in the same area, such as a village or a neighbourhood, or who share something in common, such as language, work, interests or beliefs. Members of a community help and support one another, share resources like water and roads, and work together for common needs. People can belong to more than one community at the same time. Living in a community teaches us cooperation, sharing and responsibility, and helps everyone live a better life together.",
+          "easyExplanation": "A community is a bigger group sharing the same place or something in common, like language or work. People in a community help each other and share resources.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Beyond the family",
+              "explanation": "A community is a larger group than the family."
+            },
+            {
+              "step": 2,
+              "title": "Who forms a community",
+              "explanation": "People who live in the same area or share language, work or beliefs form a community."
+            },
+            {
+              "step": 3,
+              "title": "They help each other",
+              "explanation": "Community members support one another and share resources like water and roads."
+            },
+            {
+              "step": 4,
+              "title": "Belonging to many",
+              "explanation": "A person can belong to several communities at once, learning cooperation and responsibility."
+            }
+          ],
+          "examples": [
+            "The people of a village form a community that shares roads and water.",
+            "People who follow the same profession can form a community."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Community",
+              "definition": "A group sharing a place or something in common.",
+              "simpleExample": "A neighbourhood is a community."
+            },
+            {
+              "keyword": "Cooperation",
+              "definition": "Working together for a common purpose.",
+              "simpleExample": "Cooperation helps a community thrive."
+            },
+            {
+              "keyword": "Resources",
+              "definition": "Useful things shared by a group.",
+              "simpleExample": "A community shares resources like water."
+            }
+          ],
+          "quickSummary": "A community is a larger group of people who share the same area or something in common; members help each other and share resources, teaching cooperation and responsibility.",
+          "revisionNotes": [
+            "Community = group sharing a place or common bond.",
+            "Based on area, language, work or beliefs.",
+            "Members help each other and share resources.",
+            "Teaches cooperation and responsibility."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 10,
+      "chapter": "Grassroots Democracy - Part 1: Governance",
+      "topics": [
+        {
+          "topicId": "sst_ch10_topic1",
+          "topic": "What is Government?",
+          "meaning": "A government is the group of people and institutions that make decisions, run a country and maintain order for the welfare of the people.",
+          "ncertBasedExplanation": "A government is needed wherever people live together, to make rules, take decisions and look after everyone's welfare. The government makes laws, provides services like schools, hospitals, roads, water and electricity, keeps order and protects the country. Without a government, there would be confusion and no one to settle disputes or provide common services. The government works for the people, and in return people follow its laws. Studying government helps us understand how decisions that affect our daily lives are made.",
+          "easyExplanation": "A government is the group that makes rules, runs the country and provides services like schools, roads and water for everyone's welfare.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Why we need it",
+              "explanation": "Wherever people live together, a government is needed to make rules and decisions."
+            },
+            {
+              "step": 2,
+              "title": "What it does",
+              "explanation": "The government makes laws, provides services and keeps order."
+            },
+            {
+              "step": 3,
+              "title": "Provides services",
+              "explanation": "It gives services like schools, hospitals, roads, water and electricity."
+            },
+            {
+              "step": 4,
+              "title": "Works for the people",
+              "explanation": "The government works for the welfare of the people, who in turn follow its laws."
+            }
+          ],
+          "examples": [
+            "The government builds roads and runs government schools and hospitals.",
+            "The government makes laws that everyone must follow."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Government",
+              "definition": "The group that makes decisions and runs a country.",
+              "simpleExample": "The government provides public services."
+            },
+            {
+              "keyword": "Law",
+              "definition": "A rule made by the government for everyone.",
+              "simpleExample": "Following traffic laws keeps roads safe."
+            },
+            {
+              "keyword": "Welfare",
+              "definition": "The health, happiness and good of the people.",
+              "simpleExample": "Government works for public welfare."
+            }
+          ],
+          "quickSummary": "A government is the group of people and institutions that make laws, run the country, keep order and provide services like schools and roads for the welfare of the people.",
+          "revisionNotes": [
+            "Government makes rules and runs the country.",
+            "Provides services: schools, hospitals, roads, water.",
+            "Keeps order and protects the country.",
+            "Works for the welfare of the people."
+          ]
+        },
+        {
+          "topicId": "sst_ch10_topic2",
+          "topic": "Levels of Government",
+          "meaning": "Government in India works at three levels: the central (national), the state, and the local level.",
+          "ncertBasedExplanation": "Because India is a very large country, the government works at three levels so that decisions can be made closer to the people. The central government, also called the national or union government, looks after the whole country and matters like defence and foreign affairs. The state government looks after a single state and matters like the state's schools, police and roads. The local government works at the smallest level, in villages and towns, handling local needs like water supply, sanitation and street lights. These three levels work together to govern the country effectively.",
+          "easyExplanation": "India's government works at three levels: central (whole country), state (one state), and local (villages and towns). Each handles different matters.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Three levels",
+              "explanation": "Government in India works at three levels because the country is so large."
+            },
+            {
+              "step": 2,
+              "title": "Central government",
+              "explanation": "The national government looks after the whole country and matters like defence."
+            },
+            {
+              "step": 3,
+              "title": "State government",
+              "explanation": "The state government looks after one state's schools, police and roads."
+            },
+            {
+              "step": 4,
+              "title": "Local government",
+              "explanation": "The local government handles village and town needs like water and street lights."
+            }
+          ],
+          "examples": [
+            "The central government handles defence for the whole country.",
+            "The local government looks after street lights and water supply in your area."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Central government",
+              "definition": "The national government for the whole country.",
+              "simpleExample": "The central government manages defence."
+            },
+            {
+              "keyword": "State government",
+              "definition": "The government of a single state.",
+              "simpleExample": "The state government runs state schools."
+            },
+            {
+              "keyword": "Local government",
+              "definition": "The government for a village or town.",
+              "simpleExample": "The local government cleans local streets."
+            }
+          ],
+          "quickSummary": "Government in India works at three levels, central (whole country), state (one state) and local (villages and towns), each handling different matters and working together.",
+          "revisionNotes": [
+            "Three levels of government in India.",
+            "Central = whole country (e.g., defence).",
+            "State = one state (e.g., state police).",
+            "Local = villages and towns (e.g., water, sanitation)."
+          ]
+        },
+        {
+          "topicId": "sst_ch10_topic3",
+          "topic": "Organs of Government",
+          "meaning": "Government has three organs: the legislature that makes laws, the executive that carries them out, and the judiciary that settles disputes.",
+          "ncertBasedExplanation": "A government does its work through three parts, called organs. The legislature is the body that makes laws; it is made up of people's elected representatives. The executive is the part that puts the laws into action and runs the day-to-day work of government. The judiciary is the system of courts that settles disputes, ensures justice and makes sure laws are followed fairly. These three organs have separate roles but work together. Keeping their roles separate helps prevent the misuse of power and protects the rights of the people.",
+          "easyExplanation": "Government has three organs: the legislature makes laws, the executive carries them out, and the judiciary (courts) settles disputes and gives justice.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Three organs",
+              "explanation": "Government works through three organs with separate roles."
+            },
+            {
+              "step": 2,
+              "title": "Legislature",
+              "explanation": "The legislature makes laws and is made of elected representatives."
+            },
+            {
+              "step": 3,
+              "title": "Executive",
+              "explanation": "The executive carries out the laws and runs the daily work of government."
+            },
+            {
+              "step": 4,
+              "title": "Judiciary",
+              "explanation": "The judiciary, the courts, settles disputes and ensures justice."
+            }
+          ],
+          "examples": [
+            "The legislature debates and passes new laws.",
+            "The courts (judiciary) decide cases and settle disputes."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Legislature",
+              "definition": "The organ that makes laws.",
+              "simpleExample": "The legislature passes new laws."
+            },
+            {
+              "keyword": "Executive",
+              "definition": "The organ that carries out laws.",
+              "simpleExample": "The executive runs government departments."
+            },
+            {
+              "keyword": "Judiciary",
+              "definition": "The system of courts that gives justice.",
+              "simpleExample": "The judiciary settles disputes."
+            }
+          ],
+          "quickSummary": "Government has three organs: the legislature (makes laws), the executive (carries them out) and the judiciary (settles disputes and ensures justice), with separate roles to prevent misuse of power.",
+          "revisionNotes": [
+            "Three organs of government.",
+            "Legislature = makes laws (elected representatives).",
+            "Executive = carries out laws.",
+            "Judiciary = courts that settle disputes and give justice."
+          ]
+        },
+        {
+          "topicId": "sst_ch10_topic4",
+          "topic": "Democracy and Grassroots Democracy",
+          "meaning": "Democracy is government by the people through elected representatives, and grassroots democracy gives people a say at the local level.",
+          "ncertBasedExplanation": "Democracy is a form of government in which the people rule, usually by electing their representatives to make decisions on their behalf. In a democracy, every adult has the right to vote, and the government is answerable to the people. Grassroots democracy means democracy at the lowest, local level, in villages and towns, where ordinary people take part directly in making decisions about their own area. This brings government close to the people and lets them solve their local problems themselves. Grassroots democracy is an important way for citizens to participate in running their community.",
+          "easyExplanation": "Democracy means rule by the people through elected representatives. Grassroots democracy brings this to the local level, letting people decide about their own area.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "What democracy is",
+              "explanation": "Democracy is government by the people, usually through elected representatives."
+            },
+            {
+              "step": 2,
+              "title": "Right to vote",
+              "explanation": "In a democracy, every adult can vote and the government answers to the people."
+            },
+            {
+              "step": 3,
+              "title": "Grassroots democracy",
+              "explanation": "Democracy at the local village and town level is called grassroots democracy."
+            },
+            {
+              "step": 4,
+              "title": "People participate",
+              "explanation": "It lets ordinary people take part directly in decisions about their own area."
+            }
+          ],
+          "examples": [
+            "People elect their representatives by voting in a democracy.",
+            "Villagers deciding together how to spend funds on local needs is grassroots democracy."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Democracy",
+              "definition": "Government by the people through elected representatives.",
+              "simpleExample": "India is a democracy."
+            },
+            {
+              "keyword": "Grassroots democracy",
+              "definition": "Democracy at the local level.",
+              "simpleExample": "Village councils are grassroots democracy."
+            },
+            {
+              "keyword": "Vote",
+              "definition": "A choice made in an election.",
+              "simpleExample": "Adults cast a vote to elect leaders."
+            }
+          ],
+          "quickSummary": "Democracy is government by the people through elected representatives; grassroots democracy brings this to the local level, letting people participate directly in decisions about their own area.",
+          "revisionNotes": [
+            "Democracy = rule by the people via elected representatives.",
+            "Every adult has the right to vote.",
+            "Grassroots democracy = democracy at the local level.",
+            "Lets people decide on their own area directly."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 11,
+      "chapter": "Grassroots Democracy - Part 2: Local Government in Rural Areas",
+      "topics": [
+        {
+          "topicId": "sst_ch11_topic1",
+          "topic": "The Gram Sabha and Gram Panchayat",
+          "meaning": "In villages, local government is run by the Gram Panchayat, which is guided by the Gram Sabha of all village voters.",
+          "ncertBasedExplanation": "In rural (village) areas, local self-government is carried out mainly through the Gram Sabha and the Gram Panchayat. The Gram Sabha is a meeting of all the adult voters of a village; it is the foundation of village democracy, where people discuss and approve plans and keep an eye on the work of their leaders. The Gram Panchayat is the elected council that runs the village from day to day. It is headed by the Sarpanch (or Pradhan) and includes elected members called Panches. The Gram Sabha elects the Panchayat and holds it answerable, making sure the village is run for everyone's benefit.",
+          "easyExplanation": "In villages, the Gram Sabha (all adult voters) is the base of local democracy, and it elects the Gram Panchayat, led by the Sarpanch, to run the village.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Village self-government",
+              "explanation": "Rural local government works mainly through the Gram Sabha and Gram Panchayat."
+            },
+            {
+              "step": 2,
+              "title": "The Gram Sabha",
+              "explanation": "The Gram Sabha is a meeting of all adult voters of the village, the base of village democracy."
+            },
+            {
+              "step": 3,
+              "title": "The Gram Panchayat",
+              "explanation": "The Gram Panchayat is the elected council that runs the village day to day."
+            },
+            {
+              "step": 4,
+              "title": "Sarpanch and Panches",
+              "explanation": "It is headed by the Sarpanch and includes elected members called Panches, answerable to the Gram Sabha."
+            }
+          ],
+          "examples": [
+            "All the adult voters of a village together form the Gram Sabha.",
+            "The Sarpanch heads the Gram Panchayat that runs the village."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Gram Sabha",
+              "definition": "A meeting of all adult voters of a village.",
+              "simpleExample": "The Gram Sabha approves village plans."
+            },
+            {
+              "keyword": "Gram Panchayat",
+              "definition": "The elected council that runs a village.",
+              "simpleExample": "The Gram Panchayat builds village roads."
+            },
+            {
+              "keyword": "Sarpanch",
+              "definition": "The elected head of the Gram Panchayat.",
+              "simpleExample": "The Sarpanch leads the village council."
+            }
+          ],
+          "quickSummary": "In villages, the Gram Sabha (all adult voters) is the base of local democracy and elects the Gram Panchayat, headed by the Sarpanch and made of Panches, to run the village.",
+          "revisionNotes": [
+            "Rural local government: Gram Sabha + Gram Panchayat.",
+            "Gram Sabha = all adult village voters.",
+            "Gram Panchayat = elected village council.",
+            "Headed by Sarpanch; members are Panches."
+          ]
+        },
+        {
+          "topicId": "sst_ch11_topic2",
+          "topic": "The Three Tiers of Panchayati Raj",
+          "meaning": "Rural local government has three tiers: the Gram Panchayat (village), the Panchayat Samiti (block) and the Zila Parishad (district).",
+          "ncertBasedExplanation": "Rural local self-government in India is organised in a three-tier (three-level) system called Panchayati Raj. At the lowest level is the Gram Panchayat, which works for one village or a group of small villages. At the middle level is the Panchayat Samiti (also called the block or intermediate level), which works for a group of Gram Panchayats. At the highest level is the Zila Parishad, which works for the whole district and coordinates the work of the Panchayat Samitis. This three-tier system helps plan and carry out development work across villages, blocks and districts.",
+          "easyExplanation": "Panchayati Raj has three tiers: Gram Panchayat (village), Panchayat Samiti (block of villages), and Zila Parishad (whole district).",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Three-tier system",
+              "explanation": "Rural local government, called Panchayati Raj, has three levels."
+            },
+            {
+              "step": 2,
+              "title": "Gram Panchayat",
+              "explanation": "The lowest tier works for one village or a group of small villages."
+            },
+            {
+              "step": 3,
+              "title": "Panchayat Samiti",
+              "explanation": "The middle tier, at the block level, works for a group of Gram Panchayats."
+            },
+            {
+              "step": 4,
+              "title": "Zila Parishad",
+              "explanation": "The highest tier works for the whole district and coordinates the Panchayat Samitis."
+            }
+          ],
+          "examples": [
+            "The Zila Parishad works at the district level of Panchayati Raj.",
+            "A Panchayat Samiti looks after a group of villages at the block level."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Panchayati Raj",
+              "definition": "The three-tier system of rural local government.",
+              "simpleExample": "Panchayati Raj governs rural India."
+            },
+            {
+              "keyword": "Panchayat Samiti",
+              "definition": "The block-level tier of Panchayati Raj.",
+              "simpleExample": "The Panchayat Samiti links villages and the district."
+            },
+            {
+              "keyword": "Zila Parishad",
+              "definition": "The district-level tier of Panchayati Raj.",
+              "simpleExample": "The Zila Parishad plans for the whole district."
+            }
+          ],
+          "quickSummary": "Panchayati Raj is a three-tier system of rural local government: the Gram Panchayat (village), the Panchayat Samiti (block) and the Zila Parishad (district).",
+          "revisionNotes": [
+            "Panchayati Raj = three-tier rural government.",
+            "Gram Panchayat = village level.",
+            "Panchayat Samiti = block level.",
+            "Zila Parishad = district level."
+          ]
+        },
+        {
+          "topicId": "sst_ch11_topic3",
+          "topic": "Roles and Responsibilities of the Panchayat",
+          "meaning": "The Gram Panchayat looks after local services and development, and gets its money from taxes, fees and government grants.",
+          "ncertBasedExplanation": "The Gram Panchayat has many roles and responsibilities for the welfare of the village. It looks after local needs such as supplying clean water, building and repairing roads and drains, providing street lighting, keeping the village clean, and helping run schools and health services. It also keeps records like births and deaths. To do this work, the Panchayat needs money, which it gets from local taxes and fees, and from grants given by the state and central governments. By carrying out these responsibilities, the Panchayat helps improve daily life in the village.",
+          "easyExplanation": "The Gram Panchayat provides village services like water, roads, drains, street lights and cleanliness. It pays for this through local taxes, fees and government grants.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Looks after the village",
+              "explanation": "The Gram Panchayat is responsible for the welfare and development of the village."
+            },
+            {
+              "step": 2,
+              "title": "Provides services",
+              "explanation": "It supplies water, builds roads and drains, provides street lights and keeps the village clean."
+            },
+            {
+              "step": 3,
+              "title": "Keeps records",
+              "explanation": "It maintains records such as births and deaths in the village."
+            },
+            {
+              "step": 4,
+              "title": "Raises money",
+              "explanation": "It funds its work through local taxes and fees and grants from the state and central governments."
+            }
+          ],
+          "examples": [
+            "The Gram Panchayat arranges clean drinking water and street lights in the village.",
+            "Panchayats collect local taxes and receive government grants to pay for their work."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Responsibility",
+              "definition": "A duty that one is expected to carry out.",
+              "simpleExample": "Cleaning the village is a Panchayat responsibility."
+            },
+            {
+              "keyword": "Tax",
+              "definition": "Money paid to the government for public services.",
+              "simpleExample": "Local taxes help fund the Panchayat."
+            },
+            {
+              "keyword": "Grant",
+              "definition": "Money given by a higher government.",
+              "simpleExample": "The Panchayat gets grants from the state government."
+            }
+          ],
+          "quickSummary": "The Gram Panchayat looks after village services and development, like water, roads, drains and cleanliness, and funds this through local taxes, fees and government grants.",
+          "revisionNotes": [
+            "Panchayat looks after village welfare and development.",
+            "Services: water, roads, drains, lights, cleanliness.",
+            "Keeps records (births, deaths).",
+            "Funded by local taxes, fees and government grants."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 12,
+      "chapter": "Grassroots Democracy - Part 3: Local Government in Urban Areas",
+      "topics": [
+        {
+          "topicId": "sst_ch12_topic1",
+          "topic": "Urban Local Bodies",
+          "meaning": "In towns and cities, local government is run by urban local bodies, which look after the needs of urban areas.",
+          "ncertBasedExplanation": "Just as villages have Panchayats, towns and cities have their own local governments called urban local bodies. They are needed because urban areas have large populations and special needs, such as managing traffic, water supply, garbage, street lighting and public health for many people living close together. The type of urban local body depends on the size of the town or city. These bodies are run by representatives elected by the people of the urban area, making them another form of grassroots democracy that brings government close to city dwellers.",
+          "easyExplanation": "Towns and cities have local governments called urban local bodies. They manage city needs like water, garbage, traffic and lighting, and are elected by the people.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Urban local government",
+              "explanation": "Towns and cities have local governments called urban local bodies."
+            },
+            {
+              "step": 2,
+              "title": "Why they are needed",
+              "explanation": "Urban areas have large populations and special needs like traffic, garbage and water."
+            },
+            {
+              "step": 3,
+              "title": "Different types",
+              "explanation": "The type of urban local body depends on the size of the town or city."
+            },
+            {
+              "step": 4,
+              "title": "Elected by the people",
+              "explanation": "These bodies are run by elected representatives, a form of grassroots democracy."
+            }
+          ],
+          "examples": [
+            "A big city's water supply and garbage collection are managed by its urban local body.",
+            "People in a town elect representatives to their urban local body."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Urban local body",
+              "definition": "The local government of a town or city.",
+              "simpleExample": "A city's urban local body collects garbage."
+            },
+            {
+              "keyword": "Urban area",
+              "definition": "A town or city where many people live.",
+              "simpleExample": "A city is an urban area."
+            },
+            {
+              "keyword": "Representative",
+              "definition": "A person elected to act for others.",
+              "simpleExample": "We elect representatives to local bodies."
+            }
+          ],
+          "quickSummary": "In towns and cities, urban local bodies run local government, managing needs like water, garbage, traffic and lighting; they are elected by the people, forming urban grassroots democracy.",
+          "revisionNotes": [
+            "Towns/cities have urban local bodies.",
+            "They manage water, garbage, traffic, lighting, health.",
+            "Type depends on the size of the city.",
+            "Run by elected representatives."
+          ]
+        },
+        {
+          "topicId": "sst_ch12_topic2",
+          "topic": "Municipal Corporations and Councils",
+          "meaning": "Urban areas are governed by Municipal Corporations in large cities, Municipal Councils in smaller towns, and Nagar Panchayats in very small towns.",
+          "ncertBasedExplanation": "There are different kinds of urban local bodies for different sizes of urban areas. A Municipal Corporation governs a very large city, with many departments and a large team to manage the city's needs. A Municipal Council (or Municipality) governs a smaller town. A Nagar Panchayat governs a very small or newly growing town that is becoming urban. The elected head of a Municipal Corporation is usually called the Mayor, while the city's daily administration is run by appointed officials. These bodies divide the city into wards, each represented by an elected councillor.",
+          "easyExplanation": "Big cities have Municipal Corporations, smaller towns have Municipal Councils, and very small towns have Nagar Panchayats. A Mayor often heads a Corporation.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Bodies by size",
+              "explanation": "Different urban local bodies govern different sizes of urban areas."
+            },
+            {
+              "step": 2,
+              "title": "Municipal Corporation",
+              "explanation": "A Municipal Corporation governs a very large city."
+            },
+            {
+              "step": 3,
+              "title": "Municipal Council and Nagar Panchayat",
+              "explanation": "A Municipal Council governs a smaller town and a Nagar Panchayat a very small town."
+            },
+            {
+              "step": 4,
+              "title": "Mayor and wards",
+              "explanation": "A Mayor often heads a Corporation, and the city is divided into wards, each with an elected councillor."
+            }
+          ],
+          "examples": [
+            "A large city like Mumbai is governed by a Municipal Corporation.",
+            "A small town may be governed by a Municipal Council."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Municipal Corporation",
+              "definition": "The local body that governs a large city.",
+              "simpleExample": "A Municipal Corporation runs a big city."
+            },
+            {
+              "keyword": "Municipal Council",
+              "definition": "The local body that governs a smaller town.",
+              "simpleExample": "A Municipal Council governs a town."
+            },
+            {
+              "keyword": "Mayor",
+              "definition": "The elected head of a Municipal Corporation.",
+              "simpleExample": "The Mayor leads the city corporation."
+            }
+          ],
+          "quickSummary": "Urban areas are governed by Municipal Corporations (large cities), Municipal Councils (smaller towns) and Nagar Panchayats (very small towns); a Mayor often heads a Corporation and the city is divided into wards.",
+          "revisionNotes": [
+            "Municipal Corporation = large city.",
+            "Municipal Council = smaller town.",
+            "Nagar Panchayat = very small town.",
+            "Mayor heads a Corporation; city divided into wards."
+          ]
+        },
+        {
+          "topicId": "sst_ch12_topic3",
+          "topic": "How Urban Local Bodies Work",
+          "meaning": "Urban local bodies provide city services and raise money through taxes, fees and government grants.",
+          "ncertBasedExplanation": "Urban local bodies do a great deal of work to keep a town or city running. They provide and maintain services such as water supply, drainage and sewage, garbage collection and disposal, street lighting, roads, parks, public health and the control of diseases. To pay for all this, they raise money from taxes such as property tax, from fees and charges for services, and from grants given by the state and central governments. The elected councillors and the appointed officials work together so that the city is clean, safe and well run for all its residents.",
+          "easyExplanation": "Urban local bodies provide city services like water, drains, garbage collection, roads and street lights, paying for them with taxes, fees and government grants.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Provide city services",
+              "explanation": "Urban bodies provide water, drainage, garbage collection, roads, lighting and public health."
+            },
+            {
+              "step": 2,
+              "title": "Keep the city running",
+              "explanation": "They maintain parks, control diseases and keep the city clean and safe."
+            },
+            {
+              "step": 3,
+              "title": "Raise money",
+              "explanation": "They collect property tax, fees for services, and grants from higher governments."
+            },
+            {
+              "step": 4,
+              "title": "Work together",
+              "explanation": "Elected councillors and appointed officials work together to run the city well."
+            }
+          ],
+          "examples": [
+            "The urban local body collects garbage and maintains street lights in the city.",
+            "Property tax paid by city residents helps fund urban local bodies."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Property tax",
+              "definition": "A tax paid on owning land or buildings.",
+              "simpleExample": "Property tax helps fund city services."
+            },
+            {
+              "keyword": "Sewage",
+              "definition": "Waste water carried away through drains.",
+              "simpleExample": "Urban bodies manage sewage and drainage."
+            },
+            {
+              "keyword": "Councillor",
+              "definition": "An elected member of an urban local body.",
+              "simpleExample": "Each ward elects a councillor."
+            }
+          ],
+          "quickSummary": "Urban local bodies provide services like water, drainage, garbage collection, roads and lighting, funding them through property tax, fees and government grants, run by councillors and officials together.",
+          "revisionNotes": [
+            "Provide water, drainage, garbage, roads, lighting, health.",
+            "Maintain parks and control diseases.",
+            "Funded by property tax, fees and grants.",
+            "Run by elected councillors and appointed officials."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 13,
+      "chapter": "The Value of Work",
+      "topics": [
+        {
+          "topicId": "sst_ch13_topic1",
+          "topic": "Work and Its Value",
+          "meaning": "Work is any activity done with a purpose, and all honest work has value and dignity.",
+          "ncertBasedExplanation": "Work is any activity that people do with a purpose, usually to produce goods or provide services, or to look after themselves and others. Every kind of honest work is valuable, whether it is done by a farmer, a teacher, a doctor, a cleaner or a homemaker. Work meets our needs, keeps society running, and gives people a sense of pride and self-respect. The idea of the dignity of work means that no honest work is high or low; all work deserves respect. Understanding the value of work helps us respect every worker and the contribution they make.",
+          "easyExplanation": "Work is any purposeful activity. All honest work, big or small, has value and deserves respect. This is called the dignity of work.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "What work is",
+              "explanation": "Work is any purposeful activity done to make goods, give services or care for others."
+            },
+            {
+              "step": 2,
+              "title": "All work is valuable",
+              "explanation": "Every kind of honest work, from farming to teaching to cleaning, has value."
+            },
+            {
+              "step": 3,
+              "title": "Work helps society",
+              "explanation": "Work meets our needs and keeps society running, giving people pride and self-respect."
+            },
+            {
+              "step": 4,
+              "title": "Dignity of work",
+              "explanation": "The dignity of work means no honest work is high or low; all work deserves respect."
+            }
+          ],
+          "examples": [
+            "A farmer growing food and a teacher teaching children are both doing valuable work.",
+            "A homemaker's work of caring for the family is also valuable work."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Work",
+              "definition": "Any purposeful activity to make goods, give services or care for others.",
+              "simpleExample": "Cooking food is a kind of work."
+            },
+            {
+              "keyword": "Dignity of work",
+              "definition": "The idea that all honest work deserves respect.",
+              "simpleExample": "Dignity of work means respecting every worker."
+            },
+            {
+              "keyword": "Self-respect",
+              "definition": "Pride and respect for oneself.",
+              "simpleExample": "Honest work gives a person self-respect."
+            }
+          ],
+          "quickSummary": "Work is any purposeful activity, and all honest work, from farming to teaching to cleaning, has value and dignity; the dignity of work means every worker deserves respect.",
+          "revisionNotes": [
+            "Work = any purposeful activity.",
+            "All honest work has value.",
+            "Work meets needs and gives self-respect.",
+            "Dignity of work: no work is high or low."
+          ]
+        },
+        {
+          "topicId": "sst_ch13_topic2",
+          "topic": "Economic and Non-Economic Activities",
+          "meaning": "Economic activities are done to earn money or a living, while non-economic activities are done without the aim of earning money.",
+          "ncertBasedExplanation": "The work people do can be divided into two kinds. Economic activities are those done to earn money or make a living, such as a shopkeeper selling goods, a farmer selling crops or a doctor treating patients for a fee. Non-economic activities are done not to earn money but out of love, duty or social purpose, such as a mother caring for her child, helping a neighbour, or doing voluntary social service. Both types of work are important. Even though non-economic activities do not earn money, they are very valuable for the family and society.",
+          "easyExplanation": "Economic activities earn money (like selling goods). Non-economic activities are done without earning money (like caring for family). Both are important.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Two kinds of work",
+              "explanation": "Work can be divided into economic and non-economic activities."
+            },
+            {
+              "step": 2,
+              "title": "Economic activities",
+              "explanation": "These are done to earn money or a living, like selling goods or treating patients for a fee."
+            },
+            {
+              "step": 3,
+              "title": "Non-economic activities",
+              "explanation": "These are done without earning money, out of love, duty or social purpose."
+            },
+            {
+              "step": 4,
+              "title": "Both are important",
+              "explanation": "Even though non-economic activities earn no money, they are very valuable for family and society."
+            }
+          ],
+          "examples": [
+            "A shopkeeper selling goods is doing an economic activity.",
+            "A mother caring for her child is a non-economic activity."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Economic activity",
+              "definition": "Work done to earn money or a living.",
+              "simpleExample": "Selling vegetables is an economic activity."
+            },
+            {
+              "keyword": "Non-economic activity",
+              "definition": "Work done without the aim of earning money.",
+              "simpleExample": "Helping a neighbour is a non-economic activity."
+            },
+            {
+              "keyword": "Income",
+              "definition": "Money earned from work.",
+              "simpleExample": "A shopkeeper earns income from sales."
+            }
+          ],
+          "quickSummary": "Work is of two kinds: economic activities, done to earn money (like selling goods), and non-economic activities, done without earning money (like caring for family); both are important.",
+          "revisionNotes": [
+            "Economic activity = done to earn money.",
+            "Non-economic activity = done without earning money.",
+            "Examples: selling goods vs caring for family.",
+            "Both kinds of work are valuable."
+          ]
+        },
+        {
+          "topicId": "sst_ch13_topic3",
+          "topic": "The Importance of Non-Economic Activities",
+          "meaning": "Non-economic activities, though unpaid, are essential because they support families, communities and society.",
+          "ncertBasedExplanation": "Non-economic activities do not earn money, but they are essential to our lives. Much of the work done at home, such as cooking, cleaning, caring for children and looking after elders, is non-economic, yet without it families could not function. Voluntary work in the community, like helping the needy, keeping public places clean or teaching for free, also makes society better. Such work is often not counted in money terms and may go unnoticed, but it has great social value. Recognising the importance of non-economic activities helps us value all those who do this unpaid but vital work.",
+          "easyExplanation": "Non-economic activities are unpaid, like housework and helping others, but they are essential. Families and society could not run without them.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Unpaid but essential",
+              "explanation": "Non-economic activities earn no money but are essential to our lives."
+            },
+            {
+              "step": 2,
+              "title": "Work at home",
+              "explanation": "Cooking, cleaning and caring for family are non-economic but keep families running."
+            },
+            {
+              "step": 3,
+              "title": "Helping the community",
+              "explanation": "Voluntary work like helping the needy or cleaning public places improves society."
+            },
+            {
+              "step": 4,
+              "title": "Great social value",
+              "explanation": "Such work is often unnoticed and uncounted in money, but has great social value."
+            }
+          ],
+          "examples": [
+            "Caring for elders and children at home is vital non-economic work.",
+            "Volunteers cleaning a park do valuable non-economic work."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Non-economic activity",
+              "definition": "Work done without earning money.",
+              "simpleExample": "Housework is a non-economic activity."
+            },
+            {
+              "keyword": "Voluntary work",
+              "definition": "Work done willingly without pay to help others.",
+              "simpleExample": "Cleaning a park for free is voluntary work."
+            },
+            {
+              "keyword": "Social value",
+              "definition": "The benefit something brings to society.",
+              "simpleExample": "Caring for elders has great social value."
+            }
+          ],
+          "quickSummary": "Non-economic activities, though unpaid, are essential because housework and voluntary community work keep families and society running, giving them great social value.",
+          "revisionNotes": [
+            "Non-economic activities are unpaid but essential.",
+            "Housework keeps families running.",
+            "Voluntary community work improves society.",
+            "Such work has great social value."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 14,
+      "chapter": "Economic Activities Around Us",
+      "topics": [
+        {
+          "topicId": "sst_ch14_topic1",
+          "topic": "The Classification of Economic Activities",
+          "meaning": "Economic activities are classified into three types: primary, secondary and tertiary activities.",
+          "ncertBasedExplanation": "All the economic activities that produce goods and services can be grouped into three main types. Primary activities use natural resources directly from the Earth, such as farming, fishing, mining and forestry. Secondary activities take the products of primary activities and turn them into new goods, such as making cloth from cotton or furniture from wood; this is also called manufacturing. Tertiary activities provide services rather than goods, such as transport, banking, teaching and trade. These three types depend on one another and together make up the economy. Understanding this classification helps us see how goods and services are produced.",
+          "easyExplanation": "Economic activities are of three types: primary (taking from nature, like farming), secondary (making goods, like factories), and tertiary (services, like transport).",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Three types",
+              "explanation": "Economic activities are grouped into primary, secondary and tertiary types."
+            },
+            {
+              "step": 2,
+              "title": "Primary",
+              "explanation": "Primary activities use natural resources directly, like farming, fishing and mining."
+            },
+            {
+              "step": 3,
+              "title": "Secondary",
+              "explanation": "Secondary activities turn raw materials into new goods, like making cloth from cotton."
+            },
+            {
+              "step": 4,
+              "title": "Tertiary",
+              "explanation": "Tertiary activities provide services, like transport, banking and teaching."
+            }
+          ],
+          "examples": [
+            "Farming is a primary activity, making cloth is secondary, and running a bank is tertiary.",
+            "Turning cotton into cloth is a secondary (manufacturing) activity."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Primary activity",
+              "definition": "An activity that uses natural resources directly.",
+              "simpleExample": "Fishing is a primary activity."
+            },
+            {
+              "keyword": "Secondary activity",
+              "definition": "An activity that makes goods from raw materials.",
+              "simpleExample": "Making furniture is a secondary activity."
+            },
+            {
+              "keyword": "Tertiary activity",
+              "definition": "An activity that provides services.",
+              "simpleExample": "Teaching is a tertiary activity."
+            }
+          ],
+          "quickSummary": "Economic activities are classified into primary (using natural resources, like farming), secondary (making goods, like manufacturing) and tertiary (providing services, like transport and banking).",
+          "revisionNotes": [
+            "Three types: primary, secondary, tertiary.",
+            "Primary = uses natural resources (farming, mining).",
+            "Secondary = makes goods (manufacturing).",
+            "Tertiary = provides services (transport, banking)."
+          ]
+        },
+        {
+          "topicId": "sst_ch14_topic2",
+          "topic": "Primary Activities",
+          "meaning": "Primary activities produce goods directly from nature, such as agriculture, fishing, mining, forestry and animal rearing.",
+          "ncertBasedExplanation": "Primary activities are those in which people obtain goods directly from nature. The most important primary activity is agriculture (farming), which gives us food grains, vegetables, fruits and raw materials like cotton. Other primary activities include fishing, rearing animals (like cows, goats and poultry), mining minerals from the Earth, and collecting forest products. A large number of people in India depend on primary activities, especially farming, for their living. Primary activities form the base of the economy because they provide food and the raw materials needed by other activities.",
+          "easyExplanation": "Primary activities take goods straight from nature, like farming, fishing, mining and rearing animals. Many Indians, especially farmers, depend on them.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Goods from nature",
+              "explanation": "Primary activities obtain goods directly from nature."
+            },
+            {
+              "step": 2,
+              "title": "Agriculture",
+              "explanation": "Farming is the most important primary activity, giving food and raw materials like cotton."
+            },
+            {
+              "step": 3,
+              "title": "Other primary activities",
+              "explanation": "These include fishing, rearing animals, mining minerals and collecting forest products."
+            },
+            {
+              "step": 4,
+              "title": "Base of the economy",
+              "explanation": "Many Indians depend on primary activities, which provide food and raw materials for other work."
+            }
+          ],
+          "examples": [
+            "A farmer growing wheat is doing a primary activity.",
+            "Mining coal and rearing cattle are also primary activities."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Primary activity",
+              "definition": "An activity that produces goods directly from nature.",
+              "simpleExample": "Farming is a primary activity."
+            },
+            {
+              "keyword": "Agriculture",
+              "definition": "The growing of crops and rearing of animals.",
+              "simpleExample": "Agriculture is India's main primary activity."
+            },
+            {
+              "keyword": "Mining",
+              "definition": "Taking minerals out of the Earth.",
+              "simpleExample": "Mining coal is a primary activity."
+            }
+          ],
+          "quickSummary": "Primary activities produce goods directly from nature, including agriculture, fishing, mining, forestry and animal rearing; many Indians depend on them, especially farming.",
+          "revisionNotes": [
+            "Primary activities take goods directly from nature.",
+            "Agriculture is the main one.",
+            "Also fishing, mining, forestry, animal rearing.",
+            "Many Indians depend on farming for a living."
+          ]
+        },
+        {
+          "topicId": "sst_ch14_topic3",
+          "topic": "Secondary Activities",
+          "meaning": "Secondary activities turn raw materials from primary activities into finished goods, which is called manufacturing.",
+          "ncertBasedExplanation": "Secondary activities take the raw materials produced by primary activities and change them into more useful, finished goods. This process is called manufacturing. For example, cotton from farms is turned into cloth and clothing in textile factories, sugarcane is made into sugar, iron ore is made into steel, and wood is made into furniture. Secondary activities add value to raw materials, so the finished goods are worth more than the raw materials. These activities are carried out in workshops, small industries and large factories, and they provide jobs to many people.",
+          "easyExplanation": "Secondary activities make finished goods from raw materials, like turning cotton into cloth. This is manufacturing, done in factories and workshops.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Use raw materials",
+              "explanation": "Secondary activities take raw materials from primary activities."
+            },
+            {
+              "step": 2,
+              "title": "Make finished goods",
+              "explanation": "They turn these raw materials into useful finished goods, called manufacturing."
+            },
+            {
+              "step": 3,
+              "title": "Add value",
+              "explanation": "Finished goods are worth more than the raw materials, so value is added."
+            },
+            {
+              "step": 4,
+              "title": "Provide jobs",
+              "explanation": "These activities happen in workshops and factories and give jobs to many people."
+            }
+          ],
+          "examples": [
+            "Turning cotton into cloth in a textile factory is a secondary activity.",
+            "Making furniture from wood and steel from iron are secondary activities."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Secondary activity",
+              "definition": "An activity that makes finished goods from raw materials.",
+              "simpleExample": "Making cloth is a secondary activity."
+            },
+            {
+              "keyword": "Manufacturing",
+              "definition": "The making of goods from raw materials.",
+              "simpleExample": "Manufacturing turns cotton into cloth."
+            },
+            {
+              "keyword": "Raw material",
+              "definition": "A basic material used to make goods.",
+              "simpleExample": "Cotton is a raw material for cloth."
+            }
+          ],
+          "quickSummary": "Secondary activities turn raw materials from primary activities into finished goods through manufacturing, like cotton into cloth, adding value and providing jobs in factories and workshops.",
+          "revisionNotes": [
+            "Secondary activities make finished goods from raw materials.",
+            "This is called manufacturing.",
+            "Example: cotton -> cloth; iron -> steel.",
+            "Adds value; provides jobs in factories."
+          ]
+        },
+        {
+          "topicId": "sst_ch14_topic4",
+          "topic": "Tertiary Activities",
+          "meaning": "Tertiary activities provide services that support primary and secondary activities, such as transport, trade, banking and education.",
+          "ncertBasedExplanation": "Tertiary activities do not produce goods but provide services that help people and support the other activities. They include transport (moving goods and people), trade (buying and selling, including retail), banking and finance, communication, education, health care and tourism. For example, lorries and trains carry goods from factories to markets, shops sell goods to customers, and banks keep money safe and give loans. Tertiary activities are growing fast and are very important in a modern economy, providing jobs to a large and increasing number of people.",
+          "easyExplanation": "Tertiary activities provide services, not goods, like transport, shops, banks, schools and hospitals. They support other activities and are growing fast.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Provide services",
+              "explanation": "Tertiary activities provide services rather than producing goods."
+            },
+            {
+              "step": 2,
+              "title": "Many kinds",
+              "explanation": "They include transport, trade, banking, communication, education and health care."
+            },
+            {
+              "step": 3,
+              "title": "Support other activities",
+              "explanation": "For example, transport carries goods to markets and shops sell them to customers."
+            },
+            {
+              "step": 4,
+              "title": "Growing importance",
+              "explanation": "Tertiary activities are growing fast and provide jobs to many people in a modern economy."
+            }
+          ],
+          "examples": [
+            "A bank keeping money safe and giving loans is a tertiary activity.",
+            "Transport of goods by trucks and selling them in shops are tertiary activities."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Tertiary activity",
+              "definition": "An activity that provides services.",
+              "simpleExample": "Running a school is a tertiary activity."
+            },
+            {
+              "keyword": "Trade",
+              "definition": "The buying and selling of goods.",
+              "simpleExample": "A shop carries out trade."
+            },
+            {
+              "keyword": "Transport",
+              "definition": "The movement of goods and people.",
+              "simpleExample": "Trains provide transport."
+            }
+          ],
+          "quickSummary": "Tertiary activities provide services such as transport, trade, banking, education and health care that support primary and secondary activities and are a fast-growing source of jobs.",
+          "revisionNotes": [
+            "Tertiary activities provide services, not goods.",
+            "Transport, trade, banking, education, health care.",
+            "They support primary and secondary activities.",
+            "Fast-growing and important in a modern economy."
+          ]
+        }
+      ]
+    }
+  ]
+}
