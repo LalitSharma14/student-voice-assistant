@@ -1,6 +1,6 @@
 "use client";
-import { useState, useRef, useEffect } from "react";
- 
+import { useState, useRef, useEffect, useCallback } from "react";
+
 import { auth, db } from "../lib/firebase";
 import {
   createUserWithEmailAndPassword,
@@ -15,9 +15,13 @@ import {
   getDocs,
   collection,
   serverTimestamp,
+  query,
+  orderBy,
+  limit,
+  deleteDoc,
 } from "firebase/firestore";
 import { SYLLABUS_DATA } from "../data/syllabus";
- 
+
 // ── Brand tokens ───────────────────────────────────────────
 const B = {
   navy:        "#2b5888",
@@ -42,53 +46,33 @@ const B = {
   greenLight:  "#f0fdf4",
   greenBorder: "#86efac",
 };
- 
-// ── Teachifyy Logo Image ───────────────────────────────────
-// Save the uploaded logo image as: frontend/public/logo.png
+
 function TeachifyyLogo({ size = 32, showText = true, light = false }) {
   const textColor = light ? B.white : B.navy;
- 
   return (
     <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-      <img
-        src="/logo.png"
-        alt="Teachifyy logo"
-        style={{
-          width: size,
-          height: size,
-          objectFit: "contain",
-          display: "block",
-        }}
-      />
- 
+      <img src="/logo.png" alt="Teachifyy logo" style={{ width: size, height: size, objectFit: "contain", display: "block" }} />
       {showText && (
-        <span style={{
-          fontSize: size * 0.6,
-          fontWeight: 700,
-          color: textColor,
-          letterSpacing: "-0.3px",
-          fontFamily: "'Plus Jakarta Sans', sans-serif",
-        }}>
+        <span style={{ fontSize: size * 0.6, fontWeight: 700, color: textColor, letterSpacing: "-0.3px", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
           Teachifyy
         </span>
       )}
     </div>
   );
 }
- 
+
 const STATUS_OPTIONS = ["Not Started", "In Progress", "Completed", "Revision Done", "Test Done"];
 const COMPLETED_STATUSES = ["Completed", "Test Done"];
 const ANSWER_LANGUAGES = [
-  { value: "en", label: "English" },
+  { value: "en",       label: "English"  },
   { value: "hinglish", label: "Hinglish" },
-  { value: "hi", label: "Hindi" },
+  { value: "hi",       label: "Hindi"    },
 ];
- 
+
 // ── Typewriter hook ────────────────────────────────────────
 function useTypewriter(text, speed = 120) {
   const [displayed, setDisplayed] = useState("");
   const [done, setDone] = useState(false);
- 
   useEffect(() => {
     if (!text) { setDisplayed(""); setDone(true); return; }
     setDisplayed(""); setDone(false);
@@ -101,59 +85,27 @@ function useTypewriter(text, speed = 120) {
     }, speed);
     return () => clearInterval(interval);
   }, [text, speed]);
- 
   return { displayed, done };
 }
- 
+
 // ── Assistant bubble ───────────────────────────────────────
 function AssistantBubble({ msg, index, playingIndex, playAudio, stopAudio, onTypingComplete }) {
   const { displayed, done } = useTypewriter(msg.typing ? msg.text : "");
   const [audioReady, setAudioReady] = useState(false);
   const ttsStarted = useRef(false);
- 
+
+  useEffect(() => { if (done && msg.typing) onTypingComplete?.(msg.id); }, [done, msg.typing, msg.id, onTypingComplete]);
+  useEffect(() => { if (done && msg.audioUrl) setAudioReady(true); }, [done, msg.audioUrl]);
   useEffect(() => {
-    if (done && msg.typing) onTypingComplete?.(msg.id);
-  }, [done, msg.typing, msg.id, onTypingComplete]);
- 
-  useEffect(() => {
-    if (done && msg.audioUrl) setAudioReady(true);
-  }, [done, msg.audioUrl]);
- 
-  useEffect(() => {
-    if (!msg.typing && msg.audioUrl && !ttsStarted.current) {
-      ttsStarted.current = true;
-      setAudioReady(true);
-    }
+    if (!msg.typing && msg.audioUrl && !ttsStarted.current) { ttsStarted.current = true; setAudioReady(true); }
   }, [msg.audioUrl, msg.typing]);
- 
+
   const textToShow = msg.typing ? displayed : msg.text;
- 
   return (
     <div style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
-      {/* AI avatar */}
-      <div style={{
-        width: "32px", height: "32px", borderRadius: "50%", flexShrink: 0,
-        background: `linear-gradient(135deg, ${B.navy}, ${B.navyDark})`,
-        display: "flex", alignItems: "center", justifyContent: "center",
-        fontSize: "12px", fontWeight: 700, color: B.white, marginTop: "2px",
-      }}>
-        AI
-      </div>
- 
-      <div style={{
-        maxWidth: "82%", padding: "12px 16px",
-        borderRadius: "4px 16px 16px 16px",
-        background: B.white,
-        border: `1px solid ${B.gray200}`,
-        fontSize: "14px", lineHeight: "1.7", color: B.gray900,
-        boxShadow: "0 1px 4px rgba(43,88,136,0.06)",
-      }}>
-        {/* Scrollable text for long content */}
-        <div style={{
-          whiteSpace: "pre-wrap", lineHeight: "1.7",
-          maxHeight: "320px", overflowY: "auto",
-          paddingRight: textToShow.length > 400 ? "4px" : "0",
-        }}>
+      <div style={{ width: "32px", height: "32px", borderRadius: "50%", flexShrink: 0, background: `linear-gradient(135deg, ${B.navy}, ${B.navyDark})`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "12px", fontWeight: 700, color: B.white, marginTop: "2px" }}>AI</div>
+      <div style={{ maxWidth: "82%", padding: "12px 16px", borderRadius: "4px 16px 16px 16px", background: B.white, border: `1px solid ${B.gray200}`, fontSize: "14px", lineHeight: "1.7", color: B.gray900, boxShadow: "0 1px 4px rgba(43,88,136,0.06)" }}>
+        <div style={{ whiteSpace: "pre-wrap", lineHeight: "1.7", maxHeight: "320px", overflowY: "auto", paddingRight: textToShow.length > 400 ? "4px" : "0" }}>
           {textToShow.split("\n").map((line, i) => {
             const cleanLine = line.replace(/\*\*/g, "");
             const lowerLine = cleanLine.toLowerCase().trim();
@@ -169,65 +121,32 @@ function AssistantBubble({ msg, index, playingIndex, playAudio, stopAudio, onTyp
             const isImportant =
               lowerLine.includes("definition:") || lowerLine.includes("important:") ||
               lowerLine.includes("remember:") || lowerLine.includes("note:");
- 
             return (
-              <div key={i} style={{
-                color: isHeading ? B.navy : "inherit",
-                fontWeight: isHeading || isImportant ? 700 : "inherit",
-                marginBottom: line.trim() === "" ? "8px" : "3px",
-              }}>
+              <div key={i} style={{ color: isHeading ? B.navy : "inherit", fontWeight: isHeading || isImportant ? 700 : "inherit", marginBottom: line.trim() === "" ? "8px" : "3px" }}>
                 {cleanLine}
               </div>
             );
           })}
           {msg.typing && !done && (
-            <span style={{
-              display: "inline-block", width: "2px", height: "14px",
-              background: B.red, marginLeft: "3px", verticalAlign: "middle",
-              animation: "blink 0.8s infinite",
-            }} />
+            <span style={{ display: "inline-block", width: "2px", height: "14px", background: B.red, marginLeft: "3px", verticalAlign: "middle", animation: "blink 0.8s infinite" }} />
           )}
         </div>
- 
-        {/* Stop typewriter button while generating */}
         {msg.typing && !done && (
-          <button
-            onClick={() => onTypingComplete?.(msg.id)}
-            style={{
-              marginTop: "10px", fontSize: "11px", padding: "4px 10px",
-              borderRadius: "20px", border: `1px solid ${B.gray300}`,
-              background: B.gray100, color: B.gray700, cursor: "pointer",
-              display: "flex", alignItems: "center", gap: "4px",
-            }}
-          >
+          <button onClick={() => onTypingComplete?.(msg.id)} style={{ marginTop: "10px", fontSize: "11px", padding: "4px 10px", borderRadius: "20px", border: `1px solid ${B.gray300}`, background: B.gray100, color: B.gray700, cursor: "pointer", display: "flex", alignItems: "center", gap: "4px" }}>
             ⏹ Stop generating
           </button>
         )}
- 
         {msg.typing && done && !msg.audioUrl && (
           <div style={{ marginTop: "8px", fontSize: "11px", color: B.gray500, display: "flex", alignItems: "center", gap: "4px" }}>
             <span style={{ animation: "pulse 1s infinite", display: "inline-block" }}>⏳</span> Preparing audio...
           </div>
         )}
- 
         {audioReady && msg.audioUrl && (
           <div style={{ marginTop: "10px" }}>
             {playingIndex === index ? (
-              <button onClick={stopAudio} style={{
-                fontSize: "11px", padding: "5px 12px", borderRadius: "20px",
-                border: `1px solid ${B.red}`, background: B.redLight,
-                color: B.red, cursor: "pointer", display: "flex", alignItems: "center", gap: "5px", fontWeight: 600,
-              }}>
-                ⏹ Stop
-              </button>
+              <button onClick={stopAudio} style={{ fontSize: "11px", padding: "5px 12px", borderRadius: "20px", border: `1px solid ${B.red}`, background: B.redLight, color: B.red, cursor: "pointer", display: "flex", alignItems: "center", gap: "5px", fontWeight: 600 }}>⏹ Stop</button>
             ) : (
-              <button onClick={() => playAudio(msg.audioUrl, index)} style={{
-                fontSize: "11px", padding: "5px 12px", borderRadius: "20px",
-                border: `1px solid ${B.gray300}`, background: B.white,
-                color: B.gray700, cursor: "pointer", display: "flex", alignItems: "center", gap: "5px", fontWeight: 500,
-              }}>
-                🔊 Hear answer
-              </button>
+              <button onClick={() => playAudio(msg.audioUrl, index)} style={{ fontSize: "11px", padding: "5px 12px", borderRadius: "20px", border: `1px solid ${B.gray300}`, background: B.white, color: B.gray700, cursor: "pointer", display: "flex", alignItems: "center", gap: "5px", fontWeight: 500 }}>🔊 Hear answer</button>
             )}
           </div>
         )}
@@ -235,7 +154,7 @@ function AssistantBubble({ msg, index, playingIndex, playAudio, stopAudio, onTyp
     </div>
   );
 }
- 
+
 // ── Progress bar ───────────────────────────────────────────
 function ProgressBar({ percent, color = B.navy }) {
   return (
@@ -244,71 +163,103 @@ function ProgressBar({ percent, color = B.navy }) {
     </div>
   );
 }
- 
+
+// ── Chat history helpers ───────────────────────────────────
+function formatSessionDate(ts) {
+  if (!ts) return "";
+  const date = ts.toDate ? ts.toDate() : new Date(ts);
+  const now  = new Date();
+  const diff = now - date;
+  const days = Math.floor(diff / 86400000);
+  if (days === 0) return date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+  if (days === 1) return "Yesterday";
+  if (days < 7)  return `${days} days ago`;
+  return date.toLocaleDateString([], { day: "numeric", month: "short", year: "numeric" });
+}
+
+function groupSessionsByDate(sessions) {
+  const groups = { Today: [], Yesterday: [], "This Week": [], Older: [] };
+  const now  = new Date();
+  sessions.forEach((s) => {
+    const date = s.updatedAt?.toDate ? s.updatedAt.toDate() : new Date(s.updatedAt || 0);
+    const diff = Math.floor((now - date) / 86400000);
+    if (diff === 0) groups["Today"].push(s);
+    else if (diff === 1) groups["Yesterday"].push(s);
+    else if (diff < 7) groups["This Week"].push(s);
+    else groups["Older"].push(s);
+  });
+  return groups;
+}
+
 // ── Main component ─────────────────────────────────────────
 export default function Home() {
-  const [messages, setMessages] = useState([]);
-  const [history, setHistory] = useState([]);
-  const [textInput, setTextInput] = useState("");
-  const [isRecording, setIsRecording] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [isTranscribing, setIsTranscribing] = useState(false);
-  const [error, setError] = useState("");
-  const [playingIndex, setPlayingIndex] = useState(null);
-  const [activeTab, setActiveTab] = useState("chat");
-  const [selectedSubject, setSelectedSubject] = useState(null);
-  const [selectedChapter, setSelectedChapter] = useState(null);
-  const [topicProgress, setTopicProgress] = useState({});
-  const [revisionProgress, setRevisionProgress] = useState({});
-  const [testResults, setTestResults] = useState({});
-  const [progressLoading, setProgressLoading] = useState(false);
-  const [testLoading, setTestLoading] = useState(false);
-  const [currentTest, setCurrentTest] = useState(null);
-  const [selectedAnswers, setSelectedAnswers] = useState({});
-  const [submittedTestResult, setSubmittedTestResult] = useState(null);
-  const [user, setUser] = useState(null);
-  const [userProfile, setUserProfile] = useState(null);
-  const [authMode, setAuthMode] = useState("login");
-  const [authLoading, setAuthLoading] = useState(true);
-  const [authError, setAuthError] = useState("");
-  const [signupName, setSignupName] = useState("");
-  const [signupEmail, setSignupEmail] = useState("");
-  const [signupMobile, setSignupMobile] = useState("");
-  const [signupPassword, setSignupPassword] = useState("");
-  const [signupClassLevel, setSignupClassLevel] = useState("5");
-  const [signupBoard, setSignupBoard] = useState("CBSE");
-  const [loginEmail, setLoginEmail] = useState("");
-  const [loginPassword, setLoginPassword] = useState("");
-  const [classLevel, setClassLevel] = useState("5");
-  const [board, setBoard] = useState("CBSE");
-  const [answerLanguage, setAnswerLanguage] = useState("en");
-  const [profileCompleted, setProfileCompleted] = useState(false);
- 
+  const [messages,           setMessages]           = useState([]);
+  const [history,            setHistory]            = useState([]);
+  const [textInput,          setTextInput]          = useState("");
+  const [isRecording,        setIsRecording]        = useState(false);
+  const [isLoading,          setIsLoading]          = useState(false);
+  const [isTranscribing,     setIsTranscribing]     = useState(false);
+  const [error,              setError]              = useState("");
+  const [playingIndex,       setPlayingIndex]       = useState(null);
+  const [activeTab,          setActiveTab]          = useState("chat");
+  const [selectedSubject,    setSelectedSubject]    = useState(null);
+  const [selectedChapter,    setSelectedChapter]    = useState(null);
+  const [topicProgress,      setTopicProgress]      = useState({});
+  const [revisionProgress,   setRevisionProgress]   = useState({});
+  const [testResults,        setTestResults]        = useState({});
+  const [progressLoading,    setProgressLoading]    = useState(false);
+  const [testLoading,        setTestLoading]        = useState(false);
+  const [currentTest,        setCurrentTest]        = useState(null);
+  const [selectedAnswers,    setSelectedAnswers]    = useState({});
+  const [submittedTestResult,setSubmittedTestResult]= useState(null);
+  const [user,               setUser]               = useState(null);
+  const [userProfile,        setUserProfile]        = useState(null);
+  const [authMode,           setAuthMode]           = useState("login");
+  const [authLoading,        setAuthLoading]        = useState(true);
+  const [authError,          setAuthError]          = useState("");
+  const [signupName,         setSignupName]         = useState("");
+  const [signupEmail,        setSignupEmail]        = useState("");
+  const [signupMobile,       setSignupMobile]       = useState("");
+  const [signupPassword,     setSignupPassword]     = useState("");
+  const [signupClassLevel,   setSignupClassLevel]   = useState("5");
+  const [signupBoard,        setSignupBoard]        = useState("CBSE");
+  const [loginEmail,         setLoginEmail]         = useState("");
+  const [loginPassword,      setLoginPassword]      = useState("");
+  const [classLevel,         setClassLevel]         = useState("5");
+  const [board,              setBoard]              = useState("CBSE");
+  const [answerLanguage,     setAnswerLanguage]     = useState("en");
+  const [profileCompleted,   setProfileCompleted]   = useState(false);
+
+  // ── Chat history state ─────────────────────────────────
+  const [chatSessions,       setChatSessions]       = useState([]);   // list of past sessions
+  const [historyLoading,     setHistoryLoading]     = useState(false);
+  const [currentSessionId,   setCurrentSessionId]   = useState(null); // active session being saved
+  const [viewingSession,     setViewingSession]     = useState(null); // session being viewed in history tab
+
   const currentSyllabus = SYLLABUS_DATA[classLevel]?.[board] || SYLLABUS_DATA["5"]?.CBSE;
   const currentChapters = selectedSubject ? currentSyllabus?.[selectedSubject] || [] : [];
-  const currentChapter = selectedChapter;
- 
-  const mediaRecorderRef = useRef(null);
-  const audioChunksRef = useRef([]);
-  const chatEndRef = useRef(null);
-  const audioRef = useRef(null);
+  const currentChapter  = selectedChapter;
+
+  const mediaRecorderRef   = useRef(null);
+  const audioChunksRef     = useRef([]);
+  const chatEndRef         = useRef(null);
+  const audioRef           = useRef(null);
   const abortControllerRef = useRef(null);
-  const cancelledRef = useRef(false);
-  const pendingVoiceDataRef = useRef(null);
-  const requestLockRef = useRef(false);
- 
-  // Shared input/label styles
+  const cancelledRef       = useRef(false);
+  const pendingVoiceDataRef= useRef(null);
+  const requestLockRef     = useRef(false);
+  // Ref so saveCurrentSession can read latest messages without stale closure
+  const messagesRef        = useRef(messages);
+  const historyRef         = useRef(history);
+  useEffect(() => { messagesRef.current = messages; }, [messages]);
+  useEffect(() => { historyRef.current  = history;  }, [history]);
+
   const labelStyle = { display: "block", fontSize: "13px", fontWeight: 600, color: B.gray700, marginBottom: "6px", fontFamily: "'Plus Jakarta Sans', sans-serif" };
-  const inputStyle = {
-    width: "100%", padding: "11px 14px", marginBottom: "14px",
-    borderRadius: "10px", border: `1.5px solid ${B.gray300}`,
-    background: B.white, fontSize: "14px", color: B.gray900, outline: "none",
-    boxSizing: "border-box", fontFamily: "'Plus Jakarta Sans', sans-serif",
-    transition: "border-color 0.2s",
-  };
- 
+  const inputStyle = { width: "100%", padding: "11px 14px", marginBottom: "14px", borderRadius: "10px", border: `1.5px solid ${B.gray300}`, background: B.white, fontSize: "14px", color: B.gray900, outline: "none", boxSizing: "border-box", fontFamily: "'Plus Jakarta Sans', sans-serif", transition: "border-color 0.2s" };
+
   useEffect(() => { chatEndRef.current?.scrollIntoView({ behavior: "smooth" }); }, [messages]);
- 
+
+  // ── Auth ───────────────────────────────────────────────
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
       setAuthLoading(true);
@@ -323,19 +274,161 @@ export default function Home() {
           setBoard(profile.board || "CBSE");
         }
         setProfileCompleted(false);
-      } catch (error) {
-        console.error("Auth profile load error:", error);
+      } catch (err) {
+        console.error("Auth profile load error:", err);
         setAuthError("Could not load your profile. Please try again.");
       } finally { setAuthLoading(false); }
     });
     return () => unsubscribe();
   }, []);
- 
+
   useEffect(() => {
-    if (user) { loadTopicProgress(user.uid); loadRevisionProgress(user.uid); loadTestResults(user.uid); }
-    else { setTopicProgress({}); setRevisionProgress({}); setTestResults({}); }
+    if (user) {
+      loadTopicProgress(user.uid);
+      loadRevisionProgress(user.uid);
+      loadTestResults(user.uid);
+      loadChatSessions(user.uid);
+    } else {
+      setTopicProgress({});
+      setRevisionProgress({});
+      setTestResults({});
+      setChatSessions([]);
+    }
   }, [user]);
- 
+
+  // ══════════════════════════════════════════════════════
+  //  CHAT SESSION PERSISTENCE
+  // ══════════════════════════════════════════════════════
+
+  /**
+   * Load the 40 most recent chat sessions from Firestore.
+   * Each session doc: { title, messages, history, classLevel, board,
+   *                     answerLanguage, createdAt, updatedAt }
+   */
+  const loadChatSessions = async (uid) => {
+    if (!uid) return;
+    setHistoryLoading(true);
+    try {
+      const q    = query(
+        collection(db, "users", uid, "chatSessions"),
+        orderBy("updatedAt", "desc"),
+        limit(40)
+      );
+      const snap = await getDocs(q);
+      const loaded = [];
+      snap.forEach((d) => loaded.push({ id: d.id, ...d.data() }));
+      setChatSessions(loaded);
+    } catch (err) {
+      console.error("Chat sessions load error:", err);
+    } finally {
+      setHistoryLoading(false);
+    }
+  };
+
+  /**
+   * Save (upsert) the current conversation to Firestore.
+   * Called automatically after every assistant reply.
+   * Uses messagesRef / historyRef so it always has the latest data.
+   */
+  const saveCurrentSession = useCallback(async (uid, sessionId, firstQuestion) => {
+    if (!uid) return;
+    const msgs = messagesRef.current;
+    const hist = historyRef.current;
+    if (!msgs.length) return;
+
+    // Strip audioUrl before saving — audio files are ephemeral
+    const msgsToSave = msgs.map(({ audioUrl: _a, typing: _t, ...rest }) => rest);
+
+    const title = firstQuestion
+      ? firstQuestion.slice(0, 70)
+      : (msgs.find((m) => m.role === "user")?.text || "Chat").slice(0, 70);
+
+    const sessionData = {
+      title,
+      messages:       msgsToSave,
+      history:        hist,
+      classLevel,
+      board,
+      answerLanguage,
+      updatedAt:      serverTimestamp(),
+    };
+
+    try {
+      const ref = doc(db, "users", uid, "chatSessions", sessionId);
+      const exists = await getDoc(ref);
+      if (!exists.exists()) {
+        sessionData.createdAt = serverTimestamp();
+      }
+      await setDoc(ref, sessionData, { merge: true });
+
+      // Refresh local sessions list so History tab stays current
+      setChatSessions((prev) => {
+        const filtered = prev.filter((s) => s.id !== sessionId);
+        const updated  = { id: sessionId, ...sessionData, updatedAt: { toDate: () => new Date() } };
+        return [updated, ...filtered];
+      });
+    } catch (err) {
+      console.error("Chat session save error:", err);
+    }
+  }, [classLevel, board, answerLanguage]);
+
+  /**
+   * Delete a session from Firestore and local state.
+   */
+  const deleteSession = async (sessionId) => {
+    if (!user) return;
+    try {
+      await deleteDoc(doc(db, "users", user.uid, "chatSessions", sessionId));
+      setChatSessions((prev) => prev.filter((s) => s.id !== sessionId));
+      if (viewingSession?.id === sessionId) setViewingSession(null);
+    } catch (err) {
+      console.error("Delete session error:", err);
+    }
+  };
+
+  /**
+   * Start a fresh new session (new sessionId, blank messages).
+   */
+  const startNewSession = () => {
+    stopAudio();
+    setMessages([]);
+    setHistory([]);
+    setError("");
+    setTextInput("");
+    pendingVoiceDataRef.current = null;
+    requestLockRef.current = false;
+    setCurrentSessionId(crypto.randomUUID());
+    setActiveTab("chat");
+  };
+
+  /**
+   * Load a historical session into the active chat for viewing/continuing.
+   */
+  const openSession = (session) => {
+    stopAudio();
+    // Restore messages without audioUrl (ephemeral) and with typing=false
+    const restoredMessages = (session.messages || []).map((m) => ({
+      ...m,
+      audioUrl: null,
+      typing:   false,
+    }));
+    setMessages(restoredMessages);
+    setHistory(session.history || []);
+    setCurrentSessionId(session.id);
+    setViewingSession(null);
+    setActiveTab("chat");
+    setError("");
+    pendingVoiceDataRef.current = null;
+  };
+
+  // Initialise session ID on first mount after login
+  useEffect(() => {
+    if (user && profileCompleted && !currentSessionId) {
+      setCurrentSessionId(crypto.randomUUID());
+    }
+  }, [user, profileCompleted, currentSessionId]);
+
+  // ── Audio helpers ──────────────────────────────────────
   const stopAudio = () => {
     if (audioRef.current) { audioRef.current.onended = null; audioRef.current.pause(); audioRef.current.currentTime = 0; audioRef.current = null; }
     setPlayingIndex(null);
@@ -346,7 +439,7 @@ export default function Home() {
     pendingVoiceDataRef.current = null;
     stopAudio();
   };
- 
+
   const playAudio = (audioUrl, index) => {
     stopAudio();
     const audio = new Audio(`/api/${audioUrl}`);
@@ -361,67 +454,63 @@ export default function Home() {
     }, 80);
   };
 
-  const getTtsLanguage = () => {
-    if (answerLanguage === "hi") return "hi";
-    return "en";
-  };
+  const getTtsLanguage  = () => answerLanguage === "hi" ? "hi" : "en";
 
   const generateAnswerAudio = async (text, language = getTtsLanguage()) => {
-    const ttsFormData = new FormData();
-    ttsFormData.append("text", text);
-    ttsFormData.append("language", language);
-    const ttsRes = await fetch("/api/tts", { method: "POST", body: ttsFormData });
-    if (!ttsRes.ok) return null;
-    const ttsData = await ttsRes.json();
-    return ttsData.audio_url || null;
+    const fd = new FormData();
+    fd.append("text", text);
+    fd.append("language", language);
+    const res = await fetch("/api/tts", { method: "POST", body: fd });
+    if (!res.ok) return null;
+    const data = await res.json();
+    return data.audio_url || null;
   };
- 
+
   const updateHistory = (question, answer) => {
     setHistory((prev) => [...prev, { role: "user", content: question }, { role: "assistant", content: answer }]);
   };
- 
-  // All original functions — unchanged
+
+  // ── ID helpers ─────────────────────────────────────────
   const slugForId = (value) => {
     const text = String(value || "").toLowerCase();
     let output = "";
     for (const char of text) {
       if (/^[a-z0-9]$/.test(char)) output += char;
-      else if (/[\s\-_./'’:]/.test(char)) output += "_";
+      else if (/[\s\-_./'':]/.test(char)) output += "_";
       else if (/\p{L}|\p{N}/u.test(char)) output += `u${char.codePointAt(0).toString(16)}`;
       else output += "_";
     }
     return output.replace(/_+/g, "_").replace(/^_+|_+$/g, "");
   };
 
-  const getTopicId = (subject, chapterTitle, topicTitle) =>
-    slugForId(`${classLevel}_${board}_${subject}_${chapterTitle}_${topicTitle}`);
-  const getContentId = (subject, chapterTitle, topicTitle) =>
-    slugForId(`class_${classLevel}_${board}_${subject}_${chapterTitle}_${topicTitle}`);
-  const getTopicStatus = (subject, chapterTitle, topicTitle) => topicProgress[getTopicId(subject, chapterTitle, topicTitle)]?.status || "Not Started";
-  const isCompletedStatus = (status) => COMPLETED_STATUSES.includes(status);
-  const getProgressStatus = (completed, total) => { if (total === 0 || completed === 0) return "Not Started"; if (completed === total) return "Completed"; return "In Progress"; };
-  const getStatusColor = (status) => { if (status === "Completed") return B.green; if (status === "In Progress") return B.navy; return B.gray500; };
- 
+  const getTopicId    = (subject, chapterTitle, topicTitle) => slugForId(`${classLevel}_${board}_${subject}_${chapterTitle}_${topicTitle}`);
+  const getContentId  = (subject, chapterTitle, topicTitle) => slugForId(`class_${classLevel}_${board}_${subject}_${chapterTitle}_${topicTitle}`);
+  const getTopicStatus= (subject, chapterTitle, topicTitle) => topicProgress[getTopicId(subject, chapterTitle, topicTitle)]?.status || "Not Started";
+  const isCompletedStatus   = (status) => COMPLETED_STATUSES.includes(status);
+  const getProgressStatus   = (completed, total) => { if (total === 0 || completed === 0) return "Not Started"; if (completed === total) return "Completed"; return "In Progress"; };
+  const getStatusColor      = (status) => { if (status === "Completed") return B.green; if (status === "In Progress") return B.navy; return B.gray500; };
+
   const getChapterProgress = (subject, chapter) => {
     const totalTopics = chapter?.subtopics?.length || 0;
     if (totalTopics === 0) return { completed: 0, total: 0, percent: 0, status: "Not Started" };
     const completedTopics = chapter.subtopics.filter((t) => isCompletedStatus(getTopicStatus(subject, chapter.title, t))).length;
     return { completed: completedTopics, total: totalTopics, percent: Math.round((completedTopics / totalTopics) * 100), status: getProgressStatus(completedTopics, totalTopics) };
   };
- 
+
   const getSubjectProgress = (subject) => {
     const chapters = currentSyllabus?.[subject] || [];
     let totalTopics = 0, completedTopics = 0;
     chapters.forEach((chapter) => { totalTopics += chapter.subtopics.length; completedTopics += chapter.subtopics.filter((t) => isCompletedStatus(getTopicStatus(subject, chapter.title, t))).length; });
     return { completed: completedTopics, total: totalTopics, percent: totalTopics === 0 ? 0 : Math.round((completedTopics / totalTopics) * 100), status: getProgressStatus(completedTopics, totalTopics) };
   };
- 
+
   const getOverallProgress = () => {
     let totalTopics = 0, completedTopics = 0;
     Object.keys(currentSyllabus || {}).forEach((subject) => { const p = getSubjectProgress(subject); totalTopics += p.total; completedTopics += p.completed; });
     return { completed: completedTopics, total: totalTopics, percent: totalTopics === 0 ? 0 : Math.round((completedTopics / totalTopics) * 100), status: getProgressStatus(completedTopics, totalTopics) };
   };
- 
+
+  // ── Auth handlers ──────────────────────────────────────
   const handleCreateAccount = async () => {
     setAuthError("");
     if (!signupName.trim() || !signupEmail.trim() || !signupMobile.trim() || !signupPassword.trim()) { setAuthError("Please fill all required fields."); return; }
@@ -433,16 +522,16 @@ export default function Home() {
       const profileData = { name: signupName.trim(), email: signupEmail.trim(), mobile: signupMobile.trim(), classLevel: signupClassLevel, board: signupBoard, createdAt: serverTimestamp() };
       await setDoc(doc(db, "users", createdUser.uid), profileData);
       setUser(createdUser); setUserProfile(profileData); setClassLevel(signupClassLevel); setBoard(signupBoard); setProfileCompleted(false);
-    } catch (error) { setAuthError(error.message || "Could not create account."); } finally { setAuthLoading(false); }
+    } catch (err) { setAuthError(err.message || "Could not create account."); } finally { setAuthLoading(false); }
   };
- 
+
   const handleLogin = async () => {
     setAuthError("");
     if (!loginEmail.trim() || !loginPassword.trim()) { setAuthError("Please enter email and password."); return; }
     try { setAuthLoading(true); await signInWithEmailAndPassword(auth, loginEmail.trim(), loginPassword); }
-    catch (error) { setAuthError(error.message || "Could not login."); } finally { setAuthLoading(false); }
+    catch (err) { setAuthError(err.message || "Could not login."); } finally { setAuthLoading(false); }
   };
- 
+
   const handleLogout = async () => {
     await signOut(auth);
     setUser(null); setUserProfile(null); setMessages([]); setHistory([]); setTextInput("");
@@ -450,95 +539,97 @@ export default function Home() {
     setCurrentTest(null); setSelectedAnswers({}); setSubmittedTestResult(null);
     setActiveTab("chat"); setSelectedSubject(null); setSelectedChapter(null);
     setProfileCompleted(false); pendingVoiceDataRef.current = null;
+    setChatSessions([]); setCurrentSessionId(null); setViewingSession(null);
   };
- 
+
+  // ── Progress loaders ───────────────────────────────────
   const loadTopicProgress = async (uid) => {
     if (!uid) return;
     try { setProgressLoading(true); const snap = await getDocs(collection(db, "users", uid, "topicProgress")); const loaded = {}; snap.forEach((d) => { loaded[d.id] = d.data(); }); setTopicProgress(loaded); }
-    catch (error) { console.error("Progress load error:", error); } finally { setProgressLoading(false); }
+    catch (err) { console.error("Progress load error:", err); } finally { setProgressLoading(false); }
   };
- 
+
   const updateTopicStatus = async (subject, chapterTitle, topicTitle, status) => {
     if (!user) { setError("Please login to save progress."); return; }
     const topicId = getTopicId(subject, chapterTitle, topicTitle);
     const progressData = { subject, chapterTitle, topicTitle, status, classLevel, board, updatedAt: serverTimestamp() };
     setTopicProgress((prev) => ({ ...prev, [topicId]: { ...progressData, updatedAt: new Date().toISOString() } }));
     try { await setDoc(doc(db, "users", user.uid, "topicProgress", topicId), progressData, { merge: true }); }
-    catch (error) { console.error("Progress save error:", error); }
+    catch (err) { console.error("Progress save error:", err); }
   };
- 
+
   const markTypingComplete = (messageId) => {
     setMessages((prev) => prev.map((msg) => msg.id === messageId ? { ...msg, typing: false } : msg));
   };
- 
-  const clearConversation = () => { stopAudio(); setMessages([]); setHistory([]); setError(""); pendingVoiceDataRef.current = null; requestLockRef.current = false; };
- 
+
+  const clearConversation = () => {
+    stopAudio();
+    setMessages([]); setHistory([]); setError("");
+    pendingVoiceDataRef.current = null;
+    requestLockRef.current = false;
+    // Start a fresh session so the next conversation saves separately
+    setCurrentSessionId(crypto.randomUUID());
+  };
+
   const getRevisionStatus = (subject, chapterTitle, topicTitle) => revisionProgress[getTopicId(subject, chapterTitle, topicTitle)]?.revised || false;
- 
+
   const loadRevisionProgress = async (uid) => {
     if (!uid) return;
     try { const snap = await getDocs(collection(db, "users", uid, "revisionProgress")); const loaded = {}; snap.forEach((d) => { loaded[d.id] = d.data(); }); setRevisionProgress(loaded); }
-    catch (error) { console.error("Revision progress load error:", error); }
+    catch (err) { console.error("Revision progress load error:", err); }
   };
- 
+
   const updateRevisionStatus = async (subject, chapterTitle, topicTitle) => {
     if (!user) return;
     const topicId = getTopicId(subject, chapterTitle, topicTitle);
     const revisionData = { subject, chapterTitle, topicTitle, revised: true, classLevel, board, updatedAt: serverTimestamp() };
     setRevisionProgress((prev) => ({ ...prev, [topicId]: { ...revisionData, updatedAt: new Date().toISOString() } }));
     try { await setDoc(doc(db, "users", user.uid, "revisionProgress", topicId), revisionData, { merge: true }); }
-    catch (error) { console.error("Revision save error:", error); }
+    catch (err) { console.error("Revision save error:", err); }
   };
- 
+
   const getTestId = (type, subject, chapterTitle, topicTitle = "") =>
     (type === "topic" ? `topic_${classLevel}_${board}_${subject}_${chapterTitle}_${topicTitle}` : `chapter_${classLevel}_${board}_${subject}_${chapterTitle}`)
     .toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_+|_+$/g, "");
- 
+
   const getSavedTestResult = (type, subject, chapterTitle, topicTitle = "") => testResults[getTestId(type, subject, chapterTitle, topicTitle)] || null;
- 
+
   const loadTestResults = async (uid) => {
     if (!uid) return;
     try { const snap = await getDocs(collection(db, "users", uid, "testResults")); const loaded = {}; snap.forEach((d) => { loaded[d.id] = d.data(); }); setTestResults(loaded); }
-    catch (error) { console.error("Test results load error:", error); }
+    catch (err) { console.error("Test results load error:", err); }
   };
- 
+
   const saveTestResult = async (resultData) => {
     if (!user || !resultData?.testId) return;
     setTestResults((prev) => ({ ...prev, [resultData.testId]: { ...resultData, updatedAt: new Date().toISOString() } }));
     try { await setDoc(doc(db, "users", user.uid, "testResults", resultData.testId), { ...resultData, updatedAt: serverTimestamp() }, { merge: true }); }
-    catch (error) { console.error("Test result save error:", error); }
+    catch (err) { console.error("Test result save error:", err); }
   };
- 
+
   const startTest = async ({ type, subject, chapterTitle, topicTitle = "", topics = [], questionCount }) => {
     if (!user) { setError("Please login to start a test."); return; }
     setError(""); setTestLoading(true); setSelectedAnswers({}); setSubmittedTestResult(null); setCurrentTest(null); setActiveTab("test");
     const testId = getTestId(type, subject, chapterTitle, topicTitle);
-    const formData = new FormData();
-    formData.append("test_type", type); formData.append("subject", subject); formData.append("chapter_title", chapterTitle);
-    formData.append("topic_title", topicTitle || ""); formData.append("topics", JSON.stringify(topics || []));
-    formData.append("question_count", String(questionCount)); formData.append("class_level", classLevel);
-    formData.append("board", board); formData.append("answer_language", answerLanguage);
+    const fd = new FormData();
+    fd.append("test_type", type); fd.append("subject", subject); fd.append("chapter_title", chapterTitle);
+    fd.append("topic_title", topicTitle || ""); fd.append("topics", JSON.stringify(topics || []));
+    fd.append("question_count", String(questionCount)); fd.append("class_level", classLevel);
+    fd.append("board", board); fd.append("answer_language", answerLanguage);
     try {
-      const res = await fetch("/api/generate-test", { method: "POST", body: formData });
+      const res = await fetch("/api/generate-test", { method: "POST", body: fd });
       if (!res.ok) { const err = await res.json(); throw new Error(err.detail || "Could not generate test."); }
       const data = await res.json();
       const questions = Array.isArray(data.questions) ? data.questions : [];
       if (!questions.length) throw new Error("No questions generated. Please try again.");
       setCurrentTest({ testId, type, subject, chapterTitle, topicTitle, questionCount, questions });
-    } catch (error) { console.error("Test generation error:", error); setError(error.message || "Could not generate test."); setActiveTab("syllabus"); }
+    } catch (err) { console.error("Test generation error:", err); setError(err.message || "Could not generate test."); setActiveTab("syllabus"); }
     finally { setTestLoading(false); }
   };
- 
-  const handleTopicTest = (subtopic) => {
-    if (!selectedSubject || !currentChapter || !subtopic) return;
-    startTest({ type: "topic", subject: selectedSubject, chapterTitle: currentChapter.title, topicTitle: subtopic, topics: [subtopic], questionCount: 10 });
-  };
- 
-  const handleChapterTest = () => {
-    if (!selectedSubject || !currentChapter) return;
-    startTest({ type: "chapter", subject: selectedSubject, chapterTitle: currentChapter.title, topicTitle: "", topics: currentChapter.subtopics || [], questionCount: 20 });
-  };
- 
+
+  const handleTopicTest   = (subtopic) => { if (!selectedSubject || !currentChapter || !subtopic) return; startTest({ type: "topic", subject: selectedSubject, chapterTitle: currentChapter.title, topicTitle: subtopic, topics: [subtopic], questionCount: 10 }); };
+  const handleChapterTest = () => { if (!selectedSubject || !currentChapter) return; startTest({ type: "chapter", subject: selectedSubject, chapterTitle: currentChapter.title, topicTitle: "", topics: currentChapter.subtopics || [], questionCount: 20 }); };
+
   const submitCurrentTest = async () => {
     if (!currentTest?.questions?.length) return;
     let score = 0;
@@ -547,43 +638,25 @@ export default function Home() {
     setSubmittedTestResult(resultData);
     await saveTestResult(resultData);
   };
- 
+
   const resetTestView = () => { setCurrentTest(null); setSelectedAnswers({}); setSubmittedTestResult(null); setActiveTab("syllabus"); };
 
-  const formatList = (items = []) => items.filter(Boolean).map((item) => `- ${item}`).join("\n");
-
-  const formatTermList = (items = []) =>
-    items.filter(Boolean).map((item) => `- ${item.term}: ${item.meaning}`).join("\n");
+  const formatList     = (items = []) => items.filter(Boolean).map((item) => `- ${item}`).join("\n");
+  const formatTermList = (items = []) => items.filter(Boolean).map((item) => `- ${item.term}: ${item.meaning}`).join("\n");
 
   const formatStudyContent = (contentDoc) => {
     const content = contentDoc.studyContent || {};
     const diagram = content.diagram || {};
     return [
-      content.title || contentDoc.topicTitle || "Study Topic",
-      "",
-      "Meaning",
-      content.intro || "",
-      "",
-      "NCERT-Based Explanation",
-      content.ncertBasedExplanation || "",
-      "",
-      "Easy Explanation",
-      content.aiSimplifiedExplanation || "",
-      "",
-      "Step-by-Step Explanation",
-      formatList(content.stepByStep),
-      "",
-      "Important Keywords",
-      formatTermList(content.keywords),
-      "",
-      "Simple Real-Life Example",
-      content.realLifeExample || "",
-      "",
-      diagram.content ? `${diagram.title || "Simple Diagram"}\n${diagram.content}` : "",
-      "",
-      "Quick Summary",
-      formatList(content.summary),
-      "",
+      content.title || contentDoc.topicTitle || "Study Topic", "",
+      "Meaning", content.intro || "", "",
+      "NCERT-Based Explanation", content.ncertBasedExplanation || "", "",
+      "Easy Explanation", content.aiSimplifiedExplanation || "", "",
+      "Step-by-Step Explanation", formatList(content.stepByStep), "",
+      "Important Keywords", formatTermList(content.keywords), "",
+      "Simple Real-Life Example", content.realLifeExample || "", "",
+      diagram.content ? `${diagram.title || "Simple Diagram"}\n${diagram.content}` : "", "",
+      "Quick Summary", formatList(content.summary), "",
       contentDoc.sourceLabel || "",
     ].filter((part) => part !== "").join("\n");
   };
@@ -591,25 +664,13 @@ export default function Home() {
   const formatRevisionContent = (contentDoc) => {
     const content = contentDoc.revisionContent || {};
     return [
-      `Quick Revision: ${contentDoc.topicTitle || ""}`.trim(),
-      "",
-      "Quick Meaning",
-      content.quickMeaning || "",
-      "",
-      "Key Points",
-      formatList(content.keyPoints),
-      "",
-      "Important Terms",
-      formatTermList(content.importantTerms),
-      "",
-      "Must Remember",
-      formatList(content.mustRemember),
-      "",
-      content.quickFlowchart ? `Quick Flowchart\n${content.quickFlowchart}` : "",
-      "",
-      "Exam Points",
-      formatList(content.examPoints),
-      "",
+      `Quick Revision: ${contentDoc.topicTitle || ""}`.trim(), "",
+      "Quick Meaning", content.quickMeaning || "", "",
+      "Key Points", formatList(content.keyPoints), "",
+      "Important Terms", formatTermList(content.importantTerms), "",
+      "Must Remember", formatList(content.mustRemember), "",
+      content.quickFlowchart ? `Quick Flowchart\n${content.quickFlowchart}` : "", "",
+      "Exam Points", formatList(content.examPoints), "",
       contentDoc.sourceLabel || "",
     ].filter((part) => part !== "").join("\n");
   };
@@ -637,24 +698,17 @@ export default function Home() {
 
   const convertStoredContentLanguage = async ({ label, sourceText, mode }) => {
     if (answerLanguage === "en") return sourceText;
-
     const languageLabel = answerLanguage === "hi" ? "Hindi in Devanagari script" : "natural Roman Hinglish";
-    const modeMarker = mode === "revision" ? "REVISION_TOPIC_MODE" : "STUDY_TOPIC_MODE";
-    const formData = new FormData();
-    formData.append(
-      "question",
-      `${modeMarker}\n\nRewrite the stored ${mode} content below in ${languageLabel} for a Class ${classLevel} CBSE student.\n\nRules:\n- Do not say that you are rewriting or translating.\n- Keep the full lesson useful and detailed; do not shorten it to only 2-3 lines.\n- Keep all useful teaching points from the source.\n- Keep headings, bullet points, examples, summaries, and important keywords.\n- Keep it easy, warm, and student-friendly.\n- Do not add unrelated facts.\n- If the target is Hinglish, use Roman English letters only and no Devanagari.\n- If the target is Hindi, use simple Devanagari Hindi only, suitable for a Class ${classLevel} student.\n\nVisible student request: ${label}\n\nStored source content:\n${sourceText}`
-    );
-    formData.append("history", JSON.stringify([]));
-    formData.append("class_level", classLevel);
-    formData.append("board", board);
-    formData.append("answer_language", answerLanguage);
-
-    const res = await fetch("/api/ask-text", { method: "POST", body: formData });
-    if (!res.ok) {
-      const err = await res.json();
-      throw new Error(err.detail || "Could not convert stored content language.");
-    }
+    const modeMarker    = mode === "revision" ? "REVISION_TOPIC_MODE" : "STUDY_TOPIC_MODE";
+    const fd = new FormData();
+    fd.append("question", `${modeMarker}\n\nRewrite the stored ${mode} content below in ${languageLabel} for a Class ${classLevel} CBSE student.\n\nRules:\n- Do not say that you are rewriting or translating.\n- Keep the full lesson useful and detailed; do not shorten it to only 2-3 lines.\n- Keep all useful teaching points from the source.\n- Keep headings, bullet points, examples, summaries, and important keywords.\n- Keep it easy, warm, and student-friendly.\n- Do not add unrelated facts.\n- If the target is Hinglish, use Roman English letters only and no Devanagari.\n- If the target is Hindi, use simple Devanagari Hindi only, suitable for a Class ${classLevel} student.\n\nVisible student request: ${label}\n\nStored source content:\n${sourceText}`);
+    fd.append("history", JSON.stringify([]));
+    fd.append("class_level", classLevel);
+    fd.append("board", board);
+    fd.append("answer_language", answerLanguage);
+    if (selectedSubject) fd.append("subject", selectedSubject);
+    const res = await fetch("/api/ask-text", { method: "POST", body: fd });
+    if (!res.ok) { const err = await res.json(); throw new Error(err.detail || "Could not convert stored content language."); }
     const data = await res.json();
     return data.answer || sourceText;
   };
@@ -663,153 +717,198 @@ export default function Home() {
     if (requestLockRef.current) return;
     requestLockRef.current = true;
     pendingVoiceDataRef.current = null;
-    setTextInput("");
-    setError("");
-    setIsLoading(answerLanguage !== "en");
-    setActiveTab("chat");
+    setTextInput(""); setError(""); setIsLoading(answerLanguage !== "en"); setActiveTab("chat");
     try {
-      const answer = await convertStoredContentLanguage({ label, sourceText, mode });
+      const answer      = await convertStoredContentLanguage({ label, sourceText, mode });
       const assistantId = addStoredContentToChat(label, answer);
+      // Save session after stored content is shown
+      if (user && currentSessionId) {
+        setTimeout(() => saveCurrentSession(user.uid, currentSessionId, label), 400);
+      }
       try {
         const audioUrl = await generateAnswerAudio(answer);
-        if (audioUrl) {
-          setMessages((prev) => prev.map((msg) => msg.id === assistantId ? { ...msg, audioUrl } : msg));
-        }
-      } catch (ttsError) {
-        console.error("Stored content TTS failed:", ttsError);
-      }
-    } catch (error) {
-      console.error("Stored content language conversion error:", error);
-      setError(error.message || "Could not prepare this answer in the selected language.");
+        if (audioUrl) setMessages((prev) => prev.map((msg) => msg.id === assistantId ? { ...msg, audioUrl } : msg));
+      } catch (ttsError) { console.error("Stored content TTS failed:", ttsError); }
+    } catch (err) {
+      console.error("Stored content language conversion error:", err);
+      setError(err.message || "Could not prepare this answer in the selected language.");
       const assistantId = addStoredContentToChat(label, sourceText);
+      if (user && currentSessionId) {
+        setTimeout(() => saveCurrentSession(user.uid, currentSessionId, label), 400);
+      }
       try {
         const audioUrl = await generateAnswerAudio(sourceText);
-        if (audioUrl) {
-          setMessages((prev) => prev.map((msg) => msg.id === assistantId ? { ...msg, audioUrl } : msg));
-        }
-      } catch (ttsError) {
-        console.error("Stored content fallback TTS failed:", ttsError);
-      }
+        if (audioUrl) setMessages((prev) => prev.map((msg) => msg.id === assistantId ? { ...msg, audioUrl } : msg));
+      } catch (ttsError) { console.error("Stored content fallback TTS failed:", ttsError); }
     } finally {
       setIsLoading(false);
       requestLockRef.current = false;
     }
   };
- 
+
   const handleReviseTopic = async (subtopic) => {
     if (!selectedSubject || !currentChapter || !subtopic || requestLockRef.current) return;
     await updateRevisionStatus(selectedSubject, currentChapter.title, subtopic);
     const label = `Revision: ${subtopic}`;
     try {
       const contentDoc = await loadPublishedContent(selectedSubject, currentChapter.title, subtopic);
-      if (contentDoc?.revisionContent) {
-        await addStoredContentWithLanguage({ label, sourceText: formatRevisionContent(contentDoc), mode: "revision" });
-        return;
-      }
-    } catch (error) {
-      console.error("Content library revision load error:", error);
-    }
+      if (contentDoc?.revisionContent) { await addStoredContentWithLanguage({ label, sourceText: formatRevisionContent(contentDoc), mode: "revision" }); return; }
+    } catch (err) { console.error("Content library revision load error:", err); }
     const prompt = `REVISION_TOPIC_MODE\n\nTopic: ${subtopic}\nChapter: ${currentChapter.title}\nSubject: ${selectedSubject}\nClass: ${classLevel}\nBoard: ${board}\n\nCreate short and crisp revision notes for this topic.\n\nRevision format:\n1. Quick Meaning\n2. Key Points\n3. Important Terms\n4. Must Remember\n5. Quick Flowchart\n6. Exam Points\n\nRules:\n- Keep it short and crisp.\n- Use mostly bullet points.\n- Do not write long paragraphs.\n- Follow the selected answer language.`;
     pendingVoiceDataRef.current = null; setTextInput(prompt); setActiveTab("chat");
   };
- 
+
   const handleStudyTopic = async (subtopic) => {
     if (!selectedSubject || !currentChapter || !subtopic || requestLockRef.current) return;
     await updateTopicStatus(selectedSubject, currentChapter.title, subtopic, "Completed");
     const label = `Study Topic: ${subtopic}`;
     try {
       const contentDoc = await loadPublishedContent(selectedSubject, currentChapter.title, subtopic);
-      if (contentDoc?.studyContent) {
-        await addStoredContentWithLanguage({ label, sourceText: formatStudyContent(contentDoc), mode: "study topic" });
-        return;
-      }
-    } catch (error) {
-      console.error("Content library study load error:", error);
-    }
+      if (contentDoc?.studyContent) { await addStoredContentWithLanguage({ label, sourceText: formatStudyContent(contentDoc), mode: "study topic" }); return; }
+    } catch (err) { console.error("Content library study load error:", err); }
     const prompt = `STUDY_TOPIC_MODE\n\nTopic: ${subtopic}\nChapter: ${currentChapter.title}\nSubject: ${selectedSubject}\nClass: ${classLevel}\nBoard: ${board}\n\nExplain this topic in detail for a school student.\n\nAnswer format:\n1. Meaning of the topic\n2. Why it is important\n3. Step-by-step explanation\n4. Important keywords with simple meanings\n5. One simple real-life example\n6. Quick revision summary\n\nRules:\n- Give a large answer, not 4-5 lines.\n- Use headings and bullet points.\n- Keep the language easy for Class ${classLevel}.\n- Follow the selected answer language.`;
     pendingVoiceDataRef.current = null; setTextInput(prompt); setActiveTab("chat");
   };
- 
+
   const cancelProcessing = () => {
     cancelledRef.current = true;
     if (abortControllerRef.current) { abortControllerRef.current.abort(); abortControllerRef.current = null; }
     requestLockRef.current = false;
     setIsLoading(false); setIsTranscribing(false); setError("");
   };
- 
+
+  // ── Text send ──────────────────────────────────────────
   const handleTextSend = async () => {
     if (!textInput.trim() || isLoading || requestLockRef.current) return;
     requestLockRef.current = true;
-    const question = textInput.trim();
+    const question    = textInput.trim();
     const assistantId = crypto.randomUUID();
+    // Capture first question for session title (before messages update)
+    const isFirstMsg  = messages.length === 0;
+
     setTextInput(""); setError(""); setIsLoading(true);
-    setMessages((prev) => [...prev.map((msg) => msg.role === "assistant" ? { ...msg, typing: false } : msg), { id: crypto.randomUUID(), role: "user", text: question, isVoice: false }]);
-    const formData = new FormData();
-    formData.append("question", question); formData.append("history", JSON.stringify(history));
-    formData.append("class_level", classLevel); formData.append("board", board); formData.append("answer_language", answerLanguage);
+    setMessages((prev) => [
+      ...prev.map((msg) => msg.role === "assistant" ? { ...msg, typing: false } : msg),
+      { id: crypto.randomUUID(), role: "user", text: question, isVoice: false },
+    ]);
+
+    const fd = new FormData();
+    fd.append("question", question);
+    fd.append("history", JSON.stringify(history));
+    fd.append("class_level", classLevel);
+    fd.append("board", board);
+    fd.append("answer_language", answerLanguage);
+    if (selectedSubject) fd.append("subject", selectedSubject);
+
     try {
-      const res = await fetch("/api/ask-text", { method: "POST", body: formData });
+      const res = await fetch("/api/ask-text", { method: "POST", body: fd });
       if (!res.ok) { const err = await res.json(); throw new Error(err.detail || "Server error"); }
       const data = await res.json();
-      setMessages((prev) => [...prev.map((msg) => msg.role === "assistant" ? { ...msg, typing: false } : msg), { id: assistantId, role: "assistant", text: data.answer, audioUrl: null, typing: true }]);
-      updateHistory(question, data.answer); setIsLoading(false); requestLockRef.current = false;
+
+      setMessages((prev) => [
+        ...prev.map((msg) => msg.role === "assistant" ? { ...msg, typing: false } : msg),
+        { id: assistantId, role: "assistant", text: data.answer, audioUrl: null, typing: true },
+      ]);
+      updateHistory(question, data.answer);
+      setIsLoading(false);
+      requestLockRef.current = false;
+
+      // ── Save session after reply ─────────────────────
+      if (user && currentSessionId) {
+        // Use a short delay so messagesRef has the new assistant message
+        setTimeout(() => saveCurrentSession(user.uid, currentSessionId, isFirstMsg ? question : undefined), 400);
+      }
+
       try {
         const audioUrl = await generateAnswerAudio(data.answer, data.language === "hi" ? "hi" : "en");
         if (audioUrl) setMessages((prev) => prev.map((msg) => msg.id === assistantId ? { ...msg, audioUrl } : msg));
-      } catch (ttsError) { console.error("TTS failed:", ttsError); }
-    } catch (e) { setError(e.message); setIsLoading(false); requestLockRef.current = false; }
+      } catch (ttsErr) { console.error("TTS failed:", ttsErr); }
+    } catch (e) {
+      setError(e.message);
+      setIsLoading(false);
+      requestLockRef.current = false;
+    }
   };
- 
+
+  // ── Voice send ─────────────────────────────────────────
   const stopRecordingAndTranscribe = () => {
     if (!mediaRecorderRef.current) return;
     mediaRecorderRef.current.onstop = async () => {
-      const blob = new Blob(audioChunksRef.current, { type: "audio/webm" });
+      const blob   = new Blob(audioChunksRef.current, { type: "audio/webm" });
       const stream = mediaRecorderRef.current?.stream;
       if (stream) stream.getTracks().forEach((t) => t.stop());
       setIsRecording(false); setIsTranscribing(true); cancelledRef.current = false;
       abortControllerRef.current = new AbortController();
-      const formData = new FormData();
-      formData.append("file", blob, "recording.webm"); formData.append("history", JSON.stringify(history));
-      formData.append("class_level", classLevel); formData.append("board", board); formData.append("answer_language", answerLanguage);
+      const fd = new FormData();
+      fd.append("file", blob, "recording.webm");
+      fd.append("history", JSON.stringify(history));
+      fd.append("class_level", classLevel);
+      fd.append("board", board);
+      fd.append("answer_language", answerLanguage);
+      if (selectedSubject) fd.append("subject", selectedSubject);
       try {
-        const res = await fetch("/api/ask", { method: "POST", body: formData, signal: abortControllerRef.current.signal });
+        const res = await fetch("/api/ask", { method: "POST", body: fd, signal: abortControllerRef.current.signal });
         if (cancelledRef.current) return;
         if (!res.ok) { const err = await res.json(); throw new Error(err.detail || "Server error"); }
         const data = await res.json();
-        setIsTranscribing(false); setTextInput(data.question); pendingVoiceDataRef.current = data;
-      } catch (e) { if (e.name === "AbortError" || cancelledRef.current) { setIsTranscribing(false); return; } setIsTranscribing(false); setError(e.message); }
+        setIsTranscribing(false);
+        setTextInput(data.question);
+        pendingVoiceDataRef.current = data;
+      } catch (e) {
+        if (e.name === "AbortError" || cancelledRef.current) { setIsTranscribing(false); return; }
+        setIsTranscribing(false); setError(e.message);
+      }
     };
     mediaRecorderRef.current.stop();
   };
- 
+
   const handleSend = async () => {
     if (!textInput.trim() || isLoading || requestLockRef.current) return;
     if (pendingVoiceDataRef.current) {
       requestLockRef.current = true;
-      const data = pendingVoiceDataRef.current;
-      const question = textInput.trim();
+      const data       = pendingVoiceDataRef.current;
+      const question   = textInput.trim();
+      const isFirstMsg = messages.length === 0;
       pendingVoiceDataRef.current = null; setTextInput(""); setError("");
       const assistantId = crypto.randomUUID();
-      setMessages((prev) => [...prev.map((msg) => msg.role === "assistant" ? { ...msg, typing: false } : msg), { id: crypto.randomUUID(), role: "user", text: question, isVoice: true }, { id: assistantId, role: "assistant", text: data.answer, audioUrl: data.audio_url, typing: false }]);
+      setMessages((prev) => [
+        ...prev.map((msg) => msg.role === "assistant" ? { ...msg, typing: false } : msg),
+        { id: crypto.randomUUID(), role: "user", text: question, isVoice: true },
+        { id: assistantId, role: "assistant", text: data.answer, audioUrl: data.audio_url, typing: false },
+      ]);
       updateHistory(question, data.answer);
-      if (data.audio_url) { setTimeout(() => { setMessages((prev) => { const aiIndex = prev.findIndex((m) => m.id === assistantId); if (aiIndex !== -1) playAudio(data.audio_url, aiIndex); return prev; }); }, 200); }
+
+      // ── Save session ──────────────────────────────────
+      if (user && currentSessionId) {
+        setTimeout(() => saveCurrentSession(user.uid, currentSessionId, isFirstMsg ? question : undefined), 400);
+      }
+
+      if (data.audio_url) {
+        setTimeout(() => {
+          setMessages((prev) => {
+            const aiIndex = prev.findIndex((m) => m.id === assistantId);
+            if (aiIndex !== -1) playAudio(data.audio_url, aiIndex);
+            return prev;
+          });
+        }, 200);
+      }
       requestLockRef.current = false;
       return;
     }
     await handleTextSend();
   };
- 
+
   const startRecording = async () => {
     setError(""); stopAudio(); pendingVoiceDataRef.current = null; setTextInput("");
     try {
-      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      const stream   = await navigator.mediaDevices.getUserMedia({ audio: true });
       const recorder = new MediaRecorder(stream);
       mediaRecorderRef.current = recorder; audioChunksRef.current = [];
       recorder.ondataavailable = (e) => { if (e.data.size > 0) audioChunksRef.current.push(e.data); };
       recorder.start(); setIsRecording(true);
     } catch (e) { setError("Microphone access denied. Please allow microphone permission."); }
   };
- 
+
   // ── Loading screen ─────────────────────────────────────
   if (authLoading) {
     return (
@@ -819,40 +918,25 @@ export default function Home() {
       </div>
     );
   }
- 
+
   // ── Auth screen ────────────────────────────────────────
   if (!user) {
     return (
       <div style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", background: B.bg, minHeight: "100vh" }}>
         <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
- 
-        {/* Navbar */}
         <nav style={{ background: B.navy, padding: "14px 28px", display: "flex", alignItems: "center", justifyContent: "space-between", boxShadow: "0 2px 12px rgba(43,88,136,0.15)" }}>
           <TeachifyyLogo size={30} light />
           <span style={{ color: "rgba(255,255,255,0.7)", fontSize: "13px" }}>Student Voice Assistant</span>
         </nav>
- 
         <div style={{ maxWidth: "440px", margin: "0 auto", padding: "48px 16px" }}>
-          {/* Brand accent bar */}
           <div style={{ height: "4px", borderRadius: "2px", background: `linear-gradient(90deg, ${B.navy}, ${B.red})`, marginBottom: "28px" }} />
- 
           <div style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "20px", padding: "32px 28px", boxShadow: "0 8px 32px rgba(43,88,136,0.08)" }}>
             <div style={{ textAlign: "center", marginBottom: "28px" }}>
               <TeachifyyLogo size={36} />
-              <h1 style={{ fontSize: "22px", fontWeight: 700, color: B.navy, margin: "14px 0 6px" }}>
-                {authMode === "login" ? "Welcome back" : "Create your account"}
-              </h1>
-              <p style={{ fontSize: "14px", color: B.gray500, margin: 0 }}>
-                {authMode === "login" ? "Login to continue learning." : "Create your student profile."}
-              </p>
+              <h1 style={{ fontSize: "22px", fontWeight: 700, color: B.navy, margin: "14px 0 6px" }}>{authMode === "login" ? "Welcome back" : "Create your account"}</h1>
+              <p style={{ fontSize: "14px", color: B.gray500, margin: 0 }}>{authMode === "login" ? "Login to continue learning." : "Create your student profile."}</p>
             </div>
- 
-            {authError && (
-              <div style={{ marginBottom: "16px", padding: "10px 14px", background: B.redLight, border: `1px solid ${B.red}`, borderRadius: "10px", color: B.red, fontSize: "13px", fontWeight: 500 }}>
-                ⚠️ {authError}
-              </div>
-            )}
- 
+            {authError && <div style={{ marginBottom: "16px", padding: "10px 14px", background: B.redLight, border: `1px solid ${B.red}`, borderRadius: "10px", color: B.red, fontSize: "13px", fontWeight: 500 }}>⚠️ {authError}</div>}
             {authMode === "signup" && (
               <>
                 <label style={labelStyle}>Full Name</label>
@@ -861,64 +945,40 @@ export default function Home() {
                 <input value={signupMobile} onChange={(e) => setSignupMobile(e.target.value)} placeholder="Enter mobile number" style={inputStyle} />
               </>
             )}
- 
             <label style={labelStyle}>Email</label>
             <input type="email" value={authMode === "login" ? loginEmail : signupEmail} onChange={(e) => authMode === "login" ? setLoginEmail(e.target.value) : setSignupEmail(e.target.value)} placeholder="Enter email" style={inputStyle} />
- 
             <label style={labelStyle}>Password</label>
             <input type="password" value={authMode === "login" ? loginPassword : signupPassword} onChange={(e) => authMode === "login" ? setLoginPassword(e.target.value) : setSignupPassword(e.target.value)} placeholder="Enter password" style={inputStyle} />
- 
             {authMode === "signup" && (
               <>
                 <label style={labelStyle}>Class</label>
-                <select value={signupClassLevel} onChange={(e) => setSignupClassLevel(e.target.value)} style={inputStyle}>
-                  {["5","6","7","8","9","10"].map((c) => <option key={c} value={c}>Class {c}</option>)}
-                </select>
+                <select value={signupClassLevel} onChange={(e) => setSignupClassLevel(e.target.value)} style={inputStyle}>{["5","6","7","8","9","10"].map((c) => <option key={c} value={c}>Class {c}</option>)}</select>
                 <label style={labelStyle}>Board</label>
-                <select value={signupBoard} onChange={(e) => setSignupBoard(e.target.value)} style={inputStyle}>
-                  {["CBSE","RBSE","ICSE","Other"].map((b) => <option key={b} value={b}>{b}</option>)}
-                </select>
+                <select value={signupBoard} onChange={(e) => setSignupBoard(e.target.value)} style={inputStyle}>{["CBSE","RBSE","ICSE","Other"].map((b) => <option key={b} value={b}>{b}</option>)}</select>
               </>
             )}
- 
-            <button
-              onClick={authMode === "login" ? handleLogin : handleCreateAccount}
-              disabled={authLoading}
-              style={{ width: "100%", padding: "13px 16px", border: "none", borderRadius: "12px", background: `linear-gradient(135deg, ${B.navy}, ${B.navyDark})`, color: B.white, fontSize: "15px", fontWeight: 700, cursor: "pointer", marginTop: "6px", opacity: authLoading ? 0.6 : 1, fontFamily: "'Plus Jakarta Sans', sans-serif", letterSpacing: "0.2px" }}
-            >
+            <button onClick={authMode === "login" ? handleLogin : handleCreateAccount} disabled={authLoading} style={{ width: "100%", padding: "13px 16px", border: "none", borderRadius: "12px", background: `linear-gradient(135deg, ${B.navy}, ${B.navyDark})`, color: B.white, fontSize: "15px", fontWeight: 700, cursor: "pointer", marginTop: "6px", opacity: authLoading ? 0.6 : 1, fontFamily: "'Plus Jakarta Sans', sans-serif", letterSpacing: "0.2px" }}>
               {authMode === "login" ? "Login →" : "Create Account →"}
             </button>
- 
-            <button
-              onClick={() => { setAuthError(""); setAuthMode(authMode === "login" ? "signup" : "login"); }}
-              style={{ width: "100%", marginTop: "14px", background: "transparent", border: "none", color: B.navy, cursor: "pointer", fontSize: "14px", fontWeight: 500, fontFamily: "'Plus Jakarta Sans', sans-serif" }}
-            >
+            <button onClick={() => { setAuthError(""); setAuthMode(authMode === "login" ? "signup" : "login"); }} style={{ width: "100%", marginTop: "14px", background: "transparent", border: "none", color: B.navy, cursor: "pointer", fontSize: "14px", fontWeight: 500, fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
               {authMode === "login" ? "New student? Create account" : "Already have an account? Login"}
             </button>
           </div>
- 
-          {/* Tagline */}
-          <p style={{ textAlign: "center", marginTop: "20px", fontSize: "12px", color: B.gray500, fontStyle: "italic" }}>
-            Develop what teaching demands
-          </p>
+          <p style={{ textAlign: "center", marginTop: "20px", fontSize: "12px", color: B.gray500, fontStyle: "italic" }}>Develop what teaching demands</p>
         </div>
       </div>
     );
   }
- 
+
   // ── Language selection screen ──────────────────────────
   if (!profileCompleted) {
     return (
       <div style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", background: B.bg, minHeight: "100vh" }}>
         <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
- 
         <nav style={{ background: B.navy, padding: "14px 28px", display: "flex", alignItems: "center", justifyContent: "space-between", boxShadow: "0 2px 12px rgba(43,88,136,0.15)" }}>
           <TeachifyyLogo size={30} light />
-          <button onClick={handleLogout} style={{ padding: "7px 16px", borderRadius: "8px", border: "none", background: "rgba(255,255,255,0.15)", color: B.white, cursor: "pointer", fontSize: "13px", fontWeight: 500 }}>
-            Logout
-          </button>
+          <button onClick={handleLogout} style={{ padding: "7px 16px", borderRadius: "8px", border: "none", background: "rgba(255,255,255,0.15)", color: B.white, cursor: "pointer", fontSize: "13px", fontWeight: 500 }}>Logout</button>
         </nav>
- 
         <div style={{ maxWidth: "440px", margin: "0 auto", padding: "48px 16px" }}>
           <div style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "20px", padding: "32px 28px", boxShadow: "0 8px 32px rgba(43,88,136,0.08)" }}>
             <div style={{ textAlign: "center", marginBottom: "28px" }}>
@@ -926,18 +986,11 @@ export default function Home() {
               <h1 style={{ fontSize: "22px", fontWeight: 700, color: B.navy, marginBottom: "6px" }}>Welcome, {userProfile?.name || "Student"}!</h1>
               <p style={{ fontSize: "14px", color: B.gray500 }}>Class {classLevel} · {board}</p>
             </div>
- 
             <label style={labelStyle}>Choose answer language</label>
             <select value={answerLanguage} onChange={(e) => handleAnswerLanguageChange(e.target.value)} style={inputStyle}>
-              {ANSWER_LANGUAGES.map((language) => (
-                <option key={language.value} value={language.value}>{language.label}</option>
-              ))}
+              {ANSWER_LANGUAGES.map((l) => <option key={l.value} value={l.value}>{l.label}</option>)}
             </select>
- 
-            <button
-              onClick={() => setProfileCompleted(true)}
-              style={{ width: "100%", padding: "13px 16px", border: "none", borderRadius: "12px", background: `linear-gradient(135deg, ${B.red}, ${B.orange})`, color: B.white, fontSize: "15px", fontWeight: 700, cursor: "pointer", marginTop: "8px", fontFamily: "'Plus Jakarta Sans', sans-serif" }}
-            >
+            <button onClick={() => { setProfileCompleted(true); setCurrentSessionId(crypto.randomUUID()); }} style={{ width: "100%", padding: "13px 16px", border: "none", borderRadius: "12px", background: `linear-gradient(135deg, ${B.red}, ${B.orange})`, color: B.white, fontSize: "15px", fontWeight: 700, cursor: "pointer", marginTop: "8px", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
               Start Learning →
             </button>
           </div>
@@ -945,74 +998,61 @@ export default function Home() {
       </div>
     );
   }
- 
+
   // ── Main app ───────────────────────────────────────────
   const overallProgress = getOverallProgress();
- 
+  const sessionGroups   = groupSessionsByDate(chatSessions);
+
   return (
     <div style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", background: B.bg, minHeight: "100vh" }}>
       <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
- 
+
       {/* Navbar */}
       <nav style={{ background: B.navy, padding: "12px 28px", display: "flex", alignItems: "center", justifyContent: "space-between", boxShadow: "0 2px 12px rgba(43,88,136,0.15)", position: "sticky", top: 0, zIndex: 100 }}>
         <TeachifyyLogo size={28} light />
- 
         <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
           <div style={{ textAlign: "right" }}>
             <div style={{ color: B.white, fontSize: "13px", fontWeight: 600 }}>{userProfile?.name || user?.email}</div>
             <div style={{ color: "rgba(255,255,255,0.6)", fontSize: "11px" }}>Class {classLevel} · {board}</div>
           </div>
-          <button onClick={handleLogout} style={{ padding: "7px 14px", borderRadius: "8px", border: "1px solid rgba(255,255,255,0.25)", background: "rgba(255,255,255,0.1)", color: B.white, cursor: "pointer", fontSize: "13px", fontWeight: 500 }}>
-            Logout
-          </button>
+          <button onClick={handleLogout} style={{ padding: "7px 14px", borderRadius: "8px", border: "1px solid rgba(255,255,255,0.25)", background: "rgba(255,255,255,0.1)", color: B.white, cursor: "pointer", fontSize: "13px", fontWeight: 500 }}>Logout</button>
         </div>
       </nav>
- 
-      {/* Red accent stripe */}
       <div style={{ height: "3px", background: `linear-gradient(90deg, ${B.red}, ${B.orange}, ${B.warm})` }} />
- 
-      {/* Main */}
+
       <div style={{ maxWidth: "800px", margin: "0 auto", padding: "28px 16px" }}>
- 
+
         {/* Hero */}
         <div style={{ textAlign: "center", marginBottom: "20px" }}>
-          <h1 style={{ fontSize: "24px", fontWeight: 700, color: B.navy, marginBottom: "4px" }}>
-            Welcome back, {userProfile?.name?.split(" ")[0] || "Student"} 👋
-          </h1>
-          <p style={{ fontSize: "13px", color: B.gray500 }}>
-            Ask anything in Hindi, English, or Hinglish
-          </p>
+          <h1 style={{ fontSize: "24px", fontWeight: 700, color: B.navy, marginBottom: "4px" }}>Welcome back, {userProfile?.name?.split(" ")[0] || "Student"} 👋</h1>
+          <p style={{ fontSize: "13px", color: B.gray500 }}>Ask anything in Hindi, English, or Hinglish</p>
         </div>
- 
-        {/* Tabs */}
+
+        {/* Tabs — now 4 tabs including History */}
         <div style={{ display: "flex", gap: "6px", marginBottom: "18px", background: B.gray200, padding: "5px", borderRadius: "14px" }}>
           {[
-            { key: "chat", label: "💬 Chatbot" },
-            { key: "syllabus", label: "📚 Syllabus Tracker" },
-            { key: "test", label: "📝 Test", disabled: !currentTest && !testLoading },
+            { key: "chat",     label: "💬 Chatbot" },
+            { key: "history",  label: "🕐 History" },
+            { key: "syllabus", label: "📚 Syllabus" },
+            { key: "test",     label: "📝 Test", disabled: !currentTest && !testLoading },
           ].map(({ key, label, disabled }) => (
             <button
               key={key}
-              onClick={() => { if (key === "test" && (currentTest || testLoading)) setActiveTab("test"); else if (key !== "test") setActiveTab(key); }}
-              disabled={disabled}
-              style={{
-                flex: 1, padding: "10px 12px", borderRadius: "10px", border: "none", cursor: disabled ? "not-allowed" : "pointer",
-                fontSize: "13px", fontWeight: 600, fontFamily: "'Plus Jakarta Sans', sans-serif",
-                background: activeTab === key ? B.navy : "transparent",
-                color: activeTab === key ? B.white : B.gray700,
-                opacity: disabled ? 0.4 : 1,
-                transition: "all 0.2s",
+              onClick={() => {
+                if (key === "test" && (currentTest || testLoading)) { setActiveTab("test"); return; }
+                if (key !== "test") setActiveTab(key);
               }}
+              disabled={disabled}
+              style={{ flex: 1, padding: "10px 8px", borderRadius: "10px", border: "none", cursor: disabled ? "not-allowed" : "pointer", fontSize: "12px", fontWeight: 600, fontFamily: "'Plus Jakarta Sans', sans-serif", background: activeTab === key ? B.navy : "transparent", color: activeTab === key ? B.white : B.gray700, opacity: disabled ? 0.4 : 1, transition: "all 0.2s" }}
             >
               {label}
             </button>
           ))}
         </div>
- 
+
         {/* ── CHAT TAB ── */}
         {activeTab === "chat" && (
           <div style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "18px", overflow: "hidden", boxShadow: "0 4px 20px rgba(43,88,136,0.06)" }}>
- 
             {/* Chat header */}
             <div style={{ padding: "14px 18px", borderBottom: `1px solid ${B.gray200}`, display: "flex", alignItems: "center", justifyContent: "space-between", background: B.white }}>
               <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
@@ -1021,14 +1061,22 @@ export default function Home() {
                 <span style={{ fontSize: "11px", color: B.gray500, background: B.navyLight, padding: "2px 8px", borderRadius: "20px" }}>
                   {answerLanguage === "en" ? "English" : answerLanguage === "hi" ? "हिंदी" : "Hinglish"}
                 </span>
+                {selectedSubject && (
+                  <span style={{ fontSize: "11px", color: B.green, background: B.greenLight, padding: "2px 8px", borderRadius: "20px", fontWeight: 600 }}>📖 {selectedSubject}</span>
+                )}
               </div>
-              {history.length > 0 && (
-                <button onClick={clearConversation} style={{ fontSize: "12px", color: B.gray500, background: "none", border: "none", cursor: "pointer", display: "flex", alignItems: "center", gap: "4px", padding: "4px 8px", borderRadius: "6px", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
-                  🗑 Clear chat
+              <div style={{ display: "flex", gap: "8px", alignItems: "center" }}>
+                {messages.length > 0 && (
+                  <button onClick={clearConversation} style={{ fontSize: "12px", color: B.gray500, background: "none", border: "none", cursor: "pointer", display: "flex", alignItems: "center", gap: "4px", padding: "4px 8px", borderRadius: "6px", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+                    🗑 Clear
+                  </button>
+                )}
+                <button onClick={startNewSession} style={{ fontSize: "12px", color: B.navy, background: B.navyLight, border: "none", cursor: "pointer", padding: "4px 10px", borderRadius: "6px", fontWeight: 600, fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+                  + New chat
                 </button>
-              )}
+              </div>
             </div>
- 
+
             {/* Messages */}
             <div style={{ height: "400px", overflowY: "auto", padding: "18px", display: "flex", flexDirection: "column", gap: "14px", background: B.gray50 }}>
               {messages.length === 0 ? (
@@ -1041,170 +1089,205 @@ export default function Home() {
                 messages.map((msg, i) =>
                   msg.role === "user" ? (
                     <div key={msg.id} style={{ display: "flex", gap: "10px", alignItems: "flex-start", flexDirection: "row-reverse" }}>
-                      <div style={{ width: "32px", height: "32px", borderRadius: "50%", flexShrink: 0, background: `linear-gradient(135deg, ${B.red}, ${B.orange})`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "11px", fontWeight: 700, color: B.white, marginTop: "2px" }}>
-                        {userProfile?.name?.[0]?.toUpperCase() || "Y"}
-                      </div>
-                      {/* Scrollable user bubble for long questions */}
-                      <div style={{
-                        maxWidth: "78%", padding: "12px 16px",
-                        borderRadius: "16px 4px 16px 16px",
-                        background: B.navy, color: B.white,
-                        fontSize: "14px", lineHeight: "1.6",
-                        maxHeight: "120px", overflowY: "auto",
-                        boxShadow: "0 2px 8px rgba(43,88,136,0.2)",
-                      }}>
-                        {msg.text}
-                      </div>
+                      <div style={{ width: "32px", height: "32px", borderRadius: "50%", flexShrink: 0, background: `linear-gradient(135deg, ${B.red}, ${B.orange})`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "11px", fontWeight: 700, color: B.white, marginTop: "2px" }}>{userProfile?.name?.[0]?.toUpperCase() || "Y"}</div>
+                      <div style={{ maxWidth: "78%", padding: "12px 16px", borderRadius: "16px 4px 16px 16px", background: B.navy, color: B.white, fontSize: "14px", lineHeight: "1.6", maxHeight: "120px", overflowY: "auto", boxShadow: "0 2px 8px rgba(43,88,136,0.2)" }}>{msg.text}</div>
                     </div>
                   ) : (
                     <AssistantBubble key={msg.id} msg={msg} index={i} playingIndex={playingIndex} playAudio={playAudio} stopAudio={stopAudio} onTypingComplete={markTypingComplete} />
                   )
                 )
               )}
- 
               {isLoading && (
                 <div style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
                   <div style={{ width: "32px", height: "32px", borderRadius: "50%", background: `linear-gradient(135deg, ${B.navy}, ${B.navyDark})`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "12px", fontWeight: 700, color: B.white, flexShrink: 0 }}>AI</div>
                   <div style={{ padding: "14px 18px", background: B.white, borderRadius: "4px 16px 16px 16px", border: `1px solid ${B.gray200}`, display: "flex", gap: "5px", alignItems: "center", boxShadow: "0 1px 4px rgba(43,88,136,0.06)" }}>
-                    {[0, 0.2, 0.4].map((delay) => (
-                      <div key={delay} style={{ width: "7px", height: "7px", borderRadius: "50%", background: B.navy, animation: `bounce 1.2s ${delay}s infinite` }} />
-                    ))}
+                    {[0, 0.2, 0.4].map((delay) => <div key={delay} style={{ width: "7px", height: "7px", borderRadius: "50%", background: B.navy, animation: `bounce 1.2s ${delay}s infinite` }} />)}
                   </div>
                 </div>
               )}
               <div ref={chatEndRef} />
             </div>
- 
-            {/* Error */}
-            {error && (
-              <div style={{ margin: "0 16px 10px", padding: "10px 14px", background: B.redLight, border: `1px solid ${B.red}`, borderRadius: "10px", fontSize: "13px", color: B.red, fontWeight: 500 }}>
-                ⚠️ {error}
-              </div>
-            )}
- 
-            {/* Transcribing bar */}
+
+            {error && <div style={{ margin: "0 16px 10px", padding: "10px 14px", background: B.redLight, border: `1px solid ${B.red}`, borderRadius: "10px", fontSize: "13px", color: B.red, fontWeight: 500 }}>⚠️ {error}</div>}
+
             {isTranscribing && (
               <div style={{ margin: "0 16px 10px", padding: "10px 14px", background: B.navyLight, border: `1px solid ${B.navy}`, borderRadius: "10px", fontSize: "13px", color: B.navy, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-                <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-                  <div style={{ width: "8px", height: "8px", borderRadius: "50%", background: B.navy, animation: "pulse 1s infinite" }} />
-                  <span style={{ fontWeight: 500 }}>Processing your voice...</span>
-                </div>
-                <button onClick={cancelProcessing} style={{ fontSize: "12px", padding: "4px 12px", borderRadius: "20px", border: `1px solid ${B.navy}`, background: B.white, color: B.navy, cursor: "pointer", fontWeight: 600 }}>
-                  ✕ Cancel
-                </button>
+                <div style={{ display: "flex", alignItems: "center", gap: "8px" }}><div style={{ width: "8px", height: "8px", borderRadius: "50%", background: B.navy, animation: "pulse 1s infinite" }} /><span style={{ fontWeight: 500 }}>Processing your voice...</span></div>
+                <button onClick={cancelProcessing} style={{ fontSize: "12px", padding: "4px 12px", borderRadius: "20px", border: `1px solid ${B.navy}`, background: B.white, color: B.navy, cursor: "pointer", fontWeight: 600 }}>✕ Cancel</button>
               </div>
             )}
- 
-            {/* Recording bar */}
+
             {isRecording && (
               <div style={{ margin: "0 16px 10px", padding: "10px 14px", background: B.redLight, border: `1px solid ${B.red}`, borderRadius: "10px", fontSize: "13px", color: B.red, display: "flex", alignItems: "center", gap: "8px" }}>
                 <div style={{ width: "8px", height: "8px", borderRadius: "50%", background: B.red, animation: "pulse 1s infinite" }} />
                 <span style={{ fontWeight: 500 }}>Recording... press mic again to stop</span>
               </div>
             )}
- 
-            {/* Voice review hint */}
+
             {!isRecording && !isTranscribing && pendingVoiceDataRef.current && textInput && (
-              <div style={{ margin: "0 16px 8px", fontSize: "12px", color: B.navy, padding: "0 4px", fontWeight: 500 }}>
-                ✏️ Review or edit your question, then press Send
-              </div>
+              <div style={{ margin: "0 16px 8px", fontSize: "12px", color: B.navy, padding: "0 4px", fontWeight: 500 }}>✏️ Review or edit your question, then press Send</div>
             )}
- 
+
             {/* Input area */}
             <div style={{ padding: "14px 16px", borderTop: `1px solid ${B.gray200}`, display: "flex", gap: "8px", alignItems: "flex-end", background: B.white }}>
-              {/* Textarea for multi-line input */}
               <textarea
                 placeholder={isTranscribing ? "Transcribing your voice..." : "Type your question here..."}
                 value={textInput}
-                onChange={(e) => {
-                  setTextInput(e.target.value);
-                  if (pendingVoiceDataRef.current) pendingVoiceDataRef.current = null;
-                }}
+                onChange={(e) => { setTextInput(e.target.value); if (pendingVoiceDataRef.current) pendingVoiceDataRef.current = null; }}
                 onKeyDown={(e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); handleSend(); } }}
                 disabled={isLoading || isRecording || isTranscribing}
                 rows={1}
-                style={{
-                  flex: 1, padding: "10px 16px",
-                  border: `1.5px solid ${B.gray300}`,
-                  borderRadius: "14px", fontSize: "14px", color: B.gray900,
-                  background: isTranscribing ? B.gray100 : B.gray50,
-                  outline: "none", resize: "none", overflowY: "auto",
-                  maxHeight: "100px", lineHeight: "1.5",
-                  fontFamily: "'Plus Jakarta Sans', sans-serif",
-                  transition: "border-color 0.2s",
-                }}
+                style={{ flex: 1, padding: "10px 16px", border: `1.5px solid ${B.gray300}`, borderRadius: "14px", fontSize: "14px", color: B.gray900, background: isTranscribing ? B.gray100 : B.gray50, outline: "none", resize: "none", overflowY: "auto", maxHeight: "100px", lineHeight: "1.5", fontFamily: "'Plus Jakarta Sans', sans-serif", transition: "border-color 0.2s" }}
                 onFocus={(e) => { e.target.style.borderColor = B.navy; }}
-                onBlur={(e) => { e.target.style.borderColor = B.gray300; }}
+                onBlur={(e)  => { e.target.style.borderColor = B.gray300; }}
               />
-
               <select
                 value={answerLanguage}
                 onChange={(e) => handleAnswerLanguageChange(e.target.value)}
                 disabled={isLoading || isRecording || isTranscribing}
-                title="Answer language"
-                style={{
-                  height: "42px",
-                  minWidth: "104px",
-                  borderRadius: "12px",
-                  border: `1.5px solid ${B.gray300}`,
-                  background: B.white,
-                  color: B.navy,
-                  fontSize: "12px",
-                  fontWeight: 700,
-                  cursor: isLoading || isRecording || isTranscribing ? "not-allowed" : "pointer",
-                  outline: "none",
-                  padding: "0 8px",
-                  opacity: isLoading || isRecording || isTranscribing ? 0.55 : 1,
-                  fontFamily: "'Plus Jakarta Sans', sans-serif",
-                }}
+                style={{ height: "42px", minWidth: "96px", borderRadius: "12px", border: `1.5px solid ${B.gray300}`, background: B.white, color: B.navy, fontSize: "12px", fontWeight: 700, cursor: isLoading || isRecording || isTranscribing ? "not-allowed" : "pointer", outline: "none", padding: "0 8px", opacity: isLoading || isRecording || isTranscribing ? 0.55 : 1, fontFamily: "'Plus Jakarta Sans', sans-serif" }}
               >
-                {ANSWER_LANGUAGES.map((language) => (
-                  <option key={language.value} value={language.value}>{language.label}</option>
-                ))}
+                {ANSWER_LANGUAGES.map((l) => <option key={l.value} value={l.value}>{l.label}</option>)}
               </select>
- 
-              {/* Send button */}
-              <button
-                onClick={handleSend}
-                disabled={isLoading || isRecording || isTranscribing || !textInput.trim()}
-                style={{
-                  width: "42px", height: "42px", borderRadius: "50%", flexShrink: 0,
-                  background: textInput.trim() ? `linear-gradient(135deg, ${B.navy}, ${B.navyDark})` : B.gray200,
-                  color: B.white, border: "none", cursor: "pointer", fontSize: "16px",
-                  display: "flex", alignItems: "center", justifyContent: "center",
-                  opacity: (isLoading || isRecording || isTranscribing || !textInput.trim()) ? 0.5 : 1,
-                  transition: "all 0.2s",
-                }}
-                title="Send (Enter)"
-              >
-                ➤
-              </button>
- 
-              {/* Mic button */}
-              <button
-                onClick={isRecording ? stopRecordingAndTranscribe : startRecording}
-                disabled={isLoading || isTranscribing}
-                style={{
-                  width: "42px", height: "42px", borderRadius: "50%", flexShrink: 0, border: "none", cursor: "pointer",
-                  fontSize: "18px", display: "flex", alignItems: "center", justifyContent: "center",
-                  background: isRecording ? B.red : B.greenLight,
-                  color: isRecording ? B.white : B.green,
-                  opacity: (isLoading || isTranscribing) ? 0.4 : 1,
-                  animation: isRecording ? "pulse 1s infinite" : "none",
-                  transition: "all 0.2s",
-                }}
-                title={isRecording ? "Stop recording" : "Start recording"}
-              >
-                🎤
-              </button>
+              <button onClick={handleSend} disabled={isLoading || isRecording || isTranscribing || !textInput.trim()} style={{ width: "42px", height: "42px", borderRadius: "50%", flexShrink: 0, background: textInput.trim() ? `linear-gradient(135deg, ${B.navy}, ${B.navyDark})` : B.gray200, color: B.white, border: "none", cursor: "pointer", fontSize: "16px", display: "flex", alignItems: "center", justifyContent: "center", opacity: (isLoading || isRecording || isTranscribing || !textInput.trim()) ? 0.5 : 1, transition: "all 0.2s" }} title="Send (Enter)">➤</button>
+              <button onClick={isRecording ? stopRecordingAndTranscribe : startRecording} disabled={isLoading || isTranscribing} style={{ width: "42px", height: "42px", borderRadius: "50%", flexShrink: 0, border: "none", cursor: "pointer", fontSize: "18px", display: "flex", alignItems: "center", justifyContent: "center", background: isRecording ? B.red : B.greenLight, color: isRecording ? B.white : B.green, opacity: (isLoading || isTranscribing) ? 0.4 : 1, animation: isRecording ? "pulse 1s infinite" : "none", transition: "all 0.2s" }} title={isRecording ? "Stop recording" : "Start recording"}>🎤</button>
             </div>
- 
             <div style={{ textAlign: "center", fontSize: "11px", color: B.gray500, padding: "8px 16px", borderTop: `1px solid ${B.gray100}`, background: B.white }}>
               Press <kbd style={{ background: B.gray100, padding: "1px 5px", borderRadius: "4px", fontSize: "10px" }}>Enter</kbd> to send · <kbd style={{ background: B.gray100, padding: "1px 5px", borderRadius: "4px", fontSize: "10px" }}>Shift+Enter</kbd> for new line
             </div>
           </div>
         )}
- 
+
+        {/* ── HISTORY TAB ── */}
+        {activeTab === "history" && (
+          <div style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "18px", overflow: "hidden", boxShadow: "0 4px 20px rgba(43,88,136,0.06)" }}>
+
+            {/* History header */}
+            <div style={{ padding: "16px 20px", borderBottom: `1px solid ${B.gray200}`, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+              <div>
+                <h2 style={{ fontSize: "17px", fontWeight: 700, color: B.navy, margin: 0 }}>Chat History</h2>
+                <p style={{ fontSize: "12px", color: B.gray500, margin: "3px 0 0" }}>{chatSessions.length} saved conversations</p>
+              </div>
+              <button onClick={startNewSession} style={{ padding: "8px 14px", borderRadius: "10px", border: "none", background: `linear-gradient(135deg, ${B.navy}, ${B.navyDark})`, color: B.white, fontSize: "13px", fontWeight: 700, cursor: "pointer", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+                + New Chat
+              </button>
+            </div>
+
+            {/* Session viewer (when a session is expanded) */}
+            {viewingSession && (
+              <div style={{ borderBottom: `1px solid ${B.gray200}`, background: B.gray50 }}>
+                <div style={{ padding: "12px 20px", display: "flex", alignItems: "center", justifyContent: "space-between", borderBottom: `1px solid ${B.gray200}` }}>
+                  <div>
+                    <div style={{ fontSize: "13px", fontWeight: 700, color: B.navy }}>{viewingSession.title}</div>
+                    <div style={{ fontSize: "11px", color: B.gray500, marginTop: "2px" }}>
+                      {viewingSession.classLevel && `Class ${viewingSession.classLevel}`}{viewingSession.board && ` · ${viewingSession.board}`}
+                      {viewingSession.updatedAt && ` · ${formatSessionDate(viewingSession.updatedAt)}`}
+                    </div>
+                  </div>
+                  <div style={{ display: "flex", gap: "8px" }}>
+                    <button onClick={() => openSession(viewingSession)} style={{ padding: "6px 12px", borderRadius: "8px", border: "none", background: B.navy, color: B.white, fontSize: "12px", fontWeight: 700, cursor: "pointer" }}>
+                      Continue →
+                    </button>
+                    <button onClick={() => setViewingSession(null)} style={{ padding: "6px 12px", borderRadius: "8px", border: `1px solid ${B.gray300}`, background: B.white, color: B.gray700, fontSize: "12px", cursor: "pointer" }}>
+                      ✕ Close
+                    </button>
+                  </div>
+                </div>
+                {/* Preview messages */}
+                <div style={{ maxHeight: "320px", overflowY: "auto", padding: "16px 20px", display: "flex", flexDirection: "column", gap: "10px" }}>
+                  {(viewingSession.messages || []).map((msg, i) => (
+                    <div key={msg.id || i} style={{ display: "flex", gap: "8px", alignItems: "flex-start", flexDirection: msg.role === "user" ? "row-reverse" : "row" }}>
+                      <div style={{ width: "26px", height: "26px", borderRadius: "50%", flexShrink: 0, background: msg.role === "user" ? `linear-gradient(135deg, ${B.red}, ${B.orange})` : `linear-gradient(135deg, ${B.navy}, ${B.navyDark})`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "10px", fontWeight: 700, color: B.white }}>
+                        {msg.role === "user" ? (userProfile?.name?.[0]?.toUpperCase() || "Y") : "AI"}
+                      </div>
+                      <div style={{ maxWidth: "80%", padding: "8px 12px", borderRadius: msg.role === "user" ? "12px 4px 12px 12px" : "4px 12px 12px 12px", background: msg.role === "user" ? B.navy : B.white, color: msg.role === "user" ? B.white : B.gray900, fontSize: "13px", lineHeight: "1.5", border: msg.role === "user" ? "none" : `1px solid ${B.gray200}`, whiteSpace: "pre-wrap", overflowY: "auto", maxHeight: "120px" }}>
+                        {(msg.text || "").replace(/\*\*/g, "")}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Session list */}
+            <div style={{ overflowY: "auto", maxHeight: viewingSession ? "260px" : "520px" }}>
+              {historyLoading ? (
+                <div style={{ padding: "40px", textAlign: "center", color: B.gray500, fontSize: "13px" }}>Loading history...</div>
+              ) : chatSessions.length === 0 ? (
+                <div style={{ padding: "48px 20px", textAlign: "center", color: B.gray500 }}>
+                  <div style={{ fontSize: "40px", marginBottom: "10px" }}>🕐</div>
+                  <p style={{ fontSize: "14px", fontWeight: 500 }}>No chat history yet</p>
+                  <p style={{ fontSize: "12px", marginTop: "4px" }}>Start a conversation and it will appear here.</p>
+                </div>
+              ) : (
+                Object.entries(sessionGroups).map(([groupLabel, sessions]) => {
+                  if (!sessions.length) return null;
+                  return (
+                    <div key={groupLabel}>
+                      {/* Group header */}
+                      <div style={{ padding: "10px 20px 6px", fontSize: "11px", fontWeight: 700, color: B.gray500, textTransform: "uppercase", letterSpacing: "0.6px", background: B.gray50, borderBottom: `1px solid ${B.gray100}` }}>
+                        {groupLabel}
+                      </div>
+                      {sessions.map((session) => {
+                        const isActive   = session.id === currentSessionId;
+                        const isViewing  = viewingSession?.id === session.id;
+                        const msgCount   = session.messages?.length || 0;
+                        const userMsgs   = (session.messages || []).filter((m) => m.role === "user").length;
+                        return (
+                          <div
+                            key={session.id}
+                            style={{ padding: "14px 20px", borderBottom: `1px solid ${B.gray100}`, cursor: "pointer", background: isViewing ? B.navyLight : isActive ? "#f8faff" : B.white, transition: "background 0.15s", display: "flex", alignItems: "flex-start", gap: "12px" }}
+                            onClick={() => setViewingSession(isViewing ? null : session)}
+                          >
+                            {/* Session icon */}
+                            <div style={{ width: "36px", height: "36px", borderRadius: "10px", background: isActive ? B.navy : B.navyLight, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "16px", flexShrink: 0 }}>
+                              💬
+                            </div>
+
+                            {/* Session info */}
+                            <div style={{ flex: 1, minWidth: 0 }}>
+                              <div style={{ fontSize: "14px", fontWeight: 600, color: B.navy, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+                                {session.title || "Untitled conversation"}
+                              </div>
+                              <div style={{ fontSize: "11px", color: B.gray500, marginTop: "3px", display: "flex", gap: "8px", flexWrap: "wrap" }}>
+                                <span>{userMsgs} question{userMsgs !== 1 ? "s" : ""}</span>
+                                {session.classLevel && <span>Class {session.classLevel}</span>}
+                                {session.board      && <span>{session.board}</span>}
+                                {isActive           && <span style={{ color: B.green, fontWeight: 700 }}>● Active</span>}
+                              </div>
+                            </div>
+
+                            {/* Time + actions */}
+                            <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: "6px", flexShrink: 0 }}>
+                              <span style={{ fontSize: "11px", color: B.gray500 }}>{formatSessionDate(session.updatedAt)}</span>
+                              <div style={{ display: "flex", gap: "4px" }} onClick={(e) => e.stopPropagation()}>
+                                <button
+                                  onClick={() => openSession(session)}
+                                  title="Open this chat"
+                                  style={{ padding: "3px 8px", borderRadius: "6px", border: `1px solid ${B.navy}`, background: B.navyLight, color: B.navy, fontSize: "11px", fontWeight: 700, cursor: "pointer" }}
+                                >
+                                  Open
+                                </button>
+                                <button
+                                  onClick={() => { if (window.confirm("Delete this chat?")) deleteSession(session.id); }}
+                                  title="Delete"
+                                  style={{ padding: "3px 7px", borderRadius: "6px", border: `1px solid ${B.gray300}`, background: B.white, color: B.red, fontSize: "11px", cursor: "pointer" }}
+                                >
+                                  🗑
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  );
+                })
+              )}
+            </div>
+          </div>
+        )}
+
         {/* ── TEST TAB ── */}
         {activeTab === "test" && (
           <div style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "18px", padding: "22px", boxShadow: "0 4px 20px rgba(43,88,136,0.06)" }}>
@@ -1218,19 +1301,12 @@ export default function Home() {
               <div>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "18px" }}>
                   <div>
-                    <div style={{ fontSize: "12px", color: B.gray500, marginBottom: "4px", fontWeight: 500, textTransform: "uppercase", letterSpacing: "0.5px" }}>
-                      {currentTest.type === "topic" ? "Topic Test" : "Chapter Test"}
-                    </div>
-                    <h2 style={{ fontSize: "20px", fontWeight: 700, color: B.navy, marginBottom: "4px" }}>
-                      {currentTest.type === "topic" ? currentTest.topicTitle : currentTest.chapterTitle}
-                    </h2>
+                    <div style={{ fontSize: "12px", color: B.gray500, marginBottom: "4px", fontWeight: 500, textTransform: "uppercase", letterSpacing: "0.5px" }}>{currentTest.type === "topic" ? "Topic Test" : "Chapter Test"}</div>
+                    <h2 style={{ fontSize: "20px", fontWeight: 700, color: B.navy, marginBottom: "4px" }}>{currentTest.type === "topic" ? currentTest.topicTitle : currentTest.chapterTitle}</h2>
                     <p style={{ fontSize: "13px", color: B.gray500 }}>{currentTest.subject} · {currentTest.questions.length} MCQs</p>
                   </div>
-                  <button onClick={resetTestView} style={{ padding: "7px 14px", borderRadius: "8px", border: `1px solid ${B.gray300}`, background: B.white, color: B.gray700, cursor: "pointer", fontSize: "12px", fontWeight: 500 }}>
-                    ← Back
-                  </button>
+                  <button onClick={resetTestView} style={{ padding: "7px 14px", borderRadius: "8px", border: `1px solid ${B.gray300}`, background: B.white, color: B.gray700, cursor: "pointer", fontSize: "12px", fontWeight: 500 }}>← Back</button>
                 </div>
- 
                 {submittedTestResult && (
                   <div style={{ padding: "16px", borderRadius: "14px", background: B.greenLight, border: `1px solid ${B.greenBorder}`, marginBottom: "18px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                     <div>
@@ -1240,25 +1316,19 @@ export default function Home() {
                     <div style={{ fontSize: "32px", fontWeight: 800, color: B.green }}>{submittedTestResult.score}/{submittedTestResult.total}</div>
                   </div>
                 )}
- 
                 <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
                   {currentTest.questions.map((question, qi) => {
-                    const selected = selectedAnswers[qi];
+                    const selected    = selectedAnswers[qi];
                     const isSubmitted = Boolean(submittedTestResult);
                     return (
                       <div key={qi} style={{ padding: "16px", borderRadius: "14px", background: B.gray50, border: `1px solid ${B.gray200}` }}>
                         <div style={{ fontSize: "14px", fontWeight: 700, color: B.navy, marginBottom: "12px" }}>Q{qi + 1}. {question.question}</div>
                         <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
                           {(question.options || []).map((option, oi) => {
-                            const isCorrect = oi === question.answerIndex;
+                            const isCorrect  = oi === question.answerIndex;
                             const isSelected = Number(selected) === oi;
                             return (
-                              <label key={oi} style={{
-                                display: "flex", alignItems: "center", gap: "10px", padding: "10px 12px", borderRadius: "10px", cursor: isSubmitted ? "default" : "pointer", fontSize: "13px", color: B.gray900,
-                                border: isSubmitted && isCorrect ? `1.5px solid ${B.greenBorder}` : isSubmitted && isSelected && !isCorrect ? `1.5px solid ${B.red}` : `1px solid ${B.gray200}`,
-                                background: isSubmitted && isCorrect ? B.greenLight : isSubmitted && isSelected && !isCorrect ? B.redLight : B.white,
-                                fontWeight: isSubmitted && isCorrect ? 600 : "normal",
-                              }}>
+                              <label key={oi} style={{ display: "flex", alignItems: "center", gap: "10px", padding: "10px 12px", borderRadius: "10px", cursor: isSubmitted ? "default" : "pointer", fontSize: "13px", color: B.gray900, border: isSubmitted && isCorrect ? `1.5px solid ${B.greenBorder}` : isSubmitted && isSelected && !isCorrect ? `1.5px solid ${B.red}` : `1px solid ${B.gray200}`, background: isSubmitted && isCorrect ? B.greenLight : isSubmitted && isSelected && !isCorrect ? B.redLight : B.white, fontWeight: isSubmitted && isCorrect ? 600 : "normal" }}>
                                 <input type="radio" name={`q-${qi}`} checked={Number(selected) === oi} disabled={isSubmitted} onChange={() => setSelectedAnswers((prev) => ({ ...prev, [qi]: oi }))} />
                                 <span>{String.fromCharCode(65 + oi)}. {option}</span>
                               </label>
@@ -1274,19 +1344,9 @@ export default function Home() {
                     );
                   })}
                 </div>
- 
                 {!submittedTestResult && (
-                  <button
-                    onClick={submitCurrentTest}
-                    disabled={Object.keys(selectedAnswers).length !== currentTest.questions.length}
-                    style={{
-                      width: "100%", marginTop: "20px", padding: "13px 16px", borderRadius: "12px", border: "none",
-                      background: Object.keys(selectedAnswers).length === currentTest.questions.length ? `linear-gradient(135deg, ${B.navy}, ${B.navyDark})` : B.gray200,
-                      color: B.white, fontSize: "15px", fontWeight: 700, cursor: Object.keys(selectedAnswers).length === currentTest.questions.length ? "pointer" : "not-allowed",
-                      opacity: Object.keys(selectedAnswers).length === currentTest.questions.length ? 1 : 0.5,
-                      fontFamily: "'Plus Jakarta Sans', sans-serif",
-                    }}
-                  >
+                  <button onClick={submitCurrentTest} disabled={Object.keys(selectedAnswers).length !== currentTest.questions.length}
+                    style={{ width: "100%", marginTop: "20px", padding: "13px 16px", borderRadius: "12px", border: "none", background: Object.keys(selectedAnswers).length === currentTest.questions.length ? `linear-gradient(135deg, ${B.navy}, ${B.navyDark})` : B.gray200, color: B.white, fontSize: "15px", fontWeight: 700, cursor: Object.keys(selectedAnswers).length === currentTest.questions.length ? "pointer" : "not-allowed", opacity: Object.keys(selectedAnswers).length === currentTest.questions.length ? 1 : 0.5, fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
                     Submit Test
                   </button>
                 )}
@@ -1299,35 +1359,28 @@ export default function Home() {
             )}
           </div>
         )}
- 
+
         {/* ── SYLLABUS TAB ── */}
         {activeTab === "syllabus" && (
           <div style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "18px", padding: "24px", boxShadow: "0 4px 20px rgba(43,88,136,0.06)" }}>
- 
-            {/* Header + overall progress */}
             <div style={{ textAlign: "center", marginBottom: "20px" }}>
               <div style={{ fontSize: "36px", marginBottom: "6px" }}>📚</div>
               <h2 style={{ fontSize: "20px", fontWeight: 700, color: B.navy, marginBottom: "4px" }}>Syllabus Tracker</h2>
               <p style={{ fontSize: "13px", color: B.gray500 }}>Class {classLevel} · {board}</p>
- 
               <div style={{ marginTop: "14px", padding: "14px 16px", borderRadius: "14px", background: B.navyLight, border: `1px solid rgba(43,88,136,0.15)`, textAlign: "left" }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "8px" }}>
                   <span style={{ fontSize: "13px", fontWeight: 700, color: B.navy }}>Overall Progress</span>
                   <span style={{ fontSize: "13px", fontWeight: 700, color: B.navy }}>{overallProgress.percent}%</span>
                 </div>
                 <ProgressBar percent={overallProgress.percent} />
-                <div style={{ fontSize: "12px", color: B.gray500, marginTop: "6px" }}>
-                  {overallProgress.completed}/{overallProgress.total} topics completed {progressLoading ? "· Syncing..." : ""}
-                </div>
+                <div style={{ fontSize: "12px", color: B.gray500, marginTop: "6px" }}>{overallProgress.completed}/{overallProgress.total} topics completed {progressLoading ? "· Syncing..." : ""}</div>
               </div>
             </div>
- 
-            {/* Subject grid */}
             {!selectedSubject && (
               <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "12px" }}>
                 {Object.keys(currentSyllabus).map((subject) => {
                   const icons = { EVS: "🌱", Maths: "➗", English: "📘", Hindi: "📕" };
-                  const sp = getSubjectProgress(subject);
+                  const sp    = getSubjectProgress(subject);
                   return (
                     <button key={subject} onClick={() => { setSelectedSubject(subject); setSelectedChapter(null); }} style={{ padding: "20px 14px", borderRadius: "16px", border: `1.5px solid ${B.gray200}`, background: B.white, cursor: "pointer", textAlign: "center", transition: "all 0.2s", boxShadow: "0 2px 8px rgba(43,88,136,0.04)" }}>
                       <div style={{ fontSize: "32px", marginBottom: "8px" }}>{icons[subject] || "📖"}</div>
@@ -1341,13 +1394,9 @@ export default function Home() {
                 })}
               </div>
             )}
- 
-            {/* Chapter list */}
             {selectedSubject && !selectedChapter && (
               <div>
-                <button onClick={() => { setSelectedSubject(null); setSelectedChapter(null); }} style={{ marginBottom: "14px", border: "none", background: "transparent", color: B.navy, fontSize: "13px", cursor: "pointer", fontWeight: 600 }}>
-                  ← Back to Subjects
-                </button>
+                <button onClick={() => { setSelectedSubject(null); setSelectedChapter(null); }} style={{ marginBottom: "14px", border: "none", background: "transparent", color: B.navy, fontSize: "13px", cursor: "pointer", fontWeight: 600 }}>← Back to Subjects</button>
                 <h3 style={{ fontSize: "17px", fontWeight: 700, color: B.navy, marginBottom: "12px" }}>{selectedSubject} Chapters</h3>
                 <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
                   {currentChapters.map((chapter, index) => {
@@ -1367,19 +1416,14 @@ export default function Home() {
                 </div>
               </div>
             )}
- 
-            {/* Topic list */}
             {selectedSubject && selectedChapter && (
               <div>
-                <button onClick={() => setSelectedChapter(null)} style={{ marginBottom: "14px", border: "none", background: "transparent", color: B.navy, fontSize: "13px", cursor: "pointer", fontWeight: 600 }}>
-                  ← Back to Chapters
-                </button>
- 
+                <button onClick={() => setSelectedChapter(null)} style={{ marginBottom: "14px", border: "none", background: "transparent", color: B.navy, fontSize: "13px", cursor: "pointer", fontWeight: 600 }}>← Back to Chapters</button>
                 <div style={{ padding: "16px", borderRadius: "14px", background: B.navyLight, border: `1px solid rgba(43,88,136,0.15)`, marginBottom: "14px" }}>
                   <div style={{ fontSize: "12px", color: B.gray500, marginBottom: "3px", fontWeight: 500 }}>{selectedSubject}</div>
                   <h3 style={{ fontSize: "18px", fontWeight: 700, color: B.navy, marginBottom: "10px" }}>{currentChapter.title}</h3>
                   {(() => {
-                    const cp = getChapterProgress(selectedSubject, currentChapter);
+                    const cp               = getChapterProgress(selectedSubject, currentChapter);
                     const savedChapterTest = getSavedTestResult("chapter", selectedSubject, currentChapter.title);
                     return (
                       <>
@@ -1390,39 +1434,30 @@ export default function Home() {
                         <ProgressBar percent={cp.percent} />
                         <div style={{ fontSize: "12px", color: B.gray500, marginTop: "6px" }}>{cp.completed}/{cp.total} topics completed</div>
                         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginTop: "12px" }}>
-                          <button onClick={handleChapterTest} style={{ padding: "8px 14px", border: "none", borderRadius: "10px", background: B.navy, color: B.white, fontSize: "12px", cursor: "pointer", fontWeight: 700 }}>
-                            Chapter Test — 20 MCQs
-                          </button>
+                          <button onClick={handleChapterTest} style={{ padding: "8px 14px", border: "none", borderRadius: "10px", background: B.navy, color: B.white, fontSize: "12px", cursor: "pointer", fontWeight: 700 }}>Chapter Test — 20 MCQs</button>
                           {savedChapterTest && <span style={{ fontSize: "12px", color: B.green, fontWeight: 700 }}>Last: {savedChapterTest.score}/{savedChapterTest.total}</span>}
                         </div>
                       </>
                     );
                   })()}
                 </div>
- 
                 <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
                   {currentChapter.subtopics.map((subtopic, index) => {
-                    const currentStatus = getTopicStatus(selectedSubject, currentChapter.title, subtopic);
+                    const currentStatus  = getTopicStatus(selectedSubject, currentChapter.title, subtopic);
                     const topicCompleted = isCompletedStatus(currentStatus);
                     const savedTopicTest = getSavedTestResult("topic", selectedSubject, currentChapter.title, subtopic);
-                    const revised = getRevisionStatus(selectedSubject, currentChapter.title, subtopic);
+                    const revised        = getRevisionStatus(selectedSubject, currentChapter.title, subtopic);
                     return (
                       <div key={subtopic} style={{ display: "flex", alignItems: "center", gap: "8px", padding: "10px 12px", borderRadius: "12px", background: B.white, border: topicCompleted ? `1.5px solid ${B.greenBorder}` : `1px solid ${B.gray200}`, flexWrap: "wrap" }}>
-                        <span style={{ width: "24px", height: "24px", borderRadius: "50%", background: topicCompleted ? B.greenLight : B.navyLight, color: topicCompleted ? B.green : B.navy, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "11px", fontWeight: 700, flexShrink: 0 }}>
-                          {topicCompleted ? "✓" : index + 1}
-                        </span>
+                        <span style={{ width: "24px", height: "24px", borderRadius: "50%", background: topicCompleted ? B.greenLight : B.navyLight, color: topicCompleted ? B.green : B.navy, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "11px", fontWeight: 700, flexShrink: 0 }}>{topicCompleted ? "✓" : index + 1}</span>
                         <span style={{ flex: 1, fontSize: "13px", color: B.gray900, fontWeight: 500, minWidth: "120px" }}>{subtopic}</span>
                         <select value={currentStatus} onChange={(e) => updateTopicStatus(selectedSubject, currentChapter.title, subtopic, e.target.value)} style={{ padding: "5px 8px", borderRadius: "8px", border: `1px solid ${B.gray300}`, background: B.white, color: B.gray700, fontSize: "11px", cursor: "pointer", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
                           {STATUS_OPTIONS.map((s) => <option key={s} value={s}>{s}</option>)}
                         </select>
                         {savedTopicTest && <span style={{ fontSize: "11px", color: B.green, fontWeight: 700 }}>Test: {savedTopicTest.score}/{savedTopicTest.total}</span>}
                         <button disabled={isLoading || testLoading} onClick={() => handleTopicTest(subtopic)} style={{ padding: "5px 10px", border: `1px solid ${B.greenBorder}`, borderRadius: "8px", background: B.greenLight, color: B.green, fontSize: "11px", cursor: isLoading || testLoading ? "not-allowed" : "pointer", flexShrink: 0, fontWeight: 700, opacity: isLoading || testLoading ? 0.5 : 1 }}>Test</button>
-                        <button disabled={isLoading || testLoading} onClick={() => handleReviseTopic(subtopic)} style={{ padding: "5px 10px", border: `1px solid ${revised ? B.navy : B.gray300}`, borderRadius: "8px", background: revised ? B.navyLight : B.white, color: B.navy, fontSize: "11px", cursor: isLoading || testLoading ? "not-allowed" : "pointer", flexShrink: 0, fontWeight: 600, opacity: isLoading || testLoading ? 0.5 : 1 }}>
-                          {revised ? "Revised ✓" : "Revise"}
-                        </button>
-                        <button disabled={isLoading || testLoading} onClick={() => handleStudyTopic(subtopic)} style={{ padding: "5px 10px", border: "none", borderRadius: "8px", background: B.navy, color: B.white, fontSize: "11px", cursor: isLoading || testLoading ? "not-allowed" : "pointer", flexShrink: 0, fontWeight: 600, opacity: isLoading || testLoading ? 0.5 : 1 }}>
-                          Study
-                        </button>
+                        <button disabled={isLoading || testLoading} onClick={() => handleReviseTopic(subtopic)} style={{ padding: "5px 10px", border: `1px solid ${revised ? B.navy : B.gray300}`, borderRadius: "8px", background: revised ? B.navyLight : B.white, color: B.navy, fontSize: "11px", cursor: isLoading || testLoading ? "not-allowed" : "pointer", flexShrink: 0, fontWeight: 600, opacity: isLoading || testLoading ? 0.5 : 1 }}>{revised ? "Revised ✓" : "Revise"}</button>
+                        <button disabled={isLoading || testLoading} onClick={() => handleStudyTopic(subtopic)} style={{ padding: "5px 10px", border: "none", borderRadius: "8px", background: B.navy, color: B.white, fontSize: "11px", cursor: isLoading || testLoading ? "not-allowed" : "pointer", flexShrink: 0, fontWeight: 600, opacity: isLoading || testLoading ? 0.5 : 1 }}>Study</button>
                       </div>
                     );
                   })}
@@ -1432,7 +1467,7 @@ export default function Home() {
           </div>
         )}
       </div>
- 
+
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
         * { box-sizing: border-box; }
