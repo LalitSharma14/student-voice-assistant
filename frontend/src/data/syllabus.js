@@ -136,4 +136,11 @@ export const SYLLABUS_DATA = {
       ],
     },
   },
+  "7": {
+    CBSE: {
+      "Social Science": [
+        { title: "Geographical Diversity of India", subtopics: ["Understanding Geographical Diversity", "The Himalayan Mountains", "The Northern Plains", "The Peninsular Plateau", "The Indian Desert (Thar)", "The Coastal Plains", "The Islands"] },
+      ],
+    },
+  },
 };
