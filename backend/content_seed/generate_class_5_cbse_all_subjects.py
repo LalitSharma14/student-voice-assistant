@@ -9,10 +9,11 @@ OUTPUT_PATH = BASE_DIR / "class_5_cbse_all_subjects.json"
 DEFAULT_SOURCE_DIR = BASE_DIR / "class5_ncert_json_notes"
 
 SOURCE_FILES = {
-    "EVS": "class5_evs_detailed_notes_teacher_style_v4.json",
-    "Hindi": "class5_hindi_detailed_notes_teacher_style_v3.json",
-    "Maths": "class5_maths_detailed_notes_teacher_style_v3.json",
-    "English": "class5_english_detailed_notes_teacher_style_v3.json",
+    "EVS": "class5_evs.json",
+    "Hindi": "class5_hindi.json",
+    "Maths": "class5_mathematics.json",
+    "English": "class5_english.json",
+    "Art Education": "class5_art.json",
 }
 
 
@@ -107,7 +108,7 @@ def load_subject_file(source_dir: Path, subject: str) -> dict:
     raise ValueError(f"{path} must contain a chapters array or a JSON object with a chapters array.")
 
 
-def make_doc(subject: str, chapter: dict, topic: dict) -> dict:
+def make_doc(subject: str, source: dict, chapter: dict, topic: dict) -> dict:
     chapter_title = str(chapter.get("chapter") or "").strip()
     topic_title = str(topic.get("topic") or "").strip()
     if not chapter_title or not topic_title:
@@ -117,17 +118,22 @@ def make_doc(subject: str, chapter: dict, topic: dict) -> dict:
     step_by_step = step_by_step_items(topic, examples)
     revision_notes = as_list(topic.get("revisionNotes"))
     quick_summary = str(topic.get("quickSummary") or "").strip()
-    source_label = str(chapter.get("source") or "Based on NCERT + AI-generated explanation").strip()
+    book_name = str(source.get("bookName") or chapter.get("bookName") or "").strip()
+    source_label = (
+        f"Based on NCERT {book_name} + AI-generated teacher-style explanation"
+        if book_name
+        else "Based on NCERT + AI-generated teacher-style explanation"
+    )
 
     return {
         "id": content_id(subject, chapter_title, topic_title),
         "classLevel": "5",
-        "board": str(chapter.get("board") or "CBSE").strip(),
+        "board": str(source.get("board") or chapter.get("board") or "CBSE").strip(),
         "subject": subject,
         "chapterNumber": chapter.get("chapterNumber"),
         "chapterTitle": chapter_title,
         "topicTitle": topic_title,
-        "language": chapter.get("language") or "en",
+        "language": source.get("language") or chapter.get("language") or ("hi" if subject == "Hindi" else "en"),
         "status": "published",
         "sourceLabel": source_label,
         "studyContent": {
@@ -163,11 +169,11 @@ def make_doc(subject: str, chapter: dict, topic: dict) -> dict:
 def build_seed(source_dir: Path) -> list[dict]:
     docs = []
     seen = set()
-    for subject in ["EVS", "Maths", "English", "Hindi"]:
+    for subject in ["EVS", "Maths", "English", "Hindi", "Art Education"]:
         data = load_subject_file(source_dir, subject)
         for chapter in data.get("chapters", []):
             for topic in chapter.get("topics", []):
-                doc = make_doc(subject, chapter, topic)
+                doc = make_doc(subject, data, chapter, topic)
                 if doc["id"] in seen:
                     raise ValueError(f"Duplicate content id: {doc['id']}")
                 seen.add(doc["id"])
@@ -180,7 +186,7 @@ def main():
     parser.add_argument(
         "--source-dir",
         default=str(DEFAULT_SOURCE_DIR),
-        help="Directory containing class5_evs_notes.json, class5_maths_notes.json, class5_english_notes.json, class5_hindi_notes.json.",
+        help="Directory containing the Class 5 EVS, Maths, English, Hindi, and Art Education JSON files.",
     )
     parser.add_argument(
         "--output",

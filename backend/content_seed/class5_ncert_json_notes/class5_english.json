@@ -1,0 +1,624 @@
+{
+  "class": 5,
+  "board": "CBSE",
+  "source": "NCERT",
+  "subject": "English",
+  "bookName": "Santoor",
+  "chapters": [
+    {
+      "chapterNumber": 1,
+      "chapter": "Unit 1: Let's Have Fun",
+      "topics": [
+        {
+          "topicId": "eng5_unit1_topic1",
+          "topic": "Papa's Spectacles (Poem)",
+          "meaning": "A funny poem about Papa who searches everywhere for his lost spectacles, which are actually on his own head.",
+          "ncertBasedExplanation": "This is a humorous poem about a father who has lost his only pair of spectacles. Without them, he cannot read the newspaper, watch TV or cut vegetables, so he searches everywhere, in his pockets, under his chair and near the window. The child speaking in the poem watches him hunt all over the house. Finally, the child gently tells Papa to stop, and points out that the spectacles are sitting right there on his head all along. The poem is light and funny and reminds us, with a smile, that sometimes the thing we are looking for is right in front of us.",
+          "easyExplanation": "Papa loses his spectacles and looks everywhere for them. In the end, the child points out they were on his head all along. A funny little poem.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Papa loses his spectacles",
+              "explanation": "Papa cannot find his only pair of spectacles and cannot read or watch TV without them."
+            },
+            {
+              "step": 2,
+              "title": "He searches everywhere",
+              "explanation": "He looks in his pockets, under his chair and near the window."
+            },
+            {
+              "step": 3,
+              "title": "The child watches",
+              "explanation": "The child in the poem watches Papa hunt all over the house."
+            },
+            {
+              "step": 4,
+              "title": "Found on his head",
+              "explanation": "The child tells Papa his spectacles were on his head all along."
+            }
+          ],
+          "examples": [
+            "Papa cannot read the newspaper without his spectacles.",
+            "The spectacles were on Papa's head the whole time."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Spectacles",
+              "definition": "Glasses worn to help one see better.",
+              "simpleExample": "Papa wears spectacles to read."
+            },
+            {
+              "keyword": "Searching",
+              "definition": "Looking carefully to find something.",
+              "simpleExample": "Papa is searching for his glasses."
+            },
+            {
+              "keyword": "Glanced",
+              "definition": "Looked quickly.",
+              "simpleExample": "He glanced under his chair."
+            }
+          ],
+          "quickSummary": "'Papa's Spectacles' is a funny poem about a father who searches the whole house for his lost spectacles, only for the child to find them on his head, reminding us that what we seek is often right in front of us.",
+          "revisionNotes": [
+            "Genre: humorous poem.",
+            "Papa loses his only pair of spectacles.",
+            "He searches everywhere in the house.",
+            "They were on his head all along."
+          ]
+        },
+        {
+          "topicId": "eng5_unit1_topic2",
+          "topic": "Gone with the Scooter (Prose)",
+          "meaning": "A story about a boy named Gopi who finds a lost hockey ball in his garden and wonders whom it belongs to.",
+          "ncertBasedExplanation": "This is a story about a boy named Gopi. One day, while studying at home, Gopi hears a sound and wonders if a mango has fallen from the tree. He puts his book aside and runs into the garden to look. He searches in the thick grass and among the bushes and finally finds a white hockey ball lying on a heap of dry leaves. Gopi wonders whose ball it could be and looks around and outside the gate, but sees no one. The story follows Gopi's curiosity about the lost ball and gently touches on everyday honesty and wanting to return what belongs to someone else.",
+          "easyExplanation": "Gopi hears a sound, runs to the garden, and finds a lost hockey ball. He wonders whose it is, showing curiosity and the wish to return lost things.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "A sudden sound",
+              "explanation": "While studying, Gopi hears a sound and wonders if a mango has fallen."
+            },
+            {
+              "step": 2,
+              "title": "Searching the garden",
+              "explanation": "He runs out and searches the grass and bushes in the garden."
+            },
+            {
+              "step": 3,
+              "title": "Finding the ball",
+              "explanation": "He finds a white hockey ball on a heap of dry leaves."
+            },
+            {
+              "step": 4,
+              "title": "Whose ball?",
+              "explanation": "Gopi wonders whose ball it is and looks around for the owner."
+            }
+          ],
+          "examples": [
+            "Gopi finds a hockey ball among the dry leaves in his garden.",
+            "He looks outside the gate to find out whose ball it could be."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Wondered",
+              "definition": "Thought about something with curiosity.",
+              "simpleExample": "Gopi wondered whose ball it was."
+            },
+            {
+              "keyword": "Heap",
+              "definition": "A pile of things.",
+              "simpleExample": "The ball lay on a heap of dry leaves."
+            },
+            {
+              "keyword": "Peeped",
+              "definition": "Looked quickly or secretly.",
+              "simpleExample": "Gopi peeped outside the gate."
+            }
+          ],
+          "quickSummary": "'Gone with the Scooter' is a story about Gopi, who finds a lost hockey ball in his garden and wonders whose it is, showing his curiosity and wish to return what belongs to others.",
+          "revisionNotes": [
+            "Genre: short story (prose).",
+            "Main character: Gopi.",
+            "Plot: Gopi finds a lost hockey ball in the garden.",
+            "Theme: curiosity and returning lost things."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 2,
+      "chapter": "Unit 2: My Colourful World",
+      "topics": [
+        {
+          "topicId": "eng5_unit2_topic1",
+          "topic": "The Rainbow (Poem)",
+          "meaning": "A poem by Christina Rossetti that compares man-made bridges with the rainbow and finds the rainbow far more beautiful.",
+          "ncertBasedExplanation": "This is a poem by Christina Rossetti about the beauty of the rainbow. The poet first speaks of boats sailing on rivers and the sea, and of pretty bridges that people have built across rivers. But then she describes the rainbow as a 'bow that bridges heaven', a curve that rises over the trees and builds a road from the earth to the sky. The poet says this rainbow is far prettier than any man-made bridge. The poem celebrates the wonderful beauty of nature, showing that the things nature creates, like the rainbow, are even more beautiful than the things people make.",
+          "easyExplanation": "The poem compares man-made bridges with the rainbow, which 'bridges heaven', and says the rainbow is far prettier. It celebrates the beauty of nature.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Boats and bridges",
+              "explanation": "The poet speaks of boats on the water and pretty bridges built by people."
+            },
+            {
+              "step": 2,
+              "title": "The rainbow as a bridge",
+              "explanation": "She describes the rainbow as a 'bow that bridges heaven' from earth to sky."
+            },
+            {
+              "step": 3,
+              "title": "Nature is prettier",
+              "explanation": "The poet says the rainbow is far prettier than any man-made bridge."
+            },
+            {
+              "step": 4,
+              "title": "Celebrating nature",
+              "explanation": "The poem celebrates the beauty of nature over things people make."
+            }
+          ],
+          "examples": [
+            "The poet calls the rainbow a 'bow that bridges heaven'.",
+            "The rainbow is described as prettier than man-made bridges."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Rainbow",
+              "definition": "An arch of colours in the sky after rain.",
+              "simpleExample": "A rainbow appears after the rain."
+            },
+            {
+              "keyword": "Bow",
+              "definition": "A curve or arch, here meaning the rainbow.",
+              "simpleExample": "The rainbow is a colourful bow."
+            },
+            {
+              "keyword": "Overtops",
+              "definition": "Rises above.",
+              "simpleExample": "The rainbow overtops the trees."
+            }
+          ],
+          "quickSummary": "'The Rainbow' by Christina Rossetti compares man-made bridges with the rainbow that 'bridges heaven' and finds the rainbow far more beautiful, celebrating the beauty of nature.",
+          "revisionNotes": [
+            "Genre: poem. Poet: Christina Rossetti.",
+            "Compares man-made bridges with the rainbow.",
+            "Rainbow = a 'bow that bridges heaven'.",
+            "Theme: nature's beauty is greater than man-made things."
+          ]
+        },
+        {
+          "topicId": "eng5_unit2_topic2",
+          "topic": "The Wise Parrot (Prose)",
+          "meaning": "A folk tale about a caged parrot who cleverly wins its freedom with the help of a message to its friends in the jungle.",
+          "ncertBasedExplanation": "This is a folk tale about a parrot kept in a cage by a rich merchant who looks after it very well, but the parrot still longs for the freedom of the open skies and green trees. When the merchant goes on a journey, he asks the parrot what gift it wants; the parrot only asks to be set free, but the merchant refuses. Instead, the parrot asks him to give a message to its parrot friends in the jungle. When the merchant tells the wild parrots the message, one of them suddenly falls down as if dead. Back home, when the merchant tells this to the caged parrot, it too falls down 'dead' and, when the cage is opened, flies away to freedom. The clever parrot's friends had taught it a trick to escape. The story shows the value of freedom and cleverness.",
+          "easyExplanation": "A caged parrot longs to be free. Through a clever message from its jungle friends, it pretends to be dead, gets the cage opened, and flies to freedom.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "The caged parrot",
+              "explanation": "A merchant keeps a parrot in a cage and cares for it, but the parrot longs for freedom."
+            },
+            {
+              "step": 2,
+              "title": "A message to friends",
+              "explanation": "When the merchant travels, the parrot asks him to give a message to its jungle friends."
+            },
+            {
+              "step": 3,
+              "title": "The clever trick",
+              "explanation": "A wild parrot falls down as if dead; this is a secret message teaching the caged parrot a trick."
+            },
+            {
+              "step": 4,
+              "title": "Winning freedom",
+              "explanation": "The caged parrot pretends to be dead, the cage is opened, and it flies away free."
+            }
+          ],
+          "examples": [
+            "The parrot only wishes to taste 'the joy of flying in the sky'.",
+            "By pretending to be dead, the parrot gets the cage opened and escapes."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Cage",
+              "definition": "A box of bars for keeping a bird or animal.",
+              "simpleExample": "The parrot lived in a cage."
+            },
+            {
+              "keyword": "Longed",
+              "definition": "Wished for very much.",
+              "simpleExample": "The parrot longed for freedom."
+            },
+            {
+              "keyword": "Freedom",
+              "definition": "Being free to do as one wishes.",
+              "simpleExample": "The parrot wanted freedom to fly."
+            }
+          ],
+          "quickSummary": "'The Wise Parrot' is a folk tale in which a caged parrot wins its freedom through a clever trick learned from its jungle friends, showing the value of freedom and cleverness.",
+          "revisionNotes": [
+            "Genre: folk tale (prose).",
+            "A caged parrot longs for freedom.",
+            "A clever trick (playing dead) helps it escape.",
+            "Theme: the value of freedom and cleverness."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 3,
+      "chapter": "Unit 3: Water",
+      "topics": [
+        {
+          "topicId": "eng5_unit3_topic1",
+          "topic": "The Frog (Poem)",
+          "meaning": "A playful poem in which a frog describes its own life, its food, home, colours, dangers and joyful hopping.",
+          "ncertBasedExplanation": "This is a cheerful poem spoken by a frog describing its own life. The frog tells us how it flicks out its tongue quickly to catch its food, and how it lives both on land and in water, in damp places with dew. It explains that its green colours match the plants and trees so it can hide well in the grass and leaves, but it must beware of snakes that might catch it. The frog croaks its loud songs proudly in its pond, hops and jumps high, and swims with ease using its webbed feet. The poem is full of joy and teaches us about a frog's life and how it is suited to its surroundings.",
+          "easyExplanation": "A frog describes its own life: catching food with its tongue, living on land and water, hiding with its colours, escaping snakes, croaking, hopping and swimming.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Catching food",
+              "explanation": "The frog flicks its tongue quickly to catch its food."
+            },
+            {
+              "step": 2,
+              "title": "Where it lives",
+              "explanation": "It lives on both land and water, in damp places with dew."
+            },
+            {
+              "step": 3,
+              "title": "Hiding and danger",
+              "explanation": "Its green colours help it hide in grass and leaves, but it must beware of snakes."
+            },
+            {
+              "step": 4,
+              "title": "Croaking and hopping",
+              "explanation": "It croaks loudly, hops high and swims easily with its webbed feet."
+            }
+          ],
+          "examples": [
+            "The frog flicks its tongue to catch insects.",
+            "Its green colours help it hide among the grass and leaves."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Croak",
+              "definition": "The sound a frog makes.",
+              "simpleExample": "The frog croaks loudly in the pond."
+            },
+            {
+              "keyword": "Webbed feet",
+              "definition": "Feet with skin between the toes for swimming.",
+              "simpleExample": "The frog swims with its webbed feet."
+            },
+            {
+              "keyword": "Damp",
+              "definition": "Slightly wet.",
+              "simpleExample": "Frogs like damp places."
+            },
+            {
+              "keyword": "Flick",
+              "definition": "To move quickly and suddenly.",
+              "simpleExample": "The frog flicks its tongue."
+            }
+          ],
+          "quickSummary": "'The Frog' is a playful poem in which a frog describes its life, catching food with its tongue, living on land and water, hiding with its colours, escaping snakes, and joyfully croaking, hopping and swimming.",
+          "revisionNotes": [
+            "Genre: poem.",
+            "Spoken by a frog about its own life.",
+            "Covers food, home, colours, dangers, swimming.",
+            "Theme: a frog's life and how it suits its home."
+          ]
+        },
+        {
+          "topicId": "eng5_unit3_topic2",
+          "topic": "What a Tank! (Prose)",
+          "meaning": "An informative lesson about traditional ways of storing water in India and the importance of saving water.",
+          "ncertBasedExplanation": "This is an informative lesson about how people in India have stored water for a long time, especially in places where water is scarce. It explains that traditional tanks and water systems controlled floods, provided drinking water and brought communities together. It gives examples of traditional water management still used today: Ooranis in Tamil Nadu store rainwater for drinking and farming, Panam Keni wells in Kerala do not dry up even in the hottest months, and Tankas in Rajasthan's Thar region are underground tanks that store enough water for six to seven months. The lesson also mentions modern overhead water tanks on rooftops. It teaches us to value traditional knowledge and to save water.",
+          "easyExplanation": "This lesson describes traditional Indian ways of storing water, like Ooranis, Panam Keni wells and Tankas, and modern rooftop tanks, teaching us to value and save water.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Storing water",
+              "explanation": "People in India have long stored water, especially where it is scarce."
+            },
+            {
+              "step": 2,
+              "title": "Traditional systems",
+              "explanation": "Ooranis (Tamil Nadu) store rainwater and Panam Keni wells (Kerala) never dry up."
+            },
+            {
+              "step": 3,
+              "title": "Tankas of Rajasthan",
+              "explanation": "Tankas in the Thar region are underground tanks storing water for six to seven months."
+            },
+            {
+              "step": 4,
+              "title": "Modern tanks",
+              "explanation": "Today, overhead water tanks on rooftops store hundreds of litres of water."
+            }
+          ],
+          "examples": [
+            "Tankas in Rajasthan are underground tanks that store water for months.",
+            "Ooranis in Tamil Nadu store rainwater for drinking and farming."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Tank",
+              "definition": "A container or structure for storing water.",
+              "simpleExample": "A tanka stores rainwater."
+            },
+            {
+              "keyword": "Traditional",
+              "definition": "Following old, long-used ways.",
+              "simpleExample": "Tankas are a traditional water store."
+            },
+            {
+              "keyword": "Rainwater",
+              "definition": "Water that falls as rain and is collected.",
+              "simpleExample": "Tankas store rainwater."
+            }
+          ],
+          "quickSummary": "'What a Tank!' is an informative lesson on traditional Indian water-storage systems like Ooranis, Panam Keni wells and Tankas, plus modern rooftop tanks, teaching us to value and save water.",
+          "revisionNotes": [
+            "Genre: informative prose.",
+            "Traditional water stores: Ooranis, Panam Keni wells, Tankas.",
+            "Tankas (Rajasthan) store water for 6-7 months.",
+            "Theme: valuing traditional knowledge and saving water."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 4,
+      "chapter": "Unit 4: Ups and Downs",
+      "topics": [
+        {
+          "topicId": "eng5_unit4_topic1",
+          "topic": "Gilli Danda (Poem)",
+          "meaning": "A joyful poem about children playing the traditional Indian game of Gilli Danda outdoors with their friends.",
+          "ncertBasedExplanation": "This is a cheerful poem about the traditional Indian game of Gilli Danda, which is played with a small piece of wood called a gilli and a stick called a danda. The poem describes the joy and freedom children feel as they play together outdoors, swinging the stick and hitting the gilli so it flies high up into the bright blue sky. The children laugh, play and never quit, having great fun under the golden rays of the sun. The poem celebrates the simple pleasure of playing a traditional game outside with friends and the happiness and freedom it brings.",
+          "easyExplanation": "A happy poem about children playing Gilli Danda outdoors. They swing the stick, send the gilli flying high, and feel joy and freedom with their friends.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "The game",
+              "explanation": "The poem is about Gilli Danda, played with a small gilli and a stick (danda)."
+            },
+            {
+              "step": 2,
+              "title": "Joy and freedom",
+              "explanation": "Children feel joy and freedom as they swing and hit the gilli."
+            },
+            {
+              "step": 3,
+              "title": "The gilli flies",
+              "explanation": "When struck, the small gilli flies high into the bright blue sky."
+            },
+            {
+              "step": 4,
+              "title": "Fun with friends",
+              "explanation": "The children laugh, play and never quit, having fun in the sunshine."
+            }
+          ],
+          "examples": [
+            "The children hit the gilli with the danda and it flies high into the sky.",
+            "Playing under the golden sun fills the children with joy."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Gilli Danda",
+              "definition": "A traditional game played with a small wooden gilli and a stick.",
+              "simpleExample": "We played Gilli Danda in the field."
+            },
+            {
+              "keyword": "Quit",
+              "definition": "To stop or give up.",
+              "simpleExample": "The children never quit playing."
+            },
+            {
+              "keyword": "Underneath",
+              "definition": "Below or under something.",
+              "simpleExample": "The gilli flies underneath the blue sky."
+            }
+          ],
+          "quickSummary": "'Gilli Danda' is a joyful poem about children playing the traditional Indian game outdoors, sending the gilli flying high and feeling great fun and freedom with their friends.",
+          "revisionNotes": [
+            "Genre: poem.",
+            "About the traditional game Gilli Danda.",
+            "Children swing the stick and the gilli flies high.",
+            "Theme: joy, freedom and fun of traditional games."
+          ]
+        },
+        {
+          "topicId": "eng5_unit4_topic2",
+          "topic": "The Decision of the Panchayat (Prose)",
+          "meaning": "A story about how a village panchayat gives a fair judgment in a dispute between an honest farmer and a cunning neighbour.",
+          "ncertBasedExplanation": "This is a story about fairness and justice in a village. An honest farmer has a problem with his cunning neighbour: after the farmer buys something (a well) from the neighbour, the neighbour dishonestly blocks his way and refuses to let him use it. The farmer is worried and goes to the village chief to explain his problem. The villagers try to reason with the cunning man, but he is adamant and will not change his mind. Finally, the whole village gathers under the banyan tree, and the Panchayat (the village council) listens carefully to both sides. After careful consideration, the Panchayat gives its judgment in favour of the honest farmer, and the dishonest neighbour is punished for his cunning. The story shows that honesty wins and that the panchayat brings justice.",
+          "easyExplanation": "An honest farmer is cheated by a cunning neighbour. The village panchayat hears both sides under the banyan tree and gives a fair judgment, punishing the dishonest neighbour.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "The dispute",
+              "explanation": "An honest farmer has a problem with a cunning neighbour who dishonestly blocks his way."
+            },
+            {
+              "step": 2,
+              "title": "Seeking help",
+              "explanation": "The worried farmer goes to the village chief to explain his problem."
+            },
+            {
+              "step": 3,
+              "title": "The panchayat meets",
+              "explanation": "The village gathers under the banyan tree and the Panchayat listens to both sides."
+            },
+            {
+              "step": 4,
+              "title": "A fair judgment",
+              "explanation": "After careful thought, the Panchayat decides in favour of the honest farmer and punishes the neighbour."
+            }
+          ],
+          "examples": [
+            "The villagers gathered under the banyan tree for the Panchayat.",
+            "The dishonest neighbour was punished for his cunning."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Panchayat",
+              "definition": "A village council that settles disputes.",
+              "simpleExample": "The Panchayat gave a fair decision."
+            },
+            {
+              "keyword": "Cunning",
+              "definition": "Clever in a tricky, dishonest way.",
+              "simpleExample": "The cunning neighbour tricked the farmer."
+            },
+            {
+              "keyword": "Judgment",
+              "definition": "A decision made after careful thought.",
+              "simpleExample": "The Panchayat's judgment was fair."
+            },
+            {
+              "keyword": "Adamant",
+              "definition": "Refusing to change one's mind.",
+              "simpleExample": "The neighbour was adamant."
+            }
+          ],
+          "quickSummary": "'The Decision of the Panchayat' is a story in which a village panchayat gives a fair judgment in a dispute between an honest farmer and a cunning neighbour, showing that honesty wins and justice prevails.",
+          "revisionNotes": [
+            "Genre: short story (prose).",
+            "An honest farmer is cheated by a cunning neighbour.",
+            "The Panchayat hears both sides under the banyan tree.",
+            "Theme: justice, honesty and fairness."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 5,
+      "chapter": "Unit 5: Work is Worship",
+      "topics": [
+        {
+          "topicId": "eng5_unit5_topic1",
+          "topic": "Vocation (Poem)",
+          "meaning": "A poem by Rabindranath Tagore in which a schoolchild envies the free lives of a hawker, a gardener and a watchman.",
+          "ncertBasedExplanation": "This is a well-loved poem by Rabindranath Tagore, spoken by a young schoolchild. Each day the child meets different working people and wishes to be like them because they seem so free. In the morning the child meets a hawker crying 'Bangles, crystal bangles!' who has no fixed road or time, and wishes to be a hawker spending the day on the road. In the afternoon the child sees a gardener digging the ground freely, getting dusty, with nobody to scold him, and wishes to be a gardener. In the evening the child sees a watchman walking about all night with his lantern, and wishes to be a watchman. The poem gently shows a child's longing for the freedom that these workers seem to enjoy, compared with the rules of school.",
+          "easyExplanation": "A schoolchild in this Tagore poem wishes to be a hawker, a gardener or a watchman, because their lives seem free, unlike the child's rule-bound school life.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "The hawker",
+              "explanation": "In the morning the child meets a free hawker selling bangles and wishes to be like him."
+            },
+            {
+              "step": 2,
+              "title": "The gardener",
+              "explanation": "In the afternoon the child sees a gardener digging freely and wishes to be a gardener."
+            },
+            {
+              "step": 3,
+              "title": "The watchman",
+              "explanation": "In the evening the child sees a watchman walking all night and wishes to be one."
+            },
+            {
+              "step": 4,
+              "title": "Longing for freedom",
+              "explanation": "The child longs for the freedom these workers seem to enjoy, unlike school life."
+            }
+          ],
+          "examples": [
+            "The child wishes to be a hawker crying 'Bangles, crystal bangles!'",
+            "The child envies the gardener who can dig freely with nobody to stop him."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Vocation",
+              "definition": "A job or occupation.",
+              "simpleExample": "The poem is about different vocations."
+            },
+            {
+              "keyword": "Hawker",
+              "definition": "A person who sells goods on the street.",
+              "simpleExample": "The hawker sold bangles."
+            },
+            {
+              "keyword": "Longing",
+              "definition": "A strong wish for something.",
+              "simpleExample": "The child has a longing for freedom."
+            }
+          ],
+          "quickSummary": "'Vocation' by Rabindranath Tagore is a poem in which a schoolchild wishes to be a hawker, a gardener or a watchman, longing for the freedom their lives seem to offer, unlike the child's school routine.",
+          "revisionNotes": [
+            "Genre: poem. Poet: Rabindranath Tagore.",
+            "A child envies a hawker, gardener and watchman.",
+            "They seem free, unlike the child's school life.",
+            "Theme: a child's longing for freedom."
+          ]
+        },
+        {
+          "topicId": "eng5_unit5_topic2",
+          "topic": "Glass Bangles (Prose)",
+          "meaning": "A story about Ravi and his family of skilled artisans who craft beautiful glass bangles, showing the dignity of work and craftsmanship.",
+          "ncertBasedExplanation": "This is a story about Ravi and his family, who have been crafting beautiful glass bangles for a very long time in their town. Each bangle is a piece of art that shows both the culture of the town and the wonderful skill of the artisans. Ravi's workshop is full of activity, with the clinking of glass and the hum of conversation as the artisans work. Making glass bangles is difficult and needs great skill: Ravi and his team first heat glass in a furnace, then carefully shape it into bangles, adding beautiful colours and designs before cooling them. Ravi enjoys his work and crafts each bangle with full attention and pride. The story celebrates the dignity of work, the skill of artisans, and the value of traditional crafts.",
+          "easyExplanation": "Ravi's family makes beautiful glass bangles by heating and shaping glass with great skill. The story celebrates craftsmanship and the dignity of work.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "A family craft",
+              "explanation": "Ravi's family has crafted glass bangles for a very long time, as a town tradition."
+            },
+            {
+              "step": 2,
+              "title": "The busy workshop",
+              "explanation": "Ravi's workshop is full of the clinking of glass and the work of skilled artisans."
+            },
+            {
+              "step": 3,
+              "title": "Making the bangles",
+              "explanation": "They heat glass in a furnace, shape it into bangles, and add colours and designs."
+            },
+            {
+              "step": 4,
+              "title": "Pride in work",
+              "explanation": "Ravi crafts each bangle with full attention and pride, showing the dignity of work."
+            }
+          ],
+          "examples": [
+            "Ravi heats glass in a furnace and shapes it into colourful bangles.",
+            "Each bangle is a piece of art showing the skill of the artisans."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Artisan",
+              "definition": "A skilled worker who makes things by hand.",
+              "simpleExample": "Ravi is a skilled artisan."
+            },
+            {
+              "keyword": "Craftsmanship",
+              "definition": "Skill in making things by hand.",
+              "simpleExample": "The bangles show fine craftsmanship."
+            },
+            {
+              "keyword": "Furnace",
+              "definition": "A very hot oven used to heat glass or metal.",
+              "simpleExample": "Glass is heated in a furnace."
+            },
+            {
+              "keyword": "Dignity of work",
+              "definition": "The idea that all honest work deserves respect.",
+              "simpleExample": "The story shows the dignity of work."
+            }
+          ],
+          "quickSummary": "'Glass Bangles' is a story about Ravi and his family of skilled artisans who craft beautiful glass bangles by heating and shaping glass, celebrating craftsmanship and the dignity of work.",
+          "revisionNotes": [
+            "Genre: short story (prose).",
+            "Ravi's family crafts glass bangles.",
+            "Process: heat glass, shape, colour, cool.",
+            "Theme: craftsmanship and the dignity of work."
+          ]
+        }
+      ]
+    }
+  ]
+}

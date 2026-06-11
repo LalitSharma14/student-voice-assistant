@@ -1,0 +1,2379 @@
+{
+  "class": 5,
+  "board": "CBSE",
+  "source": "NCERT",
+  "subject": "Mathematics",
+  "bookName": "Maths Mela",
+  "chapters": [
+    {
+      "chapterNumber": 1,
+      "chapter": "We the Travellers - I",
+      "topics": [
+        {
+          "topicId": "math5_ch1_topic1",
+          "topic": "Large Numbers and Place Value",
+          "meaning": "Large numbers are made of digits whose value depends on their place, such as ones, tens, hundreds, thousands and beyond.",
+          "ncertBasedExplanation": "When we travel long distances or count large groups, we use large numbers. Each digit in a number has a place value depending on its position. Starting from the right, the places are ones (O), tens (T), hundreds (H), thousands (Th), ten thousands (TTh), lakhs and so on. The value of a digit is the digit multiplied by its place value; for example, in 24,560 the digit 4 is in the thousands place, so its value is 4,000. Understanding place value lets us read, write, compare and work with large numbers correctly.",
+          "easyExplanation": "Big numbers are built from digits, and a digit's value depends on its place: ones, tens, hundreds, thousands and more. So the 4 in 4,000 means four thousand.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Numbers have places",
+              "explanation": "From the right, places are ones, tens, hundreds, thousands, ten thousands and beyond."
+            },
+            {
+              "step": 2,
+              "title": "Each digit has a value",
+              "explanation": "A digit's value is the digit times its place value."
+            },
+            {
+              "step": 3,
+              "title": "Read by place",
+              "explanation": "In 24,560 the 4 is in the thousands place, so it stands for 4,000."
+            },
+            {
+              "step": 4,
+              "title": "Use place value",
+              "explanation": "Place value helps us read, write and compare large numbers."
+            }
+          ],
+          "examples": [
+            "In 35,072 the digit 5 is in the thousands place and stands for 5,000.",
+            "The number 60,000 has a 6 in the ten-thousands place."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Place value",
+              "definition": "The value of a digit based on its position in a number.",
+              "simpleExample": "In 700, the 7 has a place value of 700."
+            },
+            {
+              "keyword": "Digit",
+              "definition": "Any of the symbols 0 to 9.",
+              "simpleExample": "The number 58 has two digits."
+            },
+            {
+              "keyword": "Thousand",
+              "definition": "A unit equal to ten hundreds (1,000).",
+              "simpleExample": "Ten hundreds make one thousand."
+            }
+          ],
+          "quickSummary": "Large numbers are built from digits whose value depends on their place (ones, tens, hundreds, thousands and beyond); place value lets us read, write and compare them.",
+          "revisionNotes": [
+            "Places from right: ones, tens, hundreds, thousands, ten-thousands.",
+            "A digit's value = digit x place value.",
+            "Example: 4 in 24,560 = 4,000.",
+            "Place value helps read and compare big numbers."
+          ]
+        },
+        {
+          "topicId": "math5_ch1_topic2",
+          "topic": "Reading and Writing Large Numbers",
+          "meaning": "Large numbers are read and written using place value and number names, grouping digits to make them easy to read.",
+          "ncertBasedExplanation": "To read and write large numbers correctly, we use place value and number names. Digits are grouped using commas to make big numbers easier to read; in the Indian system, we group as ones, then thousands, then lakhs. We can write a number in figures (like 24,560) and in words (twenty-four thousand five hundred sixty). We can also write a number in expanded form, showing the value of each digit, such as 24,560 = 20,000 + 4,000 + 500 + 60. Being able to move between figures, words and expanded form helps us truly understand a number.",
+          "easyExplanation": "We read and write big numbers using place value, commas and number names. We can write them in figures, in words, or in expanded form showing each digit's value.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Group with commas",
+              "explanation": "Commas group digits to make large numbers easier to read."
+            },
+            {
+              "step": 2,
+              "title": "Write in figures",
+              "explanation": "Write the number using digits, like 24,560."
+            },
+            {
+              "step": 3,
+              "title": "Write in words",
+              "explanation": "Write the number name, like twenty-four thousand five hundred sixty."
+            },
+            {
+              "step": 4,
+              "title": "Use expanded form",
+              "explanation": "Show each digit's value, like 24,560 = 20,000 + 4,000 + 500 + 60."
+            }
+          ],
+          "examples": [
+            "24,560 in words is 'twenty-four thousand five hundred sixty'.",
+            "Expanded form of 3,408 is 3,000 + 400 + 8."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Number name",
+              "definition": "A number written in words.",
+              "simpleExample": "The number name of 25 is twenty-five."
+            },
+            {
+              "keyword": "Expanded form",
+              "definition": "A number shown as the sum of its digits' values.",
+              "simpleExample": "305 = 300 + 5 in expanded form."
+            },
+            {
+              "keyword": "Figures",
+              "definition": "A number written using digits.",
+              "simpleExample": "Two thousand in figures is 2,000."
+            }
+          ],
+          "quickSummary": "Large numbers are read and written using place value, commas and number names, and can be shown in figures, in words or in expanded form.",
+          "revisionNotes": [
+            "Use commas to group digits for reading.",
+            "Write numbers in figures and in words.",
+            "Expanded form shows each digit's value.",
+            "Example: 24,560 = 20,000 + 4,000 + 500 + 60."
+          ]
+        },
+        {
+          "topicId": "math5_ch1_topic3",
+          "topic": "Rounding Off and Estimation",
+          "meaning": "Rounding off means replacing a number with a nearby convenient number, which helps us estimate quickly.",
+          "ncertBasedExplanation": "When we do not need an exact number, we round off to the nearest ten, hundred or thousand to get a convenient, approximate value. To round to the nearest ten, we look at the ones digit: if it is 5 or more we round up, otherwise we round down. The same idea works for hundreds and thousands using the next digit. Rounding helps us estimate answers quickly, for example to guess the total distance of a journey or whether an answer is reasonable. Estimation is very useful in daily life when an exact value is not needed.",
+          "easyExplanation": "Rounding off changes a number to a nearby easy number, like 47 to 50. It helps us estimate answers quickly when we don't need to be exact.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Decide the place",
+              "explanation": "Choose to round to the nearest ten, hundred or thousand."
+            },
+            {
+              "step": 2,
+              "title": "Look at the next digit",
+              "explanation": "Check the digit to the right of that place."
+            },
+            {
+              "step": 3,
+              "title": "Round up or down",
+              "explanation": "If that digit is 5 or more, round up; if less, round down."
+            },
+            {
+              "step": 4,
+              "title": "Estimate quickly",
+              "explanation": "Use rounded numbers to estimate totals and check if answers are reasonable."
+            }
+          ],
+          "examples": [
+            "48 rounded to the nearest ten is 50.",
+            "1,280 rounded to the nearest hundred is 1,300."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Rounding off",
+              "definition": "Replacing a number with a nearby convenient number.",
+              "simpleExample": "Rounding 62 to the nearest ten gives 60."
+            },
+            {
+              "keyword": "Estimate",
+              "definition": "To find an answer close to the exact value.",
+              "simpleExample": "We estimate 198 + 305 as about 500."
+            },
+            {
+              "keyword": "Nearest",
+              "definition": "The closest value.",
+              "simpleExample": "The nearest ten to 47 is 50."
+            }
+          ],
+          "quickSummary": "Rounding off replaces a number with a nearby convenient value (to the nearest ten, hundred or thousand) and helps us estimate answers quickly when exactness is not needed.",
+          "revisionNotes": [
+            "Rounding off = nearest convenient number.",
+            "Look at the next digit: 5 or more rounds up.",
+            "Round to nearest ten/hundred/thousand.",
+            "Used for quick estimation."
+          ]
+        },
+        {
+          "topicId": "math5_ch1_topic4",
+          "topic": "Units of Distance",
+          "meaning": "Distance is measured in units like centimetres, metres and kilometres, with larger distances measured in kilometres.",
+          "ncertBasedExplanation": "When we travel, we measure how far we go using units of distance. Small lengths are measured in centimetres (cm) and metres (m), while long distances between places are measured in kilometres (km). The units are related: 1 metre = 100 centimetres and 1 kilometre = 1,000 metres. We choose the right unit for each situation: cm for the length of a pencil, m for the height of a room, and km for the distance between two cities. Knowing these units and how to convert between them helps us measure and compare distances correctly.",
+          "easyExplanation": "Distance is measured in cm, m and km. 1 m = 100 cm and 1 km = 1,000 m. We use km for long journeys and cm or m for small lengths.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Choose the unit",
+              "explanation": "Use cm and m for small lengths and km for long distances."
+            },
+            {
+              "step": 2,
+              "title": "Know the relations",
+              "explanation": "1 metre = 100 centimetres and 1 kilometre = 1,000 metres."
+            },
+            {
+              "step": 3,
+              "title": "Match unit to object",
+              "explanation": "Use cm for a pencil, m for a room, km for the distance between cities."
+            },
+            {
+              "step": 4,
+              "title": "Convert when needed",
+              "explanation": "Change between units, such as 2 km = 2,000 m, to compare distances."
+            }
+          ],
+          "examples": [
+            "The distance between two cities is measured in kilometres.",
+            "2 kilometres equals 2,000 metres."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Kilometre",
+              "definition": "A unit of distance equal to 1,000 metres.",
+              "simpleExample": "A long journey is measured in kilometres."
+            },
+            {
+              "keyword": "Metre",
+              "definition": "A unit of length equal to 100 centimetres.",
+              "simpleExample": "A door is about 2 metres tall."
+            },
+            {
+              "keyword": "Centimetre",
+              "definition": "A small unit of length.",
+              "simpleExample": "A pencil is about 15 centimetres long."
+            }
+          ],
+          "quickSummary": "Distance is measured in centimetres, metres and kilometres (1 m = 100 cm, 1 km = 1,000 m); we choose the right unit and convert between them to measure and compare distances.",
+          "revisionNotes": [
+            "Units of distance: cm, m, km.",
+            "1 m = 100 cm; 1 km = 1,000 m.",
+            "Use km for long journeys, cm/m for small lengths.",
+            "Convert units to compare distances."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 2,
+      "chapter": "Fractions",
+      "topics": [
+        {
+          "topicId": "math5_ch2_topic1",
+          "topic": "Understanding Fractions",
+          "meaning": "A fraction represents a part of a whole or a part of a group, written with a numerator over a denominator.",
+          "ncertBasedExplanation": "A fraction is a way of showing equal parts of a whole or of a group. It is written as one number over another, like 3/4. The bottom number, the denominator, tells how many equal parts the whole is divided into, and the top number, the numerator, tells how many of those parts are taken. For example, if a roti is cut into 4 equal parts and we take 3, we have 3/4 of the roti. Fractions can also describe part of a group, like 2 out of 5 children. Understanding fractions helps us share and measure things that are not whole numbers.",
+          "easyExplanation": "A fraction shows equal parts of a whole, like 3/4. The bottom number is the total equal parts and the top number is how many we take.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Equal parts",
+              "explanation": "A fraction shows equal parts of a whole or a group."
+            },
+            {
+              "step": 2,
+              "title": "Denominator",
+              "explanation": "The bottom number tells how many equal parts the whole is divided into."
+            },
+            {
+              "step": 3,
+              "title": "Numerator",
+              "explanation": "The top number tells how many of those parts are taken."
+            },
+            {
+              "step": 4,
+              "title": "Part of a group",
+              "explanation": "A fraction can also describe part of a group, like 2 of 5 children."
+            }
+          ],
+          "examples": [
+            "If a roti is cut into 4 equal parts and we take 3, we have 3/4.",
+            "2 out of 5 apples being red is the fraction 2/5."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Fraction",
+              "definition": "A number showing equal parts of a whole.",
+              "simpleExample": "1/2 means one of two equal parts."
+            },
+            {
+              "keyword": "Numerator",
+              "definition": "The top number of a fraction.",
+              "simpleExample": "In 3/4, the numerator is 3."
+            },
+            {
+              "keyword": "Denominator",
+              "definition": "The bottom number of a fraction.",
+              "simpleExample": "In 3/4, the denominator is 4."
+            }
+          ],
+          "quickSummary": "A fraction shows equal parts of a whole or group, written as numerator over denominator; the denominator gives the total equal parts and the numerator how many are taken.",
+          "revisionNotes": [
+            "Fraction = equal parts of a whole/group.",
+            "Denominator (bottom) = total equal parts.",
+            "Numerator (top) = parts taken.",
+            "Example: 3 of 4 parts = 3/4."
+          ]
+        },
+        {
+          "topicId": "math5_ch2_topic2",
+          "topic": "Equivalent Fractions",
+          "meaning": "Equivalent fractions are different fractions that represent the same part of a whole.",
+          "ncertBasedExplanation": "Equivalent fractions are fractions that look different but show the same amount, such as 1/2, 2/4 and 3/6. We can make an equivalent fraction by multiplying both the numerator and the denominator by the same number. For example, multiplying 1/2 by 2/2 gives 2/4. We can also simplify a fraction by dividing the numerator and denominator by the same number. Equivalent fractions are useful for comparing fractions and for adding and subtracting fractions with different denominators.",
+          "easyExplanation": "Equivalent fractions are different-looking fractions worth the same, like 1/2 = 2/4 = 3/6. Multiply top and bottom by the same number to make them.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Same amount",
+              "explanation": "Equivalent fractions show the same part of a whole, like 1/2 and 2/4."
+            },
+            {
+              "step": 2,
+              "title": "Multiply both parts",
+              "explanation": "Multiply numerator and denominator by the same number to get an equivalent fraction."
+            },
+            {
+              "step": 3,
+              "title": "Simplify too",
+              "explanation": "Dividing both parts by the same number simplifies a fraction."
+            },
+            {
+              "step": 4,
+              "title": "Why they help",
+              "explanation": "Equivalent fractions help compare, add and subtract fractions."
+            }
+          ],
+          "examples": [
+            "1/2 = 2/4 = 3/6 are equivalent fractions.",
+            "Multiplying 2/3 by 2/2 gives the equivalent fraction 4/6."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Equivalent fractions",
+              "definition": "Different fractions with the same value.",
+              "simpleExample": "1/2 and 2/4 are equivalent."
+            },
+            {
+              "keyword": "Simplify",
+              "definition": "To write a fraction in its smallest form.",
+              "simpleExample": "4/8 simplifies to 1/2."
+            }
+          ],
+          "quickSummary": "Equivalent fractions are different fractions showing the same amount, made by multiplying or dividing both the numerator and denominator by the same number.",
+          "revisionNotes": [
+            "Equivalent fractions show the same amount.",
+            "1/2 = 2/4 = 3/6.",
+            "Multiply both parts by the same number.",
+            "Used to compare, add and subtract fractions."
+          ]
+        },
+        {
+          "topicId": "math5_ch2_topic3",
+          "topic": "Comparing Fractions",
+          "meaning": "Fractions are compared by looking at their denominators and numerators, or by using equivalent fractions.",
+          "ncertBasedExplanation": "To compare fractions and find which is larger, we look at their numerators and denominators. When two fractions have the same denominator, the one with the larger numerator is greater, for example 3/5 is greater than 2/5. When they have the same numerator, the one with the smaller denominator is greater, because the parts are bigger, so 1/3 is greater than 1/4. When both are different, we change them into equivalent fractions with the same denominator and then compare. Comparing fractions lets us put them in order from smallest to largest.",
+          "easyExplanation": "To compare fractions: with the same bottom, the bigger top wins; with the same top, the smaller bottom wins; otherwise make the bottoms the same first.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Same denominator",
+              "explanation": "If denominators are equal, the larger numerator is the greater fraction."
+            },
+            {
+              "step": 2,
+              "title": "Same numerator",
+              "explanation": "If numerators are equal, the smaller denominator is the greater fraction."
+            },
+            {
+              "step": 3,
+              "title": "Different fractions",
+              "explanation": "Change them to equivalent fractions with the same denominator, then compare."
+            },
+            {
+              "step": 4,
+              "title": "Order them",
+              "explanation": "Comparing lets us arrange fractions from smallest to largest."
+            }
+          ],
+          "examples": [
+            "3/5 is greater than 2/5 because the denominators are the same and 3 > 2.",
+            "1/3 is greater than 1/4 because, with equal numerators, the smaller denominator wins."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Compare",
+              "definition": "To decide which value is greater.",
+              "simpleExample": "We compare 2/3 and 3/4."
+            },
+            {
+              "keyword": "Common denominator",
+              "definition": "The same denominator made for two fractions.",
+              "simpleExample": "For 1/2 and 1/3, a common denominator is 6."
+            }
+          ],
+          "quickSummary": "Fractions are compared using their denominators and numerators or by making equivalent fractions with a common denominator, allowing us to order them.",
+          "revisionNotes": [
+            "Same denominator: bigger numerator wins.",
+            "Same numerator: smaller denominator wins.",
+            "Otherwise use a common denominator.",
+            "Comparing lets us order fractions."
+          ]
+        },
+        {
+          "topicId": "math5_ch2_topic4",
+          "topic": "Adding and Subtracting Fractions",
+          "meaning": "Fractions with the same denominator are added or subtracted by adding or subtracting the numerators.",
+          "ncertBasedExplanation": "To add or subtract fractions, they must have the same denominator. When the denominators are the same, we simply add or subtract the numerators and keep the denominator the same; for example, 1/5 + 2/5 = 3/5. When the denominators are different, we first change the fractions into equivalent fractions with a common denominator, and then add or subtract. This skill is useful in daily life, for example to add parts of a journey or combine portions of food. The final answer should be written in its simplest form.",
+          "easyExplanation": "To add or subtract fractions, make the bottoms the same, then add or subtract the tops. So 1/5 + 2/5 = 3/5.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Need same denominator",
+              "explanation": "Fractions can be added or subtracted only when their denominators are equal."
+            },
+            {
+              "step": 2,
+              "title": "Same denominator",
+              "explanation": "Add or subtract the numerators and keep the denominator, like 1/5 + 2/5 = 3/5."
+            },
+            {
+              "step": 3,
+              "title": "Different denominators",
+              "explanation": "First make equivalent fractions with a common denominator."
+            },
+            {
+              "step": 4,
+              "title": "Simplify",
+              "explanation": "Write the answer in its simplest form."
+            }
+          ],
+          "examples": [
+            "1/5 + 2/5 = 3/5.",
+            "3/4 - 1/4 = 2/4 = 1/2."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Sum",
+              "definition": "The result of adding.",
+              "simpleExample": "The sum of 1/5 and 2/5 is 3/5."
+            },
+            {
+              "keyword": "Common denominator",
+              "definition": "A shared denominator for two fractions.",
+              "simpleExample": "For 1/2 + 1/3, use 6."
+            },
+            {
+              "keyword": "Simplest form",
+              "definition": "A fraction reduced fully.",
+              "simpleExample": "2/4 in simplest form is 1/2."
+            }
+          ],
+          "quickSummary": "Fractions are added or subtracted by giving them the same denominator, then adding or subtracting the numerators and keeping the denominator, with the answer in simplest form.",
+          "revisionNotes": [
+            "Need the same denominator first.",
+            "Add/subtract numerators; keep denominator.",
+            "Example: 1/5 + 2/5 = 3/5.",
+            "Simplify the final answer."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 3,
+      "chapter": "Angles as Turns",
+      "topics": [
+        {
+          "topicId": "math5_ch3_topic1",
+          "topic": "Angles as Turns",
+          "meaning": "An angle is the amount of turning between two arms meeting at a point, and turning more makes a bigger angle.",
+          "ncertBasedExplanation": "An angle can be understood as an amount of turning. When one arm turns about a fixed point called the vertex, the angle between the starting and ending positions of the arm grows as it turns more. So an angle measures how much something has turned, like the hands of a clock turning, a door opening, or a person turning around. The two lines that form the angle are its arms, and the point where they meet is the vertex. The more the turn, the larger the angle.",
+          "easyExplanation": "An angle is how much something turns. Turn a little, small angle; turn a lot, big angle. The corner point is the vertex and the lines are the arms.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Turning makes angles",
+              "explanation": "An angle is formed by the amount of turning between two positions of an arm."
+            },
+            {
+              "step": 2,
+              "title": "Vertex and arms",
+              "explanation": "The fixed point is the vertex and the two lines are the arms of the angle."
+            },
+            {
+              "step": 3,
+              "title": "More turn, bigger angle",
+              "explanation": "The more the arm turns, the larger the angle becomes."
+            },
+            {
+              "step": 4,
+              "title": "Angles around us",
+              "explanation": "Clock hands, opening doors and turning bodies all show angles as turns."
+            }
+          ],
+          "examples": [
+            "Opening a door wider makes a bigger angle with the wall.",
+            "The hands of a clock form different angles as they turn."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Angle",
+              "definition": "The amount of turning between two arms meeting at a point.",
+              "simpleExample": "A corner of a book forms an angle."
+            },
+            {
+              "keyword": "Vertex",
+              "definition": "The point where the two arms of an angle meet.",
+              "simpleExample": "The arms meet at the vertex."
+            },
+            {
+              "keyword": "Turn",
+              "definition": "To move around a fixed point.",
+              "simpleExample": "A clock hand turns to make an angle."
+            }
+          ],
+          "quickSummary": "An angle is the amount of turning between two arms meeting at a vertex; the more the turn, the bigger the angle, as seen in clocks, doors and turning bodies.",
+          "revisionNotes": [
+            "Angle = amount of turning.",
+            "Vertex = the corner point; arms = the two lines.",
+            "More turn means a bigger angle.",
+            "Seen in clocks, doors and turns."
+          ]
+        },
+        {
+          "topicId": "math5_ch3_topic2",
+          "topic": "Right, Straight and Complete Angles",
+          "meaning": "Special angles come from simple turns: a right angle is a quarter turn, a straight angle a half turn, and a complete angle a full turn.",
+          "ncertBasedExplanation": "Certain amounts of turning give us special angles. A right angle is a quarter of a full turn and looks like a square corner. A straight angle is half of a full turn and forms a straight line. A complete angle (or full turn) is one full turn that brings the arm back to its starting point. These special angles act as benchmarks: we can describe other angles by comparing them with a right angle, saying an angle is less than, equal to or more than a right angle.",
+          "easyExplanation": "Special angles: a right angle is a quarter turn (a square corner), a straight angle is a half turn (a straight line), and a complete angle is a full turn.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Right angle",
+              "explanation": "A quarter of a full turn, like a square corner."
+            },
+            {
+              "step": 2,
+              "title": "Straight angle",
+              "explanation": "Half of a full turn, forming a straight line."
+            },
+            {
+              "step": 3,
+              "title": "Complete angle",
+              "explanation": "One full turn, bringing the arm back to its start."
+            },
+            {
+              "step": 4,
+              "title": "Use as benchmarks",
+              "explanation": "We compare other angles to a right angle as less than, equal to or more than it."
+            }
+          ],
+          "examples": [
+            "The corner of a table is a right angle.",
+            "Two opposite directions on a straight road form a straight angle."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Right angle",
+              "definition": "A quarter-turn angle, like a square corner.",
+              "simpleExample": "A book's corner is a right angle."
+            },
+            {
+              "keyword": "Straight angle",
+              "definition": "A half-turn angle forming a straight line.",
+              "simpleExample": "A flat line shows a straight angle."
+            },
+            {
+              "keyword": "Complete angle",
+              "definition": "A full-turn angle.",
+              "simpleExample": "One full rotation is a complete angle."
+            }
+          ],
+          "quickSummary": "Special angles come from simple turns: a right angle (quarter turn), a straight angle (half turn) and a complete angle (full turn), used as benchmarks to describe other angles.",
+          "revisionNotes": [
+            "Right angle = quarter turn (square corner).",
+            "Straight angle = half turn (straight line).",
+            "Complete angle = full turn.",
+            "Compare other angles to a right angle."
+          ]
+        },
+        {
+          "topicId": "math5_ch3_topic3",
+          "topic": "Comparing Angles",
+          "meaning": "Angles are compared by how much they open, with a wider opening meaning a larger angle.",
+          "ncertBasedExplanation": "We can compare two angles to find which is bigger by looking at how much each one opens, regardless of the length of the arms. A wider opening between the arms means a larger angle. We can compare an angle with a right angle: an angle smaller than a right angle is called acute, one equal to a right angle is a right angle, and one larger than a right angle (but less than a straight angle) is called obtuse. Comparing angles helps us describe shapes and turns more exactly.",
+          "easyExplanation": "To compare angles, see how wide they open, not how long the arms are. Smaller than a right angle is acute; bigger is obtuse.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Look at the opening",
+              "explanation": "The size of an angle depends on how much its arms open, not the arm length."
+            },
+            {
+              "step": 2,
+              "title": "Wider means bigger",
+              "explanation": "A wider opening means a larger angle."
+            },
+            {
+              "step": 3,
+              "title": "Compare to a right angle",
+              "explanation": "An angle can be smaller than, equal to or larger than a right angle."
+            },
+            {
+              "step": 4,
+              "title": "Name the types",
+              "explanation": "Smaller than a right angle is acute; larger (up to a straight angle) is obtuse."
+            }
+          ],
+          "examples": [
+            "A wide-open pair of scissors makes a bigger angle than a slightly open pair.",
+            "An angle smaller than a right angle is an acute angle."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Acute angle",
+              "definition": "An angle smaller than a right angle.",
+              "simpleExample": "A 40-degree angle is acute."
+            },
+            {
+              "keyword": "Obtuse angle",
+              "definition": "An angle larger than a right angle but less than a straight angle.",
+              "simpleExample": "A 120-degree angle is obtuse."
+            },
+            {
+              "keyword": "Opening",
+              "definition": "How far apart the arms of an angle are.",
+              "simpleExample": "A bigger opening is a bigger angle."
+            }
+          ],
+          "quickSummary": "Angles are compared by how wide their arms open; an angle can be acute (smaller than a right angle), a right angle, or obtuse (larger than a right angle).",
+          "revisionNotes": [
+            "Angle size depends on the opening, not arm length.",
+            "Wider opening = larger angle.",
+            "Compare to a right angle.",
+            "Acute < right angle < obtuse."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 4,
+      "chapter": "We the Travellers - II",
+      "topics": [
+        {
+          "topicId": "math5_ch4_topic1",
+          "topic": "Addition in Daily Life",
+          "meaning": "Addition is used to find the total when amounts are combined, such as distances, money or quantities on a journey.",
+          "ncertBasedExplanation": "Addition helps us find the total when we put amounts together. In travel and daily life, we add distances of different parts of a journey, the cost of different items, or the number of people. To add large numbers, we line up the digits by place value (ones under ones, tens under tens) and add column by column, carrying over when a column total is ten or more. Solving real-life addition problems carefully helps us find correct totals for journeys, shopping and many other situations.",
+          "easyExplanation": "Addition finds the total when amounts are combined, like adding the parts of a journey or the cost of items. Line up digits by place value and carry over when needed.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Combine amounts",
+              "explanation": "Addition finds the total when amounts are put together."
+            },
+            {
+              "step": 2,
+              "title": "Line up by place value",
+              "explanation": "Write the numbers with ones under ones, tens under tens, and so on."
+            },
+            {
+              "step": 3,
+              "title": "Add column by column",
+              "explanation": "Add each column, carrying over when a total is ten or more."
+            },
+            {
+              "step": 4,
+              "title": "Apply to real life",
+              "explanation": "Use addition for journey distances, shopping costs and counting people."
+            }
+          ],
+          "examples": [
+            "Adding 1,250 km and 870 km of a trip gives 2,120 km in total.",
+            "Adding the cost of a ticket and a snack gives the total spent."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Addition",
+              "definition": "Combining amounts to find a total.",
+              "simpleExample": "5 + 3 = 8 is addition."
+            },
+            {
+              "keyword": "Sum",
+              "definition": "The total found by adding.",
+              "simpleExample": "The sum of 1,250 and 870 is 2,120."
+            },
+            {
+              "keyword": "Carry over",
+              "definition": "Moving a ten to the next column when a column total is ten or more.",
+              "simpleExample": "Adding 7 + 5 carries over a ten."
+            }
+          ],
+          "quickSummary": "Addition finds the total when amounts are combined; we line up digits by place value, add column by column with carrying over, and use it for distances, money and quantities.",
+          "revisionNotes": [
+            "Addition finds the total of combined amounts.",
+            "Line up digits by place value.",
+            "Add column by column, carrying over.",
+            "Used for journeys, shopping and counting."
+          ]
+        },
+        {
+          "topicId": "math5_ch4_topic2",
+          "topic": "Subtraction in Daily Life",
+          "meaning": "Subtraction is used to find how much is left or the difference between two amounts.",
+          "ncertBasedExplanation": "Subtraction helps us find how much is left after some is taken away, or the difference between two amounts. In daily life we subtract to find the remaining distance of a journey, the change after shopping, or how much taller one thing is than another. To subtract large numbers, we line up the digits by place value and subtract column by column, borrowing from the next place when needed. Checking the answer by adding it back to the smaller number helps make sure the subtraction is correct.",
+          "easyExplanation": "Subtraction finds what is left or the difference between two amounts, like the change after shopping. Line up digits by place value and borrow when needed.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Find what is left",
+              "explanation": "Subtraction finds how much remains or the difference between two amounts."
+            },
+            {
+              "step": 2,
+              "title": "Line up by place value",
+              "explanation": "Write the numbers with ones under ones, tens under tens, and so on."
+            },
+            {
+              "step": 3,
+              "title": "Subtract column by column",
+              "explanation": "Subtract each column, borrowing from the next place when needed."
+            },
+            {
+              "step": 4,
+              "title": "Check by adding back",
+              "explanation": "Add the answer to the smaller number to check the subtraction."
+            }
+          ],
+          "examples": [
+            "A 2,000 km trip with 1,250 km done leaves 750 km remaining.",
+            "Paying 100 rupees for a 65-rupee item gives 35 rupees change."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Subtraction",
+              "definition": "Taking one amount away from another.",
+              "simpleExample": "8 - 3 = 5 is subtraction."
+            },
+            {
+              "keyword": "Difference",
+              "definition": "The result of subtracting.",
+              "simpleExample": "The difference between 2,000 and 1,250 is 750."
+            },
+            {
+              "keyword": "Borrow",
+              "definition": "Taking a ten from the next column when subtracting.",
+              "simpleExample": "Subtracting 5 from 3 needs borrowing."
+            }
+          ],
+          "quickSummary": "Subtraction finds what is left or the difference between amounts; we line up digits by place value, subtract column by column with borrowing, and check by adding back.",
+          "revisionNotes": [
+            "Subtraction finds what's left or the difference.",
+            "Line up digits by place value.",
+            "Subtract column by column, borrowing when needed.",
+            "Check by adding the answer back."
+          ]
+        },
+        {
+          "topicId": "math5_ch4_topic3",
+          "topic": "Estimation in Calculations",
+          "meaning": "Estimation gives a quick, approximate answer by rounding numbers before adding or subtracting.",
+          "ncertBasedExplanation": "Estimation helps us find an answer that is close enough without doing exact calculation. We round the numbers to the nearest ten, hundred or thousand, and then add or subtract the rounded numbers to get an estimate. For example, to estimate 1,280 + 870, we round to 1,300 + 900 = 2,200. Estimation is useful for quickly planning a journey, checking a bill, or judging whether an exact answer is reasonable. A good estimate is close to the real value and is found much faster than the exact answer.",
+          "easyExplanation": "Estimation gives a quick, close answer by rounding numbers first, like 1,280 + 870 becoming 1,300 + 900 = 2,200. It is handy for checking answers.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Round the numbers",
+              "explanation": "Round each number to the nearest ten, hundred or thousand."
+            },
+            {
+              "step": 2,
+              "title": "Calculate with rounded numbers",
+              "explanation": "Add or subtract the rounded numbers for a quick result."
+            },
+            {
+              "step": 3,
+              "title": "Get an estimate",
+              "explanation": "For example, 1,280 + 870 is about 1,300 + 900 = 2,200."
+            },
+            {
+              "step": 4,
+              "title": "Use it to check",
+              "explanation": "Estimation helps plan journeys and check if exact answers are reasonable."
+            }
+          ],
+          "examples": [
+            "1,280 + 870 is estimated as 1,300 + 900 = 2,200.",
+            "Estimating a bill of items priced 95, 210 and 480 as about 100 + 200 + 500 = 800."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Estimation",
+              "definition": "Finding an answer close to the exact value.",
+              "simpleExample": "Estimating 198 + 305 as 500."
+            },
+            {
+              "keyword": "Rounding",
+              "definition": "Replacing a number with a nearby convenient value.",
+              "simpleExample": "Rounding 870 to 900."
+            },
+            {
+              "keyword": "Approximate",
+              "definition": "Close to but not exactly equal.",
+              "simpleExample": "2,200 is the approximate sum."
+            }
+          ],
+          "quickSummary": "Estimation gives a quick, approximate answer by rounding numbers before adding or subtracting, useful for planning and checking whether exact answers are reasonable.",
+          "revisionNotes": [
+            "Estimation = quick, close answer.",
+            "Round numbers first, then calculate.",
+            "Example: 1,280 + 870 about 2,200.",
+            "Used to plan and check answers."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 5,
+      "chapter": "Far and Near",
+      "topics": [
+        {
+          "topicId": "math5_ch5_topic1",
+          "topic": "Units of Length and Distance",
+          "meaning": "Length and distance are measured using standard units like millimetre, centimetre, metre and kilometre.",
+          "ncertBasedExplanation": "To measure how long, tall or far something is, we use standard units of length. Very small lengths are measured in millimetres (mm), small lengths in centimetres (cm), longer lengths in metres (m), and large distances in kilometres (km). We choose the most suitable unit for each thing: mm for the thickness of a coin, cm for a handkerchief, m for the depth of a well, and km for the distance between cities. Using standard units means a measurement made by one person means exactly the same to everyone else.",
+          "easyExplanation": "We measure length with mm, cm, m and km. Use mm and cm for tiny things, m for medium, and km for long distances.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Standard units",
+              "explanation": "Length is measured in millimetres, centimetres, metres and kilometres."
+            },
+            {
+              "step": 2,
+              "title": "Small to large",
+              "explanation": "mm and cm for small lengths, m for longer ones, km for large distances."
+            },
+            {
+              "step": 3,
+              "title": "Choose the right unit",
+              "explanation": "Use cm for a handkerchief, m for a well's depth, km between cities."
+            },
+            {
+              "step": 4,
+              "title": "Why standard units",
+              "explanation": "Standard units make a measurement mean the same to everyone."
+            }
+          ],
+          "examples": [
+            "The length of a mobile phone is measured in centimetres.",
+            "The distance between two villages is measured in kilometres."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Millimetre",
+              "definition": "A very small unit of length.",
+              "simpleExample": "A coin's thickness is a few millimetres."
+            },
+            {
+              "keyword": "Metre",
+              "definition": "A unit of length equal to 100 cm.",
+              "simpleExample": "A room is a few metres wide."
+            },
+            {
+              "keyword": "Kilometre",
+              "definition": "A unit of distance equal to 1,000 m.",
+              "simpleExample": "Cities are kilometres apart."
+            }
+          ],
+          "quickSummary": "Length and distance are measured with standard units (mm, cm, m, km), chosen to suit each object, so measurements mean the same to everyone.",
+          "revisionNotes": [
+            "Units of length: mm, cm, m, km.",
+            "mm/cm for small, m for medium, km for far.",
+            "Choose the unit to suit the object.",
+            "Standard units mean the same to everyone."
+          ]
+        },
+        {
+          "topicId": "math5_ch5_topic2",
+          "topic": "Relationships Between Units",
+          "meaning": "Units of length are related to one another, so we can convert between mm, cm, m and km.",
+          "ncertBasedExplanation": "The units of length are connected by fixed relationships, which let us change one unit into another. The main relationships are: 1 centimetre = 10 millimetres, 1 metre = 100 centimetres, and 1 kilometre = 1,000 metres. Knowing these helps us compare lengths given in different units; for example, we can change 2 metres into 200 centimetres to compare it with a length in centimetres. Understanding how the units relate is the key to measuring and comparing lengths correctly.",
+          "easyExplanation": "Length units are linked: 1 cm = 10 mm, 1 m = 100 cm, 1 km = 1,000 m. These let us change one unit into another.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Units are connected",
+              "explanation": "The units of length are related by fixed relationships."
+            },
+            {
+              "step": 2,
+              "title": "Know the relations",
+              "explanation": "1 cm = 10 mm, 1 m = 100 cm, 1 km = 1,000 m."
+            },
+            {
+              "step": 3,
+              "title": "Compare different units",
+              "explanation": "Convert to the same unit, like 2 m = 200 cm, to compare lengths."
+            },
+            {
+              "step": 4,
+              "title": "Use for measuring",
+              "explanation": "These relationships are the key to measuring and comparing correctly."
+            }
+          ],
+          "examples": [
+            "1 metre = 100 centimetres.",
+            "1 kilometre = 1,000 metres."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Convert",
+              "definition": "To change a measurement from one unit to another.",
+              "simpleExample": "Convert 3 m to 300 cm."
+            },
+            {
+              "keyword": "Relationship",
+              "definition": "A fixed link between two units.",
+              "simpleExample": "1 m = 100 cm is a relationship."
+            },
+            {
+              "keyword": "Unit",
+              "definition": "A standard amount used for measuring.",
+              "simpleExample": "The metre is a unit of length."
+            }
+          ],
+          "quickSummary": "Units of length are related (1 cm = 10 mm, 1 m = 100 cm, 1 km = 1,000 m), which lets us convert between units to compare and measure lengths.",
+          "revisionNotes": [
+            "1 cm = 10 mm; 1 m = 100 cm; 1 km = 1,000 m.",
+            "Relationships let us convert units.",
+            "Convert to the same unit to compare.",
+            "Key to measuring lengths correctly."
+          ]
+        },
+        {
+          "topicId": "math5_ch5_topic3",
+          "topic": "Converting and Comparing Lengths",
+          "meaning": "To compare or combine lengths in different units, we first convert them to the same unit.",
+          "ncertBasedExplanation": "When lengths are given in different units, we cannot compare or add them directly. First we convert all the lengths to the same unit using the relationships between units, and then we compare, add or subtract them. For example, to compare 2 m 50 cm with 230 cm, we change 2 m 50 cm into 250 cm, and see that 250 cm is greater than 230 cm. Converting lengths to a common unit is an important skill for solving real-life measurement problems, such as comparing distances or finding total lengths.",
+          "easyExplanation": "To compare or add lengths in different units, change them to the same unit first. For example, 2 m 50 cm = 250 cm, which is more than 230 cm.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Spot different units",
+              "explanation": "Lengths may be given in different units that cannot be compared directly."
+            },
+            {
+              "step": 2,
+              "title": "Convert to one unit",
+              "explanation": "Change all the lengths to the same unit using the relationships."
+            },
+            {
+              "step": 3,
+              "title": "Then compare or combine",
+              "explanation": "Compare, add or subtract the lengths once they share a unit."
+            },
+            {
+              "step": 4,
+              "title": "Apply to problems",
+              "explanation": "Use this to compare distances and find total lengths in real life."
+            }
+          ],
+          "examples": [
+            "2 m 50 cm equals 250 cm, which is greater than 230 cm.",
+            "To add 1 m and 75 cm, change 1 m to 100 cm and add to get 175 cm."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Convert",
+              "definition": "To change a measurement to another unit.",
+              "simpleExample": "Convert 2 m to 200 cm."
+            },
+            {
+              "keyword": "Compare",
+              "definition": "To decide which length is greater.",
+              "simpleExample": "Compare 250 cm and 230 cm."
+            },
+            {
+              "keyword": "Common unit",
+              "definition": "The single unit chosen for comparing.",
+              "simpleExample": "Use cm as the common unit."
+            }
+          ],
+          "quickSummary": "To compare or combine lengths in different units, we first convert them to the same unit using unit relationships, then compare, add or subtract them.",
+          "revisionNotes": [
+            "Different units can't be compared directly.",
+            "Convert all to the same unit first.",
+            "Example: 2 m 50 cm = 250 cm.",
+            "Then compare, add or subtract."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 6,
+      "chapter": "The Dairy Farm",
+      "topics": [
+        {
+          "topicId": "math5_ch6_topic1",
+          "topic": "Many Ways to Multiply",
+          "meaning": "Multiplication can be done in different ways, such as repeated addition, using arrays, and breaking numbers into parts.",
+          "ncertBasedExplanation": "Multiplication is a quick way of adding equal groups, and it can be done in several ways. We can think of it as repeated addition (4 x 3 means 3 added four times), or picture it as an array of rows and columns. For larger numbers, we can break a number into parts using place value and multiply each part, then add the results; for example, 24 x 3 = (20 x 3) + (4 x 3) = 60 + 12 = 72. Knowing many ways to multiply helps us choose the easiest method and understand why multiplication works.",
+          "easyExplanation": "Multiplication is fast adding of equal groups. You can use repeated addition, arrays, or break numbers into parts, like 24 x 3 = (20 x 3) + (4 x 3).",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Repeated addition",
+              "explanation": "Multiplication adds equal groups, so 4 x 3 means 3 added four times."
+            },
+            {
+              "step": 2,
+              "title": "Arrays",
+              "explanation": "An array of rows and columns shows a multiplication, like 4 rows of 3."
+            },
+            {
+              "step": 3,
+              "title": "Break into parts",
+              "explanation": "Split a number by place value and multiply each part, then add."
+            },
+            {
+              "step": 4,
+              "title": "Choose the easiest way",
+              "explanation": "Knowing many methods helps us pick the simplest one for each problem."
+            }
+          ],
+          "examples": [
+            "24 x 3 = (20 x 3) + (4 x 3) = 60 + 12 = 72.",
+            "An array of 4 rows with 3 dots each shows 4 x 3 = 12."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Multiplication",
+              "definition": "A quick way of adding equal groups.",
+              "simpleExample": "3 x 4 means four groups of three."
+            },
+            {
+              "keyword": "Array",
+              "definition": "An arrangement in rows and columns.",
+              "simpleExample": "An array shows 4 x 3 as 4 rows of 3."
+            },
+            {
+              "keyword": "Product",
+              "definition": "The result of multiplying.",
+              "simpleExample": "The product of 24 and 3 is 72."
+            }
+          ],
+          "quickSummary": "Multiplication, a quick way of adding equal groups, can be done by repeated addition, arrays, or breaking numbers into parts and adding the results.",
+          "revisionNotes": [
+            "Multiplication = fast adding of equal groups.",
+            "Methods: repeated addition, arrays, breaking into parts.",
+            "24 x 3 = (20 x 3)+(4 x 3) = 72.",
+            "Choose the easiest method."
+          ]
+        },
+        {
+          "topicId": "math5_ch6_topic2",
+          "topic": "Multiplying Larger Numbers",
+          "meaning": "Larger numbers are multiplied by using place value to multiply part by part and adding the results.",
+          "ncertBasedExplanation": "To multiply larger numbers, we use the place value of the digits. We multiply the number by the ones, then by the tens, then by the hundreds, and add these partial results together. For example, to find 234 x 6, we multiply 6 by 4 ones, 3 tens and 2 hundreds, carrying over as needed, to get 1,404. This is the standard column method of multiplication. Working carefully, place by place, lets us multiply big numbers correctly, which is useful for problems like finding the total milk from many cows on a dairy farm.",
+          "easyExplanation": "To multiply big numbers, multiply part by part using place value and add the results, like 234 x 6 = 1,404, using the column method.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Use place value",
+              "explanation": "Multiply by the ones, tens and hundreds separately."
+            },
+            {
+              "step": 2,
+              "title": "Multiply part by part",
+              "explanation": "Multiply each digit, carrying over to the next place when needed."
+            },
+            {
+              "step": 3,
+              "title": "Add the partial results",
+              "explanation": "Add the products of each place to get the final answer."
+            },
+            {
+              "step": 4,
+              "title": "Apply to problems",
+              "explanation": "Use this to solve problems like total milk from many cows."
+            }
+          ],
+          "examples": [
+            "234 x 6 = 1,404.",
+            "125 x 4 = 500."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Column method",
+              "definition": "Multiplying numbers written in place-value columns.",
+              "simpleExample": "We use the column method for 234 x 6."
+            },
+            {
+              "keyword": "Carry over",
+              "definition": "Moving a ten to the next place during multiplication.",
+              "simpleExample": "Multiplying 6 x 4 = 24 carries a 2."
+            },
+            {
+              "keyword": "Partial product",
+              "definition": "The result of multiplying by one place.",
+              "simpleExample": "6 x 30 = 180 is a partial product."
+            }
+          ],
+          "quickSummary": "Larger numbers are multiplied place by place using the column method: multiply by ones, tens and hundreds, carry over as needed, and add the partial results.",
+          "revisionNotes": [
+            "Use place value to multiply big numbers.",
+            "Multiply part by part (ones, tens, hundreds).",
+            "Carry over and add partial results.",
+            "Example: 234 x 6 = 1,404."
+          ]
+        },
+        {
+          "topicId": "math5_ch6_topic3",
+          "topic": "Multiplication Patterns",
+          "meaning": "Multiplication has many patterns, such as multiplying by 10, 100 and 1,000, that make calculation faster.",
+          "ncertBasedExplanation": "Multiplication contains useful patterns that make calculating quicker. When we multiply a number by 10, 100 or 1,000, we simply add one, two or three zeros to the number, so 25 x 100 = 2,500. There are also patterns in the multiplication tables, such as the products of 9 or the doubling pattern of 2, 4, 8. Spotting these patterns helps us multiply faster and check our answers. Recognising and using patterns is an important part of becoming confident with multiplication.",
+          "easyExplanation": "Multiplication has handy patterns: x10, x100, x1,000 just adds zeros (25 x 100 = 2,500), and tables have patterns that speed up calculation.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Multiplying by 10, 100, 1,000",
+              "explanation": "Add one, two or three zeros, so 25 x 100 = 2,500."
+            },
+            {
+              "step": 2,
+              "title": "Patterns in tables",
+              "explanation": "Tables like the 9s or the doubling 2, 4, 8 follow patterns."
+            },
+            {
+              "step": 3,
+              "title": "Multiply faster",
+              "explanation": "Recognising patterns lets us calculate and check more quickly."
+            },
+            {
+              "step": 4,
+              "title": "Build confidence",
+              "explanation": "Using patterns makes us confident and quick with multiplication."
+            }
+          ],
+          "examples": [
+            "25 x 100 = 2,500 by adding two zeros.",
+            "The 9 times table digits add up to 9 (18, 27, 36...)."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Pattern",
+              "definition": "A regular, repeating rule.",
+              "simpleExample": "Adding zeros when multiplying by 10 is a pattern."
+            },
+            {
+              "keyword": "Multiple",
+              "definition": "A number got by multiplying.",
+              "simpleExample": "20 is a multiple of 10."
+            },
+            {
+              "keyword": "Times table",
+              "definition": "A list of multiples of a number.",
+              "simpleExample": "The 5 times table is 5, 10, 15, 20."
+            }
+          ],
+          "quickSummary": "Multiplication has useful patterns, like adding zeros when multiplying by 10, 100 or 1,000, and patterns in the tables, which make calculation faster.",
+          "revisionNotes": [
+            "x10, x100, x1,000 adds 1, 2, 3 zeros.",
+            "Example: 25 x 100 = 2,500.",
+            "Tables have patterns (9s, doubling).",
+            "Patterns speed up multiplication."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 7,
+      "chapter": "Shapes and Patterns",
+      "topics": [
+        {
+          "topicId": "math5_ch7_topic1",
+          "topic": "2D and 3D Shapes",
+          "meaning": "Two-dimensional (2D) shapes are flat, while three-dimensional (3D) shapes are solid and take up space.",
+          "ncertBasedExplanation": "Shapes are of two main kinds. Two-dimensional (2D) shapes are flat and have only length and breadth, such as squares, rectangles, triangles and circles. Three-dimensional (3D) shapes are solid and have length, breadth and height, such as cubes, cuboids, cylinders, cones and spheres. 3D shapes have faces (flat surfaces), edges (where faces meet) and corners (vertices). For example, a cube has 6 faces, 12 edges and 8 corners. Recognising 2D and 3D shapes and their parts helps us understand the objects around us.",
+          "easyExplanation": "Flat shapes like squares and circles are 2D. Solid shapes like cubes and spheres are 3D, with faces, edges and corners.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "2D shapes are flat",
+              "explanation": "Two-dimensional shapes like squares, triangles and circles have only length and breadth."
+            },
+            {
+              "step": 2,
+              "title": "3D shapes are solid",
+              "explanation": "Three-dimensional shapes like cubes, cylinders and spheres have length, breadth and height."
+            },
+            {
+              "step": 3,
+              "title": "Parts of 3D shapes",
+              "explanation": "3D shapes have faces (flat surfaces), edges and corners (vertices)."
+            },
+            {
+              "step": 4,
+              "title": "Count the parts",
+              "explanation": "A cube has 6 faces, 12 edges and 8 corners."
+            }
+          ],
+          "examples": [
+            "A square is a 2D shape; a cube is a 3D shape.",
+            "A cube has 6 faces, 12 edges and 8 corners."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "2D shape",
+              "definition": "A flat shape with length and breadth.",
+              "simpleExample": "A circle is a 2D shape."
+            },
+            {
+              "keyword": "3D shape",
+              "definition": "A solid shape with length, breadth and height.",
+              "simpleExample": "A ball is a 3D shape (sphere)."
+            },
+            {
+              "keyword": "Face",
+              "definition": "A flat surface of a 3D shape.",
+              "simpleExample": "A cube has 6 faces."
+            },
+            {
+              "keyword": "Edge",
+              "definition": "The line where two faces of a 3D shape meet.",
+              "simpleExample": "A cube has 12 edges."
+            }
+          ],
+          "quickSummary": "2D shapes are flat (squares, circles) with length and breadth, while 3D shapes are solid (cubes, spheres) with faces, edges and corners.",
+          "revisionNotes": [
+            "2D shapes are flat (length, breadth).",
+            "3D shapes are solid (length, breadth, height).",
+            "3D shapes have faces, edges, corners.",
+            "A cube: 6 faces, 12 edges, 8 corners."
+          ]
+        },
+        {
+          "topicId": "math5_ch7_topic2",
+          "topic": "Patterns with Shapes",
+          "meaning": "Patterns are made by repeating or changing shapes according to a rule, and can be used to make designs and tilings.",
+          "ncertBasedExplanation": "A pattern is a design made by repeating shapes according to a rule. In a shape pattern, shapes may repeat, grow, turn or change colour following the rule. We can continue a pattern by finding the rule and applying it to draw the next shapes. Shapes can also be used to cover a surface completely without gaps or overlaps, which is called tiling or tessellation. Patterns and tilings are seen in floors, fabrics, rangolis and many decorations, showing how mathematics appears in art and design.",
+          "easyExplanation": "Patterns repeat or change shapes by a rule. Shapes can also tile a surface with no gaps. Patterns appear in floors, fabrics and rangolis.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Patterns follow a rule",
+              "explanation": "A pattern repeats or changes shapes according to a rule."
+            },
+            {
+              "step": 2,
+              "title": "Continue the pattern",
+              "explanation": "Find the rule and apply it to draw the next shapes."
+            },
+            {
+              "step": 3,
+              "title": "Tiling",
+              "explanation": "Shapes can cover a surface with no gaps or overlaps, called tiling or tessellation."
+            },
+            {
+              "step": 4,
+              "title": "Patterns in life",
+              "explanation": "Patterns and tilings appear in floors, fabrics, rangolis and decorations."
+            }
+          ],
+          "examples": [
+            "A row of triangle, square, triangle, square is a repeating shape pattern.",
+            "Square tiles fitting together with no gaps is an example of tiling."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Pattern",
+              "definition": "A design made by repeating shapes by a rule.",
+              "simpleExample": "Circle, square, circle, square is a pattern."
+            },
+            {
+              "keyword": "Tiling",
+              "definition": "Covering a surface with shapes and no gaps.",
+              "simpleExample": "Floor tiles show tiling."
+            },
+            {
+              "keyword": "Tessellation",
+              "definition": "A pattern of shapes that fit together with no gaps.",
+              "simpleExample": "Hexagons can tessellate."
+            }
+          ],
+          "quickSummary": "Patterns are made by repeating or changing shapes by a rule, and shapes can tile a surface with no gaps; patterns appear in floors, fabrics and rangolis.",
+          "revisionNotes": [
+            "Patterns repeat/change shapes by a rule.",
+            "Find the rule to continue a pattern.",
+            "Tiling covers a surface with no gaps.",
+            "Seen in floors, fabrics, rangolis."
+          ]
+        },
+        {
+          "topicId": "math5_ch7_topic3",
+          "topic": "Nets of 3D Shapes",
+          "meaning": "A net is a flat shape that can be folded to make a 3D shape.",
+          "ncertBasedExplanation": "A net is a flat (2D) drawing that can be cut out and folded to form a three-dimensional (3D) shape. Each 3D shape has a net made of its faces joined along edges. For example, the net of a cube is made of six squares joined together that fold into the cube, and a cylinder's net is made of two circles and a rectangle. Studying nets helps us understand how 3D shapes are built from flat faces and is useful for making boxes and models. Folding a net is a fun way to see the link between 2D and 3D shapes.",
+          "easyExplanation": "A net is a flat shape that folds up into a 3D shape. For example, six squares can fold into a cube.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "What a net is",
+              "explanation": "A net is a flat shape that can be folded to make a 3D shape."
+            },
+            {
+              "step": 2,
+              "title": "Made of faces",
+              "explanation": "A net is made of the faces of the 3D shape joined along edges."
+            },
+            {
+              "step": 3,
+              "title": "Cube and cylinder",
+              "explanation": "A cube's net is six squares; a cylinder's net is two circles and a rectangle."
+            },
+            {
+              "step": 4,
+              "title": "Why nets help",
+              "explanation": "Nets show how 3D shapes are built from flat faces and help make boxes and models."
+            }
+          ],
+          "examples": [
+            "Six squares joined in the right way fold into a cube.",
+            "A cylinder's net is two circles and a rectangle."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Net",
+              "definition": "A flat shape that folds into a 3D shape.",
+              "simpleExample": "A cube's net is six squares."
+            },
+            {
+              "keyword": "Face",
+              "definition": "A flat surface of a 3D shape.",
+              "simpleExample": "A cube has 6 square faces."
+            },
+            {
+              "keyword": "Fold",
+              "definition": "To bend along a line.",
+              "simpleExample": "We fold a net to make a box."
+            }
+          ],
+          "quickSummary": "A net is a flat shape made of a solid's faces that folds into a 3D shape, like six squares folding into a cube, showing how 3D shapes are built from flat faces.",
+          "revisionNotes": [
+            "Net = flat shape that folds into a 3D shape.",
+            "Made of the solid's faces joined at edges.",
+            "Cube net = six squares.",
+            "Nets link 2D and 3D shapes."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 8,
+      "chapter": "Weight and Capacity",
+      "topics": [
+        {
+          "topicId": "math5_ch8_topic1",
+          "topic": "Measuring Weight",
+          "meaning": "Weight is how heavy something is, measured in grams and kilograms.",
+          "ncertBasedExplanation": "Weight tells us how heavy an object is. The standard units of weight are the gram (g) for light objects and the kilogram (kg) for heavier objects, with 1 kilogram = 1,000 grams. We weigh objects using a balance or a weighing scale. We choose the right unit for each object: grams for a few spices or a pencil, and kilograms for fruits, vegetables or a school bag. We can add, subtract and convert weights, for example changing 2 kg into 2,000 g, to solve real-life problems like weighing items at a shop.",
+          "easyExplanation": "Weight is how heavy something is, measured in grams (light things) and kilograms (heavy things). 1 kg = 1,000 g.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "What weight is",
+              "explanation": "Weight tells us how heavy an object is."
+            },
+            {
+              "step": 2,
+              "title": "Units of weight",
+              "explanation": "Grams (g) for light objects and kilograms (kg) for heavier ones; 1 kg = 1,000 g."
+            },
+            {
+              "step": 3,
+              "title": "Weighing tools",
+              "explanation": "We weigh objects using a balance or a weighing scale."
+            },
+            {
+              "step": 4,
+              "title": "Convert and calculate",
+              "explanation": "Convert between units (2 kg = 2,000 g) and add or subtract weights."
+            }
+          ],
+          "examples": [
+            "A bag of apples may weigh 2 kilograms.",
+            "2 kilograms equals 2,000 grams."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Weight",
+              "definition": "How heavy an object is.",
+              "simpleExample": "The weight of a melon is about 1 kg."
+            },
+            {
+              "keyword": "Gram",
+              "definition": "A small unit of weight.",
+              "simpleExample": "A pencil weighs a few grams."
+            },
+            {
+              "keyword": "Kilogram",
+              "definition": "A unit of weight equal to 1,000 grams.",
+              "simpleExample": "A school bag may weigh 3 kilograms."
+            }
+          ],
+          "quickSummary": "Weight is how heavy something is, measured in grams (light objects) and kilograms (heavy objects), where 1 kg = 1,000 g, using a balance or scale.",
+          "revisionNotes": [
+            "Weight = how heavy an object is.",
+            "Units: gram (light), kilogram (heavy).",
+            "1 kg = 1,000 g.",
+            "Weighed using a balance or scale."
+          ]
+        },
+        {
+          "topicId": "math5_ch8_topic2",
+          "topic": "Measuring Capacity",
+          "meaning": "Capacity is how much a container can hold, measured in litres and millilitres.",
+          "ncertBasedExplanation": "Capacity tells us how much liquid a container can hold. The standard units of capacity are the millilitre (mL) for small amounts and the litre (L) for larger amounts, with 1 litre = 1,000 millilitres. We choose the right unit for each container: millilitres for a spoon of medicine or a glass of juice, and litres for a bucket or a can of milk. We can add, subtract and convert capacities, for example changing 2 litres into 2,000 millilitres, to solve everyday problems like measuring milk or water.",
+          "easyExplanation": "Capacity is how much a container holds, measured in millilitres (small) and litres (large). 1 L = 1,000 mL.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "What capacity is",
+              "explanation": "Capacity tells us how much liquid a container can hold."
+            },
+            {
+              "step": 2,
+              "title": "Units of capacity",
+              "explanation": "Millilitres (mL) for small amounts and litres (L) for larger ones; 1 L = 1,000 mL."
+            },
+            {
+              "step": 3,
+              "title": "Choose the unit",
+              "explanation": "mL for a spoon of medicine, L for a bucket of water."
+            },
+            {
+              "step": 4,
+              "title": "Convert and calculate",
+              "explanation": "Convert between units (2 L = 2,000 mL) and add or subtract capacities."
+            }
+          ],
+          "examples": [
+            "A bucket may hold 10 litres of water.",
+            "2 litres equals 2,000 millilitres."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Capacity",
+              "definition": "How much a container can hold.",
+              "simpleExample": "A bottle's capacity is 1 litre."
+            },
+            {
+              "keyword": "Litre",
+              "definition": "A unit of capacity equal to 1,000 millilitres.",
+              "simpleExample": "A milk can holds several litres."
+            },
+            {
+              "keyword": "Millilitre",
+              "definition": "A small unit of capacity.",
+              "simpleExample": "A spoon holds a few millilitres."
+            }
+          ],
+          "quickSummary": "Capacity is how much a container can hold, measured in millilitres (small amounts) and litres (large amounts), where 1 L = 1,000 mL.",
+          "revisionNotes": [
+            "Capacity = how much a container holds.",
+            "Units: millilitre (small), litre (large).",
+            "1 L = 1,000 mL.",
+            "Used to measure milk, water and juice."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 9,
+      "chapter": "Coconut Farm",
+      "topics": [
+        {
+          "topicId": "math5_ch9_topic1",
+          "topic": "Division and Multiplication Facts",
+          "meaning": "Division splits a number into equal groups and is the reverse of multiplication.",
+          "ncertBasedExplanation": "Division means splitting a number into equal groups or sharing equally. It is the reverse of multiplication, so every multiplication fact gives us two division facts. For example, from 5 x 7 = 35 we get 35 ÷ 7 = 5 and 35 ÷ 5 = 7. In a division, the number being divided is the dividend, the number we divide by is the divisor, and the answer is the quotient; the relationship is dividend = divisor x quotient. Understanding the link between multiplication and division helps us divide quickly and check our answers.",
+          "easyExplanation": "Division splits a number into equal groups and undoes multiplication. From 5 x 7 = 35 we get 35 ÷ 7 = 5 and 35 ÷ 5 = 7.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "What division is",
+              "explanation": "Division splits a number into equal groups or shares equally."
+            },
+            {
+              "step": 2,
+              "title": "Reverse of multiplication",
+              "explanation": "Each multiplication fact gives two division facts."
+            },
+            {
+              "step": 3,
+              "title": "Example",
+              "explanation": "From 5 x 7 = 35 we get 35 ÷ 7 = 5 and 35 ÷ 5 = 7."
+            },
+            {
+              "step": 4,
+              "title": "Know the parts",
+              "explanation": "Dividend = divisor x quotient; the dividend is split into equal groups."
+            }
+          ],
+          "examples": [
+            "35 ÷ 7 = 5 because 35 split into 7 groups has 5 in each.",
+            "From 6 x 4 = 24 we get 24 ÷ 4 = 6 and 24 ÷ 6 = 4."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Division",
+              "definition": "Splitting a number into equal groups.",
+              "simpleExample": "12 ÷ 3 = 4."
+            },
+            {
+              "keyword": "Dividend",
+              "definition": "The number being divided.",
+              "simpleExample": "In 35 ÷ 7, the dividend is 35."
+            },
+            {
+              "keyword": "Divisor",
+              "definition": "The number we divide by.",
+              "simpleExample": "In 35 ÷ 7, the divisor is 7."
+            },
+            {
+              "keyword": "Quotient",
+              "definition": "The answer in a division.",
+              "simpleExample": "In 35 ÷ 7 = 5, the quotient is 5."
+            }
+          ],
+          "quickSummary": "Division splits a number into equal groups and is the reverse of multiplication, so each multiplication fact gives two division facts (dividend = divisor x quotient).",
+          "revisionNotes": [
+            "Division splits into equal groups.",
+            "It is the reverse of multiplication.",
+            "5 x 7 = 35 gives 35÷7=5 and 35÷5=7.",
+            "Dividend = divisor x quotient."
+          ]
+        },
+        {
+          "topicId": "math5_ch9_topic2",
+          "topic": "Dividing Larger Numbers",
+          "meaning": "Larger numbers are divided using long division, working through the digits from left to right.",
+          "ncertBasedExplanation": "To divide larger numbers, we use a step-by-step method called long division. We work from the leftmost digit, dividing, multiplying, subtracting and bringing down the next digit, repeating until all digits are used. For example, dividing 96 by 4 gives 24. Long division lets us divide big numbers into equal groups accurately. It is useful for real-life problems, like sharing a large number of coconuts equally among baskets or workers. Checking the answer using dividend = divisor x quotient (plus remainder) confirms the division is correct.",
+          "easyExplanation": "Big numbers are divided using long division: divide, multiply, subtract and bring down, step by step. For example, 96 ÷ 4 = 24.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Use long division",
+              "explanation": "Long division is a step-by-step method for dividing larger numbers."
+            },
+            {
+              "step": 2,
+              "title": "Work left to right",
+              "explanation": "Start from the leftmost digit and move right."
+            },
+            {
+              "step": 3,
+              "title": "Repeat the steps",
+              "explanation": "Divide, multiply, subtract and bring down the next digit, repeating."
+            },
+            {
+              "step": 4,
+              "title": "Check the answer",
+              "explanation": "Confirm using dividend = divisor x quotient (plus remainder)."
+            }
+          ],
+          "examples": [
+            "96 ÷ 4 = 24.",
+            "Sharing 150 coconuts equally among 5 baskets gives 30 in each."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Long division",
+              "definition": "A step-by-step method to divide large numbers.",
+              "simpleExample": "We use long division for 96 ÷ 4."
+            },
+            {
+              "keyword": "Quotient",
+              "definition": "The answer in a division.",
+              "simpleExample": "96 ÷ 4 has a quotient of 24."
+            },
+            {
+              "keyword": "Equal groups",
+              "definition": "Groups with the same number in each.",
+              "simpleExample": "150 coconuts in 5 equal groups of 30."
+            }
+          ],
+          "quickSummary": "Larger numbers are divided using long division (divide, multiply, subtract, bring down), useful for sharing equally, with the answer checked by dividend = divisor x quotient.",
+          "revisionNotes": [
+            "Use long division for larger numbers.",
+            "Steps: divide, multiply, subtract, bring down.",
+            "Work left to right.",
+            "Check with dividend = divisor x quotient."
+          ]
+        },
+        {
+          "topicId": "math5_ch9_topic3",
+          "topic": "Remainders",
+          "meaning": "When a number cannot be divided exactly, the amount left over is called the remainder.",
+          "ncertBasedExplanation": "Sometimes a number cannot be split into equal groups perfectly, and some amount is left over. This leftover amount is called the remainder. For example, dividing 35 by 4 gives 8 in each group with 3 left over, so the quotient is 8 and the remainder is 3. The remainder is always smaller than the divisor. In real life, the remainder tells us how many items are left after sharing equally, such as coconuts left over after filling equal baskets. The full relationship is dividend = (divisor x quotient) + remainder.",
+          "easyExplanation": "When a number won't divide evenly, the leftover is the remainder. 35 ÷ 4 = 8 with remainder 3. The remainder is always smaller than the divisor.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Leftover amount",
+              "explanation": "When a number cannot be divided exactly, some amount is left over."
+            },
+            {
+              "step": 2,
+              "title": "Name it remainder",
+              "explanation": "This leftover amount is called the remainder."
+            },
+            {
+              "step": 3,
+              "title": "Example",
+              "explanation": "35 ÷ 4 gives 8 in each group with 3 left over, so the remainder is 3."
+            },
+            {
+              "step": 4,
+              "title": "Key rule",
+              "explanation": "The remainder is always smaller than the divisor; dividend = (divisor x quotient) + remainder."
+            }
+          ],
+          "examples": [
+            "35 ÷ 4 = 8 with a remainder of 3.",
+            "Sharing 23 coconuts among 5 baskets leaves 3 coconuts as the remainder."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Remainder",
+              "definition": "The amount left over after dividing.",
+              "simpleExample": "23 ÷ 5 leaves a remainder of 3."
+            },
+            {
+              "keyword": "Divisor",
+              "definition": "The number we divide by.",
+              "simpleExample": "In 23 ÷ 5, the divisor is 5."
+            },
+            {
+              "keyword": "Quotient",
+              "definition": "The whole-number answer in a division.",
+              "simpleExample": "23 ÷ 5 has a quotient of 4."
+            }
+          ],
+          "quickSummary": "When a number cannot be divided exactly, the leftover is the remainder (always smaller than the divisor); dividend = (divisor x quotient) + remainder.",
+          "revisionNotes": [
+            "Remainder = leftover after dividing.",
+            "Example: 35 ÷ 4 = 8 remainder 3.",
+            "Remainder is smaller than the divisor.",
+            "Dividend = (divisor x quotient) + remainder."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 10,
+      "chapter": "Symmetrical Designs",
+      "topics": [
+        {
+          "topicId": "math5_ch10_topic1",
+          "topic": "Line of Symmetry",
+          "meaning": "A line of symmetry divides a shape into two identical halves that are mirror images of each other.",
+          "ncertBasedExplanation": "A shape has line symmetry if a line can be drawn through it so that one half is the exact mirror image of the other. This line is called the line of symmetry. If we fold the shape along this line, the two halves match exactly. A shape can have no line of symmetry, one line, or many lines: a rectangle has 2 lines of symmetry, a square has 4, and a circle has countless. Many things around us, like leaves, butterflies and the letter A, have line symmetry. Finding lines of symmetry helps us understand balanced shapes.",
+          "easyExplanation": "A line of symmetry splits a shape into two matching mirror halves. Fold along it and the halves overlap exactly. A square has 4 such lines.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "What symmetry is",
+              "explanation": "A shape has line symmetry if a line divides it into two mirror-image halves."
+            },
+            {
+              "step": 2,
+              "title": "The line of symmetry",
+              "explanation": "This dividing line is called the line of symmetry."
+            },
+            {
+              "step": 3,
+              "title": "Test by folding",
+              "explanation": "Folding along the line makes the two halves match exactly."
+            },
+            {
+              "step": 4,
+              "title": "Count the lines",
+              "explanation": "A rectangle has 2 lines of symmetry, a square 4, and a circle countless."
+            }
+          ],
+          "examples": [
+            "The letter A has one vertical line of symmetry.",
+            "A square has four lines of symmetry."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Line of symmetry",
+              "definition": "A line dividing a shape into two mirror-image halves.",
+              "simpleExample": "A butterfly has a line of symmetry."
+            },
+            {
+              "keyword": "Mirror image",
+              "definition": "An exact reversed copy, as in a mirror.",
+              "simpleExample": "Each half across the line is a mirror image."
+            },
+            {
+              "keyword": "Symmetry",
+              "definition": "A balanced, matching arrangement.",
+              "simpleExample": "A square shows symmetry."
+            }
+          ],
+          "quickSummary": "A line of symmetry divides a shape into two identical mirror-image halves that match when folded; shapes may have none, one or many lines (square has 4).",
+          "revisionNotes": [
+            "Line of symmetry splits a shape into mirror halves.",
+            "Folding along it makes halves match.",
+            "Rectangle: 2 lines; square: 4; circle: countless.",
+            "Seen in leaves, butterflies, letters."
+          ]
+        },
+        {
+          "topicId": "math5_ch10_topic2",
+          "topic": "Making Symmetrical Designs",
+          "meaning": "Symmetrical designs are created by repeating or reflecting shapes around a line or point so both sides match.",
+          "ncertBasedExplanation": "We can create beautiful symmetrical designs using the idea of symmetry. By drawing one half of a design and then making the other half as a mirror image across a line of symmetry, we get a balanced, symmetrical pattern. We can also make designs with more than one line of symmetry, like rangoli and many Indian art forms, which look the same on several sides. Symmetry is used in art, architecture, fabrics and nature. Making symmetrical designs helps us see how mathematics and art come together.",
+          "easyExplanation": "We make symmetrical designs by drawing one half and mirroring the other across a line. Rangolis and many patterns use symmetry.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Use a line of symmetry",
+              "explanation": "Draw one half of a design, then mirror it across a line of symmetry."
+            },
+            {
+              "step": 2,
+              "title": "Both sides match",
+              "explanation": "The mirror image makes both sides of the design match."
+            },
+            {
+              "step": 3,
+              "title": "More lines of symmetry",
+              "explanation": "Designs like rangoli can have several lines of symmetry."
+            },
+            {
+              "step": 4,
+              "title": "Symmetry in art",
+              "explanation": "Symmetry is used in art, architecture, fabrics and nature."
+            }
+          ],
+          "examples": [
+            "Folding paper, cutting a shape and opening it makes a symmetrical design.",
+            "A rangoli often has several lines of symmetry."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Symmetrical design",
+              "definition": "A balanced design with matching halves.",
+              "simpleExample": "A rangoli is a symmetrical design."
+            },
+            {
+              "keyword": "Reflect",
+              "definition": "To make a mirror image across a line.",
+              "simpleExample": "We reflect a shape to make symmetry."
+            },
+            {
+              "keyword": "Pattern",
+              "definition": "A repeating design.",
+              "simpleExample": "Symmetrical patterns appear in fabrics."
+            }
+          ],
+          "quickSummary": "Symmetrical designs are made by mirroring shapes across a line of symmetry so both sides match; many, like rangolis, have several lines of symmetry, linking maths and art.",
+          "revisionNotes": [
+            "Mirror one half across a line of symmetry.",
+            "Both sides of the design match.",
+            "Rangolis have several lines of symmetry.",
+            "Symmetry links maths and art."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 11,
+      "chapter": "Grandmother's Quilt",
+      "topics": [
+        {
+          "topicId": "math5_ch11_topic1",
+          "topic": "Perimeter",
+          "meaning": "Perimeter is the total length of the boundary of a closed flat shape.",
+          "ncertBasedExplanation": "The perimeter of a closed flat shape is the total distance around its boundary, found by adding the lengths of all its sides. For a rectangle, the perimeter is 2 x (length + breadth), and for a square it is 4 x side because all sides are equal. Perimeter is measured in units of length like centimetres or metres. In the chapter, perimeter is used to find how much lace is needed to go around the border of a quilt. Knowing perimeter helps in real life, such as fencing a field or putting a border on a cloth.",
+          "easyExplanation": "Perimeter is the total length around a shape. Add up all the sides. For a square it is 4 x side; for a rectangle, 2 x (length + breadth).",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "What perimeter is",
+              "explanation": "Perimeter is the total length of the boundary of a closed shape."
+            },
+            {
+              "step": 2,
+              "title": "Add the sides",
+              "explanation": "Find the perimeter by adding the lengths of all sides."
+            },
+            {
+              "step": 3,
+              "title": "Rectangle rule",
+              "explanation": "Perimeter of a rectangle = 2 x (length + breadth)."
+            },
+            {
+              "step": 4,
+              "title": "Square rule",
+              "explanation": "Perimeter of a square = 4 x side, since all sides are equal."
+            }
+          ],
+          "examples": [
+            "A rectangle 5 cm by 3 cm has perimeter 2 x (5 + 3) = 16 cm.",
+            "The lace needed around a quilt's border equals the quilt's perimeter."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Perimeter",
+              "definition": "The total length around a closed shape.",
+              "simpleExample": "A triangle's perimeter is the sum of its sides."
+            },
+            {
+              "keyword": "Boundary",
+              "definition": "The outer edge of a shape.",
+              "simpleExample": "We measure along the boundary for perimeter."
+            },
+            {
+              "keyword": "Side",
+              "definition": "One edge of a shape.",
+              "simpleExample": "A square has four equal sides."
+            }
+          ],
+          "quickSummary": "Perimeter is the total length of a shape's boundary, found by adding all sides; a rectangle's is 2 x (length + breadth) and a square's is 4 x side.",
+          "revisionNotes": [
+            "Perimeter = total length around a shape.",
+            "Add the lengths of all sides.",
+            "Rectangle: 2 x (length + breadth).",
+            "Square: 4 x side; used for borders and fencing."
+          ]
+        },
+        {
+          "topicId": "math5_ch11_topic2",
+          "topic": "Area",
+          "meaning": "Area is the amount of flat surface a shape covers, measured in square units.",
+          "ncertBasedExplanation": "The area of a flat shape is the amount of surface it covers, measured in square units like square centimetres. For a rectangle, the area is length x breadth, and for a square it is side x side. On squared paper, we can find the area of a shape by counting the unit squares it covers, counting full squares as one and pairing up half squares. In the chapter, area helps us find how much cloth covers the quilt. Area is useful in daily life for finding how much carpet covers a floor or how much cloth is needed.",
+          "easyExplanation": "Area is how much flat surface a shape covers, in square units. For a rectangle it is length x breadth; for a square, side x side.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "What area is",
+              "explanation": "Area is the amount of flat surface a shape covers."
+            },
+            {
+              "step": 2,
+              "title": "Square units",
+              "explanation": "Area is measured in square units like square centimetres."
+            },
+            {
+              "step": 3,
+              "title": "Rectangle rule",
+              "explanation": "Area of a rectangle = length x breadth."
+            },
+            {
+              "step": 4,
+              "title": "Square rule and counting",
+              "explanation": "Area of a square = side x side; on grid paper, count the unit squares covered."
+            }
+          ],
+          "examples": [
+            "A rectangle 5 cm by 3 cm has area 5 x 3 = 15 square cm.",
+            "A square of side 4 cm has area 4 x 4 = 16 square cm."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Area",
+              "definition": "The amount of flat surface a shape covers.",
+              "simpleExample": "A 2 cm square has area 4 square cm."
+            },
+            {
+              "keyword": "Square unit",
+              "definition": "A unit for measuring area.",
+              "simpleExample": "Area is measured in square units."
+            },
+            {
+              "keyword": "Length and breadth",
+              "definition": "The two side lengths of a rectangle.",
+              "simpleExample": "Area = length x breadth."
+            }
+          ],
+          "quickSummary": "Area is the amount of flat surface a shape covers, measured in square units; a rectangle's area is length x breadth and a square's is side x side.",
+          "revisionNotes": [
+            "Area = flat surface covered, in square units.",
+            "Rectangle: length x breadth.",
+            "Square: side x side.",
+            "On grid paper, count unit squares."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 12,
+      "chapter": "Racing Seconds",
+      "topics": [
+        {
+          "topicId": "math5_ch12_topic1",
+          "topic": "Units of Time",
+          "meaning": "Time is measured in seconds, minutes and hours, which are related to one another.",
+          "ncertBasedExplanation": "Time is measured using standard units: seconds, minutes, hours, and also days, weeks, months and years. The smaller units are related: 1 minute = 60 seconds, 1 hour = 60 minutes, and 1 day = 24 hours. We read time using clocks, in both the 12-hour form (with a.m. and p.m.) and the 24-hour form. Knowing the units of time and how they relate lets us measure how long activities take, such as a race measured in seconds or a journey measured in hours.",
+          "easyExplanation": "Time is measured in seconds, minutes and hours. 1 minute = 60 seconds, 1 hour = 60 minutes, 1 day = 24 hours.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Units of time",
+              "explanation": "Time is measured in seconds, minutes, hours, days, weeks, months and years."
+            },
+            {
+              "step": 2,
+              "title": "Know the relations",
+              "explanation": "1 minute = 60 seconds, 1 hour = 60 minutes, 1 day = 24 hours."
+            },
+            {
+              "step": 3,
+              "title": "Reading clocks",
+              "explanation": "We read time in 12-hour (a.m./p.m.) and 24-hour forms."
+            },
+            {
+              "step": 4,
+              "title": "Measure activities",
+              "explanation": "Use units of time to measure how long activities take."
+            }
+          ],
+          "examples": [
+            "1 minute = 60 seconds.",
+            "A race may be timed in seconds, while a journey is measured in hours."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Second",
+              "definition": "The smallest common unit of time.",
+              "simpleExample": "A race is timed in seconds."
+            },
+            {
+              "keyword": "Minute",
+              "definition": "A unit of time equal to 60 seconds.",
+              "simpleExample": "One minute has 60 seconds."
+            },
+            {
+              "keyword": "Hour",
+              "definition": "A unit of time equal to 60 minutes.",
+              "simpleExample": "One hour has 60 minutes."
+            }
+          ],
+          "quickSummary": "Time is measured in seconds, minutes and hours, which are related (1 min = 60 s, 1 hour = 60 min, 1 day = 24 hours) and read using clocks.",
+          "revisionNotes": [
+            "Units: seconds, minutes, hours, days.",
+            "1 min = 60 s; 1 hour = 60 min; 1 day = 24 hours.",
+            "Read time in 12-hour and 24-hour forms.",
+            "Used to measure how long activities take."
+          ]
+        },
+        {
+          "topicId": "math5_ch12_topic2",
+          "topic": "Calculating Duration",
+          "meaning": "Duration is how long something lasts, found by comparing the starting and ending times.",
+          "ncertBasedExplanation": "Duration means how long an activity or event lasts. To find the duration, we compare the starting time and the ending time and work out the time in between. For short events, like a race, we may calculate the difference in seconds or minutes; for longer events, in hours. For example, an activity from 4:10 p.m. to 4:45 p.m. lasts 35 minutes. Sometimes we add durations together, such as the times of different parts of a journey. Calculating duration helps us plan our day and compare how fast different activities are done.",
+          "easyExplanation": "Duration is how long something lasts. Find it from the start and end times, like 4:10 to 4:45 being 35 minutes.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "What duration is",
+              "explanation": "Duration is how long an activity or event lasts."
+            },
+            {
+              "step": 2,
+              "title": "Use start and end times",
+              "explanation": "Compare the starting and ending times to find the time in between."
+            },
+            {
+              "step": 3,
+              "title": "Calculate the difference",
+              "explanation": "Work out the difference in seconds, minutes or hours as needed."
+            },
+            {
+              "step": 4,
+              "title": "Add durations",
+              "explanation": "Sometimes add durations, like the times of different parts of a journey."
+            }
+          ],
+          "examples": [
+            "From 4:10 p.m. to 4:45 p.m. is a duration of 35 minutes.",
+            "Two race times of 30 seconds and 25 seconds add to 55 seconds."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Duration",
+              "definition": "How long something lasts.",
+              "simpleExample": "The duration of the film was 2 hours."
+            },
+            {
+              "keyword": "Starting time",
+              "definition": "When an event begins.",
+              "simpleExample": "The race's starting time was 4:00 p.m."
+            },
+            {
+              "keyword": "Ending time",
+              "definition": "When an event finishes.",
+              "simpleExample": "The class's ending time was 3:30 p.m."
+            }
+          ],
+          "quickSummary": "Duration is how long something lasts, found by comparing starting and ending times and calculating the difference, sometimes adding durations together.",
+          "revisionNotes": [
+            "Duration = how long something lasts.",
+            "Compare start and end times.",
+            "Example: 4:10 to 4:45 = 35 minutes.",
+            "Durations can be added together."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 13,
+      "chapter": "Animal Jumps",
+      "topics": [
+        {
+          "topicId": "math5_ch13_topic1",
+          "topic": "Multiples and Common Multiples",
+          "meaning": "A multiple of a number is got by multiplying it by whole numbers, and a common multiple is shared by two numbers.",
+          "ncertBasedExplanation": "A multiple of a number is what we get when we multiply that number by 1, 2, 3 and so on; for example, the multiples of 4 are 4, 8, 12, 16, and so on. Using a number line, we can show multiples as equal jumps. A common multiple of two numbers is a number that is a multiple of both; for example, 12 is a common multiple of 3 and 4 because both their jumps land on 12. The smallest common multiple is the least common multiple. Multiples and common multiples are useful for solving problems about repeating events.",
+          "easyExplanation": "Multiples come from a times table, like 4, 8, 12 for 4. A common multiple is shared by two numbers, like 12 for 3 and 4.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "What a multiple is",
+              "explanation": "A multiple is got by multiplying a number by 1, 2, 3 and so on."
+            },
+            {
+              "step": 2,
+              "title": "Show as jumps",
+              "explanation": "On a number line, multiples appear as equal jumps."
+            },
+            {
+              "step": 3,
+              "title": "Common multiples",
+              "explanation": "A common multiple is a multiple of two numbers, like 12 for 3 and 4."
+            },
+            {
+              "step": 4,
+              "title": "Least common multiple",
+              "explanation": "The smallest common multiple is the least common multiple."
+            }
+          ],
+          "examples": [
+            "The multiples of 4 are 4, 8, 12, 16, 20.",
+            "12 is the first common multiple of 3 and 4."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Multiple",
+              "definition": "A number got by multiplying a number by a whole number.",
+              "simpleExample": "15 is a multiple of 5."
+            },
+            {
+              "keyword": "Common multiple",
+              "definition": "A multiple shared by two numbers.",
+              "simpleExample": "12 is a common multiple of 3 and 4."
+            },
+            {
+              "keyword": "Number line",
+              "definition": "A line with numbers in order, used to show jumps.",
+              "simpleExample": "Multiples appear as jumps on a number line."
+            }
+          ],
+          "quickSummary": "A multiple is got by multiplying a number by whole numbers; a common multiple is shared by two numbers (like 12 for 3 and 4), and the smallest is the least common multiple.",
+          "revisionNotes": [
+            "Multiple = number x whole numbers (4, 8, 12...).",
+            "Shown as equal jumps on a number line.",
+            "Common multiple is shared by two numbers.",
+            "12 is the first common multiple of 3 and 4."
+          ]
+        },
+        {
+          "topicId": "math5_ch13_topic2",
+          "topic": "Factors",
+          "meaning": "A factor of a number is a number that divides it exactly with no remainder.",
+          "ncertBasedExplanation": "A factor of a number is a number that divides it exactly, leaving no remainder. For example, the factors of 12 are 1, 2, 3, 4, 6 and 12, because each of these divides 12 exactly. Every number has 1 and itself as factors. Factors always come in pairs that multiply to give the number, like 3 and 4 for 12. A common factor of two numbers is a factor of both. Factors are the opposite idea to multiples and are useful for sharing things into equal groups and for simplifying fractions.",
+          "easyExplanation": "A factor divides a number exactly with no remainder. The factors of 12 are 1, 2, 3, 4, 6 and 12.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "What a factor is",
+              "explanation": "A factor divides a number exactly, with no remainder."
+            },
+            {
+              "step": 2,
+              "title": "Find all factors",
+              "explanation": "The factors of 12 are 1, 2, 3, 4, 6 and 12."
+            },
+            {
+              "step": 3,
+              "title": "1 and itself",
+              "explanation": "Every number has 1 and itself as factors, and factors come in pairs."
+            },
+            {
+              "step": 4,
+              "title": "Common factors",
+              "explanation": "A common factor is a factor shared by two numbers."
+            }
+          ],
+          "examples": [
+            "The factors of 12 are 1, 2, 3, 4, 6 and 12.",
+            "3 and 4 are a factor pair of 12 because 3 x 4 = 12."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Factor",
+              "definition": "A number that divides another exactly.",
+              "simpleExample": "3 is a factor of 12."
+            },
+            {
+              "keyword": "Factor pair",
+              "definition": "Two factors that multiply to give the number.",
+              "simpleExample": "3 and 4 are a factor pair of 12."
+            },
+            {
+              "keyword": "Common factor",
+              "definition": "A factor shared by two numbers.",
+              "simpleExample": "2 is a common factor of 8 and 12."
+            }
+          ],
+          "quickSummary": "A factor divides a number exactly with no remainder (the factors of 12 are 1, 2, 3, 4, 6, 12); factors come in pairs, and a common factor is shared by two numbers.",
+          "revisionNotes": [
+            "Factor = divides a number exactly.",
+            "Factors of 12: 1, 2, 3, 4, 6, 12.",
+            "Every number has 1 and itself as factors.",
+            "Factors come in pairs; common factors are shared."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 14,
+      "chapter": "Maps and Locations",
+      "topics": [
+        {
+          "topicId": "math5_ch14_topic1",
+          "topic": "Reading Maps",
+          "meaning": "A map is a drawing of a place from above, using symbols and a scale to show locations and distances.",
+          "ncertBasedExplanation": "A map is a drawing that shows a place as seen from above. Maps use symbols and colours to show features like roads, buildings, parks and rivers, with a key to explain them. Maps are drawn to a scale, so a small distance on the map stands for a larger real distance on the ground. By reading a map, we can find places, plan routes and work out distances between locations. Maps are used in daily life, for example to find the way in a town, read a metro map, or locate a friend's house.",
+          "easyExplanation": "A map shows a place from above using symbols and a scale. Reading a map helps us find places, plan routes and work out distances.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Map from above",
+              "explanation": "A map shows a place as seen from above."
+            },
+            {
+              "step": 2,
+              "title": "Symbols and key",
+              "explanation": "Maps use symbols and colours for roads, buildings and rivers, explained in a key."
+            },
+            {
+              "step": 3,
+              "title": "Scale",
+              "explanation": "Maps are drawn to scale, so map distance stands for real distance."
+            },
+            {
+              "step": 4,
+              "title": "Use maps",
+              "explanation": "Reading maps helps us find places, plan routes and find distances."
+            }
+          ],
+          "examples": [
+            "A metro map shows the stations and routes of a city's metro.",
+            "A map's scale tells us that 1 cm stands for a certain real distance."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Map",
+              "definition": "A drawing of a place seen from above.",
+              "simpleExample": "We use a map to find a route."
+            },
+            {
+              "keyword": "Scale",
+              "definition": "The relation between map distance and real distance.",
+              "simpleExample": "A scale of 1 cm = 1 km helps measure."
+            },
+            {
+              "keyword": "Symbol",
+              "definition": "A sign on a map for a feature.",
+              "simpleExample": "A blue line is the symbol for a river."
+            }
+          ],
+          "quickSummary": "A map is a drawing of a place from above using symbols and a scale; reading maps helps us find places, plan routes and work out distances.",
+          "revisionNotes": [
+            "Map = a place drawn from above.",
+            "Uses symbols and a key.",
+            "Drawn to scale (map distance = real distance).",
+            "Helps find places, plan routes, find distances."
+          ]
+        },
+        {
+          "topicId": "math5_ch14_topic2",
+          "topic": "Directions and Locations",
+          "meaning": "Directions (north, south, east, west) and grids help us describe and find the exact location of places.",
+          "ncertBasedExplanation": "To describe where places are, we use directions and locations. The four main directions are north, south, east and west, often shown on a map with a direction arrow or compass. We use these directions to say which way to go, such as 'the park is east of the school'. Maps may also use a grid of rows and columns, where each location is named by its row and column, helping us find an exact spot. Using directions and grids together lets us describe and find locations clearly and accurately.",
+          "easyExplanation": "We use directions (north, south, east, west) and grids to describe where places are, like 'the park is east of the school'.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Four main directions",
+              "explanation": "The four directions are north, south, east and west."
+            },
+            {
+              "step": 2,
+              "title": "Shown on maps",
+              "explanation": "A direction arrow or compass shows directions on a map."
+            },
+            {
+              "step": 3,
+              "title": "Describe locations",
+              "explanation": "We use directions to say which way, like 'east of the school'."
+            },
+            {
+              "step": 4,
+              "title": "Use a grid",
+              "explanation": "A grid of rows and columns names each location to find an exact spot."
+            }
+          ],
+          "examples": [
+            "The park is to the east of the school.",
+            "On a grid map, a place can be found by its row and column."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Direction",
+              "definition": "A way to describe which way to go (north, south, east, west).",
+              "simpleExample": "The sun rises in the east."
+            },
+            {
+              "keyword": "Compass",
+              "definition": "A device or symbol showing directions.",
+              "simpleExample": "A compass shows north."
+            },
+            {
+              "keyword": "Grid",
+              "definition": "Rows and columns used to locate places.",
+              "simpleExample": "A grid helps find a spot by row and column."
+            }
+          ],
+          "quickSummary": "Directions (north, south, east, west) and grids of rows and columns help us describe which way to go and find the exact location of places on a map.",
+          "revisionNotes": [
+            "Four directions: north, south, east, west.",
+            "Shown by a direction arrow or compass.",
+            "Used to describe which way (e.g., east of school).",
+            "Grids name locations by row and column."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 15,
+      "chapter": "Data Through Pictures",
+      "topics": [
+        {
+          "topicId": "math5_ch15_topic1",
+          "topic": "Collecting and Organising Data",
+          "meaning": "Data is information collected for a purpose, and organising it in tables makes it easy to understand.",
+          "ncertBasedExplanation": "Data means information, often numbers, collected for a purpose, such as the favourite fruits or the heights of children in a class. Raw data collected as it comes is hard to read, so we organise it. We can use tally marks to count how many times each item occurs, and arrange the counts in a table. The number of times something occurs is called its frequency. Organising data into a neat table makes it clear and ready to be shown as pictures or graphs. Good data handling begins with collecting and organising data carefully.",
+          "easyExplanation": "Data is collected information, like everyone's favourite fruit. We organise it with tally marks and tables so it is easy to read.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Collect the data",
+              "explanation": "Gather information, such as the favourite fruit of each child."
+            },
+            {
+              "step": 2,
+              "title": "Use tally marks",
+              "explanation": "Record each occurrence with a tally mark."
+            },
+            {
+              "step": 3,
+              "title": "Find the frequency",
+              "explanation": "Count the tallies to find how often each item occurs, its frequency."
+            },
+            {
+              "step": 4,
+              "title": "Organise into a table",
+              "explanation": "Arrange the data in a neat table, ready to be shown as pictures or graphs."
+            }
+          ],
+          "examples": [
+            "A tally table shows how many children like each fruit.",
+            "If 6 children like mango, mango's frequency is 6."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Data",
+              "definition": "Information collected for a purpose.",
+              "simpleExample": "Students' favourite colours are data."
+            },
+            {
+              "keyword": "Tally marks",
+              "definition": "Small lines used to count.",
+              "simpleExample": "Four lines and a cross means five."
+            },
+            {
+              "keyword": "Frequency",
+              "definition": "How many times something occurs.",
+              "simpleExample": "A frequency of 6 means it happened 6 times."
+            }
+          ],
+          "quickSummary": "Data is information collected for a purpose; organising it with tally marks and frequencies in a table makes it clear and ready to show as pictures or graphs.",
+          "revisionNotes": [
+            "Data = collected information.",
+            "Use tally marks to count.",
+            "Frequency = how often something occurs.",
+            "Organise data into a neat table."
+          ]
+        },
+        {
+          "topicId": "math5_ch15_topic2",
+          "topic": "Pictographs and Bar Graphs",
+          "meaning": "Data can be shown using pictographs (pictures) and bar graphs (bars) to make it easy to compare.",
+          "ncertBasedExplanation": "Once data is organised, we can show it using pictures and graphs that are easy to read. A pictograph shows data using symbols, where each symbol stands for a fixed number given by a key; we count the symbols and multiply by the key value. A bar graph shows data using bars of equal width, where the length of each bar stands for its value, so longer bars mean larger values. Both make it easy to compare quantities at a glance. Reading and drawing pictographs and bar graphs is an important way of understanding and presenting data.",
+          "easyExplanation": "Data can be shown as pictographs (each picture stands for a number) or bar graphs (longer bars mean more). Both make comparing easy.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Pictographs",
+              "explanation": "A pictograph shows data with symbols, each standing for a fixed number given by a key."
+            },
+            {
+              "step": 2,
+              "title": "Read a pictograph",
+              "explanation": "Count the symbols and multiply by the key value."
+            },
+            {
+              "step": 3,
+              "title": "Bar graphs",
+              "explanation": "A bar graph shows data with bars whose length stands for the value."
+            },
+            {
+              "step": 4,
+              "title": "Compare easily",
+              "explanation": "Longer bars or more symbols mean larger values, so comparing is easy."
+            }
+          ],
+          "examples": [
+            "If one symbol stands for 5 fruits, 4 symbols mean 20 fruits.",
+            "In a bar graph of favourite sports, the tallest bar is the most popular sport."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Pictograph",
+              "definition": "Data shown using pictures or symbols.",
+              "simpleExample": "A pictograph uses fruit symbols for fruits sold."
+            },
+            {
+              "keyword": "Bar graph",
+              "definition": "Data shown using bars.",
+              "simpleExample": "A bar graph compares numbers of students."
+            },
+            {
+              "keyword": "Key",
+              "definition": "A note giving the value of one symbol.",
+              "simpleExample": "The key says one star = 10."
+            }
+          ],
+          "quickSummary": "Data can be presented as pictographs (symbols, each worth a fixed number) and bar graphs (bars whose length shows the value), making it easy to compare quantities.",
+          "revisionNotes": [
+            "Pictograph: symbols, each worth a fixed number (key).",
+            "Read by counting symbols x key.",
+            "Bar graph: bar length shows the value.",
+            "Both make comparing quantities easy."
+          ]
+        }
+      ]
+    }
+  ]
+}

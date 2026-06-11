@@ -1,3 +1,5 @@
+import { CLASS_5_CBSE_SYLLABUS } from "./class5Syllabus";
+
 export const SYLLABUS_DATA = {
   "5": {
     CBSE: {
@@ -135,3 +137,5 @@ export const SYLLABUS_DATA = {
     },
   },
 };
+
+SYLLABUS_DATA["5"].CBSE = CLASS_5_CBSE_SYLLABUS;

@@ -1,0 +1,1898 @@
+{
+  "class": 5,
+  "board": "CBSE",
+  "source": "NCERT",
+  "subject": "Environmental Studies",
+  "bookName": "Our Wondrous World",
+  "chapters": [
+    {
+      "chapterNumber": 1,
+      "chapter": "Water - The Essence of Life",
+      "topics": [
+        {
+          "topicId": "evs5_ch1_topic1",
+          "topic": "Sources and Importance of Water",
+          "meaning": "Water is essential for all living things and comes from many sources like rivers, lakes, ponds, wells and rain.",
+          "ncertBasedExplanation": "Water is one of the most important things for life, as all living beings, plants, animals and humans, need water to survive. We get water from many sources. Rivers, lakes and ponds hold surface water; wells and handpumps bring up groundwater from beneath the earth; and rain is the natural source that fills them all. We use water for drinking, cooking, cleaning, bathing, farming and many other activities. Because clean water is so precious and not unlimited, we must use it carefully and keep our water sources clean.",
+          "easyExplanation": "All living things need water. We get it from rivers, lakes, ponds, wells and rain, and use it for drinking, cooking, cleaning and farming.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Water is essential",
+              "explanation": "All living beings need water to survive."
+            },
+            {
+              "step": 2,
+              "title": "Surface water",
+              "explanation": "Rivers, lakes and ponds hold water on the surface of the earth."
+            },
+            {
+              "step": 3,
+              "title": "Groundwater and rain",
+              "explanation": "Wells bring up groundwater, and rain is the natural source that fills our water bodies."
+            },
+            {
+              "step": 4,
+              "title": "Many uses",
+              "explanation": "We use water for drinking, cooking, cleaning, bathing and farming."
+            }
+          ],
+          "examples": [
+            "We get drinking water from rivers, wells and rain.",
+            "Farmers need plenty of water to grow their crops."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Source of water",
+              "definition": "A place from which we get water.",
+              "simpleExample": "A river is a source of water."
+            },
+            {
+              "keyword": "Groundwater",
+              "definition": "Water found beneath the earth's surface.",
+              "simpleExample": "A well brings up groundwater."
+            },
+            {
+              "keyword": "Surface water",
+              "definition": "Water found on the earth's surface.",
+              "simpleExample": "A pond holds surface water."
+            }
+          ],
+          "quickSummary": "Water is essential for all living things and comes from sources like rivers, lakes, ponds, wells and rain; it is used for drinking, cooking, cleaning and farming and must be kept clean.",
+          "revisionNotes": [
+            "All living things need water.",
+            "Sources: rivers, lakes, ponds, wells, rain.",
+            "Surface water and groundwater.",
+            "Used for drinking, cooking, cleaning, farming."
+          ]
+        },
+        {
+          "topicId": "evs5_ch1_topic2",
+          "topic": "Different Forms of Water",
+          "meaning": "Water exists in three forms: solid (ice), liquid (water) and gas (water vapour).",
+          "ncertBasedExplanation": "Water is special because it can be found in three different forms or states. As a solid, water becomes ice, which is hard and has a fixed shape, like the ice in snow or a freezer. As a liquid, it is the flowing water we drink and use every day. As a gas, it becomes invisible water vapour that mixes into the air. Water changes from one form to another when it is heated or cooled: ice melts into water on heating, water turns into vapour on more heating, and vapour cools back into water. These changes are an important part of nature.",
+          "easyExplanation": "Water comes in three forms: ice (solid), water (liquid) and water vapour (gas). Heating and cooling change water from one form to another.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Solid form",
+              "explanation": "As ice, water is solid and has a fixed shape, like snow."
+            },
+            {
+              "step": 2,
+              "title": "Liquid form",
+              "explanation": "As water, it flows and is the form we drink and use daily."
+            },
+            {
+              "step": 3,
+              "title": "Gas form",
+              "explanation": "As water vapour, it is an invisible gas in the air."
+            },
+            {
+              "step": 4,
+              "title": "Changing forms",
+              "explanation": "Heating and cooling change water between ice, water and vapour."
+            }
+          ],
+          "examples": [
+            "Ice in a freezer is the solid form of water.",
+            "Steam rising from hot tea is water turning into vapour."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Ice",
+              "definition": "The solid form of water.",
+              "simpleExample": "An ice cube is frozen water."
+            },
+            {
+              "keyword": "Water vapour",
+              "definition": "The gas form of water.",
+              "simpleExample": "Steam becomes water vapour."
+            },
+            {
+              "keyword": "State of water",
+              "definition": "The form water takes: solid, liquid or gas.",
+              "simpleExample": "Ice, water and vapour are three states."
+            }
+          ],
+          "quickSummary": "Water exists in three forms, solid ice, liquid water and gaseous water vapour, and changes between them when heated or cooled.",
+          "revisionNotes": [
+            "Three forms: ice (solid), water (liquid), vapour (gas).",
+            "Ice has a fixed shape; water flows; vapour is invisible.",
+            "Heating melts ice and makes vapour.",
+            "Cooling turns vapour back to water and ice."
+          ]
+        },
+        {
+          "topicId": "evs5_ch1_topic3",
+          "topic": "The Water Cycle",
+          "meaning": "The water cycle is the continuous movement of water between the earth and the sky through evaporation, condensation and precipitation.",
+          "ncertBasedExplanation": "Water keeps moving between the earth and the sky in a never-ending process called the water cycle. The Sun heats water in oceans, rivers and lakes, and it evaporates into water vapour that rises into the sky. High up, the cool air makes the vapour condense into tiny droplets that form clouds. When the droplets join and grow heavy, they fall as rain, snow or hail; this is called precipitation. The water then flows back into rivers, lakes and oceans, and the whole cycle repeats. The water cycle gives us rain and keeps water moving through nature.",
+          "easyExplanation": "The Sun evaporates water into vapour, which rises, cools into clouds, and falls back as rain. This endless journey of water is the water cycle.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Evaporation",
+              "explanation": "The Sun heats water, turning it into vapour that rises up."
+            },
+            {
+              "step": 2,
+              "title": "Condensation",
+              "explanation": "High in the cool sky, the vapour condenses into droplets that form clouds."
+            },
+            {
+              "step": 3,
+              "title": "Precipitation",
+              "explanation": "When droplets grow heavy, they fall as rain, snow or hail."
+            },
+            {
+              "step": 4,
+              "title": "Back again",
+              "explanation": "The water flows back into rivers and oceans, and the cycle repeats."
+            }
+          ],
+          "examples": [
+            "Rain falls when cloud droplets join and become heavy.",
+            "Water from the sea evaporates and later returns as rain over land."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Water cycle",
+              "definition": "The continuous movement of water between earth and sky.",
+              "simpleExample": "Rain returning to rivers is the water cycle."
+            },
+            {
+              "keyword": "Evaporation",
+              "definition": "Water changing into vapour.",
+              "simpleExample": "A puddle drying in the Sun shows evaporation."
+            },
+            {
+              "keyword": "Condensation",
+              "definition": "Vapour changing into water on cooling.",
+              "simpleExample": "Drops on a cold glass show condensation."
+            }
+          ],
+          "quickSummary": "In the water cycle, the Sun evaporates water into vapour, which condenses into clouds and falls as precipitation, then returns to water bodies, repeating endlessly.",
+          "revisionNotes": [
+            "Water cycle = water moving between earth and sky.",
+            "Evaporation -> condensation -> precipitation.",
+            "Clouds form from condensed vapour.",
+            "Gives us rain and keeps water moving."
+          ]
+        },
+        {
+          "topicId": "evs5_ch1_topic4",
+          "topic": "Conserving Water",
+          "meaning": "Conserving water means using it carefully and avoiding waste so that there is enough clean water for everyone.",
+          "ncertBasedExplanation": "Although water seems plentiful, clean and usable fresh water is limited, so we must conserve it. Conserving water means using it wisely and not wasting it. We can save water by turning off taps when not in use, fixing leaks, reusing water where possible, and harvesting rainwater. We must also keep our water sources clean by not throwing waste into rivers and ponds. Programmes like the National Water Mission encourage everyone to save water. Conserving water is a responsibility for all of us so that there is enough clean water for people, animals and plants now and in the future.",
+          "easyExplanation": "Clean water is limited, so we must save it: turn off taps, fix leaks, harvest rainwater and keep water sources clean.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Why conserve",
+              "explanation": "Clean, usable fresh water is limited, so it must be conserved."
+            },
+            {
+              "step": 2,
+              "title": "Save water daily",
+              "explanation": "Turn off taps, fix leaks and avoid wasting water."
+            },
+            {
+              "step": 3,
+              "title": "Reuse and harvest",
+              "explanation": "Reuse water where possible and harvest rainwater."
+            },
+            {
+              "step": 4,
+              "title": "Keep it clean",
+              "explanation": "Do not throw waste into rivers and ponds; the National Water Mission promotes saving water."
+            }
+          ],
+          "examples": [
+            "Turning off the tap while brushing teeth saves a lot of water.",
+            "Collecting rainwater in tanks is a way of harvesting water."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Conservation",
+              "definition": "Using a resource carefully to avoid waste.",
+              "simpleExample": "Saving water is conservation."
+            },
+            {
+              "keyword": "Rainwater harvesting",
+              "definition": "Collecting and storing rainwater for use.",
+              "simpleExample": "Rooftop tanks harvest rainwater."
+            },
+            {
+              "keyword": "Water pollution",
+              "definition": "Dirtying water with harmful substances.",
+              "simpleExample": "Throwing waste in rivers causes water pollution."
+            }
+          ],
+          "quickSummary": "Conserving water means using it carefully and avoiding waste, by saving water, fixing leaks, harvesting rainwater and keeping sources clean, so there is enough clean water for all.",
+          "revisionNotes": [
+            "Clean fresh water is limited.",
+            "Save water: turn off taps, fix leaks.",
+            "Reuse water and harvest rainwater.",
+            "Keep sources clean; National Water Mission helps."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 2,
+      "chapter": "Journey of a River",
+      "topics": [
+        {
+          "topicId": "evs5_ch2_topic1",
+          "topic": "The Journey of a River",
+          "meaning": "A river flows from its source in the mountains, through the land, all the way down to the sea.",
+          "ncertBasedExplanation": "A river makes a long journey from where it begins to where it ends. Most rivers start high up in the mountains as small streams, often from melting snow or springs; this starting point is called the source. As the river flows down, smaller streams called tributaries join it and it becomes bigger. In the plains, the river flows slowly and winds across the land, giving water for farming and people. Finally, the river reaches the sea or ocean, where it ends; this point is called the mouth. Along its journey, a river shapes the land and supports life.",
+          "easyExplanation": "A river starts in the mountains (its source), grows bigger as streams join it, flows through the plains, and finally meets the sea (its mouth).",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "The source",
+              "explanation": "A river begins high in the mountains, often from melting snow or a spring."
+            },
+            {
+              "step": 2,
+              "title": "Tributaries join",
+              "explanation": "Smaller streams called tributaries join the river and make it bigger."
+            },
+            {
+              "step": 3,
+              "title": "Through the plains",
+              "explanation": "In the plains, the river flows slowly, giving water for people and farming."
+            },
+            {
+              "step": 4,
+              "title": "The mouth",
+              "explanation": "The river finally reaches the sea or ocean, where it ends, at its mouth."
+            }
+          ],
+          "examples": [
+            "The Ganga begins in the Himalayas and flows to the sea.",
+            "Smaller streams (tributaries) join a river to make it larger."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Source",
+              "definition": "The place where a river begins.",
+              "simpleExample": "A river's source is often in the mountains."
+            },
+            {
+              "keyword": "Tributary",
+              "definition": "A smaller stream that joins a river.",
+              "simpleExample": "The Yamuna is a tributary of the Ganga."
+            },
+            {
+              "keyword": "Mouth",
+              "definition": "The place where a river meets the sea.",
+              "simpleExample": "A river ends at its mouth."
+            }
+          ],
+          "quickSummary": "A river journeys from its source in the mountains, growing as tributaries join, flowing through the plains, and finally reaching the sea at its mouth, shaping the land and supporting life.",
+          "revisionNotes": [
+            "River starts at its source (mountains).",
+            "Tributaries join and make it bigger.",
+            "Flows through the plains.",
+            "Ends at its mouth in the sea."
+          ]
+        },
+        {
+          "topicId": "evs5_ch2_topic2",
+          "topic": "Rivers in India",
+          "meaning": "India has many important rivers, such as the Ganga, Yamuna, Brahmaputra, Godavari and Kaveri, which are vital for life.",
+          "ncertBasedExplanation": "India is a land of many rivers, which are very important for the country. Major rivers include the Ganga, Yamuna and Brahmaputra in the north, and the Godavari, Krishna and Kaveri in the south. These rivers begin in mountain ranges like the Himalayas or the Western Ghats and flow across the land to the sea. Rivers provide water for drinking, farming and industry, support fishing, and many are considered sacred. Cities and civilisations have grown along rivers since ancient times. Because rivers are so valuable, we must keep them clean and free from pollution.",
+          "easyExplanation": "India has big rivers like the Ganga, Yamuna, Brahmaputra, Godavari and Kaveri. They give water for drinking and farming, and many are sacred.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Many rivers",
+              "explanation": "India has many important rivers across the country."
+            },
+            {
+              "step": 2,
+              "title": "Northern rivers",
+              "explanation": "The Ganga, Yamuna and Brahmaputra flow in the north."
+            },
+            {
+              "step": 3,
+              "title": "Southern rivers",
+              "explanation": "The Godavari, Krishna and Kaveri flow in the south."
+            },
+            {
+              "step": 4,
+              "title": "Their importance",
+              "explanation": "Rivers give water for drinking, farming and industry, and many are sacred."
+            }
+          ],
+          "examples": [
+            "The Ganga is one of India's most important and sacred rivers.",
+            "The Kaveri is a major river in southern India."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "River",
+              "definition": "A large natural stream of water flowing to the sea.",
+              "simpleExample": "The Ganga is a river."
+            },
+            {
+              "keyword": "Sacred",
+              "definition": "Holy or treated with great respect.",
+              "simpleExample": "Many Indian rivers are sacred."
+            },
+            {
+              "keyword": "Mountain range",
+              "definition": "A line of connected mountains where rivers begin.",
+              "simpleExample": "The Himalayas are a mountain range."
+            }
+          ],
+          "quickSummary": "India has many important rivers, including the Ganga, Yamuna, Brahmaputra, Godavari and Kaveri, which provide water for life, support farming and fishing, and are often sacred.",
+          "revisionNotes": [
+            "India has many important rivers.",
+            "North: Ganga, Yamuna, Brahmaputra.",
+            "South: Godavari, Krishna, Kaveri.",
+            "Rivers give water, support life and are often sacred."
+          ]
+        },
+        {
+          "topicId": "evs5_ch2_topic3",
+          "topic": "Rivers, Floods and Our Lifeline",
+          "meaning": "Rivers support life in many ways, but when they overflow they can cause floods, so they must be cared for.",
+          "ncertBasedExplanation": "Rivers are often called our lifeline because they support life in so many ways: they give water for drinking and farming, are home to fish and other creatures, and provide a way to travel and trade. However, when very heavy rain falls or snow melts quickly, a river may overflow its banks and spread water over the land, causing a flood. Floods can damage homes, crops and roads, though they also leave behind fertile soil. We must care for our rivers by keeping them clean, not blocking their flow, and managing water wisely so they continue to support life safely.",
+          "easyExplanation": "Rivers are our lifeline: they give water, food and travel. But heavy rain can make a river overflow and cause floods, so we must care for rivers.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Rivers support life",
+              "explanation": "Rivers give water, food (fish), and ways to travel and trade, so they are our lifeline."
+            },
+            {
+              "step": 2,
+              "title": "When rivers flood",
+              "explanation": "Heavy rain or fast snow-melt can make a river overflow its banks."
+            },
+            {
+              "step": 3,
+              "title": "Effects of floods",
+              "explanation": "Floods can damage homes, crops and roads, but also leave fertile soil behind."
+            },
+            {
+              "step": 4,
+              "title": "Caring for rivers",
+              "explanation": "We keep rivers clean, do not block their flow, and manage water wisely."
+            }
+          ],
+          "examples": [
+            "A river overflowing after heavy rain can cause a flood.",
+            "Floods leave behind fertile soil that is good for farming."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Lifeline",
+              "definition": "Something that is essential for life and survival.",
+              "simpleExample": "A river is a lifeline for a village."
+            },
+            {
+              "keyword": "Flood",
+              "definition": "Water overflowing onto land that is usually dry.",
+              "simpleExample": "Heavy rain caused a flood."
+            },
+            {
+              "keyword": "Fertile",
+              "definition": "Land that is rich and good for crops.",
+              "simpleExample": "Floods can leave fertile soil."
+            }
+          ],
+          "quickSummary": "Rivers are our lifeline, giving water, food and travel, but they can overflow and cause floods, so we must keep them clean and manage water wisely.",
+          "revisionNotes": [
+            "Rivers are our lifeline (water, food, travel).",
+            "Heavy rain can make rivers flood.",
+            "Floods damage but also leave fertile soil.",
+            "Care for rivers: keep clean, manage water wisely."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 3,
+      "chapter": "The Mystery of Food",
+      "topics": [
+        {
+          "topicId": "evs5_ch3_topic1",
+          "topic": "Why Food Spoils - Microbes",
+          "meaning": "Food spoils mainly because of tiny living things called microbes, which grow on food and make it unfit to eat.",
+          "ncertBasedExplanation": "Have you noticed that bread grows mould or milk turns sour after some days? Food spoils because of tiny living things called microbes (microorganisms), such as bacteria and fungi, which are too small to see without a microscope. Microbes grow on food, especially in warm and moist conditions, and make it change colour, smell bad and become unsafe to eat. Spoiled food can make us ill, so we should not eat it. Not all microbes are harmful, though; some good microbes help make foods like curd and bread. Understanding microbes helps us keep our food safe.",
+          "easyExplanation": "Food spoils because of tiny living things called microbes (like bacteria and fungi) that grow on it, especially in warmth and moisture, making it unsafe to eat.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Food spoils",
+              "explanation": "Food like bread and milk goes bad after some time."
+            },
+            {
+              "step": 2,
+              "title": "Microbes are the cause",
+              "explanation": "Tiny living things called microbes, such as bacteria and fungi, grow on food and spoil it."
+            },
+            {
+              "step": 3,
+              "title": "They like warmth and moisture",
+              "explanation": "Microbes grow fast in warm, moist conditions."
+            },
+            {
+              "step": 4,
+              "title": "Some microbes are good",
+              "explanation": "Not all microbes are harmful; some help make curd and bread."
+            }
+          ],
+          "examples": [
+            "Bread left for many days grows mould, a kind of fungus.",
+            "Milk turns sour because of microbes growing in it."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Microbe",
+              "definition": "A tiny living thing, too small to see, that can spoil food.",
+              "simpleExample": "Bacteria are microbes."
+            },
+            {
+              "keyword": "Fungus",
+              "definition": "A type of microbe, like mould, that grows on food.",
+              "simpleExample": "Mould on bread is a fungus."
+            },
+            {
+              "keyword": "Spoil",
+              "definition": "To become bad and unfit to eat.",
+              "simpleExample": "Milk can spoil and turn sour."
+            }
+          ],
+          "quickSummary": "Food spoils mainly because of tiny living things called microbes (bacteria and fungi) that grow on it, especially in warmth and moisture; some microbes, however, are useful.",
+          "revisionNotes": [
+            "Food spoils due to microbes (bacteria, fungi).",
+            "Microbes grow fast in warmth and moisture.",
+            "Spoiled food is unsafe to eat.",
+            "Some good microbes make curd and bread."
+          ]
+        },
+        {
+          "topicId": "evs5_ch3_topic2",
+          "topic": "Methods of Food Preservation",
+          "meaning": "Food preservation means treating food so it lasts longer, using methods like drying, salting, pickling, refrigeration and boiling.",
+          "ncertBasedExplanation": "To stop food from spoiling quickly, we preserve it, which means keeping it safe to eat for a longer time. Preservation works by stopping microbes from growing. Common methods include drying (removing water, as in dried vegetables or khakhra), salting and pickling (using salt, oil and spices, as in pickles), refrigeration and freezing (using cold to slow microbes), and boiling or heating (which kills microbes). Many of these methods are part of our traditions and culture. Food preservation helps reduce waste and lets us store food for use later or in seasons when it is not available.",
+          "easyExplanation": "Preserving food makes it last longer by stopping microbes. Methods include drying, salting, pickling, refrigeration, freezing and boiling.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "What preservation is",
+              "explanation": "Preservation treats food so it stays safe to eat for longer."
+            },
+            {
+              "step": 2,
+              "title": "Drying and salting",
+              "explanation": "Removing water by drying, or using salt, stops microbes from growing."
+            },
+            {
+              "step": 3,
+              "title": "Pickling",
+              "explanation": "Using salt, oil and spices preserves food like pickles."
+            },
+            {
+              "step": 4,
+              "title": "Cold and heat",
+              "explanation": "Refrigeration and freezing slow microbes, while boiling kills them."
+            }
+          ],
+          "examples": [
+            "Mangoes are made into pickle to preserve them.",
+            "Keeping milk in a refrigerator stops it from spoiling quickly."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Preservation",
+              "definition": "Treating food so it lasts longer.",
+              "simpleExample": "Pickling is a method of preservation."
+            },
+            {
+              "keyword": "Refrigeration",
+              "definition": "Keeping food cold to slow spoiling.",
+              "simpleExample": "We refrigerate milk to keep it fresh."
+            },
+            {
+              "keyword": "Dehydration",
+              "definition": "Removing water from food to preserve it.",
+              "simpleExample": "Drying vegetables is dehydration."
+            }
+          ],
+          "quickSummary": "Food preservation treats food so it lasts longer by stopping microbes, using drying, salting, pickling, refrigeration, freezing and boiling, many of which are part of our traditions.",
+          "revisionNotes": [
+            "Preservation makes food last longer.",
+            "Works by stopping microbes.",
+            "Methods: drying, salting, pickling, refrigeration, boiling.",
+            "Many methods are part of our culture."
+          ]
+        },
+        {
+          "topicId": "evs5_ch3_topic3",
+          "topic": "Food Storage and Hygiene",
+          "meaning": "Storing food properly and keeping it clean help prevent spoilage and keep us healthy.",
+          "ncertBasedExplanation": "Even preserved food must be stored properly to stay safe. Good food storage means keeping food in clean, dry, covered containers, away from dust, insects and moisture, and keeping perishable foods cold. Equally important is food hygiene: washing hands before cooking and eating, washing fruits and vegetables, using clean water and clean utensils, and not eating spoiled food. These habits stop harmful microbes from reaching our food and making us ill. Proper storage and good hygiene together keep our food safe and help us stay healthy.",
+          "easyExplanation": "Store food in clean, covered, dry containers and keep perishable food cold. Wash hands and food, and use clean utensils to stay healthy.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Store food well",
+              "explanation": "Keep food in clean, dry, covered containers away from dust and insects."
+            },
+            {
+              "step": 2,
+              "title": "Keep perishables cold",
+              "explanation": "Foods that spoil quickly should be kept cold."
+            },
+            {
+              "step": 3,
+              "title": "Practise hygiene",
+              "explanation": "Wash hands before eating and cooking, and wash fruits and vegetables."
+            },
+            {
+              "step": 4,
+              "title": "Stay safe",
+              "explanation": "Clean water, clean utensils and avoiding spoiled food keep us healthy."
+            }
+          ],
+          "examples": [
+            "Storing grains in clean, dry, covered containers keeps insects away.",
+            "Washing hands before eating stops germs from entering our body."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Hygiene",
+              "definition": "Keeping clean to stay healthy.",
+              "simpleExample": "Washing hands is good hygiene."
+            },
+            {
+              "keyword": "Perishable",
+              "definition": "Food that spoils quickly.",
+              "simpleExample": "Milk is perishable and needs cold storage."
+            },
+            {
+              "keyword": "Storage",
+              "definition": "Keeping food safely for later use.",
+              "simpleExample": "Proper storage keeps food fresh."
+            }
+          ],
+          "quickSummary": "Storing food in clean, covered, dry containers, keeping perishables cold, and practising hygiene like washing hands and food prevent spoilage and keep us healthy.",
+          "revisionNotes": [
+            "Store food in clean, dry, covered containers.",
+            "Keep perishable food cold.",
+            "Wash hands and food; use clean utensils.",
+            "Good storage and hygiene keep us healthy."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 4,
+      "chapter": "Our School - A Happy Place",
+      "topics": [
+        {
+          "topicId": "evs5_ch4_topic1",
+          "topic": "A Happy and Inclusive School",
+          "meaning": "A good school is a happy place where every child feels welcome, respected and included.",
+          "ncertBasedExplanation": "School is not just a place to study; it should be a happy place where everyone feels comfortable and cared for. A happy school is an inclusive school, which means it welcomes all children equally, whatever their background, language, religion or abilities. In such a school, children and teachers treat one another with kindness and respect, help one another, and play and learn together. Children with special needs are included and supported. When everyone feels they belong, the school becomes a joyful place where learning is fun and friendships grow.",
+          "easyExplanation": "A good school is a happy, inclusive place that welcomes every child equally and treats everyone with kindness and respect.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "School is a happy place",
+              "explanation": "School should be a place where everyone feels comfortable and cared for."
+            },
+            {
+              "step": 2,
+              "title": "Inclusive means for all",
+              "explanation": "An inclusive school welcomes all children equally, whatever their background or abilities."
+            },
+            {
+              "step": 3,
+              "title": "Kindness and respect",
+              "explanation": "Children and teachers treat one another with kindness and help each other."
+            },
+            {
+              "step": 4,
+              "title": "Everyone belongs",
+              "explanation": "When everyone feels they belong, learning becomes joyful and friendships grow."
+            }
+          ],
+          "examples": [
+            "A school that welcomes children of all backgrounds is inclusive.",
+            "Helping a classmate with special needs makes the school a happier place."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Inclusive",
+              "definition": "Welcoming and including everyone equally.",
+              "simpleExample": "An inclusive school welcomes all children."
+            },
+            {
+              "keyword": "Respect",
+              "definition": "Treating others with care and high regard.",
+              "simpleExample": "We show respect to our teachers and friends."
+            },
+            {
+              "keyword": "Belong",
+              "definition": "To feel accepted as part of a group.",
+              "simpleExample": "Every child should feel they belong at school."
+            }
+          ],
+          "quickSummary": "A good school is a happy, inclusive place that welcomes every child equally and where children and teachers treat one another with kindness and respect.",
+          "revisionNotes": [
+            "School should be a happy place.",
+            "Inclusive = welcomes all children equally.",
+            "Treat everyone with kindness and respect.",
+            "When everyone belongs, learning is joyful."
+          ]
+        },
+        {
+          "topicId": "evs5_ch4_topic2",
+          "topic": "Cleanliness and Hygiene at School",
+          "meaning": "Keeping the school clean and following good hygiene habits keep students healthy and the school pleasant.",
+          "ncertBasedExplanation": "A clean school is a healthy and happy school. Cleanliness means keeping the classrooms, playground, toilets and surroundings free from dirt and waste, and putting rubbish in dustbins. Good hygiene habits, such as washing hands before eating and after using the toilet, keeping nails clean, and drinking clean water, protect us from germs and illness. Programmes like Swachh Bharat, Swachh Vidyalaya (Clean India, Clean School) encourage students to keep their schools clean. When everyone takes care of cleanliness, the school stays pleasant and everyone stays healthy.",
+          "easyExplanation": "A clean school keeps everyone healthy. Keep classrooms and surroundings clean, use dustbins, and wash hands. Swachh Vidyalaya means a clean school.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Keep the school clean",
+              "explanation": "Keep classrooms, playgrounds and toilets free from dirt and waste."
+            },
+            {
+              "step": 2,
+              "title": "Use dustbins",
+              "explanation": "Put rubbish in dustbins to keep surroundings clean."
+            },
+            {
+              "step": 3,
+              "title": "Good hygiene habits",
+              "explanation": "Wash hands before eating and after the toilet, and keep nails clean."
+            },
+            {
+              "step": 4,
+              "title": "Clean India, Clean School",
+              "explanation": "Programmes like Swachh Vidyalaya encourage students to keep schools clean."
+            }
+          ],
+          "examples": [
+            "Throwing waste in a dustbin keeps the school clean.",
+            "Washing hands before the midday meal stops germs from spreading."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Cleanliness",
+              "definition": "Keeping places free from dirt and waste.",
+              "simpleExample": "Cleanliness keeps the school healthy."
+            },
+            {
+              "keyword": "Hygiene",
+              "definition": "Habits that keep us clean and healthy.",
+              "simpleExample": "Washing hands is good hygiene."
+            },
+            {
+              "keyword": "Swachh Vidyalaya",
+              "definition": "A clean school under the Clean India programme.",
+              "simpleExample": "Swachh Vidyalaya means a clean school."
+            }
+          ],
+          "quickSummary": "Keeping the school clean and following good hygiene habits like washing hands and using dustbins keep students healthy and the school pleasant, as promoted by Swachh Vidyalaya.",
+          "revisionNotes": [
+            "A clean school is a healthy school.",
+            "Keep classrooms and surroundings clean; use dustbins.",
+            "Hygiene: wash hands, keep nails clean.",
+            "Swachh Vidyalaya = Clean School programme."
+          ]
+        },
+        {
+          "topicId": "evs5_ch4_topic3",
+          "topic": "Rules and Safety at School",
+          "meaning": "Following rules and safety measures at school keeps everyone orderly, safe and happy.",
+          "ncertBasedExplanation": "Schools have rules and safety measures so that everyone can study and play safely and happily. Rules, like coming on time, being polite, taking turns and not pushing on the stairs, help the school run smoothly and fairly. Safety measures protect us from harm: walking carefully, playing safely, following instructions during activities, and knowing what to do in an emergency like a fire or earthquake drill. Traffic signs and rules also keep us safe when coming to and going from school. When everyone follows rules and stays safe, school becomes an orderly and happy place for all.",
+          "easyExplanation": "Rules and safety measures keep school orderly and safe: come on time, be polite, play safely and follow emergency drills.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Why rules matter",
+              "explanation": "Rules help the school run smoothly and fairly for everyone."
+            },
+            {
+              "step": 2,
+              "title": "Follow good rules",
+              "explanation": "Come on time, be polite, take turns and do not push on the stairs."
+            },
+            {
+              "step": 3,
+              "title": "Stay safe",
+              "explanation": "Walk and play carefully and follow instructions during activities."
+            },
+            {
+              "step": 4,
+              "title": "Be ready for emergencies",
+              "explanation": "Know what to do in fire or earthquake drills, and follow traffic rules to and from school."
+            }
+          ],
+          "examples": [
+            "Walking, not running, on the stairs keeps everyone safe.",
+            "Following a fire drill helps everyone leave the building safely."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Rule",
+              "definition": "A guideline everyone should follow.",
+              "simpleExample": "Coming on time is a school rule."
+            },
+            {
+              "keyword": "Safety measure",
+              "definition": "An action taken to prevent harm.",
+              "simpleExample": "A fire drill is a safety measure."
+            },
+            {
+              "keyword": "Emergency",
+              "definition": "A sudden dangerous situation.",
+              "simpleExample": "A fire is an emergency we must prepare for."
+            }
+          ],
+          "quickSummary": "Following rules like coming on time and being polite, and safety measures like careful play and emergency drills, keep the school orderly, safe and happy for everyone.",
+          "revisionNotes": [
+            "Rules keep the school smooth and fair.",
+            "Good rules: be on time, polite, take turns.",
+            "Safety: play carefully, follow instructions.",
+            "Know emergency drills and traffic rules."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 5,
+      "chapter": "Our Vibrant Country",
+      "topics": [
+        {
+          "topicId": "evs5_ch5_topic1",
+          "topic": "India's Cultural Diversity",
+          "meaning": "India is a vibrant country with great diversity in languages, food, clothes, festivals and ways of life.",
+          "ncertBasedExplanation": "India is a vibrant and colourful country because of its great diversity. People in different parts of India speak many different languages, eat different kinds of food, wear different clothes, and follow different customs and traditions. For example, the food, dress and language of a person in Punjab can be quite different from those of a person in Tamil Nadu or Assam. This rich variety comes from India's many regions, communities and long history. Learning about this diversity helps us appreciate and respect the many cultures that make up our country.",
+          "easyExplanation": "India is full of variety: many languages, foods, clothes and customs in different regions. This rich diversity makes our country vibrant and colourful.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "A vibrant country",
+              "explanation": "India is colourful and vibrant because of its great diversity."
+            },
+            {
+              "step": 2,
+              "title": "Many languages and foods",
+              "explanation": "People speak different languages and eat different foods in different regions."
+            },
+            {
+              "step": 3,
+              "title": "Different clothes and customs",
+              "explanation": "Clothes, customs and traditions vary across the country."
+            },
+            {
+              "step": 4,
+              "title": "Appreciate diversity",
+              "explanation": "This rich variety comes from India's regions and history and should be respected."
+            }
+          ],
+          "examples": [
+            "A person in Punjab and a person in Tamil Nadu may speak different languages and eat different foods.",
+            "Different regions of India have their own traditional clothes."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Diversity",
+              "definition": "A great variety of different things.",
+              "simpleExample": "India has cultural diversity."
+            },
+            {
+              "keyword": "Culture",
+              "definition": "The customs, food, dress and traditions of a people.",
+              "simpleExample": "Each region has its own culture."
+            },
+            {
+              "keyword": "Tradition",
+              "definition": "A custom passed down over time.",
+              "simpleExample": "Festivals are part of our traditions."
+            }
+          ],
+          "quickSummary": "India is a vibrant country with great diversity in languages, food, clothes, festivals and customs, coming from its many regions and history, which we should appreciate and respect.",
+          "revisionNotes": [
+            "India is vibrant due to its diversity.",
+            "Many languages, foods, clothes, customs.",
+            "Variety differs from region to region.",
+            "Appreciate and respect all cultures."
+          ]
+        },
+        {
+          "topicId": "evs5_ch5_topic2",
+          "topic": "Festivals, Music and Dance",
+          "meaning": "India celebrates many festivals and has a rich variety of music and dance forms from different regions.",
+          "ncertBasedExplanation": "Festivals, music and dance are an important part of India's vibrant culture. People across India celebrate many festivals, such as Diwali, Eid, Christmas, Pongal, Bihu and Onam, often connected to the seasons, harvests or religious occasions. Each region also has its own music and dance forms, with special instruments like the tabla, dhol, khol and thavil, and dances that tell stories or celebrate joy. These festivals and art forms bring people together, express happiness, and pass on traditions from one generation to the next. They show the colourful spirit of our country.",
+          "easyExplanation": "India has many festivals like Diwali, Eid and Pongal, and rich music and dance forms from different regions, which bring people together and celebrate joy.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Many festivals",
+              "explanation": "India celebrates festivals like Diwali, Eid, Christmas, Pongal and Bihu."
+            },
+            {
+              "step": 2,
+              "title": "Linked to seasons",
+              "explanation": "Many festivals are connected to seasons, harvests or religious occasions."
+            },
+            {
+              "step": 3,
+              "title": "Music and dance",
+              "explanation": "Each region has its own music, instruments and dance forms."
+            },
+            {
+              "step": 4,
+              "title": "Bringing people together",
+              "explanation": "Festivals and art forms unite people and pass on traditions."
+            }
+          ],
+          "examples": [
+            "Pongal and Bihu are harvest festivals celebrated in different regions.",
+            "Instruments like the tabla and dhol are used in Indian music."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Festival",
+              "definition": "A special day of celebration.",
+              "simpleExample": "Diwali is a festival of lights."
+            },
+            {
+              "keyword": "Harvest",
+              "definition": "The gathering of crops.",
+              "simpleExample": "Pongal is a harvest festival."
+            },
+            {
+              "keyword": "Tradition",
+              "definition": "A custom passed down over time.",
+              "simpleExample": "Folk dances are part of our traditions."
+            }
+          ],
+          "quickSummary": "India celebrates many festivals like Diwali, Eid and Pongal and has rich regional music and dance forms, which bring people together, express joy and pass on traditions.",
+          "revisionNotes": [
+            "Festivals: Diwali, Eid, Christmas, Pongal, Bihu.",
+            "Often linked to seasons and harvests.",
+            "Each region has its own music and dance.",
+            "They unite people and pass on traditions."
+          ]
+        },
+        {
+          "topicId": "evs5_ch5_topic3",
+          "topic": "Unity in Diversity",
+          "meaning": "Despite its many differences, India stays united as one nation, an idea called 'unity in diversity'.",
+          "ncertBasedExplanation": "Even though India has so much diversity in languages, food, clothes and festivals, its people live together as one united nation. This idea is called 'unity in diversity'. Many things bind Indians together: a shared history and culture, common values like respect and hospitality, festivals and stories enjoyed across regions, and a feeling of being one people. Respecting and celebrating our differences, while remembering what unites us, keeps India strong and peaceful. Unity in diversity is one of the most beautiful and special features of our country.",
+          "easyExplanation": "Even with so many differences, Indians live as one nation. This is 'unity in diversity', kept strong by shared values, respect and a sense of being one people.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Many differences",
+              "explanation": "India differs greatly in language, food, clothes and festivals."
+            },
+            {
+              "step": 2,
+              "title": "Yet one nation",
+              "explanation": "Despite this, Indians live together as one united nation."
+            },
+            {
+              "step": 3,
+              "title": "What unites us",
+              "explanation": "Shared history, values, festivals and a feeling of being one people bind Indians together."
+            },
+            {
+              "step": 4,
+              "title": "Respect differences",
+              "explanation": "Respecting differences while remembering what unites us keeps India strong."
+            }
+          ],
+          "examples": [
+            "People of many languages and religions live together as one Indian nation.",
+            "Respecting each other's festivals shows unity in diversity."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Unity in diversity",
+              "definition": "Many differences existing together in one united nation.",
+              "simpleExample": "India shows unity in diversity."
+            },
+            {
+              "keyword": "Unity",
+              "definition": "Being united as one.",
+              "simpleExample": "Shared values give India unity."
+            },
+            {
+              "keyword": "Respect",
+              "definition": "Treating others with care and regard.",
+              "simpleExample": "We respect all cultures and religions."
+            }
+          ],
+          "quickSummary": "Despite its many differences, India stays united as one nation, an idea called 'unity in diversity', held together by shared values, respect and a sense of being one people.",
+          "revisionNotes": [
+            "India is diverse yet united.",
+            "This is 'unity in diversity'.",
+            "Shared history, values and festivals unite us.",
+            "Respect differences to keep India strong."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 6,
+      "chapter": "Some Unique Places",
+      "topics": [
+        {
+          "topicId": "evs5_ch6_topic1",
+          "topic": "Unique Places and Landscapes of India",
+          "meaning": "India has many unique places and landscapes, from mountains and forests to deserts, coasts and islands.",
+          "ncertBasedExplanation": "India is full of unique and beautiful places, each with its own kind of land, or landscape. There are the high, snow-covered Himalayan mountains in the north; the dry, sandy Thar Desert in the west; the green forests of the Western Ghats and the Northeast; long sandy coasts along the seas; and islands far out in the ocean. Each landscape has its own weather, plants and animals, and way of life for the people who live there. Travelling across India lets us see how varied and wonderful our country's natural places are.",
+          "easyExplanation": "India has many unique landscapes: snowy mountains, dry deserts, green forests, long coasts and islands, each with its own weather, plants, animals and people.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Many landscapes",
+              "explanation": "India has many kinds of land, or landscapes, across the country."
+            },
+            {
+              "step": 2,
+              "title": "Mountains and deserts",
+              "explanation": "The snowy Himalayas lie in the north and the dry Thar Desert in the west."
+            },
+            {
+              "step": 3,
+              "title": "Forests, coasts and islands",
+              "explanation": "Green forests, long coasts and far-off islands add to the variety."
+            },
+            {
+              "step": 4,
+              "title": "Each is special",
+              "explanation": "Each landscape has its own weather, plants, animals and way of life."
+            }
+          ],
+          "examples": [
+            "The Western Ghats are green, forested hills along the western coast.",
+            "The Thar Desert in Rajasthan is dry and sandy."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Landscape",
+              "definition": "The kind of land in an area, like mountains or desert.",
+              "simpleExample": "A forest is a green landscape."
+            },
+            {
+              "keyword": "Unique",
+              "definition": "Special and unlike any other.",
+              "simpleExample": "Each place in India is unique."
+            },
+            {
+              "keyword": "Coast",
+              "definition": "Land along the sea.",
+              "simpleExample": "India has long coasts on two sides."
+            }
+          ],
+          "quickSummary": "India has many unique places and landscapes, from snowy mountains and dry deserts to green forests, long coasts and islands, each with its own weather, plants, animals and people.",
+          "revisionNotes": [
+            "India has many unique landscapes.",
+            "Himalayas (north), Thar Desert (west).",
+            "Forests, coasts and islands too.",
+            "Each has its own weather, life and people."
+          ]
+        },
+        {
+          "topicId": "evs5_ch6_topic2",
+          "topic": "Rare Plants and Animals",
+          "meaning": "India's special places are home to many rare and endemic plants and animals found nowhere else.",
+          "ncertBasedExplanation": "India's unique landscapes are home to a great variety of plants and animals, including many rare ones. Some are endemic species, which means they are found only in a particular place and nowhere else in the world, like certain animals of the Western Ghats and the Northeast. Special places like national parks and wildlife sanctuaries (for example, in the Western Ghats and Pench National Park) protect these plants and animals and their homes. The traditional knowledge of local people often helps in caring for these species. Protecting rare plants and animals keeps India's natural richness alive.",
+          "easyExplanation": "India's special places have many rare and endemic plants and animals, found only there. National parks and sanctuaries protect them.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Rich variety of life",
+              "explanation": "India's landscapes are home to many plants and animals, including rare ones."
+            },
+            {
+              "step": 2,
+              "title": "Endemic species",
+              "explanation": "Some species are endemic, found only in one place and nowhere else."
+            },
+            {
+              "step": 3,
+              "title": "Protected areas",
+              "explanation": "National parks and wildlife sanctuaries protect these plants and animals."
+            },
+            {
+              "step": 4,
+              "title": "Traditional knowledge",
+              "explanation": "Local people's traditional knowledge helps care for these species."
+            }
+          ],
+          "examples": [
+            "Some animals of the Western Ghats are found nowhere else in the world.",
+            "National parks protect wild animals and their homes."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Endemic species",
+              "definition": "A species found only in one particular place.",
+              "simpleExample": "Some Western Ghats animals are endemic."
+            },
+            {
+              "keyword": "National park",
+              "definition": "A protected area for wild plants and animals.",
+              "simpleExample": "Pench is a national park."
+            },
+            {
+              "keyword": "Wildlife",
+              "definition": "Wild animals and plants.",
+              "simpleExample": "National parks protect wildlife."
+            }
+          ],
+          "quickSummary": "India's special places are home to many rare and endemic plants and animals found only there; national parks and sanctuaries, along with traditional knowledge, help protect them.",
+          "revisionNotes": [
+            "India's places have rare plants and animals.",
+            "Endemic species are found only in one place.",
+            "National parks and sanctuaries protect them.",
+            "Traditional knowledge helps care for species."
+          ]
+        },
+        {
+          "topicId": "evs5_ch6_topic3",
+          "topic": "Protecting Special Places",
+          "meaning": "We must protect India's unique places and their plants and animals from harm and pollution.",
+          "ncertBasedExplanation": "India's unique places and the life they support are precious, but they face dangers from pollution, cutting of forests, too much tourism and other human activities. To keep them safe, we must protect these special places. This means not littering or polluting, not harming plants and animals, supporting national parks and sanctuaries, and travelling responsibly when we visit such places. Local communities and the government work together to protect them. By caring for these unique places, we make sure that their natural beauty and wildlife survive for future generations to enjoy.",
+          "easyExplanation": "India's unique places face dangers like pollution and deforestation. We protect them by not littering, not harming wildlife and travelling responsibly.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Special places face dangers",
+              "explanation": "Pollution, deforestation and too much tourism can harm unique places."
+            },
+            {
+              "step": 2,
+              "title": "Do not pollute or harm",
+              "explanation": "We should not litter, pollute, or harm plants and animals."
+            },
+            {
+              "step": 3,
+              "title": "Support protection",
+              "explanation": "Support national parks and sanctuaries and travel responsibly when visiting."
+            },
+            {
+              "step": 4,
+              "title": "Work together",
+              "explanation": "Communities and the government protect these places for the future."
+            }
+          ],
+          "examples": [
+            "Not littering when visiting a forest helps protect it.",
+            "Too much uncontrolled tourism can damage a beautiful natural place."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Protect",
+              "definition": "To keep something safe from harm.",
+              "simpleExample": "We protect forests and wildlife."
+            },
+            {
+              "keyword": "Pollution",
+              "definition": "Dirtying the air, water or land.",
+              "simpleExample": "Pollution harms natural places."
+            },
+            {
+              "keyword": "Responsible tourism",
+              "definition": "Travelling without harming a place.",
+              "simpleExample": "Responsible tourism protects nature."
+            }
+          ],
+          "quickSummary": "India's unique places face dangers like pollution and deforestation, so we must protect them by not littering or harming wildlife, supporting protected areas and travelling responsibly.",
+          "revisionNotes": [
+            "Unique places face pollution and deforestation.",
+            "Do not litter or harm plants and animals.",
+            "Support national parks and sanctuaries.",
+            "Travel responsibly to protect nature."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 7,
+      "chapter": "Energy - How Things Work",
+      "topics": [
+        {
+          "topicId": "evs5_ch7_topic1",
+          "topic": "Sources of Energy",
+          "meaning": "Energy is the ability to do work, and we get it from sources like the Sun, water, wind, fuels and food.",
+          "ncertBasedExplanation": "Energy is what makes things work and move; it is the ability to do work. We get energy from many sources. The Sun is the biggest source of energy, giving us light and heat. We also get energy from flowing water, blowing wind, fuels like wood, coal, petrol and gas, and electricity. Living things get their energy from food. Some sources, like the Sun, wind and water, are renewable because they do not run out, while others, like coal and petrol, are non-renewable and can be used up. Energy powers our homes, vehicles, machines and bodies.",
+          "easyExplanation": "Energy makes things work. We get it from the Sun, water, wind, fuels, electricity and food. The Sun is the biggest source of energy.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "What energy is",
+              "explanation": "Energy is the ability to do work; it makes things work and move."
+            },
+            {
+              "step": 2,
+              "title": "The Sun and nature",
+              "explanation": "The Sun is the biggest source of energy; we also use water and wind."
+            },
+            {
+              "step": 3,
+              "title": "Fuels and electricity",
+              "explanation": "Fuels like wood, coal, petrol and gas, and electricity, give us energy."
+            },
+            {
+              "step": 4,
+              "title": "Renewable or not",
+              "explanation": "Sun, wind and water are renewable; coal and petrol are non-renewable."
+            }
+          ],
+          "examples": [
+            "The Sun gives us light and heat energy.",
+            "A car runs on energy from petrol or diesel."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Energy",
+              "definition": "The ability to do work.",
+              "simpleExample": "We need energy to run machines."
+            },
+            {
+              "keyword": "Renewable energy",
+              "definition": "Energy from a source that does not run out.",
+              "simpleExample": "Solar energy is renewable."
+            },
+            {
+              "keyword": "Fuel",
+              "definition": "A material burnt to give energy.",
+              "simpleExample": "Coal is a fuel."
+            }
+          ],
+          "quickSummary": "Energy is the ability to do work, obtained from sources like the Sun, water, wind, fuels, electricity and food; some sources are renewable and others non-renewable.",
+          "revisionNotes": [
+            "Energy = the ability to do work.",
+            "Sources: Sun, water, wind, fuels, electricity, food.",
+            "Sun is the biggest energy source.",
+            "Renewable (Sun, wind) vs non-renewable (coal, petrol)."
+          ]
+        },
+        {
+          "topicId": "evs5_ch7_topic2",
+          "topic": "Forms and Uses of Energy",
+          "meaning": "Energy comes in different forms, such as heat, light, sound and movement, and is used in many ways every day.",
+          "ncertBasedExplanation": "Energy appears in many forms and can change from one form to another. Common forms include heat energy (which warms things), light energy (which helps us see), sound energy (which we hear), and energy of movement (which makes things move). For example, an electric bulb changes electrical energy into light and heat, and a moving fan changes electrical energy into movement and air flow. We use energy in countless ways: to cook food, light our homes, run vehicles and machines, and power our bodies through food. Understanding the forms of energy helps us see how things around us work.",
+          "easyExplanation": "Energy has forms like heat, light, sound and movement, and can change from one to another. A bulb turns electricity into light and heat.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Many forms",
+              "explanation": "Energy comes in forms like heat, light, sound and movement."
+            },
+            {
+              "step": 2,
+              "title": "Energy changes form",
+              "explanation": "Energy can change from one form to another."
+            },
+            {
+              "step": 3,
+              "title": "Examples",
+              "explanation": "A bulb changes electricity to light and heat; a fan changes electricity to movement."
+            },
+            {
+              "step": 4,
+              "title": "Used everywhere",
+              "explanation": "We use energy to cook, light homes, run vehicles and power our bodies."
+            }
+          ],
+          "examples": [
+            "An electric bulb changes electrical energy into light and heat.",
+            "A moving fan changes electrical energy into movement."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Heat energy",
+              "definition": "The energy that warms things.",
+              "simpleExample": "A stove gives heat energy."
+            },
+            {
+              "keyword": "Light energy",
+              "definition": "The energy that helps us see.",
+              "simpleExample": "A bulb gives light energy."
+            },
+            {
+              "keyword": "Sound energy",
+              "definition": "The energy we hear.",
+              "simpleExample": "A drum makes sound energy."
+            }
+          ],
+          "quickSummary": "Energy comes in forms like heat, light, sound and movement and can change from one form to another, and we use it to cook, light homes, run machines and power our bodies.",
+          "revisionNotes": [
+            "Forms: heat, light, sound, movement.",
+            "Energy can change form.",
+            "Bulb: electricity -> light + heat.",
+            "Used to cook, light, run machines, power bodies."
+          ]
+        },
+        {
+          "topicId": "evs5_ch7_topic3",
+          "topic": "Safe Use of Electricity",
+          "meaning": "Electricity is very useful but can be dangerous, so we must use it safely.",
+          "ncertBasedExplanation": "Electricity is a very useful form of energy that lights our homes and runs many machines, but it can be dangerous if not used carefully. To stay safe, we should never touch electrical switches, plugs or wires with wet hands, never put fingers or objects into sockets, and not use damaged wires or appliances. We should switch off and unplug appliances when not in use and keep away from broken or hanging electric wires outside. Following these safety rules protects us from electric shocks and accidents. Using electricity safely keeps us and our homes safe.",
+          "easyExplanation": "Electricity is useful but dangerous. Never touch switches with wet hands or put things in sockets, and avoid damaged wires to stay safe.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Useful but dangerous",
+              "explanation": "Electricity is very useful but can be dangerous if not used carefully."
+            },
+            {
+              "step": 2,
+              "title": "Keep hands dry",
+              "explanation": "Never touch switches, plugs or wires with wet hands."
+            },
+            {
+              "step": 3,
+              "title": "Do not poke sockets",
+              "explanation": "Never put fingers or objects into electrical sockets."
+            },
+            {
+              "step": 4,
+              "title": "Avoid damaged wires",
+              "explanation": "Do not use damaged wires or appliances, and keep away from broken outdoor wires."
+            }
+          ],
+          "examples": [
+            "Touching a switch with wet hands can give an electric shock.",
+            "Switching off appliances when not in use is a safe habit."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Electricity",
+              "definition": "A form of energy that powers lights and machines.",
+              "simpleExample": "Electricity lights our homes."
+            },
+            {
+              "keyword": "Electric shock",
+              "definition": "A dangerous jolt from touching electricity.",
+              "simpleExample": "Wet hands on a switch can cause a shock."
+            },
+            {
+              "keyword": "Safety rule",
+              "definition": "A rule that keeps us from harm.",
+              "simpleExample": "Not poking sockets is a safety rule."
+            }
+          ],
+          "quickSummary": "Electricity is very useful but can be dangerous, so we must use it safely by keeping hands dry, not poking sockets, and avoiding damaged wires to prevent shocks and accidents.",
+          "revisionNotes": [
+            "Electricity is useful but dangerous.",
+            "Never touch switches with wet hands.",
+            "Never put objects into sockets.",
+            "Avoid damaged wires; switch off when not in use."
+          ]
+        },
+        {
+          "topicId": "evs5_ch7_topic4",
+          "topic": "Saving Energy",
+          "meaning": "We should save energy by not wasting electricity and fuels, which protects resources and the environment.",
+          "ncertBasedExplanation": "Many sources of energy, like coal and petrol, are non-renewable and will run out one day, and using them can cause pollution. So it is important to save energy. We can save energy by switching off lights, fans and appliances when not needed, using energy-saving devices, walking or cycling for short distances, and using sunlight and natural air during the day. Using clean, renewable energy like solar energy also helps. Saving energy reduces pollution, makes our resources last longer, and protects the environment. Everyone can help by using energy wisely at home and at school.",
+          "easyExplanation": "Energy sources like coal and petrol can run out, so we save energy by switching off unused lights and appliances and using clean energy like solar power.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Why save energy",
+              "explanation": "Non-renewable sources like coal and petrol can run out and cause pollution."
+            },
+            {
+              "step": 2,
+              "title": "Switch off",
+              "explanation": "Turn off lights, fans and appliances when they are not needed."
+            },
+            {
+              "step": 3,
+              "title": "Use less and clean",
+              "explanation": "Use energy-saving devices, walk or cycle, and use sunlight during the day."
+            },
+            {
+              "step": 4,
+              "title": "Helps the planet",
+              "explanation": "Saving energy reduces pollution and makes resources last longer."
+            }
+          ],
+          "examples": [
+            "Switching off lights when leaving a room saves electricity.",
+            "Using a solar water heater saves fuel and is clean."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Save energy",
+              "definition": "To use energy carefully and avoid waste.",
+              "simpleExample": "Switching off fans saves energy."
+            },
+            {
+              "keyword": "Non-renewable",
+              "definition": "A resource that can run out.",
+              "simpleExample": "Petrol is non-renewable."
+            },
+            {
+              "keyword": "Solar energy",
+              "definition": "Clean energy from the Sun.",
+              "simpleExample": "Solar panels use solar energy."
+            }
+          ],
+          "quickSummary": "We should save energy by switching off unused lights and appliances, using energy-saving and clean sources like solar power, which reduces pollution and protects resources.",
+          "revisionNotes": [
+            "Non-renewable energy can run out and pollute.",
+            "Switch off unused lights and appliances.",
+            "Use energy-saving devices and clean energy.",
+            "Saving energy protects resources and the environment."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 8,
+      "chapter": "Clothes - How Things are Made",
+      "topics": [
+        {
+          "topicId": "evs5_ch8_topic1",
+          "topic": "Natural and Synthetic Fibres",
+          "meaning": "Clothes are made from fibres, which are either natural (from plants and animals) or synthetic (man-made).",
+          "ncertBasedExplanation": "All cloth is made from thin threads called fibres. Fibres are of two main kinds. Natural fibres come from plants and animals: cotton and jute come from plants, while wool comes from sheep and silk from silkworms. Synthetic fibres are man-made, produced in factories from chemicals; examples include polyester, nylon and terylene. Natural fibres are usually comfortable and good for the skin, while synthetic fibres are often strong and long-lasting. We choose different fibres for different clothes depending on the weather and use, like cotton for summer and wool for winter.",
+          "easyExplanation": "Clothes are made from fibres. Natural fibres come from plants and animals (cotton, wool, silk); synthetic fibres are man-made (polyester, nylon).",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Cloth from fibres",
+              "explanation": "All cloth is made from thin threads called fibres."
+            },
+            {
+              "step": 2,
+              "title": "Natural fibres",
+              "explanation": "Cotton and jute come from plants; wool from sheep and silk from silkworms."
+            },
+            {
+              "step": 3,
+              "title": "Synthetic fibres",
+              "explanation": "Man-made fibres like polyester and nylon are made in factories from chemicals."
+            },
+            {
+              "step": 4,
+              "title": "Choosing fibres",
+              "explanation": "We pick fibres for the weather and use, like cotton for summer and wool for winter."
+            }
+          ],
+          "examples": [
+            "Cotton comes from a plant; wool comes from sheep.",
+            "Polyester and nylon are synthetic (man-made) fibres."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Fibre",
+              "definition": "A thin thread used to make cloth.",
+              "simpleExample": "Cotton is a fibre."
+            },
+            {
+              "keyword": "Natural fibre",
+              "definition": "A fibre from a plant or animal.",
+              "simpleExample": "Wool is a natural fibre."
+            },
+            {
+              "keyword": "Synthetic fibre",
+              "definition": "A man-made fibre made in a factory.",
+              "simpleExample": "Nylon is a synthetic fibre."
+            }
+          ],
+          "quickSummary": "Clothes are made from fibres, which are either natural (cotton, jute, wool, silk from plants and animals) or synthetic (polyester, nylon made in factories), chosen for weather and use.",
+          "revisionNotes": [
+            "Cloth is made from fibres (threads).",
+            "Natural fibres: cotton, jute, wool, silk.",
+            "Synthetic fibres: polyester, nylon (man-made).",
+            "Cotton for summer, wool for winter."
+          ]
+        },
+        {
+          "topicId": "evs5_ch8_topic2",
+          "topic": "From Fibre to Fabric",
+          "meaning": "Cloth is made from fibres by first spinning them into yarn and then weaving or knitting the yarn into fabric.",
+          "ncertBasedExplanation": "Turning fibres into cloth takes a few steps. First, the short fibres are twisted together into long threads called yarn; this process is called spinning. Then the yarn is made into fabric by weaving or knitting. In weaving, two sets of yarn are crossed over and under each other on a loom to make cloth. In knitting, a single yarn is looped together to make fabric, like in a sweater. India has rich traditions of weaving, and many beautiful handwoven fabrics are made by skilled weavers in different regions. These steps turn simple fibres into the cloth used for our clothes.",
+          "easyExplanation": "Fibres are spun into yarn (thread), then woven or knitted into fabric. Weaving crosses yarns on a loom; knitting loops a yarn together.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Spinning",
+              "explanation": "Short fibres are twisted into long threads called yarn by spinning."
+            },
+            {
+              "step": 2,
+              "title": "Weaving",
+              "explanation": "Yarn is crossed over and under on a loom to make woven cloth."
+            },
+            {
+              "step": 3,
+              "title": "Knitting",
+              "explanation": "A single yarn is looped together to make knitted fabric, like a sweater."
+            },
+            {
+              "step": 4,
+              "title": "Traditions of weaving",
+              "explanation": "India has rich weaving traditions, with beautiful handwoven fabrics in many regions."
+            }
+          ],
+          "examples": [
+            "Cotton fibres are spun into yarn and then woven into cloth.",
+            "A sweater is made by knitting yarn together."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Yarn",
+              "definition": "Long thread made by twisting fibres.",
+              "simpleExample": "Fibres are spun into yarn."
+            },
+            {
+              "keyword": "Spinning",
+              "definition": "Twisting fibres into yarn.",
+              "simpleExample": "Spinning turns cotton into yarn."
+            },
+            {
+              "keyword": "Weaving",
+              "definition": "Crossing yarns on a loom to make cloth.",
+              "simpleExample": "Weaving makes woven fabric."
+            },
+            {
+              "keyword": "Loom",
+              "definition": "A device used for weaving cloth.",
+              "simpleExample": "Weavers use a loom."
+            }
+          ],
+          "quickSummary": "Cloth is made from fibres by spinning them into yarn and then weaving (crossing yarns on a loom) or knitting (looping yarn) into fabric, with India having rich weaving traditions.",
+          "revisionNotes": [
+            "Fibres -> yarn (spinning) -> fabric.",
+            "Weaving crosses yarns on a loom.",
+            "Knitting loops a single yarn.",
+            "India has rich weaving traditions."
+          ]
+        },
+        {
+          "topicId": "evs5_ch8_topic3",
+          "topic": "Stitching and Decorating Clothes",
+          "meaning": "After fabric is made, it is cut and stitched into clothes, which are often decorated with embroidery and designs.",
+          "ncertBasedExplanation": "Once fabric is ready, it is turned into clothes by cutting it into the right shapes and stitching the pieces together with thread, using a needle or a sewing machine. People who stitch clothes are called tailors. Clothes are often decorated to make them beautiful, using embroidery (designs sewn with coloured thread), patterns, prints and other handwork. Different regions of India have their own special styles of embroidery and decoration. From plain fabric to a finished, decorated garment, making clothes involves many skills and a lot of careful work by many people.",
+          "easyExplanation": "Fabric is cut and stitched into clothes with thread, by tailors or machines. Clothes are decorated with embroidery, patterns and prints.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Cut the fabric",
+              "explanation": "Fabric is cut into the right shapes for a garment."
+            },
+            {
+              "step": 2,
+              "title": "Stitch the pieces",
+              "explanation": "The pieces are stitched together with thread using a needle or sewing machine."
+            },
+            {
+              "step": 3,
+              "title": "Tailors make clothes",
+              "explanation": "People who stitch clothes are called tailors."
+            },
+            {
+              "step": 4,
+              "title": "Decorate",
+              "explanation": "Clothes are decorated with embroidery, patterns and prints, in many regional styles."
+            }
+          ],
+          "examples": [
+            "A tailor stitches pieces of cloth together to make a shirt.",
+            "Embroidery uses coloured thread to make designs on clothes."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Stitch",
+              "definition": "To join cloth with thread and needle.",
+              "simpleExample": "We stitch cloth to make clothes."
+            },
+            {
+              "keyword": "Tailor",
+              "definition": "A person who stitches clothes.",
+              "simpleExample": "A tailor made my dress."
+            },
+            {
+              "keyword": "Embroidery",
+              "definition": "Designs sewn on cloth with thread.",
+              "simpleExample": "Embroidery decorates clothes."
+            }
+          ],
+          "quickSummary": "After fabric is made, it is cut and stitched into clothes by tailors using needle or machine, and decorated with embroidery, patterns and prints in many regional styles.",
+          "revisionNotes": [
+            "Fabric is cut and stitched into clothes.",
+            "Done by tailors with needle or sewing machine.",
+            "Decorated with embroidery, patterns, prints.",
+            "Many regional decoration styles in India."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 9,
+      "chapter": "Rhythms of Nature",
+      "topics": [
+        {
+          "topicId": "evs5_ch9_topic1",
+          "topic": "Day and Night",
+          "meaning": "Day and night happen because the Earth spins on its axis, so one side faces the Sun while the other is dark.",
+          "ncertBasedExplanation": "One of nature's most regular rhythms is the cycle of day and night. The Earth spins, or rotates, on its axis like a top, taking about 24 hours to make one full turn. As it spins, the side of the Earth facing the Sun has daytime, with light and warmth, while the side facing away from the Sun has night-time, which is dark. As the Earth keeps turning, day slowly changes into night and night into day. This is why the Sun seems to rise in the east and set in the west. Day and night repeat regularly, helping plants, animals and people follow a daily rhythm.",
+          "easyExplanation": "The Earth spins once every 24 hours. The side facing the Sun has day; the side away has night. This is why we have day and night.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "The Earth spins",
+              "explanation": "The Earth rotates on its axis, taking about 24 hours for one full turn."
+            },
+            {
+              "step": 2,
+              "title": "Day side",
+              "explanation": "The side of the Earth facing the Sun has daytime, with light and warmth."
+            },
+            {
+              "step": 3,
+              "title": "Night side",
+              "explanation": "The side facing away from the Sun has night, which is dark."
+            },
+            {
+              "step": 4,
+              "title": "A daily rhythm",
+              "explanation": "As the Earth turns, day and night repeat, and the Sun seems to rise in the east."
+            }
+          ],
+          "examples": [
+            "When it is day on one side of the Earth, it is night on the other side.",
+            "The Sun appears to rise in the east and set in the west because the Earth spins."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Rotation",
+              "definition": "The spinning of the Earth on its axis.",
+              "simpleExample": "Day and night happen due to rotation."
+            },
+            {
+              "keyword": "Axis",
+              "definition": "The imaginary line the Earth spins around.",
+              "simpleExample": "The Earth spins on its axis."
+            },
+            {
+              "keyword": "Day and night",
+              "definition": "The cycle of light and dark on Earth.",
+              "simpleExample": "Day and night repeat every 24 hours."
+            }
+          ],
+          "quickSummary": "Day and night happen because the Earth spins on its axis every 24 hours, so the side facing the Sun has day while the side facing away has night.",
+          "revisionNotes": [
+            "Earth spins on its axis (about 24 hours).",
+            "Side facing the Sun = day.",
+            "Side away from the Sun = night.",
+            "Sun seems to rise in the east, set in the west."
+          ]
+        },
+        {
+          "topicId": "evs5_ch9_topic2",
+          "topic": "The Seasons",
+          "meaning": "The year is divided into seasons, and India traditionally has six seasons, each with its own weather.",
+          "ncertBasedExplanation": "Another great rhythm of nature is the changing of the seasons through the year. Seasons happen because of changes in the weather over the year. In India, we traditionally have six seasons: Vasanta (spring), Grishma (summer), Varsha (monsoon or rainy), Sharad (autumn), Hemanta (pre-winter) and Shishir (winter). Each season has its own weather, with changes in temperature, rain and the length of day. Plants, animals and people change their activities with the seasons, such as the crops that are grown or the clothes that are worn. The seasons follow each other in a regular cycle every year.",
+          "easyExplanation": "The year has seasons. India traditionally has six: spring, summer, monsoon, autumn, pre-winter and winter, each with its own weather.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Seasons change",
+              "explanation": "The weather changes through the year, giving us seasons."
+            },
+            {
+              "step": 2,
+              "title": "Six Indian seasons",
+              "explanation": "India traditionally has six seasons: Vasanta, Grishma, Varsha, Sharad, Hemanta and Shishir."
+            },
+            {
+              "step": 3,
+              "title": "Each has its weather",
+              "explanation": "Each season has its own temperature, rain and day length."
+            },
+            {
+              "step": 4,
+              "title": "Life follows seasons",
+              "explanation": "Plants, animals and people change activities, crops and clothes with the seasons."
+            }
+          ],
+          "examples": [
+            "Varsha (monsoon) brings rain, while Grishma (summer) is hot.",
+            "Different crops are grown in summer and winter seasons."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Season",
+              "definition": "A part of the year with its own weather.",
+              "simpleExample": "Summer is a hot season."
+            },
+            {
+              "keyword": "Monsoon",
+              "definition": "The rainy season in India.",
+              "simpleExample": "The monsoon brings heavy rain."
+            },
+            {
+              "keyword": "Weather",
+              "definition": "The day-to-day condition of the air.",
+              "simpleExample": "Hot, sunny weather comes in summer."
+            }
+          ],
+          "quickSummary": "The year is divided into seasons, and India traditionally has six (spring, summer, monsoon, autumn, pre-winter, winter), each with its own weather, affecting crops, clothes and life.",
+          "revisionNotes": [
+            "Seasons come from changing weather.",
+            "India has six: Vasanta, Grishma, Varsha, Sharad, Hemanta, Shishir.",
+            "Each has its own temperature and rain.",
+            "Crops, clothes and life change with seasons."
+          ]
+        },
+        {
+          "topicId": "evs5_ch9_topic3",
+          "topic": "Changes in Nature",
+          "meaning": "Nature is always changing in regular, repeating patterns, which we can observe in plants, animals and the sky.",
+          "ncertBasedExplanation": "Nature is full of changes that repeat in regular patterns, called rhythms. Besides day and night and the seasons, we can observe many other changes: the Moon changes its shape over a month, trees grow new leaves and shed old ones, flowers bloom in certain seasons, and birds and animals change their behaviour, such as some birds migrating. By keeping a nature journal and observing carefully over days, weeks and months, we notice these repeating patterns. Watching the rhythms of nature helps us feel connected to the world around us and understand how living and non-living things change over time.",
+          "easyExplanation": "Nature keeps changing in repeating patterns: the Moon's shape, trees losing leaves, flowers blooming and birds migrating. We notice them by observing.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Nature has rhythms",
+              "explanation": "Nature changes in regular, repeating patterns called rhythms."
+            },
+            {
+              "step": 2,
+              "title": "Many changes",
+              "explanation": "The Moon changes shape, trees grow and shed leaves, and flowers bloom in seasons."
+            },
+            {
+              "step": 3,
+              "title": "Animals change too",
+              "explanation": "Birds and animals change behaviour, such as migrating, with the seasons."
+            },
+            {
+              "step": 4,
+              "title": "Observe and journal",
+              "explanation": "Keeping a nature journal helps us notice these repeating patterns over time."
+            }
+          ],
+          "examples": [
+            "The Moon changes its shape from a thin crescent to a full Moon over a month.",
+            "Many trees shed their leaves in one season and grow new ones in another."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Rhythm of nature",
+              "definition": "A regular, repeating change in nature.",
+              "simpleExample": "The seasons are a rhythm of nature."
+            },
+            {
+              "keyword": "Migration",
+              "definition": "The movement of animals from one place to another.",
+              "simpleExample": "Some birds migrate in winter."
+            },
+            {
+              "keyword": "Nature journal",
+              "definition": "A book to record observations of nature.",
+              "simpleExample": "We note changes in a nature journal."
+            }
+          ],
+          "quickSummary": "Nature is always changing in regular, repeating patterns, such as the Moon's phases, trees shedding leaves, flowers blooming and birds migrating, which we notice by observing over time.",
+          "revisionNotes": [
+            "Nature changes in repeating rhythms.",
+            "Moon's shape, trees, flowers, animal behaviour change.",
+            "Some birds migrate with the seasons.",
+            "A nature journal helps us observe patterns."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 10,
+      "chapter": "Earth - Our Shared Home",
+      "topics": [
+        {
+          "topicId": "evs5_ch10_topic1",
+          "topic": "The Earth and the Web of Life",
+          "meaning": "The Earth is the shared home of all living things, which are connected to one another in a web of life.",
+          "ncertBasedExplanation": "The Earth is often called the 'Blue Planet' because of its water, and it is the only planet known to support life. It is the shared home of all living things, humans, animals and plants. All living beings are connected to one another and to the air, water and land in what is called the web of life. Plants make food and give oxygen, animals depend on plants and on each other, and all depend on clean air, water and soil. If one part of this web is harmed, others are affected too. Understanding the web of life helps us see why we must care for our shared home.",
+          "easyExplanation": "The Earth is the shared home of all living things, all connected in a 'web of life'. Harming one part affects the others, so we must care for it.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "The Blue Planet",
+              "explanation": "The Earth is called the Blue Planet and is the only planet known to support life."
+            },
+            {
+              "step": 2,
+              "title": "A shared home",
+              "explanation": "The Earth is the shared home of humans, animals and plants."
+            },
+            {
+              "step": 3,
+              "title": "The web of life",
+              "explanation": "All living things are connected to one another and to air, water and land."
+            },
+            {
+              "step": 4,
+              "title": "Everything is linked",
+              "explanation": "If one part of the web is harmed, others are affected, so we must care for it."
+            }
+          ],
+          "examples": [
+            "Plants give oxygen and food that animals and humans need.",
+            "Harming forests affects the animals and people that depend on them."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Web of life",
+              "definition": "The way all living things are connected.",
+              "simpleExample": "Plants and animals are part of the web of life."
+            },
+            {
+              "keyword": "Blue Planet",
+              "definition": "A nickname for the Earth because of its water.",
+              "simpleExample": "Earth is called the Blue Planet."
+            },
+            {
+              "keyword": "Environment",
+              "definition": "Our surroundings of air, water, land and life.",
+              "simpleExample": "We must protect the environment."
+            }
+          ],
+          "quickSummary": "The Earth is the shared home of all living things, which are connected in a web of life along with air, water and land; harming one part affects others, so we must care for it.",
+          "revisionNotes": [
+            "Earth = shared home of all living things.",
+            "Called the 'Blue Planet'; only planet with life.",
+            "All life is connected in a web of life.",
+            "Harming one part affects the rest."
+          ]
+        },
+        {
+          "topicId": "evs5_ch10_topic2",
+          "topic": "Waste and Its Management",
+          "meaning": "We produce a lot of waste, which must be managed by reducing, reusing, recycling and separating it properly.",
+          "ncertBasedExplanation": "In our daily lives we produce a lot of waste, such as food scraps, paper, plastic and other rubbish. If waste is not managed well, it pollutes our land, water and air and harms living things. Waste management means handling waste sensibly. We should separate (segregate) waste into wet waste (like food scraps, which can be composted) and dry waste (like paper and plastic, which can be recycled). We can also reduce the waste we make, reuse things instead of throwing them away, and recycle materials. Composting turns wet waste into useful manure. Managing waste well keeps our shared home clean and healthy.",
+          "easyExplanation": "We make a lot of waste that can pollute the Earth. We manage it by reducing, reusing, recycling, and separating wet and dry waste.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Waste is a problem",
+              "explanation": "We produce a lot of waste that can pollute land, water and air if not managed."
+            },
+            {
+              "step": 2,
+              "title": "Separate the waste",
+              "explanation": "Segregate waste into wet (compostable) and dry (recyclable) waste."
+            },
+            {
+              "step": 3,
+              "title": "Reduce, reuse, recycle",
+              "explanation": "Make less waste, reuse things, and recycle materials like paper and plastic."
+            },
+            {
+              "step": 4,
+              "title": "Compost wet waste",
+              "explanation": "Composting turns wet waste like food scraps into useful manure."
+            }
+          ],
+          "examples": [
+            "Separating food scraps from plastic helps in composting and recycling.",
+            "Reusing a cloth bag instead of plastic reduces waste."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Waste management",
+              "definition": "Handling waste sensibly to avoid harm.",
+              "simpleExample": "Separating waste is part of waste management."
+            },
+            {
+              "keyword": "Segregation",
+              "definition": "Separating waste into types.",
+              "simpleExample": "Wet and dry waste segregation helps recycling."
+            },
+            {
+              "keyword": "Composting",
+              "definition": "Turning wet waste into manure.",
+              "simpleExample": "Food scraps can be composted."
+            }
+          ],
+          "quickSummary": "We produce a lot of waste that can pollute the Earth, so we must manage it by reducing, reusing, recycling and separating wet and dry waste, and composting wet waste.",
+          "revisionNotes": [
+            "We produce a lot of waste that can pollute.",
+            "Segregate into wet and dry waste.",
+            "Reduce, reuse, recycle.",
+            "Compost wet waste into manure."
+          ]
+        },
+        {
+          "topicId": "evs5_ch10_topic3",
+          "topic": "Caring for the Earth",
+          "meaning": "We can care for our shared home, the Earth, by saving resources, reducing pollution and protecting nature.",
+          "ncertBasedExplanation": "Because the Earth is our shared home and supports all life, it is everyone's duty to care for it. We can do this in many ways: saving water and electricity, reducing and managing waste, planting trees, avoiding pollution of air and water, and protecting plants and animals. Following the idea of 'Reduce, Reuse, Recycle' and being 'waste warriors' helps keep the planet clean. Even small actions by each person, like switching off lights, not littering and saving water, add up to make a big difference. By caring for the Earth, we keep it healthy for ourselves and for future generations.",
+          "easyExplanation": "The Earth is our shared home, so we care for it by saving water and power, reducing waste, planting trees, avoiding pollution and protecting nature.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Our duty to care",
+              "explanation": "Since the Earth supports all life, it is everyone's duty to care for it."
+            },
+            {
+              "step": 2,
+              "title": "Save resources",
+              "explanation": "Save water and electricity, and reduce and manage waste."
+            },
+            {
+              "step": 3,
+              "title": "Protect nature",
+              "explanation": "Plant trees, avoid polluting air and water, and protect plants and animals."
+            },
+            {
+              "step": 4,
+              "title": "Small actions matter",
+              "explanation": "Switching off lights, not littering and saving water all add up to a big difference."
+            }
+          ],
+          "examples": [
+            "Planting trees helps clean the air and protect the Earth.",
+            "Not littering keeps our surroundings and the planet clean."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Conservation",
+              "definition": "Using resources carefully to avoid waste.",
+              "simpleExample": "Saving water is conservation."
+            },
+            {
+              "keyword": "Pollution",
+              "definition": "Dirtying air, water or land.",
+              "simpleExample": "We should reduce pollution to protect the Earth."
+            },
+            {
+              "keyword": "Reduce, Reuse, Recycle",
+              "definition": "A rule for cutting down waste.",
+              "simpleExample": "Reduce, reuse, recycle saves resources."
+            }
+          ],
+          "quickSummary": "We care for our shared home, the Earth, by saving water and energy, reducing waste, planting trees, avoiding pollution and protecting nature, with even small actions making a difference.",
+          "revisionNotes": [
+            "Caring for Earth is everyone's duty.",
+            "Save water and electricity; reduce waste.",
+            "Plant trees; avoid pollution; protect nature.",
+            "Small actions add up; Reduce, Reuse, Recycle."
+          ]
+        }
+      ]
+    }
+  ]
+}

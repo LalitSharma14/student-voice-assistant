@@ -1,0 +1,1116 @@
+{
+  "class": 5,
+  "board": "CBSE",
+  "source": "NCERT",
+  "subject": "Art Education",
+  "bookName": "Bansuri",
+  "chapters": [
+    {
+      "chapterNumber": 1,
+      "chapter": "Visual Arts",
+      "topics": [
+        {
+          "topicId": "art5_va_topic1",
+          "topic": "Objects on the Move",
+          "meaning": "This chapter is about drawing and showing objects that are moving, capturing a feeling of motion in pictures.",
+          "ncertBasedExplanation": "In this chapter we learn how to show movement in our drawings and paintings. Many things around us move, such as a giant wheel, a moving bus, a flying bird or a spinning top. Artists use special techniques to make a still picture look as if it is moving, for example by drawing motion lines, blurring, repeating shapes, or showing objects tilted as if in action. Through fun activities, students observe moving objects, then draw them in ways that capture the feeling of motion. This helps us look closely at the world and express movement and energy in our artwork.",
+          "easyExplanation": "This chapter teaches us how to draw moving things, like a giant wheel or a flying bird, so that a still picture looks full of movement.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Notice moving objects",
+              "explanation": "Observe things that move around us, like wheels, vehicles and birds."
+            },
+            {
+              "step": 2,
+              "title": "Show motion in art",
+              "explanation": "Use techniques like motion lines, repeating shapes or tilts to show movement."
+            },
+            {
+              "step": 3,
+              "title": "Draw the movement",
+              "explanation": "Draw moving objects so the picture captures a feeling of motion."
+            },
+            {
+              "step": 4,
+              "title": "Express energy",
+              "explanation": "Capturing motion adds life and energy to our artwork."
+            }
+          ],
+          "examples": [
+            "Drawing curved motion lines behind a moving bicycle shows it is moving.",
+            "A spinning top can be drawn with blurred lines to show movement."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Motion",
+              "definition": "The act of moving.",
+              "simpleExample": "A flying bird shows motion."
+            },
+            {
+              "keyword": "Motion lines",
+              "definition": "Lines drawn to show movement in a picture.",
+              "simpleExample": "Motion lines make a car look fast."
+            },
+            {
+              "keyword": "Visual Arts",
+              "definition": "Art that we create to be seen, like drawing and painting.",
+              "simpleExample": "Drawing is a visual art."
+            }
+          ],
+          "quickSummary": "'Objects on the Move' teaches us to observe moving things and show a feeling of motion in our drawings using techniques like motion lines, adding energy and life to our artwork.",
+          "revisionNotes": [
+            "Part: Visual Arts.",
+            "About showing movement in pictures.",
+            "Techniques: motion lines, blur, repeated shapes.",
+            "Skill: observing and expressing motion."
+          ]
+        },
+        {
+          "topicId": "art5_va_topic2",
+          "topic": "Peeping Out of the Window",
+          "meaning": "This chapter is about looking at a scene through a window-like frame and drawing what we see, learning about composition and framing.",
+          "ncertBasedExplanation": "In this chapter we learn to look at the world through a 'frame', like peeping out of a window, and to draw the scene we see. A window frames a part of the view, helping us decide what to include in our picture and how to arrange it; this is called composition. Through activities, students observe a view, notice what is near and far, and arrange the objects, colours and spaces in their drawing. Learning to frame and compose a scene helps us make our artwork balanced and interesting, and teaches us to really look at our surroundings.",
+          "easyExplanation": "This chapter teaches us to draw a scene as if looking through a window, learning how to choose and arrange what to put in our picture (composition).",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Look through a frame",
+              "explanation": "A window frames a part of the view, like a picture frame."
+            },
+            {
+              "step": 2,
+              "title": "Choose what to draw",
+              "explanation": "Decide what to include in the picture from the framed view."
+            },
+            {
+              "step": 3,
+              "title": "Arrange the scene",
+              "explanation": "Arrange the objects, colours and spaces; this is called composition."
+            },
+            {
+              "step": 4,
+              "title": "Make it balanced",
+              "explanation": "Good framing and composition make artwork balanced and interesting."
+            }
+          ],
+          "examples": [
+            "Drawing the view of trees and houses as seen from a window.",
+            "Choosing to place a tree on one side to balance a building on the other."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Composition",
+              "definition": "The arrangement of things in a picture.",
+              "simpleExample": "Good composition makes art pleasing."
+            },
+            {
+              "keyword": "Frame",
+              "definition": "A border around a view or picture.",
+              "simpleExample": "A window acts like a frame."
+            },
+            {
+              "keyword": "Foreground",
+              "definition": "The part of a scene nearest to us.",
+              "simpleExample": "The flowers in the foreground look bigger."
+            }
+          ],
+          "quickSummary": "'Peeping Out of the Window' teaches us to view a scene through a frame and arrange what we see into a balanced picture, learning about framing and composition.",
+          "revisionNotes": [
+            "Part: Visual Arts.",
+            "Draw a scene as seen through a window/frame.",
+            "Learn framing and composition (arrangement).",
+            "Skill: arranging a balanced picture."
+          ]
+        },
+        {
+          "topicId": "art5_va_topic3",
+          "topic": "Picturing Stories",
+          "meaning": "This chapter is about telling a story through a series of pictures, like comics or illustrations.",
+          "ncertBasedExplanation": "In this chapter we learn how pictures can tell a story, just like words do. By drawing a series of connected pictures, we can show what happens from the beginning to the end of a story; this is the idea behind comics, picture books and storyboards. Through activities, students choose a simple story or event, break it into key moments, and draw each moment in order so the pictures together narrate the tale. Picturing stories helps us combine imagination, drawing and storytelling, and shows how visual art can communicate ideas and events without using many words.",
+          "easyExplanation": "This chapter teaches us to tell a story through a series of pictures, like a comic, by drawing the main moments of the story in order.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Pictures tell stories",
+              "explanation": "A series of connected pictures can tell a story like words do."
+            },
+            {
+              "step": 2,
+              "title": "Choose a story",
+              "explanation": "Pick a simple story or event to show in pictures."
+            },
+            {
+              "step": 3,
+              "title": "Break into moments",
+              "explanation": "Divide the story into its key moments or scenes."
+            },
+            {
+              "step": 4,
+              "title": "Draw in order",
+              "explanation": "Draw each moment in order so the pictures together narrate the story."
+            }
+          ],
+          "examples": [
+            "A comic strip shows a story through a row of pictures.",
+            "Drawing the start, middle and end of a story as three pictures."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Storyboard",
+              "definition": "A series of drawings that show a story in order.",
+              "simpleExample": "Films are planned using a storyboard."
+            },
+            {
+              "keyword": "Comic",
+              "definition": "A story told through pictures and a little text.",
+              "simpleExample": "A comic uses pictures to tell a story."
+            },
+            {
+              "keyword": "Sequence",
+              "definition": "Things arranged in order.",
+              "simpleExample": "Story pictures are drawn in a sequence."
+            }
+          ],
+          "quickSummary": "'Picturing Stories' teaches us that a series of pictures can tell a story, by choosing a story, breaking it into key moments and drawing them in order, like a comic or storyboard.",
+          "revisionNotes": [
+            "Part: Visual Arts.",
+            "Tell a story through a series of pictures.",
+            "Break a story into key moments and draw in order.",
+            "Skill: visual storytelling (comics, storyboards)."
+          ]
+        },
+        {
+          "topicId": "art5_va_topic4",
+          "topic": "Imaginary Beings",
+          "meaning": "This chapter is about using imagination to create and draw fantasy creatures that do not exist in real life.",
+          "ncertBasedExplanation": "In this chapter we use our imagination to invent and draw imaginary beings, creatures that do not exist in the real world. We can combine parts of different animals, plants and objects, and add unusual colours, shapes and features to create something completely new, like a creature with wings of a bird and the body of a fish. Through activities, students imagine such beings, give them names and stories, and draw them. This chapter celebrates creativity and imagination, showing that in art there are no limits, and helps us express ideas that come from our own minds.",
+          "easyExplanation": "This chapter lets us invent and draw made-up creatures using our imagination, by mixing parts of different animals and adding unusual shapes and colours.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Use imagination",
+              "explanation": "Imaginary beings are creatures we invent that do not exist in real life."
+            },
+            {
+              "step": 2,
+              "title": "Combine features",
+              "explanation": "Mix parts of different animals, plants and objects to create them."
+            },
+            {
+              "step": 3,
+              "title": "Add unusual details",
+              "explanation": "Give them unusual colours, shapes and features."
+            },
+            {
+              "step": 4,
+              "title": "Give them life",
+              "explanation": "Name the beings, imagine their stories, and draw them."
+            }
+          ],
+          "examples": [
+            "Drawing a creature with a lion's head and a bird's wings.",
+            "Inventing a colourful being that lives in the clouds."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Imagination",
+              "definition": "Forming new pictures or ideas in the mind.",
+              "simpleExample": "We use imagination to invent creatures."
+            },
+            {
+              "keyword": "Imaginary",
+              "definition": "Existing only in the mind, not real.",
+              "simpleExample": "A dragon is an imaginary being."
+            },
+            {
+              "keyword": "Creativity",
+              "definition": "The ability to make new and original things.",
+              "simpleExample": "Art needs creativity."
+            }
+          ],
+          "quickSummary": "'Imaginary Beings' encourages us to use our imagination to invent and draw fantasy creatures by combining different features and adding unusual details, celebrating creativity.",
+          "revisionNotes": [
+            "Part: Visual Arts.",
+            "Invent and draw made-up creatures.",
+            "Combine features of animals, plants, objects.",
+            "Skill: imagination and creativity."
+          ]
+        },
+        {
+          "topicId": "art5_va_topic5",
+          "topic": "Spreading the Message",
+          "meaning": "This chapter is about using art, like posters, to share important messages and ideas with others.",
+          "ncertBasedExplanation": "In this chapter we learn how art can be used to spread messages and ideas to many people. Posters, banners and signs use pictures, colours and a few words to share a message clearly and powerfully, such as 'Save Water', 'Keep the School Clean' or 'Plant Trees'. Through activities, students choose a message they care about, think of strong images and colours, and design a poster to spread it. This chapter shows that art is not only beautiful but also useful, as it can inform, persuade and bring about good changes in society.",
+          "easyExplanation": "This chapter teaches us to use art, like posters, to share important messages such as 'Save Water', using clear pictures, colours and a few words.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Art can send messages",
+              "explanation": "Posters and signs use art to share messages with many people."
+            },
+            {
+              "step": 2,
+              "title": "Choose a message",
+              "explanation": "Pick a message you care about, like saving water or keeping clean."
+            },
+            {
+              "step": 3,
+              "title": "Use images and words",
+              "explanation": "Use strong pictures, colours and a few clear words."
+            },
+            {
+              "step": 4,
+              "title": "Design a poster",
+              "explanation": "Design the poster so the message is clear and powerful."
+            }
+          ],
+          "examples": [
+            "A 'Save Water' poster uses a picture of a dripping tap and bold words.",
+            "A poster with trees and the words 'Plant Trees' spreads an environmental message."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Poster",
+              "definition": "A large printed picture with a message.",
+              "simpleExample": "We made a poster about cleanliness."
+            },
+            {
+              "keyword": "Message",
+              "definition": "An idea that we want to share.",
+              "simpleExample": "The poster's message was 'Save Water'."
+            },
+            {
+              "keyword": "Slogan",
+              "definition": "A short, catchy phrase.",
+              "simpleExample": "'Keep India Clean' is a slogan."
+            }
+          ],
+          "quickSummary": "'Spreading the Message' teaches us that art, like posters, can share important messages clearly using strong pictures, colours and a few words, showing that art can be useful and bring positive change.",
+          "revisionNotes": [
+            "Part: Visual Arts.",
+            "Use art (posters) to spread messages.",
+            "Combine strong images, colours and a few words.",
+            "Skill: designing posters; art for social good."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 2,
+      "chapter": "Theatre",
+      "topics": [
+        {
+          "topicId": "art5_th_topic1",
+          "topic": "Create a Scene",
+          "meaning": "This chapter is about creating a simple theatre scene, including the setting, characters and action.",
+          "ncertBasedExplanation": "In this chapter we learn the basics of theatre by creating a scene. A scene is a short part of a play that happens in one place and shows some action between characters. To create a scene, we decide on a setting (where and when it happens), the characters (who is in it), and what happens between them. Through activities, students imagine or choose a situation, take on roles, and act out the scene. This chapter introduces acting, dialogue and imagination, and shows how a story can come alive on stage through performance.",
+          "easyExplanation": "This chapter teaches us to create and act out a short theatre scene, deciding the place, the characters and what happens between them.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "What a scene is",
+              "explanation": "A scene is a short part of a play in one place showing some action."
+            },
+            {
+              "step": 2,
+              "title": "Decide the setting",
+              "explanation": "Choose where and when the scene happens."
+            },
+            {
+              "step": 3,
+              "title": "Choose characters",
+              "explanation": "Decide who is in the scene and their roles."
+            },
+            {
+              "step": 4,
+              "title": "Act it out",
+              "explanation": "Take on roles and act out what happens between the characters."
+            }
+          ],
+          "examples": [
+            "Acting out a scene at a market where two friends meet.",
+            "Creating a scene of a family having dinner together."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Theatre",
+              "definition": "The art of acting out stories on stage.",
+              "simpleExample": "We learn acting in theatre."
+            },
+            {
+              "keyword": "Scene",
+              "definition": "A short part of a play in one place.",
+              "simpleExample": "The first scene is set in a garden."
+            },
+            {
+              "keyword": "Character",
+              "definition": "A person in a play or story.",
+              "simpleExample": "She played the character of a queen."
+            }
+          ],
+          "quickSummary": "'Create a Scene' introduces theatre by teaching us to build and act out a short scene, choosing a setting, characters and action, bringing a story to life through performance.",
+          "revisionNotes": [
+            "Part: Theatre.",
+            "A scene = short part of a play in one place.",
+            "Decide setting, characters and action.",
+            "Skill: acting, dialogue and imagination."
+          ]
+        },
+        {
+          "topicId": "art5_th_topic2",
+          "topic": "Stitch it for a Story",
+          "meaning": "This chapter is about making costumes, props and other materials to help tell a story in theatre.",
+          "ncertBasedExplanation": "In this chapter we learn how costumes and props help tell a story in theatre. Costumes are the special clothes that actors wear to look like their characters, and props are the objects they use on stage, like a crown, a basket or a stick. By making and choosing the right costumes and props, we help the audience understand who the characters are and what is happening. Through activities, students design and make simple costumes and props from easily available materials to support a story. This chapter shows that theatre is teamwork involving more than just acting.",
+          "easyExplanation": "This chapter teaches us to make costumes and props, like a crown or a basket, to help tell a story on stage and show who the characters are.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Costumes and props",
+              "explanation": "Costumes are characters' clothes and props are objects used on stage."
+            },
+            {
+              "step": 2,
+              "title": "They help the story",
+              "explanation": "They help the audience understand the characters and what is happening."
+            },
+            {
+              "step": 3,
+              "title": "Make them simply",
+              "explanation": "Design and make simple costumes and props from easily available materials."
+            },
+            {
+              "step": 4,
+              "title": "Support the performance",
+              "explanation": "Good costumes and props make a story clearer and more enjoyable."
+            }
+          ],
+          "examples": [
+            "Making a paper crown for the character of a king.",
+            "Using a cloth bundle as a prop for a traveller's belongings."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Costume",
+              "definition": "Special clothes worn by an actor.",
+              "simpleExample": "She wore a farmer's costume."
+            },
+            {
+              "keyword": "Prop",
+              "definition": "An object used on stage.",
+              "simpleExample": "A sword is a prop in the play."
+            },
+            {
+              "keyword": "Stage",
+              "definition": "The place where a play is performed.",
+              "simpleExample": "The actors stood on the stage."
+            }
+          ],
+          "quickSummary": "'Stitch it for a Story' teaches us to make costumes and props from simple materials to help tell a story in theatre and show the audience who the characters are.",
+          "revisionNotes": [
+            "Part: Theatre.",
+            "Costumes = characters' clothes; props = stage objects.",
+            "Make them from simple materials.",
+            "Skill: supporting a story with costumes and props."
+          ]
+        },
+        {
+          "topicId": "art5_th_topic3",
+          "topic": "Time, Team, Technique",
+          "meaning": "This chapter is about the planning, teamwork and techniques needed to put on a theatre performance.",
+          "ncertBasedExplanation": "In this chapter we learn that a good theatre performance needs three things: time, team and technique. Time means planning and practising (rehearsing) so everyone knows what to do. Team means working together, as theatre involves many people, actors, helpers with costumes, props and sound, all cooperating. Technique means the skills of acting, such as speaking clearly, using the right expressions, gestures and movements on stage. Through activities, students plan, rehearse and perform together. This chapter teaches the importance of preparation, cooperation and skill in making a successful performance.",
+          "easyExplanation": "This chapter teaches that a good play needs time (planning and practice), team (working together) and technique (acting skills like clear speech and expression).",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Time: planning and practice",
+              "explanation": "Plan and rehearse so everyone knows what to do."
+            },
+            {
+              "step": 2,
+              "title": "Team: work together",
+              "explanation": "Theatre needs many people cooperating, on acting, costumes, props and sound."
+            },
+            {
+              "step": 3,
+              "title": "Technique: acting skills",
+              "explanation": "Speak clearly and use the right expressions, gestures and movements."
+            },
+            {
+              "step": 4,
+              "title": "Perform together",
+              "explanation": "Plan, rehearse and perform as a team for a successful show."
+            }
+          ],
+          "examples": [
+            "Rehearsing a play several times before performing it.",
+            "Different students managing acting, props and sound as a team."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Rehearsal",
+              "definition": "Practising a performance before showing it.",
+              "simpleExample": "We had a rehearsal before the play."
+            },
+            {
+              "keyword": "Teamwork",
+              "definition": "Working together towards a goal.",
+              "simpleExample": "Theatre needs teamwork."
+            },
+            {
+              "keyword": "Technique",
+              "definition": "A skilful way of doing something.",
+              "simpleExample": "Speaking clearly is an acting technique."
+            }
+          ],
+          "quickSummary": "'Time, Team, Technique' teaches that a successful theatre performance needs planning and practice (time), cooperation (team) and acting skills (technique).",
+          "revisionNotes": [
+            "Part: Theatre.",
+            "Time = planning and rehearsal.",
+            "Team = working together.",
+            "Technique = acting skills (speech, expression, movement)."
+          ]
+        },
+        {
+          "topicId": "art5_th_topic4",
+          "topic": "View and Review",
+          "meaning": "This chapter is about watching performances thoughtfully and sharing helpful feedback about them.",
+          "ncertBasedExplanation": "In this chapter we learn how to watch (view) a theatre performance carefully and then review it, that is, share our thoughts about it. A good audience watches attentively and respectfully. After watching, we can review the performance by saying what we liked, what was done well, and what could be improved, in a kind and helpful way. Through activities, students watch performances by their classmates and give thoughtful feedback. This chapter teaches us to appreciate the hard work of performers, to observe carefully, and to give and receive feedback politely, which helps everyone improve.",
+          "easyExplanation": "This chapter teaches us to watch a performance carefully and then review it by kindly sharing what we liked and what could be better.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Be a good audience",
+              "explanation": "Watch a performance attentively and respectfully."
+            },
+            {
+              "step": 2,
+              "title": "Review it",
+              "explanation": "Share your thoughts about the performance after watching."
+            },
+            {
+              "step": 3,
+              "title": "Be kind and helpful",
+              "explanation": "Say what was done well and what could be improved, politely."
+            },
+            {
+              "step": 4,
+              "title": "Everyone improves",
+              "explanation": "Giving and receiving feedback kindly helps everyone get better."
+            }
+          ],
+          "examples": [
+            "Clapping and watching quietly while classmates perform.",
+            "Telling a friend you liked their clear voice and suggesting a louder ending."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Audience",
+              "definition": "The people who watch a performance.",
+              "simpleExample": "The audience clapped for the play."
+            },
+            {
+              "keyword": "Review",
+              "definition": "To share thoughts about something after experiencing it.",
+              "simpleExample": "We reviewed the play together."
+            },
+            {
+              "keyword": "Feedback",
+              "definition": "Helpful comments about someone's work.",
+              "simpleExample": "She gave kind feedback on the acting."
+            }
+          ],
+          "quickSummary": "'View and Review' teaches us to watch performances attentively and respectfully and then review them by kindly sharing what was good and what could improve, helping everyone get better.",
+          "revisionNotes": [
+            "Part: Theatre.",
+            "View = watch attentively and respectfully.",
+            "Review = share thoughts after watching.",
+            "Skill: giving and receiving kind, helpful feedback."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 3,
+      "chapter": "Music",
+      "topics": [
+        {
+          "topicId": "art5_mu_topic1",
+          "topic": "Sing and Play",
+          "meaning": "This chapter is about singing songs and playing simple music together, enjoying melody and rhythm.",
+          "ncertBasedExplanation": "In this chapter we enjoy music by singing songs and playing simple instruments. Singing helps us use our voice to make melody, while clapping or playing instruments helps us keep the rhythm. Through fun activities, students learn songs, sing them together in a group, and add simple sounds using clapping, tapping or easy instruments. Singing and playing together teaches us about tune, rhythm and working as a group. This chapter shows that music is joyful and can be made by everyone, and that singing together brings people closer.",
+          "easyExplanation": "This chapter is about singing songs and playing simple music together, learning to keep a tune and a rhythm and to enjoy making music as a group.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Sing together",
+              "explanation": "Use our voice to sing songs and make melody."
+            },
+            {
+              "step": 2,
+              "title": "Keep the rhythm",
+              "explanation": "Clap, tap or play simple instruments to keep the rhythm."
+            },
+            {
+              "step": 3,
+              "title": "Learn songs",
+              "explanation": "Learn and sing songs together in a group."
+            },
+            {
+              "step": 4,
+              "title": "Enjoy as a group",
+              "explanation": "Singing and playing together teaches tune, rhythm and teamwork."
+            }
+          ],
+          "examples": [
+            "Singing a song together while clapping to the beat.",
+            "Playing a simple rhythm on a drum while others sing."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Melody",
+              "definition": "A tune made of musical notes.",
+              "simpleExample": "The song has a sweet melody."
+            },
+            {
+              "keyword": "Rhythm",
+              "definition": "A regular pattern of beats in music.",
+              "simpleExample": "We clap to the rhythm."
+            },
+            {
+              "keyword": "Music",
+              "definition": "The art of making sounds in a pleasing way.",
+              "simpleExample": "Singing is a kind of music."
+            }
+          ],
+          "quickSummary": "'Sing and Play' is about singing songs and playing simple music together, learning to keep a tune and rhythm and enjoying making music as a joyful group activity.",
+          "revisionNotes": [
+            "Part: Music.",
+            "Sing songs and play simple instruments.",
+            "Learn melody (tune) and rhythm (beat).",
+            "Skill: singing and playing together as a group."
+          ]
+        },
+        {
+          "topicId": "art5_mu_topic2",
+          "topic": "Music Around Me",
+          "meaning": "This chapter is about noticing the many sounds and music present in our everyday surroundings.",
+          "ncertBasedExplanation": "In this chapter we learn to listen carefully to the sounds around us and discover the music in everyday life. Music and sounds are everywhere, in the songs people sing, the calls of birds, the rustling of leaves, the rhythm of rain, and the sounds of work and festivals. Through activities, students observe and collect the sounds they hear in their homes, school and surroundings, and notice which are pleasant or musical. This chapter teaches us to listen attentively, to appreciate the variety of sounds in our world, and to see that music is closely connected to our daily life and culture.",
+          "easyExplanation": "This chapter teaches us to listen to the sounds around us, like birds, rain and people singing, and notice the music present in our everyday life.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Listen carefully",
+              "explanation": "Pay attention to the many sounds around us every day."
+            },
+            {
+              "step": 2,
+              "title": "Sounds everywhere",
+              "explanation": "Music and sounds are in birdsong, rain, leaves, work and festivals."
+            },
+            {
+              "step": 3,
+              "title": "Collect sounds",
+              "explanation": "Observe and note the sounds heard at home, school and outside."
+            },
+            {
+              "step": 4,
+              "title": "Appreciate music",
+              "explanation": "Notice pleasant, musical sounds and how music connects to daily life."
+            }
+          ],
+          "examples": [
+            "The chirping of birds in the morning is a natural sound.",
+            "The rhythm of rain falling can sound musical."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Sound",
+              "definition": "Something we hear.",
+              "simpleExample": "The bell makes a loud sound."
+            },
+            {
+              "keyword": "Listen",
+              "definition": "To pay attention to sounds.",
+              "simpleExample": "We listen carefully to music."
+            },
+            {
+              "keyword": "Pleasant",
+              "definition": "Nice and enjoyable.",
+              "simpleExample": "Birdsong is a pleasant sound."
+            }
+          ],
+          "quickSummary": "'Music Around Me' teaches us to listen carefully to everyday sounds, like birds, rain and people singing, and to notice and appreciate the music present in our surroundings and culture.",
+          "revisionNotes": [
+            "Part: Music.",
+            "Listen to sounds around us every day.",
+            "Music is in birds, rain, work, festivals.",
+            "Skill: attentive listening and appreciating sounds."
+          ]
+        },
+        {
+          "topicId": "art5_mu_topic3",
+          "topic": "Sounds and Instruments",
+          "meaning": "This chapter is about musical instruments and the different sounds they make.",
+          "ncertBasedExplanation": "In this chapter we learn about musical instruments and the variety of sounds they produce. Instruments make sound in different ways: some are struck or hit (like the tabla, dhol and drums), some are blown into (like the flute or bansuri), some have strings that are plucked or bowed (like the sitar or violin), and some are shaken. Through activities, students explore different instruments, listen to their sounds, and learn to tell them apart. This chapter introduces the rich variety of Indian and other instruments and helps us understand how different sounds are made and combined to create music.",
+          "easyExplanation": "This chapter teaches us about musical instruments, like the tabla, flute and sitar, and the different ways they make sound (hitting, blowing, plucking).",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Instruments make music",
+              "explanation": "Musical instruments produce a variety of sounds."
+            },
+            {
+              "step": 2,
+              "title": "Different ways of sound",
+              "explanation": "Some are struck (tabla), some blown (flute), some have strings (sitar)."
+            },
+            {
+              "step": 3,
+              "title": "Explore the sounds",
+              "explanation": "Listen to different instruments and learn to tell them apart."
+            },
+            {
+              "step": 4,
+              "title": "Rich variety",
+              "explanation": "There is a rich variety of Indian and other instruments."
+            }
+          ],
+          "examples": [
+            "The tabla makes sound when it is struck with the hands.",
+            "The flute (bansuri) makes sound when air is blown into it."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Instrument",
+              "definition": "An object used to make music.",
+              "simpleExample": "The sitar is a musical instrument."
+            },
+            {
+              "keyword": "Tabla",
+              "definition": "An Indian percussion instrument played with the hands.",
+              "simpleExample": "The tabla keeps the rhythm."
+            },
+            {
+              "keyword": "Flute",
+              "definition": "A wind instrument played by blowing air.",
+              "simpleExample": "The bansuri is a kind of flute."
+            }
+          ],
+          "quickSummary": "'Sounds and Instruments' teaches us about musical instruments and the different ways they make sound, by striking, blowing or plucking, introducing the rich variety of instruments.",
+          "revisionNotes": [
+            "Part: Music.",
+            "Instruments make varied sounds.",
+            "Struck (tabla), blown (flute), strings (sitar).",
+            "Skill: identifying instruments and their sounds."
+          ]
+        },
+        {
+          "topicId": "art5_mu_topic4",
+          "topic": "Building Blocks (of Music)",
+          "meaning": "This chapter is about the basic building blocks of music, such as beat, rhythm, tempo and notes.",
+          "ncertBasedExplanation": "In this chapter we learn the basic 'building blocks' that make up music. The beat is the steady pulse we can clap or tap along to, and rhythm is the pattern of long and short sounds built on the beat. Tempo is the speed of the music, which can be slow or fast. Notes (swaras) are the different musical pitches, from low to high, that make a tune. In Indian music, the seven basic swaras are Sa, Re, Ga, Ma, Pa, Dha, Ni. Through activities, students clap beats, follow rhythms and sing simple notes. Understanding these building blocks helps us make and understand music better.",
+          "easyExplanation": "This chapter teaches the basics of music: beat (steady pulse), rhythm (sound pattern), tempo (speed) and notes (Sa Re Ga Ma...).",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Beat",
+              "explanation": "The steady pulse of music that we can clap along to."
+            },
+            {
+              "step": 2,
+              "title": "Rhythm",
+              "explanation": "The pattern of long and short sounds built on the beat."
+            },
+            {
+              "step": 3,
+              "title": "Tempo",
+              "explanation": "The speed of the music, slow or fast."
+            },
+            {
+              "step": 4,
+              "title": "Notes (swaras)",
+              "explanation": "The musical pitches; in Indian music the seven swaras are Sa, Re, Ga, Ma, Pa, Dha, Ni."
+            }
+          ],
+          "examples": [
+            "Clapping a steady beat while singing a song.",
+            "The Indian musical notes are Sa, Re, Ga, Ma, Pa, Dha, Ni."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Beat",
+              "definition": "The steady pulse in music.",
+              "simpleExample": "We tap our foot to the beat."
+            },
+            {
+              "keyword": "Tempo",
+              "definition": "The speed of music.",
+              "simpleExample": "A fast tempo makes us want to dance."
+            },
+            {
+              "keyword": "Swara",
+              "definition": "A musical note in Indian music.",
+              "simpleExample": "Sa is the first swara."
+            }
+          ],
+          "quickSummary": "'Building Blocks' teaches the basics of music, beat (steady pulse), rhythm (sound pattern), tempo (speed) and notes or swaras (Sa Re Ga Ma Pa Dha Ni), which help us make and understand music.",
+          "revisionNotes": [
+            "Part: Music.",
+            "Beat = steady pulse; rhythm = sound pattern.",
+            "Tempo = speed (slow/fast).",
+            "Notes/swaras: Sa, Re, Ga, Ma, Pa, Dha, Ni."
+          ]
+        },
+        {
+          "topicId": "art5_mu_topic5",
+          "topic": "Ideas and Inspiration",
+          "meaning": "This chapter is about finding ideas and inspiration to create our own music and songs.",
+          "ncertBasedExplanation": "In this chapter we learn how musicians find ideas and inspiration to create their own music. Inspiration can come from many places: nature, feelings, festivals, daily life, stories, and the music we hear around us. Using the building blocks of music, students can put together simple tunes, rhythms and words to make their own songs. Through activities, students are encouraged to experiment with sounds, express their feelings and ideas through music, and create something original. This chapter celebrates creativity in music and shows that everyone can be a music-maker, not just a listener.",
+          "easyExplanation": "This chapter helps us find ideas and inspiration, from nature, feelings and daily life, to create our own simple tunes, rhythms and songs.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Find inspiration",
+              "explanation": "Ideas for music can come from nature, feelings, festivals and daily life."
+            },
+            {
+              "step": 2,
+              "title": "Use the building blocks",
+              "explanation": "Use beat, rhythm and notes to put together a tune."
+            },
+            {
+              "step": 3,
+              "title": "Experiment",
+              "explanation": "Try out different sounds and words to make a song."
+            },
+            {
+              "step": 4,
+              "title": "Create something new",
+              "explanation": "Express your feelings and ideas to create original music."
+            }
+          ],
+          "examples": [
+            "Making up a simple tune inspired by the sound of rain.",
+            "Creating a short song about a festival you enjoy."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Inspiration",
+              "definition": "Something that gives us ideas to create.",
+              "simpleExample": "Nature is a source of inspiration."
+            },
+            {
+              "keyword": "Compose",
+              "definition": "To create a piece of music.",
+              "simpleExample": "She composed a new song."
+            },
+            {
+              "keyword": "Original",
+              "definition": "New and made by oneself.",
+              "simpleExample": "He sang an original tune."
+            }
+          ],
+          "quickSummary": "'Ideas and Inspiration' teaches us to find inspiration from nature, feelings and daily life and to use the building blocks of music to create our own original tunes and songs.",
+          "revisionNotes": [
+            "Part: Music.",
+            "Inspiration from nature, feelings, daily life.",
+            "Use beat, rhythm and notes to make tunes.",
+            "Skill: creating original music; everyone can compose."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 4,
+      "chapter": "Dance",
+      "topics": [
+        {
+          "topicId": "art5_da_topic1",
+          "topic": "My Everyday Activities in Modes of Dance",
+          "meaning": "This chapter is about turning everyday movements and activities into dance.",
+          "ncertBasedExplanation": "In this chapter we discover that dance can grow out of our everyday movements. The things we do every day, such as walking, jumping, sweeping, cooking, playing or working, all involve movement, and these movements can be shaped into dance. Through activities, students observe their daily actions and then perform them in a rhythmic, expressive way, turning ordinary movements into dance. This chapter helps us see that dance is natural and all around us, builds awareness of our own body and movement, and shows that we can create dance from the simplest everyday actions.",
+          "easyExplanation": "This chapter shows that our everyday movements, like walking, sweeping or playing, can be turned into dance by doing them in a rhythmic, expressive way.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Everyday movements",
+              "explanation": "Daily activities like walking, sweeping and playing all involve movement."
+            },
+            {
+              "step": 2,
+              "title": "Movement to dance",
+              "explanation": "These ordinary movements can be shaped into dance."
+            },
+            {
+              "step": 3,
+              "title": "Add rhythm",
+              "explanation": "Perform the actions in a rhythmic, expressive way."
+            },
+            {
+              "step": 4,
+              "title": "Dance is natural",
+              "explanation": "This shows that dance is natural and can come from simple actions."
+            }
+          ],
+          "examples": [
+            "Turning the action of sweeping into a rhythmic dance movement.",
+            "Making a dance out of everyday actions like walking and jumping."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Dance",
+              "definition": "Moving the body rhythmically, often to music.",
+              "simpleExample": "She loves to dance."
+            },
+            {
+              "keyword": "Movement",
+              "definition": "The act of moving the body.",
+              "simpleExample": "Dance is made of movement."
+            },
+            {
+              "keyword": "Rhythmic",
+              "definition": "Following a regular pattern of beats.",
+              "simpleExample": "She walked in a rhythmic way."
+            }
+          ],
+          "quickSummary": "'My Everyday Activities in Modes of Dance' shows that everyday movements, like walking or sweeping, can be turned into dance by performing them in a rhythmic, expressive way.",
+          "revisionNotes": [
+            "Part: Dance.",
+            "Everyday movements can become dance.",
+            "Perform daily actions rhythmically and expressively.",
+            "Skill: body awareness; dance from simple actions."
+          ]
+        },
+        {
+          "topicId": "art5_da_topic2",
+          "topic": "Dancing with Rhythm and Tempos",
+          "meaning": "This chapter is about dancing in time with rhythm and at different speeds (tempos).",
+          "ncertBasedExplanation": "In this chapter we learn to dance in time with rhythm and at different tempos. Rhythm is the pattern of beats, and when we dance we move our body in time with this rhythm. Tempo is the speed of the music or beat, which can be slow or fast, and our dance movements change to match it, gentle and slow for a slow tempo, lively and quick for a fast tempo. Through activities, students clap and move to different rhythms and tempos. This chapter builds a sense of timing and coordination, and shows how rhythm and tempo give dance its energy and feeling.",
+          "easyExplanation": "This chapter teaches us to dance in time with the rhythm and to change our movements for slow or fast tempos, building timing and coordination.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Dance to rhythm",
+              "explanation": "Move the body in time with the pattern of beats (rhythm)."
+            },
+            {
+              "step": 2,
+              "title": "Understand tempo",
+              "explanation": "Tempo is the speed of the beat, slow or fast."
+            },
+            {
+              "step": 3,
+              "title": "Match the tempo",
+              "explanation": "Move gently for a slow tempo and quickly for a fast tempo."
+            },
+            {
+              "step": 4,
+              "title": "Build timing",
+              "explanation": "Dancing to rhythm and tempo builds timing and coordination."
+            }
+          ],
+          "examples": [
+            "Dancing slowly to slow music and quickly to fast music.",
+            "Stepping in time with the beat of a drum."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Rhythm",
+              "definition": "A pattern of beats.",
+              "simpleExample": "We dance to the rhythm."
+            },
+            {
+              "keyword": "Tempo",
+              "definition": "The speed of music.",
+              "simpleExample": "The dance has a fast tempo."
+            },
+            {
+              "keyword": "Coordination",
+              "definition": "Moving different body parts together smoothly.",
+              "simpleExample": "Dance needs good coordination."
+            }
+          ],
+          "quickSummary": "'Dancing with Rhythm and Tempos' teaches us to move in time with rhythm and to change our movements for slow or fast tempos, building a sense of timing and coordination.",
+          "revisionNotes": [
+            "Part: Dance.",
+            "Dance in time with rhythm (beat pattern).",
+            "Tempo = speed; match movement to it.",
+            "Skill: timing and coordination."
+          ]
+        },
+        {
+          "topicId": "art5_da_topic3",
+          "topic": "Dances of My Nation",
+          "meaning": "This chapter is about the many folk and classical dances of India.",
+          "ncertBasedExplanation": "In this chapter we explore the rich variety of dances found across India. India has many folk dances, which come from different regions and communities and are often performed at festivals and celebrations, such as Bhangra from Punjab, Garba from Gujarat, Bihu from Assam and Ghoomar from Rajasthan. India also has classical dance forms, such as Bharatanatyam, Kathak, Kathakali, Odissi and Kuchipudi, which have a long tradition and special techniques. Through activities, students learn about and try some of these dances. This chapter helps us appreciate India's cultural diversity and the beauty of its many dance traditions.",
+          "easyExplanation": "This chapter explores India's many dances, folk dances like Bhangra and Garba and classical dances like Bharatanatyam and Kathak, showing India's rich culture.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "India's many dances",
+              "explanation": "India has a rich variety of dances from different regions."
+            },
+            {
+              "step": 2,
+              "title": "Folk dances",
+              "explanation": "Folk dances like Bhangra, Garba, Bihu and Ghoomar come from different regions."
+            },
+            {
+              "step": 3,
+              "title": "Classical dances",
+              "explanation": "Classical forms include Bharatanatyam, Kathak, Kathakali, Odissi and Kuchipudi."
+            },
+            {
+              "step": 4,
+              "title": "Appreciate diversity",
+              "explanation": "Learning these dances helps us appreciate India's cultural diversity."
+            }
+          ],
+          "examples": [
+            "Bhangra is a lively folk dance from Punjab.",
+            "Bharatanatyam is a classical dance form from southern India."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Folk dance",
+              "definition": "A traditional dance of a region or community.",
+              "simpleExample": "Garba is a folk dance of Gujarat."
+            },
+            {
+              "keyword": "Classical dance",
+              "definition": "A dance form with a long tradition and set techniques.",
+              "simpleExample": "Kathak is a classical dance."
+            },
+            {
+              "keyword": "Tradition",
+              "definition": "A custom passed down over time.",
+              "simpleExample": "Indian dances are part of our tradition."
+            }
+          ],
+          "quickSummary": "'Dances of My Nation' explores India's rich variety of folk dances (like Bhangra and Garba) and classical dances (like Bharatanatyam and Kathak), helping us appreciate the country's cultural diversity.",
+          "revisionNotes": [
+            "Part: Dance.",
+            "India has many folk and classical dances.",
+            "Folk: Bhangra, Garba, Bihu, Ghoomar.",
+            "Classical: Bharatanatyam, Kathak, Kathakali, Odissi, Kuchipudi."
+          ]
+        },
+        {
+          "topicId": "art5_da_topic4",
+          "topic": "My Dance Expresses Emotions and Narrates Stories",
+          "meaning": "This chapter is about using dance to express feelings and to tell stories.",
+          "ncertBasedExplanation": "In this chapter we learn that dance is a powerful way to express emotions and tell stories without words. Through facial expressions, hand gestures (like the mudras of classical dance) and body movements, a dancer can show feelings such as joy, sadness, anger or fear, and can act out the events of a story. Indian classical dances are especially known for this storytelling through dance. Through activities, students use movements and expressions to show different emotions and to narrate a simple story. This chapter shows that dance is a language of the body that can communicate feelings and tales to the audience.",
+          "easyExplanation": "This chapter teaches us to use dance, through expressions, gestures and movements, to show emotions like joy or sadness and to tell stories without words.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Dance shows emotions",
+              "explanation": "Through expressions and movements, dance can show feelings like joy or sadness."
+            },
+            {
+              "step": 2,
+              "title": "Gestures and mudras",
+              "explanation": "Hand gestures (mudras) and body movements help express meaning."
+            },
+            {
+              "step": 3,
+              "title": "Tell stories",
+              "explanation": "Dance can act out the events of a story, as in Indian classical dance."
+            },
+            {
+              "step": 4,
+              "title": "A body language",
+              "explanation": "Students use movement and expression to show emotions and narrate a story."
+            }
+          ],
+          "examples": [
+            "Using a happy expression and lively movements to show joy in a dance.",
+            "Acting out a simple story, like a deer running, through dance movements."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Emotion",
+              "definition": "A feeling such as joy or sadness.",
+              "simpleExample": "Dance can express emotion."
+            },
+            {
+              "keyword": "Gesture",
+              "definition": "A movement of the hands or body to show meaning.",
+              "simpleExample": "A gesture can show 'come here'."
+            },
+            {
+              "keyword": "Mudra",
+              "definition": "A symbolic hand gesture in Indian dance.",
+              "simpleExample": "Mudras tell parts of a story."
+            }
+          ],
+          "quickSummary": "'My Dance Expresses Emotions and Narrates Stories' teaches us to use expressions, gestures and movements in dance to show feelings and tell stories without words, as in Indian classical dance.",
+          "revisionNotes": [
+            "Part: Dance.",
+            "Dance expresses emotions (joy, sadness...).",
+            "Gestures/mudras and expressions carry meaning.",
+            "Skill: storytelling and expression through dance."
+          ]
+        },
+        {
+          "topicId": "art5_da_topic5",
+          "topic": "My Dance and Your Dance",
+          "meaning": "This chapter is about sharing our own dances and respecting and appreciating the dances of others.",
+          "ncertBasedExplanation": "In this chapter we learn to share our own dance and to appreciate the dances of others. Just as we each have our own way of moving and dancing, our friends and people from different regions and cultures have their own dances too. By performing our dance and watching others, we share and learn from one another. Through activities, students present their own movements and respectfully watch and appreciate their classmates' dances, noticing what is similar and different. This chapter teaches respect for diversity, the joy of sharing, and that every dance is special in its own way.",
+          "easyExplanation": "This chapter is about sharing our own dance and respecting and appreciating other people's dances, learning from each other and valuing diversity.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Share your dance",
+              "explanation": "Perform and share your own way of dancing."
+            },
+            {
+              "step": 2,
+              "title": "Appreciate others",
+              "explanation": "Watch and respectfully appreciate the dances of friends and other cultures."
+            },
+            {
+              "step": 3,
+              "title": "Learn from each other",
+              "explanation": "By sharing and watching, we learn from one another."
+            },
+            {
+              "step": 4,
+              "title": "Value diversity",
+              "explanation": "Notice similarities and differences; every dance is special."
+            }
+          ],
+          "examples": [
+            "Performing your own dance and then watching a friend's dance.",
+            "Appreciating a dance from a different region than your own."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Appreciate",
+              "definition": "To value and enjoy something.",
+              "simpleExample": "We appreciate each other's dances."
+            },
+            {
+              "keyword": "Diversity",
+              "definition": "A variety of different kinds.",
+              "simpleExample": "There is diversity in dances."
+            },
+            {
+              "keyword": "Respect",
+              "definition": "Treating others and their work with regard.",
+              "simpleExample": "We show respect for every dance."
+            }
+          ],
+          "quickSummary": "'My Dance and Your Dance' teaches us to share our own dance and to respectfully appreciate the dances of others, learning from one another and valuing the diversity of dance.",
+          "revisionNotes": [
+            "Part: Dance.",
+            "Share your own dance.",
+            "Respect and appreciate others' dances.",
+            "Skill: valuing diversity and learning from each other."
+          ]
+        }
+      ]
+    }
+  ]
+}
