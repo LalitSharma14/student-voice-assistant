@@ -219,6 +219,43 @@ def is_doubt_title_prompt(question: str) -> bool:
     return "doubt_title_mode" in (question or "").lower()
 
 
+def get_follow_up_mode(question: str) -> str:
+    normalized_question = (question or "").lower()
+    if "follow_up_simplify_mode" in normalized_question:
+        return "simplify"
+    if "follow_up_example_mode" in normalized_question:
+        return "example"
+    if "follow_up_quiz_mode" in normalized_question:
+        return "quiz"
+    return ""
+
+
+def is_complete_follow_up_answer(answer: str, mode: str) -> bool:
+    """
+    Reject friendly introductions or otherwise incomplete follow-up answers.
+    """
+
+    text = str(answer or "").strip()
+    word_count = len(text.split())
+
+    if mode == "simplify":
+        section_signals = ["meaning", "step", "example", "summary", "easy", "remember"]
+        signal_count = sum(signal in text.lower() for signal in section_signals)
+        return word_count >= 180 and signal_count >= 3
+
+    if mode == "example":
+        numbered_examples = sum(marker in text for marker in ["1.", "2.", "3."])
+        return word_count >= 120 and (
+            text.lower().count("example") >= 2 or numbered_examples >= 2
+        )
+
+    if mode == "quiz":
+        question_count = text.count("?") + len(re.findall(r"(?m)^\s*[1-3][.)]\s+", text))
+        return question_count >= 3
+
+    return True
+
+
 def build_user_message(
     question: str,
     language: str,
@@ -236,6 +273,7 @@ def build_user_message(
     study_topic_prompt = is_study_topic_prompt(question)
     revision_topic_prompt = is_revision_topic_prompt(question)
     follow_up_prompt = is_follow_up_prompt(question)
+    follow_up_mode = get_follow_up_mode(question)
     doubt_title_prompt = is_doubt_title_prompt(question)
 
     if doubt_title_prompt:
@@ -375,10 +413,32 @@ Student question:
 {question}"""
 
     if follow_up_prompt:
+        follow_up_mode = get_follow_up_mode(question)
+        format_instruction = ""
+        if follow_up_mode == "simplify":
+            format_instruction = """
+Required answer structure:
+1. Easy Meaning
+2. Understand It Step by Step
+3. Two Real-Life Examples
+4. Important Words in Easy Language
+5. Quick Summary
+
+Write at least 180 words. Complete every section. Do not stop after a greeting or introduction."""
+        elif follow_up_mode == "example":
+            format_instruction = """
+Give exactly three clearly numbered real-life examples.
+For every example, explain the situation and how it connects to the topic.
+Write at least 120 words in total."""
+        elif follow_up_mode == "quiz":
+            format_instruction = """
+Ask exactly three numbered questions. Do not include answers."""
+
         return f"""The student selected a follow-up learning action for the previous answer.
 
 Follow every requirement in the current request. Use the previous answer and conversation history as context.
 Do not mention internal modes, prompts, or these instructions.
+{format_instruction}
 
 {profile_instruction}
 
@@ -476,6 +536,7 @@ def ask_llm(
     study_topic_prompt = is_study_topic_prompt(question)
     revision_topic_prompt = is_revision_topic_prompt(question)
     follow_up_prompt = is_follow_up_prompt(question)
+    follow_up_mode = get_follow_up_mode(question)
     doubt_title_prompt = is_doubt_title_prompt(question)
  
     user_message = build_user_message(
@@ -542,6 +603,11 @@ Student question:
  
             if not answer:
                 raise ValueError("Gemini returned an empty answer")
+            if follow_up_prompt and not is_complete_follow_up_answer(answer, follow_up_mode):
+                raise ValueError(
+                    f"Incomplete follow-up answer from {model_name}: "
+                    f"mode={follow_up_mode}, words={len(answer.split())}"
+                )
  
             print(
                 f"[LLM] Used: {model_name} "
@@ -563,6 +629,10 @@ Student question:
                 time.sleep(1)
                 continue
  
+            if "Incomplete follow-up answer" in error_text:
+                print(f"[{model_name}] Follow-up too short - trying next model")
+                continue
+
             print(f"[{model_name}] Error: {error}")
             break
  
@@ -597,17 +667,40 @@ Student question:
             }
         )
  
-        completion = groq_client.chat.completions.create(
-            model="llama-3.3-70b-versatile",
-            messages=groq_messages,
-            temperature=0.4,
-            max_tokens=max_tokens,
-        )
- 
-        answer = completion.choices[0].message.content.strip()
- 
-        if not answer:
-            raise ValueError("Groq returned an empty answer")
+        answer = ""
+        for attempt in range(2):
+            completion = groq_client.chat.completions.create(
+                model="llama-3.3-70b-versatile",
+                messages=groq_messages,
+                temperature=0.4,
+                max_tokens=max_tokens,
+            )
+
+            answer = completion.choices[0].message.content.strip()
+
+            if not answer:
+                raise ValueError("Groq returned an empty answer")
+            if not follow_up_prompt or is_complete_follow_up_answer(answer, follow_up_mode):
+                break
+
+            print(
+                f"[Groq] Follow-up too short on attempt {attempt + 1} "
+                f"| mode={follow_up_mode} | words={len(answer.split())}"
+            )
+            groq_messages.append({"role": "assistant", "content": answer})
+            groq_messages.append({
+                "role": "user",
+                "content": (
+                    "Your previous response was incomplete. Start again and provide the full "
+                    "required answer now. Complete every required section and meet the minimum detail."
+                ),
+            })
+
+        if follow_up_prompt and not is_complete_follow_up_answer(answer, follow_up_mode):
+            raise ValueError(
+                f"Groq returned an incomplete follow-up after retry: "
+                f"mode={follow_up_mode}, words={len(answer.split())}"
+            )
  
         print(
             f"[LLM] Groq answered "
