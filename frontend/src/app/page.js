@@ -820,6 +820,51 @@ Requirements:
     return action.labels.en;
   };
 
+  const isFollowUpInterfaceText = (text = "") => {
+    const normalized = String(text).toLowerCase().trim();
+    return [
+      "didn't understand",
+      "explain more simply",
+      "samajh nahi aaya",
+      "समझ नहीं आया",
+      "show me real-life examples",
+      "real-life examples se samjhao",
+      "वास्तविक जीवन के उदाहरणों से समझाओ",
+      "test me with 3 quick questions",
+      "3 quick questions se test karo",
+      "3 छोटे सवालों से मेरी जाँच करो",
+      "mark as doubt",
+    ].some((phrase) => normalized.includes(phrase));
+  };
+
+  const cleanDoubtTopic = (text = "") => String(text)
+    .replace(/^(Study Topic|Revision):\s*/i, "")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  const deriveDoubtTopic = (chatMessages = [], markedMessageId = "") => {
+    const markedIndex = chatMessages.findIndex((message) => message.id === markedMessageId);
+    const searchEnd = markedIndex >= 0 ? markedIndex : chatMessages.length;
+
+    for (let index = searchEnd - 1; index >= 0; index -= 1) {
+      const message = chatMessages[index];
+      if (message.role !== "user" || !message.text || isFollowUpInterfaceText(message.text)) continue;
+      return cleanDoubtTopic(message.text);
+    }
+
+    for (let index = searchEnd - 1; index >= 0; index -= 1) {
+      const message = chatMessages[index];
+      if (message.role !== "assistant" || !message.text) continue;
+      const firstUsefulLine = message.text
+        .split("\n")
+        .map((line) => line.replace(/\*\*/g, "").trim())
+        .find((line) => line && line.length <= 90 && !isFollowUpInterfaceText(line));
+      if (firstUsefulLine) return cleanDoubtTopic(firstUsefulLine);
+    }
+
+    return "this topic";
+  };
+
   const isInterfaceDoubtTitle = (title = "") => {
     const text = String(title).trim();
     const normalized = text.toLowerCase();
@@ -835,9 +880,7 @@ Requirements:
   };
 
   const buildDoubtTitle = (followUpType, topic, language = "en") => {
-    const cleanTopic = String(topic || "this topic")
-      .replace(/^(Study Topic|Revision):\s*/i, "")
-      .trim();
+    const cleanTopic = cleanDoubtTopic(topic || "this topic");
 
     if (language === "hi") {
       if (followUpType === "example") return `${cleanTopic} के वास्तविक जीवन के उदाहरण`;
@@ -863,9 +906,15 @@ Requirements:
     const markedMessage = (doubt.chatMessages || []).find(
       (message) => message.id === doubt.markedMessageId || message.id === doubt.assistantMessageId
     );
+    const derivedTopic = deriveDoubtTopic(
+      doubt.chatMessages || [],
+      doubt.markedMessageId || doubt.assistantMessageId
+    );
     return buildDoubtTitle(
       doubt.followUpType || markedMessage?.followUpType || "simplify",
-      markedMessage?.doubtTopic || doubt.question || "this topic",
+      isFollowUpInterfaceText(markedMessage?.doubtTopic)
+        ? derivedTopic
+        : markedMessage?.doubtTopic || derivedTopic || doubt.question || "this topic",
       doubt.answerLanguage || "en"
     );
   };
@@ -874,12 +923,15 @@ Requirements:
     const action = FOLLOW_UP_ACTIONS[actionKey];
     const latestAssistant = [...messages].reverse().find((msg) => msg.role === "assistant");
     const latestAnswer = latestAssistant?.text;
+    const derivedTopic = deriveDoubtTopic(messages);
     const sourceQuestion = latestAssistant?.doubtSourceQuestion
-      || [...messages].reverse().find((msg) => msg.role === "user")?.text
-      || "Student question";
-    const doubtTopic = latestAssistant?.doubtTopic || sourceQuestion
-      .replace(/^(Study Topic|Revision):\s*/i, "")
-      .trim();
+      && !isFollowUpInterfaceText(latestAssistant.doubtSourceQuestion)
+      ? latestAssistant.doubtSourceQuestion
+      : derivedTopic;
+    const doubtTopic = latestAssistant?.doubtTopic
+      && !isFollowUpInterfaceText(latestAssistant.doubtTopic)
+      ? latestAssistant.doubtTopic
+      : derivedTopic;
     if (!action || !latestAnswer || isLoading || requestLockRef.current) return;
 
     requestLockRef.current = true;
