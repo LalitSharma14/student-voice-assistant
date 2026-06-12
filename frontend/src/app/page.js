@@ -821,8 +821,9 @@ Requirements:
   };
 
   const isInterfaceDoubtTitle = (title = "") => {
-    const normalized = String(title).toLowerCase();
-    return [
+    const text = String(title).trim();
+    const normalized = text.toLowerCase();
+    return text.length > 90 || [
       "show me real-life examples",
       "real-life examples se samjhao",
       "वास्तविक जीवन के उदाहरणों से समझाओ",
@@ -831,6 +832,42 @@ Requirements:
       "समझ नहीं आया",
       "mark as doubt",
     ].some((phrase) => normalized.includes(phrase));
+  };
+
+  const buildDoubtTitle = (followUpType, topic, language = "en") => {
+    const cleanTopic = String(topic || "this topic")
+      .replace(/^(Study Topic|Revision):\s*/i, "")
+      .trim();
+
+    if (language === "hi") {
+      if (followUpType === "example") return `${cleanTopic} के वास्तविक जीवन के उदाहरण`;
+      if (followUpType === "quiz") return `${cleanTopic} से जुड़े प्रश्न`;
+      return `${cleanTopic} की आसान व्याख्या`;
+    }
+
+    if (language === "hinglish") {
+      if (followUpType === "example") return `${cleanTopic} ke real-life examples`;
+      if (followUpType === "quiz") return `${cleanTopic} par questions`;
+      return `${cleanTopic} ka easy explanation`;
+    }
+
+    if (followUpType === "example") return `Real-life examples of ${cleanTopic}`;
+    if (followUpType === "quiz") return `Questions about ${cleanTopic}`;
+    return `Easy explanation of ${cleanTopic}`;
+  };
+
+  const getDoubtDisplayTitle = (doubt) => {
+    if (!doubt) return "Saved doubt";
+    if (doubt.topicName && !isInterfaceDoubtTitle(doubt.topicName)) return doubt.topicName;
+
+    const markedMessage = (doubt.chatMessages || []).find(
+      (message) => message.id === doubt.markedMessageId || message.id === doubt.assistantMessageId
+    );
+    return buildDoubtTitle(
+      doubt.followUpType || markedMessage?.followUpType || "simplify",
+      markedMessage?.doubtTopic || doubt.question || "this topic",
+      doubt.answerLanguage || "en"
+    );
   };
 
   const handleFollowUp = async (actionKey) => {
@@ -926,43 +963,13 @@ ${latestAnswer}`;
     setError("");
 
     try {
-      const titleForm = new FormData();
-      titleForm.append(
-        "question",
-        `DOUBT_TITLE_MODE
-
-Create one short and meaningful doubt title from the student's original question and the explanation below.
-
-Doubt type: ${assistantMessage.followUpType || "general"}
-Topic: ${assistantMessage.doubtTopic || ""}
-
-Original question:
-${assistantMessage.doubtSourceQuestion || assistantMessage.doubtTopic || ""}
-
-Explanation:
-${assistantMessage.text}`
-      );
-      titleForm.append("history", JSON.stringify([]));
-      titleForm.append("class_level", classLevel);
-      titleForm.append("board", board);
-      titleForm.append("answer_language", answerLanguage);
-      if (selectedSubject) titleForm.append("subject", selectedSubject);
-
-      const titleResponse = await fetch("/api/ask-text", { method: "POST", body: titleForm });
-      if (!titleResponse.ok) {
-        const titleError = await titleResponse.json();
-        throw new Error(titleError.detail || "Could not create a doubt title.");
-      }
-      const titleData = await titleResponse.json();
-      const generatedTitle = String(titleData.answer || "")
-        .split("\n")[0]
-        .replace(/^["'`]+|["'`]+$/g, "")
-        .replace(/[.!?।]+$/g, "")
-        .replace(/\s+/g, " ")
-        .trim();
       const doubtData = {
         assistantMessageId: assistantMessage.id,
-        topicName: generatedTitle || assistantMessage.doubtTopic || "Saved doubt",
+        topicName: buildDoubtTitle(
+          assistantMessage.followUpType || "simplify",
+          assistantMessage.doubtTopic || assistantMessage.doubtSourceQuestion,
+          answerLanguage
+        ),
         followUpType: assistantMessage.followUpType || "general",
         markedMessageId: assistantMessage.id,
         chatSessionId: currentSessionId || "",
@@ -1065,7 +1072,20 @@ ${assistantMessage.text}`
       const snap = await getDocs(doubtsQuery);
       const loaded = [];
       snap.forEach((doubtDoc) => loaded.push({ id: doubtDoc.id, ...doubtDoc.data() }));
-      setDoubts(loaded);
+      const corrected = loaded.map((doubt) => {
+        if (!isInterfaceDoubtTitle(doubt.topicName)) return doubt;
+        return { ...doubt, topicName: getDoubtDisplayTitle(doubt) };
+      });
+      setDoubts(corrected);
+
+      await Promise.all(corrected.map(async (doubt, index) => {
+        if (doubt.topicName === loaded[index].topicName) return;
+        await setDoc(
+          doc(db, "users", uid, "doubts", doubt.id),
+          { topicName: doubt.topicName },
+          { merge: true }
+        );
+      }));
     } catch (err) {
       console.error("Doubts load error:", err);
     } finally {
@@ -1532,7 +1552,7 @@ ${assistantMessage.text}`
                         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: "12px" }}>
                           <div style={{ minWidth: 0 }}>
                             <div style={{ fontSize: "11px", fontWeight: 700, color: doubt.resolved ? B.green : B.red, textTransform: "uppercase", marginBottom: "4px" }}>{doubt.resolved ? "Resolved" : "Doubt"}</div>
-                            <div style={{ fontSize: "14px", fontWeight: 700, color: B.navy, lineHeight: "1.45" }}>{doubt.topicName || doubt.question || "Saved doubt"}</div>
+                            <div style={{ fontSize: "14px", fontWeight: 700, color: B.navy, lineHeight: "1.45" }}>{getDoubtDisplayTitle(doubt)}</div>
                           </div>
                           <div style={{ fontSize: "11px", color: B.gray500, flexShrink: 0 }}>{formatSessionDate(doubt.createdAt)}</div>
                         </div>
