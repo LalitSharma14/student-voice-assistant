@@ -1,0 +1,2721 @@
+{
+  "class": 7,
+  "board": "CBSE",
+  "source": "NCERT",
+  "subject": "Mathematics",
+  "bookName": "Mathematics",
+  "chapters": [
+    {
+      "chapterNumber": 1,
+      "chapter": "Integers",
+      "topics": [
+        {
+          "topicId": "math7_ch1_topic1",
+          "topic": "Integers and Their Representation",
+          "meaning": "Integers are the collection of whole numbers and their negatives, shown on a number line.",
+          "ncertBasedExplanation": "Integers are the set of numbers that includes all the whole numbers (0, 1, 2, 3, ...) together with the negative numbers (-1, -2, -3, ...). So integers are ..., -3, -2, -1, 0, 1, 2, 3, .... We can show integers on a number line, with zero in the middle, positive integers to the right and negative integers to the left. On the number line, a number is greater if it lies to the right, so 3 is greater than -5. Integers are used in daily life to show things like temperatures below zero, money owed, and depths below sea level.",
+          "easyExplanation": "Integers are whole numbers plus their negatives: ..., -2, -1, 0, 1, 2, .... On a number line, numbers to the right are greater.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "What integers are",
+              "explanation": "Integers include all whole numbers and their negatives."
+            },
+            {
+              "step": 2,
+              "title": "On a number line",
+              "explanation": "Integers are shown on a number line with 0 in the middle."
+            },
+            {
+              "step": 3,
+              "title": "Positives and negatives",
+              "explanation": "Positive integers are to the right of 0, negative integers to the left."
+            },
+            {
+              "step": 4,
+              "title": "Comparing integers",
+              "explanation": "A number to the right is greater, so 3 > -5."
+            }
+          ],
+          "examples": [
+            "-3, 0 and 5 are all integers.",
+            "On the number line, -5 lies to the left of -1, so -5 is smaller."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Integer",
+              "definition": "A whole number or its negative.",
+              "simpleExample": "-4 is an integer."
+            },
+            {
+              "keyword": "Number line",
+              "definition": "A line showing numbers in order.",
+              "simpleExample": "Integers are marked on a number line."
+            },
+            {
+              "keyword": "Negative number",
+              "definition": "A number less than zero.",
+              "simpleExample": "-7 is a negative number."
+            }
+          ],
+          "quickSummary": "Integers are the whole numbers together with their negatives, shown on a number line with positives to the right of zero and negatives to the left; a number further right is greater.",
+          "revisionNotes": [
+            "Integers = whole numbers + their negatives.",
+            "..., -2, -1, 0, 1, 2, ...",
+            "Shown on a number line, 0 in the middle.",
+            "Right is greater; left is smaller."
+          ]
+        },
+        {
+          "topicId": "math7_ch1_topic2",
+          "topic": "Addition and Subtraction of Integers",
+          "meaning": "Integers are added and subtracted using rules of signs, often pictured on a number line.",
+          "ncertBasedExplanation": "To add and subtract integers we use rules about their signs. To add two integers with the same sign, we add their values and keep the sign (for example, -3 + -4 = -7). To add two integers with different signs, we subtract the smaller value from the larger and take the sign of the larger (for example, -7 + 5 = -2). To subtract an integer, we add its opposite (additive inverse); for example, 5 - (-3) = 5 + 3 = 8. Addition of integers is commutative and associative, and zero is the additive identity. These rules let us calculate confidently with positive and negative numbers.",
+          "easyExplanation": "To add integers: same signs add and keep the sign; different signs subtract and take the larger's sign. To subtract, add the opposite.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Same signs",
+              "explanation": "Add the values and keep the common sign, like -3 + -4 = -7."
+            },
+            {
+              "step": 2,
+              "title": "Different signs",
+              "explanation": "Subtract the smaller value from the larger and take the larger's sign, like -7 + 5 = -2."
+            },
+            {
+              "step": 3,
+              "title": "Subtracting",
+              "explanation": "To subtract an integer, add its opposite, like 5 - (-3) = 8."
+            },
+            {
+              "step": 4,
+              "title": "Properties",
+              "explanation": "Addition is commutative and associative; zero is the additive identity."
+            }
+          ],
+          "examples": [
+            "-6 + (-2) = -8.",
+            "5 - (-3) = 5 + 3 = 8."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Additive inverse",
+              "definition": "The opposite of a number, which adds to give zero.",
+              "simpleExample": "The additive inverse of 5 is -5."
+            },
+            {
+              "keyword": "Commutative",
+              "definition": "Order does not change the result.",
+              "simpleExample": "3 + 5 = 5 + 3."
+            },
+            {
+              "keyword": "Additive identity",
+              "definition": "The number (0) that does not change a sum.",
+              "simpleExample": "7 + 0 = 7."
+            }
+          ],
+          "quickSummary": "Integers are added by adding same-sign values (keeping the sign) or subtracting different-sign values (taking the larger's sign), and subtracted by adding the opposite; addition is commutative and associative.",
+          "revisionNotes": [
+            "Same signs: add, keep the sign.",
+            "Different signs: subtract, take larger's sign.",
+            "Subtract by adding the opposite.",
+            "Addition is commutative and associative; 0 is identity."
+          ]
+        },
+        {
+          "topicId": "math7_ch1_topic3",
+          "topic": "Multiplication of Integers",
+          "meaning": "When multiplying integers, two like signs give a positive product and two unlike signs give a negative product.",
+          "ncertBasedExplanation": "When we multiply integers, the sign of the answer depends on the signs of the numbers. The product of two positive integers is positive, and the product of two negative integers is also positive (like signs give a positive). The product of a positive and a negative integer is negative (unlike signs give a negative). For example, (-4) x (-3) = 12, but (-4) x 3 = -12. To find the product, we multiply the values and then apply the sign rule. Multiplication of integers is commutative, associative, and 1 is the multiplicative identity; multiplying by 0 gives 0.",
+          "easyExplanation": "Multiplying integers: like signs (++ or --) give a positive answer; unlike signs (+ and -) give a negative answer. So (-4) x (-3) = 12.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Like signs",
+              "explanation": "The product of two positives or two negatives is positive."
+            },
+            {
+              "step": 2,
+              "title": "Unlike signs",
+              "explanation": "The product of a positive and a negative is negative."
+            },
+            {
+              "step": 3,
+              "title": "Find the product",
+              "explanation": "Multiply the values, then apply the sign rule."
+            },
+            {
+              "step": 4,
+              "title": "Properties",
+              "explanation": "Multiplication is commutative, associative; 1 is the identity and multiplying by 0 gives 0."
+            }
+          ],
+          "examples": [
+            "(-4) x (-3) = 12.",
+            "(-4) x 3 = -12."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Product",
+              "definition": "The result of multiplying.",
+              "simpleExample": "The product of 4 and 3 is 12."
+            },
+            {
+              "keyword": "Like signs",
+              "definition": "Signs that are the same.",
+              "simpleExample": "Two negatives are like signs."
+            },
+            {
+              "keyword": "Multiplicative identity",
+              "definition": "The number (1) that does not change a product.",
+              "simpleExample": "9 x 1 = 9."
+            }
+          ],
+          "quickSummary": "When multiplying integers, like signs give a positive product and unlike signs give a negative product; multiplication is commutative, associative, with 1 as identity and 0 giving 0.",
+          "revisionNotes": [
+            "Like signs (++ or --): positive product.",
+            "Unlike signs (+ and -): negative product.",
+            "(-4) x (-3) = 12; (-4) x 3 = -12.",
+            "Commutative, associative; 1 is identity; x0 = 0."
+          ]
+        },
+        {
+          "topicId": "math7_ch1_topic4",
+          "topic": "Division of Integers",
+          "meaning": "When dividing integers, like signs give a positive quotient and unlike signs give a negative quotient.",
+          "ncertBasedExplanation": "Division of integers follows the same sign rules as multiplication. When we divide two integers with like signs (both positive or both negative), the quotient is positive; when we divide two integers with unlike signs, the quotient is negative. For example, (-12) ÷ (-3) = 4, but (-12) ÷ 3 = -4. To divide, we divide the values and apply the sign rule. Note that we cannot divide any number by zero. Understanding division of integers lets us solve a wider range of problems involving positive and negative numbers.",
+          "easyExplanation": "Dividing integers: like signs give a positive answer; unlike signs give a negative answer. So (-12) ÷ (-3) = 4. We cannot divide by zero.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Like signs",
+              "explanation": "Dividing two integers with the same sign gives a positive quotient."
+            },
+            {
+              "step": 2,
+              "title": "Unlike signs",
+              "explanation": "Dividing two integers with different signs gives a negative quotient."
+            },
+            {
+              "step": 3,
+              "title": "Find the quotient",
+              "explanation": "Divide the values, then apply the sign rule."
+            },
+            {
+              "step": 4,
+              "title": "No division by zero",
+              "explanation": "We cannot divide any number by zero."
+            }
+          ],
+          "examples": [
+            "(-12) ÷ (-3) = 4.",
+            "(-12) ÷ 3 = -4."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Quotient",
+              "definition": "The result of dividing.",
+              "simpleExample": "The quotient of 12 ÷ 3 is 4."
+            },
+            {
+              "keyword": "Division",
+              "definition": "Splitting into equal parts.",
+              "simpleExample": "(-15) ÷ 5 = -3."
+            },
+            {
+              "keyword": "Unlike signs",
+              "definition": "Signs that are different.",
+              "simpleExample": "+ and - are unlike signs."
+            }
+          ],
+          "quickSummary": "When dividing integers, like signs give a positive quotient and unlike signs give a negative quotient, and we can never divide by zero.",
+          "revisionNotes": [
+            "Like signs: positive quotient.",
+            "Unlike signs: negative quotient.",
+            "(-12) ÷ (-3) = 4; (-12) ÷ 3 = -4.",
+            "Cannot divide by zero."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 2,
+      "chapter": "Fractions and Decimals",
+      "topics": [
+        {
+          "topicId": "math7_ch2_topic1",
+          "topic": "Multiplication of Fractions",
+          "meaning": "Fractions are multiplied by multiplying the numerators together and the denominators together.",
+          "ncertBasedExplanation": "To multiply two fractions, we multiply the numerators (top numbers) together to get the new numerator, and multiply the denominators (bottom numbers) together to get the new denominator, then simplify. For example, (2/3) x (4/5) = 8/15. To multiply a fraction by a whole number, we multiply the whole number with the numerator. The word 'of' in problems means multiplication, so '1/2 of 10' means (1/2) x 10 = 5. When we multiply a proper fraction by another proper fraction, the product is smaller than both, which is a special feature of fractions less than 1.",
+          "easyExplanation": "To multiply fractions, multiply the tops together and the bottoms together, then simplify. So (2/3) x (4/5) = 8/15. 'Of' means multiply.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Multiply numerators",
+              "explanation": "Multiply the top numbers to get the new numerator."
+            },
+            {
+              "step": 2,
+              "title": "Multiply denominators",
+              "explanation": "Multiply the bottom numbers to get the new denominator."
+            },
+            {
+              "step": 3,
+              "title": "Simplify",
+              "explanation": "Reduce the answer to its simplest form, like 8/15."
+            },
+            {
+              "step": 4,
+              "title": "'Of' means multiply",
+              "explanation": "'1/2 of 10' means (1/2) x 10 = 5."
+            }
+          ],
+          "examples": [
+            "(2/3) x (4/5) = 8/15.",
+            "1/2 of 10 = (1/2) x 10 = 5."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Numerator",
+              "definition": "The top number of a fraction.",
+              "simpleExample": "In 2/3, the numerator is 2."
+            },
+            {
+              "keyword": "Denominator",
+              "definition": "The bottom number of a fraction.",
+              "simpleExample": "In 2/3, the denominator is 3."
+            },
+            {
+              "keyword": "Product",
+              "definition": "The result of multiplying.",
+              "simpleExample": "The product of 2/3 and 4/5 is 8/15."
+            }
+          ],
+          "quickSummary": "Fractions are multiplied by multiplying the numerators together and the denominators together, then simplifying; the word 'of' means multiplication.",
+          "revisionNotes": [
+            "Multiply tops together and bottoms together.",
+            "(2/3) x (4/5) = 8/15.",
+            "'Of' means multiply.",
+            "Proper fraction x proper fraction is smaller than both."
+          ]
+        },
+        {
+          "topicId": "math7_ch2_topic2",
+          "topic": "Division of Fractions",
+          "meaning": "To divide by a fraction, we multiply by its reciprocal (the fraction turned upside down).",
+          "ncertBasedExplanation": "Dividing by a fraction is done by multiplying by its reciprocal. The reciprocal of a fraction is found by interchanging its numerator and denominator; for example, the reciprocal of 3/4 is 4/3. To divide one fraction by another, we keep the first fraction, change the division sign to multiplication, and use the reciprocal of the second fraction. For example, (2/3) ÷ (4/5) = (2/3) x (5/4) = 10/12 = 5/6. The same method works to divide a whole number by a fraction or a fraction by a whole number. This makes division of fractions simple once we know the reciprocal.",
+          "easyExplanation": "To divide by a fraction, flip it (its reciprocal) and multiply. So (2/3) ÷ (4/5) = (2/3) x (5/4) = 5/6.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Find the reciprocal",
+              "explanation": "The reciprocal of a fraction interchanges its numerator and denominator, like 3/4 to 4/3."
+            },
+            {
+              "step": 2,
+              "title": "Change to multiplication",
+              "explanation": "Keep the first fraction and change ÷ to x."
+            },
+            {
+              "step": 3,
+              "title": "Multiply by the reciprocal",
+              "explanation": "Multiply by the reciprocal of the second fraction."
+            },
+            {
+              "step": 4,
+              "title": "Simplify",
+              "explanation": "Simplify the answer, like (2/3) ÷ (4/5) = 5/6."
+            }
+          ],
+          "examples": [
+            "(2/3) ÷ (4/5) = (2/3) x (5/4) = 5/6.",
+            "The reciprocal of 3/4 is 4/3."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Reciprocal",
+              "definition": "A fraction turned upside down.",
+              "simpleExample": "The reciprocal of 2/5 is 5/2."
+            },
+            {
+              "keyword": "Division",
+              "definition": "Splitting into equal parts.",
+              "simpleExample": "(1/2) ÷ (1/4) = 2."
+            },
+            {
+              "keyword": "Simplify",
+              "definition": "Reduce a fraction fully.",
+              "simpleExample": "10/12 simplifies to 5/6."
+            }
+          ],
+          "quickSummary": "To divide by a fraction we multiply by its reciprocal (the fraction with numerator and denominator interchanged), so (2/3) ÷ (4/5) = (2/3) x (5/4) = 5/6.",
+          "revisionNotes": [
+            "Reciprocal = fraction flipped upside down.",
+            "Divide by a fraction = multiply by its reciprocal.",
+            "(2/3) ÷ (4/5) = (2/3) x (5/4) = 5/6.",
+            "Works for whole numbers too."
+          ]
+        },
+        {
+          "topicId": "math7_ch2_topic3",
+          "topic": "Multiplication of Decimals",
+          "meaning": "Decimals are multiplied like whole numbers, then the decimal point is placed by counting decimal places.",
+          "ncertBasedExplanation": "To multiply decimal numbers, we first multiply them as if they were whole numbers, ignoring the decimal points. Then we count the total number of digits after the decimal points in both numbers, and place the decimal point in the answer so that it has that many decimal places. For example, 2.5 x 1.2: multiplying 25 x 12 = 300, and there are two decimal places in total, so the answer is 3.00 = 3. To multiply a decimal by 10, 100 or 1000, we simply move the decimal point one, two or three places to the right. These rules make decimal multiplication straightforward.",
+          "easyExplanation": "Multiply decimals like whole numbers, then count the total decimal places and place the point. Multiplying by 10, 100, 1000 moves the point right.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Multiply as whole numbers",
+              "explanation": "Ignore the decimal points and multiply as whole numbers."
+            },
+            {
+              "step": 2,
+              "title": "Count decimal places",
+              "explanation": "Count the total digits after the decimal points in both numbers."
+            },
+            {
+              "step": 3,
+              "title": "Place the point",
+              "explanation": "Put the decimal point in the answer with that many decimal places."
+            },
+            {
+              "step": 4,
+              "title": "By 10, 100, 1000",
+              "explanation": "Move the decimal point one, two or three places to the right."
+            }
+          ],
+          "examples": [
+            "2.5 x 1.2 = 3.00 = 3 (25 x 12 = 300, two decimal places).",
+            "3.4 x 10 = 34 (move the point one place right)."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Decimal",
+              "definition": "A number with a decimal point.",
+              "simpleExample": "2.5 is a decimal."
+            },
+            {
+              "keyword": "Decimal places",
+              "definition": "The number of digits after the decimal point.",
+              "simpleExample": "2.45 has two decimal places."
+            },
+            {
+              "keyword": "Product",
+              "definition": "The result of multiplying.",
+              "simpleExample": "The product of 2.5 and 1.2 is 3."
+            }
+          ],
+          "quickSummary": "Decimals are multiplied like whole numbers, then the decimal point is placed by counting the total decimal places; multiplying by 10, 100 or 1000 moves the point right.",
+          "revisionNotes": [
+            "Multiply decimals as whole numbers first.",
+            "Count total decimal places to place the point.",
+            "2.5 x 1.2 = 3.",
+            "x10/100/1000 moves point right 1/2/3 places."
+          ]
+        },
+        {
+          "topicId": "math7_ch2_topic4",
+          "topic": "Division of Decimals",
+          "meaning": "Decimals are divided by adjusting the decimal point, especially by making the divisor a whole number.",
+          "ncertBasedExplanation": "To divide decimals, we handle the decimal point carefully. To divide a decimal by 10, 100 or 1000, we move the decimal point one, two or three places to the left; for example, 4.5 ÷ 10 = 0.45. To divide a decimal by a whole number, we divide as usual and place the decimal point in the quotient directly above its place in the dividend. To divide a decimal by another decimal, we first make the divisor a whole number by multiplying both numbers by 10, 100 or 1000, and then divide. These methods let us divide decimal numbers accurately.",
+          "easyExplanation": "To divide decimals: by 10, 100, 1000 move the point left; by a whole number, divide normally; by a decimal, make the divisor a whole number first.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "By 10, 100, 1000",
+              "explanation": "Move the decimal point one, two or three places to the left, like 4.5 ÷ 10 = 0.45."
+            },
+            {
+              "step": 2,
+              "title": "By a whole number",
+              "explanation": "Divide as usual and place the point above its place in the dividend."
+            },
+            {
+              "step": 3,
+              "title": "By a decimal",
+              "explanation": "Make the divisor a whole number by multiplying both by 10, 100 or 1000."
+            },
+            {
+              "step": 4,
+              "title": "Then divide",
+              "explanation": "Divide the adjusted numbers to get the answer."
+            }
+          ],
+          "examples": [
+            "4.5 ÷ 10 = 0.45.",
+            "2.5 ÷ 0.5 = 25 ÷ 5 = 5 (after multiplying both by 10)."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Dividend",
+              "definition": "The number being divided.",
+              "simpleExample": "In 4.5 ÷ 10, the dividend is 4.5."
+            },
+            {
+              "keyword": "Divisor",
+              "definition": "The number we divide by.",
+              "simpleExample": "In 4.5 ÷ 10, the divisor is 10."
+            },
+            {
+              "keyword": "Quotient",
+              "definition": "The result of dividing.",
+              "simpleExample": "4.5 ÷ 10 has a quotient of 0.45."
+            }
+          ],
+          "quickSummary": "Decimals are divided by adjusting the decimal point: by 10, 100, 1000 move it left; by a whole number divide normally; by a decimal, first make the divisor a whole number.",
+          "revisionNotes": [
+            "÷10/100/1000 moves point left 1/2/3 places.",
+            "By a whole number: divide, place point above.",
+            "By a decimal: make divisor a whole number first.",
+            "Example: 2.5 ÷ 0.5 = 5."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 3,
+      "chapter": "Data Handling",
+      "topics": [
+        {
+          "topicId": "math7_ch3_topic1",
+          "topic": "Collecting and Organising Data",
+          "meaning": "Data is information collected for a purpose, and it is organised in tables to study it easily.",
+          "ncertBasedExplanation": "Data is a collection of numbers or information gathered for a particular purpose, such as the marks of students or the runs scored in matches. Raw data collected as it comes is hard to read, so we organise it. We can arrange data in order, and use a frequency distribution table with tally marks to show how many times each value occurs (its frequency). The smallest and largest values give us the range of the data. Organising data well is the first step to understanding it and drawing useful conclusions.",
+          "easyExplanation": "Data is collected information, like students' marks. We organise it in tables with tally marks and frequencies so it is easy to read and study.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "What data is",
+              "explanation": "Data is a collection of numbers or information gathered for a purpose."
+            },
+            {
+              "step": 2,
+              "title": "Organise it",
+              "explanation": "Raw data is arranged in order and put into a table."
+            },
+            {
+              "step": 3,
+              "title": "Frequency",
+              "explanation": "Tally marks show the frequency, how many times each value occurs."
+            },
+            {
+              "step": 4,
+              "title": "Range",
+              "explanation": "The smallest and largest values give the range of the data."
+            }
+          ],
+          "examples": [
+            "The marks of 20 students form a set of data.",
+            "A frequency table shows how many students scored each mark."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Data",
+              "definition": "A collection of information.",
+              "simpleExample": "Students' heights are data."
+            },
+            {
+              "keyword": "Frequency",
+              "definition": "How many times a value occurs.",
+              "simpleExample": "A mark scored by 5 students has frequency 5."
+            },
+            {
+              "keyword": "Range",
+              "definition": "The difference between the largest and smallest values.",
+              "simpleExample": "Range = highest - lowest."
+            }
+          ],
+          "quickSummary": "Data is information collected for a purpose, organised in frequency tables with tally marks to show how often each value occurs, which makes it easy to study.",
+          "revisionNotes": [
+            "Data = collected information.",
+            "Organise in tables with tally marks.",
+            "Frequency = how often a value occurs.",
+            "Range = largest - smallest value."
+          ]
+        },
+        {
+          "topicId": "math7_ch3_topic2",
+          "topic": "Mean, Median and Mode",
+          "meaning": "Mean, median and mode are three measures that represent the central or typical value of data.",
+          "ncertBasedExplanation": "To describe a set of data with a single representative value, we use measures of central tendency. The mean (arithmetic average) is found by adding all the values and dividing by the number of values. The median is the middle value when the data is arranged in order; if there are two middle values, the median is their average. The mode is the value that occurs most often in the data. Each measure tells us something about the 'typical' value, and which one to use depends on the situation. These measures help us summarise and compare data.",
+          "easyExplanation": "Mean is the average (sum ÷ count), median is the middle value in order, and mode is the most frequent value. They show the typical value of data.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Mean",
+              "explanation": "The average: add all values and divide by the number of values."
+            },
+            {
+              "step": 2,
+              "title": "Median",
+              "explanation": "The middle value when the data is arranged in order."
+            },
+            {
+              "step": 3,
+              "title": "Mode",
+              "explanation": "The value that occurs most often in the data."
+            },
+            {
+              "step": 4,
+              "title": "Their use",
+              "explanation": "Each gives a typical value; which to use depends on the situation."
+            }
+          ],
+          "examples": [
+            "For 2, 4, 6, the mean is (2+4+6)/3 = 4.",
+            "For 3, 5, 7, 9, the median is (5+7)/2 = 6; for data 2, 3, 3, 5, the mode is 3."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Mean",
+              "definition": "The average of a set of values.",
+              "simpleExample": "The mean of 2, 4, 6 is 4."
+            },
+            {
+              "keyword": "Median",
+              "definition": "The middle value in ordered data.",
+              "simpleExample": "The median of 3, 5, 7 is 5."
+            },
+            {
+              "keyword": "Mode",
+              "definition": "The most frequent value.",
+              "simpleExample": "The mode of 2, 3, 3, 5 is 3."
+            }
+          ],
+          "quickSummary": "Mean (average), median (middle value) and mode (most frequent value) are measures of central tendency that represent the typical value of a set of data.",
+          "revisionNotes": [
+            "Mean = sum ÷ number of values.",
+            "Median = middle value in order.",
+            "Mode = most frequent value.",
+            "Each shows a typical value."
+          ]
+        },
+        {
+          "topicId": "math7_ch3_topic3",
+          "topic": "Bar Graphs",
+          "meaning": "A bar graph shows data using bars, making it easy to compare quantities at a glance.",
+          "ncertBasedExplanation": "A bar graph represents data using rectangular bars of equal width, where the length or height of each bar shows the value it represents. The bars are drawn with equal gaps on a graph with two axes and a suitable scale. Bar graphs make it easy to compare different quantities just by looking at the bars. A double bar graph uses two bars side by side for each item, which is useful for comparing two sets of data at once, such as the marks of two students in different subjects. Bar graphs present data clearly and are widely used.",
+          "easyExplanation": "A bar graph shows data with bars, so longer bars mean larger values. A double bar graph compares two sets of data side by side.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Bars show values",
+              "explanation": "A bar graph uses bars whose length shows the value."
+            },
+            {
+              "step": 2,
+              "title": "Equal width and gaps",
+              "explanation": "Bars have equal width and equal gaps, drawn to a suitable scale."
+            },
+            {
+              "step": 3,
+              "title": "Easy comparison",
+              "explanation": "Bar graphs make it easy to compare quantities at a glance."
+            },
+            {
+              "step": 4,
+              "title": "Double bar graph",
+              "explanation": "Two bars per item compare two sets of data at once."
+            }
+          ],
+          "examples": [
+            "A bar graph of favourite fruits has the tallest bar for the most popular fruit.",
+            "A double bar graph compares two students' marks in several subjects."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Bar graph",
+              "definition": "A graph showing data with bars.",
+              "simpleExample": "We made a bar graph of rainfall."
+            },
+            {
+              "keyword": "Double bar graph",
+              "definition": "A graph comparing two sets of data with paired bars.",
+              "simpleExample": "A double bar graph compares two years."
+            },
+            {
+              "keyword": "Scale",
+              "definition": "The value each unit on the axis represents.",
+              "simpleExample": "A scale of 1 unit = 10."
+            }
+          ],
+          "quickSummary": "A bar graph shows data using bars of equal width whose length represents the value, making comparison easy; a double bar graph compares two sets of data side by side.",
+          "revisionNotes": [
+            "Bar graph: data shown with bars.",
+            "Bar length shows the value.",
+            "Equal width and gaps, with a scale.",
+            "Double bar graph compares two data sets."
+          ]
+        },
+        {
+          "topicId": "math7_ch3_topic4",
+          "topic": "Chance and Probability",
+          "meaning": "Probability tells us how likely an event is to happen, on a scale from impossible to certain.",
+          "ncertBasedExplanation": "In daily life some events are certain, some are impossible, and many are uncertain. Probability is a way of measuring how likely an uncertain event is to happen. For an experiment with equally likely outcomes, the probability of an event is the number of favourable outcomes divided by the total number of outcomes. For example, when tossing a coin, there are two outcomes (head or tail), so the probability of getting a head is 1/2. Probability ranges from 0 (impossible) to 1 (certain). Understanding chance helps us reason about games, weather and many real-life situations.",
+          "easyExplanation": "Probability measures how likely an event is, from 0 (impossible) to 1 (certain). Tossing a coin, the chance of a head is 1/2.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Events differ in chance",
+              "explanation": "Some events are certain, some impossible, and many uncertain."
+            },
+            {
+              "step": 2,
+              "title": "What probability is",
+              "explanation": "Probability measures how likely an uncertain event is to happen."
+            },
+            {
+              "step": 3,
+              "title": "Calculate it",
+              "explanation": "Probability = favourable outcomes / total outcomes for equally likely outcomes."
+            },
+            {
+              "step": 4,
+              "title": "The scale",
+              "explanation": "Probability ranges from 0 (impossible) to 1 (certain)."
+            }
+          ],
+          "examples": [
+            "The probability of getting a head when tossing a coin is 1/2.",
+            "The probability of getting a 3 when rolling a die is 1/6."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Probability",
+              "definition": "A measure of how likely an event is.",
+              "simpleExample": "The probability of a head is 1/2."
+            },
+            {
+              "keyword": "Outcome",
+              "definition": "A possible result of an experiment.",
+              "simpleExample": "Head and tail are outcomes of a coin toss."
+            },
+            {
+              "keyword": "Certain event",
+              "definition": "An event sure to happen (probability 1).",
+              "simpleExample": "The Sun rising is certain."
+            }
+          ],
+          "quickSummary": "Probability measures how likely an uncertain event is, calculated as favourable outcomes divided by total outcomes, on a scale from 0 (impossible) to 1 (certain).",
+          "revisionNotes": [
+            "Probability = how likely an event is.",
+            "= favourable outcomes / total outcomes.",
+            "Ranges from 0 (impossible) to 1 (certain).",
+            "Coin: P(head) = 1/2; die: P(3) = 1/6."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 4,
+      "chapter": "Simple Equations",
+      "topics": [
+        {
+          "topicId": "math7_ch4_topic1",
+          "topic": "Setting Up Equations",
+          "meaning": "An equation is a statement that two expressions are equal, often containing an unknown called a variable.",
+          "ncertBasedExplanation": "An equation is a mathematical statement that says two expressions are equal, shown by an equals sign. It usually contains a variable, an unknown quantity represented by a letter like x. For example, x + 3 = 8 is an equation. We can set up an equation from a word problem by representing the unknown with a variable and writing the given condition as an equation. The value of the variable that makes the two sides equal is called the solution of the equation. Equations are powerful tools for solving real-life problems where some quantity is unknown.",
+          "easyExplanation": "An equation says two expressions are equal, like x + 3 = 8, with a variable (unknown) such as x. We can write equations from word problems.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "What an equation is",
+              "explanation": "An equation states that two expressions are equal, using an equals sign."
+            },
+            {
+              "step": 2,
+              "title": "The variable",
+              "explanation": "It contains a variable, an unknown shown by a letter like x."
+            },
+            {
+              "step": 3,
+              "title": "Set up from words",
+              "explanation": "Represent the unknown with a variable and write the condition as an equation."
+            },
+            {
+              "step": 4,
+              "title": "The solution",
+              "explanation": "The value of the variable that makes both sides equal is the solution."
+            }
+          ],
+          "examples": [
+            "x + 3 = 8 is a simple equation.",
+            "'A number increased by 5 is 12' becomes x + 5 = 12."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Equation",
+              "definition": "A statement that two expressions are equal.",
+              "simpleExample": "x + 3 = 8 is an equation."
+            },
+            {
+              "keyword": "Variable",
+              "definition": "An unknown shown by a letter.",
+              "simpleExample": "In x + 3 = 8, x is the variable."
+            },
+            {
+              "keyword": "Solution",
+              "definition": "The value that makes an equation true.",
+              "simpleExample": "x = 5 is the solution of x + 3 = 8."
+            }
+          ],
+          "quickSummary": "An equation states that two expressions are equal and contains a variable (unknown); we can set up equations from word problems, and the value that makes both sides equal is its solution.",
+          "revisionNotes": [
+            "Equation: two expressions equal (=).",
+            "Contains a variable (unknown, like x).",
+            "Set up from word problems.",
+            "Solution = value making both sides equal."
+          ]
+        },
+        {
+          "topicId": "math7_ch4_topic2",
+          "topic": "Solving Equations",
+          "meaning": "An equation is solved by doing the same operation on both sides to find the value of the variable.",
+          "ncertBasedExplanation": "To solve an equation means to find the value of the variable that makes it true. We do this by keeping the equation balanced: whatever operation we do to one side, we must do the same to the other side. We can add, subtract, multiply or divide both sides by the same number to gradually get the variable alone on one side. For example, to solve x + 3 = 8, we subtract 3 from both sides to get x = 5. Another method is transposing, where we move a term to the other side and change its sign. We can check the solution by putting it back into the equation.",
+          "easyExplanation": "To solve an equation, do the same operation to both sides to get the variable alone. For x + 3 = 8, subtract 3 from both sides to get x = 5.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Keep it balanced",
+              "explanation": "Whatever you do to one side, do the same to the other side."
+            },
+            {
+              "step": 2,
+              "title": "Isolate the variable",
+              "explanation": "Add, subtract, multiply or divide both sides to get the variable alone."
+            },
+            {
+              "step": 3,
+              "title": "Example",
+              "explanation": "For x + 3 = 8, subtract 3 from both sides to get x = 5."
+            },
+            {
+              "step": 4,
+              "title": "Check the answer",
+              "explanation": "Put the value back into the equation to check it is correct."
+            }
+          ],
+          "examples": [
+            "x + 3 = 8 gives x = 5 by subtracting 3 from both sides.",
+            "2x = 10 gives x = 5 by dividing both sides by 2."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Solve",
+              "definition": "To find the value of the variable.",
+              "simpleExample": "We solve x + 3 = 8 to get x = 5."
+            },
+            {
+              "keyword": "Transpose",
+              "definition": "To move a term to the other side and change its sign.",
+              "simpleExample": "x + 3 = 8 becomes x = 8 - 3."
+            },
+            {
+              "keyword": "Balance",
+              "definition": "Keeping both sides equal.",
+              "simpleExample": "We keep the equation in balance."
+            }
+          ],
+          "quickSummary": "An equation is solved by performing the same operation on both sides to isolate the variable, or by transposing terms; the solution can be checked by substituting it back.",
+          "revisionNotes": [
+            "Do the same operation to both sides.",
+            "Isolate the variable.",
+            "x + 3 = 8 -> x = 5.",
+            "Or transpose; check by substituting back."
+          ]
+        },
+        {
+          "topicId": "math7_ch4_topic3",
+          "topic": "Applications of Simple Equations",
+          "meaning": "Simple equations are used to solve real-life word problems involving an unknown quantity.",
+          "ncertBasedExplanation": "Simple equations are very useful for solving everyday problems where some quantity is unknown. To solve a word problem, we read it carefully, choose a variable for the unknown, write an equation from the given conditions, solve the equation, and then state the answer in words. For example, 'Three times a number plus 4 is 19' becomes 3x + 4 = 19, which gives x = 5. We should always check that our answer fits the original problem. This shows how algebra helps us turn real situations into equations and find the unknown.",
+          "easyExplanation": "We use equations to solve word problems: pick a variable for the unknown, form an equation, solve it, and state the answer. '3 times a number + 4 is 19' gives x = 5.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Read carefully",
+              "explanation": "Understand the word problem and what is unknown."
+            },
+            {
+              "step": 2,
+              "title": "Choose a variable",
+              "explanation": "Let a variable like x stand for the unknown quantity."
+            },
+            {
+              "step": 3,
+              "title": "Form and solve",
+              "explanation": "Write an equation from the conditions and solve it."
+            },
+            {
+              "step": 4,
+              "title": "State and check",
+              "explanation": "State the answer in words and check it fits the problem."
+            }
+          ],
+          "examples": [
+            "'Three times a number plus 4 is 19' becomes 3x + 4 = 19, so x = 5.",
+            "Finding an unknown age by forming and solving an equation."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Word problem",
+              "definition": "A problem described in words.",
+              "simpleExample": "We turn a word problem into an equation."
+            },
+            {
+              "keyword": "Variable",
+              "definition": "A letter for the unknown.",
+              "simpleExample": "Let x be the unknown number."
+            },
+            {
+              "keyword": "Equation",
+              "definition": "A statement of equality.",
+              "simpleExample": "3x + 4 = 19 is the equation."
+            }
+          ],
+          "quickSummary": "Simple equations solve real-life word problems: choose a variable for the unknown, form an equation from the conditions, solve it, and state and check the answer.",
+          "revisionNotes": [
+            "Use equations for word problems.",
+            "Choose a variable for the unknown.",
+            "Form an equation, then solve it.",
+            "State the answer and check it fits."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 5,
+      "chapter": "Lines and Angles",
+      "topics": [
+        {
+          "topicId": "math7_ch5_topic1",
+          "topic": "Related Angles",
+          "meaning": "Pairs of angles can be related as complementary, supplementary, adjacent, linear pair or vertically opposite.",
+          "ncertBasedExplanation": "Some pairs of angles have special relationships. Two angles are complementary if their measures add up to 90 degrees, and supplementary if they add up to 180 degrees. Two angles are adjacent if they have a common vertex and a common arm but do not overlap. A linear pair is a pair of adjacent angles whose non-common arms form a straight line, so they add up to 180 degrees. Vertically opposite angles are formed when two lines cross, and they are always equal. Knowing these relationships helps us find unknown angles.",
+          "easyExplanation": "Angles can be complementary (add to 90), supplementary (add to 180), adjacent, a linear pair (add to 180), or vertically opposite (equal).",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Complementary",
+              "explanation": "Two angles that add up to 90 degrees."
+            },
+            {
+              "step": 2,
+              "title": "Supplementary",
+              "explanation": "Two angles that add up to 180 degrees."
+            },
+            {
+              "step": 3,
+              "title": "Adjacent and linear pair",
+              "explanation": "Adjacent angles share a vertex and arm; a linear pair adds to 180 degrees."
+            },
+            {
+              "step": 4,
+              "title": "Vertically opposite",
+              "explanation": "Angles opposite each other when two lines cross are always equal."
+            }
+          ],
+          "examples": [
+            "30 degrees and 60 degrees are complementary (add to 90).",
+            "When two lines cross, the vertically opposite angles are equal."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Complementary angles",
+              "definition": "Two angles adding to 90 degrees.",
+              "simpleExample": "40 and 50 degrees are complementary."
+            },
+            {
+              "keyword": "Supplementary angles",
+              "definition": "Two angles adding to 180 degrees.",
+              "simpleExample": "110 and 70 degrees are supplementary."
+            },
+            {
+              "keyword": "Vertically opposite angles",
+              "definition": "Equal angles formed when lines cross.",
+              "simpleExample": "Crossing lines make equal opposite angles."
+            }
+          ],
+          "quickSummary": "Angle pairs can be complementary (sum 90), supplementary (sum 180), adjacent, a linear pair (sum 180) or vertically opposite (equal), which helps us find unknown angles.",
+          "revisionNotes": [
+            "Complementary: add to 90 degrees.",
+            "Supplementary: add to 180 degrees.",
+            "Linear pair: adjacent, add to 180.",
+            "Vertically opposite angles are equal."
+          ]
+        },
+        {
+          "topicId": "math7_ch5_topic2",
+          "topic": "Pairs of Lines",
+          "meaning": "Lines can be intersecting or parallel, and a transversal is a line that cuts two or more lines.",
+          "ncertBasedExplanation": "When we study lines, we look at how they relate to each other. Two lines that cross each other at a point are called intersecting lines, and the point where they meet is the point of intersection. Two lines in the same plane that never meet, no matter how far they are extended, are called parallel lines. A transversal is a line that crosses two or more lines at different points. When a transversal cuts two lines, it forms several pairs of angles, such as corresponding angles, alternate angles and co-interior angles, which are important for studying parallel lines.",
+          "easyExplanation": "Lines that cross are intersecting; lines that never meet are parallel. A transversal is a line that cuts two or more lines, forming pairs of angles.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Intersecting lines",
+              "explanation": "Two lines that cross at a point are intersecting lines."
+            },
+            {
+              "step": 2,
+              "title": "Parallel lines",
+              "explanation": "Two lines in a plane that never meet are parallel lines."
+            },
+            {
+              "step": 3,
+              "title": "Transversal",
+              "explanation": "A line that cuts two or more lines at different points."
+            },
+            {
+              "step": 4,
+              "title": "Angle pairs",
+              "explanation": "A transversal forms corresponding, alternate and co-interior angles."
+            }
+          ],
+          "examples": [
+            "Two roads crossing form intersecting lines.",
+            "The two rails of a railway track are parallel lines."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Intersecting lines",
+              "definition": "Lines that cross at a point.",
+              "simpleExample": "Crossing lines are intersecting."
+            },
+            {
+              "keyword": "Parallel lines",
+              "definition": "Lines that never meet.",
+              "simpleExample": "Railway tracks are parallel."
+            },
+            {
+              "keyword": "Transversal",
+              "definition": "A line cutting two or more lines.",
+              "simpleExample": "A transversal crosses two parallel lines."
+            }
+          ],
+          "quickSummary": "Lines can be intersecting (crossing at a point) or parallel (never meeting); a transversal cuts two or more lines and forms angle pairs like corresponding and alternate angles.",
+          "revisionNotes": [
+            "Intersecting lines cross at a point.",
+            "Parallel lines never meet.",
+            "A transversal cuts two or more lines.",
+            "It forms corresponding, alternate, co-interior angles."
+          ]
+        },
+        {
+          "topicId": "math7_ch5_topic3",
+          "topic": "Angles made by a Transversal on Parallel Lines",
+          "meaning": "When a transversal cuts parallel lines, corresponding and alternate angles are equal, and co-interior angles are supplementary.",
+          "ncertBasedExplanation": "When a transversal crosses a pair of parallel lines, special angle relationships appear. Corresponding angles (in matching positions) are equal. Alternate interior angles (on opposite sides of the transversal between the lines) are equal, and alternate exterior angles are also equal. Co-interior angles (on the same side of the transversal between the lines) are supplementary, adding up to 180 degrees. These properties let us find unknown angles when parallel lines are cut by a transversal, and they can also be used to check whether two lines are parallel.",
+          "easyExplanation": "When a transversal cuts parallel lines: corresponding angles are equal, alternate angles are equal, and co-interior angles add to 180 degrees.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Set up",
+              "explanation": "A transversal crosses a pair of parallel lines."
+            },
+            {
+              "step": 2,
+              "title": "Corresponding angles",
+              "explanation": "Angles in matching positions are equal."
+            },
+            {
+              "step": 3,
+              "title": "Alternate angles",
+              "explanation": "Alternate interior (and exterior) angles are equal."
+            },
+            {
+              "step": 4,
+              "title": "Co-interior angles",
+              "explanation": "Angles on the same side between the lines add up to 180 degrees."
+            }
+          ],
+          "examples": [
+            "When a transversal cuts parallel lines, corresponding angles are equal.",
+            "Co-interior angles on parallel lines add up to 180 degrees."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Corresponding angles",
+              "definition": "Angles in matching positions, equal on parallel lines.",
+              "simpleExample": "Corresponding angles are equal."
+            },
+            {
+              "keyword": "Alternate angles",
+              "definition": "Angles on opposite sides of the transversal, equal on parallel lines.",
+              "simpleExample": "Alternate angles are equal."
+            },
+            {
+              "keyword": "Co-interior angles",
+              "definition": "Same-side interior angles, supplementary on parallel lines.",
+              "simpleExample": "Co-interior angles add to 180."
+            }
+          ],
+          "quickSummary": "When a transversal cuts parallel lines, corresponding angles and alternate angles are equal while co-interior angles are supplementary, which helps find unknown angles.",
+          "revisionNotes": [
+            "Transversal on parallel lines makes angle pairs.",
+            "Corresponding angles: equal.",
+            "Alternate angles: equal.",
+            "Co-interior angles: add to 180 degrees."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 6,
+      "chapter": "The Triangle and its Properties",
+      "topics": [
+        {
+          "topicId": "math7_ch6_topic1",
+          "topic": "Medians and Altitudes of a Triangle",
+          "meaning": "A median joins a vertex to the midpoint of the opposite side, and an altitude is the perpendicular from a vertex to the opposite side.",
+          "ncertBasedExplanation": "A triangle has special line segments. A median of a triangle is a line segment that joins a vertex (corner) to the midpoint of the opposite side. Every triangle has three medians, and they all meet at a single point. An altitude of a triangle is the perpendicular line segment drawn from a vertex to the opposite side (or the line containing it). Every triangle has three altitudes. The altitude represents the 'height' of the triangle from a particular side. Knowing medians and altitudes helps us understand the structure of triangles and is useful in finding areas.",
+          "easyExplanation": "A median joins a corner to the middle of the opposite side. An altitude is the perpendicular from a corner to the opposite side. Each triangle has three of each.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Median",
+              "explanation": "A median joins a vertex to the midpoint of the opposite side."
+            },
+            {
+              "step": 2,
+              "title": "Three medians",
+              "explanation": "Every triangle has three medians that meet at one point."
+            },
+            {
+              "step": 3,
+              "title": "Altitude",
+              "explanation": "An altitude is the perpendicular from a vertex to the opposite side."
+            },
+            {
+              "step": 4,
+              "title": "Three altitudes",
+              "explanation": "Every triangle has three altitudes; an altitude is the height from a side."
+            }
+          ],
+          "examples": [
+            "A median goes from a corner to the middle of the opposite side.",
+            "An altitude is the perpendicular height drawn from a vertex."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Median",
+              "definition": "A segment from a vertex to the midpoint of the opposite side.",
+              "simpleExample": "A triangle has three medians."
+            },
+            {
+              "keyword": "Altitude",
+              "definition": "A perpendicular from a vertex to the opposite side.",
+              "simpleExample": "The altitude is the triangle's height."
+            },
+            {
+              "keyword": "Vertex",
+              "definition": "A corner of a triangle.",
+              "simpleExample": "A triangle has three vertices."
+            }
+          ],
+          "quickSummary": "A median joins a vertex to the midpoint of the opposite side, and an altitude is the perpendicular from a vertex to the opposite side; every triangle has three of each.",
+          "revisionNotes": [
+            "Median: vertex to midpoint of opposite side.",
+            "Altitude: perpendicular from vertex to opposite side.",
+            "Each triangle has 3 medians and 3 altitudes.",
+            "Altitude gives the height of the triangle."
+          ]
+        },
+        {
+          "topicId": "math7_ch6_topic2",
+          "topic": "Angle Sum Property and Exterior Angle",
+          "meaning": "The three angles of a triangle add up to 180 degrees, and an exterior angle equals the sum of the two opposite interior angles.",
+          "ncertBasedExplanation": "Two important properties relate to the angles of a triangle. The angle sum property states that the sum of the three interior angles of any triangle is always 180 degrees. So if two angles are known, the third can be found by subtracting their sum from 180 degrees. The exterior angle property states that an exterior angle of a triangle (formed by extending one side) is equal to the sum of the two interior opposite angles. These properties are very useful for finding unknown angles in triangles and in many geometry problems.",
+          "easyExplanation": "The three angles of a triangle always add to 180 degrees. An exterior angle equals the sum of the two opposite interior angles.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Angle sum property",
+              "explanation": "The three interior angles of a triangle add up to 180 degrees."
+            },
+            {
+              "step": 2,
+              "title": "Find the third angle",
+              "explanation": "If two angles are known, subtract their sum from 180 to find the third."
+            },
+            {
+              "step": 3,
+              "title": "Exterior angle",
+              "explanation": "An exterior angle is formed by extending one side of the triangle."
+            },
+            {
+              "step": 4,
+              "title": "Exterior angle property",
+              "explanation": "An exterior angle equals the sum of the two interior opposite angles."
+            }
+          ],
+          "examples": [
+            "If two angles of a triangle are 60 and 70 degrees, the third is 50 degrees.",
+            "An exterior angle of 110 degrees equals the sum of the two opposite interior angles."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Angle sum property",
+              "definition": "The angles of a triangle add to 180 degrees.",
+              "simpleExample": "60 + 70 + 50 = 180."
+            },
+            {
+              "keyword": "Exterior angle",
+              "definition": "The angle formed by extending a side.",
+              "simpleExample": "An exterior angle is outside the triangle."
+            },
+            {
+              "keyword": "Interior angle",
+              "definition": "An angle inside the triangle.",
+              "simpleExample": "A triangle has three interior angles."
+            }
+          ],
+          "quickSummary": "The three interior angles of a triangle always add up to 180 degrees, and an exterior angle equals the sum of the two interior opposite angles, helping find unknown angles.",
+          "revisionNotes": [
+            "Angle sum property: angles add to 180 degrees.",
+            "Third angle = 180 - sum of other two.",
+            "Exterior angle = sum of opposite interior angles.",
+            "Useful for finding unknown angles."
+          ]
+        },
+        {
+          "topicId": "math7_ch6_topic3",
+          "topic": "Types of Triangles and the Triangle Inequality",
+          "meaning": "Triangles are classified by their sides and angles, and the sum of any two sides is always greater than the third.",
+          "ncertBasedExplanation": "Triangles can be classified in two ways. By their sides: an equilateral triangle has all three sides equal, an isosceles triangle has two sides equal, and a scalene triangle has all sides different. By their angles: an acute triangle has all angles less than 90 degrees, a right triangle has one angle of 90 degrees, and an obtuse triangle has one angle more than 90 degrees. An important rule is the triangle inequality: the sum of the lengths of any two sides of a triangle is always greater than the length of the third side. This rule tells us whether three given lengths can form a triangle.",
+          "easyExplanation": "Triangles are classified by sides (equilateral, isosceles, scalene) and angles (acute, right, obtuse). Any two sides always add to more than the third.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "By sides",
+              "explanation": "Equilateral (all equal), isosceles (two equal) or scalene (all different)."
+            },
+            {
+              "step": 2,
+              "title": "By angles",
+              "explanation": "Acute (all less than 90), right (one 90) or obtuse (one more than 90 degrees)."
+            },
+            {
+              "step": 3,
+              "title": "Triangle inequality",
+              "explanation": "The sum of any two sides is always greater than the third side."
+            },
+            {
+              "step": 4,
+              "title": "Forming a triangle",
+              "explanation": "This rule tells whether three lengths can make a triangle."
+            }
+          ],
+          "examples": [
+            "A triangle with sides 5, 5, 5 is equilateral; with one 90-degree angle it is a right triangle.",
+            "Sides 3, 4 and 8 cannot form a triangle because 3 + 4 is not greater than 8."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Equilateral triangle",
+              "definition": "A triangle with all sides equal.",
+              "simpleExample": "All sides of an equilateral triangle are equal."
+            },
+            {
+              "keyword": "Isosceles triangle",
+              "definition": "A triangle with two sides equal.",
+              "simpleExample": "An isosceles triangle has two equal sides."
+            },
+            {
+              "keyword": "Triangle inequality",
+              "definition": "Any two sides add to more than the third.",
+              "simpleExample": "5 + 6 > 8 forms a triangle."
+            }
+          ],
+          "quickSummary": "Triangles are classified by sides (equilateral, isosceles, scalene) and by angles (acute, right, obtuse), and by the triangle inequality, any two sides always add to more than the third.",
+          "revisionNotes": [
+            "By sides: equilateral, isosceles, scalene.",
+            "By angles: acute, right, obtuse.",
+            "Triangle inequality: any two sides > third.",
+            "Used to check if lengths form a triangle."
+          ]
+        },
+        {
+          "topicId": "math7_ch6_topic4",
+          "topic": "Pythagoras Theorem",
+          "meaning": "In a right-angled triangle, the square of the hypotenuse equals the sum of the squares of the other two sides.",
+          "ncertBasedExplanation": "The Pythagoras theorem is an important property of right-angled triangles (triangles with one 90-degree angle). The side opposite the right angle is the longest side, called the hypotenuse. The theorem states that the square of the hypotenuse is equal to the sum of the squares of the other two sides. If the two shorter sides are a and b and the hypotenuse is c, then a-squared + b-squared = c-squared. For example, in a triangle with sides 3 and 4, the hypotenuse is 5 because 9 + 16 = 25. This theorem is used to find an unknown side and to check whether a triangle is right-angled.",
+          "easyExplanation": "In a right triangle, (hypotenuse)^2 = (side1)^2 + (side2)^2. For sides 3 and 4, the hypotenuse is 5, since 9 + 16 = 25.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Right triangle",
+              "explanation": "Pythagoras theorem applies to triangles with a 90-degree angle."
+            },
+            {
+              "step": 2,
+              "title": "The hypotenuse",
+              "explanation": "The longest side, opposite the right angle, is the hypotenuse."
+            },
+            {
+              "step": 3,
+              "title": "The theorem",
+              "explanation": "Square of the hypotenuse = sum of squares of the other two sides."
+            },
+            {
+              "step": 4,
+              "title": "Use it",
+              "explanation": "Find an unknown side or check if a triangle is right-angled."
+            }
+          ],
+          "examples": [
+            "For sides 3 and 4, the hypotenuse is 5 (9 + 16 = 25).",
+            "Sides 6, 8, 10 form a right triangle because 36 + 64 = 100."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Pythagoras theorem",
+              "definition": "Hypotenuse squared equals the sum of the squares of the other two sides.",
+              "simpleExample": "3^2 + 4^2 = 5^2."
+            },
+            {
+              "keyword": "Hypotenuse",
+              "definition": "The longest side, opposite the right angle.",
+              "simpleExample": "The hypotenuse is the longest side."
+            },
+            {
+              "keyword": "Right angle",
+              "definition": "An angle of 90 degrees.",
+              "simpleExample": "A right triangle has one right angle."
+            }
+          ],
+          "quickSummary": "Pythagoras theorem states that in a right-angled triangle the square of the hypotenuse equals the sum of the squares of the other two sides, used to find a side or test for a right angle.",
+          "revisionNotes": [
+            "Applies to right-angled triangles.",
+            "Hypotenuse = longest side (opposite right angle).",
+            "(hyp)^2 = (side1)^2 + (side2)^2.",
+            "Sides 3,4,5 and 6,8,10 are right triangles."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 7,
+      "chapter": "Congruence of Triangles",
+      "topics": [
+        {
+          "topicId": "math7_ch7_topic1",
+          "topic": "Congruence of Figures",
+          "meaning": "Two figures are congruent if they have exactly the same shape and size.",
+          "ncertBasedExplanation": "Two figures are said to be congruent if they are exactly the same in both shape and size, so that one can be placed exactly over the other and they cover each other completely. For example, two line segments are congruent if they have the same length, and two angles are congruent if they have the same measure. Congruent figures are like exact copies of each other. The symbol for congruence is a special equals sign with a curve on top. When two triangles are congruent, their corresponding sides and corresponding angles are equal. Understanding congruence helps us compare shapes precisely.",
+          "easyExplanation": "Two figures are congruent if they have exactly the same shape and size, so one fits exactly over the other. Congruent triangles have equal sides and angles.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "What congruent means",
+              "explanation": "Two figures are congruent if they have the same shape and size."
+            },
+            {
+              "step": 2,
+              "title": "They fit exactly",
+              "explanation": "One congruent figure can be placed exactly over the other."
+            },
+            {
+              "step": 3,
+              "title": "Examples",
+              "explanation": "Segments are congruent if equal in length; angles if equal in measure."
+            },
+            {
+              "step": 4,
+              "title": "Congruent triangles",
+              "explanation": "Their corresponding sides and angles are equal."
+            }
+          ],
+          "examples": [
+            "Two line segments of length 5 cm are congruent.",
+            "Two triangles that fit exactly over each other are congruent."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Congruent",
+              "definition": "Having the same shape and size.",
+              "simpleExample": "Two equal squares are congruent."
+            },
+            {
+              "keyword": "Corresponding sides",
+              "definition": "Sides in matching positions of two figures.",
+              "simpleExample": "Congruent triangles have equal corresponding sides."
+            },
+            {
+              "keyword": "Corresponding angles",
+              "definition": "Angles in matching positions.",
+              "simpleExample": "Congruent triangles have equal corresponding angles."
+            }
+          ],
+          "quickSummary": "Two figures are congruent if they have exactly the same shape and size so one fits over the other; congruent triangles have equal corresponding sides and angles.",
+          "revisionNotes": [
+            "Congruent = same shape and size.",
+            "One fits exactly over the other.",
+            "Segments congruent if equal length; angles if equal.",
+            "Congruent triangles: equal corresponding sides and angles."
+          ]
+        },
+        {
+          "topicId": "math7_ch7_topic2",
+          "topic": "Criteria for Congruence of Triangles",
+          "meaning": "Triangles can be shown to be congruent using the SSS, SAS, ASA and RHS criteria.",
+          "ncertBasedExplanation": "We do not need to check all six measurements (three sides and three angles) to prove two triangles are congruent; certain sets are enough. The SSS (Side-Side-Side) criterion: if the three sides of one triangle equal the three sides of another, they are congruent. The SAS (Side-Angle-Side) criterion: if two sides and the angle between them are equal, the triangles are congruent. The ASA (Angle-Side-Angle) criterion: if two angles and the side between them are equal, they are congruent. The RHS (Right angle-Hypotenuse-Side) criterion applies to right triangles: if the hypotenuse and one side are equal, they are congruent. Note that AAA (all angles equal) does not prove congruence, only similar shape.",
+          "easyExplanation": "Triangles are congruent if they match by SSS (three sides), SAS (two sides and included angle), ASA (two angles and included side), or RHS (right triangles).",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "SSS",
+              "explanation": "Three sides of one triangle equal to three sides of another make them congruent."
+            },
+            {
+              "step": 2,
+              "title": "SAS",
+              "explanation": "Two sides and the angle between them equal make triangles congruent."
+            },
+            {
+              "step": 3,
+              "title": "ASA",
+              "explanation": "Two angles and the side between them equal make triangles congruent."
+            },
+            {
+              "step": 4,
+              "title": "RHS",
+              "explanation": "For right triangles, equal hypotenuse and one side make them congruent (AAA does not work)."
+            }
+          ],
+          "examples": [
+            "Two triangles with all three sides equal are congruent by SSS.",
+            "Two right triangles with equal hypotenuse and one side are congruent by RHS."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "SSS criterion",
+              "definition": "Congruence by three equal sides.",
+              "simpleExample": "SSS proves congruence with three sides."
+            },
+            {
+              "keyword": "SAS criterion",
+              "definition": "Congruence by two sides and the included angle.",
+              "simpleExample": "SAS uses two sides and the angle between."
+            },
+            {
+              "keyword": "RHS criterion",
+              "definition": "Congruence of right triangles by hypotenuse and a side.",
+              "simpleExample": "RHS is for right-angled triangles."
+            }
+          ],
+          "quickSummary": "Triangles can be proven congruent using SSS (three sides), SAS (two sides and included angle), ASA (two angles and included side) or RHS (right triangles); AAA does not prove congruence.",
+          "revisionNotes": [
+            "SSS: three sides equal.",
+            "SAS: two sides and included angle equal.",
+            "ASA: two angles and included side equal.",
+            "RHS: right triangle, hypotenuse and a side; AAA fails."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 8,
+      "chapter": "Comparing Quantities",
+      "topics": [
+        {
+          "topicId": "math7_ch8_topic1",
+          "topic": "Ratio, Proportion and Percentage",
+          "meaning": "A ratio compares two quantities, a proportion equates two ratios, and a percentage is a fraction out of 100.",
+          "ncertBasedExplanation": "We often compare quantities. A ratio compares two quantities of the same kind by division, written as a : b. When two ratios are equal, they are said to be in proportion. A percentage is a special way of comparing a quantity to 100; 'per cent' means 'out of 100', written with the symbol %. We can convert between fractions, decimals and percentages: for example, 1/2 = 0.5 = 50%. To find a percentage of a quantity, we multiply; for example, 20% of 50 = (20/100) x 50 = 10. Percentages are widely used in marks, discounts and comparisons.",
+          "easyExplanation": "A ratio compares two quantities (a : b); equal ratios are in proportion; a percentage is 'out of 100'. So 1/2 = 50%, and 20% of 50 = 10.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Ratio",
+              "explanation": "A ratio compares two quantities of the same kind, written a : b."
+            },
+            {
+              "step": 2,
+              "title": "Proportion",
+              "explanation": "When two ratios are equal, they are in proportion."
+            },
+            {
+              "step": 3,
+              "title": "Percentage",
+              "explanation": "A percentage compares a quantity to 100; % means 'out of 100'."
+            },
+            {
+              "step": 4,
+              "title": "Convert and find",
+              "explanation": "1/2 = 0.5 = 50%; to find a percentage of a number, multiply, like 20% of 50 = 10."
+            }
+          ],
+          "examples": [
+            "The ratio of 4 boys to 6 girls is 4 : 6 = 2 : 3.",
+            "20% of 50 = (20/100) x 50 = 10."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Ratio",
+              "definition": "A comparison of two quantities by division.",
+              "simpleExample": "The ratio 2 : 3 compares 2 and 3."
+            },
+            {
+              "keyword": "Proportion",
+              "definition": "An equality of two ratios.",
+              "simpleExample": "2 : 3 = 4 : 6 is a proportion."
+            },
+            {
+              "keyword": "Percentage",
+              "definition": "A fraction out of 100.",
+              "simpleExample": "50% means 50 out of 100."
+            }
+          ],
+          "quickSummary": "A ratio compares two quantities (a : b), equal ratios form a proportion, and a percentage compares a quantity to 100; fractions, decimals and percentages can be interconverted.",
+          "revisionNotes": [
+            "Ratio compares two quantities (a : b).",
+            "Equal ratios are in proportion.",
+            "Percentage = out of 100 (%).",
+            "1/2 = 0.5 = 50%; 20% of 50 = 10."
+          ]
+        },
+        {
+          "topicId": "math7_ch8_topic2",
+          "topic": "Profit and Loss",
+          "meaning": "Profit or loss is found by comparing the cost price and selling price of an item, often as a percentage.",
+          "ncertBasedExplanation": "When something is bought and sold, we compare its cost price (CP), the price at which it is bought, with its selling price (SP), the price at which it is sold. If the selling price is more than the cost price, there is a profit (gain); if it is less, there is a loss. Profit = SP - CP, and Loss = CP - SP. Profit or loss is often expressed as a percentage of the cost price: Profit% = (Profit / CP) x 100, and Loss% = (Loss / CP) x 100. These ideas are used in everyday buying and selling to know how much was gained or lost.",
+          "easyExplanation": "Profit happens when selling price is more than cost price; loss when it is less. Profit% and Loss% are found as a percentage of the cost price.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Cost and selling price",
+              "explanation": "Cost price (CP) is the buying price; selling price (SP) is the selling price."
+            },
+            {
+              "step": 2,
+              "title": "Profit or loss",
+              "explanation": "If SP > CP there is profit; if SP < CP there is loss."
+            },
+            {
+              "step": 3,
+              "title": "Calculate them",
+              "explanation": "Profit = SP - CP; Loss = CP - SP."
+            },
+            {
+              "step": 4,
+              "title": "As a percentage",
+              "explanation": "Profit% = (Profit / CP) x 100; Loss% = (Loss / CP) x 100."
+            }
+          ],
+          "examples": [
+            "Buying for 80 rupees and selling for 100 rupees gives a profit of 20 rupees.",
+            "If CP = 80 and profit = 20, then Profit% = (20/80) x 100 = 25%."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Cost price",
+              "definition": "The price at which something is bought.",
+              "simpleExample": "The CP of the bag was 80 rupees."
+            },
+            {
+              "keyword": "Selling price",
+              "definition": "The price at which something is sold.",
+              "simpleExample": "The SP of the bag was 100 rupees."
+            },
+            {
+              "keyword": "Profit",
+              "definition": "The gain when SP is more than CP.",
+              "simpleExample": "Profit = SP - CP."
+            }
+          ],
+          "quickSummary": "Profit or loss is found by comparing cost price and selling price: profit when SP > CP, loss when SP < CP, often expressed as a percentage of the cost price.",
+          "revisionNotes": [
+            "CP = buying price; SP = selling price.",
+            "SP > CP: profit; SP < CP: loss.",
+            "Profit = SP - CP; Loss = CP - SP.",
+            "Profit% and Loss% are taken on CP."
+          ]
+        },
+        {
+          "topicId": "math7_ch8_topic3",
+          "topic": "Simple Interest",
+          "meaning": "Simple interest is the extra money paid for borrowing or earned for lending, calculated on the principal.",
+          "ncertBasedExplanation": "When we borrow money or deposit money in a bank, we pay or earn extra money called interest. The money borrowed or deposited is called the principal (P). The interest is usually charged at a certain rate per cent per year, called the rate (R), for a certain time in years (T). Simple interest is calculated using the formula: SI = (P x R x T) / 100. The total amount to be paid back is the Amount = Principal + Simple Interest. For example, the simple interest on 1000 rupees at 10% for 2 years is (1000 x 10 x 2)/100 = 200 rupees. Simple interest is used in everyday money matters.",
+          "easyExplanation": "Simple interest is the extra money on a loan or deposit: SI = (P x R x T)/100. The total to repay is Amount = Principal + Interest.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Interest and principal",
+              "explanation": "Interest is extra money on borrowed/deposited money (the principal)."
+            },
+            {
+              "step": 2,
+              "title": "Rate and time",
+              "explanation": "Interest depends on the rate (R, per cent per year) and time (T, in years)."
+            },
+            {
+              "step": 3,
+              "title": "The formula",
+              "explanation": "Simple interest SI = (P x R x T) / 100."
+            },
+            {
+              "step": 4,
+              "title": "The amount",
+              "explanation": "Amount = Principal + Simple Interest."
+            }
+          ],
+          "examples": [
+            "SI on 1000 rupees at 10% for 2 years = (1000 x 10 x 2)/100 = 200 rupees.",
+            "The amount to repay would be 1000 + 200 = 1200 rupees."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Principal",
+              "definition": "The money borrowed or deposited.",
+              "simpleExample": "The principal was 1000 rupees."
+            },
+            {
+              "keyword": "Simple interest",
+              "definition": "Interest calculated on the principal.",
+              "simpleExample": "SI = (P x R x T)/100."
+            },
+            {
+              "keyword": "Rate",
+              "definition": "The per cent charged per year.",
+              "simpleExample": "The rate was 10% per year."
+            }
+          ],
+          "quickSummary": "Simple interest is the extra money on a loan or deposit, calculated as SI = (P x R x T)/100, with the total amount being principal plus simple interest.",
+          "revisionNotes": [
+            "Interest = extra money on principal.",
+            "SI = (P x R x T) / 100.",
+            "R is per cent per year; T in years.",
+            "Amount = Principal + Simple Interest."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 9,
+      "chapter": "Rational Numbers",
+      "topics": [
+        {
+          "topicId": "math7_ch9_topic1",
+          "topic": "Rational Numbers and Their Representation",
+          "meaning": "A rational number is a number that can be written as a fraction p/q, where q is not zero.",
+          "ncertBasedExplanation": "A rational number is any number that can be written in the form p/q, where p and q are integers and q is not zero. This includes all integers, fractions and their negatives; for example, 3, -2, 1/2 and -3/4 are all rational numbers. A rational number is positive if its numerator and denominator have the same sign, and negative if they have different signs. We can show rational numbers on a number line, just like integers and fractions. A rational number is in its standard form when the denominator is positive and the numerator and denominator have no common factor other than 1.",
+          "easyExplanation": "A rational number can be written as p/q (q not zero), like 1/2, -3/4 or 3. They can be positive or negative and shown on a number line.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "What it is",
+              "explanation": "A rational number can be written as p/q, where p and q are integers and q is not zero."
+            },
+            {
+              "step": 2,
+              "title": "Many forms",
+              "explanation": "Integers, fractions and their negatives are all rational numbers."
+            },
+            {
+              "step": 3,
+              "title": "Positive or negative",
+              "explanation": "It is positive if p and q have the same sign, negative if different."
+            },
+            {
+              "step": 4,
+              "title": "Standard form",
+              "explanation": "In standard form, the denominator is positive with no common factor with the numerator."
+            }
+          ],
+          "examples": [
+            "1/2, -3/4 and 3 are all rational numbers.",
+            "-6/8 in standard form is -3/4."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Rational number",
+              "definition": "A number written as p/q with q not zero.",
+              "simpleExample": "1/2 is a rational number."
+            },
+            {
+              "keyword": "Numerator",
+              "definition": "The top number p.",
+              "simpleExample": "In 3/4, the numerator is 3."
+            },
+            {
+              "keyword": "Standard form",
+              "definition": "A fraction with a positive denominator and no common factor.",
+              "simpleExample": "-3/4 is in standard form."
+            }
+          ],
+          "quickSummary": "A rational number can be written as p/q where p and q are integers and q is not zero; it can be positive or negative, shown on a number line, and written in standard form.",
+          "revisionNotes": [
+            "Rational number = p/q, q not zero.",
+            "Includes integers, fractions and negatives.",
+            "Positive if same signs, negative if different.",
+            "Standard form: positive denominator, no common factor."
+          ]
+        },
+        {
+          "topicId": "math7_ch9_topic2",
+          "topic": "Comparing Rational Numbers",
+          "meaning": "Rational numbers are compared by writing them with the same denominator or by using the number line.",
+          "ncertBasedExplanation": "To compare two rational numbers and find which is greater, we can write them with the same positive denominator and then compare the numerators; the one with the larger numerator is greater. We can also compare them using a number line, where a number to the right is greater. Every positive rational number is greater than zero, and every negative rational number is less than zero, so positive numbers are always greater than negative ones. There are also infinitely many rational numbers between any two given rational numbers. Comparing rational numbers lets us order them.",
+          "easyExplanation": "To compare rational numbers, give them the same denominator and compare numerators, or use a number line. Positive numbers are always greater than negatives.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Same denominator",
+              "explanation": "Write the rational numbers with the same positive denominator."
+            },
+            {
+              "step": 2,
+              "title": "Compare numerators",
+              "explanation": "The one with the larger numerator is greater."
+            },
+            {
+              "step": 3,
+              "title": "Number line",
+              "explanation": "On a number line, a number to the right is greater."
+            },
+            {
+              "step": 4,
+              "title": "Positive vs negative",
+              "explanation": "Positive rationals are always greater than negative ones."
+            }
+          ],
+          "examples": [
+            "3/5 is greater than 2/5 because they share a denominator and 3 > 2.",
+            "Any positive rational number is greater than any negative one."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Compare",
+              "definition": "To decide which is greater.",
+              "simpleExample": "We compare 2/3 and 3/4."
+            },
+            {
+              "keyword": "Common denominator",
+              "definition": "The same denominator made for two numbers.",
+              "simpleExample": "For 1/2 and 1/3, use 6."
+            },
+            {
+              "keyword": "Number line",
+              "definition": "A line showing numbers in order.",
+              "simpleExample": "Rational numbers are shown on a number line."
+            }
+          ],
+          "quickSummary": "Rational numbers are compared by giving them the same positive denominator and comparing numerators, or by using a number line; positive numbers are always greater than negative ones.",
+          "revisionNotes": [
+            "Give the same positive denominator, compare numerators.",
+            "Or use a number line (right is greater).",
+            "Positive > negative always.",
+            "Infinitely many rationals between any two."
+          ]
+        },
+        {
+          "topicId": "math7_ch9_topic3",
+          "topic": "Operations on Rational Numbers",
+          "meaning": "Rational numbers can be added, subtracted, multiplied and divided using rules like those for fractions.",
+          "ncertBasedExplanation": "We can do all four operations with rational numbers. To add or subtract rational numbers, we write them with the same denominator and then add or subtract the numerators. To multiply two rational numbers, we multiply the numerators together and the denominators together. To divide by a rational number, we multiply by its reciprocal. The sign rules for integers also apply. For example, (2/3) + (1/3) = 1, (2/3) x (3/4) = 1/2, and (2/3) ÷ (4/5) = (2/3) x (5/4) = 5/6. These operations let us calculate with all rational numbers, positive and negative.",
+          "easyExplanation": "Add/subtract rational numbers with a common denominator; multiply by multiplying tops and bottoms; divide by multiplying by the reciprocal. Sign rules apply.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Add and subtract",
+              "explanation": "Use a common denominator, then add or subtract the numerators."
+            },
+            {
+              "step": 2,
+              "title": "Multiply",
+              "explanation": "Multiply the numerators together and the denominators together."
+            },
+            {
+              "step": 3,
+              "title": "Divide",
+              "explanation": "Multiply by the reciprocal of the divisor."
+            },
+            {
+              "step": 4,
+              "title": "Sign rules",
+              "explanation": "The sign rules for integers also apply to rational numbers."
+            }
+          ],
+          "examples": [
+            "(2/3) + (1/3) = 1.",
+            "(2/3) ÷ (4/5) = (2/3) x (5/4) = 5/6."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Reciprocal",
+              "definition": "A fraction turned upside down.",
+              "simpleExample": "The reciprocal of 4/5 is 5/4."
+            },
+            {
+              "keyword": "Common denominator",
+              "definition": "A shared denominator for adding/subtracting.",
+              "simpleExample": "For 1/2 + 1/3, use 6."
+            },
+            {
+              "keyword": "Operation",
+              "definition": "Adding, subtracting, multiplying or dividing.",
+              "simpleExample": "Division is an operation."
+            }
+          ],
+          "quickSummary": "Rational numbers are added and subtracted using a common denominator, multiplied by multiplying numerators and denominators, and divided by multiplying by the reciprocal, with integer sign rules.",
+          "revisionNotes": [
+            "Add/subtract: common denominator, then numerators.",
+            "Multiply: tops together, bottoms together.",
+            "Divide: multiply by the reciprocal.",
+            "Integer sign rules apply."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 10,
+      "chapter": "Practical Geometry",
+      "topics": [
+        {
+          "topicId": "math7_ch10_topic1",
+          "topic": "Construction of Parallel Lines",
+          "meaning": "Using a ruler and compass, we can construct a line parallel to a given line through a point not on it.",
+          "ncertBasedExplanation": "Practical geometry is about drawing accurate figures using a ruler and a compass. One important construction is drawing a line parallel to a given line through a point outside it. The method uses the property that when a transversal cuts two lines making equal alternate (or corresponding) angles, the lines are parallel. We draw a transversal from the point to the given line, copy the angle at the new point using a compass, and draw the parallel line. This construction relies on the angle properties of parallel lines and gives us an exact parallel line without measuring with a protractor.",
+          "easyExplanation": "Using a ruler and compass, we can draw a line parallel to a given line through an outside point, by copying equal alternate or corresponding angles.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Tools and goal",
+              "explanation": "Using a ruler and compass, draw a parallel line through a point outside a given line."
+            },
+            {
+              "step": 2,
+              "title": "Use the angle property",
+              "explanation": "Equal alternate or corresponding angles mean two lines are parallel."
+            },
+            {
+              "step": 3,
+              "title": "Copy the angle",
+              "explanation": "Draw a transversal, then copy the angle at the new point with a compass."
+            },
+            {
+              "step": 4,
+              "title": "Draw the parallel",
+              "explanation": "The line drawn through the equal angle is parallel to the given line."
+            }
+          ],
+          "examples": [
+            "Drawing a line through a point that is parallel to a given line using a compass.",
+            "Copying an angle to make alternate angles equal gives a parallel line."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Parallel lines",
+              "definition": "Lines that never meet.",
+              "simpleExample": "We construct a parallel line."
+            },
+            {
+              "keyword": "Compass",
+              "definition": "A tool for drawing arcs and copying angles.",
+              "simpleExample": "We use a compass for constructions."
+            },
+            {
+              "keyword": "Transversal",
+              "definition": "A line cutting two lines.",
+              "simpleExample": "A transversal helps copy the angle."
+            }
+          ],
+          "quickSummary": "Using a ruler and compass, we construct a line parallel to a given line through an outside point by copying equal alternate or corresponding angles, without using a protractor.",
+          "revisionNotes": [
+            "Use ruler and compass for constructions.",
+            "Parallel line through an outside point.",
+            "Copy equal alternate/corresponding angles.",
+            "Equal angles mean the lines are parallel."
+          ]
+        },
+        {
+          "topicId": "math7_ch10_topic2",
+          "topic": "Construction of Triangles",
+          "meaning": "Triangles can be constructed accurately when certain measurements are given, using SSS, SAS, ASA or RHS conditions.",
+          "ncertBasedExplanation": "We can construct a triangle accurately using a ruler, compass and protractor when enough measurements are given. The conditions match the congruence criteria. With SSS, we are given the three sides. With SAS, we are given two sides and the angle between them. With ASA, we are given two angles and the side between them. With RHS, we construct a right triangle given the hypotenuse and one side. In each case, we draw the parts in order, using the compass to mark lengths and the protractor for angles, to complete the triangle. These constructions show how the congruence conditions also tell us when a triangle is uniquely determined.",
+          "easyExplanation": "Triangles can be constructed when given enough measurements: SSS (three sides), SAS (two sides and the angle between), ASA (two angles and the side between) or RHS.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Enough measurements",
+              "explanation": "A triangle can be constructed when enough measurements are given."
+            },
+            {
+              "step": 2,
+              "title": "SSS and SAS",
+              "explanation": "Construct from three sides (SSS) or two sides and the included angle (SAS)."
+            },
+            {
+              "step": 3,
+              "title": "ASA and RHS",
+              "explanation": "Construct from two angles and the included side (ASA) or a right triangle (RHS)."
+            },
+            {
+              "step": 4,
+              "title": "Draw step by step",
+              "explanation": "Use ruler, compass and protractor to draw the parts in order."
+            }
+          ],
+          "examples": [
+            "Constructing a triangle given its three sides (SSS).",
+            "Constructing a triangle given two angles and the side between them (ASA)."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Construction",
+              "definition": "Drawing an accurate figure with tools.",
+              "simpleExample": "We did a triangle construction."
+            },
+            {
+              "keyword": "SSS",
+              "definition": "Three sides given.",
+              "simpleExample": "SSS construction uses three sides."
+            },
+            {
+              "keyword": "Protractor",
+              "definition": "A tool for measuring and drawing angles.",
+              "simpleExample": "We use a protractor for angles."
+            }
+          ],
+          "quickSummary": "Triangles can be constructed accurately when given enough measurements, matching the SSS, SAS, ASA or RHS conditions, using a ruler, compass and protractor.",
+          "revisionNotes": [
+            "Construct triangles with enough measurements.",
+            "SSS, SAS, ASA, RHS conditions.",
+            "Use ruler, compass, protractor.",
+            "These conditions uniquely determine a triangle."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 11,
+      "chapter": "Perimeter and Area",
+      "topics": [
+        {
+          "topicId": "math7_ch11_topic1",
+          "topic": "Perimeter and Area of Squares and Rectangles",
+          "meaning": "Perimeter is the distance around a shape and area is the surface it covers; both have formulas for squares and rectangles.",
+          "ncertBasedExplanation": "The perimeter of a closed figure is the total distance around its boundary, and the area is the amount of surface it covers. For a rectangle with length l and breadth b, the perimeter is 2 x (l + b) and the area is l x b. For a square with side s, the perimeter is 4 x s and the area is s x s. Perimeter is measured in units of length (like cm) and area in square units (like square cm). These formulas help us find the boundary length and surface of common shapes, useful for fencing, flooring and many real tasks.",
+          "easyExplanation": "Perimeter is the distance around a shape; area is the surface it covers. Rectangle: perimeter 2(l+b), area l x b. Square: perimeter 4s, area s x s.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Perimeter and area",
+              "explanation": "Perimeter is the distance around; area is the surface covered."
+            },
+            {
+              "step": 2,
+              "title": "Rectangle",
+              "explanation": "Perimeter = 2 x (length + breadth); area = length x breadth."
+            },
+            {
+              "step": 3,
+              "title": "Square",
+              "explanation": "Perimeter = 4 x side; area = side x side."
+            },
+            {
+              "step": 4,
+              "title": "Units",
+              "explanation": "Perimeter is in length units; area is in square units."
+            }
+          ],
+          "examples": [
+            "A rectangle 5 cm by 3 cm has perimeter 16 cm and area 15 square cm.",
+            "A square of side 4 cm has perimeter 16 cm and area 16 square cm."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Perimeter",
+              "definition": "The distance around a shape.",
+              "simpleExample": "A square's perimeter is 4 x side."
+            },
+            {
+              "keyword": "Area",
+              "definition": "The surface a shape covers.",
+              "simpleExample": "A rectangle's area is length x breadth."
+            },
+            {
+              "keyword": "Square unit",
+              "definition": "A unit for measuring area.",
+              "simpleExample": "Area is measured in square cm."
+            }
+          ],
+          "quickSummary": "Perimeter is the distance around a shape and area is the surface it covers; for a rectangle, perimeter = 2(l+b) and area = l x b, and for a square, perimeter = 4s and area = s x s.",
+          "revisionNotes": [
+            "Perimeter = distance around; area = surface covered.",
+            "Rectangle: perimeter 2(l+b), area l x b.",
+            "Square: perimeter 4s, area s x s.",
+            "Perimeter in length units; area in square units."
+          ]
+        },
+        {
+          "topicId": "math7_ch11_topic2",
+          "topic": "Area of Triangles and Parallelograms",
+          "meaning": "The area of a parallelogram is base times height, and the area of a triangle is half of base times height.",
+          "ncertBasedExplanation": "We can find the areas of triangles and parallelograms using simple formulas. The area of a parallelogram is equal to its base multiplied by its height (the perpendicular distance between the base and the opposite side): Area = base x height. A triangle is half of a parallelogram, so the area of a triangle is half of base times height: Area = (1/2) x base x height. In both, the height must be measured perpendicular to the base. These formulas let us find the areas of many shapes, since complex shapes can be split into triangles and parallelograms.",
+          "easyExplanation": "Area of a parallelogram = base x height. Area of a triangle = (1/2) x base x height. The height is measured perpendicular to the base.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Parallelogram area",
+              "explanation": "Area of a parallelogram = base x height."
+            },
+            {
+              "step": 2,
+              "title": "Triangle area",
+              "explanation": "A triangle is half a parallelogram, so area = (1/2) x base x height."
+            },
+            {
+              "step": 3,
+              "title": "Perpendicular height",
+              "explanation": "The height must be measured perpendicular to the base."
+            },
+            {
+              "step": 4,
+              "title": "Splitting shapes",
+              "explanation": "Complex shapes can be split into triangles and parallelograms."
+            }
+          ],
+          "examples": [
+            "A parallelogram with base 6 cm and height 4 cm has area 24 square cm.",
+            "A triangle with base 6 cm and height 4 cm has area 12 square cm."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Parallelogram",
+              "definition": "A four-sided shape with opposite sides parallel.",
+              "simpleExample": "A parallelogram's area is base x height."
+            },
+            {
+              "keyword": "Base",
+              "definition": "The side on which a shape rests.",
+              "simpleExample": "The base of the triangle is 6 cm."
+            },
+            {
+              "keyword": "Height",
+              "definition": "The perpendicular distance from the base.",
+              "simpleExample": "The height is measured perpendicular to the base."
+            }
+          ],
+          "quickSummary": "The area of a parallelogram is base x height and the area of a triangle is (1/2) x base x height, with the height measured perpendicular to the base.",
+          "revisionNotes": [
+            "Parallelogram area = base x height.",
+            "Triangle area = (1/2) x base x height.",
+            "Height is perpendicular to the base.",
+            "Triangle is half of a parallelogram."
+          ]
+        },
+        {
+          "topicId": "math7_ch11_topic3",
+          "topic": "Circumference and Area of a Circle",
+          "meaning": "The circumference of a circle is the distance around it, and both circumference and area use the number pi.",
+          "ncertBasedExplanation": "A circle is a round closed figure, and the distance around it is called its circumference. The distance from the centre to any point on the circle is the radius (r), and the distance across through the centre is the diameter (d = 2r). The circumference of a circle is given by C = 2 x pi x r (or pi x d), where pi is a special number approximately equal to 22/7 or 3.14. The area of a circle is given by A = pi x r x r (pi times the radius squared). These formulas let us find the boundary and surface of circular objects, like wheels, plates and pipes.",
+          "easyExplanation": "A circle's circumference (distance around) is 2 x pi x r, and its area is pi x r x r, where pi is about 22/7 or 3.14, and r is the radius.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Parts of a circle",
+              "explanation": "The radius is centre to edge; the diameter is across through the centre (d = 2r)."
+            },
+            {
+              "step": 2,
+              "title": "Circumference",
+              "explanation": "The distance around a circle is C = 2 x pi x r (or pi x d)."
+            },
+            {
+              "step": 3,
+              "title": "The number pi",
+              "explanation": "Pi is a special number, about 22/7 or 3.14."
+            },
+            {
+              "step": 4,
+              "title": "Area",
+              "explanation": "The area of a circle is A = pi x r x r."
+            }
+          ],
+          "examples": [
+            "A circle of radius 7 cm has circumference 2 x (22/7) x 7 = 44 cm.",
+            "A circle of radius 7 cm has area (22/7) x 7 x 7 = 154 square cm."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Circumference",
+              "definition": "The distance around a circle.",
+              "simpleExample": "C = 2 x pi x r."
+            },
+            {
+              "keyword": "Radius",
+              "definition": "Centre to edge of a circle.",
+              "simpleExample": "The radius is half the diameter."
+            },
+            {
+              "keyword": "Pi",
+              "definition": "A constant about 22/7 or 3.14.",
+              "simpleExample": "Pi is used in circle formulas."
+            }
+          ],
+          "quickSummary": "A circle's circumference (distance around) is 2 x pi x r and its area is pi x r x r, where pi is about 22/7 or 3.14 and r is the radius.",
+          "revisionNotes": [
+            "Circumference = 2 x pi x r (or pi x d).",
+            "Area = pi x r x r.",
+            "Pi is about 22/7 or 3.14.",
+            "Diameter = 2 x radius."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 12,
+      "chapter": "Algebraic Expressions",
+      "topics": [
+        {
+          "topicId": "math7_ch12_topic1",
+          "topic": "Terms, Factors and Coefficients",
+          "meaning": "Algebraic expressions are made of terms, which are formed from factors, and the number part of a term is its coefficient.",
+          "ncertBasedExplanation": "An algebraic expression is formed using variables (letters) and constants (numbers) joined by operations. An expression is made up of terms, which are separated by plus or minus signs; for example, in 3x + 5, the terms are 3x and 5. Each term is a product of factors; in the term 3x, the factors are 3 and x. The numerical factor of a term is called its coefficient; in 3x, the coefficient of x is 3. Terms that have the same variables (like 3x and 5x) are called like terms, while terms with different variables are unlike terms. Understanding these parts is the basis of working with algebra.",
+          "easyExplanation": "Algebraic expressions are made of terms (like 3x and 5), each made of factors. The number in a term is its coefficient. Like terms have the same variables.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Expressions and terms",
+              "explanation": "An expression is made of terms separated by + or - signs, like 3x and 5 in 3x + 5."
+            },
+            {
+              "step": 2,
+              "title": "Factors",
+              "explanation": "Each term is a product of factors; in 3x the factors are 3 and x."
+            },
+            {
+              "step": 3,
+              "title": "Coefficient",
+              "explanation": "The numerical factor of a term; in 3x the coefficient of x is 3."
+            },
+            {
+              "step": 4,
+              "title": "Like and unlike terms",
+              "explanation": "Like terms have the same variables (3x, 5x); unlike terms differ."
+            }
+          ],
+          "examples": [
+            "In 3x + 5, the terms are 3x and 5, and the coefficient of x is 3.",
+            "3x and 5x are like terms; 3x and 5y are unlike terms."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Term",
+              "definition": "A part of an expression separated by + or -.",
+              "simpleExample": "3x is a term."
+            },
+            {
+              "keyword": "Coefficient",
+              "definition": "The numerical factor of a term.",
+              "simpleExample": "In 4y, the coefficient is 4."
+            },
+            {
+              "keyword": "Like terms",
+              "definition": "Terms with the same variables.",
+              "simpleExample": "2x and 7x are like terms."
+            }
+          ],
+          "quickSummary": "Algebraic expressions are made of terms separated by + or -, each a product of factors, with a numerical coefficient; terms with the same variables are like terms.",
+          "revisionNotes": [
+            "Expression = terms joined by + or -.",
+            "Each term is a product of factors.",
+            "Coefficient = numerical factor of a term.",
+            "Like terms have the same variables."
+          ]
+        },
+        {
+          "topicId": "math7_ch12_topic2",
+          "topic": "Types of Expressions and Their Addition",
+          "meaning": "Expressions are named by the number of terms, and like terms can be added or subtracted.",
+          "ncertBasedExplanation": "Algebraic expressions are named by how many terms they have: a monomial has one term (like 3x), a binomial has two terms (like 3x + 5), and a trinomial has three terms (like x squared + 2x + 1); expressions with one or more terms in general are called polynomials. We can add and subtract expressions by combining their like terms: we add or subtract the coefficients of like terms and keep the variable part the same. For example, 3x + 5x = 8x, and (2x + 3) + (4x + 1) = 6x + 4. Unlike terms cannot be combined. This lets us simplify and work with expressions.",
+          "easyExplanation": "Expressions are monomials (1 term), binomials (2 terms) or trinomials (3 terms). We add expressions by combining like terms, so 3x + 5x = 8x.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Types by terms",
+              "explanation": "Monomial (1 term), binomial (2 terms), trinomial (3 terms)."
+            },
+            {
+              "step": 2,
+              "title": "Combine like terms",
+              "explanation": "Add or subtract the coefficients of like terms, keeping the variable."
+            },
+            {
+              "step": 3,
+              "title": "Example",
+              "explanation": "3x + 5x = 8x, and (2x + 3) + (4x + 1) = 6x + 4."
+            },
+            {
+              "step": 4,
+              "title": "Unlike terms",
+              "explanation": "Unlike terms cannot be combined."
+            }
+          ],
+          "examples": [
+            "3x + 5x = 8x (combining like terms).",
+            "x squared + 2x + 1 is a trinomial."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Monomial",
+              "definition": "An expression with one term.",
+              "simpleExample": "5x is a monomial."
+            },
+            {
+              "keyword": "Binomial",
+              "definition": "An expression with two terms.",
+              "simpleExample": "x + 3 is a binomial."
+            },
+            {
+              "keyword": "Like terms",
+              "definition": "Terms with the same variables that can be combined.",
+              "simpleExample": "3x and 5x combine to 8x."
+            }
+          ],
+          "quickSummary": "Expressions are named by their number of terms (monomial, binomial, trinomial), and we add or subtract them by combining like terms while keeping unlike terms separate.",
+          "revisionNotes": [
+            "Monomial (1), binomial (2), trinomial (3 terms).",
+            "Add by combining like terms.",
+            "3x + 5x = 8x.",
+            "Unlike terms cannot be combined."
+          ]
+        },
+        {
+          "topicId": "math7_ch12_topic3",
+          "topic": "Finding the Value of an Expression",
+          "meaning": "The value of an algebraic expression is found by substituting given numbers for the variables.",
+          "ncertBasedExplanation": "An algebraic expression has different values depending on the value of its variable. To find the value of an expression, we substitute (put in) the given number in place of the variable and then calculate. For example, the value of 3x + 5 when x = 2 is 3 x 2 + 5 = 11. This idea is used to make and use formulas, such as the formula for the perimeter of a square (4 x side) or the area of a rectangle (length x breadth), where we substitute the given measurements. Finding the value of expressions connects algebra to real calculations.",
+          "easyExplanation": "To find an expression's value, put the given number in place of the variable and calculate. So 3x + 5 with x = 2 is 3 x 2 + 5 = 11.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Expressions have values",
+              "explanation": "An expression's value depends on the value of its variable."
+            },
+            {
+              "step": 2,
+              "title": "Substitute",
+              "explanation": "Put the given number in place of the variable."
+            },
+            {
+              "step": 3,
+              "title": "Calculate",
+              "explanation": "Work out the result, like 3x + 5 with x = 2 gives 11."
+            },
+            {
+              "step": 4,
+              "title": "Using formulas",
+              "explanation": "Formulas like perimeter = 4 x side use substitution."
+            }
+          ],
+          "examples": [
+            "The value of 3x + 5 when x = 2 is 11.",
+            "Using the formula 4 x side, the perimeter of a square of side 5 is 20."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Substitute",
+              "definition": "To put a number in place of a variable.",
+              "simpleExample": "We substitute x = 2 into 3x + 5."
+            },
+            {
+              "keyword": "Value",
+              "definition": "The result after substituting.",
+              "simpleExample": "The value of 3x + 5 at x = 2 is 11."
+            },
+            {
+              "keyword": "Formula",
+              "definition": "A rule written with variables.",
+              "simpleExample": "Perimeter = 4 x side is a formula."
+            }
+          ],
+          "quickSummary": "The value of an algebraic expression is found by substituting given numbers for the variables and calculating, which is how formulas are used in real problems.",
+          "revisionNotes": [
+            "Expression value depends on the variable.",
+            "Substitute the given number for the variable.",
+            "3x + 5 with x = 2 = 11.",
+            "Formulas use substitution."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 13,
+      "chapter": "Exponents and Powers",
+      "topics": [
+        {
+          "topicId": "math7_ch13_topic1",
+          "topic": "Exponents",
+          "meaning": "An exponent shows how many times a number (the base) is multiplied by itself.",
+          "ncertBasedExplanation": "Exponents give us a short way to write repeated multiplication. When a number is multiplied by itself several times, we write it using a base and an exponent (or power); for example, 2 x 2 x 2 = 2 cubed, written as 2 with a small 3, which equals 8. Here 2 is the base and 3 is the exponent, meaning 2 is used three times. Exponents help us write very large numbers in a short form. For example, 10 raised to the power 5 means 10 multiplied by itself five times, which is 1,00,000. Reading and writing numbers with exponents makes large calculations much easier.",
+          "easyExplanation": "An exponent shows repeated multiplication: 2 cubed (2 to the power 3) means 2 x 2 x 2 = 8. The base is 2 and the exponent is 3.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Repeated multiplication",
+              "explanation": "An exponent is a short way to write repeated multiplication."
+            },
+            {
+              "step": 2,
+              "title": "Base and exponent",
+              "explanation": "In 2 to the power 3, the base is 2 and the exponent is 3."
+            },
+            {
+              "step": 3,
+              "title": "Calculate",
+              "explanation": "2 to the power 3 means 2 x 2 x 2 = 8."
+            },
+            {
+              "step": 4,
+              "title": "Large numbers",
+              "explanation": "Exponents write very large numbers in short form, like 10 to the power 5 = 1,00,000."
+            }
+          ],
+          "examples": [
+            "2 to the power 3 = 2 x 2 x 2 = 8.",
+            "10 to the power 5 = 1,00,000."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Exponent",
+              "definition": "The number showing how many times the base is multiplied.",
+              "simpleExample": "In 2 to the power 3, the exponent is 3."
+            },
+            {
+              "keyword": "Base",
+              "definition": "The number being multiplied.",
+              "simpleExample": "In 2 to the power 3, the base is 2."
+            },
+            {
+              "keyword": "Power",
+              "definition": "Another word for exponent.",
+              "simpleExample": "2 to the power 3 is read 'two to the power three'."
+            }
+          ],
+          "quickSummary": "An exponent shows how many times a base is multiplied by itself, like 2 to the power 3 = 2 x 2 x 2 = 8, giving a short way to write repeated multiplication and large numbers.",
+          "revisionNotes": [
+            "Exponent = repeated multiplication.",
+            "Base = number multiplied; exponent = how many times.",
+            "2 to the power 3 = 8.",
+            "Writes large numbers in short form."
+          ]
+        },
+        {
+          "topicId": "math7_ch13_topic2",
+          "topic": "Laws of Exponents",
+          "meaning": "The laws of exponents are rules for multiplying, dividing and taking powers of numbers with exponents.",
+          "ncertBasedExplanation": "There are simple rules, called the laws of exponents, that make working with exponents easier (for the same base). When multiplying powers of the same base, we add the exponents: a to the m times a to the n equals a to the (m + n). When dividing powers of the same base, we subtract the exponents: a to the m divided by a to the n equals a to the (m - n). When taking a power of a power, we multiply the exponents: (a to the m) to the n equals a to the (m x n). Also, any non-zero number to the power 0 equals 1. These laws help simplify expressions with exponents quickly.",
+          "easyExplanation": "Laws of exponents (same base): multiplying adds exponents, dividing subtracts them, a power of a power multiplies them, and any number to the power 0 is 1.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Multiplying",
+              "explanation": "For the same base, add the exponents: a^m x a^n = a^(m+n)."
+            },
+            {
+              "step": 2,
+              "title": "Dividing",
+              "explanation": "For the same base, subtract the exponents: a^m / a^n = a^(m-n)."
+            },
+            {
+              "step": 3,
+              "title": "Power of a power",
+              "explanation": "Multiply the exponents: (a^m)^n = a^(m x n)."
+            },
+            {
+              "step": 4,
+              "title": "Power zero",
+              "explanation": "Any non-zero number to the power 0 equals 1."
+            }
+          ],
+          "examples": [
+            "2 to the power 3 times 2 to the power 2 = 2 to the power 5 = 32.",
+            "Any non-zero number to the power 0 equals 1, like 7 to the power 0 = 1."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Laws of exponents",
+              "definition": "Rules for operating on powers.",
+              "simpleExample": "a^m x a^n = a^(m+n) is a law of exponents."
+            },
+            {
+              "keyword": "Base",
+              "definition": "The number being raised to a power.",
+              "simpleExample": "The laws apply for the same base."
+            },
+            {
+              "keyword": "Exponent",
+              "definition": "The power a base is raised to.",
+              "simpleExample": "We add exponents when multiplying."
+            }
+          ],
+          "quickSummary": "The laws of exponents (for the same base) state that multiplying adds exponents, dividing subtracts them, a power of a power multiplies them, and any non-zero number to the power 0 is 1.",
+          "revisionNotes": [
+            "Multiply same base: add exponents.",
+            "Divide same base: subtract exponents.",
+            "Power of a power: multiply exponents.",
+            "Any non-zero number to power 0 = 1."
+          ]
+        },
+        {
+          "topicId": "math7_ch13_topic3",
+          "topic": "Standard Form",
+          "meaning": "Standard form expresses very large numbers using powers of 10, making them easy to write and read.",
+          "ncertBasedExplanation": "Very large numbers are difficult to write and read in full, so we use the standard form (also called scientific notation). In standard form, a number is written as a number between 1 and 10 multiplied by a power of 10. For example, 59,000 is written as 5.9 x 10 to the power 4, and the speed of light, 300,000,000 m/s, is written as 3 x 10 to the power 8. To write a number in standard form, we place the decimal point after the first digit and count how many places it moved to find the power of 10. Standard form is widely used in science to handle very large (and very small) numbers neatly.",
+          "easyExplanation": "Standard form writes big numbers as a number between 1 and 10 times a power of 10. So 59,000 = 5.9 x 10 to the power 4.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Why use it",
+              "explanation": "Standard form makes very large numbers easy to write and read."
+            },
+            {
+              "step": 2,
+              "title": "The form",
+              "explanation": "A number between 1 and 10 multiplied by a power of 10."
+            },
+            {
+              "step": 3,
+              "title": "Write it",
+              "explanation": "Place the decimal after the first digit and count the places moved for the power."
+            },
+            {
+              "step": 4,
+              "title": "Example",
+              "explanation": "59,000 = 5.9 x 10 to the power 4; used widely in science."
+            }
+          ],
+          "examples": [
+            "59,000 in standard form is 5.9 x 10 to the power 4.",
+            "300,000,000 is written as 3 x 10 to the power 8."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Standard form",
+              "definition": "A number written as a value between 1 and 10 times a power of 10.",
+              "simpleExample": "5.9 x 10^4 is standard form."
+            },
+            {
+              "keyword": "Power of 10",
+              "definition": "10 raised to an exponent.",
+              "simpleExample": "10 to the power 4 is 10,000."
+            },
+            {
+              "keyword": "Decimal point",
+              "definition": "The point separating whole and fractional parts.",
+              "simpleExample": "We move the decimal point to find the power."
+            }
+          ],
+          "quickSummary": "Standard form writes very large numbers as a number between 1 and 10 multiplied by a power of 10, like 59,000 = 5.9 x 10 to the power 4, making them easy to write and read.",
+          "revisionNotes": [
+            "Standard form = (1 to 10) x power of 10.",
+            "59,000 = 5.9 x 10^4.",
+            "Place decimal after first digit; count places.",
+            "Used in science for large numbers."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 14,
+      "chapter": "Symmetry",
+      "topics": [
+        {
+          "topicId": "math7_ch14_topic1",
+          "topic": "Line Symmetry",
+          "meaning": "A figure has line symmetry if a line divides it into two identical mirror-image halves.",
+          "ncertBasedExplanation": "A figure has line symmetry (or reflection symmetry) if there is a line that divides it into two parts that are mirror images of each other. This line is called the line of symmetry or axis of symmetry. If we fold the figure along this line, the two halves match exactly. A figure may have no line of symmetry, one, or many; for example, a rectangle has 2 lines of symmetry, an equilateral triangle has 3, a square has 4, and a circle has countless lines of symmetry. Many letters, shapes and objects in nature show line symmetry. Identifying lines of symmetry helps us understand balanced shapes.",
+          "easyExplanation": "A figure has line symmetry if a line splits it into two mirror-image halves that match when folded. A square has 4 lines of symmetry; a circle has countless.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "What line symmetry is",
+              "explanation": "A line divides the figure into two mirror-image halves."
+            },
+            {
+              "step": 2,
+              "title": "Line of symmetry",
+              "explanation": "This dividing line is the line of symmetry or axis of symmetry."
+            },
+            {
+              "step": 3,
+              "title": "Test by folding",
+              "explanation": "Folding along the line makes the two halves match exactly."
+            },
+            {
+              "step": 4,
+              "title": "Number of lines",
+              "explanation": "Rectangle has 2, equilateral triangle 3, square 4, circle countless."
+            }
+          ],
+          "examples": [
+            "The letter A has one vertical line of symmetry.",
+            "A square has four lines of symmetry."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Line of symmetry",
+              "definition": "A line dividing a figure into mirror-image halves.",
+              "simpleExample": "A butterfly has a line of symmetry."
+            },
+            {
+              "keyword": "Reflection symmetry",
+              "definition": "Another name for line symmetry.",
+              "simpleExample": "Reflection symmetry uses a mirror line."
+            },
+            {
+              "keyword": "Axis of symmetry",
+              "definition": "The line of symmetry of a figure.",
+              "simpleExample": "A square has four axes of symmetry."
+            }
+          ],
+          "quickSummary": "A figure has line symmetry if a line of symmetry divides it into two mirror-image halves that match when folded; shapes may have none, one or many lines.",
+          "revisionNotes": [
+            "Line symmetry: mirror-image halves about a line.",
+            "Line of symmetry = axis of symmetry.",
+            "Folding along it makes halves match.",
+            "Rectangle 2, triangle 3, square 4, circle countless."
+          ]
+        },
+        {
+          "topicId": "math7_ch14_topic2",
+          "topic": "Rotational Symmetry",
+          "meaning": "A figure has rotational symmetry if it looks the same after being turned by less than a full turn about a centre.",
+          "ncertBasedExplanation": "A figure has rotational symmetry if, when it is rotated (turned) about a fixed central point by some angle less than a full turn, it looks exactly the same as it did at the start. The fixed point is called the centre of rotation. The number of times the figure looks the same during one complete turn is called the order of rotational symmetry. For example, a square has rotational symmetry of order 4 because it looks the same after every quarter turn (90 degrees), and an equilateral triangle has order 3. Every figure looks the same after a full turn, but only figures with order 2 or more truly have rotational symmetry.",
+          "easyExplanation": "A figure has rotational symmetry if it looks the same after a partial turn about its centre. A square matches 4 times in a full turn (order 4).",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Turn about a centre",
+              "explanation": "Rotate the figure about a fixed point called the centre of rotation."
+            },
+            {
+              "step": 2,
+              "title": "Looks the same",
+              "explanation": "If it looks the same after a turn less than full, it has rotational symmetry."
+            },
+            {
+              "step": 3,
+              "title": "Order of symmetry",
+              "explanation": "The number of times it matches in one full turn is the order."
+            },
+            {
+              "step": 4,
+              "title": "Examples",
+              "explanation": "A square has order 4; an equilateral triangle has order 3."
+            }
+          ],
+          "examples": [
+            "A square looks the same after each 90-degree turn, so its order is 4.",
+            "An equilateral triangle has rotational symmetry of order 3."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Rotational symmetry",
+              "definition": "Looking the same after a partial turn.",
+              "simpleExample": "A square has rotational symmetry."
+            },
+            {
+              "keyword": "Centre of rotation",
+              "definition": "The fixed point a figure turns about.",
+              "simpleExample": "The centre of a square is its centre of rotation."
+            },
+            {
+              "keyword": "Order of symmetry",
+              "definition": "The number of matches in a full turn.",
+              "simpleExample": "A square has order 4."
+            }
+          ],
+          "quickSummary": "A figure has rotational symmetry if it looks the same after turning less than a full turn about its centre; the number of matches in a full turn is its order (square 4, triangle 3).",
+          "revisionNotes": [
+            "Rotational symmetry: same after a partial turn.",
+            "Turned about the centre of rotation.",
+            "Order = matches in one full turn.",
+            "Square order 4; equilateral triangle order 3."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 15,
+      "chapter": "Visualising Solid Shapes",
+      "topics": [
+        {
+          "topicId": "math7_ch15_topic1",
+          "topic": "Plane Figures and Solid Shapes",
+          "meaning": "Plane figures are two-dimensional (flat), while solid shapes are three-dimensional and occupy space.",
+          "ncertBasedExplanation": "Shapes are of two kinds. Plane figures are two-dimensional (2D); they have only length and breadth and lie flat, like squares, rectangles, triangles and circles. Solid shapes are three-dimensional (3D); they have length, breadth and height (or depth) and take up space, like cubes, cuboids, cylinders, cones, spheres and pyramids. Many everyday objects are solid shapes: a dice is a cube, a ball is a sphere, and a tin can is a cylinder. Understanding the difference between 2D and 3D shapes helps us describe and study the objects around us.",
+          "easyExplanation": "Plane figures are flat 2D shapes (square, circle); solid shapes are 3D and take up space (cube, sphere, cylinder). A dice is a cube, a ball is a sphere.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Plane figures",
+              "explanation": "Two-dimensional flat shapes with only length and breadth, like squares and circles."
+            },
+            {
+              "step": 2,
+              "title": "Solid shapes",
+              "explanation": "Three-dimensional shapes with length, breadth and height, like cubes and spheres."
+            },
+            {
+              "step": 3,
+              "title": "Everyday solids",
+              "explanation": "A dice is a cube, a ball a sphere, a tin a cylinder."
+            },
+            {
+              "step": 4,
+              "title": "Why it matters",
+              "explanation": "Knowing 2D and 3D shapes helps us describe objects around us."
+            }
+          ],
+          "examples": [
+            "A square is a 2D plane figure; a cube is a 3D solid shape.",
+            "A ball is a sphere and a tin can is a cylinder."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Plane figure",
+              "definition": "A flat 2D shape.",
+              "simpleExample": "A circle is a plane figure."
+            },
+            {
+              "keyword": "Solid shape",
+              "definition": "A 3D shape that takes up space.",
+              "simpleExample": "A cube is a solid shape."
+            },
+            {
+              "keyword": "Three-dimensional",
+              "definition": "Having length, breadth and height.",
+              "simpleExample": "A cuboid is three-dimensional."
+            }
+          ],
+          "quickSummary": "Plane figures are flat 2D shapes (square, circle) with length and breadth, while solid shapes are 3D (cube, sphere, cylinder) with length, breadth and height, taking up space.",
+          "revisionNotes": [
+            "Plane figures: flat 2D (square, circle).",
+            "Solid shapes: 3D (cube, sphere, cylinder).",
+            "Solids have length, breadth and height.",
+            "Dice = cube; ball = sphere; tin = cylinder."
+          ]
+        },
+        {
+          "topicId": "math7_ch15_topic2",
+          "topic": "Faces, Edges and Vertices",
+          "meaning": "Solid shapes are described by their faces (flat surfaces), edges (where faces meet) and vertices (corners).",
+          "ncertBasedExplanation": "Every solid shape can be described by counting three things: its faces, edges and vertices. A face is a flat (or curved) surface of the solid, an edge is the line segment where two faces meet, and a vertex is a corner point where edges meet. For example, a cube has 6 faces, 12 edges and 8 vertices, and a cuboid has the same counts. A cylinder has 2 flat faces and 1 curved face, while a cone has 1 flat face, 1 curved face and 1 vertex. Counting faces, edges and vertices helps us identify and compare different solid shapes.",
+          "easyExplanation": "Solids have faces (surfaces), edges (where faces meet) and vertices (corners). A cube has 6 faces, 12 edges and 8 vertices.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Face",
+              "explanation": "A face is a flat or curved surface of a solid."
+            },
+            {
+              "step": 2,
+              "title": "Edge",
+              "explanation": "An edge is the line where two faces meet."
+            },
+            {
+              "step": 3,
+              "title": "Vertex",
+              "explanation": "A vertex is a corner point where edges meet."
+            },
+            {
+              "step": 4,
+              "title": "Counting them",
+              "explanation": "A cube has 6 faces, 12 edges and 8 vertices; a cone has 1 vertex."
+            }
+          ],
+          "examples": [
+            "A cube has 6 faces, 12 edges and 8 vertices.",
+            "A cylinder has 2 flat faces and 1 curved face."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Face",
+              "definition": "A surface of a solid shape.",
+              "simpleExample": "A cube has 6 faces."
+            },
+            {
+              "keyword": "Edge",
+              "definition": "The line where two faces meet.",
+              "simpleExample": "A cube has 12 edges."
+            },
+            {
+              "keyword": "Vertex",
+              "definition": "A corner where edges meet.",
+              "simpleExample": "A cube has 8 vertices."
+            }
+          ],
+          "quickSummary": "Solid shapes are described by faces (surfaces), edges (where faces meet) and vertices (corners); for example, a cube has 6 faces, 12 edges and 8 vertices.",
+          "revisionNotes": [
+            "Face = surface; edge = where faces meet; vertex = corner.",
+            "Cube: 6 faces, 12 edges, 8 vertices.",
+            "Cylinder: 2 flat + 1 curved face.",
+            "Cone: 1 flat + 1 curved face, 1 vertex."
+          ]
+        },
+        {
+          "topicId": "math7_ch15_topic3",
+          "topic": "Nets and Views of Solids",
+          "meaning": "A net is a flat shape that folds into a solid, and solids can be viewed from the top, front and side.",
+          "ncertBasedExplanation": "We can understand solid shapes in two helpful ways. A net is a flat (2D) shape that can be folded to make a solid (3D) shape; for example, the net of a cube is made of six squares joined together, and a cylinder's net is two circles and a rectangle. We can also look at a solid from different directions: the top view, the front view and the side view each show a different flat shape of the same solid. These ideas help us connect 2D and 3D shapes, picture solids from a drawing, and are useful in design, model-making and reading plans.",
+          "easyExplanation": "A net is a flat shape that folds into a solid (six squares fold into a cube). Solids also have top, front and side views.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "What a net is",
+              "explanation": "A net is a flat shape that folds into a solid shape."
+            },
+            {
+              "step": 2,
+              "title": "Examples of nets",
+              "explanation": "A cube's net is six squares; a cylinder's net is two circles and a rectangle."
+            },
+            {
+              "step": 3,
+              "title": "Views of solids",
+              "explanation": "We can look at a solid from the top, the front and the side."
+            },
+            {
+              "step": 4,
+              "title": "Why it helps",
+              "explanation": "Nets and views connect 2D and 3D shapes and help in design and plans."
+            }
+          ],
+          "examples": [
+            "Six squares joined correctly fold into a cube.",
+            "The top, front and side views of a solid each show a different flat shape."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Net",
+              "definition": "A flat shape that folds into a solid.",
+              "simpleExample": "A cube's net is six squares."
+            },
+            {
+              "keyword": "View",
+              "definition": "How a solid looks from a direction.",
+              "simpleExample": "The top view of a cube is a square."
+            },
+            {
+              "keyword": "Solid shape",
+              "definition": "A 3D shape.",
+              "simpleExample": "A cuboid is a solid shape."
+            }
+          ],
+          "quickSummary": "A net is a flat shape that folds into a solid (six squares into a cube), and solids can be seen from the top, front and side views, connecting 2D and 3D shapes.",
+          "revisionNotes": [
+            "Net = flat shape that folds into a solid.",
+            "Cube net = six squares.",
+            "Solids have top, front and side views.",
+            "Nets and views connect 2D and 3D shapes."
+          ]
+        }
+      ]
+    }
+  ]
+}

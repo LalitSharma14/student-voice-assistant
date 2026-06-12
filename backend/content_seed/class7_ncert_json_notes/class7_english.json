@@ -1,0 +1,894 @@
+{
+  "class": 7,
+  "board": "CBSE",
+  "source": "NCERT",
+  "subject": "English",
+  "bookName": "Poorvi",
+  "chapters": [
+    {
+      "chapterNumber": 1,
+      "chapter": "Unit 1: Learning Together",
+      "topics": [
+        {
+          "topicId": "eng7_unit1_topic1",
+          "topic": "The Day the River Spoke (Prose)",
+          "meaning": "A story about Jahnavi, a girl in a coastal village who has a dream, in which nature, like a river, seems to speak to her.",
+          "ncertBasedExplanation": "This is a story about a bright young girl named Jahnavi who lives with her parents and three brothers in a coastal village in India, where her parents work on the farm. Jahnavi has a big dream. In the story, the world of nature around her, including a river, seems to come alive and speak to her, with sounds that splash, slither and murmur. Through this magical experience and her own determination, Jahnavi learns about following her dream and listening closely to the world around her. The story encourages us to have dreams, to work to make them come true, and to pay attention to nature.",
+          "easyExplanation": "Jahnavi, a girl in a coastal village, has a dream. In the story, nature and a river seem to speak to her, teaching her to follow her dream and listen to the world.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Meet Jahnavi",
+              "explanation": "Jahnavi is a bright girl in a coastal village whose parents work on the farm."
+            },
+            {
+              "step": 2,
+              "title": "She has a dream",
+              "explanation": "Jahnavi has a big dream she wants to make come true."
+            },
+            {
+              "step": 3,
+              "title": "Nature speaks",
+              "explanation": "In the story, the river and nature seem to come alive and speak to her."
+            },
+            {
+              "step": 4,
+              "title": "The lesson",
+              "explanation": "She learns to follow her dream and to listen closely to the world around her."
+            }
+          ],
+          "examples": [
+            "Jahnavi lives in a coastal village and dreams of a better future.",
+            "The river and nature seem to speak to Jahnavi in the story."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Dream",
+              "definition": "A hope or goal for the future.",
+              "simpleExample": "Jahnavi had a dream to fulfil."
+            },
+            {
+              "keyword": "Murmuring",
+              "definition": "Speaking in a low, soft voice.",
+              "simpleExample": "The river was murmuring softly."
+            },
+            {
+              "keyword": "Coastal",
+              "definition": "Near the sea coast.",
+              "simpleExample": "Jahnavi lived in a coastal village."
+            }
+          ],
+          "quickSummary": "'The Day the River Spoke' is a story about Jahnavi, a girl in a coastal village with a dream, in which nature and a river seem to speak to her, teaching her to follow her dream and listen to the world.",
+          "revisionNotes": [
+            "Genre: story (prose).",
+            "Main character: Jahnavi, a coastal village girl.",
+            "Nature and the river seem to speak to her.",
+            "Theme: dreams and listening to the world around us."
+          ]
+        },
+        {
+          "topicId": "eng7_unit1_topic2",
+          "topic": "Try Again (Poem)",
+          "meaning": "A poem about King Bruce of Scotland who learns the value of perseverance by watching a spider try again and again.",
+          "ncertBasedExplanation": "This well-loved poem tells the story of King Bruce of Scotland, who is feeling sad and discouraged because he has tried again and again to do a great deed for his people but has failed. As he sits in a lonely mood, he watches a little spider trying to climb up to its web. The spider falls many times but keeps trying, and at last it succeeds. Watching this, King Bruce takes heart and decides to try once more himself. The poem teaches the important lesson that we should never give up: if at first we do not succeed, we must 'try, try again'.",
+          "easyExplanation": "King Bruce of Scotland is sad after failing many times. Watching a spider keep trying until it succeeds, he learns never to give up: try, try again.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "King Bruce is sad",
+              "explanation": "King Bruce has failed many times in a great task and feels discouraged."
+            },
+            {
+              "step": 2,
+              "title": "He watches a spider",
+              "explanation": "He sees a little spider trying to climb up to its web."
+            },
+            {
+              "step": 3,
+              "title": "The spider succeeds",
+              "explanation": "The spider falls again and again but keeps trying until it succeeds."
+            },
+            {
+              "step": 4,
+              "title": "The lesson",
+              "explanation": "King Bruce learns to try again; we must never give up."
+            }
+          ],
+          "examples": [
+            "The spider falls many times but keeps trying until it succeeds.",
+            "The poem teaches us: if at first you don't succeed, try, try again."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Perseverance",
+              "definition": "Continuing to try in spite of difficulties.",
+              "simpleExample": "The spider showed perseverance."
+            },
+            {
+              "keyword": "Discouraged",
+              "definition": "Having lost confidence or hope.",
+              "simpleExample": "King Bruce felt discouraged after failing."
+            },
+            {
+              "keyword": "Succeed",
+              "definition": "To achieve what one is trying to do.",
+              "simpleExample": "The spider finally succeeded."
+            }
+          ],
+          "quickSummary": "'Try Again' is a poem in which King Bruce of Scotland, discouraged by failure, learns from a spider that keeps trying until it succeeds, teaching us never to give up.",
+          "revisionNotes": [
+            "Genre: poem.",
+            "King Bruce of Scotland learns from a spider.",
+            "The spider keeps trying until it succeeds.",
+            "Theme: perseverance; 'try, try again'."
+          ]
+        },
+        {
+          "topicId": "eng7_unit1_topic3",
+          "topic": "Three Days to See (Prose)",
+          "meaning": "An essay by Helen Keller, who was blind and deaf, about how precious our senses are and what she would wish to see in three days.",
+          "ncertBasedExplanation": "This is a moving essay by Helen Keller, who could neither see nor hear, yet led a remarkable life. In it, she explains how she finds hundreds of things to interest her through touch alone, feeling the delicate shape of a leaf and the smoothness of objects. She imagines what she would do if she were given just three days to see, describing the people, nature and beautiful things she would want to look at. Through this, she reminds those who can see and hear to value their senses and not take them for granted. The essay teaches us to appreciate the precious gifts of sight and our other senses, and to truly notice the beauty of the world.",
+          "easyExplanation": "Helen Keller, who was blind and deaf, writes about appreciating our senses. She imagines what she would see in three days, urging us to value sight and not take it for granted.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Helen Keller's world",
+              "explanation": "Helen Keller, who could not see or hear, found joy in the world through touch."
+            },
+            {
+              "step": 2,
+              "title": "Three days to see",
+              "explanation": "She imagines what she would look at if given just three days of sight."
+            },
+            {
+              "step": 3,
+              "title": "What she would see",
+              "explanation": "She describes the people, nature and beauty she would want to see."
+            },
+            {
+              "step": 4,
+              "title": "The lesson",
+              "explanation": "She urges those who can see and hear to value their senses and not take them for granted."
+            }
+          ],
+          "examples": [
+            "Helen Keller felt the delicate shape of a leaf through touch.",
+            "She reminds us to value our sight and other senses."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Senses",
+              "definition": "Sight, hearing, smell, taste and touch.",
+              "simpleExample": "Our five senses help us experience the world."
+            },
+            {
+              "keyword": "Appreciate",
+              "definition": "To value and be grateful for something.",
+              "simpleExample": "We should appreciate our senses."
+            },
+            {
+              "keyword": "Symmetry",
+              "definition": "Balanced, matching form.",
+              "simpleExample": "She felt the symmetry of a leaf."
+            }
+          ],
+          "quickSummary": "'Three Days to See' is an essay by Helen Keller, who was blind and deaf, about appreciating our senses; she imagines what she would see in three days, urging us to value sight and not take it for granted.",
+          "revisionNotes": [
+            "Genre: essay (prose). Author: Helen Keller.",
+            "She was blind and deaf but found joy through touch.",
+            "Imagines what she'd see in three days.",
+            "Theme: value your senses; don't take them for granted."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 2,
+      "chapter": "Unit 2: Wit and Humour",
+      "topics": [
+        {
+          "topicId": "eng7_unit2_topic1",
+          "topic": "Animals, Birds, and Dr. Dolittle (Prose)",
+          "meaning": "A story about Dr. Dolittle, a doctor who learns to talk to animals and understand their language.",
+          "ncertBasedExplanation": "This is a delightful story about Dr. Dolittle, a kind doctor who loves animals so much that he learns to talk to them and understand their language. By listening closely and observing their sounds and body language, he is able to communicate with all kinds of animals and birds, who become his friends and patients. The story is full of wit and humour and shows the special bond between humans and animals. It reminds us that if we observe animals carefully, we can understand a lot about what they are feeling and trying to tell us, and it encourages kindness towards all creatures.",
+          "easyExplanation": "Dr. Dolittle is a kind doctor who learns to talk to animals and understand their language. The funny story shows the bond between humans and animals.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Meet Dr. Dolittle",
+              "explanation": "Dr. Dolittle is a kind doctor who loves animals deeply."
+            },
+            {
+              "step": 2,
+              "title": "Talking to animals",
+              "explanation": "He learns to talk to animals and understand their language."
+            },
+            {
+              "step": 3,
+              "title": "Understanding them",
+              "explanation": "By observing their sounds and body language, he communicates with them."
+            },
+            {
+              "step": 4,
+              "title": "The message",
+              "explanation": "The story shows the bond between humans and animals and encourages kindness."
+            }
+          ],
+          "examples": [
+            "Dr. Dolittle learns to understand and talk to all kinds of animals.",
+            "By observing body language, we can understand what animals feel."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Communicate",
+              "definition": "To share thoughts or feelings.",
+              "simpleExample": "Dr. Dolittle could communicate with animals."
+            },
+            {
+              "keyword": "Body language",
+              "definition": "Showing feelings through movements.",
+              "simpleExample": "Animals show feelings through body language."
+            },
+            {
+              "keyword": "Wit",
+              "definition": "Clever and amusing expression.",
+              "simpleExample": "The story is full of wit and humour."
+            }
+          ],
+          "quickSummary": "'Animals, Birds, and Dr. Dolittle' is a witty story about a kind doctor who learns to talk to animals and understand their language, showing the special bond between humans and animals.",
+          "revisionNotes": [
+            "Genre: story (prose).",
+            "Dr. Dolittle talks to and understands animals.",
+            "He learns from their sounds and body language.",
+            "Theme: the bond between humans and animals; kindness."
+          ]
+        },
+        {
+          "topicId": "eng7_unit2_topic2",
+          "topic": "A Funny Man (Poem)",
+          "meaning": "A humorous nonsense poem about a funny man who does everything in a silly, topsy-turvy way.",
+          "ncertBasedExplanation": "This is a light, humorous poem that describes a funny man the speaker meets walking down the street. The man does everything in a silly, mixed-up way: he wears a shoe upon his head and hats upon his feet, and behaves in odd but polite ways, such as offering a rose in a strange manner. The whole poem is a piece of nonsense humour, meant simply to make us laugh with its funny, topsy-turvy images. It shows how playful language and silly ideas can be great fun, and it celebrates the lighter, funnier side of life.",
+          "easyExplanation": "A funny man does everything in a silly, mixed-up way, like wearing a shoe on his head and hats on his feet. The nonsense poem is just for fun and laughter.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "A funny man appears",
+              "explanation": "The speaker meets a funny man walking down the street."
+            },
+            {
+              "step": 2,
+              "title": "Everything mixed-up",
+              "explanation": "The man wears a shoe on his head and hats on his feet."
+            },
+            {
+              "step": 3,
+              "title": "Silly but polite",
+              "explanation": "He behaves in odd but polite ways, making funny sights."
+            },
+            {
+              "step": 4,
+              "title": "Just for fun",
+              "explanation": "The nonsense poem is meant simply to make us laugh."
+            }
+          ],
+          "examples": [
+            "The funny man wears a shoe on his head and hats on his feet.",
+            "The poem's silly images are meant to make us laugh."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Humour",
+              "definition": "The quality of being funny.",
+              "simpleExample": "The poem is full of humour."
+            },
+            {
+              "keyword": "Nonsense",
+              "definition": "Funny words or ideas that make no sense.",
+              "simpleExample": "A nonsense poem makes us laugh."
+            },
+            {
+              "keyword": "Topsy-turvy",
+              "definition": "Upside down or mixed-up.",
+              "simpleExample": "The funny man did everything topsy-turvy."
+            }
+          ],
+          "quickSummary": "'A Funny Man' is a humorous nonsense poem about a man who does everything in a silly, topsy-turvy way, like wearing a shoe on his head, meant simply to make us laugh.",
+          "revisionNotes": [
+            "Genre: humorous nonsense poem.",
+            "A funny man does everything mixed-up.",
+            "Shoe on his head, hats on his feet.",
+            "Theme: fun, humour and playful nonsense."
+          ]
+        },
+        {
+          "topicId": "eng7_unit2_topic3",
+          "topic": "Say the Right Thing (Prose)",
+          "meaning": "A lesson about the importance of being polite and courteous, and saying the right thing to others, especially to guests.",
+          "ncertBasedExplanation": "This lesson teaches us the importance of politeness and courtesy in our words and behaviour. It draws on the Indian idea of 'Atithi Devo Bhava', which means 'the guest is like God', and shows why we should treat guests and others with respect and warmth. It gives examples of polite behaviour, like offering guests water, asking about their well-being, and seeing them to the door, and contrasts these with rude behaviour. The lesson also discusses how to disagree politely with friends without being rude. It reminds us that saying the right thing in the right way, with kindness and good manners, makes everyone feel respected and keeps our relationships pleasant.",
+          "easyExplanation": "This lesson teaches politeness and courtesy, like the idea of 'Atithi Devo Bhava' (the guest is like God). Saying the right thing kindly makes everyone feel respected.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Politeness matters",
+              "explanation": "The lesson teaches the importance of politeness and courtesy."
+            },
+            {
+              "step": 2,
+              "title": "Atithi Devo Bhava",
+              "explanation": "It draws on the idea that 'the guest is like God', so guests are treated with warmth."
+            },
+            {
+              "step": 3,
+              "title": "Polite behaviour",
+              "explanation": "Examples include offering water, asking about well-being and seeing guests to the door."
+            },
+            {
+              "step": 4,
+              "title": "Disagreeing politely",
+              "explanation": "It also shows how to disagree with friends politely, without being rude."
+            }
+          ],
+          "examples": [
+            "Offering guests water and asking about their well-being is polite.",
+            "'Atithi Devo Bhava' means we should treat guests like God."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Polite",
+              "definition": "Showing good manners and respect.",
+              "simpleExample": "It is polite to greet guests warmly."
+            },
+            {
+              "keyword": "Courtesy",
+              "definition": "Polite behaviour towards others.",
+              "simpleExample": "We should treat everyone with courtesy."
+            },
+            {
+              "keyword": "Atithi Devo Bhava",
+              "definition": "The idea that the guest is like God.",
+              "simpleExample": "'Atithi Devo Bhava' teaches us to honour guests."
+            }
+          ],
+          "quickSummary": "'Say the Right Thing' teaches the importance of politeness and courtesy, drawing on 'Atithi Devo Bhava' (the guest is like God), and shows that saying the right thing kindly makes everyone feel respected.",
+          "revisionNotes": [
+            "Genre: lesson (prose).",
+            "Teaches politeness and courtesy.",
+            "'Atithi Devo Bhava' = the guest is like God.",
+            "Theme: good manners and saying the right thing kindly."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 3,
+      "chapter": "Unit 3: Dreams and Discoveries",
+      "topics": [
+        {
+          "topicId": "eng7_unit3_topic1",
+          "topic": "My Brother's Great Invention (Prose)",
+          "meaning": "A story about a young inventor and his invention, celebrating creativity, curiosity and the spirit of discovery.",
+          "ncertBasedExplanation": "This is a light and entertaining story about a brother who tries to create a 'great invention'. Through his attempts, with their successes and funny failures, the story celebrates the spirit of creativity, curiosity and inventiveness. It reminds us that inventors need qualities like imagination, patience and the willingness to keep trying. The lesson also points to great Indian contributions to the world, such as the concept of zero invented by ancient Indian mathematicians and the practice of yoga. It encourages young readers to be curious, to dream up new ideas, and not to fear failure, because every invention and discovery begins with an idea and the courage to try.",
+          "easyExplanation": "A story about a brother trying to make a great invention. It celebrates creativity, curiosity and not fearing failure, and mentions Indian inventions like zero and yoga.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "A young inventor",
+              "explanation": "The story is about a brother who tries to create a great invention."
+            },
+            {
+              "step": 2,
+              "title": "Tries and learns",
+              "explanation": "Through his successes and funny failures, the spirit of inventiveness is shown."
+            },
+            {
+              "step": 3,
+              "title": "Qualities of an inventor",
+              "explanation": "Inventors need imagination, patience and the willingness to keep trying."
+            },
+            {
+              "step": 4,
+              "title": "Indian contributions",
+              "explanation": "It mentions Indian gifts to the world, like the concept of zero and yoga."
+            }
+          ],
+          "examples": [
+            "The brother keeps trying to create his great invention.",
+            "Ancient Indian mathematicians invented the concept of zero."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Invention",
+              "definition": "Something new that is created.",
+              "simpleExample": "The wheel was a great invention."
+            },
+            {
+              "keyword": "Curiosity",
+              "definition": "A strong wish to learn or know.",
+              "simpleExample": "Curiosity drives inventors."
+            },
+            {
+              "keyword": "Creativity",
+              "definition": "The ability to create new ideas.",
+              "simpleExample": "Inventing needs creativity."
+            }
+          ],
+          "quickSummary": "'My Brother's Great Invention' is a story about a young inventor that celebrates creativity, curiosity and not fearing failure, and recalls Indian contributions like the concept of zero and yoga.",
+          "revisionNotes": [
+            "Genre: story (prose).",
+            "A brother tries to make a great invention.",
+            "Celebrates creativity, curiosity and trying.",
+            "Mentions Indian inventions: zero and yoga."
+          ]
+        },
+        {
+          "topicId": "eng7_unit3_topic2",
+          "topic": "Paper Boats (Poem)",
+          "meaning": "A poem by Rabindranath Tagore in which a child floats paper boats down a stream, hoping they reach someone far away.",
+          "ncertBasedExplanation": "This is a beautiful and imaginative poem by Rabindranath Tagore, spoken by a child. Every day the child floats little paper boats, one by one, down a running stream, writing his name and the name of his village on them in big black letters. He hopes that someone in some far-off land will find his boats and know who he is. He loads his boats with flowers and dreams that they will be carried safely to the shore in the night. The poem beautifully captures a child's imagination, innocence and hope, and the wish to connect with the wider world. It celebrates the dreams and gentle longings of childhood.",
+          "easyExplanation": "In this Tagore poem, a child floats paper boats down a stream, hoping someone far away will find them. It captures a child's imagination, innocence and hope.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Floating paper boats",
+              "explanation": "Each day the child floats paper boats down a running stream."
+            },
+            {
+              "step": 2,
+              "title": "Names on the boats",
+              "explanation": "He writes his name and his village's name on the boats."
+            },
+            {
+              "step": 3,
+              "title": "A hope to connect",
+              "explanation": "He hopes someone in a far-off land will find his boats."
+            },
+            {
+              "step": 4,
+              "title": "Childhood dreams",
+              "explanation": "He loads them with flowers and dreams they will reach the shore safely."
+            }
+          ],
+          "examples": [
+            "The child writes his name on the paper boats he floats.",
+            "He hopes someone far away will find his little boats."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Imagination",
+              "definition": "Forming pictures or ideas in the mind.",
+              "simpleExample": "The poem shows a child's imagination."
+            },
+            {
+              "keyword": "Stream",
+              "definition": "A small flowing river.",
+              "simpleExample": "The child floats boats on a stream."
+            },
+            {
+              "keyword": "Hope",
+              "definition": "A wish for something to happen.",
+              "simpleExample": "The child's boats carry his hope."
+            }
+          ],
+          "quickSummary": "'Paper Boats' by Rabindranath Tagore is a poem in which a child floats paper boats down a stream hoping someone far away finds them, capturing a child's imagination, innocence and hope.",
+          "revisionNotes": [
+            "Genre: poem. Poet: Rabindranath Tagore.",
+            "A child floats paper boats down a stream.",
+            "Writes his name, hopes someone far finds them.",
+            "Theme: childhood imagination, innocence and hope."
+          ]
+        },
+        {
+          "topicId": "eng7_unit3_topic3",
+          "topic": "North, South, East, West (Prose)",
+          "meaning": "An informative lesson about the different regions, states and rich diversity of India.",
+          "ncertBasedExplanation": "This lesson takes us on a journey across India, exploring its different regions, the north, south, east, west, north-east and centre, and the many states and union territories in each. It encourages students to learn about their own state and others, including their capitals, languages, rivers, foods and tourist attractions. Through this, the lesson shows the great geographical and cultural diversity of India, where each region has its own special features yet all are part of one country. It helps us appreciate how varied and beautiful India is and develops our knowledge of the geography and culture of our nation.",
+          "easyExplanation": "This lesson explores India's regions, states and union territories from north to south, showing the country's great geographical and cultural diversity.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "A journey across India",
+              "explanation": "The lesson explores India's regions: north, south, east, west, north-east and centre."
+            },
+            {
+              "step": 2,
+              "title": "States and details",
+              "explanation": "It encourages learning each state's capital, language, rivers, food and attractions."
+            },
+            {
+              "step": 3,
+              "title": "Great diversity",
+              "explanation": "It shows the geographical and cultural diversity of India's regions."
+            },
+            {
+              "step": 4,
+              "title": "One country",
+              "explanation": "Each region is special, yet all are part of one country."
+            }
+          ],
+          "examples": [
+            "Each Indian state has its own capital, language, food and rivers.",
+            "India's regions, from north to south, show great diversity."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Region",
+              "definition": "A part of a country.",
+              "simpleExample": "The north is a region of India."
+            },
+            {
+              "keyword": "State",
+              "definition": "A division of the country with its own government.",
+              "simpleExample": "Each state has a capital."
+            },
+            {
+              "keyword": "Diversity",
+              "definition": "A great variety.",
+              "simpleExample": "India has great cultural diversity."
+            }
+          ],
+          "quickSummary": "'North, South, East, West' is an informative lesson exploring India's regions, states and union territories, showing the country's great geographical and cultural diversity.",
+          "revisionNotes": [
+            "Genre: informative lesson (prose).",
+            "Explores India's regions and states.",
+            "Each has its own capital, language, food, rivers.",
+            "Theme: India's geographical and cultural diversity."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 4,
+      "chapter": "Unit 4: Travel and Adventure",
+      "topics": [
+        {
+          "topicId": "eng7_unit4_topic1",
+          "topic": "The Tunnel (Prose)",
+          "meaning": "An adventure story about exploring and the courage and curiosity that adventures bring out in us.",
+          "ncertBasedExplanation": "This is an exciting adventure story centred on a tunnel and the thrill of exploring the unknown. In the story, the characters set out to explore, and the tunnel becomes a place of mystery and adventure that tests their courage and curiosity. As the events unfold, they experience excitement, a little fear, and the joy of discovery. The story shows the spirit of adventure, the urge to explore new places, and the courage needed to face the unknown. It encourages readers to be curious and brave, to enjoy exploring the world around them, while also being careful and sensible.",
+          "easyExplanation": "An adventure story about exploring a tunnel, full of mystery and excitement. It shows the courage and curiosity that adventures bring out in us.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "An adventure",
+              "explanation": "The story is about exploring, centred on a mysterious tunnel."
+            },
+            {
+              "step": 2,
+              "title": "A test of courage",
+              "explanation": "The tunnel tests the characters' courage and curiosity."
+            },
+            {
+              "step": 3,
+              "title": "Excitement and discovery",
+              "explanation": "They feel excitement, some fear, and the joy of discovery."
+            },
+            {
+              "step": 4,
+              "title": "The spirit of adventure",
+              "explanation": "The story shows the urge to explore and the courage to face the unknown."
+            }
+          ],
+          "examples": [
+            "The characters explore a mysterious tunnel in the story.",
+            "Exploring the unknown tests their courage and curiosity."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Adventure",
+              "definition": "An exciting and risky experience.",
+              "simpleExample": "Exploring the tunnel was an adventure."
+            },
+            {
+              "keyword": "Explore",
+              "definition": "To travel and discover new places.",
+              "simpleExample": "They set out to explore."
+            },
+            {
+              "keyword": "Courage",
+              "definition": "Bravery in facing difficulty or fear.",
+              "simpleExample": "It took courage to enter the tunnel."
+            }
+          ],
+          "quickSummary": "'The Tunnel' is an adventure story about exploring a mysterious tunnel, full of excitement and a little fear, showing the courage and curiosity that adventures bring out in us.",
+          "revisionNotes": [
+            "Genre: adventure story (prose).",
+            "Centred on exploring a mysterious tunnel.",
+            "Tests courage and curiosity.",
+            "Theme: the spirit of adventure and exploration."
+          ]
+        },
+        {
+          "topicId": "eng7_unit4_topic2",
+          "topic": "Travel (Poem)",
+          "meaning": "A poem by Robert Louis Stevenson in which a child dreams of travelling to wonderful, faraway places around the world.",
+          "ncertBasedExplanation": "This is a lively poem by Robert Louis Stevenson, spoken by a child who longs to travel to exciting, faraway places. In his imagination, the child dreams of distant lands, where there are apes and parrots, hot deserts, great cities, and many wonderful and exotic sights. He imagines all the amazing places he would like to visit one day. The poem beautifully captures a child's sense of wonder, curiosity and longing to explore the wide world. It celebrates the joy of imagination and the dream of travel and adventure that many of us feel.",
+          "easyExplanation": "In this poem by Robert Louis Stevenson, a child dreams of travelling to wonderful faraway places, full of apes, parrots and great cities. It celebrates wonder and the longing to explore.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "A child dreams of travel",
+              "explanation": "The child longs to travel to exciting, faraway places."
+            },
+            {
+              "step": 2,
+              "title": "Faraway lands",
+              "explanation": "He imagines distant lands with apes, parrots, deserts and great cities."
+            },
+            {
+              "step": 3,
+              "title": "Wonderful sights",
+              "explanation": "He dreams of all the amazing and exotic places he would like to visit."
+            },
+            {
+              "step": 4,
+              "title": "Wonder and longing",
+              "explanation": "The poem captures a child's wonder, curiosity and longing to explore."
+            }
+          ],
+          "examples": [
+            "The child dreams of distant lands with apes and parrots.",
+            "The poem celebrates the longing to travel and explore the world."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Travel",
+              "definition": "To journey to different places.",
+              "simpleExample": "The child dreams of travel."
+            },
+            {
+              "keyword": "Exotic",
+              "definition": "Strange and exciting from a faraway place.",
+              "simpleExample": "He imagines exotic lands."
+            },
+            {
+              "keyword": "Wonder",
+              "definition": "A feeling of amazement.",
+              "simpleExample": "The poem is full of wonder."
+            }
+          ],
+          "quickSummary": "'Travel' by Robert Louis Stevenson is a poem in which a child dreams of travelling to wonderful, faraway places full of apes, parrots and great cities, celebrating wonder and the longing to explore.",
+          "revisionNotes": [
+            "Genre: poem. Poet: Robert Louis Stevenson.",
+            "A child dreams of travelling to faraway places.",
+            "Imagines apes, parrots, deserts, great cities.",
+            "Theme: wonder and the longing to explore."
+          ]
+        },
+        {
+          "topicId": "eng7_unit4_topic3",
+          "topic": "Conquering the Summit (Prose)",
+          "meaning": "An inspiring true story of Arunima Sinha, who, despite losing a leg, became the first female amputee to climb Mount Everest.",
+          "ncertBasedExplanation": "This is an inspiring true story about Arunima Sinha and her remarkable journey of will, courage, determination and dedication. After a tragic accident in which she lost a leg, Arunima refused to give up on her dreams. With great determination and hard work, she trained hard and went on to become the first female amputee in the world to climb Mount Everest, the highest mountain on Earth. The story describes the qualities needed by a mountaineer, courage, fitness, determination and never giving up, and shows how Arunima overcame enormous difficulties. Her story is a powerful example of how a strong will can help a person conquer any challenge.",
+          "easyExplanation": "Arunima Sinha lost a leg in an accident but refused to give up. Through determination, she became the first female amputee to climb Mount Everest. Her story inspires us never to give up.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "A tragic accident",
+              "explanation": "Arunima Sinha lost a leg in an accident but refused to give up on her dreams."
+            },
+            {
+              "step": 2,
+              "title": "Great determination",
+              "explanation": "With determination and hard training, she set out to achieve a great goal."
+            },
+            {
+              "step": 3,
+              "title": "Climbing Everest",
+              "explanation": "She became the first female amputee to climb Mount Everest."
+            },
+            {
+              "step": 4,
+              "title": "An inspiration",
+              "explanation": "Her story shows that a strong will can conquer any challenge."
+            }
+          ],
+          "examples": [
+            "Arunima Sinha climbed Mount Everest despite losing a leg.",
+            "Her story shows that determination can overcome any difficulty."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Determination",
+              "definition": "Firmness of purpose; not giving up.",
+              "simpleExample": "Arunima's determination took her to the summit."
+            },
+            {
+              "keyword": "Amputee",
+              "definition": "A person who has lost a limb.",
+              "simpleExample": "Arunima was the first female amputee to climb Everest."
+            },
+            {
+              "keyword": "Summit",
+              "definition": "The highest point of a mountain.",
+              "simpleExample": "She reached the summit of Everest."
+            }
+          ],
+          "quickSummary": "'Conquering the Summit' is the inspiring true story of Arunima Sinha, who, despite losing a leg, became the first female amputee to climb Mount Everest, showing that a strong will conquers any challenge.",
+          "revisionNotes": [
+            "Genre: biographical prose (true story).",
+            "Subject: Arunima Sinha.",
+            "Lost a leg but climbed Mount Everest (first female amputee).",
+            "Theme: determination, courage, never giving up."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 5,
+      "chapter": "Unit 5: Bravehearts",
+      "topics": [
+        {
+          "topicId": "eng7_unit5_topic1",
+          "topic": "A Homage to Our Brave Soldiers (Prose)",
+          "meaning": "A lesson, in the form of letters between two friends, paying tribute to the brave soldiers who protect the country.",
+          "ncertBasedExplanation": "This lesson, written as an exchange of letters between two friends, pays homage (respectful tribute) to the brave soldiers who protect our country. One friend shares her experience of visiting the National War Memorial in New Delhi, which left a deep impact on her. Through their letters, the friends express their feelings of gratitude and respect for the soldiers who guard the borders and make great sacrifices, sometimes giving their lives, for the safety of the nation. The lesson encourages us to remember and honour the sacrifices of our soldiers, for example by visiting war memorials, and to feel grateful for the freedom and security they protect.",
+          "easyExplanation": "Written as letters between two friends, this lesson pays tribute to brave soldiers. One friend visits the National War Memorial, and both express gratitude for the soldiers' sacrifices.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Letters of tribute",
+              "explanation": "The lesson is an exchange of letters paying homage to brave soldiers."
+            },
+            {
+              "step": 2,
+              "title": "The War Memorial",
+              "explanation": "One friend shares her visit to the National War Memorial, which moved her deeply."
+            },
+            {
+              "step": 3,
+              "title": "Gratitude",
+              "explanation": "The friends express gratitude and respect for the soldiers' sacrifices."
+            },
+            {
+              "step": 4,
+              "title": "Remember and honour",
+              "explanation": "The lesson encourages us to honour soldiers, for example by visiting war memorials."
+            }
+          ],
+          "examples": [
+            "A friend visits the National War Memorial and is deeply moved.",
+            "The friends express their gratitude for the soldiers' sacrifices."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Homage",
+              "definition": "Special honour or respect shown publicly.",
+              "simpleExample": "We pay homage to brave soldiers."
+            },
+            {
+              "keyword": "Sacrifice",
+              "definition": "Giving up something precious for others.",
+              "simpleExample": "Soldiers make great sacrifices."
+            },
+            {
+              "keyword": "Gratitude",
+              "definition": "A feeling of being thankful.",
+              "simpleExample": "We feel gratitude towards our soldiers."
+            }
+          ],
+          "quickSummary": "'A Homage to Our Brave Soldiers' is a lesson in the form of letters paying tribute to brave soldiers; it describes a visit to the National War Memorial and expresses gratitude for the soldiers' sacrifices.",
+          "revisionNotes": [
+            "Genre: lesson in letters (prose).",
+            "Pays tribute to brave soldiers.",
+            "Visit to the National War Memorial.",
+            "Theme: gratitude for soldiers' sacrifices."
+          ]
+        },
+        {
+          "topicId": "eng7_unit5_topic2",
+          "topic": "My Dear Soldiers (Poem)",
+          "meaning": "A patriotic poem that praises and thanks the brave soldiers who guard the country's borders day and night.",
+          "ncertBasedExplanation": "This is a heartfelt patriotic poem addressed to the soldiers who defend our country's borders. The poem calls them the 'great sons of my land' and describes how, while everyone else is asleep, the soldiers stay awake, guarding the borders in every kind of weather, windy seasons, snowy days, and the scorching sun. It compares them to yogis as they tread lonely, difficult places, climbing heights and crossing valleys to defend the nation. Through these images, the poem expresses deep respect, gratitude and admiration for the courage, sacrifice and tireless dedication of our soldiers, who keep the country safe so that the rest of us can live in peace.",
+          "easyExplanation": "This patriotic poem thanks and praises the soldiers who guard the country's borders day and night in all weather, calling them the great sons of the land.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Addressed to soldiers",
+              "explanation": "The poem speaks to the soldiers who defend the country's borders."
+            },
+            {
+              "step": 2,
+              "title": "Always awake",
+              "explanation": "While everyone sleeps, the soldiers stay awake guarding the borders."
+            },
+            {
+              "step": 3,
+              "title": "In all weather",
+              "explanation": "They guard in windy, snowy and scorching weather, in lonely, difficult places."
+            },
+            {
+              "step": 4,
+              "title": "Respect and gratitude",
+              "explanation": "The poem expresses deep respect and gratitude for their courage and sacrifice."
+            }
+          ],
+          "examples": [
+            "The soldiers stay awake guarding the borders while everyone sleeps.",
+            "The poem calls the soldiers the 'great sons of my land'."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Defender",
+              "definition": "One who protects or guards.",
+              "simpleExample": "Soldiers are the defenders of our borders."
+            },
+            {
+              "keyword": "Border",
+              "definition": "The edge of a country.",
+              "simpleExample": "Soldiers guard the country's borders."
+            },
+            {
+              "keyword": "Patriotic",
+              "definition": "Showing love for one's country.",
+              "simpleExample": "It is a patriotic poem."
+            }
+          ],
+          "quickSummary": "'My Dear Soldiers' is a patriotic poem that praises and thanks the brave soldiers who guard the country's borders day and night in all weather, expressing deep respect for their sacrifice.",
+          "revisionNotes": [
+            "Genre: patriotic poem.",
+            "Addressed to soldiers guarding the borders.",
+            "They stay awake in all weather to protect us.",
+            "Theme: respect and gratitude for soldiers."
+          ]
+        },
+        {
+          "topicId": "eng7_unit5_topic3",
+          "topic": "Rani Abbakka (Prose)",
+          "meaning": "The story of Rani Abbakka, a brave Indian queen who courageously fought to defend her kingdom and her motherland.",
+          "ncertBasedExplanation": "This lesson tells the inspiring story of Rani Abbakka, a brave queen of southern India who fought courageously to defend her kingdom and her people. She is remembered as a fearless warrior who fought, sword in hand, to protect her country and her rights, even against powerful foreign invaders (the Portuguese). The lesson describes her courage, leadership and determination, and how she died defending her beloved motherland. Rani Abbakka is celebrated as one of India's brave women warriors and unsung heroes. Her story encourages us to value courage, patriotism and the contribution of women in India's history, and to remember those who fought for the country's freedom.",
+          "easyExplanation": "Rani Abbakka was a brave Indian queen who fought courageously, sword in hand, to defend her kingdom against foreign invaders. She is celebrated as a fearless woman warrior.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "A brave queen",
+              "explanation": "Rani Abbakka was a brave queen of southern India who defended her kingdom."
+            },
+            {
+              "step": 2,
+              "title": "A fearless warrior",
+              "explanation": "She fought, sword in hand, to protect her country and her rights."
+            },
+            {
+              "step": 3,
+              "title": "Against invaders",
+              "explanation": "She bravely fought powerful foreign invaders (the Portuguese)."
+            },
+            {
+              "step": 4,
+              "title": "Remembered with honour",
+              "explanation": "She died defending her motherland and is celebrated as a brave woman warrior."
+            }
+          ],
+          "examples": [
+            "Rani Abbakka fought with a sword to defend her kingdom.",
+            "She is remembered as one of India's brave women warriors."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Warrior",
+              "definition": "A brave fighter.",
+              "simpleExample": "Rani Abbakka was a fearless warrior."
+            },
+            {
+              "keyword": "Motherland",
+              "definition": "One's native country.",
+              "simpleExample": "She died defending her motherland."
+            },
+            {
+              "keyword": "Courage",
+              "definition": "Bravery in facing danger.",
+              "simpleExample": "Rani Abbakka showed great courage."
+            }
+          ],
+          "quickSummary": "'Rani Abbakka' tells the story of a brave Indian queen who fought courageously, sword in hand, to defend her kingdom against foreign invaders and is celebrated as a fearless woman warrior.",
+          "revisionNotes": [
+            "Genre: biographical/historical prose.",
+            "Subject: Rani Abbakka, a brave queen.",
+            "Fought to defend her kingdom against invaders.",
+            "Theme: courage, patriotism, women warriors."
+          ]
+        }
+      ]
+    }
+  ]
+}

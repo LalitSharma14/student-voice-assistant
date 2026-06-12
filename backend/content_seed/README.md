@@ -6,14 +6,18 @@ Current seed:
 
 - `class_5_cbse_all_subjects.json`
 - `class_6_cbse_all_subjects.json`
+- `class_7_cbse_all_subjects.json`
 - Board: CBSE
 - Class 5 subjects: EVS, Maths, English, Hindi, Art Education
 - Class 6 subjects: Maths, Science, Social Science, English, Hindi
+- Class 7 subjects: English, Maths, Sanskrit, Science, Social Science
 - Class 5 topics: 121 total topic documents generated from the reviewed NCERT JSON note files in `class5_ncert_json_notes`
 - Class 6 topics: 243 total topic documents. Maths, Science, Social Science, and English are generated from the detailed JSON files in `class6_teacher_style_json_v1`; Hindi is preserved from the existing Class 6 syllabus until a detailed Hindi JSON is added.
+- Class 7 topics: 176 total topic documents generated from the reviewed NCERT JSON note files in `class7_ncert_json_notes`.
 
 The older `class_5_cbse_science.json` file is kept only as an early demo seed. The active Class 5 seed is generated from `class5_evs.json`, `class5_mathematics.json`, `class5_english.json`, `class5_hindi.json`, and `class5_art.json` in `class5_ncert_json_notes` using `generate_class_5_cbse_all_subjects.py`.
 The Class 6 seed is generated from `generate_class_6_cbse_all_subjects.py`.
+The Class 7 seed is generated from `generate_class_7_cbse_all_subjects.py`.
 
 ## Firestore Location
 
@@ -132,6 +136,20 @@ Then run:
 
 ```cmd
 python backend\content_seed\generate_class_6_cbse_all_subjects.py
+```
+
+## Regenerate The Full Class 7 Seed
+
+If the Class 7 NCERT JSON notes change, update the files in:
+
+```text
+backend/content_seed/class7_ncert_json_notes
+```
+
+Then run:
+
+```cmd
+python backend\content_seed\generate_class_7_cbse_all_subjects.py
 ```
 
 ## Frontend Behavior

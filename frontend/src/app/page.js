@@ -1848,7 +1848,7 @@ ${latestAnswer}`;
             {!selectedSubject && (
               <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "12px" }}>
                 {Object.keys(currentSyllabus).map((subject) => {
-                  const icons = { EVS: "🌱", Maths: "➗", English: "📘", Hindi: "📕", "Art Education": "🎨" };
+                  const icons = { EVS: "🌱", Maths: "➗", English: "📘", Hindi: "📕", Sanskrit: "📜", Science: "🔬", "Social Science": "🌍", "Art Education": "🎨" };
                   const sp    = getSubjectProgress(subject);
                   return (
                     <button key={subject} onClick={() => { setSelectedSubject(subject); setSelectedChapter(null); }} style={{ padding: "20px 14px", borderRadius: "16px", border: `1.5px solid ${B.gray200}`, background: B.white, cursor: "pointer", textAlign: "center", transition: "all 0.2s", boxShadow: "0 2px 8px rgba(43,88,136,0.04)" }}>

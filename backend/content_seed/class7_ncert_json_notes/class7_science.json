@@ -1,0 +1,2309 @@
+{
+  "class": 7,
+  "board": "CBSE",
+  "source": "NCERT",
+  "subject": "Science",
+  "bookName": "Curiosity",
+  "chapters": [
+    {
+      "chapterNumber": 1,
+      "chapter": "The Ever-Evolving World of Science",
+      "topics": [
+        {
+          "topicId": "sci7_ch1_topic1",
+          "topic": "The Nature of Science and Scientific Exploration",
+          "meaning": "Science is a way of exploring and understanding the world by observing, questioning, experimenting and reasoning.",
+          "ncertBasedExplanation": "Science is not just a collection of facts; it is a way of thinking and exploring the world around us. Scientists observe things, ask questions, make guesses (hypotheses), test them through experiments, and draw conclusions. This careful, step-by-step process is called the scientific method. Curiosity and keen observation are the starting points of science. By exploring the natural world in this way, we keep discovering new things and finding answers to our questions, which makes science an exciting and never-ending journey.",
+          "easyExplanation": "Science is a way of exploring the world: observe, ask questions, guess, test and conclude. Curiosity is where it all begins.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Science is exploration",
+              "explanation": "Science is a way of exploring and understanding the world, not just facts."
+            },
+            {
+              "step": 2,
+              "title": "Observe and question",
+              "explanation": "Scientists observe carefully and ask questions about what they see."
+            },
+            {
+              "step": 3,
+              "title": "Test ideas",
+              "explanation": "They make guesses (hypotheses) and test them through experiments."
+            },
+            {
+              "step": 4,
+              "title": "Draw conclusions",
+              "explanation": "From the results they draw conclusions and discover new things."
+            }
+          ],
+          "examples": [
+            "Wondering why ice melts and testing it is a scientific exploration.",
+            "Observing that plants bend towards light and asking why is doing science."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Science",
+              "definition": "A way of exploring and understanding the natural world.",
+              "simpleExample": "Studying why the sky is blue is science."
+            },
+            {
+              "keyword": "Observation",
+              "definition": "Carefully noticing things using our senses.",
+              "simpleExample": "Noticing that ice floats is an observation."
+            },
+            {
+              "keyword": "Hypothesis",
+              "definition": "A guess that can be tested.",
+              "simpleExample": "Guessing a plant grew taller due to sunlight is a hypothesis."
+            }
+          ],
+          "quickSummary": "Science is a way of exploring the world by observing, questioning, experimenting and reasoning; curiosity and observation start the never-ending journey of discovery.",
+          "revisionNotes": [
+            "Science = a way of exploring the world.",
+            "Steps: observe, question, guess, test, conclude.",
+            "Curiosity and observation start science.",
+            "Science keeps evolving with new discoveries."
+          ]
+        },
+        {
+          "topicId": "sci7_ch1_topic2",
+          "topic": "How Science Evolves",
+          "meaning": "Scientific knowledge is ever-evolving, as new evidence and ideas improve or change what we know.",
+          "ncertBasedExplanation": "Science is described as 'ever-evolving' because our understanding keeps growing and changing. As scientists make new observations and experiments, they gather new evidence that can support, improve or even replace older ideas. Many things we know today were discovered by building on the work of earlier scientists, and our knowledge will keep improving in the future. This shows that science is open to change and correction, and that being curious, questioning and willing to learn are very important. Scientists across the world also work together to advance knowledge.",
+          "easyExplanation": "Science keeps evolving: new evidence improves or changes old ideas. Scientists build on each other's work, and our knowledge keeps growing.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Knowledge grows",
+              "explanation": "Our scientific understanding keeps growing and changing over time."
+            },
+            {
+              "step": 2,
+              "title": "New evidence",
+              "explanation": "New observations and experiments give evidence that can change older ideas."
+            },
+            {
+              "step": 3,
+              "title": "Building on others",
+              "explanation": "Scientists build on the work of earlier scientists."
+            },
+            {
+              "step": 4,
+              "title": "Open to change",
+              "explanation": "Science is open to correction, so questioning and learning are important."
+            }
+          ],
+          "examples": [
+            "Ideas about the solar system improved as better telescopes were invented.",
+            "New evidence can replace an old scientific idea with a better one."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Evidence",
+              "definition": "Facts or information that support an idea.",
+              "simpleExample": "Experiments give us evidence."
+            },
+            {
+              "keyword": "Evolve",
+              "definition": "To develop and change gradually.",
+              "simpleExample": "Scientific ideas evolve over time."
+            },
+            {
+              "keyword": "Discovery",
+              "definition": "Finding out something new.",
+              "simpleExample": "A discovery can change what we know."
+            }
+          ],
+          "quickSummary": "Science is ever-evolving: new evidence and ideas improve or replace older knowledge, scientists build on each other's work, and our understanding keeps growing.",
+          "revisionNotes": [
+            "Science is ever-evolving.",
+            "New evidence can change old ideas.",
+            "Scientists build on earlier work.",
+            "Science is open to questioning and correction."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 2,
+      "chapter": "Exploring Substances: Acidic, Basic, and Neutral",
+      "topics": [
+        {
+          "topicId": "sci7_ch2_topic1",
+          "topic": "Acidic, Basic and Neutral Substances",
+          "meaning": "Substances can be acidic, basic or neutral depending on their properties; acids taste sour and bases taste bitter.",
+          "ncertBasedExplanation": "Many substances around us can be grouped as acidic, basic or neutral. Acidic substances usually taste sour, like lemon juice, vinegar and tamarind. Basic substances usually taste bitter and feel soapy, like baking soda solution and soap. Neutral substances are neither acidic nor basic, like pure water and common salt solution. We should never taste unknown substances to test them, as many are harmful; instead we use indicators. Knowing whether a substance is acidic, basic or neutral helps us understand how it behaves and use it safely.",
+          "easyExplanation": "Substances are acidic (sour, like lemon), basic (bitter and soapy, like soap), or neutral (like water). We never taste unknown substances to test them.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Three groups",
+              "explanation": "Substances can be acidic, basic or neutral."
+            },
+            {
+              "step": 2,
+              "title": "Acids",
+              "explanation": "Acidic substances taste sour, like lemon juice, vinegar and tamarind."
+            },
+            {
+              "step": 3,
+              "title": "Bases",
+              "explanation": "Basic substances taste bitter and feel soapy, like baking soda and soap."
+            },
+            {
+              "step": 4,
+              "title": "Neutral and safety",
+              "explanation": "Neutral substances like water are neither; never taste unknown substances, use indicators instead."
+            }
+          ],
+          "examples": [
+            "Lemon juice and vinegar are acidic substances.",
+            "Baking soda solution and soap are basic substances."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Acid",
+              "definition": "A substance that is sour and turns blue litmus red.",
+              "simpleExample": "Lemon juice contains an acid."
+            },
+            {
+              "keyword": "Base",
+              "definition": "A substance that is bitter, soapy and turns red litmus blue.",
+              "simpleExample": "Soap is a base."
+            },
+            {
+              "keyword": "Neutral",
+              "definition": "Neither acidic nor basic.",
+              "simpleExample": "Pure water is neutral."
+            }
+          ],
+          "quickSummary": "Substances are acidic (sour, like lemon), basic (bitter and soapy, like soap) or neutral (like water); we never taste unknown substances and use indicators to test them.",
+          "revisionNotes": [
+            "Acidic = sour (lemon, vinegar).",
+            "Basic = bitter, soapy (soap, baking soda).",
+            "Neutral = neither (water, salt solution).",
+            "Never taste unknowns; use indicators."
+          ]
+        },
+        {
+          "topicId": "sci7_ch2_topic2",
+          "topic": "Natural Indicators",
+          "meaning": "Indicators are substances that change colour to show whether a substance is acidic or basic; many come from nature.",
+          "ncertBasedExplanation": "An indicator is a substance that tells us whether something is acidic or basic by changing its colour. The most common is litmus, which turns red in acids and blue in bases. Many indicators come from nature: turmeric stays yellow in acids but turns red in bases, and the China rose (red rose) extract turns acids pink/magenta and bases green. We use indicators by adding a drop of the substance or dipping indicator paper and watching the colour change. Indicators are a safe and easy way to test substances without tasting them.",
+          "easyExplanation": "Indicators change colour to show acids and bases. Litmus turns red in acid, blue in base; turmeric turns red in bases; rose extract changes colour too.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "What an indicator is",
+              "explanation": "An indicator changes colour to show if a substance is acidic or basic."
+            },
+            {
+              "step": 2,
+              "title": "Litmus",
+              "explanation": "Litmus turns red in acids and blue in bases."
+            },
+            {
+              "step": 3,
+              "title": "Turmeric",
+              "explanation": "Turmeric stays yellow in acids but turns red in bases."
+            },
+            {
+              "step": 4,
+              "title": "China rose",
+              "explanation": "China rose extract turns acids pink and bases green."
+            }
+          ],
+          "examples": [
+            "Blue litmus turns red when dipped in lemon juice (an acid).",
+            "Turmeric on soap (a base) turns red."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Indicator",
+              "definition": "A substance that changes colour in acids or bases.",
+              "simpleExample": "Litmus is an indicator."
+            },
+            {
+              "keyword": "Litmus",
+              "definition": "A natural indicator that is red in acids and blue in bases.",
+              "simpleExample": "Litmus paper tests acids and bases."
+            },
+            {
+              "keyword": "Natural indicator",
+              "definition": "An indicator obtained from nature.",
+              "simpleExample": "Turmeric is a natural indicator."
+            }
+          ],
+          "quickSummary": "Indicators change colour to show acids and bases; litmus turns red in acids and blue in bases, while natural indicators like turmeric and China rose also change colour.",
+          "revisionNotes": [
+            "Indicators change colour for acids/bases.",
+            "Litmus: red in acid, blue in base.",
+            "Turmeric: yellow in acid, red in base.",
+            "China rose: pink in acid, green in base."
+          ]
+        },
+        {
+          "topicId": "sci7_ch2_topic3",
+          "topic": "Neutralisation and its Uses",
+          "meaning": "Neutralisation is the reaction between an acid and a base that produces a neutral substance, releasing heat.",
+          "ncertBasedExplanation": "When an acid and a base are mixed in the right amounts, they react and cancel out each other's effects, forming a neutral substance (salt and water). This reaction is called neutralisation, and it usually releases heat. Neutralisation is useful in daily life. For example, when we have acidity (too much acid) in the stomach, we take a mild base called an antacid to neutralise it; farmers add lime (a base) to neutralise acidic soil; and a basic substance is used to soothe an ant or bee sting which is acidic. Neutralisation helps us deal with harmful acids and bases safely.",
+          "easyExplanation": "When an acid and a base mix, they cancel each other out, forming a neutral substance. This neutralisation is used in antacids, treating soil and soothing stings.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Acid meets base",
+              "explanation": "When an acid and a base are mixed in the right amounts, they react."
+            },
+            {
+              "step": 2,
+              "title": "They neutralise",
+              "explanation": "They cancel each other's effects, forming a neutral substance (salt and water), releasing heat."
+            },
+            {
+              "step": 3,
+              "title": "In the body and soil",
+              "explanation": "Antacids neutralise stomach acidity; lime neutralises acidic soil."
+            },
+            {
+              "step": 4,
+              "title": "Treating stings",
+              "explanation": "A basic substance soothes an acidic ant or bee sting."
+            }
+          ],
+          "examples": [
+            "An antacid (a base) neutralises excess acid in the stomach.",
+            "Farmers add lime to neutralise too-acidic soil."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Neutralisation",
+              "definition": "The reaction of an acid and a base to form a neutral substance.",
+              "simpleExample": "Antacids work by neutralisation."
+            },
+            {
+              "keyword": "Antacid",
+              "definition": "A mild base that neutralises stomach acid.",
+              "simpleExample": "An antacid relieves acidity."
+            },
+            {
+              "keyword": "Salt",
+              "definition": "A neutral substance formed in neutralisation.",
+              "simpleExample": "Acid plus base gives salt and water."
+            }
+          ],
+          "quickSummary": "Neutralisation is the reaction of an acid and a base forming a neutral substance (salt and water) with heat; it is used in antacids, treating acidic soil and soothing stings.",
+          "revisionNotes": [
+            "Acid + base -> neutral substance (salt + water).",
+            "Neutralisation releases heat.",
+            "Antacids neutralise stomach acidity.",
+            "Lime neutralises acidic soil; bases soothe stings."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 3,
+      "chapter": "Electricity: Circuits and their Components",
+      "topics": [
+        {
+          "topicId": "sci7_ch3_topic1",
+          "topic": "Electric Cell and Battery",
+          "meaning": "An electric cell is a source of electricity, and two or more cells joined together make a battery.",
+          "ncertBasedExplanation": "An electric cell is a device that stores chemical energy and changes it into electrical energy to make things work, like in a torch or a toy. A cell has two terminals, a positive (+) and a negative (-) terminal. When we join two or more cells together in the correct way (positive of one to negative of the next), they form a battery, which gives more power than a single cell. Cells and batteries are the common sources of electricity for many small devices we use every day.",
+          "easyExplanation": "An electric cell gives electricity and has a + and a - terminal. Joining two or more cells makes a battery, which gives more power.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "What a cell is",
+              "explanation": "An electric cell changes chemical energy into electrical energy."
+            },
+            {
+              "step": 2,
+              "title": "Two terminals",
+              "explanation": "A cell has a positive (+) and a negative (-) terminal."
+            },
+            {
+              "step": 3,
+              "title": "Making a battery",
+              "explanation": "Joining two or more cells correctly forms a battery."
+            },
+            {
+              "step": 4,
+              "title": "A power source",
+              "explanation": "Cells and batteries power torches, toys and many small devices."
+            }
+          ],
+          "examples": [
+            "A torch uses cells to light its bulb.",
+            "Two cells joined together form a battery for a toy car."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Electric cell",
+              "definition": "A device that provides electricity from chemical energy.",
+              "simpleExample": "A torch runs on an electric cell."
+            },
+            {
+              "keyword": "Terminal",
+              "definition": "The positive or negative end of a cell.",
+              "simpleExample": "A cell has + and - terminals."
+            },
+            {
+              "keyword": "Battery",
+              "definition": "Two or more cells joined together.",
+              "simpleExample": "A battery powers a remote control."
+            }
+          ],
+          "quickSummary": "An electric cell changes chemical energy into electricity and has a positive and a negative terminal; joining two or more cells makes a battery that gives more power.",
+          "revisionNotes": [
+            "Electric cell = source of electricity.",
+            "It has a + and a - terminal.",
+            "Two or more cells joined = a battery.",
+            "Cells/batteries power torches, toys, devices."
+          ]
+        },
+        {
+          "topicId": "sci7_ch3_topic2",
+          "topic": "Electric Circuits",
+          "meaning": "An electric circuit is a complete path through which electricity flows from a cell to a device and back.",
+          "ncertBasedExplanation": "An electric circuit is a closed path along which electricity can flow. A simple circuit has a cell (the source), connecting wires, and a device such as a bulb. Electricity flows only when the path is complete and unbroken, forming a closed circuit; then the bulb glows. If there is a break anywhere, it becomes an open circuit and no electricity flows, so the bulb does not glow. The electric current flows from the positive terminal of the cell, through the wires and device, back to the negative terminal.",
+          "easyExplanation": "An electric circuit is a complete path for electricity. The bulb glows only when the circuit is closed (complete). A break makes it open and the bulb goes off.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "A complete path",
+              "explanation": "An electric circuit is a closed path through which electricity flows."
+            },
+            {
+              "step": 2,
+              "title": "Parts of a circuit",
+              "explanation": "A simple circuit has a cell, wires and a device like a bulb."
+            },
+            {
+              "step": 3,
+              "title": "Closed circuit",
+              "explanation": "When the path is complete, current flows and the bulb glows."
+            },
+            {
+              "step": 4,
+              "title": "Open circuit",
+              "explanation": "If there is a break, no current flows and the bulb does not glow."
+            }
+          ],
+          "examples": [
+            "A bulb glows when connected to a cell with wires in a complete circuit.",
+            "If a wire is disconnected, the circuit opens and the bulb goes off."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Electric circuit",
+              "definition": "A complete path for electricity to flow.",
+              "simpleExample": "A bulb, cell and wires make a circuit."
+            },
+            {
+              "keyword": "Closed circuit",
+              "definition": "A complete circuit where current flows.",
+              "simpleExample": "A glowing bulb shows a closed circuit."
+            },
+            {
+              "keyword": "Open circuit",
+              "definition": "A broken circuit where no current flows.",
+              "simpleExample": "A break makes an open circuit."
+            }
+          ],
+          "quickSummary": "An electric circuit is a complete path for electricity from a cell through wires and a device and back; the bulb glows only in a closed (complete) circuit, not an open one.",
+          "revisionNotes": [
+            "Circuit = complete path for electricity.",
+            "Parts: cell, wires, device (bulb).",
+            "Closed circuit: current flows, bulb glows.",
+            "Open circuit (break): no current, bulb off."
+          ]
+        },
+        {
+          "topicId": "sci7_ch3_topic3",
+          "topic": "Circuit Diagrams and Switches",
+          "meaning": "A circuit diagram shows a circuit using symbols, and a switch is used to turn a circuit on or off.",
+          "ncertBasedExplanation": "Instead of drawing the actual components, we represent an electric circuit using simple symbols in a circuit diagram, which is quick and clear. Each component, like a cell, bulb, wire and switch, has its own symbol. A switch is a device that opens or closes a circuit to turn it off or on. When the switch is 'on', it closes the circuit and current flows; when it is 'off', it opens the circuit and current stops. Switches let us control electrical devices easily, like turning a light on and off.",
+          "easyExplanation": "A circuit diagram shows a circuit using simple symbols. A switch turns a circuit on (closed) or off (open), letting us control devices.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Use symbols",
+              "explanation": "A circuit diagram represents a circuit using simple symbols."
+            },
+            {
+              "step": 2,
+              "title": "Symbols for parts",
+              "explanation": "Each component, cell, bulb, wire, switch, has its own symbol."
+            },
+            {
+              "step": 3,
+              "title": "What a switch does",
+              "explanation": "A switch opens or closes a circuit to turn it off or on."
+            },
+            {
+              "step": 4,
+              "title": "Control devices",
+              "explanation": "When 'on' the switch closes the circuit; when 'off' it opens it."
+            }
+          ],
+          "examples": [
+            "A circuit diagram uses a special symbol for a cell and a bulb.",
+            "Pressing a switch 'on' completes the circuit and lights the bulb."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Circuit diagram",
+              "definition": "A drawing of a circuit using symbols.",
+              "simpleExample": "We drew a circuit diagram of a torch."
+            },
+            {
+              "keyword": "Switch",
+              "definition": "A device to open or close a circuit.",
+              "simpleExample": "A switch turns the light on and off."
+            },
+            {
+              "keyword": "Symbol",
+              "definition": "A sign that stands for a component.",
+              "simpleExample": "A cell has its own circuit symbol."
+            }
+          ],
+          "quickSummary": "A circuit diagram represents a circuit using symbols for each component, and a switch opens or closes the circuit to turn devices off or on.",
+          "revisionNotes": [
+            "Circuit diagram = circuit shown with symbols.",
+            "Each part has its own symbol.",
+            "Switch opens/closes a circuit.",
+            "On = closed (flows); off = open (stops)."
+          ]
+        },
+        {
+          "topicId": "sci7_ch3_topic4",
+          "topic": "Electrical Conductors and Insulators",
+          "meaning": "Conductors allow electricity to pass through them, while insulators do not.",
+          "ncertBasedExplanation": "Materials can be grouped by whether they let electricity pass through. Materials that allow electricity to flow through them are called electrical conductors, such as most metals like copper, aluminium and iron. Materials that do not allow electricity to flow through them are called insulators, such as plastic, rubber, wood and glass. We test a material by placing it in a circuit and seeing if the bulb glows. Conductors are used to make wires, while insulators are used to cover wires and make switch handles, keeping us safe from electric shocks.",
+          "easyExplanation": "Conductors (like metals) let electricity pass; insulators (like plastic, rubber, wood) do not. Wires are conductors covered with insulators for safety.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Two groups",
+              "explanation": "Materials are conductors or insulators of electricity."
+            },
+            {
+              "step": 2,
+              "title": "Conductors",
+              "explanation": "Conductors allow electricity to flow, like metals (copper, iron)."
+            },
+            {
+              "step": 3,
+              "title": "Insulators",
+              "explanation": "Insulators do not allow electricity to flow, like plastic, rubber and wood."
+            },
+            {
+              "step": 4,
+              "title": "Their uses",
+              "explanation": "Conductors make wires; insulators cover wires and make switch handles for safety."
+            }
+          ],
+          "examples": [
+            "Copper wire is a conductor used to carry electricity.",
+            "The plastic covering on a wire is an insulator that keeps us safe."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Conductor",
+              "definition": "A material that allows electricity to pass.",
+              "simpleExample": "Iron is a conductor."
+            },
+            {
+              "keyword": "Insulator",
+              "definition": "A material that does not allow electricity to pass.",
+              "simpleExample": "Rubber is an insulator."
+            },
+            {
+              "keyword": "Electric shock",
+              "definition": "A jolt from touching electricity.",
+              "simpleExample": "Insulators protect us from electric shock."
+            }
+          ],
+          "quickSummary": "Conductors (like metals) allow electricity to pass while insulators (like plastic, rubber and wood) do not; conductors make wires and insulators cover them for safety.",
+          "revisionNotes": [
+            "Conductors let electricity flow (metals).",
+            "Insulators don't (plastic, rubber, wood, glass).",
+            "Test by checking if the bulb glows.",
+            "Wires use conductors covered by insulators."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 4,
+      "chapter": "The World of Metals and Non-metals",
+      "topics": [
+        {
+          "topicId": "sci7_ch4_topic1",
+          "topic": "Properties of Metals and Non-metals",
+          "meaning": "Metals and non-metals are two groups of materials with different physical properties.",
+          "ncertBasedExplanation": "Materials can be classified into metals and non-metals based on their properties. Metals are usually hard, shiny (have lustre), can be beaten into thin sheets (malleable), can be drawn into wires (ductile), make a ringing sound when struck (sonorous), and conduct heat and electricity. Examples are iron, copper, aluminium and gold. Non-metals are usually not shiny (dull), are often soft or brittle, do not make a ringing sound, and do not conduct heat and electricity well. Examples are sulphur, carbon and oxygen. Knowing these properties helps us choose the right material for different uses.",
+          "easyExplanation": "Metals are shiny, hard, malleable, ductile, sonorous and conduct heat and electricity (like iron, copper). Non-metals are dull, brittle and poor conductors (like sulphur).",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Two groups",
+              "explanation": "Materials are classified as metals or non-metals by their properties."
+            },
+            {
+              "step": 2,
+              "title": "Metal properties",
+              "explanation": "Metals are shiny, hard, malleable, ductile, sonorous and conduct heat and electricity."
+            },
+            {
+              "step": 3,
+              "title": "Non-metal properties",
+              "explanation": "Non-metals are usually dull, soft or brittle, and poor conductors."
+            },
+            {
+              "step": 4,
+              "title": "Choosing materials",
+              "explanation": "Knowing these properties helps us pick the right material for a use."
+            }
+          ],
+          "examples": [
+            "Copper is a metal: shiny and a good conductor of electricity.",
+            "Sulphur is a non-metal: dull and a poor conductor."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Metal",
+              "definition": "A material that is shiny, malleable, ductile and a good conductor.",
+              "simpleExample": "Iron is a metal."
+            },
+            {
+              "keyword": "Non-metal",
+              "definition": "A material that is dull, often brittle and a poor conductor.",
+              "simpleExample": "Carbon is a non-metal."
+            },
+            {
+              "keyword": "Malleable",
+              "definition": "Able to be beaten into thin sheets.",
+              "simpleExample": "Gold is malleable."
+            },
+            {
+              "keyword": "Ductile",
+              "definition": "Able to be drawn into wires.",
+              "simpleExample": "Copper is ductile."
+            }
+          ],
+          "quickSummary": "Metals are shiny, hard, malleable, ductile, sonorous and good conductors (iron, copper), while non-metals are dull, brittle and poor conductors (sulphur, carbon).",
+          "revisionNotes": [
+            "Metals: shiny, malleable, ductile, sonorous, good conductors.",
+            "Non-metals: dull, brittle, poor conductors.",
+            "Metals: iron, copper, gold; non-metals: sulphur, carbon.",
+            "Properties decide a material's use."
+          ]
+        },
+        {
+          "topicId": "sci7_ch4_topic2",
+          "topic": "Reactions of Metals with Air and Water (Rusting)",
+          "meaning": "Many metals react with air and water; iron, for example, rusts when exposed to moist air.",
+          "ncertBasedExplanation": "Metals can react with air and water, and one important example is the rusting of iron. When iron is exposed to both air (oxygen) and moisture (water) for some time, a reddish-brown layer called rust forms on its surface. Rust slowly damages and weakens the iron object. Rusting can be prevented by keeping iron away from air and moisture, for example by painting it, applying oil or grease, or coating it with another metal (galvanising). Some metals react with air or water more easily than others, and these reactions are important to understand for using and protecting metals.",
+          "easyExplanation": "Iron rusts when exposed to both air and moisture, forming a reddish-brown layer that weakens it. Painting or oiling iron prevents rusting.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Metals react",
+              "explanation": "Metals can react with air and water; iron rusting is a key example."
+            },
+            {
+              "step": 2,
+              "title": "Rusting needs air and water",
+              "explanation": "Iron rusts only when exposed to both air (oxygen) and moisture."
+            },
+            {
+              "step": 3,
+              "title": "Rust weakens iron",
+              "explanation": "A reddish-brown layer of rust forms and slowly damages the iron."
+            },
+            {
+              "step": 4,
+              "title": "Preventing rust",
+              "explanation": "Painting, oiling, greasing or galvanising protects iron from rusting."
+            }
+          ],
+          "examples": [
+            "An iron gate left in the rain develops reddish-brown rust.",
+            "Painting an iron railing stops it from rusting."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Rust",
+              "definition": "The reddish-brown layer that forms on iron in moist air.",
+              "simpleExample": "Rust formed on the old nail."
+            },
+            {
+              "keyword": "Rusting",
+              "definition": "The reaction of iron with air and water to form rust.",
+              "simpleExample": "Rusting weakens iron objects."
+            },
+            {
+              "keyword": "Galvanising",
+              "definition": "Coating iron with zinc to prevent rust.",
+              "simpleExample": "Galvanising protects iron sheets."
+            }
+          ],
+          "quickSummary": "Metals react with air and water; iron rusts when exposed to both air and moisture, forming a weakening reddish-brown layer that can be prevented by painting, oiling or galvanising.",
+          "revisionNotes": [
+            "Metals react with air and water.",
+            "Iron rusts with air + moisture.",
+            "Rust is reddish-brown and weakens iron.",
+            "Prevent by painting, oiling or galvanising."
+          ]
+        },
+        {
+          "topicId": "sci7_ch4_topic3",
+          "topic": "Uses of Metals and Non-metals",
+          "meaning": "Metals and non-metals are used in many ways in daily life based on their properties.",
+          "ncertBasedExplanation": "Both metals and non-metals are very useful because of their special properties. Metals are used to make tools, machines, vehicles, utensils, wires and jewellery, because they are strong, can be shaped and conduct electricity. Non-metals are also essential to life and industry: oxygen is needed for breathing, carbon is found in all living things, and non-metals are used in fertilisers, medicines and many products. So both metals and non-metals play important roles. Choosing whether to use a metal or non-metal depends on the properties needed for the job.",
+          "easyExplanation": "Metals make tools, wires, utensils and jewellery; non-metals like oxygen and carbon are essential for life and used in fertilisers and medicines. Both are very useful.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Both are useful",
+              "explanation": "Metals and non-metals are useful because of their properties."
+            },
+            {
+              "step": 2,
+              "title": "Uses of metals",
+              "explanation": "Metals make tools, machines, utensils, wires and jewellery."
+            },
+            {
+              "step": 3,
+              "title": "Uses of non-metals",
+              "explanation": "Non-metals like oxygen (breathing) and carbon (in living things) are essential."
+            },
+            {
+              "step": 4,
+              "title": "In industry",
+              "explanation": "Non-metals are used in fertilisers, medicines and many products."
+            }
+          ],
+          "examples": [
+            "Copper is used in electrical wires because it conducts electricity.",
+            "Oxygen, a non-metal, is essential for breathing."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Metal",
+              "definition": "A shiny, conducting material used for many things.",
+              "simpleExample": "Aluminium is used in utensils."
+            },
+            {
+              "keyword": "Non-metal",
+              "definition": "A material like oxygen or carbon, essential to life.",
+              "simpleExample": "Oxygen is a non-metal we breathe."
+            },
+            {
+              "keyword": "Fertiliser",
+              "definition": "A substance that helps plants grow.",
+              "simpleExample": "Non-metals are used in fertilisers."
+            }
+          ],
+          "quickSummary": "Metals are used for tools, wires, utensils and jewellery, while non-metals like oxygen and carbon are essential for life and used in fertilisers and medicines; both are very useful.",
+          "revisionNotes": [
+            "Metals: tools, machines, utensils, wires, jewellery.",
+            "Non-metals: oxygen (breathing), carbon (life).",
+            "Non-metals used in fertilisers and medicines.",
+            "Use depends on the properties needed."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 5,
+      "chapter": "Changes Around Us: Physical and Chemical",
+      "topics": [
+        {
+          "topicId": "sci7_ch5_topic1",
+          "topic": "Physical Changes",
+          "meaning": "A physical change is a change in which no new substance is formed and which is often reversible.",
+          "ncertBasedExplanation": "Many changes happen around us all the time. In a physical change, the substance may change its shape, size or state, but no new substance is formed, and the change can often be reversed. For example, melting of ice into water, tearing of paper, dissolving sugar in water, and stretching a rubber band are physical changes. In each case the substance is still the same material; ice and water are both water. Physical changes are usually easy to reverse, such as freezing water back into ice.",
+          "easyExplanation": "In a physical change, no new substance forms and it can often be reversed, like ice melting into water or tearing paper. The material stays the same.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "What changes",
+              "explanation": "In a physical change, shape, size or state may change."
+            },
+            {
+              "step": 2,
+              "title": "No new substance",
+              "explanation": "No new substance is formed; the material stays the same."
+            },
+            {
+              "step": 3,
+              "title": "Often reversible",
+              "explanation": "Physical changes can usually be reversed."
+            },
+            {
+              "step": 4,
+              "title": "Examples",
+              "explanation": "Melting ice, tearing paper and dissolving sugar are physical changes."
+            }
+          ],
+          "examples": [
+            "Melting of ice into water is a physical change.",
+            "Tearing a sheet of paper is a physical change."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Physical change",
+              "definition": "A change with no new substance, often reversible.",
+              "simpleExample": "Melting wax is a physical change."
+            },
+            {
+              "keyword": "State",
+              "definition": "The form of matter: solid, liquid or gas.",
+              "simpleExample": "Ice changing to water is a change of state."
+            },
+            {
+              "keyword": "Reversible",
+              "definition": "Able to be changed back.",
+              "simpleExample": "Freezing water back to ice is reversible."
+            }
+          ],
+          "quickSummary": "A physical change alters shape, size or state without forming a new substance and is usually reversible, like ice melting into water or tearing paper.",
+          "revisionNotes": [
+            "Physical change: no new substance.",
+            "Shape, size or state may change.",
+            "Usually reversible.",
+            "Examples: melting ice, tearing paper, dissolving sugar."
+          ]
+        },
+        {
+          "topicId": "sci7_ch5_topic2",
+          "topic": "Chemical Changes",
+          "meaning": "A chemical change is a change in which one or more new substances are formed, and it is usually irreversible.",
+          "ncertBasedExplanation": "In a chemical change, one or more new substances with new properties are formed, and the change is usually difficult to reverse. Signs of a chemical change include the formation of a new substance, change in colour, giving off a gas, change in smell, or release or absorption of heat and light. Examples are the burning of paper or wood, rusting of iron, cooking of food, and souring of milk. In each, the original substance changes into something new. Chemical changes are very important in nature and in our daily lives.",
+          "easyExplanation": "In a chemical change, a new substance forms and it is usually hard to reverse, like burning paper, rusting iron or cooking food. Signs include new colour, gas or heat.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "New substances form",
+              "explanation": "In a chemical change, one or more new substances are formed."
+            },
+            {
+              "step": 2,
+              "title": "Signs of change",
+              "explanation": "New substance, colour change, gas, smell, or heat/light may appear."
+            },
+            {
+              "step": 3,
+              "title": "Usually irreversible",
+              "explanation": "Chemical changes are usually hard to reverse."
+            },
+            {
+              "step": 4,
+              "title": "Examples",
+              "explanation": "Burning of paper, rusting of iron and cooking of food are chemical changes."
+            }
+          ],
+          "examples": [
+            "Burning of paper is a chemical change, forming ash and gases.",
+            "Rusting of iron forms a new substance (rust)."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Chemical change",
+              "definition": "A change forming a new substance, usually irreversible.",
+              "simpleExample": "Burning wood is a chemical change."
+            },
+            {
+              "keyword": "New substance",
+              "definition": "A material with new properties formed in a change.",
+              "simpleExample": "Rust is a new substance."
+            },
+            {
+              "keyword": "Irreversible",
+              "definition": "Cannot easily be changed back.",
+              "simpleExample": "Cooking food is irreversible."
+            }
+          ],
+          "quickSummary": "A chemical change forms one or more new substances and is usually irreversible, shown by new colour, gas, smell or heat, like burning paper, rusting iron and cooking food.",
+          "revisionNotes": [
+            "Chemical change: a new substance forms.",
+            "Signs: colour, gas, smell, heat/light.",
+            "Usually irreversible.",
+            "Examples: burning, rusting, cooking, souring of milk."
+          ]
+        },
+        {
+          "topicId": "sci7_ch5_topic3",
+          "topic": "Reversible and Irreversible Changes",
+          "meaning": "Changes that can be undone are reversible, while changes that cannot easily be undone are irreversible.",
+          "ncertBasedExplanation": "Changes can also be grouped by whether they can be undone. A reversible change is one that can be changed back to the original, such as melting and freezing of water, or folding and unfolding paper. An irreversible change cannot easily be changed back to the original, such as burning a candle, cooking an egg or ripening of fruit. Many physical changes are reversible, while most chemical changes are irreversible because a new substance is formed. Understanding this helps us know whether we can get the original substance back.",
+          "easyExplanation": "Reversible changes can be undone (like melting and freezing water); irreversible changes cannot (like burning or cooking). Most chemical changes are irreversible.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Two kinds",
+              "explanation": "Changes can be reversible or irreversible."
+            },
+            {
+              "step": 2,
+              "title": "Reversible",
+              "explanation": "A reversible change can be changed back, like melting and freezing water."
+            },
+            {
+              "step": 3,
+              "title": "Irreversible",
+              "explanation": "An irreversible change cannot easily be undone, like burning or cooking."
+            },
+            {
+              "step": 4,
+              "title": "Link to change type",
+              "explanation": "Many physical changes are reversible; most chemical changes are irreversible."
+            }
+          ],
+          "examples": [
+            "Melting ice and freezing it again is a reversible change.",
+            "Cooking an egg is an irreversible change."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Reversible change",
+              "definition": "A change that can be undone.",
+              "simpleExample": "Folding paper is reversible."
+            },
+            {
+              "keyword": "Irreversible change",
+              "definition": "A change that cannot easily be undone.",
+              "simpleExample": "Burning a candle is irreversible."
+            },
+            {
+              "keyword": "Original",
+              "definition": "The starting substance or form.",
+              "simpleExample": "We can get the original ice back by freezing."
+            }
+          ],
+          "quickSummary": "Reversible changes can be undone (melting and freezing water), while irreversible changes cannot (burning, cooking); physical changes are often reversible and chemical changes usually irreversible.",
+          "revisionNotes": [
+            "Reversible: can be undone (melt/freeze).",
+            "Irreversible: cannot be undone (burning, cooking).",
+            "Physical changes often reversible.",
+            "Chemical changes usually irreversible."
+          ]
+        },
+        {
+          "topicId": "sci7_ch5_topic4",
+          "topic": "Changes in Nature",
+          "meaning": "Nature shows many slow and fast changes, some desirable and some not, that shape the world around us.",
+          "ncertBasedExplanation": "Changes happen continuously in nature, some fast and some very slow. Fast changes happen quickly, like the bursting of a cracker or the burning of paper, while slow changes take a long time, like the rusting of iron, the ripening of fruit, the weathering of rocks or the formation of soil. Some changes are desirable (useful), like cooking food or ripening of fruit, while others are undesirable (harmful), like the spoiling of food or rusting of iron. Recognising and understanding these natural changes helps us make use of the helpful ones and prevent the harmful ones.",
+          "easyExplanation": "Nature has fast changes (a cracker bursting) and slow ones (rusting, rock weathering). Some are desirable (cooking) and some undesirable (food spoiling).",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Fast and slow",
+              "explanation": "Some changes are fast (bursting cracker) and some slow (rusting, weathering)."
+            },
+            {
+              "step": 2,
+              "title": "Slow natural changes",
+              "explanation": "Rusting of iron, ripening of fruit and weathering of rocks are slow changes."
+            },
+            {
+              "step": 3,
+              "title": "Desirable changes",
+              "explanation": "Some changes are desirable, like cooking food or ripening of fruit."
+            },
+            {
+              "step": 4,
+              "title": "Undesirable changes",
+              "explanation": "Others are undesirable, like spoiling of food or rusting of iron."
+            }
+          ],
+          "examples": [
+            "Weathering of rocks into soil is a very slow natural change.",
+            "Spoiling of food is an undesirable change."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Slow change",
+              "definition": "A change that takes a long time.",
+              "simpleExample": "Rusting is a slow change."
+            },
+            {
+              "keyword": "Desirable change",
+              "definition": "A useful or wanted change.",
+              "simpleExample": "Cooking food is a desirable change."
+            },
+            {
+              "keyword": "Weathering",
+              "definition": "The slow breaking down of rocks.",
+              "simpleExample": "Weathering forms soil over time."
+            }
+          ],
+          "quickSummary": "Nature shows fast and slow changes, some desirable like cooking and ripening, and some undesirable like food spoiling and rusting; understanding them helps us use or prevent changes.",
+          "revisionNotes": [
+            "Nature has fast and slow changes.",
+            "Slow: rusting, ripening, weathering.",
+            "Desirable: cooking, ripening.",
+            "Undesirable: spoiling, rusting."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 6,
+      "chapter": "Adolescence: A Stage of Growth and Change",
+      "topics": [
+        {
+          "topicId": "sci7_ch6_topic1",
+          "topic": "Growing With Age: The Teenage Years",
+          "meaning": "Adolescence is the stage of life, usually from about 10 to 19 years, when the body grows quickly and changes from a child to an adult.",
+          "ncertBasedExplanation": "Adolescence is an important stage of life, usually between about 10 and 19 years of age, when a child gradually grows into an adult. During these teenage years, the body grows rapidly in height and weight. There is a sudden increase in height because the bones grow longer. This growth happens at different rates for different individuals, and girls often start a little earlier than boys. Adolescence is a normal and healthy part of growing up, and the changes are caused by special chemicals in the body called hormones.",
+          "easyExplanation": "Adolescence (about 10 to 19 years) is when a child grows into an adult. The body grows fast, especially in height, due to chemicals called hormones.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "What adolescence is",
+              "explanation": "Adolescence is the stage, about 10 to 19 years, when a child becomes an adult."
+            },
+            {
+              "step": 2,
+              "title": "Rapid growth",
+              "explanation": "The body grows quickly in height and weight during the teenage years."
+            },
+            {
+              "step": 3,
+              "title": "Different rates",
+              "explanation": "Growth happens at different rates for different people; girls often start earlier."
+            },
+            {
+              "step": 4,
+              "title": "Caused by hormones",
+              "explanation": "These changes are caused by special chemicals called hormones."
+            }
+          ],
+          "examples": [
+            "A sudden increase in height is common during adolescence.",
+            "Hormones cause the changes that happen during the teenage years."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Adolescence",
+              "definition": "The stage of growth from child to adult, about 10-19 years.",
+              "simpleExample": "Adolescence is the teenage stage."
+            },
+            {
+              "keyword": "Hormones",
+              "definition": "Chemicals in the body that cause changes during adolescence.",
+              "simpleExample": "Hormones control growth changes."
+            },
+            {
+              "keyword": "Growth",
+              "definition": "An increase in size of the body.",
+              "simpleExample": "Rapid growth happens during adolescence."
+            }
+          ],
+          "quickSummary": "Adolescence (about 10 to 19 years) is the stage when a child grows into an adult, with rapid growth in height and weight caused by hormones, at different rates for different people.",
+          "revisionNotes": [
+            "Adolescence = about 10 to 19 years.",
+            "Body grows fast (height and weight).",
+            "Different rates; girls often start earlier.",
+            "Changes caused by hormones."
+          ]
+        },
+        {
+          "topicId": "sci7_ch6_topic2",
+          "topic": "Changes that Indicate Reproductive Maturity",
+          "meaning": "During adolescence, the body undergoes changes that show it is maturing and developing reproductive ability.",
+          "ncertBasedExplanation": "During adolescence, the body develops in ways that show it is maturing into an adult capable of reproduction. Both boys and girls go through changes controlled by hormones. These include changes in body shape, growth of hair in new areas, changes in the voice (especially deeper in boys), and the development of reproductive organs. Girls and boys experience some different changes. All these changes are a normal and natural part of growing up, and they happen gradually. It is important to understand them so that adolescents feel comfortable and take care of their bodies.",
+          "easyExplanation": "During adolescence the body matures: changes in shape, voice, hair growth and reproductive organs occur. These changes are normal and controlled by hormones.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Body matures",
+              "explanation": "Adolescence brings changes that show the body is maturing into an adult."
+            },
+            {
+              "step": 2,
+              "title": "Common changes",
+              "explanation": "There are changes in body shape, hair growth, and the voice (deeper in boys)."
+            },
+            {
+              "step": 3,
+              "title": "Different for each",
+              "explanation": "Girls and boys experience some different changes, all controlled by hormones."
+            },
+            {
+              "step": 4,
+              "title": "Normal and gradual",
+              "explanation": "These changes are a normal, natural part of growing up and happen gradually."
+            }
+          ],
+          "examples": [
+            "Boys' voices usually become deeper during adolescence.",
+            "Changes in body shape are part of growing into an adult."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Reproductive maturity",
+              "definition": "The body's development of the ability to reproduce.",
+              "simpleExample": "Adolescence leads to reproductive maturity."
+            },
+            {
+              "keyword": "Hormones",
+              "definition": "Chemicals controlling adolescent changes.",
+              "simpleExample": "Hormones cause voice and body changes."
+            },
+            {
+              "keyword": "Maturing",
+              "definition": "Becoming fully developed.",
+              "simpleExample": "The body is maturing during adolescence."
+            }
+          ],
+          "quickSummary": "During adolescence the body matures with changes in shape, voice, hair growth and reproductive organs, controlled by hormones; these are a normal, gradual part of growing up.",
+          "revisionNotes": [
+            "Adolescence brings reproductive maturity.",
+            "Changes: body shape, voice, hair growth.",
+            "Different changes for boys and girls.",
+            "Normal, gradual, controlled by hormones."
+          ]
+        },
+        {
+          "topicId": "sci7_ch6_topic3",
+          "topic": "Emotional and Behavioural Changes",
+          "meaning": "Adolescents experience emotional and behavioural changes, including new feelings and mood changes, as they grow up.",
+          "ncertBasedExplanation": "Along with physical changes, adolescents also go through emotional and behavioural changes. They may feel more independent, have new and stronger emotions, experience mood swings, and become more self-conscious about their appearance. They may also want more privacy and may form stronger friendships. These changes are caused partly by hormones and partly by growing up and facing new situations. It is normal to feel confused or moody at times. Talking to parents, teachers or trusted elders, and treating others with respect and kindness, helps adolescents handle these changes in a healthy way.",
+          "easyExplanation": "Adolescents have emotional changes too: new feelings, mood swings and a wish for independence. These are normal, and talking to trusted elders helps.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Emotional changes",
+              "explanation": "Adolescents feel new and stronger emotions as they grow up."
+            },
+            {
+              "step": 2,
+              "title": "Mood swings",
+              "explanation": "They may have mood swings and feel more self-conscious."
+            },
+            {
+              "step": 3,
+              "title": "Causes",
+              "explanation": "These changes are caused partly by hormones and partly by new experiences."
+            },
+            {
+              "step": 4,
+              "title": "Handling them",
+              "explanation": "Talking to trusted elders and being respectful helps handle these changes."
+            }
+          ],
+          "examples": [
+            "Feeling moody or wanting more privacy is common during adolescence.",
+            "Talking to a trusted adult helps when feelings are confusing."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Emotion",
+              "definition": "A feeling such as joy, anger or worry.",
+              "simpleExample": "Adolescents feel strong emotions."
+            },
+            {
+              "keyword": "Mood swing",
+              "definition": "A quick change in mood.",
+              "simpleExample": "Mood swings are common in adolescence."
+            },
+            {
+              "keyword": "Independence",
+              "definition": "Being able to do things on one's own.",
+              "simpleExample": "Adolescents seek more independence."
+            }
+          ],
+          "quickSummary": "Adolescents experience emotional and behavioural changes, like new feelings, mood swings and a wish for independence, which are normal and best handled by talking to trusted elders.",
+          "revisionNotes": [
+            "Adolescents have emotional changes too.",
+            "New feelings, mood swings, self-consciousness.",
+            "Caused by hormones and new experiences.",
+            "Talking to trusted elders helps."
+          ]
+        },
+        {
+          "topicId": "sci7_ch6_topic4",
+          "topic": "Health and Hygiene during Adolescence",
+          "meaning": "During adolescence, good nutrition, personal hygiene, physical activity and a balanced lifestyle are very important.",
+          "ncertBasedExplanation": "Because the body changes and grows rapidly during adolescence, it is very important to take good care of health. This includes eating a balanced diet rich in proteins, vitamins and minerals for proper growth, and avoiding junk food. Personal hygiene is essential, like bathing regularly and keeping the body clean, since adolescents sweat more. Regular physical activity and exercise keep the body fit and the mind fresh. Enough sleep and a balanced social life with good company are also important. Avoiding harmful habits and maintaining cleanliness help adolescents stay healthy in body and mind.",
+          "easyExplanation": "During adolescence, eat a balanced diet, keep clean (personal hygiene), exercise, sleep well and keep good company to stay healthy in body and mind.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Eat well",
+              "explanation": "A balanced diet with proteins, vitamins and minerals supports rapid growth."
+            },
+            {
+              "step": 2,
+              "title": "Personal hygiene",
+              "explanation": "Bathing regularly and staying clean is important as adolescents sweat more."
+            },
+            {
+              "step": 3,
+              "title": "Stay active",
+              "explanation": "Regular physical activity and exercise keep the body fit and mind fresh."
+            },
+            {
+              "step": 4,
+              "title": "Balanced lifestyle",
+              "explanation": "Enough sleep, good company and avoiding harmful habits keep adolescents healthy."
+            }
+          ],
+          "examples": [
+            "Eating a balanced diet helps the body grow properly during adolescence.",
+            "Bathing daily is important because adolescents sweat more."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Balanced diet",
+              "definition": "Food with all nutrients in the right amounts.",
+              "simpleExample": "A balanced diet supports growth."
+            },
+            {
+              "keyword": "Personal hygiene",
+              "definition": "Keeping one's body clean.",
+              "simpleExample": "Bathing daily is good personal hygiene."
+            },
+            {
+              "keyword": "Physical activity",
+              "definition": "Exercise and movement.",
+              "simpleExample": "Physical activity keeps us fit."
+            }
+          ],
+          "quickSummary": "During adolescence, good health needs a balanced diet, personal hygiene, regular physical activity, enough sleep and a balanced social life to keep the body and mind healthy.",
+          "revisionNotes": [
+            "Eat a balanced diet for growth.",
+            "Keep clean (personal hygiene); sweat more.",
+            "Exercise regularly; sleep enough.",
+            "Keep good company; avoid harmful habits."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 7,
+      "chapter": "Heat Transfer in Nature",
+      "topics": [
+        {
+          "topicId": "sci7_ch7_topic1",
+          "topic": "Conduction",
+          "meaning": "Conduction is the transfer of heat through a solid from its hotter part to its colder part, without the material itself moving.",
+          "ncertBasedExplanation": "Heat always flows from a hotter object to a colder one. Conduction is the way heat travels through solids. When one end of a solid object is heated, the heat passes from the hot end to the cold end through the material, while the material itself does not move from its place. For example, if one end of a metal spoon is placed in hot tea, the other end also becomes warm. Materials that allow heat to pass easily are good conductors (most metals), while those that do not are poor conductors or insulators (wood, plastic).",
+          "easyExplanation": "Conduction is how heat travels through a solid from its hot part to its cold part, like a metal spoon getting warm in hot tea. Metals are good conductors.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Heat flows hot to cold",
+              "explanation": "Heat always moves from a hotter object to a colder one."
+            },
+            {
+              "step": 2,
+              "title": "Through solids",
+              "explanation": "Conduction is the transfer of heat through a solid material."
+            },
+            {
+              "step": 3,
+              "title": "Material stays still",
+              "explanation": "The heat passes through, but the material itself does not move."
+            },
+            {
+              "step": 4,
+              "title": "Conductors and insulators",
+              "explanation": "Metals are good conductors of heat; wood and plastic are poor conductors."
+            }
+          ],
+          "examples": [
+            "A metal spoon kept in hot tea becomes warm at the other end by conduction.",
+            "The handle of a hot frying pan becomes warm through conduction."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Conduction",
+              "definition": "Heat transfer through a solid from hot to cold.",
+              "simpleExample": "A metal rod heats up by conduction."
+            },
+            {
+              "keyword": "Conductor",
+              "definition": "A material that lets heat pass easily.",
+              "simpleExample": "Copper is a good conductor of heat."
+            },
+            {
+              "keyword": "Insulator",
+              "definition": "A material that does not let heat pass easily.",
+              "simpleExample": "Wood is a poor conductor (insulator)."
+            }
+          ],
+          "quickSummary": "Conduction is the transfer of heat through a solid from its hotter to its colder part without the material moving; metals are good conductors and wood and plastic are poor ones.",
+          "revisionNotes": [
+            "Heat flows from hot to cold.",
+            "Conduction = heat through solids.",
+            "Material does not move, heat passes through.",
+            "Metals good conductors; wood/plastic poor."
+          ]
+        },
+        {
+          "topicId": "sci7_ch7_topic2",
+          "topic": "Convection",
+          "meaning": "Convection is the transfer of heat in liquids and gases by the actual movement of the heated material.",
+          "ncertBasedExplanation": "Convection is the way heat travels through liquids and gases (fluids). When a fluid is heated, the hot part becomes lighter and rises up, while the cooler, heavier part sinks down to take its place. This sets up a continuous movement called a convection current, which carries heat throughout the fluid. For example, water in a pan heats up by convection, and warm air rises while cool air sinks. Convection also causes natural events like land and sea breezes, where air moves between the land and the sea because they heat and cool at different rates.",
+          "easyExplanation": "Convection is how heat moves through liquids and gases: hot fluid rises and cool fluid sinks, forming currents. It causes land and sea breezes.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "In fluids",
+              "explanation": "Convection is heat transfer through liquids and gases."
+            },
+            {
+              "step": 2,
+              "title": "Hot rises, cool sinks",
+              "explanation": "Heated fluid becomes lighter and rises; cooler fluid sinks to replace it."
+            },
+            {
+              "step": 3,
+              "title": "Convection currents",
+              "explanation": "This continuous movement, called a convection current, spreads heat."
+            },
+            {
+              "step": 4,
+              "title": "In nature",
+              "explanation": "Convection causes warm air to rise and creates land and sea breezes."
+            }
+          ],
+          "examples": [
+            "Water in a pan heats evenly by convection currents.",
+            "A sea breeze blows from the sea to the land during the day due to convection."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Convection",
+              "definition": "Heat transfer in fluids by the movement of heated material.",
+              "simpleExample": "Boiling water heats by convection."
+            },
+            {
+              "keyword": "Convection current",
+              "definition": "The circular movement of heated fluid.",
+              "simpleExample": "Convection currents spread heat in water."
+            },
+            {
+              "keyword": "Sea breeze",
+              "definition": "Cool air moving from sea to land in the day.",
+              "simpleExample": "A sea breeze cools coastal areas."
+            }
+          ],
+          "quickSummary": "Convection is heat transfer in liquids and gases by the movement of the heated material, where hot fluid rises and cool fluid sinks, forming currents and causing land and sea breezes.",
+          "revisionNotes": [
+            "Convection = heat in fluids by movement.",
+            "Hot fluid rises; cool fluid sinks.",
+            "Forms convection currents.",
+            "Causes land and sea breezes."
+          ]
+        },
+        {
+          "topicId": "sci7_ch7_topic3",
+          "topic": "Radiation and Heat in Nature",
+          "meaning": "Radiation is the transfer of heat without any material medium, and it is how heat reaches us from the Sun.",
+          "ncertBasedExplanation": "Radiation is the third way heat travels, and it does not need any material to pass through. Heat travels as invisible rays and can pass even through empty space (vacuum). This is how heat from the Sun reaches the Earth across empty space, and how we feel the warmth of a fire even without touching it. Dark and dull surfaces absorb more heat radiation, while light and shiny surfaces reflect it. Heat transfer drives many natural processes, such as the water cycle (where the Sun's heat evaporates water) and the weathering of rocks. The three ways heat travels, conduction, convection and radiation, together shape weather and nature.",
+          "easyExplanation": "Radiation is heat travelling as rays without needing any material, like the Sun's heat reaching Earth through empty space. Dark surfaces absorb more heat.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "No medium needed",
+              "explanation": "Radiation transfers heat without any material to pass through."
+            },
+            {
+              "step": 2,
+              "title": "Heat from the Sun",
+              "explanation": "Heat from the Sun reaches Earth across empty space by radiation."
+            },
+            {
+              "step": 3,
+              "title": "Surfaces matter",
+              "explanation": "Dark, dull surfaces absorb more heat; light, shiny surfaces reflect it."
+            },
+            {
+              "step": 4,
+              "title": "Heat in nature",
+              "explanation": "Heat transfer drives the water cycle and the weathering of rocks."
+            }
+          ],
+          "examples": [
+            "The Sun's heat reaches the Earth through empty space by radiation.",
+            "We feel a fire's warmth from a distance by radiation."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Radiation",
+              "definition": "Heat transfer without a material medium.",
+              "simpleExample": "The Sun warms us by radiation."
+            },
+            {
+              "keyword": "Vacuum",
+              "definition": "Empty space with no material.",
+              "simpleExample": "Radiation can pass through a vacuum."
+            },
+            {
+              "keyword": "Absorb",
+              "definition": "To take in heat.",
+              "simpleExample": "Dark surfaces absorb more heat."
+            }
+          ],
+          "quickSummary": "Radiation is heat transfer without any material medium, as when the Sun's heat reaches Earth; dark surfaces absorb more heat, and heat transfer drives the water cycle and weathering.",
+          "revisionNotes": [
+            "Radiation needs no material medium.",
+            "Sun's heat reaches Earth by radiation.",
+            "Dark surfaces absorb; shiny ones reflect.",
+            "Heat drives the water cycle and weathering."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 8,
+      "chapter": "Measurement of Time and Motion",
+      "topics": [
+        {
+          "topicId": "sci7_ch8_topic1",
+          "topic": "Measurement of Time",
+          "meaning": "Time is measured using events that repeat regularly, and the SI unit of time is the second.",
+          "ncertBasedExplanation": "To measure time, we use events that repeat at regular intervals. Long ago, people used natural repeating events like the rising and setting of the Sun, the phases of the Moon, and devices like sundials and water clocks. A simple pendulum, which swings back and forth in a regular way, was an important discovery for measuring time; the time it takes for one complete swing is called its time period, and it is always the same for a given pendulum. The SI (standard) unit of time is the second (s); larger units are the minute (60 s) and the hour (60 min). Modern clocks measure time very accurately.",
+          "easyExplanation": "Time is measured using regularly repeating events, like a pendulum's swing. The SI unit of time is the second (s); 60 s = 1 minute, 60 min = 1 hour.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Use repeating events",
+              "explanation": "Time is measured using events that repeat at regular intervals."
+            },
+            {
+              "step": 2,
+              "title": "Old methods",
+              "explanation": "People used the Sun, Moon, sundials and water clocks to measure time."
+            },
+            {
+              "step": 3,
+              "title": "The pendulum",
+              "explanation": "A pendulum swings regularly; its time period for one swing stays the same."
+            },
+            {
+              "step": 4,
+              "title": "The second",
+              "explanation": "The SI unit of time is the second; 60 s = 1 minute and 60 min = 1 hour."
+            }
+          ],
+          "examples": [
+            "A pendulum takes the same time for each complete swing.",
+            "The SI unit of time is the second."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Time period",
+              "definition": "The time taken for one complete swing of a pendulum.",
+              "simpleExample": "A pendulum's time period is fixed."
+            },
+            {
+              "keyword": "Second",
+              "definition": "The SI unit of time.",
+              "simpleExample": "A clock measures time in seconds."
+            },
+            {
+              "keyword": "Pendulum",
+              "definition": "A swinging weight used to measure time.",
+              "simpleExample": "A pendulum clock keeps time."
+            }
+          ],
+          "quickSummary": "Time is measured using regularly repeating events like a pendulum's swing, whose time period is fixed; the SI unit of time is the second, with 60 s = 1 minute and 60 min = 1 hour.",
+          "revisionNotes": [
+            "Time measured by regular repeating events.",
+            "Pendulum's time period is fixed.",
+            "SI unit of time = second (s).",
+            "60 s = 1 min; 60 min = 1 hour."
+          ]
+        },
+        {
+          "topicId": "sci7_ch8_topic2",
+          "topic": "Speed",
+          "meaning": "Speed is how fast an object moves, found by dividing the distance travelled by the time taken.",
+          "ncertBasedExplanation": "Speed tells us how fast or slow an object is moving. It is defined as the distance travelled by an object in a given time. We calculate speed using the formula: speed = distance / time. The unit of speed depends on the units of distance and time, for example metres per second (m/s) or kilometres per hour (km/h). An object that covers more distance in the same time has a greater speed. By knowing any two of speed, distance and time, we can find the third. Speed helps us compare how fast different objects, like a walking person and a moving car, are travelling.",
+          "easyExplanation": "Speed is how fast something moves: speed = distance ÷ time. It is measured in m/s or km/h. More distance in the same time means more speed.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "What speed is",
+              "explanation": "Speed is the distance travelled by an object in a given time."
+            },
+            {
+              "step": 2,
+              "title": "The formula",
+              "explanation": "Speed = distance / time."
+            },
+            {
+              "step": 3,
+              "title": "Units",
+              "explanation": "Speed is measured in metres per second (m/s) or kilometres per hour (km/h)."
+            },
+            {
+              "step": 4,
+              "title": "Comparing speeds",
+              "explanation": "An object covering more distance in the same time has greater speed."
+            }
+          ],
+          "examples": [
+            "A car covering 60 km in 1 hour has a speed of 60 km/h.",
+            "A faster runner covers more distance in the same time."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Speed",
+              "definition": "The distance travelled per unit time.",
+              "simpleExample": "His speed was 5 metres per second."
+            },
+            {
+              "keyword": "Distance",
+              "definition": "How far an object travels.",
+              "simpleExample": "The car covered a distance of 60 km."
+            },
+            {
+              "keyword": "Formula",
+              "definition": "A rule written with symbols.",
+              "simpleExample": "Speed = distance / time is a formula."
+            }
+          ],
+          "quickSummary": "Speed is how fast an object moves, calculated as distance divided by time, measured in m/s or km/h; an object covering more distance in the same time has a greater speed.",
+          "revisionNotes": [
+            "Speed = how fast an object moves.",
+            "Speed = distance / time.",
+            "Units: m/s, km/h.",
+            "More distance in same time = more speed."
+          ]
+        },
+        {
+          "topicId": "sci7_ch8_topic3",
+          "topic": "Uniform and Non-uniform Motion",
+          "meaning": "Motion is uniform when an object covers equal distances in equal times, and non-uniform when it does not.",
+          "ncertBasedExplanation": "When an object moves, its motion can be uniform or non-uniform. In uniform motion, the object covers equal distances in equal intervals of time, so its speed stays the same, like a car moving steadily at 40 km/h. In non-uniform motion, the object covers unequal distances in equal intervals of time, so its speed keeps changing, like a bus that speeds up and slows down in traffic. We can show motion using a distance-time graph: a straight line shows uniform motion, while a curved line shows non-uniform motion. Understanding these helps us describe how objects move.",
+          "easyExplanation": "In uniform motion, an object covers equal distances in equal times (steady speed). In non-uniform motion, the speed keeps changing, like a bus in traffic.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Two kinds of motion",
+              "explanation": "Motion can be uniform or non-uniform."
+            },
+            {
+              "step": 2,
+              "title": "Uniform motion",
+              "explanation": "The object covers equal distances in equal times, so speed stays the same."
+            },
+            {
+              "step": 3,
+              "title": "Non-uniform motion",
+              "explanation": "The object covers unequal distances in equal times, so speed changes."
+            },
+            {
+              "step": 4,
+              "title": "Distance-time graph",
+              "explanation": "A straight line shows uniform motion; a curved line shows non-uniform motion."
+            }
+          ],
+          "examples": [
+            "A car moving steadily at 40 km/h shows uniform motion.",
+            "A bus speeding up and slowing in traffic shows non-uniform motion."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Uniform motion",
+              "definition": "Motion with equal distances in equal times.",
+              "simpleExample": "A train at steady speed shows uniform motion."
+            },
+            {
+              "keyword": "Non-uniform motion",
+              "definition": "Motion with changing speed.",
+              "simpleExample": "A car in traffic shows non-uniform motion."
+            },
+            {
+              "keyword": "Distance-time graph",
+              "definition": "A graph of distance against time.",
+              "simpleExample": "A straight line means uniform motion."
+            }
+          ],
+          "quickSummary": "Motion is uniform when an object covers equal distances in equal times (steady speed) and non-uniform when it covers unequal distances (changing speed), shown by straight or curved distance-time graphs.",
+          "revisionNotes": [
+            "Uniform motion: equal distances in equal times.",
+            "Non-uniform motion: speed keeps changing.",
+            "Distance-time graph: straight = uniform.",
+            "Curved line = non-uniform motion."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 9,
+      "chapter": "Life Processes in Animals",
+      "topics": [
+        {
+          "topicId": "sci7_ch9_topic1",
+          "topic": "Nutrition in Animals (Digestion)",
+          "meaning": "Nutrition is the process by which animals take in food and break it down through digestion to get energy and materials.",
+          "ncertBasedExplanation": "Animals cannot make their own food, so they take it in from outside; this is called nutrition. The food must be broken down into simpler substances that the body can absorb and use; this breaking down is called digestion. In human beings, digestion takes place in the digestive system, which includes the mouth, food pipe, stomach and intestines. Food is chewed in the mouth, churned in the stomach, and digested further in the intestines, where useful substances are absorbed into the blood, and the undigested waste is removed. Different animals digest food in different ways suited to what they eat.",
+          "easyExplanation": "Animals take in food (nutrition) and break it down (digestion) to get energy. In humans, food passes through the mouth, stomach and intestines, where it is digested and absorbed.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Animals need food",
+              "explanation": "Animals take in food from outside; this is nutrition."
+            },
+            {
+              "step": 2,
+              "title": "Digestion breaks food",
+              "explanation": "Food is broken down into simpler substances the body can absorb; this is digestion."
+            },
+            {
+              "step": 3,
+              "title": "The digestive system",
+              "explanation": "In humans, digestion happens in the mouth, food pipe, stomach and intestines."
+            },
+            {
+              "step": 4,
+              "title": "Absorb and remove",
+              "explanation": "Useful substances are absorbed into the blood, and waste is removed."
+            }
+          ],
+          "examples": [
+            "Food is chewed in the mouth and digested further in the stomach and intestines.",
+            "Different animals, like cows and lions, digest food in different ways."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Nutrition",
+              "definition": "Taking in and using food.",
+              "simpleExample": "Animals need nutrition to live."
+            },
+            {
+              "keyword": "Digestion",
+              "definition": "Breaking food into simpler substances.",
+              "simpleExample": "Digestion happens in the stomach and intestines."
+            },
+            {
+              "keyword": "Digestive system",
+              "definition": "The organs that digest food.",
+              "simpleExample": "The stomach is part of the digestive system."
+            }
+          ],
+          "quickSummary": "Nutrition is how animals take in food and digestion breaks it into simpler substances; in humans, food is digested through the mouth, stomach and intestines, then absorbed, with waste removed.",
+          "revisionNotes": [
+            "Nutrition = taking in food.",
+            "Digestion = breaking food into simpler substances.",
+            "Human digestion: mouth, food pipe, stomach, intestines.",
+            "Useful parts absorbed; waste removed."
+          ]
+        },
+        {
+          "topicId": "sci7_ch9_topic2",
+          "topic": "Respiration in Animals",
+          "meaning": "Respiration is the process by which animals take in oxygen and release carbon dioxide to get energy from food.",
+          "ncertBasedExplanation": "Respiration is the life process by which living things release energy from food. Animals take in oxygen from the air and use it to break down food inside their cells, releasing energy and giving out carbon dioxide. The taking in of oxygen and giving out of carbon dioxide is called breathing, which is part of respiration. Different animals breathe through different organs: humans and many animals use lungs, fish use gills to breathe in water, insects use tiny tubes, and earthworms breathe through their moist skin. Respiration provides the energy that animals need to live and carry out all their activities.",
+          "easyExplanation": "Respiration is how animals get energy from food using oxygen, giving out carbon dioxide. Humans use lungs, fish use gills, and earthworms breathe through their skin.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Releasing energy",
+              "explanation": "Respiration releases energy from food in the body."
+            },
+            {
+              "step": 2,
+              "title": "Oxygen and carbon dioxide",
+              "explanation": "Animals take in oxygen and give out carbon dioxide."
+            },
+            {
+              "step": 3,
+              "title": "Breathing",
+              "explanation": "Taking in oxygen and giving out carbon dioxide is breathing, part of respiration."
+            },
+            {
+              "step": 4,
+              "title": "Different breathing organs",
+              "explanation": "Humans use lungs, fish use gills, insects use tubes, earthworms use skin."
+            }
+          ],
+          "examples": [
+            "Humans breathe in oxygen and breathe out carbon dioxide using lungs.",
+            "Fish use gills to breathe oxygen dissolved in water."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Respiration",
+              "definition": "Releasing energy from food using oxygen.",
+              "simpleExample": "Respiration gives animals energy."
+            },
+            {
+              "keyword": "Breathing",
+              "definition": "Taking in oxygen and giving out carbon dioxide.",
+              "simpleExample": "We breathe using our lungs."
+            },
+            {
+              "keyword": "Gills",
+              "definition": "Organs fish use to breathe in water.",
+              "simpleExample": "Fish breathe through gills."
+            }
+          ],
+          "quickSummary": "Respiration is how animals release energy from food using oxygen and give out carbon dioxide; different animals breathe through different organs like lungs, gills, tubes or skin.",
+          "revisionNotes": [
+            "Respiration = energy from food using oxygen.",
+            "Take in oxygen, give out carbon dioxide.",
+            "Breathing is part of respiration.",
+            "Organs: lungs, gills, tubes, moist skin."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 10,
+      "chapter": "Life Processes in Plants",
+      "topics": [
+        {
+          "topicId": "sci7_ch10_topic1",
+          "topic": "Photosynthesis: How Plants Make Food",
+          "meaning": "Photosynthesis is the process by which green plants make their own food using sunlight, water and carbon dioxide.",
+          "ncertBasedExplanation": "Unlike animals, green plants make their own food through a process called photosynthesis. This takes place mainly in the green leaves, which contain a green substance called chlorophyll. In photosynthesis, the leaves take in carbon dioxide from the air through tiny pores called stomata, absorb water from the soil through the roots, and use the energy of sunlight captured by chlorophyll to make food (a sugar) and release oxygen. Because plants make food, they are called producers, and almost all other living things depend on them. Photosynthesis also keeps the air balanced by using carbon dioxide and giving out oxygen.",
+          "easyExplanation": "Green plants make their own food by photosynthesis, using sunlight, water and carbon dioxide in their leaves (with chlorophyll), and release oxygen.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Plants make food",
+              "explanation": "Green plants make their own food by photosynthesis, mainly in the leaves."
+            },
+            {
+              "step": 2,
+              "title": "Chlorophyll and sunlight",
+              "explanation": "The green substance chlorophyll captures sunlight's energy."
+            },
+            {
+              "step": 3,
+              "title": "Raw materials",
+              "explanation": "Leaves take in carbon dioxide through stomata and water from the roots."
+            },
+            {
+              "step": 4,
+              "title": "Food and oxygen",
+              "explanation": "They make food (sugar) and release oxygen; plants are producers."
+            }
+          ],
+          "examples": [
+            "Leaves use sunlight, water and carbon dioxide to make food.",
+            "Plants release oxygen during photosynthesis, which we breathe."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Photosynthesis",
+              "definition": "The process by which plants make food using sunlight.",
+              "simpleExample": "Leaves carry out photosynthesis."
+            },
+            {
+              "keyword": "Chlorophyll",
+              "definition": "The green substance in leaves that captures sunlight.",
+              "simpleExample": "Chlorophyll makes leaves green."
+            },
+            {
+              "keyword": "Stomata",
+              "definition": "Tiny pores in leaves for gas exchange.",
+              "simpleExample": "Carbon dioxide enters through stomata."
+            }
+          ],
+          "quickSummary": "Photosynthesis is how green plants make their own food using sunlight, water and carbon dioxide in their chlorophyll-containing leaves, releasing oxygen; plants are producers.",
+          "revisionNotes": [
+            "Plants make food by photosynthesis.",
+            "Needs sunlight, water, carbon dioxide, chlorophyll.",
+            "Happens in leaves; stomata take in CO2.",
+            "Releases oxygen; plants are producers."
+          ]
+        },
+        {
+          "topicId": "sci7_ch10_topic2",
+          "topic": "Transport in Plants",
+          "meaning": "Plants transport water, minerals and food to all their parts through special tube-like tissues.",
+          "ncertBasedExplanation": "Just as our body carries materials around, plants also transport substances to all their parts. Water and minerals are absorbed from the soil by the roots and carried upwards to the leaves through tube-like tissues called xylem. The food made in the leaves by photosynthesis is carried to all other parts of the plant, like the stem, roots, flowers and fruits, through another set of tubes called phloem. This transport system makes sure every part of the plant gets the water, minerals and food it needs to grow and stay alive.",
+          "easyExplanation": "Plants transport water and minerals up from the roots through xylem, and carry food made in leaves to all parts through phloem.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Plants transport materials",
+              "explanation": "Plants carry water, minerals and food to all their parts."
+            },
+            {
+              "step": 2,
+              "title": "Xylem carries water",
+              "explanation": "Water and minerals from the roots travel up through tubes called xylem."
+            },
+            {
+              "step": 3,
+              "title": "Phloem carries food",
+              "explanation": "Food made in the leaves is carried to all parts through tubes called phloem."
+            },
+            {
+              "step": 4,
+              "title": "Every part is fed",
+              "explanation": "This transport keeps every part of the plant supplied and alive."
+            }
+          ],
+          "examples": [
+            "Water absorbed by roots travels up to the leaves through xylem.",
+            "Food made in leaves reaches the roots and fruits through phloem."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Xylem",
+              "definition": "Tubes that carry water and minerals up the plant.",
+              "simpleExample": "Xylem carries water from roots to leaves."
+            },
+            {
+              "keyword": "Phloem",
+              "definition": "Tubes that carry food to all parts of the plant.",
+              "simpleExample": "Phloem carries food from the leaves."
+            },
+            {
+              "keyword": "Transport",
+              "definition": "Carrying materials from one place to another.",
+              "simpleExample": "Plants transport water and food."
+            }
+          ],
+          "quickSummary": "Plants transport water and minerals upward from the roots through xylem, and carry food from the leaves to all parts through phloem, keeping every part supplied.",
+          "revisionNotes": [
+            "Plants transport water, minerals and food.",
+            "Xylem: carries water and minerals up.",
+            "Phloem: carries food to all parts.",
+            "Keeps every part of the plant supplied."
+          ]
+        },
+        {
+          "topicId": "sci7_ch10_topic3",
+          "topic": "Respiration in Plants",
+          "meaning": "Plants also respire, taking in oxygen and releasing carbon dioxide to get energy from their food.",
+          "ncertBasedExplanation": "Like all living things, plants also respire to get energy from their food. During respiration, plant cells take in oxygen and use it to break down food, releasing energy and giving out carbon dioxide. Respiration happens all the time, day and night, in all parts of the plant, including the leaves, stems and roots. Gases are exchanged through tiny pores in the leaves (stomata) and through openings in the stems and roots. It is important to note that photosynthesis (making food) happens only in light, while respiration (using food for energy) happens all the time.",
+          "easyExplanation": "Plants respire too, taking in oxygen and giving out carbon dioxide to get energy. Respiration happens day and night, unlike photosynthesis which needs light.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Plants respire",
+              "explanation": "Plants respire to release energy from their food."
+            },
+            {
+              "step": 2,
+              "title": "Gas exchange",
+              "explanation": "Plant cells take in oxygen and give out carbon dioxide."
+            },
+            {
+              "step": 3,
+              "title": "All the time",
+              "explanation": "Respiration happens day and night in all parts of the plant."
+            },
+            {
+              "step": 4,
+              "title": "Different from photosynthesis",
+              "explanation": "Photosynthesis needs light, but respiration happens all the time."
+            }
+          ],
+          "examples": [
+            "Plants take in oxygen and give out carbon dioxide during respiration at night.",
+            "Roots respire using oxygen from the air in the soil."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Respiration",
+              "definition": "Releasing energy from food using oxygen.",
+              "simpleExample": "Plants respire to get energy."
+            },
+            {
+              "keyword": "Stomata",
+              "definition": "Pores in leaves for gas exchange.",
+              "simpleExample": "Gases pass through stomata."
+            },
+            {
+              "keyword": "Energy",
+              "definition": "The power needed for life activities.",
+              "simpleExample": "Respiration gives plants energy."
+            }
+          ],
+          "quickSummary": "Plants respire to get energy from food, taking in oxygen and releasing carbon dioxide; respiration happens all the time in all parts, unlike photosynthesis which needs light.",
+          "revisionNotes": [
+            "Plants respire to get energy.",
+            "Take in oxygen, give out carbon dioxide.",
+            "Happens day and night, in all parts.",
+            "Photosynthesis needs light; respiration is always."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 11,
+      "chapter": "Light: Shadows and Reflections",
+      "topics": [
+        {
+          "topicId": "sci7_ch11_topic1",
+          "topic": "Sources of Light and Straight-line Travel",
+          "meaning": "Light comes from luminous sources and travels in a straight line.",
+          "ncertBasedExplanation": "We are able to see things because of light. Objects that give out their own light are called luminous objects, such as the Sun, a lighted bulb and a flame. Objects that do not give out their own light but are seen because they reflect light are called non-luminous objects, like the Moon, a book or a chair. An important property of light is that it travels in a straight line. We can show this because light cannot bend around corners, and it is the reason that shadows form and that we cannot see around bends. This straight-line travel of light explains many things we see every day.",
+          "easyExplanation": "Light comes from luminous objects (Sun, bulb) and travels in a straight line. Non-luminous objects (Moon, book) are seen by reflected light.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Light lets us see",
+              "explanation": "We see things because of light."
+            },
+            {
+              "step": 2,
+              "title": "Luminous objects",
+              "explanation": "Luminous objects give out their own light, like the Sun and a bulb."
+            },
+            {
+              "step": 3,
+              "title": "Non-luminous objects",
+              "explanation": "Non-luminous objects, like the Moon and a book, are seen by reflected light."
+            },
+            {
+              "step": 4,
+              "title": "Straight-line travel",
+              "explanation": "Light travels in a straight line, which is why shadows form."
+            }
+          ],
+          "examples": [
+            "The Sun is a luminous object; the Moon is non-luminous.",
+            "Light cannot bend around a corner because it travels in a straight line."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Luminous",
+              "definition": "Giving out its own light.",
+              "simpleExample": "A torch is a luminous object."
+            },
+            {
+              "keyword": "Non-luminous",
+              "definition": "Not giving out its own light.",
+              "simpleExample": "A book is a non-luminous object."
+            },
+            {
+              "keyword": "Straight line",
+              "definition": "A path with no bends.",
+              "simpleExample": "Light travels in a straight line."
+            }
+          ],
+          "quickSummary": "Light comes from luminous objects like the Sun and a bulb and travels in a straight line, while non-luminous objects like the Moon and a book are seen by reflected light.",
+          "revisionNotes": [
+            "We see because of light.",
+            "Luminous objects give their own light (Sun, bulb).",
+            "Non-luminous seen by reflected light (Moon, book).",
+            "Light travels in a straight line."
+          ]
+        },
+        {
+          "topicId": "sci7_ch11_topic2",
+          "topic": "Transparent, Translucent and Opaque Objects",
+          "meaning": "Objects are classified by how much light passes through them as transparent, translucent or opaque.",
+          "ncertBasedExplanation": "Different objects let different amounts of light pass through them. Transparent objects allow almost all light to pass through, so we can see clearly through them, like clear glass and water. Translucent objects allow only some light to pass through, so we can see only blurred images through them, like frosted glass or oily paper. Opaque objects do not allow any light to pass through, so we cannot see through them at all, like wood, metal and a book. Opaque objects block light and form clear shadows, while transparent objects barely form shadows.",
+          "easyExplanation": "Transparent objects let all light through (clear glass), translucent let some through (frosted glass), and opaque let none through (wood, metal).",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Light passing through",
+              "explanation": "Objects let different amounts of light pass through them."
+            },
+            {
+              "step": 2,
+              "title": "Transparent",
+              "explanation": "Transparent objects let almost all light through, like clear glass."
+            },
+            {
+              "step": 3,
+              "title": "Translucent",
+              "explanation": "Translucent objects let only some light through, like frosted glass."
+            },
+            {
+              "step": 4,
+              "title": "Opaque",
+              "explanation": "Opaque objects let no light through, like wood and metal, and form clear shadows."
+            }
+          ],
+          "examples": [
+            "Clear glass is transparent; frosted glass is translucent.",
+            "A wooden door is opaque and casts a clear shadow."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Transparent",
+              "definition": "Lets almost all light through.",
+              "simpleExample": "Clear water is transparent."
+            },
+            {
+              "keyword": "Translucent",
+              "definition": "Lets only some light through.",
+              "simpleExample": "Butter paper is translucent."
+            },
+            {
+              "keyword": "Opaque",
+              "definition": "Lets no light through.",
+              "simpleExample": "A metal sheet is opaque."
+            }
+          ],
+          "quickSummary": "Objects are transparent (let all light through, like clear glass), translucent (let some through, like frosted glass) or opaque (let none through, like wood), with opaque objects forming clear shadows.",
+          "revisionNotes": [
+            "Transparent: all light passes (clear glass).",
+            "Translucent: some light passes (frosted glass).",
+            "Opaque: no light passes (wood, metal).",
+            "Opaque objects form clear shadows."
+          ]
+        },
+        {
+          "topicId": "sci7_ch11_topic3",
+          "topic": "Shadows",
+          "meaning": "A shadow forms when an opaque object blocks light travelling in a straight line.",
+          "ncertBasedExplanation": "A shadow is the dark area that forms when an opaque object comes in the path of light. Because light travels in a straight line, the opaque object blocks it and a dark shape is formed on the other side, on a screen or the ground. To form a shadow we need a source of light, an opaque object, and a screen to catch the shadow. A shadow is always of the same shape as the outline of the object, and it is black regardless of the colour of the object. The size of the shadow changes with the position of the light and the object; for example, the Sun makes long shadows in the morning and evening and short shadows at noon.",
+          "easyExplanation": "A shadow forms when an opaque object blocks light. It needs a light source, an opaque object and a screen. Shadows are black and match the object's outline.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "What a shadow is",
+              "explanation": "A shadow is the dark area formed when an opaque object blocks light."
+            },
+            {
+              "step": 2,
+              "title": "Why it forms",
+              "explanation": "Light travels in a straight line, so the opaque object blocks it."
+            },
+            {
+              "step": 3,
+              "title": "What is needed",
+              "explanation": "A shadow needs a light source, an opaque object and a screen."
+            },
+            {
+              "step": 4,
+              "title": "Shape and size",
+              "explanation": "A shadow matches the object's outline, is always black, and changes size with positions."
+            }
+          ],
+          "examples": [
+            "Our shadow forms on the ground when we block sunlight.",
+            "Shadows are long in the morning and short at noon."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Shadow",
+              "definition": "The dark shape formed when an object blocks light.",
+              "simpleExample": "A tree casts a shadow."
+            },
+            {
+              "keyword": "Opaque",
+              "definition": "Not letting light pass through.",
+              "simpleExample": "Only opaque objects form clear shadows."
+            },
+            {
+              "keyword": "Screen",
+              "definition": "A surface on which a shadow falls.",
+              "simpleExample": "A wall can act as a screen."
+            }
+          ],
+          "quickSummary": "A shadow forms when an opaque object blocks light travelling in a straight line; it needs a light source, an opaque object and a screen, and is always black and shaped like the object's outline.",
+          "revisionNotes": [
+            "Shadow = dark area where light is blocked.",
+            "Forms because light travels straight.",
+            "Needs light source, opaque object, screen.",
+            "Always black; matches object's outline; size varies."
+          ]
+        },
+        {
+          "topicId": "sci7_ch11_topic4",
+          "topic": "Reflection and Images in a Plane Mirror",
+          "meaning": "Light bounces off shiny surfaces (reflection), and a plane mirror forms a clear image of objects.",
+          "ncertBasedExplanation": "When light falls on a shiny, smooth surface like a mirror, it bounces back; this bouncing back of light is called reflection. A plane mirror is a flat, shiny surface that reflects light to form a clear image. The image formed in a plane mirror has special features: it is the same size as the object, it is upright (the right way up), it appears to be as far behind the mirror as the object is in front, and it is laterally inverted, meaning left and right are exchanged (your right hand looks like the left hand of the image). A pinhole camera, which uses a tiny hole instead of a mirror, forms a small, inverted image, showing that light travels in straight lines.",
+          "easyExplanation": "Light bounces off shiny surfaces (reflection). A plane mirror forms an image that is the same size, upright, and laterally inverted (left-right swapped).",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Reflection",
+              "explanation": "Light bouncing back from a shiny, smooth surface is reflection."
+            },
+            {
+              "step": 2,
+              "title": "Plane mirror image",
+              "explanation": "A plane mirror forms a clear image of the object."
+            },
+            {
+              "step": 3,
+              "title": "Features of the image",
+              "explanation": "The image is the same size, upright, and as far behind as the object is in front."
+            },
+            {
+              "step": 4,
+              "title": "Laterally inverted",
+              "explanation": "Left and right are exchanged, so your right hand looks like the image's left."
+            }
+          ],
+          "examples": [
+            "Your image in a flat mirror is the same size as you but with left and right swapped.",
+            "A pinhole camera forms a small, inverted image of an object."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Reflection",
+              "definition": "The bouncing back of light from a surface.",
+              "simpleExample": "A mirror shows reflection."
+            },
+            {
+              "keyword": "Plane mirror",
+              "definition": "A flat, shiny surface that reflects light.",
+              "simpleExample": "We see ourselves in a plane mirror."
+            },
+            {
+              "keyword": "Laterally inverted",
+              "definition": "Having left and right exchanged.",
+              "simpleExample": "A mirror image is laterally inverted."
+            }
+          ],
+          "quickSummary": "Reflection is light bouncing off a shiny surface; a plane mirror forms an image that is the same size, upright, as far behind as the object is in front, and laterally inverted.",
+          "revisionNotes": [
+            "Reflection = light bouncing off a surface.",
+            "Plane mirror forms a clear image.",
+            "Image: same size, upright, equally far behind.",
+            "Image is laterally inverted (left-right swapped)."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 12,
+      "chapter": "Earth, Moon, and the Sun",
+      "topics": [
+        {
+          "topicId": "sci7_ch12_topic1",
+          "topic": "Rotation of the Earth (Day and Night)",
+          "meaning": "The Earth spins on its axis, which causes day and night.",
+          "ncertBasedExplanation": "The Earth spins, or rotates, on its own imaginary axis like a top, taking about 24 hours to complete one rotation. Because of this rotation, at any moment one half of the Earth faces the Sun and has daytime, while the other half faces away and has night-time. As the Earth keeps turning, places move from day into night and from night into day. This is why the Sun appears to rise in the east and set in the west, even though it is really the Earth that is moving. The rotation of the Earth gives us the regular cycle of day and night.",
+          "easyExplanation": "The Earth spins on its axis once every 24 hours. The half facing the Sun has day; the half facing away has night. This causes day and night.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Earth rotates",
+              "explanation": "The Earth spins on its axis, taking about 24 hours for one rotation."
+            },
+            {
+              "step": 2,
+              "title": "Day side",
+              "explanation": "The half of the Earth facing the Sun has daytime."
+            },
+            {
+              "step": 3,
+              "title": "Night side",
+              "explanation": "The half facing away from the Sun has night-time."
+            },
+            {
+              "step": 4,
+              "title": "Sun's apparent path",
+              "explanation": "Because of rotation, the Sun appears to rise in the east and set in the west."
+            }
+          ],
+          "examples": [
+            "When it is day in India, it is night on the opposite side of the Earth.",
+            "The Sun appears to move across the sky because the Earth rotates."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Rotation",
+              "definition": "The spinning of the Earth on its axis.",
+              "simpleExample": "Rotation causes day and night."
+            },
+            {
+              "keyword": "Axis",
+              "definition": "The imaginary line the Earth spins around.",
+              "simpleExample": "The Earth tilts on its axis."
+            },
+            {
+              "keyword": "Day and night",
+              "definition": "The cycle of light and dark.",
+              "simpleExample": "Rotation gives us day and night."
+            }
+          ],
+          "quickSummary": "The Earth spins on its axis about once every 24 hours, so the half facing the Sun has day and the half facing away has night, giving us the cycle of day and night.",
+          "revisionNotes": [
+            "Earth rotates on its axis (~24 hours).",
+            "Half facing Sun = day.",
+            "Half facing away = night.",
+            "Causes day and night; Sun rises in the east."
+          ]
+        },
+        {
+          "topicId": "sci7_ch12_topic2",
+          "topic": "Revolution of the Earth and Seasons",
+          "meaning": "The Earth revolves around the Sun once a year, and its tilt causes the seasons.",
+          "ncertBasedExplanation": "Besides spinning on its axis, the Earth also moves around the Sun in a fixed path called its orbit; this movement is called revolution, and it takes about 365 days (one year) to complete. The Earth's axis is tilted, and because of this tilt, different parts of the Earth receive different amounts of sunlight at different times of the year. This is what causes the seasons, summer, winter and others, as the Earth revolves around the Sun. When a part of the Earth is tilted towards the Sun it has summer, and when tilted away it has winter. So the revolution of the tilted Earth around the Sun gives us the changing seasons through the year.",
+          "easyExplanation": "The Earth revolves around the Sun once a year (about 365 days). Because the Earth's axis is tilted, different parts get different sunlight, causing the seasons.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Earth revolves",
+              "explanation": "The Earth moves around the Sun in its orbit; this is revolution, taking about 365 days."
+            },
+            {
+              "step": 2,
+              "title": "The tilted axis",
+              "explanation": "The Earth's axis is tilted as it revolves."
+            },
+            {
+              "step": 3,
+              "title": "Different sunlight",
+              "explanation": "Because of the tilt, different parts get different amounts of sunlight through the year."
+            },
+            {
+              "step": 4,
+              "title": "Seasons",
+              "explanation": "This causes the seasons: summer when tilted towards the Sun, winter when tilted away."
+            }
+          ],
+          "examples": [
+            "The Earth takes about 365 days to revolve once around the Sun.",
+            "A part of the Earth tilted towards the Sun experiences summer."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Revolution",
+              "definition": "The Earth's movement around the Sun.",
+              "simpleExample": "One revolution takes a year."
+            },
+            {
+              "keyword": "Orbit",
+              "definition": "The fixed path of the Earth around the Sun.",
+              "simpleExample": "The Earth moves in its orbit."
+            },
+            {
+              "keyword": "Season",
+              "definition": "A part of the year with its own weather.",
+              "simpleExample": "Summer and winter are seasons."
+            }
+          ],
+          "quickSummary": "The Earth revolves around the Sun once a year along its orbit, and because its axis is tilted, different parts receive different sunlight through the year, causing the seasons.",
+          "revisionNotes": [
+            "Earth revolves around the Sun (~365 days).",
+            "Path = orbit; movement = revolution.",
+            "Earth's axis is tilted.",
+            "Tilt + revolution causes the seasons."
+          ]
+        },
+        {
+          "topicId": "sci7_ch12_topic3",
+          "topic": "Phases of the Moon",
+          "meaning": "The Moon appears to change its shape over a month because we see different amounts of its sunlit part.",
+          "ncertBasedExplanation": "The Moon does not give out its own light; we see it because it reflects sunlight. The Moon moves around the Earth, taking about a month to complete one round. As it moves, we see different amounts of the Moon's sunlit half from the Earth, so the Moon appears to change its shape from night to night. These different shapes are called the phases of the Moon. They range from the thin crescent, to the half Moon, to the bright full Moon, and back to the new Moon (when we cannot see the Moon at all). The phases repeat in a regular cycle of about a month.",
+          "easyExplanation": "The Moon reflects sunlight and moves around the Earth in about a month. We see different amounts of its sunlit part, so it appears to change shape: the phases of the Moon.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Moon reflects light",
+              "explanation": "The Moon does not give its own light; we see its reflected sunlight."
+            },
+            {
+              "step": 2,
+              "title": "Moon orbits Earth",
+              "explanation": "The Moon moves around the Earth in about one month."
+            },
+            {
+              "step": 3,
+              "title": "Changing view",
+              "explanation": "We see different amounts of the Moon's sunlit half from Earth."
+            },
+            {
+              "step": 4,
+              "title": "Phases",
+              "explanation": "This makes the Moon appear to change shape: crescent, half, full and new Moon."
+            }
+          ],
+          "examples": [
+            "The full Moon is when we see the whole sunlit side of the Moon.",
+            "On a new Moon night, the Moon cannot be seen at all."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Phases of the Moon",
+              "definition": "The different shapes the Moon appears to take.",
+              "simpleExample": "The full Moon is a phase."
+            },
+            {
+              "keyword": "Full Moon",
+              "definition": "When the whole sunlit Moon is seen.",
+              "simpleExample": "The full Moon is bright and round."
+            },
+            {
+              "keyword": "New Moon",
+              "definition": "When the Moon cannot be seen.",
+              "simpleExample": "On a new Moon night the sky is dark."
+            }
+          ],
+          "quickSummary": "The Moon reflects sunlight and orbits the Earth in about a month; we see different amounts of its sunlit part, so it appears to change shape through the phases of the Moon.",
+          "revisionNotes": [
+            "Moon reflects sunlight (no own light).",
+            "Moon orbits Earth in about a month.",
+            "We see different amounts of its sunlit half.",
+            "Phases: crescent, half, full, new Moon."
+          ]
+        },
+        {
+          "topicId": "sci7_ch12_topic4",
+          "topic": "Eclipses",
+          "meaning": "An eclipse happens when one heavenly body comes in the shadow of another; there are solar and lunar eclipses.",
+          "ncertBasedExplanation": "An eclipse occurs when the Sun, the Earth and the Moon come in a straight line, so that one casts a shadow on the other. In a solar eclipse, the Moon comes between the Sun and the Earth and blocks the Sun's light, so the Sun is hidden, fully or partly, for people in the Moon's shadow; this happens on a new Moon day. In a lunar eclipse, the Earth comes between the Sun and the Moon, so the Earth's shadow falls on the Moon and the Moon is hidden; this happens on a full Moon day. We should never look directly at a solar eclipse, as it can harm our eyes. Eclipses are natural events caused by the straight-line travel of light and the movement of these bodies.",
+          "easyExplanation": "An eclipse happens when the Sun, Earth and Moon line up. In a solar eclipse the Moon hides the Sun; in a lunar eclipse the Earth's shadow falls on the Moon.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "What an eclipse is",
+              "explanation": "An eclipse happens when the Sun, Earth and Moon line up and one shadows another."
+            },
+            {
+              "step": 2,
+              "title": "Solar eclipse",
+              "explanation": "The Moon comes between the Sun and Earth, blocking the Sun's light (on a new Moon day)."
+            },
+            {
+              "step": 3,
+              "title": "Lunar eclipse",
+              "explanation": "The Earth comes between the Sun and Moon, casting its shadow on the Moon (on a full Moon day)."
+            },
+            {
+              "step": 4,
+              "title": "Safety",
+              "explanation": "Never look directly at a solar eclipse, as it can harm the eyes."
+            }
+          ],
+          "examples": [
+            "In a solar eclipse, the Moon blocks the Sun's light from reaching part of the Earth.",
+            "In a lunar eclipse, the Earth's shadow falls on the Moon."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Eclipse",
+              "definition": "When one heavenly body comes in the shadow of another.",
+              "simpleExample": "A solar eclipse hides the Sun."
+            },
+            {
+              "keyword": "Solar eclipse",
+              "definition": "When the Moon blocks the Sun.",
+              "simpleExample": "A solar eclipse happens on a new Moon day."
+            },
+            {
+              "keyword": "Lunar eclipse",
+              "definition": "When the Earth's shadow falls on the Moon.",
+              "simpleExample": "A lunar eclipse happens on a full Moon day."
+            }
+          ],
+          "quickSummary": "An eclipse happens when the Sun, Earth and Moon line up; in a solar eclipse the Moon hides the Sun (new Moon day), and in a lunar eclipse the Earth's shadow falls on the Moon (full Moon day).",
+          "revisionNotes": [
+            "Eclipse = Sun, Earth, Moon in a line.",
+            "Solar eclipse: Moon hides the Sun (new Moon).",
+            "Lunar eclipse: Earth's shadow on Moon (full Moon).",
+            "Never look directly at a solar eclipse."
+          ]
+        }
+      ]
+    }
+  ]
+}
