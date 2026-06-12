@@ -7,6 +7,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent
 OUTPUT_PATH = BASE_DIR / "class_7_cbse_all_subjects.json"
 DEFAULT_SOURCE_DIR = BASE_DIR / "class7_ncert_json_notes"
+FRONTEND_SYLLABUS_PATH = BASE_DIR.parent.parent / "frontend" / "src" / "data" / "class7Syllabus.js"
 
 SOURCE_FILES = {
     "English": "class7_english.json",
@@ -181,6 +182,25 @@ def build_seed(source_dir: Path) -> list[dict]:
     return docs
 
 
+def build_frontend_syllabus(source_dir: Path) -> dict:
+    syllabus = {}
+    for subject in SOURCE_FILES:
+        data = load_subject_file(source_dir, subject)
+        syllabus[subject] = [
+            {
+                "title": str(chapter.get("chapter") or "").strip(),
+                "subtopics": [
+                    str(topic.get("topic") or "").strip()
+                    for topic in chapter.get("topics", [])
+                    if str(topic.get("topic") or "").strip()
+                ],
+            }
+            for chapter in data.get("chapters", [])
+            if str(chapter.get("chapter") or "").strip()
+        ]
+    return syllabus
+
+
 def main():
     parser = argparse.ArgumentParser(description="Generate Class 7 CBSE content seed from NCERT JSON notes.")
     parser.add_argument(
@@ -198,7 +218,15 @@ def main():
     docs = build_seed(Path(args.source_dir))
     output_path = Path(args.output)
     output_path.write_text(json.dumps(docs, ensure_ascii=False, indent=2), encoding="utf-8")
+    frontend_syllabus = build_frontend_syllabus(Path(args.source_dir))
+    FRONTEND_SYLLABUS_PATH.write_text(
+        "export const CLASS_7_CBSE_SYLLABUS = "
+        + json.dumps(frontend_syllabus, ensure_ascii=False, indent=2)
+        + ";\n",
+        encoding="utf-8",
+    )
     print(f"Wrote {len(docs)} content documents to {output_path}")
+    print(f"Wrote frontend syllabus to {FRONTEND_SYLLABUS_PATH}")
 
 
 if __name__ == "__main__":

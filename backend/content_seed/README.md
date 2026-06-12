@@ -13,7 +13,7 @@ Current seed:
 - Class 7 subjects: English, Maths, Sanskrit, Science, Social Science
 - Class 5 topics: 121 total topic documents generated from the reviewed NCERT JSON note files in `class5_ncert_json_notes`
 - Class 6 topics: 243 total topic documents. Maths, Science, Social Science, and English are generated from the detailed JSON files in `class6_teacher_style_json_v1`; Hindi is preserved from the existing Class 6 syllabus until a detailed Hindi JSON is added.
-- Class 7 topics: 233 total topic documents generated from the reviewed NCERT JSON note files in `class7_ncert_json_notes`.
+- Class 7 topics: 512 total topic documents generated from the reviewed NCERT JSON note files in `class7_ncert_json_notes`.
 
 The older `class_5_cbse_science.json` file is kept only as an early demo seed. The active Class 5 seed is generated from `class5_evs.json`, `class5_mathematics.json`, `class5_english.json`, `class5_hindi.json`, and `class5_art.json` in `class5_ncert_json_notes` using `generate_class_5_cbse_all_subjects.py`.
 The Class 6 seed is generated from `generate_class_6_cbse_all_subjects.py`.
@@ -151,6 +151,8 @@ Then run:
 ```cmd
 python backend\content_seed\generate_class_7_cbse_all_subjects.py
 ```
+
+This also regenerates `frontend/src/data/class7Syllabus.js` from the same source files.
 
 ## Frontend Behavior
 

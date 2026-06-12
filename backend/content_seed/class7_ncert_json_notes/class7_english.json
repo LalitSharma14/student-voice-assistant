@@ -10,11 +10,11 @@
       "chapter": "Unit 1: Learning Together",
       "topics": [
         {
-          "topicId": "eng7_unit1_topic1",
-          "topic": "The Day the River Spoke (Prose)",
-          "meaning": "A story about Jahnavi, a girl in a coastal village who has a dream, in which nature, like a river, seems to speak to her.",
-          "ncertBasedExplanation": "This is a story about a bright young girl named Jahnavi who lives with her parents and three brothers in a coastal village in India, where her parents work on the farm. Jahnavi has a big dream. In the story, the world of nature around her, including a river, seems to come alive and speak to her, with sounds that splash, slither and murmur. Through this magical experience and her own determination, Jahnavi learns about following her dream and listening closely to the world around her. The story encourages us to have dreams, to work to make them come true, and to pay attention to nature.",
-          "easyExplanation": "Jahnavi, a girl in a coastal village, has a dream. In the story, nature and a river seem to speak to her, teaching her to follow her dream and listen to the world.",
+          "topicId": "eng7_u1_t1",
+          "topic": "The Day the River Spoke - Summary",
+          "meaning": "A summary of the story about Jahnavi, a girl in a coastal village, and her experience with the river.",
+          "ncertBasedExplanation": "This story is about a bright young girl named Jahnavi who lives with her parents and three brothers in a coastal village in India, where her parents work on the farm. Jahnavi has a big dream. In the story, the world of nature around her, including the river, seems to come alive, with sounds that splash, slither and murmur, and the river seems to speak to her. Through this magical experience and her own determination, Jahnavi learns about following her dream and listening closely to the world around her.",
+          "easyExplanation": "Jahnavi, a girl in a coastal village, has a dream. In the story, nature and the river seem to speak to her, helping her learn to follow her dream.",
           "stepByStepExplanation": [
             {
               "step": 1,
@@ -24,74 +24,131 @@
             {
               "step": 2,
               "title": "She has a dream",
-              "explanation": "Jahnavi has a big dream she wants to make come true."
+              "explanation": "Jahnavi has a big dream she wants to fulfil."
             },
             {
               "step": 3,
-              "title": "Nature speaks",
-              "explanation": "In the story, the river and nature seem to come alive and speak to her."
+              "title": "Nature comes alive",
+              "explanation": "The river and nature seem to come alive and speak to her."
             },
             {
               "step": 4,
-              "title": "The lesson",
-              "explanation": "She learns to follow her dream and to listen closely to the world around her."
+              "title": "She learns",
+              "explanation": "She learns to follow her dream and listen to the world around her."
             }
           ],
           "examples": [
-            "Jahnavi lives in a coastal village and dreams of a better future.",
-            "The river and nature seem to speak to Jahnavi in the story."
+            "Jahnavi lives in a coastal village and has a big dream.",
+            "The river seems to speak to Jahnavi in the story."
           ],
           "importantKeywords": [
-            {
-              "keyword": "Dream",
-              "definition": "A hope or goal for the future.",
-              "simpleExample": "Jahnavi had a dream to fulfil."
-            },
-            {
-              "keyword": "Murmuring",
-              "definition": "Speaking in a low, soft voice.",
-              "simpleExample": "The river was murmuring softly."
-            },
             {
               "keyword": "Coastal",
               "definition": "Near the sea coast.",
               "simpleExample": "Jahnavi lived in a coastal village."
+            },
+            {
+              "keyword": "Murmuring",
+              "definition": "Speaking in a low, soft voice.",
+              "simpleExample": "The river was murmuring."
+            },
+            {
+              "keyword": "Dream",
+              "definition": "A hope or goal.",
+              "simpleExample": "Jahnavi had a dream to fulfil."
             }
           ],
-          "quickSummary": "'The Day the River Spoke' is a story about Jahnavi, a girl in a coastal village with a dream, in which nature and a river seem to speak to her, teaching her to follow her dream and listen to the world.",
+          "quickSummary": "In 'The Day the River Spoke', Jahnavi, a girl in a coastal village with a big dream, experiences nature and the river seeming to speak to her, learning to follow her dream.",
           "revisionNotes": [
             "Genre: story (prose).",
             "Main character: Jahnavi, a coastal village girl.",
-            "Nature and the river seem to speak to her.",
-            "Theme: dreams and listening to the world around us."
+            "The river and nature seem to speak to her.",
+            "She learns to follow her dream."
           ]
         },
         {
-          "topicId": "eng7_unit1_topic2",
-          "topic": "Try Again (Poem)",
-          "meaning": "A poem about King Bruce of Scotland who learns the value of perseverance by watching a spider try again and again.",
-          "ncertBasedExplanation": "This well-loved poem tells the story of King Bruce of Scotland, who is feeling sad and discouraged because he has tried again and again to do a great deed for his people but has failed. As he sits in a lonely mood, he watches a little spider trying to climb up to its web. The spider falls many times but keeps trying, and at last it succeeds. Watching this, King Bruce takes heart and decides to try once more himself. The poem teaches the important lesson that we should never give up: if at first we do not succeed, we must 'try, try again'.",
-          "easyExplanation": "King Bruce of Scotland is sad after failing many times. Watching a spider keep trying until it succeeds, he learns never to give up: try, try again.",
+          "topicId": "eng7_u1_t2",
+          "topic": "The Day the River Spoke - Theme and Message",
+          "meaning": "The themes of dreams, determination and listening to nature in the story.",
+          "ncertBasedExplanation": "The main themes of 'The Day the River Spoke' are following one's dreams, determination, and our deep connection with nature. Through Jahnavi's story, the lesson shows that we should have dreams and work hard to make them come true. The way the river and nature 'speak' to Jahnavi suggests that if we observe and listen carefully, the world around us can teach us a great deal. The story encourages us to respect nature, to dream big, and to be determined. Its gentle, imaginative style helps us feel the closeness between a person and the natural world.",
+          "easyExplanation": "The story's themes are following dreams, determination and our connection with nature. It teaches us to dream big and to listen to the world around us.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Following dreams",
+              "explanation": "The story shows the value of having and working towards a dream."
+            },
+            {
+              "step": 2,
+              "title": "Determination",
+              "explanation": "Jahnavi's determination helps her move towards her dream."
+            },
+            {
+              "step": 3,
+              "title": "Connection with nature",
+              "explanation": "The 'speaking' river shows our deep connection with nature."
+            },
+            {
+              "step": 4,
+              "title": "The message",
+              "explanation": "Dream big, be determined, and listen to the world around you."
+            }
+          ],
+          "examples": [
+            "The story encourages us to dream big and be determined.",
+            "It shows a close connection between Jahnavi and nature."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Theme",
+              "definition": "The main idea of a story.",
+              "simpleExample": "A theme is following one's dreams."
+            },
+            {
+              "keyword": "Determination",
+              "definition": "Firmness of purpose.",
+              "simpleExample": "Determination helps fulfil dreams."
+            },
+            {
+              "keyword": "Nature",
+              "definition": "The natural world around us.",
+              "simpleExample": "The story shows a bond with nature."
+            }
+          ],
+          "quickSummary": "The themes of 'The Day the River Spoke' are following dreams, determination and our connection with nature, with the message to dream big and listen to the world around us.",
+          "revisionNotes": [
+            "Themes: dreams, determination, connection with nature.",
+            "Encourages dreaming big and working hard.",
+            "The 'speaking' river shows our bond with nature.",
+            "Message: observe and listen to the world."
+          ]
+        },
+        {
+          "topicId": "eng7_u1_t3",
+          "topic": "Try Again - Summary and Message",
+          "meaning": "A summary and the message of the poem about King Bruce and the spider.",
+          "ncertBasedExplanation": "'Try Again' is a well-loved poem about King Bruce of Scotland, who feels sad and discouraged because he has tried again and again to do a great deed for his people but has failed. As he sits alone, he watches a little spider trying to climb up to its web. The spider falls many times but keeps trying, and at last it succeeds. Watching this, King Bruce takes heart and decides to try once more himself. The poem's clear message is that we should never give up: if at first we do not succeed, we must 'try, try again'. It teaches the value of perseverance.",
+          "easyExplanation": "King Bruce, sad after failing many times, watches a spider keep trying until it succeeds, and learns never to give up: try, try again. The message is perseverance.",
           "stepByStepExplanation": [
             {
               "step": 1,
               "title": "King Bruce is sad",
-              "explanation": "King Bruce has failed many times in a great task and feels discouraged."
+              "explanation": "King Bruce has failed many times and feels discouraged."
             },
             {
               "step": 2,
-              "title": "He watches a spider",
-              "explanation": "He sees a little spider trying to climb up to its web."
+              "title": "Watches a spider",
+              "explanation": "He sees a spider trying to climb to its web."
             },
             {
               "step": 3,
               "title": "The spider succeeds",
-              "explanation": "The spider falls again and again but keeps trying until it succeeds."
+              "explanation": "The spider keeps trying until it succeeds."
             },
             {
               "step": 4,
-              "title": "The lesson",
-              "explanation": "King Bruce learns to try again; we must never give up."
+              "title": "The message",
+              "explanation": "Never give up: try, try again. The poem teaches perseverance."
             }
           ],
           "examples": [
@@ -106,54 +163,54 @@
             },
             {
               "keyword": "Discouraged",
-              "definition": "Having lost confidence or hope.",
+              "definition": "Having lost hope.",
               "simpleExample": "King Bruce felt discouraged after failing."
             },
             {
               "keyword": "Succeed",
-              "definition": "To achieve what one is trying to do.",
+              "definition": "To achieve one's aim.",
               "simpleExample": "The spider finally succeeded."
             }
           ],
-          "quickSummary": "'Try Again' is a poem in which King Bruce of Scotland, discouraged by failure, learns from a spider that keeps trying until it succeeds, teaching us never to give up.",
+          "quickSummary": "In 'Try Again', King Bruce of Scotland learns from a spider that keeps trying until it succeeds, teaching us never to give up and to keep trying, the value of perseverance.",
           "revisionNotes": [
             "Genre: poem.",
-            "King Bruce of Scotland learns from a spider.",
-            "The spider keeps trying until it succeeds.",
-            "Theme: perseverance; 'try, try again'."
+            "King Bruce learns from a spider.",
+            "Spider keeps trying until it succeeds.",
+            "Message: perseverance; try, try again."
           ]
         },
         {
-          "topicId": "eng7_unit1_topic3",
-          "topic": "Three Days to See (Prose)",
-          "meaning": "An essay by Helen Keller, who was blind and deaf, about how precious our senses are and what she would wish to see in three days.",
-          "ncertBasedExplanation": "This is a moving essay by Helen Keller, who could neither see nor hear, yet led a remarkable life. In it, she explains how she finds hundreds of things to interest her through touch alone, feeling the delicate shape of a leaf and the smoothness of objects. She imagines what she would do if she were given just three days to see, describing the people, nature and beautiful things she would want to look at. Through this, she reminds those who can see and hear to value their senses and not take them for granted. The essay teaches us to appreciate the precious gifts of sight and our other senses, and to truly notice the beauty of the world.",
-          "easyExplanation": "Helen Keller, who was blind and deaf, writes about appreciating our senses. She imagines what she would see in three days, urging us to value sight and not take it for granted.",
+          "topicId": "eng7_u1_t4",
+          "topic": "Three Days to See - Summary",
+          "meaning": "A summary of Helen Keller's essay about what she would do if she could see for three days.",
+          "ncertBasedExplanation": "'Three Days to See' is a moving essay by Helen Keller, who could neither see nor hear, yet led a remarkable life. In it, she explains how she finds hundreds of things to interest her through touch alone, feeling the delicate shape of a leaf and the smoothness of objects. She then imagines what she would do if she were given just three days to see, describing the people, nature and beautiful things she would most want to look at. Through this, she reminds those who can see and hear to value their senses and not take them for granted.",
+          "easyExplanation": "Helen Keller, who was blind and deaf, writes about appreciating our senses. She imagines what she would look at if she had just three days of sight.",
           "stepByStepExplanation": [
             {
               "step": 1,
               "title": "Helen Keller's world",
-              "explanation": "Helen Keller, who could not see or hear, found joy in the world through touch."
+              "explanation": "Helen Keller could not see or hear but found joy through touch."
             },
             {
               "step": 2,
-              "title": "Three days to see",
-              "explanation": "She imagines what she would look at if given just three days of sight."
+              "title": "Joy in touch",
+              "explanation": "She feels the delicate shapes of leaves and objects."
             },
             {
               "step": 3,
-              "title": "What she would see",
-              "explanation": "She describes the people, nature and beauty she would want to see."
+              "title": "Three days to see",
+              "explanation": "She imagines what she would look at if given three days of sight."
             },
             {
               "step": 4,
-              "title": "The lesson",
-              "explanation": "She urges those who can see and hear to value their senses and not take them for granted."
+              "title": "Her reminder",
+              "explanation": "She urges those who can see and hear to value their senses."
             }
           ],
           "examples": [
             "Helen Keller felt the delicate shape of a leaf through touch.",
-            "She reminds us to value our sight and other senses."
+            "She imagines what she would see in three days."
           ],
           "importantKeywords": [
             {
@@ -163,7 +220,7 @@
             },
             {
               "keyword": "Appreciate",
-              "definition": "To value and be grateful for something.",
+              "definition": "To value and be grateful for.",
               "simpleExample": "We should appreciate our senses."
             },
             {
@@ -172,12 +229,240 @@
               "simpleExample": "She felt the symmetry of a leaf."
             }
           ],
-          "quickSummary": "'Three Days to See' is an essay by Helen Keller, who was blind and deaf, about appreciating our senses; she imagines what she would see in three days, urging us to value sight and not take it for granted.",
+          "quickSummary": "'Three Days to See' is an essay by Helen Keller, who was blind and deaf, about appreciating our senses; she imagines what she would see in three days of sight.",
           "revisionNotes": [
             "Genre: essay (prose). Author: Helen Keller.",
-            "She was blind and deaf but found joy through touch.",
+            "Blind and deaf, she found joy through touch.",
             "Imagines what she'd see in three days.",
-            "Theme: value your senses; don't take them for granted."
+            "Reminds us to value our senses."
+          ]
+        },
+        {
+          "topicId": "eng7_u1_t5",
+          "topic": "Three Days to See - Theme and Message",
+          "meaning": "The theme of valuing our senses and not taking them for granted.",
+          "ncertBasedExplanation": "The central theme of 'Three Days to See' is the great value of our senses, especially sight, and the message that we should never take them for granted. Helen Keller, despite being unable to see or hear, lived a full life and found beauty in the world through touch. Her imagining of three days of sight makes us realise how much we who can see and hear ignore the beauty around us. The essay teaches gratitude, the importance of really noticing the world, and the courage to find joy despite difficulties. It is deeply inspiring and changes the way we look at our own senses.",
+          "easyExplanation": "The theme is the value of our senses, especially sight. The message is to be grateful for our senses, notice the world's beauty, and not take them for granted.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Value of senses",
+              "explanation": "The essay shows how precious our senses, especially sight, are."
+            },
+            {
+              "step": 2,
+              "title": "Don't take for granted",
+              "explanation": "It urges us not to take our senses for granted."
+            },
+            {
+              "step": 3,
+              "title": "Notice beauty",
+              "explanation": "It teaches us to really notice the beauty around us."
+            },
+            {
+              "step": 4,
+              "title": "Inspiring courage",
+              "explanation": "Helen Keller's courage and joy despite difficulty inspire us."
+            }
+          ],
+          "examples": [
+            "The essay reminds us to value our sight and other senses.",
+            "Helen Keller found beauty in the world despite being blind and deaf."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Theme",
+              "definition": "The main idea.",
+              "simpleExample": "The theme is valuing our senses."
+            },
+            {
+              "keyword": "Gratitude",
+              "definition": "Being thankful.",
+              "simpleExample": "The essay teaches gratitude."
+            },
+            {
+              "keyword": "Appreciate",
+              "definition": "To value something.",
+              "simpleExample": "We should appreciate sight."
+            }
+          ],
+          "quickSummary": "The theme of 'Three Days to See' is the great value of our senses, especially sight, with the message to be grateful, notice the world's beauty and not take our senses for granted.",
+          "revisionNotes": [
+            "Theme: the value of our senses (sight).",
+            "Message: don't take senses for granted.",
+            "Teaches gratitude and noticing beauty.",
+            "Helen Keller's courage is inspiring."
+          ]
+        },
+        {
+          "topicId": "eng7_u1_t6",
+          "topic": "Unit 1 - Vocabulary and Language",
+          "meaning": "Useful words, expressions and language features from the Unit 1 lessons.",
+          "ncertBasedExplanation": "Unit 1, 'Learning Together', introduces many useful new words and expressions. From 'The Day the River Spoke' we learn words connected with nature and sounds, like splashed, slithered, murmuring, startled and thicket. From 'Try Again' we meet words about effort and feeling, like discouraged, succeed and persevere. From 'Three Days to See' we learn words about the senses and appreciation, like symmetry, delicate, appreciate and grateful. The unit also helps us use descriptive language to write about nature and feelings, and to express the idea of trying hard and not giving up. Building this vocabulary helps us read, write and speak English better.",
+          "easyExplanation": "Unit 1 teaches words about nature and sounds (murmuring, thicket), effort (discouraged, persevere) and the senses (symmetry, appreciate), and descriptive language.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Words about nature",
+              "explanation": "Words like splashed, slithered, murmuring and thicket describe nature and sounds."
+            },
+            {
+              "step": 2,
+              "title": "Words about effort",
+              "explanation": "Words like discouraged, succeed and persevere describe effort and feeling."
+            },
+            {
+              "step": 3,
+              "title": "Words about senses",
+              "explanation": "Words like symmetry, delicate and appreciate describe the senses."
+            },
+            {
+              "step": 4,
+              "title": "Descriptive language",
+              "explanation": "The unit helps us write about nature, feelings and trying hard."
+            }
+          ],
+          "examples": [
+            "'Murmuring' means speaking in a low, soft voice.",
+            "'Persevere' means to keep trying despite difficulty."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Vocabulary",
+              "definition": "The words we learn and use.",
+              "simpleExample": "The unit builds our vocabulary."
+            },
+            {
+              "keyword": "Descriptive language",
+              "definition": "Words that paint a picture.",
+              "simpleExample": "Descriptive language describes nature."
+            },
+            {
+              "keyword": "Expression",
+              "definition": "A phrase used to convey meaning.",
+              "simpleExample": "'Never give up' is an expression."
+            }
+          ],
+          "quickSummary": "Unit 1 builds vocabulary about nature and sounds, effort and feelings, and the senses, and helps us use descriptive language to write about nature, feelings and perseverance.",
+          "revisionNotes": [
+            "Nature/sound words: murmuring, thicket, splashed.",
+            "Effort words: discouraged, succeed, persevere.",
+            "Senses words: symmetry, delicate, appreciate.",
+            "Practises descriptive language."
+          ]
+        },
+        {
+          "topicId": "eng7_u1_t7",
+          "topic": "Unit 1 - Theme: Learning Together",
+          "meaning": "How the three lessons of Unit 1 connect under the theme of 'Learning Together'.",
+          "ncertBasedExplanation": "The three lessons of Unit 1 are placed together under the theme 'Learning Together'. Each lesson teaches us something important about learning, growing and understanding the world. 'The Day the River Spoke' teaches us to learn from nature and to follow our dreams. 'Try Again' teaches us to learn perseverance, to keep trying and never give up. 'Three Days to See' teaches us to value our senses and learn to appreciate the world and people around us. Together, the lessons show that learning happens not only from books but from nature, from effort, and from reflecting on our own lives, and that we grow when we learn together and from one another.",
+          "easyExplanation": "Unit 1's three lessons share the theme 'Learning Together': learning from nature and dreams, learning perseverance, and learning to value our senses and the world.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "A shared theme",
+              "explanation": "The three lessons share the theme 'Learning Together'."
+            },
+            {
+              "step": 2,
+              "title": "Learning from nature",
+              "explanation": "'The Day the River Spoke' teaches us to learn from nature and follow dreams."
+            },
+            {
+              "step": 3,
+              "title": "Learning perseverance",
+              "explanation": "'Try Again' teaches us perseverance and never giving up."
+            },
+            {
+              "step": 4,
+              "title": "Learning to appreciate",
+              "explanation": "'Three Days to See' teaches us to value our senses and the world."
+            }
+          ],
+          "examples": [
+            "The unit shows learning from nature, effort and reflection.",
+            "Each lesson teaches something about learning and growing."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Theme",
+              "definition": "A connecting main idea.",
+              "simpleExample": "The unit's theme is 'Learning Together'."
+            },
+            {
+              "keyword": "Learning",
+              "definition": "Gaining knowledge or skills.",
+              "simpleExample": "We learn from nature and effort."
+            },
+            {
+              "keyword": "Growing",
+              "definition": "Developing as a person.",
+              "simpleExample": "Learning helps us grow."
+            }
+          ],
+          "quickSummary": "Unit 1's three lessons connect under the theme 'Learning Together', showing that we learn from nature and dreams, from perseverance, and from valuing our senses and the world.",
+          "revisionNotes": [
+            "Unit theme: 'Learning Together'.",
+            "Learn from nature and dreams.",
+            "Learn perseverance and never giving up.",
+            "Learn to value senses and the world."
+          ]
+        },
+        {
+          "topicId": "eng7_u1_t8",
+          "topic": "Unit 1 - Comprehension and Discussion",
+          "meaning": "Key questions and discussion points to understand and reflect on the Unit 1 lessons.",
+          "ncertBasedExplanation": "After reading the Unit 1 lessons, it is helpful to think about and discuss them to understand them fully. We can ask: What is Jahnavi's dream and how might she fulfil it? What did King Bruce learn from the spider, and when have we shown perseverance ourselves? How would our life be different if we could not see or hear, and which sense are we most grateful for? Discussing these questions with classmates and teachers helps us connect the lessons to our own lives. We can also share our own dreams, talk about times we kept trying, and think about how we use and value our senses. Such reflection makes our learning deeper and more personal.",
+          "easyExplanation": "Discussing key questions, like Jahnavi's dream, the spider's lesson, and valuing our senses, helps us understand the lessons and connect them to our own lives.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Ask about each lesson",
+              "explanation": "Think about Jahnavi's dream, the spider's lesson and Helen Keller's message."
+            },
+            {
+              "step": 2,
+              "title": "Connect to ourselves",
+              "explanation": "Relate the lessons to our own dreams, efforts and senses."
+            },
+            {
+              "step": 3,
+              "title": "Discuss together",
+              "explanation": "Share answers with classmates and teachers."
+            },
+            {
+              "step": 4,
+              "title": "Reflect deeply",
+              "explanation": "Reflection makes learning deeper and more personal."
+            }
+          ],
+          "examples": [
+            "We can discuss what perseverance means in our own lives.",
+            "Sharing our own dreams connects us to Jahnavi's story."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Comprehension",
+              "definition": "Understanding what we read.",
+              "simpleExample": "Questions check our comprehension."
+            },
+            {
+              "keyword": "Discussion",
+              "definition": "Talking over ideas together.",
+              "simpleExample": "Discussion deepens understanding."
+            },
+            {
+              "keyword": "Reflect",
+              "definition": "To think carefully about something.",
+              "simpleExample": "We reflect on the lessons."
+            }
+          ],
+          "quickSummary": "Discussing key questions about the Unit 1 lessons, such as dreams, perseverance and valuing our senses, helps us understand them and connect them to our own lives.",
+          "revisionNotes": [
+            "Discuss key questions about each lesson.",
+            "Connect lessons to our own lives.",
+            "Share with classmates and teachers.",
+            "Reflection deepens learning."
           ]
         }
       ]
@@ -187,10 +472,10 @@
       "chapter": "Unit 2: Wit and Humour",
       "topics": [
         {
-          "topicId": "eng7_unit2_topic1",
-          "topic": "Animals, Birds, and Dr. Dolittle (Prose)",
-          "meaning": "A story about Dr. Dolittle, a doctor who learns to talk to animals and understand their language.",
-          "ncertBasedExplanation": "This is a delightful story about Dr. Dolittle, a kind doctor who loves animals so much that he learns to talk to them and understand their language. By listening closely and observing their sounds and body language, he is able to communicate with all kinds of animals and birds, who become his friends and patients. The story is full of wit and humour and shows the special bond between humans and animals. It reminds us that if we observe animals carefully, we can understand a lot about what they are feeling and trying to tell us, and it encourages kindness towards all creatures.",
+          "topicId": "eng7_u2_t1",
+          "topic": "Animals, Birds, and Dr. Dolittle - Summary",
+          "meaning": "A summary of the story about Dr. Dolittle, who can talk to animals.",
+          "ncertBasedExplanation": "This is a delightful story about Dr. Dolittle, a kind doctor who loves animals so much that he learns to talk to them and understand their language. By listening closely and observing their sounds and body language, he is able to communicate with all kinds of animals and birds, who become his friends and patients. The story is full of wit and humour and shows the special bond between humans and animals. It reminds us that if we observe animals carefully, we can understand a lot about what they are feeling and trying to tell us.",
           "easyExplanation": "Dr. Dolittle is a kind doctor who learns to talk to animals and understand their language. The funny story shows the bond between humans and animals.",
           "stepByStepExplanation": [
             {
@@ -206,17 +491,17 @@
             {
               "step": 3,
               "title": "Understanding them",
-              "explanation": "By observing their sounds and body language, he communicates with them."
+              "explanation": "He observes their sounds and body language to communicate."
             },
             {
               "step": 4,
-              "title": "The message",
-              "explanation": "The story shows the bond between humans and animals and encourages kindness."
+              "title": "Bond with animals",
+              "explanation": "The story shows the special bond between humans and animals."
             }
           ],
           "examples": [
-            "Dr. Dolittle learns to understand and talk to all kinds of animals.",
-            "By observing body language, we can understand what animals feel."
+            "Dr. Dolittle learns to talk to all kinds of animals.",
+            "Observing body language helps us understand animals."
           ],
           "importantKeywords": [
             {
@@ -232,23 +517,80 @@
             {
               "keyword": "Wit",
               "definition": "Clever and amusing expression.",
-              "simpleExample": "The story is full of wit and humour."
+              "simpleExample": "The story is full of wit."
             }
           ],
-          "quickSummary": "'Animals, Birds, and Dr. Dolittle' is a witty story about a kind doctor who learns to talk to animals and understand their language, showing the special bond between humans and animals.",
+          "quickSummary": "'Animals, Birds, and Dr. Dolittle' is a witty story about a kind doctor who learns to talk to animals and understand their language, showing the bond between humans and animals.",
           "revisionNotes": [
             "Genre: story (prose).",
             "Dr. Dolittle talks to and understands animals.",
-            "He learns from their sounds and body language.",
-            "Theme: the bond between humans and animals; kindness."
+            "Learns from their sounds and body language.",
+            "Shows the bond between humans and animals."
           ]
         },
         {
-          "topicId": "eng7_unit2_topic2",
-          "topic": "A Funny Man (Poem)",
-          "meaning": "A humorous nonsense poem about a funny man who does everything in a silly, topsy-turvy way.",
-          "ncertBasedExplanation": "This is a light, humorous poem that describes a funny man the speaker meets walking down the street. The man does everything in a silly, mixed-up way: he wears a shoe upon his head and hats upon his feet, and behaves in odd but polite ways, such as offering a rose in a strange manner. The whole poem is a piece of nonsense humour, meant simply to make us laugh with its funny, topsy-turvy images. It shows how playful language and silly ideas can be great fun, and it celebrates the lighter, funnier side of life.",
-          "easyExplanation": "A funny man does everything in a silly, mixed-up way, like wearing a shoe on his head and hats on his feet. The nonsense poem is just for fun and laughter.",
+          "topicId": "eng7_u2_t2",
+          "topic": "Animals, Birds, and Dr. Dolittle - Theme and Message",
+          "meaning": "The theme of kindness to animals and understanding them through observation.",
+          "ncertBasedExplanation": "The main themes of this story are kindness to animals, the bond between humans and animals, and understanding others through careful observation. Dr. Dolittle's love for animals leads him to learn their language and care for them, showing that kindness and patience can build a deep connection. The story, told with wit and humour, also reminds us that animals have feelings and ways of communicating, which we can understand if we observe them closely and respectfully. Its message is to treat all creatures with kindness, to be curious about the world of animals, and to listen and observe carefully to understand others, whether animals or people.",
+          "easyExplanation": "The themes are kindness to animals, the human-animal bond, and understanding others through observation. The message is to be kind and to observe carefully.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Kindness to animals",
+              "explanation": "Dr. Dolittle's love leads him to care for animals."
+            },
+            {
+              "step": 2,
+              "title": "Human-animal bond",
+              "explanation": "The story shows a deep connection between humans and animals."
+            },
+            {
+              "step": 3,
+              "title": "Understanding through observation",
+              "explanation": "We can understand animals by observing them closely."
+            },
+            {
+              "step": 4,
+              "title": "The message",
+              "explanation": "Be kind to all creatures and observe carefully to understand others."
+            }
+          ],
+          "examples": [
+            "Dr. Dolittle's kindness builds a bond with animals.",
+            "Observing animals helps us understand their feelings."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Kindness",
+              "definition": "Being caring and gentle.",
+              "simpleExample": "Kindness builds a bond with animals."
+            },
+            {
+              "keyword": "Observation",
+              "definition": "Careful watching.",
+              "simpleExample": "Observation helps us understand animals."
+            },
+            {
+              "keyword": "Bond",
+              "definition": "A close connection.",
+              "simpleExample": "Dr. Dolittle has a bond with animals."
+            }
+          ],
+          "quickSummary": "The themes of the story are kindness to animals, the human-animal bond, and understanding others through observation, with the message to be kind and to observe carefully.",
+          "revisionNotes": [
+            "Themes: kindness, human-animal bond, observation.",
+            "Kindness builds a connection.",
+            "Observe closely to understand animals.",
+            "Message: be kind and observe carefully."
+          ]
+        },
+        {
+          "topicId": "eng7_u2_t3",
+          "topic": "A Funny Man - Summary and Message",
+          "meaning": "A summary of the humorous nonsense poem and its light-hearted message.",
+          "ncertBasedExplanation": "'A Funny Man' is a light, humorous poem that describes a funny man the speaker meets walking down the street. The man does everything in a silly, mixed-up way: he wears a shoe upon his head and hats upon his feet, and behaves in odd but polite ways, such as offering a rose in a strange manner. The whole poem is a piece of nonsense humour, meant simply to make us laugh with its funny, topsy-turvy images. Its light message is that fun, silliness and laughter are a wonderful part of life, and that playful language and silly ideas can bring great joy.",
+          "easyExplanation": "A funny man does everything in a silly, mixed-up way, like wearing a shoe on his head. The nonsense poem is for fun, showing that laughter is part of life.",
           "stepByStepExplanation": [
             {
               "step": 1,
@@ -258,22 +600,22 @@
             {
               "step": 2,
               "title": "Everything mixed-up",
-              "explanation": "The man wears a shoe on his head and hats on his feet."
+              "explanation": "He wears a shoe on his head and hats on his feet."
             },
             {
               "step": 3,
-              "title": "Silly but polite",
-              "explanation": "He behaves in odd but polite ways, making funny sights."
+              "title": "Just for fun",
+              "explanation": "The nonsense poem is meant to make us laugh."
             },
             {
               "step": 4,
-              "title": "Just for fun",
-              "explanation": "The nonsense poem is meant simply to make us laugh."
+              "title": "The message",
+              "explanation": "Fun, silliness and laughter are a wonderful part of life."
             }
           ],
           "examples": [
             "The funny man wears a shoe on his head and hats on his feet.",
-            "The poem's silly images are meant to make us laugh."
+            "The poem's silly images make us laugh."
           ],
           "importantKeywords": [
             {
@@ -283,7 +625,7 @@
             },
             {
               "keyword": "Nonsense",
-              "definition": "Funny words or ideas that make no sense.",
+              "definition": "Funny words that make no sense.",
               "simpleExample": "A nonsense poem makes us laugh."
             },
             {
@@ -292,20 +634,20 @@
               "simpleExample": "The funny man did everything topsy-turvy."
             }
           ],
-          "quickSummary": "'A Funny Man' is a humorous nonsense poem about a man who does everything in a silly, topsy-turvy way, like wearing a shoe on his head, meant simply to make us laugh.",
+          "quickSummary": "'A Funny Man' is a humorous nonsense poem about a man who does everything in a silly, topsy-turvy way, meant to make us laugh and showing that laughter is part of life.",
           "revisionNotes": [
             "Genre: humorous nonsense poem.",
             "A funny man does everything mixed-up.",
             "Shoe on his head, hats on his feet.",
-            "Theme: fun, humour and playful nonsense."
+            "Message: fun and laughter are part of life."
           ]
         },
         {
-          "topicId": "eng7_unit2_topic3",
-          "topic": "Say the Right Thing (Prose)",
-          "meaning": "A lesson about the importance of being polite and courteous, and saying the right thing to others, especially to guests.",
-          "ncertBasedExplanation": "This lesson teaches us the importance of politeness and courtesy in our words and behaviour. It draws on the Indian idea of 'Atithi Devo Bhava', which means 'the guest is like God', and shows why we should treat guests and others with respect and warmth. It gives examples of polite behaviour, like offering guests water, asking about their well-being, and seeing them to the door, and contrasts these with rude behaviour. The lesson also discusses how to disagree politely with friends without being rude. It reminds us that saying the right thing in the right way, with kindness and good manners, makes everyone feel respected and keeps our relationships pleasant.",
-          "easyExplanation": "This lesson teaches politeness and courtesy, like the idea of 'Atithi Devo Bhava' (the guest is like God). Saying the right thing kindly makes everyone feel respected.",
+          "topicId": "eng7_u2_t4",
+          "topic": "Say the Right Thing - Summary",
+          "meaning": "A summary of the lesson about politeness and courtesy.",
+          "ncertBasedExplanation": "'Say the Right Thing' is a lesson that teaches the importance of politeness and courtesy in our words and behaviour. It draws on the Indian idea of 'Atithi Devo Bhava', which means 'the guest is like God', and shows why we should treat guests and others with respect and warmth. It gives examples of polite behaviour, like offering guests water, asking about their well-being, and seeing them to the door, and contrasts these with rude behaviour. The lesson also discusses how to disagree politely with friends without being rude.",
+          "easyExplanation": "This lesson teaches politeness and courtesy, like 'Atithi Devo Bhava' (the guest is like God), and how to treat guests well and disagree politely.",
           "stepByStepExplanation": [
             {
               "step": 1,
@@ -315,46 +657,274 @@
             {
               "step": 2,
               "title": "Atithi Devo Bhava",
-              "explanation": "It draws on the idea that 'the guest is like God', so guests are treated with warmth."
+              "explanation": "It draws on the idea that 'the guest is like God'."
             },
             {
               "step": 3,
               "title": "Polite behaviour",
-              "explanation": "Examples include offering water, asking about well-being and seeing guests to the door."
+              "explanation": "Examples include offering water and asking about well-being."
             },
             {
               "step": 4,
               "title": "Disagreeing politely",
-              "explanation": "It also shows how to disagree with friends politely, without being rude."
+              "explanation": "It shows how to disagree with friends without being rude."
             }
           ],
           "examples": [
-            "Offering guests water and asking about their well-being is polite.",
-            "'Atithi Devo Bhava' means we should treat guests like God."
+            "Offering guests water is polite behaviour.",
+            "'Atithi Devo Bhava' means we treat guests like God."
           ],
           "importantKeywords": [
             {
               "keyword": "Polite",
-              "definition": "Showing good manners and respect.",
+              "definition": "Showing good manners.",
               "simpleExample": "It is polite to greet guests warmly."
             },
             {
               "keyword": "Courtesy",
-              "definition": "Polite behaviour towards others.",
-              "simpleExample": "We should treat everyone with courtesy."
+              "definition": "Polite behaviour.",
+              "simpleExample": "We treat everyone with courtesy."
             },
             {
               "keyword": "Atithi Devo Bhava",
-              "definition": "The idea that the guest is like God.",
+              "definition": "The guest is like God.",
               "simpleExample": "'Atithi Devo Bhava' teaches us to honour guests."
             }
           ],
-          "quickSummary": "'Say the Right Thing' teaches the importance of politeness and courtesy, drawing on 'Atithi Devo Bhava' (the guest is like God), and shows that saying the right thing kindly makes everyone feel respected.",
+          "quickSummary": "'Say the Right Thing' teaches politeness and courtesy, drawing on 'Atithi Devo Bhava' (the guest is like God), showing how to treat guests well and disagree politely.",
           "revisionNotes": [
             "Genre: lesson (prose).",
             "Teaches politeness and courtesy.",
             "'Atithi Devo Bhava' = the guest is like God.",
-            "Theme: good manners and saying the right thing kindly."
+            "Shows polite behaviour and how to disagree politely."
+          ]
+        },
+        {
+          "topicId": "eng7_u2_t5",
+          "topic": "Say the Right Thing - Theme and Message",
+          "meaning": "The theme of good manners and the power of saying the right thing kindly.",
+          "ncertBasedExplanation": "The central theme of 'Say the Right Thing' is the importance of good manners, politeness and saying the right thing in the right way. The lesson teaches that words have power: kind and polite words make others feel respected and keep relationships pleasant, while rude words can hurt. Through the idea of 'Atithi Devo Bhava' and examples of courteous behaviour, it shows that respect and warmth, especially towards guests and elders, are valued in our culture. The message is that we should always be polite and courteous, choose our words carefully, and even when we disagree, express ourselves with kindness and respect.",
+          "easyExplanation": "The theme is good manners and saying the right thing kindly. The message is that polite words make others feel respected, so we should always be courteous.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Power of words",
+              "explanation": "Kind, polite words make others feel respected; rude words hurt."
+            },
+            {
+              "step": 2,
+              "title": "Good manners valued",
+              "explanation": "Respect and warmth, especially to guests, are valued in our culture."
+            },
+            {
+              "step": 3,
+              "title": "Disagree with kindness",
+              "explanation": "Even when we disagree, we should be kind and respectful."
+            },
+            {
+              "step": 4,
+              "title": "The message",
+              "explanation": "Always be polite, choose words carefully and say the right thing."
+            }
+          ],
+          "examples": [
+            "Polite words make others feel respected.",
+            "Even in disagreement, we should be kind and respectful."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Manners",
+              "definition": "Polite ways of behaving.",
+              "simpleExample": "Good manners are valued."
+            },
+            {
+              "keyword": "Respect",
+              "definition": "Treating others with regard.",
+              "simpleExample": "Polite words show respect."
+            },
+            {
+              "keyword": "Courteous",
+              "definition": "Polite and considerate.",
+              "simpleExample": "We should be courteous to all."
+            }
+          ],
+          "quickSummary": "The theme of 'Say the Right Thing' is good manners and saying the right thing kindly, with the message that polite words make others feel respected, so we should always be courteous.",
+          "revisionNotes": [
+            "Theme: good manners and saying the right thing.",
+            "Words have power; kind words respect others.",
+            "Be polite, especially to guests and elders.",
+            "Disagree with kindness and respect."
+          ]
+        },
+        {
+          "topicId": "eng7_u2_t6",
+          "topic": "Unit 2 - Vocabulary and Language",
+          "meaning": "Useful words, expressions and language features from the Unit 2 lessons.",
+          "ncertBasedExplanation": "Unit 2, 'Wit and Humour', introduces words and language connected with animals, humour and politeness. From the Dr. Dolittle story we learn words about animals and communication. From 'A Funny Man' we meet playful, humorous language and learn how nonsense and unexpected images create humour. From 'Say the Right Thing' we learn polite words and expressions, like 'May I help you?', 'Please', 'Thank you' and ways to ask about someone's well-being. The unit also helps us understand how humour works in language and how to use polite, courteous expressions. Building this vocabulary helps us read humorous writing and speak politely.",
+          "easyExplanation": "Unit 2 teaches words about animals and communication, playful humorous language, and polite expressions like 'Please' and 'Thank you'.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Animal words",
+              "explanation": "The Dr. Dolittle story teaches words about animals and communication."
+            },
+            {
+              "step": 2,
+              "title": "Humorous language",
+              "explanation": "'A Funny Man' shows how nonsense and odd images create humour."
+            },
+            {
+              "step": 3,
+              "title": "Polite expressions",
+              "explanation": "'Say the Right Thing' teaches polite words like 'Please' and 'Thank you'."
+            },
+            {
+              "step": 4,
+              "title": "Using language well",
+              "explanation": "The unit helps us read humour and speak politely."
+            }
+          ],
+          "examples": [
+            "'A Funny Man' uses playful, humorous language.",
+            "'Please' and 'Thank you' are polite expressions."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Vocabulary",
+              "definition": "The words we learn and use.",
+              "simpleExample": "The unit builds vocabulary."
+            },
+            {
+              "keyword": "Humour",
+              "definition": "Funny language and ideas.",
+              "simpleExample": "Nonsense creates humour."
+            },
+            {
+              "keyword": "Polite expression",
+              "definition": "A courteous phrase.",
+              "simpleExample": "'May I help you?' is a polite expression."
+            }
+          ],
+          "quickSummary": "Unit 2 builds vocabulary about animals and communication, playful humorous language, and polite expressions, helping us read humour and speak courteously.",
+          "revisionNotes": [
+            "Animal/communication words (Dr. Dolittle).",
+            "Humorous, playful language (A Funny Man).",
+            "Polite expressions: Please, Thank you.",
+            "Practises humour and courteous speech."
+          ]
+        },
+        {
+          "topicId": "eng7_u2_t7",
+          "topic": "Unit 2 - Theme: Wit and Humour",
+          "meaning": "How the three lessons of Unit 2 connect under the theme of 'Wit and Humour'.",
+          "ncertBasedExplanation": "The three lessons of Unit 2 are placed together under the theme 'Wit and Humour'. Each lesson brings a sense of fun, cleverness or lightness. The Dr. Dolittle story uses wit and humour to tell a charming tale about a doctor who talks to animals. 'A Funny Man' is pure nonsense humour, full of silly images that make us laugh. 'Say the Right Thing', while teaching politeness, also shows how clever and kind words make life pleasant. Together, the lessons show that humour, cleverness and the right words add joy and warmth to life, and that we can learn and smile at the same time. The theme reminds us that learning can be fun.",
+          "easyExplanation": "Unit 2's three lessons share the theme 'Wit and Humour': a witty animal tale, a nonsense poem, and a lesson on clever, kind words, all adding fun to learning.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "A shared theme",
+              "explanation": "The three lessons share the theme 'Wit and Humour'."
+            },
+            {
+              "step": 2,
+              "title": "A witty tale",
+              "explanation": "The Dr. Dolittle story uses wit and humour to charm us."
+            },
+            {
+              "step": 3,
+              "title": "Nonsense fun",
+              "explanation": "'A Funny Man' is pure nonsense humour that makes us laugh."
+            },
+            {
+              "step": 4,
+              "title": "Clever, kind words",
+              "explanation": "'Say the Right Thing' shows how clever, kind words make life pleasant."
+            }
+          ],
+          "examples": [
+            "The unit brings fun, cleverness and lightness.",
+            "Humour and kind words add joy to life."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Wit",
+              "definition": "Clever, amusing expression.",
+              "simpleExample": "The unit is full of wit."
+            },
+            {
+              "keyword": "Humour",
+              "definition": "Funny ideas and language.",
+              "simpleExample": "Humour makes learning fun."
+            },
+            {
+              "keyword": "Theme",
+              "definition": "A connecting main idea.",
+              "simpleExample": "The theme is 'Wit and Humour'."
+            }
+          ],
+          "quickSummary": "Unit 2's three lessons connect under the theme 'Wit and Humour', showing through a witty tale, a nonsense poem and a lesson on kind words that humour and cleverness add joy to life.",
+          "revisionNotes": [
+            "Unit theme: 'Wit and Humour'.",
+            "A witty animal tale (Dr. Dolittle).",
+            "Nonsense fun (A Funny Man).",
+            "Clever, kind words (Say the Right Thing)."
+          ]
+        },
+        {
+          "topicId": "eng7_u2_t8",
+          "topic": "Unit 2 - Comprehension and Discussion",
+          "meaning": "Key questions and discussion points to understand and reflect on the Unit 2 lessons.",
+          "ncertBasedExplanation": "After reading the Unit 2 lessons, it helps to think about and discuss them. We can ask: How does Dr. Dolittle understand animals, and which animal would we like to talk to? What makes 'A Funny Man' funny, and what other silly images can we think of? Why is it important to be polite, and how can we disagree without being rude? Discussing these questions with classmates and teachers helps us understand the lessons and enjoy their humour. We can also share funny experiences, practise polite conversation, and think about how we treat animals and guests. Such reflection makes the learning both fun and meaningful.",
+          "easyExplanation": "Discussing questions, like how Dr. Dolittle understands animals, what makes the poem funny, and why politeness matters, helps us understand and enjoy the lessons.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Ask about each lesson",
+              "explanation": "Think about Dr. Dolittle, what makes the poem funny, and politeness."
+            },
+            {
+              "step": 2,
+              "title": "Connect to ourselves",
+              "explanation": "Relate the lessons to animals we like, funny experiences and manners."
+            },
+            {
+              "step": 3,
+              "title": "Discuss together",
+              "explanation": "Share answers with classmates and teachers."
+            },
+            {
+              "step": 4,
+              "title": "Fun and meaningful",
+              "explanation": "Reflection makes the learning fun and meaningful."
+            }
+          ],
+          "examples": [
+            "We can discuss which animal we would like to talk to.",
+            "We can practise polite conversation in class."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Comprehension",
+              "definition": "Understanding what we read.",
+              "simpleExample": "Questions check comprehension."
+            },
+            {
+              "keyword": "Discussion",
+              "definition": "Talking over ideas together.",
+              "simpleExample": "Discussion deepens understanding."
+            },
+            {
+              "keyword": "Reflect",
+              "definition": "To think carefully.",
+              "simpleExample": "We reflect on the lessons."
+            }
+          ],
+          "quickSummary": "Discussing key questions about the Unit 2 lessons, such as understanding animals, what makes humour funny and why politeness matters, helps us understand and enjoy them.",
+          "revisionNotes": [
+            "Discuss key questions about each lesson.",
+            "Relate to animals, humour and manners.",
+            "Share with classmates and teachers.",
+            "Makes learning fun and meaningful."
           ]
         }
       ]
@@ -364,11 +934,11 @@
       "chapter": "Unit 3: Dreams and Discoveries",
       "topics": [
         {
-          "topicId": "eng7_unit3_topic1",
-          "topic": "My Brother's Great Invention (Prose)",
-          "meaning": "A story about a young inventor and his invention, celebrating creativity, curiosity and the spirit of discovery.",
-          "ncertBasedExplanation": "This is a light and entertaining story about a brother who tries to create a 'great invention'. Through his attempts, with their successes and funny failures, the story celebrates the spirit of creativity, curiosity and inventiveness. It reminds us that inventors need qualities like imagination, patience and the willingness to keep trying. The lesson also points to great Indian contributions to the world, such as the concept of zero invented by ancient Indian mathematicians and the practice of yoga. It encourages young readers to be curious, to dream up new ideas, and not to fear failure, because every invention and discovery begins with an idea and the courage to try.",
-          "easyExplanation": "A story about a brother trying to make a great invention. It celebrates creativity, curiosity and not fearing failure, and mentions Indian inventions like zero and yoga.",
+          "topicId": "eng7_u3_t1",
+          "topic": "My Brother's Great Invention - Summary",
+          "meaning": "A summary of the story about a young inventor and his great invention.",
+          "ncertBasedExplanation": "'My Brother's Great Invention' is a light and entertaining story about a brother who tries to create a 'great invention'. Through his attempts, with their successes and funny failures, the story celebrates the spirit of creativity, curiosity and inventiveness. It shows that inventors need qualities like imagination, patience and the willingness to keep trying even when things go wrong. The lesson also points to great Indian contributions to the world, such as the concept of zero invented by ancient Indian mathematicians and the practice of yoga, reminding us that inventions and discoveries have shaped the world.",
+          "easyExplanation": "A brother tries to make a great invention, with funny successes and failures. The story celebrates creativity and curiosity, and mentions Indian inventions like zero and yoga.",
           "stepByStepExplanation": [
             {
               "step": 1,
@@ -378,22 +948,22 @@
             {
               "step": 2,
               "title": "Tries and learns",
-              "explanation": "Through his successes and funny failures, the spirit of inventiveness is shown."
+              "explanation": "Through successes and funny failures, the spirit of inventiveness shows."
             },
             {
               "step": 3,
               "title": "Qualities of an inventor",
-              "explanation": "Inventors need imagination, patience and the willingness to keep trying."
+              "explanation": "Inventors need imagination, patience and persistence."
             },
             {
               "step": 4,
               "title": "Indian contributions",
-              "explanation": "It mentions Indian gifts to the world, like the concept of zero and yoga."
+              "explanation": "It mentions Indian gifts like the concept of zero and yoga."
             }
           ],
           "examples": [
             "The brother keeps trying to create his great invention.",
-            "Ancient Indian mathematicians invented the concept of zero."
+            "Ancient Indians invented the concept of zero."
           ],
           "importantKeywords": [
             {
@@ -403,101 +973,158 @@
             },
             {
               "keyword": "Curiosity",
-              "definition": "A strong wish to learn or know.",
+              "definition": "A strong wish to know.",
               "simpleExample": "Curiosity drives inventors."
             },
             {
               "keyword": "Creativity",
-              "definition": "The ability to create new ideas.",
+              "definition": "Making new ideas.",
               "simpleExample": "Inventing needs creativity."
             }
           ],
-          "quickSummary": "'My Brother's Great Invention' is a story about a young inventor that celebrates creativity, curiosity and not fearing failure, and recalls Indian contributions like the concept of zero and yoga.",
+          "quickSummary": "'My Brother's Great Invention' is a story about a young inventor that celebrates creativity and curiosity and recalls Indian contributions like the concept of zero and yoga.",
           "revisionNotes": [
             "Genre: story (prose).",
             "A brother tries to make a great invention.",
-            "Celebrates creativity, curiosity and trying.",
+            "Celebrates creativity and curiosity.",
             "Mentions Indian inventions: zero and yoga."
           ]
         },
         {
-          "topicId": "eng7_unit3_topic2",
-          "topic": "Paper Boats (Poem)",
-          "meaning": "A poem by Rabindranath Tagore in which a child floats paper boats down a stream, hoping they reach someone far away.",
-          "ncertBasedExplanation": "This is a beautiful and imaginative poem by Rabindranath Tagore, spoken by a child. Every day the child floats little paper boats, one by one, down a running stream, writing his name and the name of his village on them in big black letters. He hopes that someone in some far-off land will find his boats and know who he is. He loads his boats with flowers and dreams that they will be carried safely to the shore in the night. The poem beautifully captures a child's imagination, innocence and hope, and the wish to connect with the wider world. It celebrates the dreams and gentle longings of childhood.",
-          "easyExplanation": "In this Tagore poem, a child floats paper boats down a stream, hoping someone far away will find them. It captures a child's imagination, innocence and hope.",
+          "topicId": "eng7_u3_t2",
+          "topic": "My Brother's Great Invention - Theme and Message",
+          "meaning": "The theme of creativity, curiosity and not fearing failure.",
+          "ncertBasedExplanation": "The themes of 'My Brother's Great Invention' are creativity, curiosity and the courage to keep trying despite failure. The story shows that every invention and discovery begins with an idea and the willingness to experiment, and that failures along the way are a natural part of inventing. By recalling great Indian contributions like zero and yoga, it also fills us with pride in our heritage of knowledge. The message is to be curious, to dream up new ideas, and not to fear failure, because trying, learning from mistakes and persisting is how inventors and discoverers succeed. It encourages young readers to think creatively and to believe in their own ideas.",
+          "easyExplanation": "The themes are creativity, curiosity and not fearing failure. The message is to be curious, dream up ideas, and keep trying, because failure is part of inventing.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Creativity and curiosity",
+              "explanation": "Every invention begins with an idea and curiosity."
+            },
+            {
+              "step": 2,
+              "title": "Failure is natural",
+              "explanation": "Failures are a natural part of inventing and discovering."
+            },
+            {
+              "step": 3,
+              "title": "Pride in heritage",
+              "explanation": "Indian contributions like zero and yoga fill us with pride."
+            },
+            {
+              "step": 4,
+              "title": "The message",
+              "explanation": "Be curious, dream up ideas, and don't fear failure."
+            }
+          ],
+          "examples": [
+            "The story shows that failure is part of inventing.",
+            "Indian inventions like zero make us proud of our heritage."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Creativity",
+              "definition": "Making new ideas.",
+              "simpleExample": "Inventing needs creativity."
+            },
+            {
+              "keyword": "Curiosity",
+              "definition": "A wish to learn.",
+              "simpleExample": "Curiosity leads to discovery."
+            },
+            {
+              "keyword": "Persistence",
+              "definition": "Continuing despite difficulty.",
+              "simpleExample": "Persistence helps inventors succeed."
+            }
+          ],
+          "quickSummary": "The themes of the story are creativity, curiosity and not fearing failure, with the message to be curious, dream up ideas and keep trying, since failure is a natural part of inventing.",
+          "revisionNotes": [
+            "Themes: creativity, curiosity, not fearing failure.",
+            "Failure is part of inventing.",
+            "Pride in Indian inventions (zero, yoga).",
+            "Message: be curious and keep trying."
+          ]
+        },
+        {
+          "topicId": "eng7_u3_t3",
+          "topic": "Paper Boats - Summary and Theme",
+          "meaning": "A summary and theme of Tagore's poem about a child floating paper boats.",
+          "ncertBasedExplanation": "'Paper Boats' is a beautiful and imaginative poem by Rabindranath Tagore, spoken by a child. Every day the child floats little paper boats, one by one, down a running stream, writing his name and the name of his village on them in big black letters. He hopes that someone in some far-off land will find his boats and know who he is. He loads his boats with flowers and dreams that they will be carried safely to the shore in the night. The poem's themes are childhood imagination, innocence and hope, and the wish to connect with the wider world; it celebrates the gentle dreams and longings of childhood.",
+          "easyExplanation": "In this Tagore poem, a child floats paper boats down a stream, hoping someone far away finds them. Its themes are childhood imagination, innocence and hope.",
           "stepByStepExplanation": [
             {
               "step": 1,
               "title": "Floating paper boats",
-              "explanation": "Each day the child floats paper boats down a running stream."
+              "explanation": "Each day the child floats paper boats down a stream."
             },
             {
               "step": 2,
-              "title": "Names on the boats",
-              "explanation": "He writes his name and his village's name on the boats."
+              "title": "Names and hopes",
+              "explanation": "He writes his name and village on them, hoping someone finds them."
             },
             {
               "step": 3,
-              "title": "A hope to connect",
-              "explanation": "He hopes someone in a far-off land will find his boats."
+              "title": "Dreams of connection",
+              "explanation": "He dreams the boats reach the shore and a far-off land."
             },
             {
               "step": 4,
-              "title": "Childhood dreams",
-              "explanation": "He loads them with flowers and dreams they will reach the shore safely."
+              "title": "The themes",
+              "explanation": "Childhood imagination, innocence, hope and connecting with the world."
             }
           ],
           "examples": [
-            "The child writes his name on the paper boats he floats.",
-            "He hopes someone far away will find his little boats."
+            "The child writes his name on the paper boats.",
+            "He hopes someone far away will find his boats."
           ],
           "importantKeywords": [
             {
               "keyword": "Imagination",
-              "definition": "Forming pictures or ideas in the mind.",
+              "definition": "Forming pictures in the mind.",
               "simpleExample": "The poem shows a child's imagination."
-            },
-            {
-              "keyword": "Stream",
-              "definition": "A small flowing river.",
-              "simpleExample": "The child floats boats on a stream."
             },
             {
               "keyword": "Hope",
               "definition": "A wish for something to happen.",
-              "simpleExample": "The child's boats carry his hope."
+              "simpleExample": "The boats carry the child's hope."
+            },
+            {
+              "keyword": "Innocence",
+              "definition": "Childlike purity.",
+              "simpleExample": "The poem shows childhood innocence."
             }
           ],
-          "quickSummary": "'Paper Boats' by Rabindranath Tagore is a poem in which a child floats paper boats down a stream hoping someone far away finds them, capturing a child's imagination, innocence and hope.",
+          "quickSummary": "'Paper Boats' by Rabindranath Tagore is a poem in which a child floats paper boats hoping someone far away finds them, with themes of childhood imagination, innocence and hope.",
           "revisionNotes": [
             "Genre: poem. Poet: Rabindranath Tagore.",
             "A child floats paper boats down a stream.",
-            "Writes his name, hopes someone far finds them.",
-            "Theme: childhood imagination, innocence and hope."
+            "Hopes someone far away finds them.",
+            "Themes: imagination, innocence, hope."
           ]
         },
         {
-          "topicId": "eng7_unit3_topic3",
-          "topic": "North, South, East, West (Prose)",
-          "meaning": "An informative lesson about the different regions, states and rich diversity of India.",
-          "ncertBasedExplanation": "This lesson takes us on a journey across India, exploring its different regions, the north, south, east, west, north-east and centre, and the many states and union territories in each. It encourages students to learn about their own state and others, including their capitals, languages, rivers, foods and tourist attractions. Through this, the lesson shows the great geographical and cultural diversity of India, where each region has its own special features yet all are part of one country. It helps us appreciate how varied and beautiful India is and develops our knowledge of the geography and culture of our nation.",
+          "topicId": "eng7_u3_t4",
+          "topic": "North, South, East, West - Summary",
+          "meaning": "A summary of the informative lesson about India's regions and diversity.",
+          "ncertBasedExplanation": "'North, South, East, West' is an informative lesson that takes us on a journey across India, exploring its different regions, the north, south, east, west, north-east and centre, and the many states and union territories in each. It encourages students to learn about their own state and others, including their capitals, languages, rivers, foods and tourist attractions. Through this, the lesson shows the great geographical and cultural diversity of India, where each region has its own special features, yet all are part of one country.",
           "easyExplanation": "This lesson explores India's regions, states and union territories from north to south, showing the country's great geographical and cultural diversity.",
           "stepByStepExplanation": [
             {
               "step": 1,
               "title": "A journey across India",
-              "explanation": "The lesson explores India's regions: north, south, east, west, north-east and centre."
+              "explanation": "The lesson explores India's regions: north, south, east, west and centre."
             },
             {
               "step": 2,
               "title": "States and details",
-              "explanation": "It encourages learning each state's capital, language, rivers, food and attractions."
+              "explanation": "It encourages learning each state's capital, language, food and rivers."
             },
             {
               "step": 3,
               "title": "Great diversity",
-              "explanation": "It shows the geographical and cultural diversity of India's regions."
+              "explanation": "It shows the geographical and cultural diversity of India."
             },
             {
               "step": 4,
@@ -506,8 +1133,8 @@
             }
           ],
           "examples": [
-            "Each Indian state has its own capital, language, food and rivers.",
-            "India's regions, from north to south, show great diversity."
+            "Each Indian state has its own capital, language and food.",
+            "India's regions show great diversity."
           ],
           "importantKeywords": [
             {
@@ -517,7 +1144,7 @@
             },
             {
               "keyword": "State",
-              "definition": "A division of the country with its own government.",
+              "definition": "A division with its own government.",
               "simpleExample": "Each state has a capital."
             },
             {
@@ -533,6 +1160,234 @@
             "Each has its own capital, language, food, rivers.",
             "Theme: India's geographical and cultural diversity."
           ]
+        },
+        {
+          "topicId": "eng7_u3_t5",
+          "topic": "North, South, East, West - Theme and Message",
+          "meaning": "The theme of India's unity in diversity and pride in our country.",
+          "ncertBasedExplanation": "The central theme of 'North, South, East, West' is the rich diversity of India and the unity that holds it together, often called 'unity in diversity'. The lesson shows that although India's regions differ greatly in geography, language, food and culture, they are all part of one country and share a common bond. By learning about different states and their special features, students develop knowledge of and pride in their nation, and respect for its many cultures. The message is to appreciate and celebrate India's diversity, to learn about regions other than our own, and to feel proud of belonging to such a varied and beautiful country.",
+          "easyExplanation": "The theme is India's unity in diversity. The message is to appreciate and celebrate the country's diversity, learn about other regions, and feel proud of India.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Diversity and unity",
+              "explanation": "India's regions differ greatly yet form one united country."
+            },
+            {
+              "step": 2,
+              "title": "Unity in diversity",
+              "explanation": "This is the idea of 'unity in diversity'."
+            },
+            {
+              "step": 3,
+              "title": "Knowledge and pride",
+              "explanation": "Learning about states builds knowledge and pride in our nation."
+            },
+            {
+              "step": 4,
+              "title": "The message",
+              "explanation": "Appreciate India's diversity and feel proud of our country."
+            }
+          ],
+          "examples": [
+            "India's regions differ but share a common bond.",
+            "The lesson builds pride in our diverse country."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Unity in diversity",
+              "definition": "Many differences in one nation.",
+              "simpleExample": "India shows unity in diversity."
+            },
+            {
+              "keyword": "Diversity",
+              "definition": "A great variety.",
+              "simpleExample": "India has cultural diversity."
+            },
+            {
+              "keyword": "Pride",
+              "definition": "A feeling of satisfaction.",
+              "simpleExample": "We feel pride in our country."
+            }
+          ],
+          "quickSummary": "The theme of 'North, South, East, West' is India's unity in diversity, with the message to appreciate and celebrate the country's diversity, learn about other regions and feel proud of India.",
+          "revisionNotes": [
+            "Theme: India's unity in diversity.",
+            "Regions differ but form one country.",
+            "Builds knowledge and pride in the nation.",
+            "Message: appreciate and celebrate diversity."
+          ]
+        },
+        {
+          "topicId": "eng7_u3_t6",
+          "topic": "Unit 3 - Vocabulary and Language",
+          "meaning": "Useful words, expressions and language features from the Unit 3 lessons.",
+          "ncertBasedExplanation": "Unit 3, 'Dreams and Discoveries', introduces words and language about inventions, imagination and India's geography. From 'My Brother's Great Invention' we learn words about inventing and qualities of inventors, like invention, curiosity, creativity and experiment. From 'Paper Boats' we meet gentle, imaginative language and learn how poets create images of dreams and hope. From 'North, South, East, West' we learn words about geography and culture, like region, state, capital, language, river and diversity. The unit also helps us write about our dreams and describe places. Building this vocabulary helps us read about discoveries and describe our country.",
+          "easyExplanation": "Unit 3 teaches words about inventing (curiosity, creativity), imaginative poetic language, and geography (region, state, capital, diversity).",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Invention words",
+              "explanation": "'My Brother's Great Invention' teaches words like curiosity and creativity."
+            },
+            {
+              "step": 2,
+              "title": "Imaginative language",
+              "explanation": "'Paper Boats' uses gentle, imaginative language about dreams."
+            },
+            {
+              "step": 3,
+              "title": "Geography words",
+              "explanation": "'North, South, East, West' teaches words like region, state and diversity."
+            },
+            {
+              "step": 4,
+              "title": "Using language",
+              "explanation": "The unit helps us write about dreams and describe places."
+            }
+          ],
+          "examples": [
+            "'Curiosity' and 'creativity' are qualities of an inventor.",
+            "'Region', 'state' and 'capital' are geography words."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Vocabulary",
+              "definition": "The words we learn.",
+              "simpleExample": "The unit builds vocabulary."
+            },
+            {
+              "keyword": "Imaginative language",
+              "definition": "Words that create images.",
+              "simpleExample": "Poems use imaginative language."
+            },
+            {
+              "keyword": "Geography",
+              "definition": "The study of places.",
+              "simpleExample": "Geography words describe regions."
+            }
+          ],
+          "quickSummary": "Unit 3 builds vocabulary about inventing, imaginative poetic language, and geography and culture, helping us read about discoveries and describe our country.",
+          "revisionNotes": [
+            "Invention words: curiosity, creativity, experiment.",
+            "Imaginative poetic language (Paper Boats).",
+            "Geography words: region, state, capital, diversity.",
+            "Practises writing about dreams and places."
+          ]
+        },
+        {
+          "topicId": "eng7_u3_t7",
+          "topic": "Unit 3 - Theme: Dreams and Discoveries",
+          "meaning": "How the three lessons of Unit 3 connect under the theme of 'Dreams and Discoveries'.",
+          "ncertBasedExplanation": "The three lessons of Unit 3 are placed together under the theme 'Dreams and Discoveries'. Each lesson is about dreaming, imagining or discovering something. 'My Brother's Great Invention' is about the dream of inventing something new and the discoveries that come from curiosity and trying. 'Paper Boats' is about a child's dreams and imagination as he sends his hopes out into the world. 'North, South, East, West' is about discovering the wonderful variety of our own country. Together, the lessons show that dreams and discoveries enrich our lives, that imagination and curiosity lead to new ideas, and that there is always more to discover, in inventions, in our imagination and in the world around us.",
+          "easyExplanation": "Unit 3's three lessons share the theme 'Dreams and Discoveries': dreaming of inventions, a child's imaginative dreams, and discovering the variety of our country.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "A shared theme",
+              "explanation": "The three lessons share the theme 'Dreams and Discoveries'."
+            },
+            {
+              "step": 2,
+              "title": "Dreaming of inventions",
+              "explanation": "'My Brother's Great Invention' is about the dream of inventing."
+            },
+            {
+              "step": 3,
+              "title": "A child's dreams",
+              "explanation": "'Paper Boats' is about a child's dreams and imagination."
+            },
+            {
+              "step": 4,
+              "title": "Discovering our country",
+              "explanation": "'North, South, East, West' is about discovering India's variety."
+            }
+          ],
+          "examples": [
+            "The unit is about dreaming, imagining and discovering.",
+            "Imagination and curiosity lead to new ideas."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Dream",
+              "definition": "A hope or vision.",
+              "simpleExample": "The unit is about dreams."
+            },
+            {
+              "keyword": "Discovery",
+              "definition": "Finding out something new.",
+              "simpleExample": "The unit celebrates discovery."
+            },
+            {
+              "keyword": "Theme",
+              "definition": "A connecting main idea.",
+              "simpleExample": "The theme is 'Dreams and Discoveries'."
+            }
+          ],
+          "quickSummary": "Unit 3's three lessons connect under the theme 'Dreams and Discoveries', showing through inventions, a child's imagination and exploring India that dreams and discoveries enrich our lives.",
+          "revisionNotes": [
+            "Unit theme: 'Dreams and Discoveries'.",
+            "Dreaming of inventions (Great Invention).",
+            "A child's imaginative dreams (Paper Boats).",
+            "Discovering our country (North, South...)."
+          ]
+        },
+        {
+          "topicId": "eng7_u3_t8",
+          "topic": "Unit 3 - Comprehension and Discussion",
+          "meaning": "Key questions and discussion points to understand and reflect on the Unit 3 lessons.",
+          "ncertBasedExplanation": "After reading the Unit 3 lessons, it helps to think about and discuss them. We can ask: What invention would we like to create, and what qualities does an inventor need? What does the child in 'Paper Boats' hope for, and what are our own dreams? Which region or state of India would we like to discover, and what is special about our own state? Discussing these questions with classmates and teachers helps us connect the lessons to our own dreams and to our country. We can also share our own ideas for inventions, write about our dreams, and learn interesting facts about different states. Such reflection makes our learning imaginative and personal.",
+          "easyExplanation": "Discussing questions, like what invention we'd create, the child's hopes in 'Paper Boats', and which region we'd explore, helps us connect the lessons to our own dreams.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Ask about each lesson",
+              "explanation": "Think about inventions, the child's hopes and India's regions."
+            },
+            {
+              "step": 2,
+              "title": "Connect to ourselves",
+              "explanation": "Relate the lessons to our own dreams and our country."
+            },
+            {
+              "step": 3,
+              "title": "Discuss together",
+              "explanation": "Share answers with classmates and teachers."
+            },
+            {
+              "step": 4,
+              "title": "Imaginative and personal",
+              "explanation": "Reflection makes learning imaginative and personal."
+            }
+          ],
+          "examples": [
+            "We can share our own ideas for an invention.",
+            "We can learn interesting facts about different states."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Comprehension",
+              "definition": "Understanding what we read.",
+              "simpleExample": "Questions check comprehension."
+            },
+            {
+              "keyword": "Discussion",
+              "definition": "Talking over ideas.",
+              "simpleExample": "Discussion deepens understanding."
+            },
+            {
+              "keyword": "Reflect",
+              "definition": "To think carefully.",
+              "simpleExample": "We reflect on the lessons."
+            }
+          ],
+          "quickSummary": "Discussing key questions about the Unit 3 lessons, such as inventions we'd create, the child's hopes and regions to explore, helps us connect them to our own dreams and country.",
+          "revisionNotes": [
+            "Discuss key questions about each lesson.",
+            "Relate to our dreams and our country.",
+            "Share with classmates and teachers.",
+            "Makes learning imaginative and personal."
+          ]
         }
       ]
     },
@@ -541,11 +1396,11 @@
       "chapter": "Unit 4: Travel and Adventure",
       "topics": [
         {
-          "topicId": "eng7_unit4_topic1",
-          "topic": "The Tunnel (Prose)",
-          "meaning": "An adventure story about exploring and the courage and curiosity that adventures bring out in us.",
-          "ncertBasedExplanation": "This is an exciting adventure story centred on a tunnel and the thrill of exploring the unknown. In the story, the characters set out to explore, and the tunnel becomes a place of mystery and adventure that tests their courage and curiosity. As the events unfold, they experience excitement, a little fear, and the joy of discovery. The story shows the spirit of adventure, the urge to explore new places, and the courage needed to face the unknown. It encourages readers to be curious and brave, to enjoy exploring the world around them, while also being careful and sensible.",
-          "easyExplanation": "An adventure story about exploring a tunnel, full of mystery and excitement. It shows the courage and curiosity that adventures bring out in us.",
+          "topicId": "eng7_u4_t1",
+          "topic": "The Tunnel - Summary",
+          "meaning": "A summary of the adventure story centred on exploring a tunnel.",
+          "ncertBasedExplanation": "'The Tunnel' is an exciting adventure story centred on a tunnel and the thrill of exploring the unknown. In the story, the characters set out to explore, and the tunnel becomes a place of mystery and adventure that tests their courage and curiosity. As the events unfold, they experience excitement, a little fear, and the joy of discovery. The story shows the spirit of adventure, the urge to explore new places, and the courage needed to face the unknown, while reminding us to be careful and sensible during our adventures.",
+          "easyExplanation": "An adventure story about exploring a mysterious tunnel, full of excitement and a little fear, showing the courage and curiosity that adventures bring out in us.",
           "stepByStepExplanation": [
             {
               "step": 1,
@@ -564,13 +1419,13 @@
             },
             {
               "step": 4,
-              "title": "The spirit of adventure",
+              "title": "Spirit of adventure",
               "explanation": "The story shows the urge to explore and the courage to face the unknown."
             }
           ],
           "examples": [
-            "The characters explore a mysterious tunnel in the story.",
-            "Exploring the unknown tests their courage and curiosity."
+            "The characters explore a mysterious tunnel.",
+            "Exploring the unknown tests their courage."
           ],
           "importantKeywords": [
             {
@@ -585,7 +1440,7 @@
             },
             {
               "keyword": "Courage",
-              "definition": "Bravery in facing difficulty or fear.",
+              "definition": "Bravery in facing difficulty.",
               "simpleExample": "It took courage to enter the tunnel."
             }
           ],
@@ -594,15 +1449,72 @@
             "Genre: adventure story (prose).",
             "Centred on exploring a mysterious tunnel.",
             "Tests courage and curiosity.",
-            "Theme: the spirit of adventure and exploration."
+            "Shows the spirit of adventure."
           ]
         },
         {
-          "topicId": "eng7_unit4_topic2",
-          "topic": "Travel (Poem)",
-          "meaning": "A poem by Robert Louis Stevenson in which a child dreams of travelling to wonderful, faraway places around the world.",
-          "ncertBasedExplanation": "This is a lively poem by Robert Louis Stevenson, spoken by a child who longs to travel to exciting, faraway places. In his imagination, the child dreams of distant lands, where there are apes and parrots, hot deserts, great cities, and many wonderful and exotic sights. He imagines all the amazing places he would like to visit one day. The poem beautifully captures a child's sense of wonder, curiosity and longing to explore the wide world. It celebrates the joy of imagination and the dream of travel and adventure that many of us feel.",
-          "easyExplanation": "In this poem by Robert Louis Stevenson, a child dreams of travelling to wonderful faraway places, full of apes, parrots and great cities. It celebrates wonder and the longing to explore.",
+          "topicId": "eng7_u4_t2",
+          "topic": "The Tunnel - Theme and Message",
+          "meaning": "The theme of courage, curiosity and the spirit of adventure.",
+          "ncertBasedExplanation": "The themes of 'The Tunnel' are courage, curiosity and the spirit of adventure. The story shows that exploring the unknown can be both exciting and a little frightening, and that it takes courage to face new and uncertain situations. The characters' curiosity drives them to discover, and their courage helps them overcome their fear. The message of the story is to be curious and brave, to enjoy exploring the world around us, and to face challenges with confidence, while also being careful and sensible. It encourages young readers to welcome new experiences and to find joy and growth in adventure.",
+          "easyExplanation": "The themes are courage, curiosity and the spirit of adventure. The message is to be curious and brave, to explore the world, and to face challenges with confidence.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Courage and curiosity",
+              "explanation": "Exploring the unknown takes courage and is driven by curiosity."
+            },
+            {
+              "step": 2,
+              "title": "Excitement and fear",
+              "explanation": "Adventure can be both exciting and a little frightening."
+            },
+            {
+              "step": 3,
+              "title": "Overcoming fear",
+              "explanation": "Courage helps the characters overcome their fear."
+            },
+            {
+              "step": 4,
+              "title": "The message",
+              "explanation": "Be curious and brave, explore the world, and face challenges confidently."
+            }
+          ],
+          "examples": [
+            "The characters' curiosity drives them to explore.",
+            "Courage helps them overcome their fear."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Courage",
+              "definition": "Bravery in facing fear.",
+              "simpleExample": "It takes courage to explore."
+            },
+            {
+              "keyword": "Curiosity",
+              "definition": "A wish to discover.",
+              "simpleExample": "Curiosity drives adventure."
+            },
+            {
+              "keyword": "Adventure",
+              "definition": "An exciting, risky experience.",
+              "simpleExample": "The tunnel is an adventure."
+            }
+          ],
+          "quickSummary": "The themes of 'The Tunnel' are courage, curiosity and the spirit of adventure, with the message to be curious and brave, to explore the world and to face challenges with confidence.",
+          "revisionNotes": [
+            "Themes: courage, curiosity, adventure.",
+            "Exploring takes courage; curiosity drives it.",
+            "Courage overcomes fear.",
+            "Message: be curious, brave and explore."
+          ]
+        },
+        {
+          "topicId": "eng7_u4_t3",
+          "topic": "Travel - Summary and Theme",
+          "meaning": "A summary and theme of Stevenson's poem about a child dreaming of travel.",
+          "ncertBasedExplanation": "'Travel' is a lively poem by Robert Louis Stevenson, spoken by a child who longs to travel to exciting, faraway places. In his imagination, the child dreams of distant lands where there are apes and parrots, hot deserts, great cities, and many wonderful and exotic sights. He imagines all the amazing places he would like to visit one day. The poem's themes are wonder, imagination and the longing to explore the wide world. It beautifully captures a child's sense of curiosity and the dream of travel and adventure that many of us feel, celebrating the joy of imagining faraway places.",
+          "easyExplanation": "In this Stevenson poem, a child dreams of travelling to wonderful faraway places full of apes, parrots and great cities. Its themes are wonder, imagination and the longing to explore.",
           "stepByStepExplanation": [
             {
               "step": 1,
@@ -617,17 +1529,17 @@
             {
               "step": 3,
               "title": "Wonderful sights",
-              "explanation": "He dreams of all the amazing and exotic places he would like to visit."
+              "explanation": "He dreams of all the amazing places he would like to visit."
             },
             {
               "step": 4,
-              "title": "Wonder and longing",
-              "explanation": "The poem captures a child's wonder, curiosity and longing to explore."
+              "title": "The themes",
+              "explanation": "Wonder, imagination and the longing to explore the world."
             }
           ],
           "examples": [
             "The child dreams of distant lands with apes and parrots.",
-            "The poem celebrates the longing to travel and explore the world."
+            "The poem celebrates the longing to travel and explore."
           ],
           "importantKeywords": [
             {
@@ -637,7 +1549,7 @@
             },
             {
               "keyword": "Exotic",
-              "definition": "Strange and exciting from a faraway place.",
+              "definition": "Strange and exciting from afar.",
               "simpleExample": "He imagines exotic lands."
             },
             {
@@ -646,30 +1558,30 @@
               "simpleExample": "The poem is full of wonder."
             }
           ],
-          "quickSummary": "'Travel' by Robert Louis Stevenson is a poem in which a child dreams of travelling to wonderful, faraway places full of apes, parrots and great cities, celebrating wonder and the longing to explore.",
+          "quickSummary": "'Travel' by Robert Louis Stevenson is a poem in which a child dreams of travelling to wonderful faraway places, with themes of wonder, imagination and the longing to explore.",
           "revisionNotes": [
             "Genre: poem. Poet: Robert Louis Stevenson.",
-            "A child dreams of travelling to faraway places.",
+            "A child dreams of travelling far.",
             "Imagines apes, parrots, deserts, great cities.",
-            "Theme: wonder and the longing to explore."
+            "Themes: wonder, imagination, longing to explore."
           ]
         },
         {
-          "topicId": "eng7_unit4_topic3",
-          "topic": "Conquering the Summit (Prose)",
-          "meaning": "An inspiring true story of Arunima Sinha, who, despite losing a leg, became the first female amputee to climb Mount Everest.",
-          "ncertBasedExplanation": "This is an inspiring true story about Arunima Sinha and her remarkable journey of will, courage, determination and dedication. After a tragic accident in which she lost a leg, Arunima refused to give up on her dreams. With great determination and hard work, she trained hard and went on to become the first female amputee in the world to climb Mount Everest, the highest mountain on Earth. The story describes the qualities needed by a mountaineer, courage, fitness, determination and never giving up, and shows how Arunima overcame enormous difficulties. Her story is a powerful example of how a strong will can help a person conquer any challenge.",
-          "easyExplanation": "Arunima Sinha lost a leg in an accident but refused to give up. Through determination, she became the first female amputee to climb Mount Everest. Her story inspires us never to give up.",
+          "topicId": "eng7_u4_t4",
+          "topic": "Conquering the Summit - Summary",
+          "meaning": "A summary of the true story of Arunima Sinha climbing Mount Everest.",
+          "ncertBasedExplanation": "'Conquering the Summit' is an inspiring true story about Arunima Sinha and her remarkable journey of will, courage, determination and dedication. After a tragic accident in which she lost a leg, Arunima refused to give up on her dreams. With great determination and hard work, she trained hard and went on to become the first female amputee in the world to climb Mount Everest, the highest mountain on Earth. The story describes the qualities needed by a mountaineer, courage, fitness, determination and never giving up, and shows how Arunima overcame enormous difficulties to achieve her goal.",
+          "easyExplanation": "Arunima Sinha lost a leg in an accident but, through determination, became the first female amputee to climb Mount Everest. Her true story inspires us to never give up.",
           "stepByStepExplanation": [
             {
               "step": 1,
               "title": "A tragic accident",
-              "explanation": "Arunima Sinha lost a leg in an accident but refused to give up on her dreams."
+              "explanation": "Arunima Sinha lost a leg but refused to give up on her dreams."
             },
             {
               "step": 2,
               "title": "Great determination",
-              "explanation": "With determination and hard training, she set out to achieve a great goal."
+              "explanation": "With determination and hard training, she pursued a great goal."
             },
             {
               "step": 3,
@@ -684,18 +1596,18 @@
           ],
           "examples": [
             "Arunima Sinha climbed Mount Everest despite losing a leg.",
-            "Her story shows that determination can overcome any difficulty."
+            "Her determination took her to the summit."
           ],
           "importantKeywords": [
             {
               "keyword": "Determination",
-              "definition": "Firmness of purpose; not giving up.",
-              "simpleExample": "Arunima's determination took her to the summit."
+              "definition": "Firmness of purpose.",
+              "simpleExample": "Arunima's determination took her to the top."
             },
             {
               "keyword": "Amputee",
               "definition": "A person who has lost a limb.",
-              "simpleExample": "Arunima was the first female amputee to climb Everest."
+              "simpleExample": "Arunima is an amputee."
             },
             {
               "keyword": "Summit",
@@ -703,12 +1615,240 @@
               "simpleExample": "She reached the summit of Everest."
             }
           ],
-          "quickSummary": "'Conquering the Summit' is the inspiring true story of Arunima Sinha, who, despite losing a leg, became the first female amputee to climb Mount Everest, showing that a strong will conquers any challenge.",
+          "quickSummary": "'Conquering the Summit' is the inspiring true story of Arunima Sinha, who, despite losing a leg, became the first female amputee to climb Mount Everest through sheer determination.",
           "revisionNotes": [
             "Genre: biographical prose (true story).",
             "Subject: Arunima Sinha.",
-            "Lost a leg but climbed Mount Everest (first female amputee).",
-            "Theme: determination, courage, never giving up."
+            "Lost a leg but climbed Mount Everest.",
+            "First female amputee to do so."
+          ]
+        },
+        {
+          "topicId": "eng7_u4_t5",
+          "topic": "Conquering the Summit - Theme and Message",
+          "meaning": "The theme of determination, courage and overcoming difficulties.",
+          "ncertBasedExplanation": "The themes of 'Conquering the Summit' are determination, courage, and the power of a strong will to overcome difficulties, including disability. Arunima Sinha's story shows that even after a life-changing accident, a person can achieve extraordinary things by refusing to give up. Her hard training, fitness and dedication highlight the qualities needed to reach a difficult goal. The message of the story is deeply inspiring: with determination, courage and hard work, we can overcome even the greatest obstacles and achieve our dreams. It teaches us never to lose hope, to believe in ourselves, and to keep striving no matter how hard the path.",
+          "easyExplanation": "The themes are determination, courage and overcoming difficulties. The message is that with determination and hard work, we can overcome any obstacle and achieve our dreams.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Determination and courage",
+              "explanation": "Arunima achieved extraordinary things by refusing to give up."
+            },
+            {
+              "step": 2,
+              "title": "Overcoming difficulties",
+              "explanation": "Her story shows the power of will over disability and hardship."
+            },
+            {
+              "step": 3,
+              "title": "Qualities for success",
+              "explanation": "Hard training, fitness and dedication are needed for a difficult goal."
+            },
+            {
+              "step": 4,
+              "title": "The message",
+              "explanation": "With determination and hard work, we can overcome any obstacle."
+            }
+          ],
+          "examples": [
+            "Arunima refused to give up after her accident.",
+            "Her story shows determination can overcome any obstacle."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Determination",
+              "definition": "Firmness of purpose.",
+              "simpleExample": "Determination led to her success."
+            },
+            {
+              "keyword": "Courage",
+              "definition": "Bravery in difficulty.",
+              "simpleExample": "Arunima showed great courage."
+            },
+            {
+              "keyword": "Obstacle",
+              "definition": "A difficulty to overcome.",
+              "simpleExample": "She overcame a great obstacle."
+            }
+          ],
+          "quickSummary": "The themes of 'Conquering the Summit' are determination, courage and overcoming difficulties, with the inspiring message that with determination and hard work we can overcome any obstacle and achieve our dreams.",
+          "revisionNotes": [
+            "Themes: determination, courage, overcoming difficulties.",
+            "Arunima refused to give up after losing a leg.",
+            "Hard training and dedication for a hard goal.",
+            "Message: determination overcomes any obstacle."
+          ]
+        },
+        {
+          "topicId": "eng7_u4_t6",
+          "topic": "Unit 4 - Vocabulary and Language",
+          "meaning": "Useful words, expressions and language features from the Unit 4 lessons.",
+          "ncertBasedExplanation": "Unit 4, 'Travel and Adventure', introduces words and language about exploring, travelling and overcoming challenges. From 'The Tunnel' we learn words about adventure and exploration, like explore, mystery, courage and discover. From 'Travel' we meet imaginative language about faraway, exotic places, like distant, exotic and wonder. From 'Conquering the Summit' we learn words about effort and achievement, like determination, mountaineer, summit and dedication. The unit also helps us describe journeys, adventures and the qualities needed to overcome challenges. Building this vocabulary helps us read adventure stories and write about travel and achievement.",
+          "easyExplanation": "Unit 4 teaches words about adventure (explore, mystery, courage), imaginative travel language (distant, exotic), and achievement (determination, summit, dedication).",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Adventure words",
+              "explanation": "'The Tunnel' teaches words like explore, mystery and courage."
+            },
+            {
+              "step": 2,
+              "title": "Travel language",
+              "explanation": "'Travel' uses imaginative words about distant, exotic places."
+            },
+            {
+              "step": 3,
+              "title": "Achievement words",
+              "explanation": "'Conquering the Summit' teaches words like determination and summit."
+            },
+            {
+              "step": 4,
+              "title": "Using language",
+              "explanation": "The unit helps us describe journeys and achievements."
+            }
+          ],
+          "examples": [
+            "'Explore' and 'mystery' are adventure words.",
+            "'Determination' and 'summit' relate to achievement."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Vocabulary",
+              "definition": "The words we learn.",
+              "simpleExample": "The unit builds vocabulary."
+            },
+            {
+              "keyword": "Exotic",
+              "definition": "Strange and exciting from afar.",
+              "simpleExample": "'Exotic' describes faraway lands."
+            },
+            {
+              "keyword": "Determination",
+              "definition": "Firmness of purpose.",
+              "simpleExample": "'Determination' is an achievement word."
+            }
+          ],
+          "quickSummary": "Unit 4 builds vocabulary about adventure and exploration, imaginative travel language, and effort and achievement, helping us read adventure stories and write about travel.",
+          "revisionNotes": [
+            "Adventure words: explore, mystery, courage.",
+            "Travel language: distant, exotic, wonder.",
+            "Achievement words: determination, summit.",
+            "Practises describing journeys and achievements."
+          ]
+        },
+        {
+          "topicId": "eng7_u4_t7",
+          "topic": "Unit 4 - Theme: Travel and Adventure",
+          "meaning": "How the three lessons of Unit 4 connect under the theme of 'Travel and Adventure'.",
+          "ncertBasedExplanation": "The three lessons of Unit 4 are placed together under the theme 'Travel and Adventure'. Each lesson is about exploring, travelling or facing a challenge. 'The Tunnel' is an adventure of exploring a mysterious place close to home. 'Travel' is about dreaming of journeys to faraway, exotic lands. 'Conquering the Summit' is about the greatest kind of adventure, climbing the highest mountain through courage and determination. Together, the lessons show that travel and adventure bring excitement, wonder and growth, that they require courage and curiosity, and that the greatest adventures are achieved by those who dream big and never give up. The theme inspires us to explore the world and to face challenges bravely.",
+          "easyExplanation": "Unit 4's three lessons share the theme 'Travel and Adventure': exploring a tunnel, dreaming of faraway lands, and climbing Everest through courage and determination.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "A shared theme",
+              "explanation": "The three lessons share the theme 'Travel and Adventure'."
+            },
+            {
+              "step": 2,
+              "title": "Exploring close to home",
+              "explanation": "'The Tunnel' is an adventure of exploring a mysterious place."
+            },
+            {
+              "step": 3,
+              "title": "Dreaming of faraway lands",
+              "explanation": "'Travel' is about dreaming of journeys to exotic places."
+            },
+            {
+              "step": 4,
+              "title": "A great adventure",
+              "explanation": "'Conquering the Summit' is about climbing the highest mountain."
+            }
+          ],
+          "examples": [
+            "The unit is about exploring, travelling and facing challenges.",
+            "The greatest adventures need courage and determination."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Travel",
+              "definition": "Journeying to places.",
+              "simpleExample": "The unit is about travel."
+            },
+            {
+              "keyword": "Adventure",
+              "definition": "An exciting experience.",
+              "simpleExample": "Climbing Everest is an adventure."
+            },
+            {
+              "keyword": "Theme",
+              "definition": "A connecting main idea.",
+              "simpleExample": "The theme is 'Travel and Adventure'."
+            }
+          ],
+          "quickSummary": "Unit 4's three lessons connect under the theme 'Travel and Adventure', showing through a tunnel, dreams of faraway lands and climbing Everest that adventure brings excitement, wonder and growth.",
+          "revisionNotes": [
+            "Unit theme: 'Travel and Adventure'.",
+            "Exploring a tunnel (close to home).",
+            "Dreaming of faraway lands (Travel).",
+            "Climbing Everest (Conquering the Summit)."
+          ]
+        },
+        {
+          "topicId": "eng7_u4_t8",
+          "topic": "Unit 4 - Comprehension and Discussion",
+          "meaning": "Key questions and discussion points to understand and reflect on the Unit 4 lessons.",
+          "ncertBasedExplanation": "After reading the Unit 4 lessons, it helps to think about and discuss them. We can ask: What makes exploring the tunnel exciting and a little frightening? Which faraway place from 'Travel' would we most like to visit, and why? What qualities helped Arunima Sinha climb Everest, and what challenge would we like to overcome? Discussing these questions with classmates and teachers helps us connect the lessons to our own love of travel and our own challenges. We can also share our travel dreams, talk about adventures we have had, and think about people who have overcome difficulties. Such reflection makes the learning adventurous and inspiring.",
+          "easyExplanation": "Discussing questions, like what makes the tunnel exciting, which faraway place we'd visit, and what helped Arunima climb Everest, connects the lessons to our own lives.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Ask about each lesson",
+              "explanation": "Think about the tunnel, faraway places and Arunima's qualities."
+            },
+            {
+              "step": 2,
+              "title": "Connect to ourselves",
+              "explanation": "Relate the lessons to our travel dreams and challenges."
+            },
+            {
+              "step": 3,
+              "title": "Discuss together",
+              "explanation": "Share answers with classmates and teachers."
+            },
+            {
+              "step": 4,
+              "title": "Adventurous and inspiring",
+              "explanation": "Reflection makes the learning adventurous and inspiring."
+            }
+          ],
+          "examples": [
+            "We can share which faraway place we would like to visit.",
+            "We can talk about people who overcame difficulties."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Comprehension",
+              "definition": "Understanding what we read.",
+              "simpleExample": "Questions check comprehension."
+            },
+            {
+              "keyword": "Discussion",
+              "definition": "Talking over ideas.",
+              "simpleExample": "Discussion deepens understanding."
+            },
+            {
+              "keyword": "Reflect",
+              "definition": "To think carefully.",
+              "simpleExample": "We reflect on the lessons."
+            }
+          ],
+          "quickSummary": "Discussing key questions about the Unit 4 lessons, such as the excitement of the tunnel, faraway places and Arunima's qualities, connects the lessons to our own love of travel and challenges.",
+          "revisionNotes": [
+            "Discuss key questions about each lesson.",
+            "Relate to our travel dreams and challenges.",
+            "Share with classmates and teachers.",
+            "Makes learning adventurous and inspiring."
           ]
         }
       ]
@@ -718,10 +1858,10 @@
       "chapter": "Unit 5: Bravehearts",
       "topics": [
         {
-          "topicId": "eng7_unit5_topic1",
-          "topic": "A Homage to Our Brave Soldiers (Prose)",
-          "meaning": "A lesson, in the form of letters between two friends, paying tribute to the brave soldiers who protect the country.",
-          "ncertBasedExplanation": "This lesson, written as an exchange of letters between two friends, pays homage (respectful tribute) to the brave soldiers who protect our country. One friend shares her experience of visiting the National War Memorial in New Delhi, which left a deep impact on her. Through their letters, the friends express their feelings of gratitude and respect for the soldiers who guard the borders and make great sacrifices, sometimes giving their lives, for the safety of the nation. The lesson encourages us to remember and honour the sacrifices of our soldiers, for example by visiting war memorials, and to feel grateful for the freedom and security they protect.",
+          "topicId": "eng7_u5_t1",
+          "topic": "A Homage to Our Brave Soldiers - Summary",
+          "meaning": "A summary of the lesson, written as letters, paying tribute to brave soldiers.",
+          "ncertBasedExplanation": "'A Homage to Our Brave Soldiers' is a lesson, written as an exchange of letters between two friends, that pays homage (respectful tribute) to the brave soldiers who protect our country. One friend shares her experience of visiting the National War Memorial in New Delhi, which left a deep impact on her. Through their letters, the friends express their feelings of gratitude and respect for the soldiers who guard the borders and make great sacrifices, sometimes giving their lives, for the safety of the nation. The lesson encourages us to remember and honour the sacrifices of our soldiers.",
           "easyExplanation": "Written as letters between two friends, this lesson pays tribute to brave soldiers. One friend visits the National War Memorial, and both express gratitude for the soldiers' sacrifices.",
           "stepByStepExplanation": [
             {
@@ -732,7 +1872,7 @@
             {
               "step": 2,
               "title": "The War Memorial",
-              "explanation": "One friend shares her visit to the National War Memorial, which moved her deeply."
+              "explanation": "One friend shares her visit to the National War Memorial, which moved her."
             },
             {
               "step": 3,
@@ -742,17 +1882,17 @@
             {
               "step": 4,
               "title": "Remember and honour",
-              "explanation": "The lesson encourages us to honour soldiers, for example by visiting war memorials."
+              "explanation": "The lesson encourages us to honour the soldiers' sacrifices."
             }
           ],
           "examples": [
             "A friend visits the National War Memorial and is deeply moved.",
-            "The friends express their gratitude for the soldiers' sacrifices."
+            "The friends express gratitude for the soldiers' sacrifices."
           ],
           "importantKeywords": [
             {
               "keyword": "Homage",
-              "definition": "Special honour or respect shown publicly.",
+              "definition": "Special honour or respect.",
               "simpleExample": "We pay homage to brave soldiers."
             },
             {
@@ -763,28 +1903,85 @@
             {
               "keyword": "Gratitude",
               "definition": "A feeling of being thankful.",
-              "simpleExample": "We feel gratitude towards our soldiers."
+              "simpleExample": "We feel gratitude towards soldiers."
             }
           ],
-          "quickSummary": "'A Homage to Our Brave Soldiers' is a lesson in the form of letters paying tribute to brave soldiers; it describes a visit to the National War Memorial and expresses gratitude for the soldiers' sacrifices.",
+          "quickSummary": "'A Homage to Our Brave Soldiers' is a lesson in the form of letters paying tribute to brave soldiers, describing a visit to the National War Memorial and expressing gratitude for the soldiers' sacrifices.",
           "revisionNotes": [
             "Genre: lesson in letters (prose).",
             "Pays tribute to brave soldiers.",
             "Visit to the National War Memorial.",
-            "Theme: gratitude for soldiers' sacrifices."
+            "Expresses gratitude for soldiers' sacrifices."
           ]
         },
         {
-          "topicId": "eng7_unit5_topic2",
-          "topic": "My Dear Soldiers (Poem)",
-          "meaning": "A patriotic poem that praises and thanks the brave soldiers who guard the country's borders day and night.",
-          "ncertBasedExplanation": "This is a heartfelt patriotic poem addressed to the soldiers who defend our country's borders. The poem calls them the 'great sons of my land' and describes how, while everyone else is asleep, the soldiers stay awake, guarding the borders in every kind of weather, windy seasons, snowy days, and the scorching sun. It compares them to yogis as they tread lonely, difficult places, climbing heights and crossing valleys to defend the nation. Through these images, the poem expresses deep respect, gratitude and admiration for the courage, sacrifice and tireless dedication of our soldiers, who keep the country safe so that the rest of us can live in peace.",
-          "easyExplanation": "This patriotic poem thanks and praises the soldiers who guard the country's borders day and night in all weather, calling them the great sons of the land.",
+          "topicId": "eng7_u5_t2",
+          "topic": "A Homage to Our Brave Soldiers - Theme and Message",
+          "meaning": "The theme of gratitude, patriotism and honouring the sacrifices of soldiers.",
+          "ncertBasedExplanation": "The themes of 'A Homage to Our Brave Soldiers' are gratitude, patriotism and honouring sacrifice. The lesson reminds us that our soldiers guard the country's borders in difficult conditions and make great sacrifices, even of their lives, so that the rest of us can live in safety and peace. Through the friends' letters and the visit to the National War Memorial, it stirs feelings of deep respect and thankfulness. The message is that we should always remember and honour our soldiers, feel grateful for the freedom and security they protect, and show our respect in ways such as visiting war memorials. It teaches us love for our country and respect for those who serve it.",
+          "easyExplanation": "The themes are gratitude, patriotism and honouring sacrifice. The message is to always remember and honour our soldiers and feel grateful for the safety they protect.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Soldiers' sacrifice",
+              "explanation": "Soldiers guard the borders and make great sacrifices for our safety."
+            },
+            {
+              "step": 2,
+              "title": "Gratitude and respect",
+              "explanation": "The lesson stirs deep respect and thankfulness for them."
+            },
+            {
+              "step": 3,
+              "title": "Honouring them",
+              "explanation": "We should honour soldiers, such as by visiting war memorials."
+            },
+            {
+              "step": 4,
+              "title": "The message",
+              "explanation": "Always remember and honour our soldiers, and love our country."
+            }
+          ],
+          "examples": [
+            "Soldiers sacrifice so that we can live in peace.",
+            "We honour soldiers by visiting war memorials."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Patriotism",
+              "definition": "Love for one's country.",
+              "simpleExample": "The lesson stirs patriotism."
+            },
+            {
+              "keyword": "Sacrifice",
+              "definition": "Giving up something precious.",
+              "simpleExample": "We honour soldiers' sacrifices."
+            },
+            {
+              "keyword": "Gratitude",
+              "definition": "Being thankful.",
+              "simpleExample": "We feel gratitude to soldiers."
+            }
+          ],
+          "quickSummary": "The themes of 'A Homage to Our Brave Soldiers' are gratitude, patriotism and honouring sacrifice, with the message to always remember and honour our soldiers and be grateful for the safety they protect.",
+          "revisionNotes": [
+            "Themes: gratitude, patriotism, honouring sacrifice.",
+            "Soldiers sacrifice for our safety.",
+            "Honour them, e.g. visiting war memorials.",
+            "Message: remember and honour our soldiers."
+          ]
+        },
+        {
+          "topicId": "eng7_u5_t3",
+          "topic": "My Dear Soldiers - Summary and Theme",
+          "meaning": "A summary and theme of the patriotic poem praising soldiers who guard the borders.",
+          "ncertBasedExplanation": "'My Dear Soldiers' is a heartfelt patriotic poem addressed to the soldiers who defend our country's borders. The poem calls them the 'great sons of my land' and describes how, while everyone else is asleep, the soldiers stay awake, guarding the borders in every kind of weather, windy seasons, snowy days, and the scorching sun. It compares them to yogis as they tread lonely, difficult places, climbing heights and crossing valleys to defend the nation. The poem's themes are patriotism, respect and gratitude, and it expresses deep admiration for the courage, sacrifice and tireless dedication of our soldiers.",
+          "easyExplanation": "This patriotic poem praises soldiers who guard the borders day and night in all weather, calling them the great sons of the land. Its themes are patriotism and gratitude.",
           "stepByStepExplanation": [
             {
               "step": 1,
               "title": "Addressed to soldiers",
-              "explanation": "The poem speaks to the soldiers who defend the country's borders."
+              "explanation": "The poem speaks to the soldiers who defend the borders."
             },
             {
               "step": 2,
@@ -794,28 +1991,28 @@
             {
               "step": 3,
               "title": "In all weather",
-              "explanation": "They guard in windy, snowy and scorching weather, in lonely, difficult places."
+              "explanation": "They guard in windy, snowy and scorching weather, in lonely places."
             },
             {
               "step": 4,
-              "title": "Respect and gratitude",
-              "explanation": "The poem expresses deep respect and gratitude for their courage and sacrifice."
+              "title": "The themes",
+              "explanation": "Patriotism, respect and gratitude for the soldiers' dedication."
             }
           ],
           "examples": [
-            "The soldiers stay awake guarding the borders while everyone sleeps.",
+            "The soldiers stay awake guarding while everyone sleeps.",
             "The poem calls the soldiers the 'great sons of my land'."
           ],
           "importantKeywords": [
             {
               "keyword": "Defender",
-              "definition": "One who protects or guards.",
+              "definition": "One who protects.",
               "simpleExample": "Soldiers are the defenders of our borders."
             },
             {
               "keyword": "Border",
               "definition": "The edge of a country.",
-              "simpleExample": "Soldiers guard the country's borders."
+              "simpleExample": "Soldiers guard the borders."
             },
             {
               "keyword": "Patriotic",
@@ -823,25 +2020,25 @@
               "simpleExample": "It is a patriotic poem."
             }
           ],
-          "quickSummary": "'My Dear Soldiers' is a patriotic poem that praises and thanks the brave soldiers who guard the country's borders day and night in all weather, expressing deep respect for their sacrifice.",
+          "quickSummary": "'My Dear Soldiers' is a patriotic poem praising the brave soldiers who guard the borders day and night in all weather, with themes of patriotism, respect and gratitude.",
           "revisionNotes": [
             "Genre: patriotic poem.",
             "Addressed to soldiers guarding the borders.",
             "They stay awake in all weather to protect us.",
-            "Theme: respect and gratitude for soldiers."
+            "Themes: patriotism, respect, gratitude."
           ]
         },
         {
-          "topicId": "eng7_unit5_topic3",
-          "topic": "Rani Abbakka (Prose)",
-          "meaning": "The story of Rani Abbakka, a brave Indian queen who courageously fought to defend her kingdom and her motherland.",
-          "ncertBasedExplanation": "This lesson tells the inspiring story of Rani Abbakka, a brave queen of southern India who fought courageously to defend her kingdom and her people. She is remembered as a fearless warrior who fought, sword in hand, to protect her country and her rights, even against powerful foreign invaders (the Portuguese). The lesson describes her courage, leadership and determination, and how she died defending her beloved motherland. Rani Abbakka is celebrated as one of India's brave women warriors and unsung heroes. Her story encourages us to value courage, patriotism and the contribution of women in India's history, and to remember those who fought for the country's freedom.",
+          "topicId": "eng7_u5_t4",
+          "topic": "Rani Abbakka - Summary",
+          "meaning": "A summary of the story of the brave queen Rani Abbakka.",
+          "ncertBasedExplanation": "'Rani Abbakka' tells the inspiring story of Rani Abbakka, a brave queen of southern India who fought courageously to defend her kingdom and her people. She is remembered as a fearless warrior who fought, sword in hand, to protect her country and her rights, even against powerful foreign invaders (the Portuguese). The lesson describes her courage, leadership and determination, and how she died defending her beloved motherland. Rani Abbakka is celebrated as one of India's brave women warriors and unsung heroes, and her story honours the contribution of women in India's history.",
           "easyExplanation": "Rani Abbakka was a brave Indian queen who fought courageously, sword in hand, to defend her kingdom against foreign invaders. She is celebrated as a fearless woman warrior.",
           "stepByStepExplanation": [
             {
               "step": 1,
               "title": "A brave queen",
-              "explanation": "Rani Abbakka was a brave queen of southern India who defended her kingdom."
+              "explanation": "Rani Abbakka was a brave queen who defended her kingdom."
             },
             {
               "step": 2,
@@ -851,12 +2048,12 @@
             {
               "step": 3,
               "title": "Against invaders",
-              "explanation": "She bravely fought powerful foreign invaders (the Portuguese)."
+              "explanation": "She bravely fought powerful foreign invaders."
             },
             {
               "step": 4,
               "title": "Remembered with honour",
-              "explanation": "She died defending her motherland and is celebrated as a brave woman warrior."
+              "explanation": "She died defending her motherland and is celebrated as a woman warrior."
             }
           ],
           "examples": [
@@ -880,12 +2077,240 @@
               "simpleExample": "Rani Abbakka showed great courage."
             }
           ],
-          "quickSummary": "'Rani Abbakka' tells the story of a brave Indian queen who fought courageously, sword in hand, to defend her kingdom against foreign invaders and is celebrated as a fearless woman warrior.",
+          "quickSummary": "'Rani Abbakka' tells the story of a brave Indian queen who fought courageously, sword in hand, to defend her kingdom against foreign invaders, celebrated as a fearless woman warrior.",
           "revisionNotes": [
             "Genre: biographical/historical prose.",
             "Subject: Rani Abbakka, a brave queen.",
             "Fought to defend her kingdom against invaders.",
-            "Theme: courage, patriotism, women warriors."
+            "Celebrated as a brave woman warrior."
+          ]
+        },
+        {
+          "topicId": "eng7_u5_t5",
+          "topic": "Rani Abbakka - Theme and Message",
+          "meaning": "The theme of bravery, patriotism and the role of women warriors in history.",
+          "ncertBasedExplanation": "The themes of 'Rani Abbakka' are bravery, patriotism, and the important role of women in India's history. Rani Abbakka's story shows that women have been fearless leaders and warriors who fought to protect their land and freedom. Her courage, determination and sacrifice make her an inspiring example of love for one's country. The lesson also reminds us that there are many such 'unsung heroes' whose stories deserve to be remembered. The message is to value courage and patriotism, to honour the contribution of women in our history, and to remember and be inspired by those who fought bravely for the country's freedom and dignity.",
+          "easyExplanation": "The themes are bravery, patriotism and the role of women warriors. The message is to value courage, honour women's contribution in history, and remember our brave heroes.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Bravery and patriotism",
+              "explanation": "Rani Abbakka's courage and love for her land inspire us."
+            },
+            {
+              "step": 2,
+              "title": "Women warriors",
+              "explanation": "Her story shows women have been fearless leaders and warriors."
+            },
+            {
+              "step": 3,
+              "title": "Unsung heroes",
+              "explanation": "There are many unsung heroes whose stories deserve to be remembered."
+            },
+            {
+              "step": 4,
+              "title": "The message",
+              "explanation": "Value courage, honour women in history, and remember brave heroes."
+            }
+          ],
+          "examples": [
+            "Rani Abbakka's courage makes her an inspiring example.",
+            "Her story honours the role of women in India's history."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Bravery",
+              "definition": "Courage in danger.",
+              "simpleExample": "Rani Abbakka showed great bravery."
+            },
+            {
+              "keyword": "Patriotism",
+              "definition": "Love for one's country.",
+              "simpleExample": "Her patriotism inspires us."
+            },
+            {
+              "keyword": "Unsung hero",
+              "definition": "A brave person not widely known.",
+              "simpleExample": "Rani Abbakka is an unsung hero."
+            }
+          ],
+          "quickSummary": "The themes of 'Rani Abbakka' are bravery, patriotism and the role of women warriors, with the message to value courage, honour women's contribution in history and remember our brave heroes.",
+          "revisionNotes": [
+            "Themes: bravery, patriotism, women warriors.",
+            "Rani Abbakka was a fearless woman leader.",
+            "Many unsung heroes deserve to be remembered.",
+            "Message: value courage and honour women in history."
+          ]
+        },
+        {
+          "topicId": "eng7_u5_t6",
+          "topic": "Unit 5 - Vocabulary and Language",
+          "meaning": "Useful words, expressions and language features from the Unit 5 lessons.",
+          "ncertBasedExplanation": "Unit 5, 'Bravehearts', introduces words and language about courage, soldiers and patriotism. From 'A Homage to Our Brave Soldiers' we learn words about respect and sacrifice, like homage, gratitude, sacrifice and memorial, and we practise the form of friendly letters. From 'My Dear Soldiers' we meet patriotic, descriptive language about guarding the borders. From 'Rani Abbakka' we learn words about bravery and history, like warrior, fearless, defend and motherland. The unit also helps us express respect, write letters, and describe brave deeds. Building this vocabulary helps us read about heroes and write with feeling about courage and patriotism.",
+          "easyExplanation": "Unit 5 teaches words about respect and sacrifice (homage, gratitude, memorial), patriotic language, and bravery (warrior, fearless, defend), plus letter writing.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Respect and sacrifice words",
+              "explanation": "'A Homage to Our Brave Soldiers' teaches words like homage, gratitude and memorial."
+            },
+            {
+              "step": 2,
+              "title": "Patriotic language",
+              "explanation": "'My Dear Soldiers' uses patriotic, descriptive language."
+            },
+            {
+              "step": 3,
+              "title": "Bravery words",
+              "explanation": "'Rani Abbakka' teaches words like warrior, fearless and defend."
+            },
+            {
+              "step": 4,
+              "title": "Using language",
+              "explanation": "The unit helps us write letters and describe brave deeds."
+            }
+          ],
+          "examples": [
+            "'Homage' and 'gratitude' relate to respect and thankfulness.",
+            "'Warrior' and 'fearless' describe bravery."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Vocabulary",
+              "definition": "The words we learn.",
+              "simpleExample": "The unit builds vocabulary."
+            },
+            {
+              "keyword": "Patriotic",
+              "definition": "Showing love for one's country.",
+              "simpleExample": "Patriotic language praises soldiers."
+            },
+            {
+              "keyword": "Homage",
+              "definition": "Respectful tribute.",
+              "simpleExample": "'Homage' means respectful tribute."
+            }
+          ],
+          "quickSummary": "Unit 5 builds vocabulary about respect and sacrifice, patriotic language and bravery, and practises letter writing, helping us read about heroes and write about courage and patriotism.",
+          "revisionNotes": [
+            "Respect/sacrifice words: homage, gratitude, memorial.",
+            "Patriotic language (My Dear Soldiers).",
+            "Bravery words: warrior, fearless, defend.",
+            "Practises letter writing and describing brave deeds."
+          ]
+        },
+        {
+          "topicId": "eng7_u5_t7",
+          "topic": "Unit 5 - Theme: Bravehearts",
+          "meaning": "How the three lessons of Unit 5 connect under the theme of 'Bravehearts'.",
+          "ncertBasedExplanation": "The three lessons of Unit 5 are placed together under the theme 'Bravehearts'. Each lesson honours brave people who serve and protect others. 'A Homage to Our Brave Soldiers' pays tribute to the soldiers who guard our country today. 'My Dear Soldiers' is a poem praising those same brave soldiers. 'Rani Abbakka' tells of a brave queen from history who fought to defend her land. Together, the lessons fill us with respect, gratitude and patriotism, and show that bravehearts, whether soldiers of today or heroes of the past, deserve to be remembered and honoured. The theme inspires us to value courage and to feel love and gratitude for those who protect our country.",
+          "easyExplanation": "Unit 5's three lessons share the theme 'Bravehearts': tributes to today's soldiers (in letters and a poem) and the story of the brave historical queen Rani Abbakka.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "A shared theme",
+              "explanation": "The three lessons share the theme 'Bravehearts'."
+            },
+            {
+              "step": 2,
+              "title": "Today's soldiers",
+              "explanation": "'A Homage to Our Brave Soldiers' and 'My Dear Soldiers' honour today's soldiers."
+            },
+            {
+              "step": 3,
+              "title": "A hero of the past",
+              "explanation": "'Rani Abbakka' tells of a brave queen who defended her land."
+            },
+            {
+              "step": 4,
+              "title": "Respect and gratitude",
+              "explanation": "Together the lessons fill us with respect, gratitude and patriotism."
+            }
+          ],
+          "examples": [
+            "The unit honours brave soldiers and a brave queen.",
+            "Bravehearts, past and present, deserve to be remembered."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Braveheart",
+              "definition": "A brave, courageous person.",
+              "simpleExample": "Soldiers are bravehearts."
+            },
+            {
+              "keyword": "Patriotism",
+              "definition": "Love for one's country.",
+              "simpleExample": "The unit stirs patriotism."
+            },
+            {
+              "keyword": "Theme",
+              "definition": "A connecting main idea.",
+              "simpleExample": "The theme is 'Bravehearts'."
+            }
+          ],
+          "quickSummary": "Unit 5's three lessons connect under the theme 'Bravehearts', honouring today's soldiers in letters and a poem and the historical queen Rani Abbakka, filling us with respect and patriotism.",
+          "revisionNotes": [
+            "Unit theme: 'Bravehearts'.",
+            "Tributes to today's soldiers (letters, poem).",
+            "Story of the brave queen Rani Abbakka.",
+            "Fills us with respect, gratitude, patriotism."
+          ]
+        },
+        {
+          "topicId": "eng7_u5_t8",
+          "topic": "Unit 5 - Comprehension and Discussion",
+          "meaning": "Key questions and discussion points to understand and reflect on the Unit 5 lessons.",
+          "ncertBasedExplanation": "After reading the Unit 5 lessons, it helps to think about and discuss them. We can ask: Why did the friend feel deeply moved at the National War Memorial? How does the poem describe the soldiers' life on the border? What qualities made Rani Abbakka a great warrior, and which other brave heroes do we know? Discussing these questions with classmates and teachers helps us understand the lessons and feel gratitude and patriotism. We can also write a letter or message thanking soldiers, learn about other brave heroes, especially women, and think about how we can serve our country. Such reflection makes the learning meaningful and fills us with respect for our bravehearts.",
+          "easyExplanation": "Discussing questions, like why the War Memorial moved the friend, the soldiers' life, and Rani Abbakka's qualities, helps us feel gratitude and patriotism.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Ask about each lesson",
+              "explanation": "Think about the War Memorial, the soldiers' life and Rani Abbakka."
+            },
+            {
+              "step": 2,
+              "title": "Connect to ourselves",
+              "explanation": "Relate the lessons to gratitude, patriotism and serving our country."
+            },
+            {
+              "step": 3,
+              "title": "Discuss together",
+              "explanation": "Share answers with classmates and teachers."
+            },
+            {
+              "step": 4,
+              "title": "Meaningful learning",
+              "explanation": "Reflection fills us with respect for our bravehearts."
+            }
+          ],
+          "examples": [
+            "We can write a message thanking soldiers.",
+            "We can learn about other brave heroes, especially women."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Comprehension",
+              "definition": "Understanding what we read.",
+              "simpleExample": "Questions check comprehension."
+            },
+            {
+              "keyword": "Discussion",
+              "definition": "Talking over ideas.",
+              "simpleExample": "Discussion deepens understanding."
+            },
+            {
+              "keyword": "Reflect",
+              "definition": "To think carefully.",
+              "simpleExample": "We reflect on the lessons."
+            }
+          ],
+          "quickSummary": "Discussing key questions about the Unit 5 lessons, such as the War Memorial, the soldiers' life and Rani Abbakka's qualities, helps us understand them and feel gratitude and patriotism.",
+          "revisionNotes": [
+            "Discuss key questions about each lesson.",
+            "Relate to gratitude and serving our country.",
+            "Share with classmates and teachers.",
+            "Fills us with respect for our bravehearts."
           ]
         }
       ]
