@@ -235,6 +235,10 @@ export default function Home() {
   const [historyLoading,     setHistoryLoading]     = useState(false);
   const [currentSessionId,   setCurrentSessionId]   = useState(null); // active session being saved
   const [viewingSession,     setViewingSession]     = useState(null); // session being viewed in history tab
+  const [doubts,             setDoubts]             = useState([]);
+  const [doubtsLoading,      setDoubtsLoading]      = useState(false);
+  const [savingDoubtId,      setSavingDoubtId]      = useState(null);
+  const [resolvingDoubtId,   setResolvingDoubtId]   = useState(null);
 
   const currentSyllabus = SYLLABUS_DATA[classLevel]?.[board] || SYLLABUS_DATA["5"]?.CBSE;
   const currentChapters = selectedSubject ? currentSyllabus?.[selectedSubject] || [] : [];
@@ -288,11 +292,13 @@ export default function Home() {
       loadRevisionProgress(user.uid);
       loadTestResults(user.uid);
       loadChatSessions(user.uid);
+      loadDoubts(user.uid);
     } else {
       setTopicProgress({});
       setRevisionProgress({});
       setTestResults({});
       setChatSessions([]);
+      setDoubts([]);
     }
   }, [user]);
 
@@ -540,6 +546,7 @@ export default function Home() {
     setActiveTab("chat"); setSelectedSubject(null); setSelectedChapter(null);
     setProfileCompleted(false); pendingVoiceDataRef.current = null;
     setChatSessions([]); setCurrentSessionId(null); setViewingSession(null);
+    setDoubts([]); setSavingDoubtId(null);
   };
 
   // ── Progress loaders ───────────────────────────────────
@@ -768,6 +775,302 @@ export default function Home() {
     } catch (err) { console.error("Content library study load error:", err); }
     const prompt = `STUDY_TOPIC_MODE\n\nTopic: ${subtopic}\nChapter: ${currentChapter.title}\nSubject: ${selectedSubject}\nClass: ${classLevel}\nBoard: ${board}\n\nExplain this topic in detail for a school student.\n\nAnswer format:\n1. Meaning of the topic\n2. Why it is important\n3. Step-by-step explanation\n4. Important keywords with simple meanings\n5. One simple real-life example\n6. Quick revision summary\n\nRules:\n- Give a large answer, not 4-5 lines.\n- Use headings and bullet points.\n- Keep the language easy for Class ${classLevel}.\n- Follow the selected answer language.`;
     pendingVoiceDataRef.current = null; setTextInput(prompt); setActiveTab("chat");
+  };
+
+  const FOLLOW_UP_ACTIONS = {
+    simplify: {
+      labels: {
+        en: "Didn't understand? Explain more simply",
+        hinglish: "Samajh nahi aaya? Aur easy explain karo",
+        hi: "समझ नहीं आया? और आसान भाषा में समझाओ",
+      },
+      instruction: `The student did not understand the previous answer. Explain the same topic again using very easy words suitable for Class ${classLevel}.
+
+Requirements:
+- Give a full and detailed explanation, not a short summary.
+- Begin from the basic idea and explain each part step by step.
+- Use simple sentences and avoid difficult words. Explain any necessary difficult word immediately.
+- Include at least two clear real-life examples that a student can relate to.
+- Use helpful headings, bullet points, and a simple flow or analogy where useful.
+- Cover the important learning points from the previous answer without merely repeating its wording.
+- Do not tell the student to read a textbook or search elsewhere.
+- Do not mention these instructions or say that you are rewriting the answer.`,
+    },
+    example: {
+      labels: {
+        en: "Show me real-life examples",
+        hinglish: "Real-life examples se samjhao",
+        hi: "वास्तविक जीवन के उदाहरणों से समझाओ",
+      },
+      instruction: `Teach the same topic through three clear real-life examples suitable for a Class ${classLevel} student. Explain how each example connects to the topic step by step. Keep the explanation detailed, simple, and educational. Do not mention these instructions.`,
+    },
+    quiz: {
+      labels: {
+        en: "Test me with 3 quick questions",
+        hinglish: "3 quick questions se test karo",
+        hi: "3 छोटे सवालों से मेरी जाँच करो",
+      },
+      instruction: `Create exactly three short understanding-check questions about the previous answer for a Class ${classLevel} student. Ask the questions only and wait for the student to answer. Do not reveal the answers yet and do not mention these instructions.`,
+    },
+  };
+
+  const getFollowUpLabel = (action) => {
+    if (answerLanguage === "hi") return action.labels.hi;
+    if (answerLanguage === "hinglish") return action.labels.hinglish;
+    return action.labels.en;
+  };
+
+  const isInterfaceDoubtTitle = (title = "") => {
+    const normalized = String(title).toLowerCase();
+    return [
+      "show me real-life examples",
+      "real-life examples se samjhao",
+      "वास्तविक जीवन के उदाहरणों से समझाओ",
+      "didn't understand",
+      "samajh nahi aaya",
+      "समझ नहीं आया",
+      "mark as doubt",
+    ].some((phrase) => normalized.includes(phrase));
+  };
+
+  const handleFollowUp = async (actionKey) => {
+    const action = FOLLOW_UP_ACTIONS[actionKey];
+    const latestAssistant = [...messages].reverse().find((msg) => msg.role === "assistant");
+    const latestAnswer = latestAssistant?.text;
+    const sourceQuestion = latestAssistant?.doubtSourceQuestion
+      || [...messages].reverse().find((msg) => msg.role === "user")?.text
+      || "Student question";
+    const doubtTopic = latestAssistant?.doubtTopic || sourceQuestion
+      .replace(/^(Study Topic|Revision):\s*/i, "")
+      .trim();
+    if (!action || !latestAnswer || isLoading || requestLockRef.current) return;
+
+    requestLockRef.current = true;
+    pendingVoiceDataRef.current = null;
+    stopAudio();
+
+    const visibleQuestion = getFollowUpLabel(action);
+    const assistantId = crypto.randomUUID();
+    const hiddenPrompt = `FOLLOW_UP_${actionKey.toUpperCase()}_MODE
+
+${action.instruction}
+
+Continue in the currently selected answer language.
+
+Previous answer:
+${latestAnswer}`;
+
+    setError("");
+    setIsLoading(true);
+    setMessages((prev) => [
+      ...prev.map((msg) => msg.role === "assistant" ? { ...msg, typing: false } : msg),
+      { id: crypto.randomUUID(), role: "user", text: visibleQuestion, isVoice: false },
+    ]);
+
+    const fd = new FormData();
+    fd.append("question", hiddenPrompt);
+    fd.append("history", JSON.stringify(history));
+    fd.append("class_level", classLevel);
+    fd.append("board", board);
+    fd.append("answer_language", answerLanguage);
+    if (selectedSubject) fd.append("subject", selectedSubject);
+
+    try {
+      const res = await fetch("/api/ask-text", { method: "POST", body: fd });
+      if (!res.ok) {
+        const err = await res.json();
+        throw new Error(err.detail || "Could not prepare the follow-up answer.");
+      }
+      const data = await res.json();
+      setMessages((prev) => [
+        ...prev.map((msg) => msg.role === "assistant" ? { ...msg, typing: false } : msg),
+        {
+          id: assistantId,
+          role: "assistant",
+          text: data.answer,
+          audioUrl: null,
+          typing: true,
+          followUpType: actionKey,
+          doubtTopic: doubtTopic || sourceQuestion,
+          doubtSourceQuestion: sourceQuestion,
+        },
+      ]);
+      updateHistory(visibleQuestion, data.answer);
+
+      if (user && currentSessionId) {
+        setTimeout(() => saveCurrentSession(user.uid, currentSessionId), 400);
+      }
+
+      try {
+        const audioUrl = await generateAnswerAudio(data.answer, data.language === "hi" ? "hi" : "en");
+        if (audioUrl) {
+          setMessages((prev) => prev.map((msg) => msg.id === assistantId ? { ...msg, audioUrl } : msg));
+        }
+      } catch (ttsError) {
+        console.error("Follow-up TTS failed:", ttsError);
+      }
+    } catch (err) {
+      setError(err.message || "Could not prepare the follow-up answer.");
+    } finally {
+      setIsLoading(false);
+      requestLockRef.current = false;
+    }
+  };
+
+  const markAsDoubt = async (assistantMessage) => {
+    if (!user || !assistantMessage?.id || !assistantMessage?.text || savingDoubtId) return;
+    const existingDoubt = doubts.find((doubt) => doubt.assistantMessageId === assistantMessage.id);
+    if (existingDoubt && !isInterfaceDoubtTitle(existingDoubt.topicName)) return;
+
+    setSavingDoubtId(assistantMessage.id);
+    setError("");
+
+    try {
+      const titleForm = new FormData();
+      titleForm.append(
+        "question",
+        `DOUBT_TITLE_MODE
+
+Create one short and meaningful doubt title from the student's original question and the explanation below.
+
+Doubt type: ${assistantMessage.followUpType || "general"}
+Topic: ${assistantMessage.doubtTopic || ""}
+
+Original question:
+${assistantMessage.doubtSourceQuestion || assistantMessage.doubtTopic || ""}
+
+Explanation:
+${assistantMessage.text}`
+      );
+      titleForm.append("history", JSON.stringify([]));
+      titleForm.append("class_level", classLevel);
+      titleForm.append("board", board);
+      titleForm.append("answer_language", answerLanguage);
+      if (selectedSubject) titleForm.append("subject", selectedSubject);
+
+      const titleResponse = await fetch("/api/ask-text", { method: "POST", body: titleForm });
+      if (!titleResponse.ok) {
+        const titleError = await titleResponse.json();
+        throw new Error(titleError.detail || "Could not create a doubt title.");
+      }
+      const titleData = await titleResponse.json();
+      const generatedTitle = String(titleData.answer || "")
+        .split("\n")[0]
+        .replace(/^["'`]+|["'`]+$/g, "")
+        .replace(/[.!?।]+$/g, "")
+        .replace(/\s+/g, " ")
+        .trim();
+      const doubtData = {
+        assistantMessageId: assistantMessage.id,
+        topicName: generatedTitle || assistantMessage.doubtTopic || "Saved doubt",
+        followUpType: assistantMessage.followUpType || "general",
+        markedMessageId: assistantMessage.id,
+        chatSessionId: currentSessionId || "",
+        chatMessages: messages.map(({ audioUrl: _audioUrl, typing: _typing, ...message }) => message),
+        chatHistory: history,
+        answerLanguage,
+        resolved: false,
+        createdAt: serverTimestamp(),
+      };
+
+      await setDoc(doc(db, "users", user.uid, "doubts", assistantMessage.id), doubtData);
+      setDoubts((prev) => [
+        { ...doubtData, id: assistantMessage.id, createdAt: { toDate: () => new Date() } },
+        ...prev.filter((doubt) => doubt.assistantMessageId !== assistantMessage.id),
+      ]);
+    } catch (err) {
+      console.error("Save doubt error:", err);
+      setError("Could not save this doubt. Please check your Firestore rules.");
+    } finally {
+      setSavingDoubtId(null);
+    }
+  };
+
+  const markDoubtResolved = async (doubt) => {
+    if (!user || !doubt?.id || doubt.resolved || resolvingDoubtId) return;
+    setResolvingDoubtId(doubt.id);
+    setError("");
+    try {
+      await setDoc(
+        doc(db, "users", user.uid, "doubts", doubt.id),
+        { resolved: true, resolvedAt: serverTimestamp() },
+        { merge: true }
+      );
+      setDoubts((prev) => prev.map((item) => item.id === doubt.id
+        ? { ...item, resolved: true, resolvedAt: { toDate: () => new Date() } }
+        : item
+      ));
+    } catch (err) {
+      console.error("Resolve doubt error:", err);
+      setError("Could not mark this doubt as resolved.");
+    } finally {
+      setResolvingDoubtId(null);
+    }
+  };
+
+  const openDoubtChat = async (doubt) => {
+    if (!doubt) return;
+    stopAudio();
+    setError("");
+
+    let restoredMessages = doubt.chatMessages || [];
+    let restoredHistory = doubt.chatHistory || [];
+
+    if (!restoredMessages.length && user && doubt.chatSessionId) {
+      try {
+        const sessionSnap = await getDoc(doc(db, "users", user.uid, "chatSessions", doubt.chatSessionId));
+        if (sessionSnap.exists()) {
+          const session = sessionSnap.data();
+          restoredMessages = session.messages || [];
+          restoredHistory = session.history || [];
+        }
+      } catch (err) {
+        console.error("Doubt chat load error:", err);
+      }
+    }
+
+    if (!restoredMessages.length) {
+      setError("The chat linked to this older doubt is not available.");
+      return;
+    }
+
+    setMessages(restoredMessages.map((message) => ({
+      ...message,
+      audioUrl: null,
+      typing: false,
+    })));
+    setHistory(restoredHistory);
+    if (doubt.chatSessionId) setCurrentSessionId(doubt.chatSessionId);
+    if (doubt.answerLanguage) setAnswerLanguage(doubt.answerLanguage);
+    setActiveTab("chat");
+    pendingVoiceDataRef.current = null;
+
+    setTimeout(() => {
+      document.getElementById(`chat-message-${doubt.markedMessageId}`)?.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }, 150);
+  };
+
+  const loadDoubts = async (uid) => {
+    if (!uid) return;
+    setDoubtsLoading(true);
+    try {
+      const doubtsQuery = query(
+        collection(db, "users", uid, "doubts"),
+        orderBy("createdAt", "desc"),
+        limit(100)
+      );
+      const snap = await getDocs(doubtsQuery);
+      const loaded = [];
+      snap.forEach((doubtDoc) => loaded.push({ id: doubtDoc.id, ...doubtDoc.data() }));
+      setDoubts(loaded);
+    } catch (err) {
+      console.error("Doubts load error:", err);
+    } finally {
+      setDoubtsLoading(false);
+    }
   };
 
   const cancelProcessing = () => {
@@ -1033,6 +1336,7 @@ export default function Home() {
           {[
             { key: "chat",     label: "💬 Chatbot" },
             { key: "history",  label: "🕐 History" },
+            { key: "doubts",   label: "❓ Doubts" },
             { key: "syllabus", label: "📚 Syllabus" },
             { key: "test",     label: "📝 Test", disabled: !currentTest && !testLoading },
           ].map(({ key, label, disabled }) => (
@@ -1086,16 +1390,18 @@ export default function Home() {
                   <p style={{ fontSize: "12px", color: B.gray500, marginTop: "4px" }}>Supports Hindi · English · Hinglish</p>
                 </div>
               ) : (
-                messages.map((msg, i) =>
-                  msg.role === "user" ? (
-                    <div key={msg.id} style={{ display: "flex", gap: "10px", alignItems: "flex-start", flexDirection: "row-reverse" }}>
-                      <div style={{ width: "32px", height: "32px", borderRadius: "50%", flexShrink: 0, background: `linear-gradient(135deg, ${B.red}, ${B.orange})`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "11px", fontWeight: 700, color: B.white, marginTop: "2px" }}>{userProfile?.name?.[0]?.toUpperCase() || "Y"}</div>
-                      <div style={{ maxWidth: "78%", padding: "12px 16px", borderRadius: "16px 4px 16px 16px", background: B.navy, color: B.white, fontSize: "14px", lineHeight: "1.6", maxHeight: "120px", overflowY: "auto", boxShadow: "0 2px 8px rgba(43,88,136,0.2)" }}>{msg.text}</div>
-                    </div>
-                  ) : (
-                    <AssistantBubble key={msg.id} msg={msg} index={i} playingIndex={playingIndex} playAudio={playAudio} stopAudio={stopAudio} onTypingComplete={markTypingComplete} />
-                  )
-                )
+                messages.map((msg, i) => (
+                  <div key={msg.id} id={`chat-message-${msg.id}`}>
+                    {msg.role === "user" ? (
+                      <div style={{ display: "flex", gap: "10px", alignItems: "flex-start", flexDirection: "row-reverse" }}>
+                        <div style={{ width: "32px", height: "32px", borderRadius: "50%", flexShrink: 0, background: `linear-gradient(135deg, ${B.red}, ${B.orange})`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "11px", fontWeight: 700, color: B.white, marginTop: "2px" }}>{userProfile?.name?.[0]?.toUpperCase() || "Y"}</div>
+                        <div style={{ maxWidth: "78%", padding: "12px 16px", borderRadius: "16px 4px 16px 16px", background: B.navy, color: B.white, fontSize: "14px", lineHeight: "1.6", maxHeight: "120px", overflowY: "auto", boxShadow: "0 2px 8px rgba(43,88,136,0.2)" }}>{msg.text}</div>
+                      </div>
+                    ) : (
+                      <AssistantBubble msg={msg} index={i} playingIndex={playingIndex} playAudio={playAudio} stopAudio={stopAudio} onTypingComplete={markTypingComplete} />
+                    )}
+                  </div>
+                ))
               )}
               {isLoading && (
                 <div style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
@@ -1121,6 +1427,43 @@ export default function Home() {
               <div style={{ margin: "0 16px 10px", padding: "10px 14px", background: B.redLight, border: `1px solid ${B.red}`, borderRadius: "10px", fontSize: "13px", color: B.red, display: "flex", alignItems: "center", gap: "8px" }}>
                 <div style={{ width: "8px", height: "8px", borderRadius: "50%", background: B.red, animation: "pulse 1s infinite" }} />
                 <span style={{ fontWeight: 500 }}>Recording... press mic again to stop</span>
+              </div>
+            )}
+
+            {messages[messages.length - 1]?.role === "assistant" && !isRecording && !isTranscribing && (
+              <div style={{ padding: "10px 16px", borderTop: `1px solid ${B.gray100}`, background: B.white, display: "flex", gap: "8px", flexWrap: "wrap" }}>
+                {[
+                  { key: "simplify", icon: "💡" },
+                  { key: "example", icon: "🌍" },
+                  { key: "quiz", icon: "✓" },
+                ].map(({ key, icon }) => {
+                  const action = FOLLOW_UP_ACTIONS[key];
+                  const latestAssistant = messages[messages.length - 1];
+                  const showMarkAsDoubt = key === latestAssistant.followUpType;
+                  const savedDoubt = showMarkAsDoubt
+                    ? doubts.find((doubt) => doubt.assistantMessageId === latestAssistant.id)
+                    : null;
+                  const doubtSaved = Boolean(savedDoubt && !isInterfaceDoubtTitle(savedDoubt.topicName));
+                  return (
+                    <button
+                      key={key}
+                      onClick={() => showMarkAsDoubt ? markAsDoubt(latestAssistant) : handleFollowUp(key)}
+                      disabled={isLoading || doubtSaved || savingDoubtId === latestAssistant.id}
+                      style={{ flex: "1 1 190px", minHeight: "38px", padding: "8px 11px", border: `1px solid ${doubtSaved ? B.greenBorder : B.gray300}`, borderRadius: "8px", background: doubtSaved ? B.greenLight : B.gray50, color: doubtSaved ? B.green : B.navy, fontSize: "11px", lineHeight: "1.35", fontWeight: 600, cursor: isLoading || doubtSaved ? "not-allowed" : "pointer", opacity: isLoading ? 0.5 : 1, fontFamily: "'Plus Jakarta Sans', sans-serif", textAlign: "left", display: "flex", alignItems: "center", gap: "7px" }}
+                    >
+                      <span aria-hidden="true">{showMarkAsDoubt ? (doubtSaved ? "✓" : "❓") : icon}</span>
+                      <span>
+                        {showMarkAsDoubt
+                          ? doubtSaved
+                            ? "Saved in Doubts"
+                            : savingDoubtId === latestAssistant.id
+                              ? "Saving doubt..."
+                              : "Mark as doubt"
+                          : getFollowUpLabel(action)}
+                      </span>
+                    </button>
+                  );
+                })}
               </div>
             )}
 
@@ -1154,6 +1497,60 @@ export default function Home() {
             </div>
             <div style={{ textAlign: "center", fontSize: "11px", color: B.gray500, padding: "8px 16px", borderTop: `1px solid ${B.gray100}`, background: B.white }}>
               Press <kbd style={{ background: B.gray100, padding: "1px 5px", borderRadius: "4px", fontSize: "10px" }}>Enter</kbd> to send · <kbd style={{ background: B.gray100, padding: "1px 5px", borderRadius: "4px", fontSize: "10px" }}>Shift+Enter</kbd> for new line
+            </div>
+          </div>
+        )}
+
+        {/* ── DOUBTS TAB ── */}
+        {activeTab === "doubts" && (
+          <div style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "18px", overflow: "hidden", boxShadow: "0 4px 20px rgba(43,88,136,0.06)" }}>
+            <div style={{ padding: "16px 20px", borderBottom: `1px solid ${B.gray200}` }}>
+              <h2 style={{ fontSize: "17px", fontWeight: 700, color: B.navy, margin: 0 }}>My Doubts</h2>
+              <p style={{ fontSize: "12px", color: B.gray500, margin: "3px 0 0" }}>{doubts.length} saved doubt{doubts.length !== 1 ? "s" : ""}</p>
+            </div>
+
+            <div style={{ maxHeight: "600px", overflowY: "auto", padding: doubts.length ? "16px" : 0 }}>
+              {doubtsLoading ? (
+                <div style={{ padding: "44px", textAlign: "center", color: B.gray500, fontSize: "13px" }}>Loading doubts...</div>
+              ) : doubts.length === 0 ? (
+                <div style={{ padding: "52px 20px", textAlign: "center", color: B.gray500 }}>
+                  <div style={{ fontSize: "40px", marginBottom: "10px" }}>❓</div>
+                  <p style={{ fontSize: "14px", fontWeight: 600, color: B.navy }}>No doubts saved yet</p>
+                  <p style={{ fontSize: "12px", marginTop: "5px" }}>Choose an easier AI explanation, then mark it as a doubt.</p>
+                </div>
+              ) : (
+                <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+                  {doubts.map((doubt) => (
+                    <div
+                      key={doubt.id}
+                      style={{ width: "100%", border: `1px solid ${doubt.resolved ? B.greenBorder : B.gray200}`, borderRadius: "8px", background: doubt.resolved ? B.greenLight : B.gray50, overflow: "hidden" }}
+                    >
+                      <button
+                        onClick={() => openDoubtChat(doubt)}
+                        style={{ width: "100%", padding: "13px 15px", border: "none", borderBottom: `1px solid ${doubt.resolved ? B.greenBorder : B.gray200}`, background: B.white, textAlign: "left", cursor: "pointer", fontFamily: "'Plus Jakarta Sans', sans-serif" }}
+                      >
+                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: "12px" }}>
+                          <div style={{ minWidth: 0 }}>
+                            <div style={{ fontSize: "11px", fontWeight: 700, color: doubt.resolved ? B.green : B.red, textTransform: "uppercase", marginBottom: "4px" }}>{doubt.resolved ? "Resolved" : "Doubt"}</div>
+                            <div style={{ fontSize: "14px", fontWeight: 700, color: B.navy, lineHeight: "1.45" }}>{doubt.topicName || doubt.question || "Saved doubt"}</div>
+                          </div>
+                          <div style={{ fontSize: "11px", color: B.gray500, flexShrink: 0 }}>{formatSessionDate(doubt.createdAt)}</div>
+                        </div>
+                        <div style={{ fontSize: "11px", color: B.gray500, marginTop: "6px" }}>Open chat at this doubt →</div>
+                      </button>
+                      <div style={{ padding: "9px 12px", display: "flex", justifyContent: "flex-end", background: doubt.resolved ? B.greenLight : B.gray50 }}>
+                        <button
+                          onClick={() => markDoubtResolved(doubt)}
+                          disabled={doubt.resolved || resolvingDoubtId === doubt.id}
+                          style={{ padding: "6px 11px", borderRadius: "8px", border: `1px solid ${B.greenBorder}`, background: doubt.resolved ? B.white : B.green, color: doubt.resolved ? B.green : B.white, fontSize: "11px", fontWeight: 700, cursor: doubt.resolved ? "default" : "pointer", opacity: resolvingDoubtId === doubt.id ? 0.55 : 1, fontFamily: "'Plus Jakarta Sans', sans-serif" }}
+                        >
+                          {doubt.resolved ? "✓ Resolved" : resolvingDoubtId === doubt.id ? "Saving..." : "Mark resolved"}
+                        </button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         )}

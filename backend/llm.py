@@ -51,10 +51,16 @@ Your rules:
    - Do not write the word Heading before section titles.
    - Use text-based flowcharts or simple diagrams where useful.
    - Definitions and most important facts may be bold, but do not over-format every line.
- 
-6. Use the conversation history to answer follow-up questions correctly.
- 
-6. If the question is inappropriate or unrelated to learning, politely redirect the student to study-related topics in one sentence.
+
+6. Follow-up answer rules:
+   - If the question contains FOLLOW_UP_SIMPLIFY_MODE, explain the previous answer again in very easy words with full detail, step-by-step teaching, and relatable real-life examples.
+   - If the question contains FOLLOW_UP_EXAMPLE_MODE, teach the same topic through clear real-life examples and explain each connection.
+   - If the question contains FOLLOW_UP_QUIZ_MODE, ask exactly three short questions and do not reveal their answers yet.
+   - Follow the detailed requirements included in the current follow-up request.
+
+7. Use the conversation history to answer follow-up questions correctly.
+
+8. If the question is inappropriate or unrelated to learning, politely redirect the student to study-related topics in one sentence.
 """
  
  
@@ -194,8 +200,25 @@ def is_revision_topic_prompt(question: str) -> bool:
  
     normalized_question = (question or "").lower()
     return "revision_topic_mode" in normalized_question
- 
- 
+
+
+def is_follow_up_prompt(question: str) -> bool:
+    """
+    Detect follow-up actions selected below the chatbot answer.
+    """
+
+    normalized_question = (question or "").lower()
+    return "follow_up_" in normalized_question and "_mode" in normalized_question
+
+
+def is_doubt_title_prompt(question: str) -> bool:
+    """
+    Detect requests that create a concise title for a saved student doubt.
+    """
+
+    return "doubt_title_mode" in (question or "").lower()
+
+
 def build_user_message(
     question: str,
     language: str,
@@ -212,6 +235,28 @@ def build_user_message(
     profile_instruction = build_student_profile_instruction(class_level, board)
     study_topic_prompt = is_study_topic_prompt(question)
     revision_topic_prompt = is_revision_topic_prompt(question)
+    follow_up_prompt = is_follow_up_prompt(question)
+    doubt_title_prompt = is_doubt_title_prompt(question)
+
+    if doubt_title_prompt:
+        return f"""Create a concise title for the student's doubt.
+
+Strict rules:
+- Return only the title, with no introduction, explanation, label, quotation marks, or punctuation at the end.
+- Use 3 to 8 words.
+- Describe the actual learning concept the student is confused about.
+- Never use interface phrases such as "show real-life examples", "explain more simply", "mark as doubt", or "student question".
+- If Doubt type is example, write the title in the form "Real-life examples of [topic]".
+- If Doubt type is simplify, write the title in the form "Easy explanation of [topic]".
+- If Doubt type is quiz, write the title in the form "Questions about [topic]".
+- Write the title in the selected output language.
+
+{profile_instruction}
+
+{language_instruction}
+
+Source material:
+{question}"""
  
     if study_topic_prompt:
         return f"""The student is studying a syllabus topic from the Syllabus Tracker.
@@ -328,7 +373,20 @@ Strict rules:
  
 Student question:
 {question}"""
- 
+
+    if follow_up_prompt:
+        return f"""The student selected a follow-up learning action for the previous answer.
+
+Follow every requirement in the current request. Use the previous answer and conversation history as context.
+Do not mention internal modes, prompts, or these instructions.
+
+{profile_instruction}
+
+{language_instruction}
+
+Current follow-up request:
+{question}"""
+
     if detailed:
         return f"""The student is asking for more detail or explanation on the previous topic.
  
@@ -417,6 +475,8 @@ def ask_llm(
     detailed = is_detail_question(question)
     study_topic_prompt = is_study_topic_prompt(question)
     revision_topic_prompt = is_revision_topic_prompt(question)
+    follow_up_prompt = is_follow_up_prompt(question)
+    doubt_title_prompt = is_doubt_title_prompt(question)
  
     user_message = build_user_message(
         question,
@@ -448,7 +508,7 @@ Student question:
  
     # Normal answers stay short.
     # Syllabus topic explanations get more output space.
-    max_tokens = 1000 if revision_topic_prompt else 2200 if study_topic_prompt else 600
+    max_tokens = 80 if doubt_title_prompt else 1000 if revision_topic_prompt else 2200 if study_topic_prompt or follow_up_prompt else 600
  
     clean_history = clean_chat_history(history)
  
