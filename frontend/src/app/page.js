@@ -21,6 +21,7 @@ import {
   deleteDoc,
 } from "firebase/firestore";
 import { SYLLABUS_DATA } from "../data/syllabus";
+import { findDiagramForTopic } from "../data/diagramLibrary";
 
 // ── Brand tokens ───────────────────────────────────────────
 const B = {
@@ -89,6 +90,34 @@ function useTypewriter(text, speed = 120) {
 }
 
 // ── Assistant bubble ───────────────────────────────────────
+function DiagramCard({ diagram }) {
+  if (!diagram?.image) return null;
+  return (
+    <div style={{ marginTop: "14px", border: `1px solid ${B.gray200}`, borderRadius: "10px", overflow: "hidden", background: B.gray50 }}>
+      <div style={{ padding: "10px 12px", borderBottom: `1px solid ${B.gray200}`, display: "flex", justifyContent: "space-between", gap: "10px", alignItems: "center" }}>
+        <div style={{ fontWeight: 700, color: B.navy, fontSize: "13px" }}>Diagram: {diagram.title}</div>
+        <div style={{ display: "flex", alignItems: "center", gap: "10px", color: B.gray500, fontSize: "11px", whiteSpace: "nowrap" }}>
+          {diagram.source && <span>{diagram.source}</span>}
+          <a href={diagram.image} target="_blank" rel="noreferrer" style={{ color: B.navy, fontWeight: 700, textDecoration: "none" }}>Open full size</a>
+        </div>
+      </div>
+      <div style={{ padding: "10px", background: B.white }}>
+        <img src={diagram.image} alt={diagram.title || "Topic diagram"} style={{ width: "100%", maxHeight: "360px", objectFit: "contain", display: "block", borderRadius: "6px", background: B.white }} />
+      </div>
+      {Array.isArray(diagram.flowchart) && diagram.flowchart.length > 0 && (
+        <div style={{ padding: "10px 12px", borderTop: `1px solid ${B.gray200}`, display: "flex", flexWrap: "wrap", gap: "7px", alignItems: "center" }}>
+          {diagram.flowchart.map((step, i) => (
+            <span key={`${step}-${i}`} style={{ display: "inline-flex", alignItems: "center", gap: "7px", fontSize: "12px", color: B.gray700 }}>
+              <span style={{ padding: "5px 8px", borderRadius: "999px", background: B.navyLight, color: B.navy, border: `1px solid ${B.gray200}` }}>{step}</span>
+              {i < diagram.flowchart.length - 1 && <span style={{ color: B.gray500 }}>-&gt;</span>}
+            </span>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 function AssistantBubble({ msg, index, playingIndex, playAudio, stopAudio, onTypingComplete }) {
   const { displayed, done } = useTypewriter(msg.typing ? msg.text : "");
   const [audioReady, setAudioReady] = useState(false);
@@ -136,6 +165,7 @@ function AssistantBubble({ msg, index, playingIndex, playAudio, stopAudio, onTyp
             ⏹ Stop generating
           </button>
         )}
+        {msg.diagram && (!msg.typing || done) && <DiagramCard diagram={msg.diagram} />}
         {msg.typing && done && !msg.audioUrl && (
           <div style={{ marginTop: "8px", fontSize: "11px", color: B.gray500, display: "flex", alignItems: "center", gap: "4px" }}>
             <span style={{ animation: "pulse 1s infinite", display: "inline-block" }}>⏳</span> Preparing audio...
@@ -690,13 +720,13 @@ export default function Home() {
     return data.status === "published" ? data : null;
   };
 
-  const addStoredContentToChat = (label, answer) => {
+  const addStoredContentToChat = (label, answer, diagram = null) => {
     const assistantId = crypto.randomUUID();
     stopAudio();
     setMessages((prev) => [
       ...prev.map((msg) => msg.role === "assistant" ? { ...msg, typing: false } : msg),
       { id: crypto.randomUUID(), role: "user", text: label, isVoice: false },
-      { id: assistantId, role: "assistant", text: answer, audioUrl: null, typing: true },
+      { id: assistantId, role: "assistant", text: answer, audioUrl: null, typing: true, diagram },
     ]);
     updateHistory(label, answer);
     setActiveTab("chat");
@@ -720,14 +750,14 @@ export default function Home() {
     return data.answer || sourceText;
   };
 
-  const addStoredContentWithLanguage = async ({ label, sourceText, mode }) => {
+  const addStoredContentWithLanguage = async ({ label, sourceText, mode, diagram = null }) => {
     if (requestLockRef.current) return;
     requestLockRef.current = true;
     pendingVoiceDataRef.current = null;
     setTextInput(""); setError(""); setIsLoading(answerLanguage !== "en"); setActiveTab("chat");
     try {
       const answer      = await convertStoredContentLanguage({ label, sourceText, mode });
-      const assistantId = addStoredContentToChat(label, answer);
+      const assistantId = addStoredContentToChat(label, answer, diagram);
       // Save session after stored content is shown
       if (user && currentSessionId) {
         setTimeout(() => saveCurrentSession(user.uid, currentSessionId, label), 400);
@@ -739,7 +769,7 @@ export default function Home() {
     } catch (err) {
       console.error("Stored content language conversion error:", err);
       setError(err.message || "Could not prepare this answer in the selected language.");
-      const assistantId = addStoredContentToChat(label, sourceText);
+      const assistantId = addStoredContentToChat(label, sourceText, diagram);
       if (user && currentSessionId) {
         setTimeout(() => saveCurrentSession(user.uid, currentSessionId, label), 400);
       }
@@ -769,9 +799,16 @@ export default function Home() {
     if (!selectedSubject || !currentChapter || !subtopic || requestLockRef.current) return;
     await updateTopicStatus(selectedSubject, currentChapter.title, subtopic, "Completed");
     const label = `Study Topic: ${subtopic}`;
+    const diagram = findDiagramForTopic({
+      classLevel,
+      board,
+      subject: selectedSubject,
+      chapter: currentChapter.title,
+      topic: subtopic,
+    });
     try {
       const contentDoc = await loadPublishedContent(selectedSubject, currentChapter.title, subtopic);
-      if (contentDoc?.studyContent) { await addStoredContentWithLanguage({ label, sourceText: formatStudyContent(contentDoc), mode: "study topic" }); return; }
+      if (contentDoc?.studyContent) { await addStoredContentWithLanguage({ label, sourceText: formatStudyContent(contentDoc), mode: "study topic", diagram }); return; }
     } catch (err) { console.error("Content library study load error:", err); }
     const prompt = `STUDY_TOPIC_MODE\n\nTopic: ${subtopic}\nChapter: ${currentChapter.title}\nSubject: ${selectedSubject}\nClass: ${classLevel}\nBoard: ${board}\n\nExplain this topic in detail for a school student.\n\nAnswer format:\n1. Meaning of the topic\n2. Why it is important\n3. Step-by-step explanation\n4. Important keywords with simple meanings\n5. One simple real-life example\n6. Quick revision summary\n\nRules:\n- Give a large answer, not 4-5 lines.\n- Use headings and bullet points.\n- Keep the language easy for Class ${classLevel}.\n- Follow the selected answer language.`;
     pendingVoiceDataRef.current = null; setTextInput(prompt); setActiveTab("chat");
