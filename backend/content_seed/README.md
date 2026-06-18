@@ -7,17 +7,25 @@ Current seed:
 - `class_5_cbse_all_subjects.json`
 - `class_6_cbse_all_subjects.json`
 - `class_7_cbse_all_subjects.json`
+- `class_9_cbse_all_subjects.json`
+- `class_10_cbse_all_subjects.json`
 - Board: CBSE
 - Class 5 subjects: EVS, Maths, English, Hindi, Art Education
 - Class 6 subjects: Maths, Science, Social Science, English, Hindi
 - Class 7 subjects: English, Maths, Sanskrit, Science, Social Science
+- Class 9 subjects: Maths, Science, English, Hindi, Skill Education
+- Class 10 subjects: Maths, Science, Social Science, English, Hindi, Sanskrit
 - Class 5 topics: 121 total topic documents generated from the reviewed NCERT JSON note files in `class5_ncert_json_notes`
 - Class 6 topics: 243 total topic documents. Maths, Science, Social Science, and English are generated from the detailed JSON files in `class6_teacher_style_json_v1`; Hindi is preserved from the existing Class 6 syllabus until a detailed Hindi JSON is added.
 - Class 7 topics: 512 total topic documents generated from the reviewed NCERT JSON note files in `class7_ncert_json_notes`.
+- Class 9 topics: 515 total topic documents generated from the reviewed NCERT JSON note files in `class9_ncert_json_notes`.
+- Class 10 topics: 938 total topic documents generated from the reviewed NCERT JSON note files in `class10_ncert_json_notes`.
 
 The older `class_5_cbse_science.json` file is kept only as an early demo seed. The active Class 5 seed is generated from `class5_evs.json`, `class5_mathematics.json`, `class5_english.json`, `class5_hindi.json`, and `class5_art.json` in `class5_ncert_json_notes` using `generate_class_5_cbse_all_subjects.py`.
 The Class 6 seed is generated from `generate_class_6_cbse_all_subjects.py`.
 The Class 7 seed is generated from `generate_class_7_cbse_all_subjects.py`.
+The Class 9 seed is generated from `generate_class_9_cbse_all_subjects.py`.
+The Class 10 seed is generated from `generate_class_10_cbse_all_subjects.py`.
 
 ## Firestore Location
 
@@ -153,6 +161,38 @@ python backend\content_seed\generate_class_7_cbse_all_subjects.py
 ```
 
 This also regenerates `frontend/src/data/class7Syllabus.js` from the same source files.
+
+## Regenerate The Full Class 9 Seed
+
+If the Class 9 NCERT JSON notes change, update the files in:
+
+```text
+backend/content_seed/class9_ncert_json_notes
+```
+
+Then run:
+
+```cmd
+python backend\content_seed\generate_class_9_cbse_all_subjects.py
+```
+
+This also regenerates `frontend/src/data/class9Syllabus.js` from the same source files.
+
+## Regenerate The Full Class 10 Seed
+
+If the Class 10 NCERT JSON notes change, update the files in:
+
+```text
+backend/content_seed/class10_ncert_json_notes
+```
+
+Then run:
+
+```cmd
+python backend\content_seed\generate_class_10_cbse_all_subjects.py
+```
+
+This also regenerates `frontend/src/data/class10Syllabus.js` from the same source files.
 
 ## Frontend Behavior
 

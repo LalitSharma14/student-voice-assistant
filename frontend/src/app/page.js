@@ -70,6 +70,18 @@ const ANSWER_LANGUAGES = [
   { value: "hi",       label: "Hindi"    },
 ];
 
+const SUBJECT_DISPLAY_ORDER = ["Maths", "Science", "Social Science", "SST", "English", "Hindi"];
+
+function getOrderedSubjects(syllabus = {}) {
+  return Object.keys(syllabus).sort((a, b) => {
+    const ai = SUBJECT_DISPLAY_ORDER.indexOf(a);
+    const bi = SUBJECT_DISPLAY_ORDER.indexOf(b);
+    const ar = ai === -1 ? SUBJECT_DISPLAY_ORDER.length : ai;
+    const br = bi === -1 ? SUBJECT_DISPLAY_ORDER.length : bi;
+    return ar - br || a.localeCompare(b);
+  });
+}
+
 // ── Typewriter hook ────────────────────────────────────────
 function useTypewriter(text, speed = 120) {
   const [displayed, setDisplayed] = useState("");
@@ -1884,7 +1896,7 @@ ${latestAnswer}`;
             </div>
             {!selectedSubject && (
               <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "12px" }}>
-                {Object.keys(currentSyllabus).map((subject) => {
+                {getOrderedSubjects(currentSyllabus).map((subject) => {
                   const icons = { EVS: "🌱", Maths: "➗", English: "📘", Hindi: "📕", Sanskrit: "📜", Science: "🔬", "Social Science": "🌍", "Art Education": "🎨" };
                   const sp    = getSubjectProgress(subject);
                   return (
