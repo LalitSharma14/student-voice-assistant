@@ -183,12 +183,46 @@ export const DIAGRAM_LIBRARY = [
   },
 ];
 
-export function findDiagramForTopic({ classLevel, board, subject, chapter, topic }) {
-  return DIAGRAM_LIBRARY.find((diagram) => (
-    diagram.classLevel === String(classLevel || "")
-    && diagram.board === String(board || "")
-    && diagram.subject === String(subject || "")
-    && diagram.chapter === String(chapter || "")
-    && diagram.topics.includes(String(topic || ""))
-  )) || null;
+const normalizeDiagramText = (value = "") => String(value)
+  .toLowerCase()
+  .replace(/&/g, " and ")
+  .replace(/[^a-z0-9]+/g, " ")
+  .replace(/\s+/g, " ")
+  .trim();
+
+const hasTextOverlap = (left = "", right = "") => {
+  const normalizedLeft = normalizeDiagramText(left);
+  const normalizedRight = normalizeDiagramText(right);
+  if (!normalizedLeft || !normalizedRight) return false;
+  return normalizedLeft.includes(normalizedRight) || normalizedRight.includes(normalizedLeft);
+};
+
+export function findDiagramForTopic({ classLevel, board, subject, chapter, topic, query }) {
+  const requestedClass = String(classLevel || "");
+  const requestedBoard = String(board || "");
+  const requestedSubject = String(subject || "");
+  const requestedChapter = String(chapter || "");
+  const requestedTopic = String(topic || "");
+  const requestedQuery = String(query || "");
+
+  const candidates = DIAGRAM_LIBRARY.filter((diagram) => (
+    (!requestedClass || diagram.classLevel === requestedClass)
+    && (!requestedBoard || diagram.board === requestedBoard)
+    && (!requestedSubject || diagram.subject === requestedSubject)
+  ));
+
+  return candidates.find((diagram) => (
+    (!requestedChapter || diagram.chapter === requestedChapter)
+    && (
+      diagram.topics.includes(requestedTopic)
+      || hasTextOverlap(diagram.title, requestedTopic)
+      || diagram.topics.some((diagramTopic) => hasTextOverlap(diagramTopic, requestedTopic))
+    )
+  ))
+  || candidates.find((diagram) => (
+    hasTextOverlap(diagram.title, requestedQuery)
+    || hasTextOverlap(diagram.chapter, requestedQuery)
+    || diagram.topics.some((diagramTopic) => hasTextOverlap(diagramTopic, requestedQuery))
+  ))
+  || null;
 }

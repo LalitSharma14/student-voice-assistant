@@ -9,6 +9,8 @@ import time
 import re
 import unicodedata
 import traceback
+import urllib.parse
+import urllib.request
 from typing import Optional
 from fastapi import FastAPI, UploadFile, File, Form, HTTPException
 from fastapi.staticfiles import StaticFiles
@@ -101,6 +103,85 @@ app.add_middleware(
 )
  
 app.mount("/audio", StaticFiles(directory=AUDIO_DIR), name="audio")
+
+
+def _strip_html(value: str) -> str:
+    return re.sub(r"<[^>]+>", "", str(value or "")).strip()
+
+
+def _commons_meta_value(extmetadata: dict, key: str) -> str:
+    item = extmetadata.get(key, {}) if isinstance(extmetadata, dict) else {}
+    return _strip_html(item.get("value", ""))
+
+
+def search_commons_diagram(
+    query_text: str,
+    class_level: Optional[str] = None,
+    subject: Optional[str] = None,
+    chapter: Optional[str] = None,
+    topic: Optional[str] = None,
+) -> Optional[dict]:
+    clean_query = " ".join(
+        part for part in [
+            f"class {class_level}" if class_level else "",
+            subject or "",
+            chapter or "",
+            topic or query_text,
+            "diagram educational",
+        ]
+        if part
+    )
+
+    params = {
+        "action": "query",
+        "format": "json",
+        "generator": "search",
+        "gsrnamespace": "6",
+        "gsrsearch": clean_query,
+        "gsrlimit": "8",
+        "prop": "imageinfo",
+        "iiprop": "url|extmetadata",
+        "iiurlwidth": "900",
+        "origin": "*",
+    }
+    url = "https://commons.wikimedia.org/w/api.php?" + urllib.parse.urlencode(params)
+    request = urllib.request.Request(url, headers={"User-Agent": "TeachifyyStudentAssistant/1.0"})
+
+    with urllib.request.urlopen(request, timeout=8) as response:
+        payload = json.loads(response.read().decode("utf-8"))
+
+    pages = (payload.get("query") or {}).get("pages") or {}
+    for page in pages.values():
+        image_info = (page.get("imageinfo") or [None])[0]
+        if not image_info:
+            continue
+
+        image_url = image_info.get("thumburl") or image_info.get("url")
+        if not image_url:
+            continue
+
+        extmetadata = image_info.get("extmetadata") or {}
+        page_title = str(page.get("title") or "")
+        file_title = page_title.replace("File:", "").strip()
+        license_name = (
+            _commons_meta_value(extmetadata, "LicenseShortName")
+            or _commons_meta_value(extmetadata, "UsageTerms")
+            or "See source"
+        )
+        author = _commons_meta_value(extmetadata, "Artist") or "Wikimedia Commons contributor"
+
+        return {
+            "title": topic or file_title or "Diagram",
+            "image": image_url,
+            "source": "Wikimedia Commons",
+            "sourceUrl": f"https://commons.wikimedia.org/wiki/{urllib.parse.quote(page_title)}",
+            "attribution": author,
+            "license": license_name,
+            "flowchart": [],
+            "online": True,
+        }
+
+    return None
  
  
 @app.get("/")
@@ -108,6 +189,42 @@ def home():
     return {"message": "Student Voice Assistant Backend Running ✅"}
  
  
+@app.post("/diagram-search/")
+async def diagram_search(
+    query: str = Form(...),
+    class_level: Optional[str] = Form(default=None),
+    board: Optional[str] = Form(default=None),
+    subject: Optional[str] = Form(default=None),
+    chapter: Optional[str] = Form(default=None),
+    topic: Optional[str] = Form(default=None),
+):
+    if not query.strip():
+        raise HTTPException(status_code=422, detail="Diagram search query cannot be empty.")
+
+    try:
+        diagram = await asyncio.to_thread(
+            search_commons_diagram,
+            query.strip(),
+            class_level,
+            subject,
+            chapter,
+            topic,
+        )
+        return {
+            "diagram": diagram,
+            "profile": {
+                "class_level": class_level,
+                "board": board,
+                "subject": subject,
+                "chapter": chapter,
+                "topic": topic,
+            },
+        }
+    except Exception as error:
+        print(f"[DIAGRAM SEARCH] Error: {error}")
+        return {"diagram": None, "error": "Could not find a safe online diagram right now."}
+
+
 @app.post("/ask/")
 async def ask_question(
     file: UploadFile = File(...),

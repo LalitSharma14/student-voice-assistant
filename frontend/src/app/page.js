@@ -115,7 +115,9 @@ function DiagramCard({ diagram }) {
         </div>
       </div>
       <div style={{ padding: "10px", background: B.white }}>
-        <img src={diagram.image} alt={diagram.title || "Topic diagram"} style={{ width: "100%", maxHeight: "360px", objectFit: "contain", display: "block", borderRadius: "6px", background: B.white }} />
+        <a href={diagram.image} target="_blank" rel="noreferrer" title="Open full size diagram" style={{ display: "block", cursor: "zoom-in" }}>
+          <img src={diagram.image} alt={diagram.title || "Topic diagram"} style={{ width: "100%", maxHeight: "360px", objectFit: "contain", display: "block", borderRadius: "6px", background: B.white }} />
+        </a>
       </div>
       {creditText && <div style={{ padding: "7px 12px", borderTop: `1px solid ${B.gray200}`, fontSize: "10.5px", color: B.gray500, lineHeight: 1.45 }}>Credit: {creditText}</div>}
       {Array.isArray(diagram.flowchart) && diagram.flowchart.length > 0 && (
@@ -296,6 +298,7 @@ export default function Home() {
   const cancelledRef       = useRef(false);
   const pendingVoiceDataRef= useRef(null);
   const requestLockRef     = useRef(false);
+  const activeTopicContextRef = useRef(null);
   // Ref so saveCurrentSession can read latest messages without stale closure
   const messagesRef        = useRef(messages);
   const historyRef         = useRef(history);
@@ -799,6 +802,7 @@ export default function Home() {
 
   const handleReviseTopic = async (subtopic) => {
     if (!selectedSubject || !currentChapter || !subtopic || requestLockRef.current) return;
+    activeTopicContextRef.current = { classLevel, board, subject: selectedSubject, chapter: currentChapter.title, topic: subtopic };
     await updateRevisionStatus(selectedSubject, currentChapter.title, subtopic);
     const label = `Revision: ${subtopic}`;
     try {
@@ -811,6 +815,7 @@ export default function Home() {
 
   const handleStudyTopic = async (subtopic) => {
     if (!selectedSubject || !currentChapter || !subtopic || requestLockRef.current) return;
+    activeTopicContextRef.current = { classLevel, board, subject: selectedSubject, chapter: currentChapter.title, topic: subtopic };
     await updateTopicStatus(selectedSubject, currentChapter.title, subtopic, "Completed");
     const label = `Study Topic: ${subtopic}`;
     const diagram = findDiagramForTopic({
@@ -1204,6 +1209,129 @@ ${latestAnswer}`;
   };
 
   // ── Text send ──────────────────────────────────────────
+  const normalizeLearningText = (value = "") => String(value)
+    .toLowerCase()
+    .replace(/&/g, " and ")
+    .replace(/[^a-z0-9]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  const isDiagramRequest = (question = "") => {
+    const text = normalizeLearningText(question);
+    return [
+      "diagram",
+      "image",
+      "picture",
+      "flowchart",
+      "flow chart",
+      "chart",
+      "visual",
+      "draw",
+      "with diagram",
+    ].some((keyword) => text.includes(keyword));
+  };
+
+  const findSyllabusTopicInText = (text = "") => {
+    const normalizedText = normalizeLearningText(text);
+    if (!normalizedText) return null;
+
+    const subjectNames = selectedSubject
+      ? [selectedSubject, ...Object.keys(currentSyllabus || {}).filter((subject) => subject !== selectedSubject)]
+      : Object.keys(currentSyllabus || {});
+
+    for (const subjectName of subjectNames) {
+      for (const chapter of currentSyllabus?.[subjectName] || []) {
+        for (const topicTitle of chapter.subtopics || []) {
+          const normalizedTopic = normalizeLearningText(topicTitle);
+          if (normalizedTopic && (normalizedText.includes(normalizedTopic) || normalizedTopic.includes(normalizedText))) {
+            return { classLevel, board, subject: subjectName, chapter: chapter.title, topic: topicTitle };
+          }
+        }
+      }
+    }
+
+    return null;
+  };
+
+  const resolveDiagramContext = (question = "") => {
+    const directMatch = findSyllabusTopicInText(question);
+    if (directMatch) return directMatch;
+
+    for (let index = messages.length - 1; index >= 0; index -= 1) {
+      const match = findSyllabusTopicInText(messages[index]?.text || "");
+      if (match) return match;
+    }
+
+    if (activeTopicContextRef.current) return activeTopicContextRef.current;
+
+    if (selectedSubject && currentChapter) {
+      return { classLevel, board, subject: selectedSubject, chapter: currentChapter.title, topic: "" };
+    }
+
+    return { classLevel, board, subject: selectedSubject || "", chapter: "", topic: "" };
+  };
+
+  const searchOnlineDiagram = async (question, context) => {
+    const fd = new FormData();
+    fd.append("query", question);
+    fd.append("class_level", context.classLevel || classLevel);
+    fd.append("board", context.board || board);
+    fd.append("subject", context.subject || "");
+    fd.append("chapter", context.chapter || "");
+    fd.append("topic", context.topic || "");
+
+    const res = await fetch("/api/diagram-search", { method: "POST", body: fd });
+    if (!res.ok) return null;
+    const data = await res.json();
+    return data.diagram || null;
+  };
+
+  const getDiagramReplyText = (diagram, context) => {
+    const topicLabel = context.topic || context.chapter || "this concept";
+    if (diagram?.online) {
+      return `I found a safe online diagram for ${topicLabel}. I have added the source, credit, and license below the image.`;
+    }
+    if (diagram) {
+      return `Here is a diagram to help you understand ${topicLabel}. Look at the arrows and labels first, then connect them with the explanation above.`;
+    }
+    return `I could not find a safe diagram for ${topicLabel} right now. Try asking with the exact topic name, like "diagram of water cycle" or "diagram of seed germination".`;
+  };
+
+  const handleDiagramRequest = async (question, assistantId, isFirstMsg) => {
+    const context = resolveDiagramContext(question);
+    const localDiagram = findDiagramForTopic({ ...context, query: question });
+
+    let diagram = localDiagram;
+    if (!diagram) {
+      try {
+        diagram = await searchOnlineDiagram(question, context);
+      } catch (diagramError) {
+        console.error("Online diagram search failed:", diagramError);
+      }
+    }
+
+    const answer = getDiagramReplyText(diagram, context);
+    setMessages((prev) => [
+      ...prev.map((msg) => msg.role === "assistant" ? { ...msg, typing: false } : msg),
+      { id: assistantId, role: "assistant", text: answer, audioUrl: null, typing: true, diagram },
+    ]);
+    updateHistory(question, answer);
+    if (context.topic || context.chapter) activeTopicContextRef.current = context;
+    setIsLoading(false);
+    requestLockRef.current = false;
+
+    if (user && currentSessionId) {
+      setTimeout(() => saveCurrentSession(user.uid, currentSessionId, isFirstMsg ? question : undefined), 400);
+    }
+
+    try {
+      const audioUrl = await generateAnswerAudio(answer, answerLanguage === "hi" ? "hi" : "en");
+      if (audioUrl) setMessages((prev) => prev.map((msg) => msg.id === assistantId ? { ...msg, audioUrl } : msg));
+    } catch (ttsErr) {
+      console.error("Diagram answer TTS failed:", ttsErr);
+    }
+  };
+
   const handleTextSend = async () => {
     if (!textInput.trim() || isLoading || requestLockRef.current) return;
     requestLockRef.current = true;
@@ -1217,6 +1345,11 @@ ${latestAnswer}`;
       ...prev.map((msg) => msg.role === "assistant" ? { ...msg, typing: false } : msg),
       { id: crypto.randomUUID(), role: "user", text: question, isVoice: false },
     ]);
+
+    if (isDiagramRequest(question)) {
+      await handleDiagramRequest(question, assistantId, isFirstMsg);
+      return;
+    }
 
     const fd = new FormData();
     fd.append("question", question);
@@ -1297,6 +1430,15 @@ ${latestAnswer}`;
       const isFirstMsg = messages.length === 0;
       pendingVoiceDataRef.current = null; setTextInput(""); setError("");
       const assistantId = crypto.randomUUID();
+      if (isDiagramRequest(question)) {
+        setIsLoading(true);
+        setMessages((prev) => [
+          ...prev.map((msg) => msg.role === "assistant" ? { ...msg, typing: false } : msg),
+          { id: crypto.randomUUID(), role: "user", text: question, isVoice: true },
+        ]);
+        await handleDiagramRequest(question, assistantId, isFirstMsg);
+        return;
+      }
       setMessages((prev) => [
         ...prev.map((msg) => msg.role === "assistant" ? { ...msg, typing: false } : msg),
         { id: crypto.randomUUID(), role: "user", text: question, isVoice: true },

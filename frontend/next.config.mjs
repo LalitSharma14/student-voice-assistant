@@ -30,6 +30,10 @@ const nextConfig = {
         destination: `${BACKEND_URL}/generate-test/`,
       },
       {
+        source: "/api/diagram-search",
+        destination: `${BACKEND_URL}/diagram-search/`,
+      },
+      {
         source: "/api/audio/:path*",
         destination: `${BACKEND_URL}/audio/:path*`,
       },
