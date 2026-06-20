@@ -104,18 +104,20 @@ function useTypewriter(text, speed = 120) {
 // ── Assistant bubble ───────────────────────────────────────
 function DiagramCard({ diagram }) {
   if (!diagram?.image) return null;
+  const creditText = [diagram.attribution, diagram.license].filter(Boolean).join(" - ");
   return (
     <div style={{ marginTop: "14px", border: `1px solid ${B.gray200}`, borderRadius: "10px", overflow: "hidden", background: B.gray50 }}>
-      <div style={{ padding: "10px 12px", borderBottom: `1px solid ${B.gray200}`, display: "flex", justifyContent: "space-between", gap: "10px", alignItems: "center" }}>
+      <div style={{ padding: "10px 12px", borderBottom: `1px solid ${B.gray200}`, display: "flex", justifyContent: "space-between", gap: "10px", alignItems: "center", flexWrap: "wrap" }}>
         <div style={{ fontWeight: 700, color: B.navy, fontSize: "13px" }}>Diagram: {diagram.title}</div>
-        <div style={{ display: "flex", alignItems: "center", gap: "10px", color: B.gray500, fontSize: "11px", whiteSpace: "nowrap" }}>
-          {diagram.source && <span>{diagram.source}</span>}
+        <div style={{ display: "flex", alignItems: "center", gap: "10px", color: B.gray500, fontSize: "11px", flexWrap: "wrap" }}>
+          {diagram.sourceUrl ? <a href={diagram.sourceUrl} target="_blank" rel="noreferrer" style={{ color: B.gray500, fontWeight: 600, textDecoration: "none" }}>{diagram.source || "Source"}</a> : diagram.source && <span>{diagram.source}</span>}
           <a href={diagram.image} target="_blank" rel="noreferrer" style={{ color: B.navy, fontWeight: 700, textDecoration: "none" }}>Open full size</a>
         </div>
       </div>
       <div style={{ padding: "10px", background: B.white }}>
         <img src={diagram.image} alt={diagram.title || "Topic diagram"} style={{ width: "100%", maxHeight: "360px", objectFit: "contain", display: "block", borderRadius: "6px", background: B.white }} />
       </div>
+      {creditText && <div style={{ padding: "7px 12px", borderTop: `1px solid ${B.gray200}`, fontSize: "10.5px", color: B.gray500, lineHeight: 1.45 }}>Credit: {creditText}</div>}
       {Array.isArray(diagram.flowchart) && diagram.flowchart.length > 0 && (
         <div style={{ padding: "10px 12px", borderTop: `1px solid ${B.gray200}`, display: "flex", flexWrap: "wrap", gap: "7px", alignItems: "center" }}>
           {diagram.flowchart.map((step, i) => (
