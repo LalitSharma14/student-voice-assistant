@@ -17,7 +17,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
  
 from backend.stt import speech_to_text
-from backend.llm import ask_llm, generate_test_mcqs
+from backend.llm import ask_llm, generate_test_mcqs, grade_test_answers
 from backend.tts import text_to_speech, clean_text_for_tts  # single clean import
  
 # ── Directories ────────────────────────────────────────────
@@ -542,6 +542,62 @@ async def generate_test(
         )
  
  
+@app.post("/grade-test/")
+async def grade_test(
+    questions: str = Form(...),
+    answers: str = Form(...),
+    class_level: Optional[str] = Form(default=None),
+    board: Optional[str] = Form(default=None),
+    answer_language: Optional[str] = Form(default="en"),
+):
+    try:
+        allowed_classes = {"5", "6", "7", "8", "9", "10"}
+        allowed_boards = {"CBSE", "RBSE", "ICSE", "Other"}
+        allowed_languages = {"en", "hi", "hinglish"}
+
+        validated_class_level = class_level if class_level in allowed_classes else None
+        validated_board = board if board in allowed_boards else None
+        language = answer_language if answer_language in allowed_languages else "en"
+
+        parsed_questions = json.loads(questions or "[]")
+        parsed_answers = json.loads(answers or "{}")
+
+        if not isinstance(parsed_questions, list):
+            raise HTTPException(status_code=422, detail="Questions must be a list.")
+        if not isinstance(parsed_answers, dict):
+            raise HTTPException(status_code=422, detail="Answers must be an object.")
+
+        grades = await asyncio.to_thread(
+            grade_test_answers,
+            parsed_questions,
+            parsed_answers,
+            language,
+            validated_class_level,
+            validated_board,
+        )
+
+        score = sum(float(item.get("score", 0)) for item in grades)
+        total = sum(float(item.get("maxMarks", 0)) for item in grades)
+
+        return {
+            "grades": grades,
+            "score": score,
+            "total": total,
+            "percentage": round((score / total) * 100) if total else 0,
+        }
+
+    except HTTPException:
+        raise
+
+    except Exception as e:
+        print("\n[GRADE ERROR] Test grading crashed:")
+        traceback.print_exc()
+        raise HTTPException(
+            status_code=500,
+            detail=f"[{type(e).__name__}] {str(e)}"
+        )
+
+
 @app.post("/tts/")
 async def generate_tts(
     text: str = Form(...),

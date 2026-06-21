@@ -790,6 +790,91 @@ def _normalize_mcq_payload(payload: dict, question_count: int) -> list[dict]:
         )
  
     return normalized[:question_count]
+
+
+def _normalize_mixed_test_payload(payload: dict) -> list[dict]:
+    """
+    Normalize topic-test JSON with MCQ, short-answer, and long-answer questions.
+    Topic tests use 4 MCQ, 4 short answer, and 2 long answer questions.
+    """
+
+    questions = payload.get("questions", [])
+
+    if not isinstance(questions, list):
+        raise ValueError("Mixed test payload does not contain a questions list")
+
+    normalized = []
+    type_counts = {"mcq": 0, "short": 0, "long": 0}
+
+    for item in questions:
+        if not isinstance(item, dict):
+            continue
+
+        qtype = str(item.get("type") or "").strip().lower()
+        question = str(item.get("question") or "").strip()
+        explanation = str(item.get("explanation") or "").strip()
+        sample_answer = str(item.get("sampleAnswer") or item.get("sample_answer") or "").strip()
+
+        if qtype not in {"mcq", "short", "long"} or not question:
+            continue
+
+        if qtype == "mcq":
+            if type_counts["mcq"] >= 4:
+                continue
+            options = item.get("options", [])
+            answer_index = item.get("answerIndex", item.get("answer_index", 0))
+            if not isinstance(options, list) or len(options) != 4:
+                continue
+            try:
+                answer_index = int(answer_index)
+            except Exception:
+                answer_index = 0
+            if answer_index < 0 or answer_index > 3:
+                answer_index = 0
+            normalized.append({
+                "type": "mcq",
+                "marks": 0.5,
+                "wordLimit": 0,
+                "question": question,
+                "options": [str(option).strip() for option in options[:4]],
+                "answerIndex": answer_index,
+                "explanation": explanation,
+                "sampleAnswer": sample_answer or explanation,
+            })
+            type_counts["mcq"] += 1
+            continue
+
+        if qtype == "short":
+            if type_counts["short"] >= 4:
+                continue
+            normalized.append({
+                "type": "short",
+                "marks": 2,
+                "wordLimit": 40,
+                "question": question,
+                "sampleAnswer": sample_answer,
+                "rubric": str(item.get("rubric") or "Give credit for correct concept, important keyword, and clear explanation.").strip(),
+            })
+            type_counts["short"] += 1
+            continue
+
+        if qtype == "long":
+            if type_counts["long"] >= 2:
+                continue
+            normalized.append({
+                "type": "long",
+                "marks": 5,
+                "wordLimit": 120,
+                "question": question,
+                "sampleAnswer": sample_answer,
+                "rubric": str(item.get("rubric") or "Give credit for accuracy, step-by-step explanation, keywords, and relevant example.").strip(),
+            })
+            type_counts["long"] += 1
+
+    if type_counts != {"mcq": 4, "short": 4, "long": 2}:
+        raise ValueError(f"Invalid mixed test counts: {type_counts}")
+
+    return normalized
  
  
 def generate_test_mcqs(
@@ -825,7 +910,10 @@ def generate_test_mcqs(
 Topic: {topic_title}
 Chapter: {chapter_title}
 Subject: {subject}
-Create exactly {question_count} MCQs from this topic only."""
+Create exactly 10 questions from this topic only:
+- 4 MCQ questions, 0.5 marks each
+- 4 short-answer questions, 2 marks each, word limit 40 words
+- 2 long-answer questions, 5 marks each, word limit 120 words"""
     else:
         topic_list = ", ".join(topics or [])
         scope_instruction = f"""Test type: Chapter Test
@@ -834,7 +922,8 @@ Subject: {subject}
 Topics in chapter: {topic_list}
 Create exactly {question_count} MCQs covering the full chapter."""
  
-    prompt = f"""You are generating an interactive MCQ test for a school student.
+    if test_type == "topic":
+        prompt = f"""You are generating an interactive topic test for a school student.
  
 {scope_instruction}
  
@@ -850,6 +939,64 @@ Required JSON format:
 {{
   "questions": [
     {{
+      "type": "mcq",
+      "marks": 0.5,
+      "wordLimit": 0,
+      "question": "Question text",
+      "options": ["Option A", "Option B", "Option C", "Option D"],
+      "answerIndex": 0,
+      "explanation": "One short explanation of the correct answer",
+      "sampleAnswer": "Correct answer in one line"
+    }},
+    {{
+      "type": "short",
+      "marks": 2,
+      "wordLimit": 40,
+      "question": "Short answer question",
+      "sampleAnswer": "Ideal answer in 2-4 lines",
+      "rubric": "Award marks for key concept, keyword, and clarity"
+    }},
+    {{
+      "type": "long",
+      "marks": 5,
+      "wordLimit": 120,
+      "question": "Long answer question",
+      "sampleAnswer": "Ideal answer with important points",
+      "rubric": "Award marks for accuracy, steps, keywords, and example"
+    }}
+  ]
+}}
+ 
+Strict rules:
+- Generate exactly 10 questions.
+- The first 4 questions must be type "mcq".
+- The next 4 questions must be type "short".
+- The last 2 questions must be type "long".
+- MCQ questions must have exactly 4 options and answerIndex must be 0, 1, 2, or 3.
+- Short-answer questions must be answerable within 40 words.
+- Long-answer questions must be answerable within 120 words.
+- Keep questions suitable for Class {class_level}.
+- Avoid repeated questions.
+- Avoid trick questions.
+- Keep options and questions clear.
+"""
+    else:
+        prompt = f"""You are generating an interactive MCQ test for a school student.
+
+{scope_instruction}
+
+{profile_instruction}
+
+{language_instruction}
+
+Return ONLY valid JSON.
+Do not use markdown.
+Do not add explanation outside JSON.
+
+Required JSON format:
+{{
+  "questions": [
+    {{
       "question": "Question text",
       "options": ["Option A", "Option B", "Option C", "Option D"],
       "answerIndex": 0,
@@ -857,7 +1004,7 @@ Required JSON format:
     }}
   ]
 }}
- 
+
 Strict rules:
 - Generate exactly {question_count} questions.
 - Each question must have exactly 4 options.
@@ -886,7 +1033,7 @@ Strict rules:
             text = (response.text or "").strip()
  
             payload = _extract_json_object(text)
-            questions = _normalize_mcq_payload(payload, question_count)
+            questions = _normalize_mixed_test_payload(payload) if test_type == "topic" else _normalize_mcq_payload(payload, question_count)
  
             print(
                 f"[TEST] Used {model_name} | type={test_type} "
@@ -928,7 +1075,7 @@ Strict rules:
  
         text = completion.choices[0].message.content.strip()
         payload = _extract_json_object(text)
-        questions = _normalize_mcq_payload(payload, question_count)
+        questions = _normalize_mixed_test_payload(payload) if test_type == "topic" else _normalize_mcq_payload(payload, question_count)
  
         print(f"[TEST] Groq answered | type={test_type} | questions={len(questions)}")
  
@@ -937,3 +1084,169 @@ Strict rules:
     except Exception as error:
         print(f"[TEST Groq] Error: {error}")
         raise
+
+
+def _normalize_grading_payload(payload: dict, questions: list[dict]) -> list[dict]:
+    grades = payload.get("grades", [])
+    if not isinstance(grades, list):
+        raise ValueError("Grading payload does not contain a grades list")
+
+    by_index = {}
+    for item in grades:
+        if not isinstance(item, dict):
+            continue
+        try:
+            index = int(item.get("index"))
+        except Exception:
+            continue
+        by_index[index] = item
+
+    normalized = []
+    for index, question in enumerate(questions):
+        qtype = question.get("type", "mcq")
+        max_marks = float(question.get("marks", 1))
+        item = by_index.get(index, {})
+
+        if qtype == "mcq":
+            score = float(item.get("score", 0))
+        else:
+            try:
+                score = float(item.get("score", 0))
+            except Exception:
+                score = 0
+
+        score = max(0, min(max_marks, score))
+        normalized.append({
+            "index": index,
+            "score": score,
+            "maxMarks": max_marks,
+            "feedback": str(item.get("feedback") or ("Correct." if score == max_marks else "Review this answer.")).strip(),
+            "idealAnswer": str(item.get("idealAnswer") or question.get("sampleAnswer") or "").strip(),
+        })
+
+    return normalized
+
+
+def grade_test_answers(
+    questions: list[dict],
+    answers: dict,
+    language: str,
+    class_level: Optional[str] = None,
+    board: Optional[str] = None,
+) -> list[dict]:
+    """
+    Grade a mixed test like a teacher. MCQs are marked exactly; short and long answers
+    are marked by the model against the sample answer and rubric.
+    """
+
+    objective_grades = []
+    subjective_items = []
+
+    for index, question in enumerate(questions or []):
+        qtype = question.get("type", "mcq")
+        max_marks = float(question.get("marks", 1))
+        answer = answers.get(str(index), answers.get(index, ""))
+
+        if qtype == "mcq":
+            try:
+                selected = int(answer)
+            except Exception:
+                selected = -1
+            score = max_marks if selected == int(question.get("answerIndex", -2)) else 0
+            objective_grades.append({
+                "index": index,
+                "score": score,
+                "maxMarks": max_marks,
+                "feedback": question.get("explanation") or ("Correct." if score else "Incorrect. Check the correct option."),
+                "idealAnswer": question.get("sampleAnswer") or question.get("explanation") or "",
+            })
+        else:
+            subjective_items.append({
+                "index": index,
+                "type": qtype,
+                "maxMarks": max_marks,
+                "question": question.get("question", ""),
+                "studentAnswer": str(answer or "").strip(),
+                "sampleAnswer": question.get("sampleAnswer", ""),
+                "rubric": question.get("rubric", ""),
+                "wordLimit": question.get("wordLimit", 0),
+            })
+
+    if not subjective_items:
+        return sorted(objective_grades, key=lambda item: item["index"])
+
+    language_instruction = build_language_instruction(language)
+    profile_instruction = build_student_profile_instruction(class_level, board)
+
+    prompt = f"""You are a fair school teacher grading student answers.
+
+{profile_instruction}
+
+{language_instruction}
+
+Grade only the short-answer and long-answer questions below.
+Return ONLY valid JSON. Do not use markdown.
+
+Questions to grade:
+{json.dumps(subjective_items, ensure_ascii=False)}
+
+Required JSON format:
+{{
+  "grades": [
+    {{
+      "index": 4,
+      "score": 1.5,
+      "feedback": "Short teacher feedback in one sentence",
+      "idealAnswer": "A better answer in simple words"
+    }}
+  ]
+}}
+
+Strict marking rules:
+- Never give more than maxMarks.
+- Give partial marks when the answer is partly correct.
+- If answer is blank, give 0.
+- Short answers are out of 2 marks.
+- Long answers are out of 5 marks.
+- Feedback should be kind, specific, and useful.
+"""
+
+    max_tokens = 1800
+
+    for model_name in ["gemini-2.5-flash", "gemini-2.0-flash-lite"]:
+        try:
+            gemini_model = genai.GenerativeModel(
+                model_name=model_name,
+                system_instruction=SYSTEM_PROMPT,
+                generation_config=genai.GenerationConfig(
+                    temperature=0.2,
+                    max_output_tokens=max_tokens,
+                ),
+            )
+            response = gemini_model.generate_content(prompt)
+            payload = _extract_json_object((response.text or "").strip())
+            subjective_grades = _normalize_grading_payload(payload, subjective_items)
+            grades = objective_grades + subjective_grades
+            return sorted(grades, key=lambda item: item["index"])
+        except Exception as error:
+            error_text = str(error)
+            if "429" in error_text or "quota" in error_text.lower():
+                print(f"[GRADE {model_name}] Rate limited - trying next model")
+                time.sleep(1)
+                continue
+            print(f"[GRADE {model_name}] Error: {error}")
+            break
+
+    completion = groq_client.chat.completions.create(
+        model="llama-3.3-70b-versatile",
+        messages=[
+            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "user", "content": prompt},
+        ],
+        temperature=0.2,
+        max_tokens=max_tokens,
+    )
+    payload = _extract_json_object(completion.choices[0].message.content.strip())
+    subjective_grades = _normalize_grading_payload(payload, subjective_items)
+    grades = objective_grades + subjective_grades
+    return sorted(grades, key=lambda item: item["index"])

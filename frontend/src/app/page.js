@@ -255,9 +255,11 @@ export default function Home() {
   const [testResults,        setTestResults]        = useState({});
   const [progressLoading,    setProgressLoading]    = useState(false);
   const [testLoading,        setTestLoading]        = useState(false);
+  const [testSubmitting,     setTestSubmitting]     = useState(false);
   const [currentTest,        setCurrentTest]        = useState(null);
   const [selectedAnswers,    setSelectedAnswers]    = useState({});
   const [submittedTestResult,setSubmittedTestResult]= useState(null);
+  const [selectedTestAttempt,setSelectedTestAttempt]= useState(null);
   const [user,               setUser]               = useState(null);
   const [userProfile,        setUserProfile]        = useState(null);
   const [authMode,           setAuthMode]           = useState("login");
@@ -589,7 +591,7 @@ export default function Home() {
     await signOut(auth);
     setUser(null); setUserProfile(null); setMessages([]); setHistory([]); setTextInput("");
     setTopicProgress({}); setRevisionProgress({}); setTestResults({});
-    setCurrentTest(null); setSelectedAnswers({}); setSubmittedTestResult(null);
+    setCurrentTest(null); setSelectedAnswers({}); setSubmittedTestResult(null); setSelectedTestAttempt(null);
     setActiveTab("chat"); setSelectedSubject(null); setSelectedChapter(null);
     setProfileCompleted(false); pendingVoiceDataRef.current = null;
     setChatSessions([]); setCurrentSessionId(null); setViewingSession(null);
@@ -646,7 +648,27 @@ export default function Home() {
     (type === "topic" ? `topic_${classLevel}_${board}_${subject}_${chapterTitle}_${topicTitle}` : `chapter_${classLevel}_${board}_${subject}_${chapterTitle}`)
     .toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_+|_+$/g, "");
 
-  const getSavedTestResult = (type, subject, chapterTitle, topicTitle = "") => testResults[getTestId(type, subject, chapterTitle, topicTitle)] || null;
+  const getTestAttempts = () => Object.values(testResults || {})
+    .filter((result) => result?.attemptId || result?.testId)
+    .sort((a, b) => {
+      const dateA = a.submittedAt?.toDate ? a.submittedAt.toDate() : new Date(a.submittedAt || a.updatedAt || 0);
+      const dateB = b.submittedAt?.toDate ? b.submittedAt.toDate() : new Date(b.submittedAt || b.updatedAt || 0);
+      return dateB - dateA;
+    });
+
+  const getScoreCaption = (percentage = 0) => {
+    if (percentage >= 90) return { label: "Excellent", color: B.green, bg: B.greenLight };
+    if (percentage >= 75) return { label: "Great Work", color: B.navy, bg: B.navyLight };
+    if (percentage >= 55) return { label: "Almost There", color: B.orange, bg: B.orangeLight };
+    return { label: "Keep Practising", color: B.red, bg: B.redLight };
+  };
+
+  const formatMarks = (value = 0) => Number(value).toFixed(1).replace(/\.0$/, "");
+
+  const getSavedTestResult = (type, subject, chapterTitle, topicTitle = "") => {
+    const baseTestId = getTestId(type, subject, chapterTitle, topicTitle);
+    return getTestAttempts().find((result) => result.testId === baseTestId) || null;
+  };
 
   const loadTestResults = async (uid) => {
     if (!uid) return;
@@ -655,15 +677,21 @@ export default function Home() {
   };
 
   const saveTestResult = async (resultData) => {
-    if (!user || !resultData?.testId) return;
-    setTestResults((prev) => ({ ...prev, [resultData.testId]: { ...resultData, updatedAt: new Date().toISOString() } }));
-    try { await setDoc(doc(db, "users", user.uid, "testResults", resultData.testId), { ...resultData, updatedAt: serverTimestamp() }, { merge: true }); }
+    if (!user || !resultData?.attemptId) return;
+    setTestResults((prev) => ({ ...prev, [resultData.attemptId]: { ...resultData, submittedAt: new Date().toISOString(), updatedAt: new Date().toISOString() } }));
+    try {
+      await setDoc(
+        doc(db, "users", user.uid, "testResults", resultData.attemptId),
+        { ...resultData, submittedAt: serverTimestamp(), updatedAt: serverTimestamp() },
+        { merge: true }
+      );
+    }
     catch (err) { console.error("Test result save error:", err); }
   };
 
   const startTest = async ({ type, subject, chapterTitle, topicTitle = "", topics = [], questionCount }) => {
     if (!user) { setError("Please login to start a test."); return; }
-    setError(""); setTestLoading(true); setSelectedAnswers({}); setSubmittedTestResult(null); setCurrentTest(null); setActiveTab("test");
+    setError(""); setTestLoading(true); setSelectedAnswers({}); setSubmittedTestResult(null); setSelectedTestAttempt(null); setCurrentTest(null); setActiveTab("test");
     const testId = getTestId(type, subject, chapterTitle, topicTitle);
     const fd = new FormData();
     fd.append("test_type", type); fd.append("subject", subject); fd.append("chapter_title", chapterTitle);
@@ -676,7 +704,8 @@ export default function Home() {
       const data = await res.json();
       const questions = Array.isArray(data.questions) ? data.questions : [];
       if (!questions.length) throw new Error("No questions generated. Please try again.");
-      setCurrentTest({ testId, type, subject, chapterTitle, topicTitle, questionCount, questions });
+      const totalMarks = questions.reduce((sum, question) => sum + Number(question.marks || 1), 0);
+      setCurrentTest({ testId, type, subject, chapterTitle, topicTitle, questionCount: questions.length, totalMarks, questions });
     } catch (err) { console.error("Test generation error:", err); setError(err.message || "Could not generate test."); setActiveTab("syllabus"); }
     finally { setTestLoading(false); }
   };
@@ -686,14 +715,47 @@ export default function Home() {
 
   const submitCurrentTest = async () => {
     if (!currentTest?.questions?.length) return;
-    let score = 0;
-    currentTest.questions.forEach((q, i) => { if (Number(selectedAnswers[i]) === Number(q.answerIndex)) score += 1; });
-    const resultData = { testId: currentTest.testId, type: currentTest.type, subject: currentTest.subject, chapterTitle: currentTest.chapterTitle, topicTitle: currentTest.topicTitle || "", score, total: currentTest.questions.length, percentage: Math.round((score / currentTest.questions.length) * 100), classLevel, board };
-    setSubmittedTestResult(resultData);
-    await saveTestResult(resultData);
+    setTestSubmitting(true);
+    setError("");
+    try {
+      const fd = new FormData();
+      fd.append("questions", JSON.stringify(currentTest.questions));
+      fd.append("answers", JSON.stringify(selectedAnswers));
+      fd.append("class_level", classLevel);
+      fd.append("board", board);
+      fd.append("answer_language", answerLanguage);
+      const res = await fetch("/api/grade-test", { method: "POST", body: fd });
+      if (!res.ok) { const err = await res.json(); throw new Error(err.detail || "Could not grade test."); }
+      const data = await res.json();
+      const attemptId = `${currentTest.testId}_${Date.now()}`;
+      const resultData = {
+        attemptId,
+        testId: currentTest.testId,
+        type: currentTest.type,
+        subject: currentTest.subject,
+        chapterTitle: currentTest.chapterTitle,
+        topicTitle: currentTest.topicTitle || "",
+        score: Number(data.score || 0),
+        total: Number(data.total || currentTest.totalMarks || currentTest.questions.length),
+        percentage: Number(data.percentage || 0),
+        caption: getScoreCaption(Number(data.percentage || 0)).label,
+        classLevel,
+        board,
+        questions: currentTest.questions,
+        answers: selectedAnswers,
+        grades: Array.isArray(data.grades) ? data.grades : [],
+      };
+      setSubmittedTestResult(resultData);
+      await saveTestResult(resultData);
+    } catch (err) {
+      console.error("Test submit error:", err);
+      setError(err.message || "Could not submit test.");
+    } finally {
+      setTestSubmitting(false);
+    }
   };
 
-  const resetTestView = () => { setCurrentTest(null); setSelectedAnswers({}); setSubmittedTestResult(null); setActiveTab("syllabus"); };
+  const resetTestView = () => { setCurrentTest(null); setSelectedAnswers({}); setSubmittedTestResult(null); setSelectedTestAttempt(null); setActiveTab("syllabus"); };
 
   const formatList     = (items = []) => items.filter(Boolean).map((item) => `- ${item}`).join("\n");
   const formatTermList = (items = []) => items.filter(Boolean).map((item) => `- ${item.term}: ${item.meaning}`).join("\n");
@@ -1603,13 +1665,12 @@ ${latestAnswer}`;
             { key: "history",  label: "🕐 History" },
             { key: "doubts",   label: "❓ Doubts" },
             { key: "syllabus", label: "📚 Syllabus" },
-            { key: "test",     label: "📝 Test", disabled: !currentTest && !testLoading },
+            { key: "test",     label: "📝 Test" },
           ].map(({ key, label, disabled }) => (
             <button
               key={key}
               onClick={() => {
-                if (key === "test" && (currentTest || testLoading)) { setActiveTab("test"); return; }
-                if (key !== "test") setActiveTab(key);
+                setActiveTab(key);
               }}
               disabled={disabled}
               style={{ flex: 1, padding: "10px 8px", borderRadius: "10px", border: "none", cursor: disabled ? "not-allowed" : "pointer", fontSize: "12px", fontWeight: 600, fontFamily: "'Plus Jakarta Sans', sans-serif", background: activeTab === key ? B.navy : "transparent", color: activeTab === key ? B.white : B.gray700, opacity: disabled ? 0.4 : 1, transition: "all 0.2s" }}
@@ -1952,6 +2013,171 @@ ${latestAnswer}`;
 
         {/* ── TEST TAB ── */}
         {activeTab === "test" && (
+          <div style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "18px", padding: "22px", boxShadow: "0 4px 20px rgba(43,88,136,0.06)" }}>
+            {testLoading ? (
+              <div style={{ textAlign: "center", padding: "48px 12px" }}>
+                <div style={{ fontSize: "40px", marginBottom: "12px" }}>Test</div>
+                <h2 style={{ fontSize: "20px", color: B.navy, marginBottom: "6px", fontWeight: 700 }}>Generating your test...</h2>
+                <p style={{ fontSize: "13px", color: B.gray500 }}>Topic tests include MCQs, short answers, and long answers.</p>
+              </div>
+            ) : selectedTestAttempt ? (
+              <div>
+                {(() => {
+                  const badge = getScoreCaption(selectedTestAttempt.percentage || 0);
+                  return (
+                    <>
+                      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: "12px", marginBottom: "18px", flexWrap: "wrap" }}>
+                        <div>
+                          <div style={{ fontSize: "12px", color: B.gray500, marginBottom: "4px", fontWeight: 700, textTransform: "uppercase" }}>{selectedTestAttempt.type === "topic" ? "Topic Test" : "Chapter Test"}</div>
+                          <h2 style={{ fontSize: "21px", fontWeight: 800, color: B.navy, margin: "0 0 4px" }}>{selectedTestAttempt.topicTitle || selectedTestAttempt.chapterTitle}</h2>
+                          <p style={{ fontSize: "13px", color: B.gray500, margin: 0 }}>{selectedTestAttempt.subject} · {formatSessionDate(selectedTestAttempt.submittedAt || selectedTestAttempt.updatedAt)}</p>
+                        </div>
+                        <div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
+                          <button onClick={() => startTest({ type: selectedTestAttempt.type, subject: selectedTestAttempt.subject, chapterTitle: selectedTestAttempt.chapterTitle, topicTitle: selectedTestAttempt.topicTitle || "", topics: selectedTestAttempt.topicTitle ? [selectedTestAttempt.topicTitle] : [], questionCount: selectedTestAttempt.type === "topic" ? 10 : 20 })} style={{ padding: "8px 13px", borderRadius: "9px", border: "none", background: B.navy, color: B.white, cursor: "pointer", fontSize: "12px", fontWeight: 700 }}>Reattempt</button>
+                          <button onClick={() => setSelectedTestAttempt(null)} style={{ padding: "8px 13px", borderRadius: "9px", border: `1px solid ${B.gray300}`, background: B.white, color: B.gray700, cursor: "pointer", fontSize: "12px", fontWeight: 600 }}>Back</button>
+                        </div>
+                      </div>
+                      <div style={{ padding: "16px", borderRadius: "14px", background: badge.bg, border: `1px solid ${B.gray200}`, marginBottom: "16px", display: "flex", justifyContent: "space-between", alignItems: "center", gap: "12px" }}>
+                        <div>
+                          <div style={{ fontSize: "16px", fontWeight: 800, color: badge.color }}>{badge.label}</div>
+                          <div style={{ fontSize: "12px", color: B.gray500 }}>Teacher-style score report</div>
+                        </div>
+                        <div style={{ fontSize: "30px", fontWeight: 900, color: badge.color }}>{formatMarks(selectedTestAttempt.score)}/{formatMarks(selectedTestAttempt.total)}</div>
+                      </div>
+                      <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+                        {(selectedTestAttempt.questions || []).map((question, qi) => {
+                          const grade = (selectedTestAttempt.grades || []).find((item) => Number(item.index) === qi);
+                          const answer = selectedTestAttempt.answers?.[qi] ?? selectedTestAttempt.answers?.[String(qi)] ?? "";
+                          return (
+                            <div key={qi} style={{ padding: "14px", borderRadius: "12px", background: B.gray50, border: `1px solid ${B.gray200}` }}>
+                              <div style={{ display: "flex", justifyContent: "space-between", gap: "10px", marginBottom: "8px" }}>
+                                <div style={{ fontSize: "14px", fontWeight: 800, color: B.navy }}>Q{qi + 1}. {question.question}</div>
+                                <div style={{ fontSize: "12px", fontWeight: 800, color: B.green, flexShrink: 0 }}>{formatMarks(grade?.score || 0)}/{formatMarks(question.marks || 1)}</div>
+                              </div>
+                              <div style={{ fontSize: "12px", color: B.gray700, lineHeight: 1.5, marginBottom: "6px" }}><strong>Your answer:</strong> {question.type === "mcq" ? (question.options?.[Number(answer)] || "Not answered") : (answer || "Not answered")}</div>
+                              {grade?.feedback && <div style={{ fontSize: "12px", color: B.gray700, lineHeight: 1.5 }}><strong>Teacher feedback:</strong> {grade.feedback}</div>}
+                              {grade?.idealAnswer && <div style={{ marginTop: "6px", fontSize: "12px", color: B.gray500, lineHeight: 1.5 }}><strong>Better answer:</strong> {grade.idealAnswer}</div>}
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </>
+                  );
+                })()}
+              </div>
+            ) : currentTest ? (
+              <div>
+                {(() => {
+                  const isSubmitted = Boolean(submittedTestResult);
+                  const requiredCount = currentTest.questions.length;
+                  const answeredCount = currentTest.questions.filter((question, qi) => {
+                    const answer = selectedAnswers[qi];
+                    return question.type === "mcq" ? answer !== undefined : String(answer || "").trim().length > 0;
+                  }).length;
+                  const canSubmit = answeredCount === requiredCount && !testSubmitting;
+                  const badge = submittedTestResult ? getScoreCaption(submittedTestResult.percentage || 0) : null;
+                  return (
+                    <>
+                      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "18px", gap: "12px", flexWrap: "wrap" }}>
+                        <div>
+                          <div style={{ fontSize: "12px", color: B.gray500, marginBottom: "4px", fontWeight: 700, textTransform: "uppercase" }}>{currentTest.type === "topic" ? "Topic Test" : "Chapter Test"}</div>
+                          <h2 style={{ fontSize: "20px", fontWeight: 800, color: B.navy, marginBottom: "4px" }}>{currentTest.type === "topic" ? currentTest.topicTitle : currentTest.chapterTitle}</h2>
+                          <p style={{ fontSize: "13px", color: B.gray500 }}>{currentTest.subject} · {currentTest.questions.length} questions · {formatMarks(currentTest.totalMarks || currentTest.questions.length)} marks</p>
+                        </div>
+                        <button onClick={resetTestView} style={{ padding: "7px 14px", borderRadius: "8px", border: `1px solid ${B.gray300}`, background: B.white, color: B.gray700, cursor: "pointer", fontSize: "12px", fontWeight: 600 }}>Back</button>
+                      </div>
+                      {submittedTestResult && (
+                        <div style={{ padding: "16px", borderRadius: "14px", background: badge.bg, border: `1px solid ${B.gray200}`, marginBottom: "18px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                          <div>
+                            <div style={{ fontSize: "16px", fontWeight: 800, color: badge.color }}>Test Completed · {badge.label}</div>
+                            <div style={{ fontSize: "13px", color: B.gray500 }}>Score saved with teacher feedback.</div>
+                          </div>
+                          <div style={{ fontSize: "32px", fontWeight: 900, color: badge.color }}>{formatMarks(submittedTestResult.score)}/{formatMarks(submittedTestResult.total)}</div>
+                        </div>
+                      )}
+                      <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
+                        {currentTest.questions.map((question, qi) => {
+                          const selected = selectedAnswers[qi];
+                          const grade = (submittedTestResult?.grades || []).find((item) => Number(item.index) === qi);
+                          return (
+                            <div key={qi} style={{ padding: "16px", borderRadius: "14px", background: B.gray50, border: `1px solid ${B.gray200}` }}>
+                              <div style={{ display: "flex", justifyContent: "space-between", gap: "10px", marginBottom: "12px" }}>
+                                <div style={{ fontSize: "14px", fontWeight: 800, color: B.navy }}>Q{qi + 1}. {question.question}</div>
+                                <span style={{ fontSize: "11px", color: B.gray500, fontWeight: 800, flexShrink: 0 }}>{formatMarks(question.marks || 1)} marks{question.wordLimit ? ` · ${question.wordLimit} words` : ""}</span>
+                              </div>
+                              {question.type === "mcq" ? (
+                                <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+                                  {(question.options || []).map((option, oi) => {
+                                    const isCorrect = oi === question.answerIndex;
+                                    const isSelected = Number(selected) === oi;
+                                    return (
+                                      <label key={oi} style={{ display: "flex", alignItems: "center", gap: "10px", padding: "10px 12px", borderRadius: "10px", cursor: isSubmitted ? "default" : "pointer", fontSize: "13px", color: B.gray900, border: isSubmitted && isCorrect ? `1.5px solid ${B.greenBorder}` : isSubmitted && isSelected && !isCorrect ? `1.5px solid ${B.red}` : `1px solid ${B.gray200}`, background: isSubmitted && isCorrect ? B.greenLight : isSubmitted && isSelected && !isCorrect ? B.redLight : B.white }}>
+                                        <input type="radio" name={`q-${qi}`} checked={Number(selected) === oi} disabled={isSubmitted} onChange={() => setSelectedAnswers((prev) => ({ ...prev, [qi]: oi }))} />
+                                        <span>{String.fromCharCode(65 + oi)}. {option}</span>
+                                      </label>
+                                    );
+                                  })}
+                                </div>
+                              ) : (
+                                <textarea value={selected || ""} disabled={isSubmitted} maxLength={(question.wordLimit || 80) * 8} onChange={(e) => setSelectedAnswers((prev) => ({ ...prev, [qi]: e.target.value }))} placeholder={`Write your answer within ${question.wordLimit || 80} words`} style={{ width: "100%", minHeight: question.type === "long" ? "120px" : "78px", borderRadius: "10px", border: `1px solid ${B.gray300}`, padding: "11px 12px", fontSize: "13px", lineHeight: 1.5, resize: "vertical", outline: "none", boxSizing: "border-box", fontFamily: "'Plus Jakarta Sans', sans-serif", background: B.white }} />
+                              )}
+                              {grade && (
+                                <div style={{ marginTop: "10px", padding: "9px 11px", borderRadius: "9px", background: B.navyLight, fontSize: "12px", color: B.gray700, lineHeight: 1.5 }}>
+                                  <strong style={{ color: B.navy }}>Marks:</strong> {formatMarks(grade.score)}/{formatMarks(grade.maxMarks)}<br />
+                                  <strong style={{ color: B.navy }}>Teacher feedback:</strong> {grade.feedback}
+                                </div>
+                              )}
+                            </div>
+                          );
+                        })}
+                      </div>
+                      {!submittedTestResult && (
+                        <button onClick={submitCurrentTest} disabled={!canSubmit} style={{ width: "100%", marginTop: "20px", padding: "13px 16px", borderRadius: "12px", border: "none", background: canSubmit ? `linear-gradient(135deg, ${B.navy}, ${B.navyDark})` : B.gray200, color: B.white, fontSize: "15px", fontWeight: 800, cursor: canSubmit ? "pointer" : "not-allowed", opacity: canSubmit ? 1 : 0.55, fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+                          {testSubmitting ? "Checking like a teacher..." : `Submit Test (${answeredCount}/${requiredCount} answered)`}
+                        </button>
+                      )}
+                    </>
+                  );
+                })()}
+              </div>
+            ) : (
+              <div>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "12px", marginBottom: "16px", flexWrap: "wrap" }}>
+                  <div>
+                    <h2 style={{ fontSize: "19px", fontWeight: 800, color: B.navy, margin: 0 }}>Test History</h2>
+                    <p style={{ fontSize: "13px", color: B.gray500, margin: "4px 0 0" }}>{getTestAttempts().length} attempted test{getTestAttempts().length !== 1 ? "s" : ""}</p>
+                  </div>
+                </div>
+                {getTestAttempts().length === 0 ? (
+                  <div style={{ textAlign: "center", padding: "44px 12px", color: B.gray500 }}>
+                    <div style={{ fontSize: "40px", marginBottom: "12px" }}>Test</div>
+                    <p style={{ fontSize: "14px", fontWeight: 600 }}>Start a test from the Syllabus Tracker.</p>
+                  </div>
+                ) : (
+                  <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+                    {getTestAttempts().map((attempt) => {
+                      const badge = getScoreCaption(attempt.percentage || 0);
+                      return (
+                        <button key={attempt.attemptId || attempt.testId} onClick={() => setSelectedTestAttempt(attempt)} style={{ width: "100%", textAlign: "left", border: `1px solid ${B.gray200}`, background: B.white, borderRadius: "13px", padding: "14px", cursor: "pointer", display: "flex", justifyContent: "space-between", alignItems: "center", gap: "12px" }}>
+                          <div style={{ minWidth: 0 }}>
+                            <div style={{ fontSize: "14px", fontWeight: 800, color: B.navy, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{attempt.topicTitle || attempt.chapterTitle}</div>
+                            <div style={{ fontSize: "11px", color: B.gray500, marginTop: "3px" }}>{attempt.subject} · {attempt.type === "topic" ? "Topic Test" : "Chapter Test"} · {formatSessionDate(attempt.submittedAt || attempt.updatedAt)}</div>
+                          </div>
+                          <div style={{ display: "flex", alignItems: "center", gap: "8px", flexShrink: 0 }}>
+                            <span style={{ fontSize: "11px", fontWeight: 800, color: badge.color, background: badge.bg, padding: "5px 8px", borderRadius: "999px" }}>{badge.label}</span>
+                            <span style={{ fontSize: "16px", fontWeight: 900, color: B.navy }}>{formatMarks(attempt.score)}/{formatMarks(attempt.total)}</span>
+                          </div>
+                        </button>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
+        )}
+
+        {false && activeTab === "test" && (
           <div style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "18px", padding: "22px", boxShadow: "0 4px 20px rgba(43,88,136,0.06)" }}>
             {testLoading ? (
               <div style={{ textAlign: "center", padding: "48px 12px" }}>
