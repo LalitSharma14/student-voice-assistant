@@ -247,7 +247,7 @@ export default function Home() {
   const [isTranscribing,     setIsTranscribing]     = useState(false);
   const [error,              setError]              = useState("");
   const [playingIndex,       setPlayingIndex]       = useState(null);
-  const [activeTab,          setActiveTab]          = useState("chat");
+  const [activeTab,          setActiveTab]          = useState("home");
   const [selectedSubject,    setSelectedSubject]    = useState(null);
   const [selectedChapter,    setSelectedChapter]    = useState(null);
   const [topicProgress,      setTopicProgress]      = useState({});
@@ -287,6 +287,18 @@ export default function Home() {
   const [doubtsLoading,      setDoubtsLoading]      = useState(false);
   const [savingDoubtId,      setSavingDoubtId]      = useState(null);
   const [resolvingDoubtId,   setResolvingDoubtId]   = useState(null);
+  const [notes,              setNotes]              = useState([]);
+  const [notesLoading,       setNotesLoading]       = useState(false);
+  const [noteTitle,          setNoteTitle]          = useState("");
+  const [noteBody,           setNoteBody]           = useState("");
+  const [noteSubject,        setNoteSubject]        = useState("");
+  const [editingNoteId,      setEditingNoteId]      = useState(null);
+  const [activityLogs,       setActivityLogs]       = useState([]);
+  const [activityLoading,    setActivityLoading]    = useState(false);
+  const [reports,            setReports]            = useState([]);
+  const [reportsLoading,     setReportsLoading]     = useState(false);
+  const [reportRange,        setReportRange]        = useState("weekly");
+  const [globalSearch,       setGlobalSearch]       = useState("");
 
   const currentSyllabus = SYLLABUS_DATA[classLevel]?.[board] || SYLLABUS_DATA["5"]?.CBSE;
   const currentChapters = selectedSubject ? currentSyllabus?.[selectedSubject] || [] : [];
@@ -342,12 +354,18 @@ export default function Home() {
       loadTestResults(user.uid);
       loadChatSessions(user.uid);
       loadDoubts(user.uid);
+      loadNotes(user.uid);
+      loadActivityLogs(user.uid);
+      loadReports(user.uid);
     } else {
       setTopicProgress({});
       setRevisionProgress({});
       setTestResults({});
       setChatSessions([]);
       setDoubts([]);
+      setNotes([]);
+      setActivityLogs([]);
+      setReports([]);
     }
   }, [user]);
 
@@ -596,6 +614,7 @@ export default function Home() {
     setProfileCompleted(false); pendingVoiceDataRef.current = null;
     setChatSessions([]); setCurrentSessionId(null); setViewingSession(null);
     setDoubts([]); setSavingDoubtId(null);
+    setNotes([]); resetNoteForm();
   };
 
   // ── Progress loaders ───────────────────────────────────
@@ -706,6 +725,14 @@ export default function Home() {
       if (!questions.length) throw new Error("No questions generated. Please try again.");
       const totalMarks = questions.reduce((sum, question) => sum + Number(question.marks || 1), 0);
       setCurrentTest({ testId, type, subject, chapterTitle, topicTitle, questionCount: questions.length, totalMarks, questions });
+      logActivity({
+        type: "test_started",
+        title: `${type === "topic" ? "Topic" : "Chapter"} test started`,
+        subject,
+        chapterTitle,
+        topicTitle,
+        details: topicTitle || chapterTitle,
+      });
     } catch (err) { console.error("Test generation error:", err); setError(err.message || "Could not generate test."); setActiveTab("syllabus"); }
     finally { setTestLoading(false); }
   };
@@ -866,6 +893,7 @@ export default function Home() {
     if (!selectedSubject || !currentChapter || !subtopic || requestLockRef.current) return;
     activeTopicContextRef.current = { classLevel, board, subject: selectedSubject, chapter: currentChapter.title, topic: subtopic };
     await updateRevisionStatus(selectedSubject, currentChapter.title, subtopic);
+    logActivity({ type: "revision", title: `Revised ${subtopic}`, subject: selectedSubject, chapterTitle: currentChapter.title, topicTitle: subtopic, details: "Revision topic opened" });
     const label = `Revision: ${subtopic}`;
     try {
       const contentDoc = await loadPublishedContent(selectedSubject, currentChapter.title, subtopic);
@@ -879,6 +907,7 @@ export default function Home() {
     if (!selectedSubject || !currentChapter || !subtopic || requestLockRef.current) return;
     activeTopicContextRef.current = { classLevel, board, subject: selectedSubject, chapter: currentChapter.title, topic: subtopic };
     await updateTopicStatus(selectedSubject, currentChapter.title, subtopic, "Completed");
+    logActivity({ type: "study", title: `Studied ${subtopic}`, subject: selectedSubject, chapterTitle: currentChapter.title, topicTitle: subtopic, details: "Topic marked completed" });
     const label = `Study Topic: ${subtopic}`;
     const diagram = findDiagramForTopic({
       classLevel,
@@ -1263,6 +1292,241 @@ ${latestAnswer}`;
     }
   };
 
+  const resetNoteForm = () => {
+    setNoteTitle("");
+    setNoteBody("");
+    setNoteSubject("");
+    setEditingNoteId(null);
+  };
+
+  const loadNotes = async (uid) => {
+    if (!uid) return;
+    setNotesLoading(true);
+    try {
+      const notesQuery = query(
+        collection(db, "users", uid, "notes"),
+        orderBy("updatedAt", "desc"),
+        limit(100)
+      );
+      const snap = await getDocs(notesQuery);
+      const loaded = [];
+      snap.forEach((noteDoc) => loaded.push({ id: noteDoc.id, ...noteDoc.data() }));
+      setNotes(loaded);
+    } catch (err) {
+      console.error("Notes load error:", err);
+      setError("Could not load notes.");
+    } finally {
+      setNotesLoading(false);
+    }
+  };
+
+  const loadActivityLogs = async (uid) => {
+    if (!uid) return;
+    setActivityLoading(true);
+    try {
+      const activityQuery = query(
+        collection(db, "users", uid, "activityLogs"),
+        orderBy("createdAt", "desc"),
+        limit(100)
+      );
+      const snap = await getDocs(activityQuery);
+      const loaded = [];
+      snap.forEach((logDoc) => loaded.push({ id: logDoc.id, ...logDoc.data() }));
+      setActivityLogs(loaded);
+    } catch (err) {
+      console.error("Activity load error:", err);
+    } finally {
+      setActivityLoading(false);
+    }
+  };
+
+  const logActivity = async ({ type, title, subject = "", chapterTitle = "", topicTitle = "", details = "" }) => {
+    if (!user) return;
+    const logId = crypto.randomUUID();
+    const logData = {
+      type,
+      title,
+      subject,
+      chapterTitle,
+      topicTitle,
+      details,
+      classLevel,
+      board,
+      createdAt: serverTimestamp(),
+    };
+    try {
+      await setDoc(doc(db, "users", user.uid, "activityLogs", logId), logData);
+      setActivityLogs((prev) => [{ ...logData, id: logId, createdAt: { toDate: () => new Date() } }, ...prev].slice(0, 100));
+    } catch (err) {
+      console.error("Activity save error:", err);
+    }
+  };
+
+  const getDateFromValue = (value) => {
+    if (!value) return null;
+    if (value.toDate) return value.toDate();
+    const date = new Date(value);
+    return Number.isNaN(date.getTime()) ? null : date;
+  };
+
+  const isInReportRange = (value, days) => {
+    const date = getDateFromValue(value);
+    if (!date) return false;
+    const cutoff = new Date();
+    cutoff.setDate(cutoff.getDate() - days);
+    return date >= cutoff;
+  };
+
+  const buildCurrentReport = (range = reportRange) => {
+    const days = range === "monthly" ? 30 : 7;
+    const rangeLabel = range === "monthly" ? "Monthly" : "Weekly";
+    const recentActivities = activityLogs.filter((log) => isInReportRange(log.createdAt, days));
+    const recentTests = getTestAttempts().filter((test) => isInReportRange(test.submittedAt || test.updatedAt, days));
+    const recentNotes = notes.filter((note) => isInReportRange(note.updatedAt || note.createdAt, days));
+    const recentDoubts = doubts.filter((doubt) => isInReportRange(doubt.createdAt, days));
+    const completedTopics = Object.values(topicProgress || {}).filter((item) => isCompletedStatus(item.status));
+    const revisedTopics = Object.values(revisionProgress || {});
+    const scores = recentTests.map((test) => Number(test.percentage || 0)).filter((score) => Number.isFinite(score));
+    const averageScore = scores.length ? Math.round(scores.reduce((sum, score) => sum + score, 0) / scores.length) : 0;
+    const activityCounts = recentActivities.reduce((acc, log) => {
+      const key = log.type || "activity";
+      acc[key] = (acc[key] || 0) + 1;
+      return acc;
+    }, {});
+    const subjects = [...new Set(recentActivities.map((log) => log.subject).filter(Boolean))];
+    const summary = [
+      `${recentActivities.length} learning activities recorded`,
+      `${recentTests.length} test${recentTests.length !== 1 ? "s" : ""} attempted`,
+      `${recentNotes.length} note${recentNotes.length !== 1 ? "s" : ""} created or updated`,
+      `${recentDoubts.length} doubt${recentDoubts.length !== 1 ? "s" : ""} marked`,
+    ];
+    return {
+      range,
+      rangeLabel,
+      days,
+      generatedAt: new Date(),
+      summary,
+      metrics: {
+        activities: recentActivities.length,
+        questions: (activityCounts.question || 0) + (activityCounts.voice_question || 0),
+        diagrams: activityCounts.diagram_request || 0,
+        studyTopics: activityCounts.study || 0,
+        revisions: activityCounts.revision || 0,
+        tests: recentTests.length,
+        averageScore,
+        notes: recentNotes.length,
+        doubts: recentDoubts.length,
+        activeDoubts: doubts.filter((doubt) => !doubt.resolved).length,
+        completedTopics: completedTopics.length,
+        revisedTopics: revisedTopics.length,
+      },
+      subjects,
+      recentActivities: recentActivities.slice(0, 8),
+      recentTests: recentTests.slice(0, 5),
+    };
+  };
+
+  const loadReports = async (uid) => {
+    if (!uid) return;
+    setReportsLoading(true);
+    try {
+      const reportsQuery = query(
+        collection(db, "users", uid, "reports"),
+        orderBy("createdAt", "desc"),
+        limit(24)
+      );
+      const snap = await getDocs(reportsQuery);
+      const loaded = [];
+      snap.forEach((reportDoc) => loaded.push({ id: reportDoc.id, ...reportDoc.data() }));
+      setReports(loaded);
+    } catch (err) {
+      console.error("Reports load error:", err);
+    } finally {
+      setReportsLoading(false);
+    }
+  };
+
+  const saveCurrentReport = async () => {
+    if (!user) { setError("Please login to save reports."); return; }
+    const report = buildCurrentReport(reportRange);
+    const reportId = `${report.range}_${new Date().toISOString().slice(0, 10)}_${crypto.randomUUID().slice(0, 8)}`;
+    const reportData = {
+      range: report.range,
+      rangeLabel: report.rangeLabel,
+      days: report.days,
+      summary: report.summary,
+      metrics: report.metrics,
+      subjects: report.subjects,
+      classLevel,
+      board,
+      createdAt: serverTimestamp(),
+    };
+    try {
+      await setDoc(doc(db, "users", user.uid, "reports", reportId), reportData);
+      setReports((prev) => [{ ...reportData, id: reportId, createdAt: { toDate: () => new Date() } }, ...prev].slice(0, 24));
+      logActivity({ type: "report_saved", title: `${report.rangeLabel} report saved`, details: report.summary.join("\n") });
+      setError("");
+    } catch (err) {
+      console.error("Report save error:", err);
+      setError("Could not save report. Please try again.");
+    }
+  };
+
+  const saveNote = async () => {
+    if (!user) { setError("Please login to save notes."); return; }
+    if (!noteTitle.trim() && !noteBody.trim()) { setError("Please write a title or note first."); return; }
+    const noteId = editingNoteId || crypto.randomUUID();
+    const existingNote = editingNoteId ? notes.find((note) => note.id === editingNoteId) : null;
+    const noteData = {
+      title: noteTitle.trim() || "Untitled note",
+      body: noteBody.trim(),
+      subject: noteSubject.trim(),
+      classLevel,
+      board,
+      updatedAt: serverTimestamp(),
+    };
+    if (!editingNoteId) noteData.createdAt = serverTimestamp();
+    try {
+      await setDoc(doc(db, "users", user.uid, "notes", noteId), noteData, { merge: true });
+      setNotes((prev) => {
+        const now = new Date();
+        const localNote = { ...existingNote, ...noteData, id: noteId, createdAt: existingNote?.createdAt || { toDate: () => now }, updatedAt: { toDate: () => now } };
+        return [localNote, ...prev.filter((note) => note.id !== noteId)];
+      });
+      logActivity({
+        type: editingNoteId ? "note_updated" : "note_created",
+        title: editingNoteId ? "Updated note" : "Created note",
+        subject: noteSubject.trim(),
+        details: noteTitle.trim() || "Untitled note",
+      });
+      resetNoteForm();
+      setError("");
+    } catch (err) {
+      console.error("Note save error:", err);
+      setError("Could not save note. Please try again.");
+    }
+  };
+
+  const editNote = (note) => {
+    setEditingNoteId(note.id);
+    setNoteTitle(note.title || "");
+    setNoteBody(note.body || "");
+    setNoteSubject(note.subject || "");
+    setActiveTab("notes");
+  };
+
+  const removeNote = async (noteId) => {
+    if (!user || !noteId) return;
+    try {
+      await deleteDoc(doc(db, "users", user.uid, "notes", noteId));
+      setNotes((prev) => prev.filter((note) => note.id !== noteId));
+      if (editingNoteId === noteId) resetNoteForm();
+    } catch (err) {
+      console.error("Note delete error:", err);
+      setError("Could not delete note. Please try again.");
+    }
+  };
+
   const cancelProcessing = () => {
     cancelledRef.current = true;
     if (abortControllerRef.current) { abortControllerRef.current.abort(); abortControllerRef.current = null; }
@@ -1378,6 +1642,14 @@ ${latestAnswer}`;
       { id: assistantId, role: "assistant", text: answer, audioUrl: null, typing: true, diagram },
     ]);
     updateHistory(question, answer);
+    logActivity({
+      type: "diagram_request",
+      title: "Requested diagram",
+      subject: context.subject || selectedSubject || "",
+      chapterTitle: context.chapter || "",
+      topicTitle: context.topic || "",
+      details: question,
+    });
     if (context.topic || context.chapter) activeTopicContextRef.current = context;
     setIsLoading(false);
     requestLockRef.current = false;
@@ -1431,6 +1703,12 @@ ${latestAnswer}`;
         { id: assistantId, role: "assistant", text: data.answer, audioUrl: null, typing: true },
       ]);
       updateHistory(question, data.answer);
+      logActivity({
+        type: "question",
+        title: "Asked AI Tutor",
+        subject: selectedSubject || "",
+        details: question,
+      });
       setIsLoading(false);
       requestLockRef.current = false;
 
@@ -1507,6 +1785,12 @@ ${latestAnswer}`;
         { id: assistantId, role: "assistant", text: data.answer, audioUrl: data.audio_url, typing: false },
       ]);
       updateHistory(question, data.answer);
+      logActivity({
+        type: "voice_question",
+        title: "Asked by voice",
+        subject: selectedSubject || "",
+        details: question,
+      });
 
       // ── Save session ──────────────────────────────────
       if (user && currentSessionId) {
@@ -1632,6 +1916,42 @@ ${latestAnswer}`;
   // ── Main app ───────────────────────────────────────────
   const overallProgress = getOverallProgress();
   const sessionGroups   = groupSessionsByDate(chatSessions);
+  const testAttempts = getTestAttempts();
+  const latestTest = testAttempts[0] || null;
+  const averageTestScore = testAttempts.length
+    ? Math.round(testAttempts.reduce((sum, test) => sum + Number(test.percentage || 0), 0) / testAttempts.length)
+    : 0;
+  const activeDoubts = doubts.filter((doubt) => !doubt.resolved);
+  const resolvedDoubts = doubts.filter((doubt) => doubt.resolved);
+  const recentQuestions = activityLogs.filter((log) => ["question", "voice_question", "diagram_request"].includes(log.type));
+  const weeklyReport = buildCurrentReport("weekly");
+  const orderedSubjects = getOrderedSubjects(currentSyllabus);
+  const subjectProgressList = orderedSubjects.map((subject) => ({ subject, ...getSubjectProgress(subject) }));
+  const continueLessons = subjectProgressList
+    .map(({ subject, percent }) => {
+      const chapters = currentSyllabus?.[subject] || [];
+      const chapter = chapters.find((item) => (item.subtopics || []).some((topic) => !isCompletedStatus(getTopicStatus(subject, item.title, topic)))) || chapters[0];
+      const topic = chapter?.subtopics?.find((item) => !isCompletedStatus(getTopicStatus(subject, chapter.title, item))) || chapter?.subtopics?.[0] || "";
+      return chapter && topic ? { subject, chapter, topic, percent } : null;
+    })
+    .filter(Boolean)
+    .slice(0, 4);
+  const notificationItems = [
+    activeDoubts.length ? `${activeDoubts.length} doubt${activeDoubts.length !== 1 ? "s" : ""} need attention.` : "",
+    latestTest ? `Latest test score: ${latestTest.percentage || 0}% in ${latestTest.topicTitle || latestTest.chapterTitle || "test"}.` : "Start a topic test to build your score history.",
+    overallProgress.percent < 40 ? "Complete one more syllabus topic today." : "Your syllabus progress is moving well.",
+  ].filter(Boolean);
+  const searchTerm = globalSearch.trim().toLowerCase();
+  const searchResults = searchTerm
+    ? [
+        ...orderedSubjects.flatMap((subject) => (currentSyllabus?.[subject] || []).flatMap((chapter) =>
+          (chapter.subtopics || []).map((topic) => ({ type: "Topic", title: topic, meta: `${subject} · ${chapter.title}`, action: () => { setSelectedSubject(subject); setSelectedChapter(chapter.title); setActiveTab("syllabus"); } }))
+        )),
+        ...activeDoubts.map((doubt) => ({ type: "Doubt", title: doubt.title || doubt.topicTitle || "Student doubt", meta: formatSessionDate(doubt.createdAt), action: () => { setActiveTab("doubts"); openDoubtChat(doubt); } })),
+        ...notes.map((note) => ({ type: "Note", title: note.title || "Untitled note", meta: note.subject || "General", action: () => { editNote(note); setActiveTab("notes"); } })),
+        ...testAttempts.map((test) => ({ type: "Test", title: test.topicTitle || test.chapterTitle || "Test", meta: `${test.percentage || 0}% · ${test.subject || ""}`, action: () => { setSelectedTestAttempt(test); setActiveTab("test"); } })),
+      ].filter((item) => `${item.title} ${item.meta}`.toLowerCase().includes(searchTerm)).slice(0, 6)
+    : [];
 
   return (
     <div style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", background: B.bg, minHeight: "100vh" }}>
@@ -1640,7 +1960,31 @@ ${latestAnswer}`;
       {/* Navbar */}
       <nav style={{ background: B.navy, padding: "12px 28px", display: "flex", alignItems: "center", justifyContent: "space-between", boxShadow: "0 2px 12px rgba(43,88,136,0.15)", position: "sticky", top: 0, zIndex: 100 }}>
         <TeachifyyLogo size={28} light />
+        <div style={{ position: "relative", flex: "1 1 420px", maxWidth: "460px", margin: "0 18px" }}>
+          <input
+            value={globalSearch}
+            onChange={(e) => setGlobalSearch(e.target.value)}
+            placeholder="Search syllabus, doubts, notes, tests..."
+            style={{ width: "100%", padding: "10px 14px", borderRadius: "999px", border: "1px solid rgba(255,255,255,0.22)", background: "rgba(255,255,255,0.12)", color: B.white, outline: "none", fontSize: "13px", boxSizing: "border-box", fontFamily: "'Plus Jakarta Sans', sans-serif" }}
+          />
+          {searchTerm && (
+            <div style={{ position: "absolute", top: "44px", left: 0, right: 0, background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "14px", boxShadow: "0 14px 35px rgba(15,23,42,0.18)", overflow: "hidden", zIndex: 200 }}>
+              {searchResults.length ? searchResults.map((item) => (
+                <button key={`${item.type}-${item.title}-${item.meta}`} onClick={() => { item.action(); setGlobalSearch(""); }} style={{ width: "100%", textAlign: "left", padding: "11px 13px", border: "none", borderBottom: `1px solid ${B.gray200}`, background: B.white, cursor: "pointer", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+                  <div style={{ fontSize: "12px", fontWeight: 900, color: B.navy }}>{item.title}</div>
+                  <div style={{ fontSize: "11px", color: B.gray500, marginTop: "2px" }}>{item.type} - {item.meta}</div>
+                </button>
+              )) : (
+                <div style={{ padding: "14px", fontSize: "12px", color: B.gray500 }}>No matching result found.</div>
+              )}
+            </div>
+          )}
+        </div>
         <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+          <div title={notificationItems.join("\n")} style={{ position: "relative", width: "36px", height: "36px", borderRadius: "50%", background: "rgba(255,255,255,0.12)", border: "1px solid rgba(255,255,255,0.2)", display: "flex", alignItems: "center", justifyContent: "center", color: B.white, fontSize: "15px", fontWeight: 900 }}>
+            !
+            {notificationItems.length > 0 && <span style={{ position: "absolute", top: "7px", right: "8px", width: "7px", height: "7px", borderRadius: "50%", background: B.red }} />}
+          </div>
           <div style={{ textAlign: "right" }}>
             <div style={{ color: B.white, fontSize: "13px", fontWeight: 600 }}>{userProfile?.name || user?.email}</div>
             <div style={{ color: "rgba(255,255,255,0.6)", fontSize: "11px" }}>Class {classLevel} · {board}</div>
@@ -1650,22 +1994,28 @@ ${latestAnswer}`;
       </nav>
       <div style={{ height: "3px", background: `linear-gradient(90deg, ${B.red}, ${B.orange}, ${B.warm})` }} />
 
-      <div style={{ maxWidth: "800px", margin: "0 auto", padding: "28px 16px" }}>
+      <div style={{ maxWidth: "1040px", margin: "0 auto", padding: "28px 16px" }}>
 
         {/* Hero */}
         <div style={{ textAlign: "center", marginBottom: "20px" }}>
           <h1 style={{ fontSize: "24px", fontWeight: 700, color: B.navy, marginBottom: "4px" }}>Welcome back, {userProfile?.name?.split(" ")[0] || "Student"} 👋</h1>
-          <p style={{ fontSize: "13px", color: B.gray500 }}>Ask anything in Hindi, English, or Hinglish</p>
+          <p style={{ fontSize: "13px", color: B.gray500 }}>Your AI tutor, syllabus, tests, doubts, and progress in one place</p>
         </div>
 
         {/* Tabs — now 4 tabs including History */}
         <div style={{ display: "flex", gap: "6px", marginBottom: "18px", background: B.gray200, padding: "5px", borderRadius: "14px" }}>
           {[
-            { key: "chat",     label: "💬 Chatbot" },
-            { key: "history",  label: "🕐 History" },
-            { key: "doubts",   label: "❓ Doubts" },
-            { key: "syllabus", label: "📚 Syllabus" },
-            { key: "test",     label: "📝 Test" },
+            { key: "home",     label: "Home" },
+            { key: "chat",     label: "AI Tutor" },
+            { key: "history",  label: "History" },
+            { key: "activity", label: "Activity" },
+            { key: "reports",  label: "Reports" },
+            { key: "parent",   label: "Parent View" },
+            { key: "doubts",   label: "Doubts" },
+            { key: "notes",    label: "Notes" },
+            { key: "badges",   label: "Badges" },
+            { key: "syllabus", label: "Syllabus" },
+            { key: "test",     label: "Tests" },
           ].map(({ key, label, disabled }) => (
             <button
               key={key}
@@ -1681,6 +2031,110 @@ ${latestAnswer}`;
         </div>
 
         {/* ── CHAT TAB ── */}
+        {activeTab === "home" && (
+          <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1.4fr) minmax(280px, 0.8fr)", gap: "16px", alignItems: "start" }}>
+            <div style={{ display: "grid", gap: "16px" }}>
+              <div style={{ background: `linear-gradient(135deg, ${B.navy}, ${B.navyDark})`, borderRadius: "18px", padding: "22px", color: B.white, boxShadow: "0 10px 30px rgba(43,88,136,0.18)", display: "flex", justifyContent: "space-between", gap: "18px", alignItems: "center", flexWrap: "wrap" }}>
+                <div>
+                  <div style={{ fontSize: "12px", fontWeight: 800, opacity: 0.8, marginBottom: "8px" }}>AI Tutor Active</div>
+                  <h2 style={{ fontSize: "24px", fontWeight: 900, margin: "0 0 6px" }}>Good to see you, {userProfile?.name?.split(" ")[0] || "Student"}</h2>
+                  <p style={{ fontSize: "13px", margin: 0, opacity: 0.82 }}>You have {activeDoubts.length} active doubt{activeDoubts.length !== 1 ? "s" : ""} and {continueLessons.length} learning path{continueLessons.length !== 1 ? "s" : ""} ready.</p>
+                </div>
+                <button onClick={() => setActiveTab("chat")} style={{ padding: "10px 14px", borderRadius: "12px", border: "none", background: B.white, color: B.navy, fontSize: "13px", fontWeight: 900, cursor: "pointer", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>Ask AI Tutor</button>
+              </div>
+
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))", gap: "12px" }}>
+                {[
+                  { label: "Topics Mastered", value: `${overallProgress.completed}/${overallProgress.total}`, sub: `${overallProgress.percent}% completed` },
+                  { label: "Quiz Average", value: testAttempts.length ? `${averageTestScore}%` : "--", sub: `${testAttempts.length} test${testAttempts.length !== 1 ? "s" : ""} attempted` },
+                  { label: "Questions Asked", value: recentQuestions.length, sub: "Text, voice, and diagrams" },
+                  { label: "Active Doubts", value: activeDoubts.length, sub: `${resolvedDoubts.length} resolved` },
+                ].map((card) => (
+                  <div key={card.label} style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "16px", padding: "16px", boxShadow: "0 4px 18px rgba(43,88,136,0.06)" }}>
+                    <div style={{ fontSize: "11px", color: B.gray500, fontWeight: 900, textTransform: "uppercase" }}>{card.label}</div>
+                    <div style={{ fontSize: "26px", color: B.navy, fontWeight: 900, marginTop: "8px" }}>{card.value}</div>
+                    <div style={{ fontSize: "11px", color: B.gray500, marginTop: "4px" }}>{card.sub}</div>
+                  </div>
+                ))}
+              </div>
+
+              <div style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "18px", padding: "18px", boxShadow: "0 4px 20px rgba(43,88,136,0.06)" }}>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "14px" }}>
+                  <div>
+                    <h3 style={{ fontSize: "17px", fontWeight: 900, color: B.navy, margin: 0 }}>Continue Learning</h3>
+                    <p style={{ fontSize: "12px", color: B.gray500, margin: "3px 0 0" }}>Pick up the next open topic from your syllabus.</p>
+                  </div>
+                  <button onClick={() => setActiveTab("syllabus")} style={{ border: "none", background: B.navyLight, color: B.navy, borderRadius: "9px", padding: "8px 10px", fontSize: "11px", fontWeight: 900, cursor: "pointer" }}>Open syllabus</button>
+                </div>
+                {continueLessons.length ? (
+                  <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(210px, 1fr))", gap: "10px" }}>
+                    {continueLessons.map((lesson) => (
+                      <button key={`${lesson.subject}-${lesson.chapter.title}-${lesson.topic}`} onClick={() => { setSelectedSubject(lesson.subject); setSelectedChapter(lesson.chapter.title); setActiveTab("syllabus"); }} style={{ textAlign: "left", padding: "14px", borderRadius: "13px", background: B.gray50, border: `1px solid ${B.gray200}`, cursor: "pointer", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+                        <div style={{ fontSize: "11px", color: B.gray500, fontWeight: 900, textTransform: "uppercase" }}>{lesson.subject}</div>
+                        <div style={{ fontSize: "14px", color: B.navy, fontWeight: 900, marginTop: "6px", lineHeight: 1.35 }}>{lesson.topic}</div>
+                        <div style={{ fontSize: "11px", color: B.gray500, marginTop: "5px" }}>{lesson.chapter.title}</div>
+                        <div style={{ marginTop: "10px" }}><ProgressBar percent={lesson.percent} /></div>
+                      </button>
+                    ))}
+                  </div>
+                ) : (
+                  <div style={{ padding: "24px", textAlign: "center", color: B.gray500, fontSize: "13px", background: B.gray50, borderRadius: "13px" }}>No syllabus topics available for this class yet.</div>
+                )}
+              </div>
+
+              <div style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "18px", padding: "18px", boxShadow: "0 4px 20px rgba(43,88,136,0.06)" }}>
+                <h3 style={{ fontSize: "17px", fontWeight: 900, color: B.navy, margin: "0 0 12px" }}>Subject Progress</h3>
+                <div style={{ display: "grid", gap: "10px" }}>
+                  {subjectProgressList.slice(0, 6).map((subject) => (
+                    <div key={subject.subject}>
+                      <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "6px", fontSize: "12px", fontWeight: 800, color: B.gray700 }}>
+                        <span>{subject.subject}</span>
+                        <span>{subject.percent}%</span>
+                      </div>
+                      <ProgressBar percent={subject.percent} />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div style={{ display: "grid", gap: "16px" }}>
+              <div style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "18px", padding: "18px", boxShadow: "0 4px 20px rgba(43,88,136,0.06)" }}>
+                <h3 style={{ fontSize: "16px", fontWeight: 900, color: B.navy, margin: "0 0 12px" }}>Today's Goals</h3>
+                {[
+                  { text: activeDoubts.length ? "Resolve one active doubt" : "Ask one learning question", tab: activeDoubts.length ? "doubts" : "chat" },
+                  { text: "Complete one syllabus topic", tab: "syllabus" },
+                  { text: latestTest ? "Review latest test result" : "Attempt one topic test", tab: "test" },
+                ].map((goal, index) => (
+                  <button key={goal.text} onClick={() => setActiveTab(goal.tab)} style={{ width: "100%", display: "flex", alignItems: "center", gap: "10px", padding: "10px", marginBottom: index === 2 ? 0 : "8px", borderRadius: "11px", border: `1px solid ${B.gray200}`, background: B.gray50, cursor: "pointer", textAlign: "left", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+                    <span style={{ width: "20px", height: "20px", borderRadius: "50%", background: B.navyLight, color: B.navy, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "11px", fontWeight: 900 }}>{index + 1}</span>
+                    <span style={{ fontSize: "12px", color: B.gray700, fontWeight: 800 }}>{goal.text}</span>
+                  </button>
+                ))}
+              </div>
+
+              <div style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "18px", padding: "18px", boxShadow: "0 4px 20px rgba(43,88,136,0.06)" }}>
+                <h3 style={{ fontSize: "16px", fontWeight: 900, color: B.navy, margin: "0 0 10px" }}>Weekly Digest</h3>
+                <div style={{ display: "grid", gap: "7px" }}>
+                  {weeklyReport.summary.slice(0, 4).map((line) => (
+                    <div key={line} style={{ fontSize: "12px", color: B.gray700, lineHeight: 1.55 }}>- {line}</div>
+                  ))}
+                </div>
+                <button onClick={() => setActiveTab("reports")} style={{ marginTop: "12px", width: "100%", padding: "9px", borderRadius: "10px", border: "none", background: B.navy, color: B.white, fontSize: "12px", fontWeight: 900, cursor: "pointer", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>View reports</button>
+              </div>
+
+              <div style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "18px", padding: "18px", boxShadow: "0 4px 20px rgba(43,88,136,0.06)" }}>
+                <h3 style={{ fontSize: "16px", fontWeight: 900, color: B.navy, margin: "0 0 10px" }}>Notifications</h3>
+                <div style={{ display: "grid", gap: "8px" }}>
+                  {notificationItems.map((item) => (
+                    <div key={item} style={{ padding: "10px", borderRadius: "10px", background: B.orangeLight, color: B.gray700, fontSize: "12px", lineHeight: 1.45, fontWeight: 700 }}>{item}</div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
         {activeTab === "chat" && (
           <div style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "18px", overflow: "hidden", boxShadow: "0 4px 20px rgba(43,88,136,0.06)" }}>
             {/* Chat header */}
@@ -1881,6 +2335,86 @@ ${latestAnswer}`;
           </div>
         )}
 
+        {/* ── NOTES TAB ── */}
+        {activeTab === "notes" && (
+          <div style={{ display: "grid", gridTemplateColumns: "minmax(280px, 0.9fr) minmax(0, 1.2fr)", gap: "16px", alignItems: "start" }}>
+            <div style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "18px", padding: "20px", boxShadow: "0 4px 20px rgba(43,88,136,0.06)" }}>
+              <h2 style={{ fontSize: "18px", fontWeight: 800, color: B.navy, margin: "0 0 4px" }}>{editingNoteId ? "Edit Note" : "Create Note"}</h2>
+              <p style={{ fontSize: "12px", color: B.gray500, margin: "0 0 16px" }}>Save your own short notes for revision.</p>
+
+              {error && activeTab === "notes" && (
+                <div style={{ marginBottom: "12px", padding: "10px 12px", borderRadius: "10px", background: B.redLight, border: `1px solid ${B.red}`, color: B.red, fontSize: "12px", fontWeight: 700 }}>{error}</div>
+              )}
+
+              <label style={labelStyle}>Title</label>
+              <input value={noteTitle} onChange={(e) => setNoteTitle(e.target.value)} placeholder="Example: Photosynthesis summary" style={inputStyle} />
+
+              <label style={labelStyle}>Subject</label>
+              <select value={noteSubject} onChange={(e) => setNoteSubject(e.target.value)} style={inputStyle}>
+                <option value="">No subject selected</option>
+                {getOrderedSubjects(currentSyllabus).map((subject) => <option key={subject} value={subject}>{subject}</option>)}
+              </select>
+
+              <label style={labelStyle}>Note</label>
+              <textarea
+                value={noteBody}
+                onChange={(e) => setNoteBody(e.target.value)}
+                placeholder="Write important points, formulas, meanings, examples..."
+                rows={9}
+                style={{ ...inputStyle, resize: "vertical", minHeight: "170px", lineHeight: "1.6" }}
+              />
+
+              <div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
+                <button onClick={saveNote} style={{ padding: "10px 15px", borderRadius: "10px", border: "none", background: B.navy, color: B.white, fontSize: "13px", fontWeight: 800, cursor: "pointer", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>{editingNoteId ? "Update note" : "Save note"}</button>
+                {(editingNoteId || noteTitle || noteBody || noteSubject) && (
+                  <button onClick={resetNoteForm} style={{ padding: "10px 15px", borderRadius: "10px", border: `1px solid ${B.gray300}`, background: B.white, color: B.gray700, fontSize: "13px", fontWeight: 700, cursor: "pointer", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>Clear</button>
+                )}
+              </div>
+            </div>
+
+            <div style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "18px", overflow: "hidden", boxShadow: "0 4px 20px rgba(43,88,136,0.06)" }}>
+              <div style={{ padding: "16px 20px", borderBottom: `1px solid ${B.gray200}` }}>
+                <h2 style={{ fontSize: "17px", fontWeight: 800, color: B.navy, margin: 0 }}>My Notes</h2>
+                <p style={{ fontSize: "12px", color: B.gray500, margin: "3px 0 0" }}>{notes.length} saved note{notes.length !== 1 ? "s" : ""}</p>
+              </div>
+
+              <div style={{ maxHeight: "620px", overflowY: "auto", padding: notes.length ? "16px" : 0 }}>
+                {notesLoading ? (
+                  <div style={{ padding: "44px", textAlign: "center", color: B.gray500, fontSize: "13px" }}>Loading notes...</div>
+                ) : notes.length === 0 ? (
+                  <div style={{ padding: "52px 20px", textAlign: "center", color: B.gray500 }}>
+                    <div style={{ fontSize: "40px", marginBottom: "10px" }}>Notes</div>
+                    <p style={{ fontSize: "14px", fontWeight: 700, color: B.navy }}>No notes yet</p>
+                    <p style={{ fontSize: "12px", marginTop: "5px" }}>Write your first revision note from the form.</p>
+                  </div>
+                ) : (
+                  <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+                    {notes.map((note) => (
+                      <div key={note.id} style={{ border: `1px solid ${editingNoteId === note.id ? B.navy : B.gray200}`, borderRadius: "12px", background: editingNoteId === note.id ? B.navyLight : B.gray50, overflow: "hidden" }}>
+                        <div style={{ padding: "14px 15px", background: B.white }}>
+                          <div style={{ display: "flex", justifyContent: "space-between", gap: "12px", alignItems: "flex-start" }}>
+                            <div style={{ minWidth: 0 }}>
+                              <div style={{ fontSize: "14px", fontWeight: 800, color: B.navy, marginBottom: "4px" }}>{note.title || "Untitled note"}</div>
+                              <div style={{ fontSize: "11px", color: B.gray500 }}>{note.subject || "General"} · {formatSessionDate(note.updatedAt || note.createdAt)}</div>
+                            </div>
+                            <div style={{ display: "flex", gap: "6px", flexShrink: 0 }}>
+                              <button onClick={() => editNote(note)} style={{ padding: "5px 9px", borderRadius: "8px", border: `1px solid ${B.gray300}`, background: B.white, color: B.navy, fontSize: "11px", fontWeight: 800, cursor: "pointer" }}>Edit</button>
+                              <button onClick={() => removeNote(note.id)} style={{ padding: "5px 9px", borderRadius: "8px", border: `1px solid ${B.red}`, background: B.redLight, color: B.red, fontSize: "11px", fontWeight: 800, cursor: "pointer" }}>Delete</button>
+                            </div>
+                          </div>
+                          {note.body && (
+                            <div style={{ marginTop: "10px", whiteSpace: "pre-wrap", lineHeight: "1.65", fontSize: "13px", color: B.gray700, maxHeight: "180px", overflowY: "auto" }}>{note.body}</div>
+                          )}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* ── HISTORY TAB ── */}
         {activeTab === "history" && (
           <div style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "18px", overflow: "hidden", boxShadow: "0 4px 20px rgba(43,88,136,0.06)" }}>
@@ -2010,6 +2544,321 @@ ${latestAnswer}`;
             </div>
           </div>
         )}
+
+        {/* ── ACTIVITY TAB ── */}
+        {activeTab === "activity" && (
+          <div style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "18px", overflow: "hidden", boxShadow: "0 4px 20px rgba(43,88,136,0.06)" }}>
+            <div style={{ padding: "16px 20px", borderBottom: `1px solid ${B.gray200}` }}>
+              <h2 style={{ fontSize: "17px", fontWeight: 800, color: B.navy, margin: 0 }}>Activity Tracking</h2>
+              <p style={{ fontSize: "12px", color: B.gray500, margin: "3px 0 0" }}>{activityLogs.length} recent activity record{activityLogs.length !== 1 ? "s" : ""}</p>
+            </div>
+
+            <div style={{ maxHeight: "620px", overflowY: "auto", padding: activityLogs.length ? "16px" : 0 }}>
+              {activityLoading ? (
+                <div style={{ padding: "44px", textAlign: "center", color: B.gray500, fontSize: "13px" }}>Loading activity...</div>
+              ) : activityLogs.length === 0 ? (
+                <div style={{ padding: "52px 20px", textAlign: "center", color: B.gray500 }}>
+                  <div style={{ fontSize: "40px", marginBottom: "10px" }}>Activity</div>
+                  <p style={{ fontSize: "14px", fontWeight: 700, color: B.navy }}>No activity recorded yet</p>
+                  <p style={{ fontSize: "12px", marginTop: "5px" }}>Ask a question, study a topic, start a test, or save a note.</p>
+                </div>
+              ) : (
+                <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+                  {activityLogs.map((log) => {
+                    const typeColors = {
+                      question: B.navy,
+                      voice_question: B.navy,
+                      study: B.green,
+                      revision: B.orange,
+                      test_started: B.red,
+                      note_created: B.warm,
+                      note_updated: B.warm,
+                      report_saved: B.green,
+                    };
+                    return (
+                      <div key={log.id} style={{ padding: "14px", borderRadius: "13px", border: `1px solid ${B.gray200}`, background: B.gray50 }}>
+                        <div style={{ display: "flex", justifyContent: "space-between", gap: "12px", alignItems: "flex-start" }}>
+                          <div style={{ minWidth: 0 }}>
+                            <div style={{ fontSize: "11px", color: typeColors[log.type] || B.gray500, fontWeight: 900, textTransform: "uppercase", marginBottom: "4px" }}>{String(log.type || "activity").replace(/_/g, " ")}</div>
+                            <div style={{ fontSize: "14px", color: B.navy, fontWeight: 800 }}>{log.title || "Activity"}</div>
+                            {(log.subject || log.chapterTitle || log.topicTitle) && (
+                              <div style={{ fontSize: "11px", color: B.gray500, marginTop: "4px" }}>{[log.subject, log.chapterTitle, log.topicTitle].filter(Boolean).join(" · ")}</div>
+                            )}
+                          </div>
+                          <div style={{ fontSize: "11px", color: B.gray500, flexShrink: 0 }}>{formatSessionDate(log.createdAt)}</div>
+                        </div>
+                        {log.details && <div style={{ marginTop: "8px", fontSize: "12px", color: B.gray700, lineHeight: "1.55", whiteSpace: "pre-wrap", maxHeight: "72px", overflowY: "auto" }}>{log.details}</div>}
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+
+        {/* ── REPORTS TAB ── */}
+        {activeTab === "reports" && (() => {
+          const report = buildCurrentReport(reportRange);
+          const metricCards = [
+            { label: "Activities", value: report.metrics.activities },
+            { label: "Questions", value: report.metrics.questions },
+            { label: "Topics Studied", value: report.metrics.studyTopics },
+            { label: "Revisions", value: report.metrics.revisions },
+            { label: "Tests", value: report.metrics.tests },
+            { label: "Avg Score", value: report.metrics.tests ? `${report.metrics.averageScore}%` : "--" },
+            { label: "Notes", value: report.metrics.notes },
+            { label: "Active Doubts", value: report.metrics.activeDoubts },
+          ];
+          return (
+            <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1.35fr) minmax(280px, 0.75fr)", gap: "16px", alignItems: "start" }}>
+              <div style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "18px", overflow: "hidden", boxShadow: "0 4px 20px rgba(43,88,136,0.06)" }}>
+                <div style={{ padding: "16px 20px", borderBottom: `1px solid ${B.gray200}`, display: "flex", justifyContent: "space-between", gap: "12px", alignItems: "center", flexWrap: "wrap" }}>
+                  <div>
+                    <h2 style={{ fontSize: "17px", fontWeight: 800, color: B.navy, margin: 0 }}>{report.rangeLabel} Status Report</h2>
+                    <p style={{ fontSize: "12px", color: B.gray500, margin: "3px 0 0" }}>Generated from the last {report.days} days of activity.</p>
+                  </div>
+                  <div style={{ display: "flex", gap: "8px", alignItems: "center" }}>
+                    <select value={reportRange} onChange={(e) => setReportRange(e.target.value)} style={{ padding: "8px 10px", borderRadius: "10px", border: `1px solid ${B.gray300}`, background: B.white, color: B.navy, fontSize: "12px", fontWeight: 800, fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+                      <option value="weekly">Weekly</option>
+                      <option value="monthly">Monthly</option>
+                    </select>
+                    <button onClick={saveCurrentReport} style={{ padding: "9px 13px", borderRadius: "10px", border: "none", background: B.navy, color: B.white, fontSize: "12px", fontWeight: 800, cursor: "pointer", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>Save report</button>
+                  </div>
+                </div>
+
+                <div style={{ padding: "18px" }}>
+                  <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(130px, 1fr))", gap: "10px", marginBottom: "16px" }}>
+                    {metricCards.map((card) => (
+                      <div key={card.label} style={{ padding: "13px", borderRadius: "12px", background: B.gray50, border: `1px solid ${B.gray200}` }}>
+                        <div style={{ fontSize: "11px", color: B.gray500, fontWeight: 800, textTransform: "uppercase" }}>{card.label}</div>
+                        <div style={{ fontSize: "22px", color: B.navy, fontWeight: 900, marginTop: "5px" }}>{card.value}</div>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div style={{ padding: "14px", borderRadius: "13px", background: B.navyLight, border: `1px solid rgba(43,88,136,0.15)`, marginBottom: "16px" }}>
+                    <div style={{ fontSize: "14px", fontWeight: 900, color: B.navy, marginBottom: "8px" }}>Summary</div>
+                    <div style={{ display: "grid", gap: "6px" }}>
+                      {report.summary.map((line) => <div key={line} style={{ fontSize: "13px", color: B.gray700 }}>• {line}</div>)}
+                    </div>
+                    <div style={{ fontSize: "12px", color: B.gray500, marginTop: "10px" }}>
+                      {report.subjects.length ? `Subjects touched: ${report.subjects.join(", ")}` : "No subject-specific activity recorded in this range."}
+                    </div>
+                  </div>
+
+                  <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "14px" }}>
+                    <div>
+                      <h3 style={{ fontSize: "15px", fontWeight: 900, color: B.navy, margin: "0 0 10px" }}>Recent Activity</h3>
+                      {report.recentActivities.length ? (
+                        <div style={{ display: "grid", gap: "8px" }}>
+                          {report.recentActivities.map((log) => (
+                            <div key={log.id} style={{ padding: "10px", borderRadius: "10px", background: B.gray50, border: `1px solid ${B.gray200}` }}>
+                              <div style={{ fontSize: "12px", fontWeight: 800, color: B.navy }}>{log.title || String(log.type || "Activity").replace(/_/g, " ")}</div>
+                              <div style={{ fontSize: "11px", color: B.gray500, marginTop: "3px" }}>{formatSessionDate(log.createdAt)}</div>
+                            </div>
+                          ))}
+                        </div>
+                      ) : <div style={{ fontSize: "12px", color: B.gray500 }}>No activity in this range.</div>}
+                    </div>
+
+                    <div>
+                      <h3 style={{ fontSize: "15px", fontWeight: 900, color: B.navy, margin: "0 0 10px" }}>Recent Tests</h3>
+                      {report.recentTests.length ? (
+                        <div style={{ display: "grid", gap: "8px" }}>
+                          {report.recentTests.map((test) => (
+                            <div key={test.attemptId || test.testId} style={{ padding: "10px", borderRadius: "10px", background: B.gray50, border: `1px solid ${B.gray200}` }}>
+                              <div style={{ fontSize: "12px", fontWeight: 800, color: B.navy }}>{test.topicTitle || test.chapterTitle || "Test"}</div>
+                              <div style={{ fontSize: "11px", color: B.gray500, marginTop: "3px" }}>{formatMarks(test.score || 0)}/{formatMarks(test.totalMarks || test.total || 20)} · {test.percentage || 0}%</div>
+                            </div>
+                          ))}
+                        </div>
+                      ) : <div style={{ fontSize: "12px", color: B.gray500 }}>No tests in this range.</div>}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "18px", overflow: "hidden", boxShadow: "0 4px 20px rgba(43,88,136,0.06)" }}>
+                <div style={{ padding: "16px 18px", borderBottom: `1px solid ${B.gray200}` }}>
+                  <h2 style={{ fontSize: "16px", fontWeight: 800, color: B.navy, margin: 0 }}>Saved Reports</h2>
+                  <p style={{ fontSize: "12px", color: B.gray500, margin: "3px 0 0" }}>{reports.length} report snapshot{reports.length !== 1 ? "s" : ""}</p>
+                </div>
+                <div style={{ maxHeight: "620px", overflowY: "auto", padding: reports.length ? "14px" : 0 }}>
+                  {reportsLoading ? (
+                    <div style={{ padding: "36px", textAlign: "center", color: B.gray500, fontSize: "13px" }}>Loading reports...</div>
+                  ) : reports.length === 0 ? (
+                    <div style={{ padding: "42px 16px", textAlign: "center", color: B.gray500, fontSize: "13px" }}>Save a report snapshot to see it here.</div>
+                  ) : (
+                    <div style={{ display: "grid", gap: "10px" }}>
+                      {reports.map((saved) => (
+                        <div key={saved.id} style={{ padding: "12px", borderRadius: "12px", background: B.gray50, border: `1px solid ${B.gray200}` }}>
+                          <div style={{ display: "flex", justifyContent: "space-between", gap: "8px", marginBottom: "6px" }}>
+                            <div style={{ fontSize: "13px", fontWeight: 900, color: B.navy }}>{saved.rangeLabel || saved.range || "Report"}</div>
+                            <div style={{ fontSize: "10px", color: B.gray500, flexShrink: 0 }}>{formatSessionDate(saved.createdAt)}</div>
+                          </div>
+                          <div style={{ fontSize: "11px", color: B.gray700, lineHeight: "1.55" }}>
+                            {(saved.summary || []).slice(0, 3).map((line) => <div key={line}>• {line}</div>)}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+          );
+        })()}
+
+        {/* ── PARENT VIEW TAB ── */}
+        {activeTab === "parent" && (() => {
+          const tests = getTestAttempts();
+          const averageScore = tests.length
+            ? Math.round(tests.reduce((sum, test) => sum + Number(test.percentage || 0), 0) / tests.length)
+            : 0;
+          const questions = activityLogs.filter((log) => ["question", "voice_question", "diagram_request"].includes(log.type));
+          const studiedTopics = activityLogs.filter((log) => log.type === "study");
+          const revisedTopics = activityLogs.filter((log) => log.type === "revision");
+          const activeDoubts = doubts.filter((doubt) => !doubt.resolved);
+          const resolvedDoubts = doubts.filter((doubt) => doubt.resolved);
+          const completedTopics = Object.values(topicProgress || {}).filter((item) => isCompletedStatus(item.status));
+          const weeklyReport = buildCurrentReport("weekly");
+          const parentCards = [
+            { label: "Questions Asked", value: questions.length, hint: "Text, voice, and diagram requests" },
+            { label: "Topics Completed", value: completedTopics.length, hint: `${overallProgress.percent}% overall progress` },
+            { label: "Tests Attempted", value: tests.length, hint: tests.length ? `${averageScore}% average score` : "No tests yet" },
+            { label: "Active Doubts", value: activeDoubts.length, hint: `${resolvedDoubts.length} resolved` },
+            { label: "Notes Saved", value: notes.length, hint: "Student-created notes" },
+            { label: "Reports Saved", value: reports.length, hint: "Weekly/monthly snapshots" },
+          ];
+
+          return (
+            <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1.35fr) minmax(280px, 0.75fr)", gap: "16px", alignItems: "start" }}>
+              <div style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "18px", overflow: "hidden", boxShadow: "0 4px 20px rgba(43,88,136,0.06)" }}>
+                <div style={{ padding: "18px 20px", borderBottom: `1px solid ${B.gray200}`, display: "flex", justifyContent: "space-between", gap: "12px", alignItems: "center", flexWrap: "wrap" }}>
+                  <div>
+                    <h2 style={{ fontSize: "18px", fontWeight: 900, color: B.navy, margin: 0 }}>Parent View</h2>
+                    <p style={{ fontSize: "12px", color: B.gray500, margin: "4px 0 0" }}>A clear summary of this student's learning activity in the same account.</p>
+                  </div>
+                  <button onClick={() => setActiveTab("reports")} style={{ padding: "9px 13px", borderRadius: "10px", border: "none", background: B.navy, color: B.white, fontSize: "12px", fontWeight: 800, cursor: "pointer", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+                    Open Reports
+                  </button>
+                </div>
+
+                <div style={{ padding: "18px" }}>
+                  <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))", gap: "10px", marginBottom: "16px" }}>
+                    {parentCards.map((card) => (
+                      <div key={card.label} style={{ padding: "14px", borderRadius: "13px", background: B.gray50, border: `1px solid ${B.gray200}` }}>
+                        <div style={{ fontSize: "11px", color: B.gray500, fontWeight: 900, textTransform: "uppercase" }}>{card.label}</div>
+                        <div style={{ fontSize: "25px", color: B.navy, fontWeight: 900, marginTop: "5px" }}>{card.value}</div>
+                        <div style={{ fontSize: "11px", color: B.gray500, marginTop: "3px", lineHeight: 1.4 }}>{card.hint}</div>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div style={{ padding: "14px", borderRadius: "13px", background: B.navyLight, border: `1px solid rgba(43,88,136,0.15)`, marginBottom: "16px" }}>
+                    <div style={{ fontSize: "14px", fontWeight: 900, color: B.navy, marginBottom: "8px" }}>This Week at a Glance</div>
+                    <div style={{ display: "grid", gap: "6px" }}>
+                      {weeklyReport.summary.map((line) => (
+                        <div key={line} style={{ fontSize: "13px", color: B.gray700, lineHeight: 1.55 }}>- {line}</div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: "14px" }}>
+                    <div>
+                      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "10px" }}>
+                        <h3 style={{ fontSize: "15px", fontWeight: 900, color: B.navy, margin: 0 }}>Latest Searches</h3>
+                        <button onClick={() => setActiveTab("activity")} style={{ border: "none", background: "transparent", color: B.navy, fontSize: "11px", fontWeight: 900, cursor: "pointer" }}>View all</button>
+                      </div>
+                      {questions.length ? (
+                        <div style={{ display: "grid", gap: "8px" }}>
+                          {questions.slice(0, 6).map((log) => (
+                            <div key={log.id} style={{ padding: "11px", borderRadius: "10px", background: B.gray50, border: `1px solid ${B.gray200}` }}>
+                              <div style={{ fontSize: "12px", fontWeight: 800, color: B.navy, lineHeight: 1.45 }}>{log.title || log.prompt || "Student question"}</div>
+                              <div style={{ fontSize: "11px", color: B.gray500, marginTop: "4px" }}>{formatSessionDate(log.createdAt)}</div>
+                            </div>
+                          ))}
+                        </div>
+                      ) : (
+                        <div style={{ fontSize: "12px", color: B.gray500, padding: "16px", borderRadius: "12px", background: B.gray50, border: `1px solid ${B.gray200}` }}>No searches recorded yet.</div>
+                      )}
+                    </div>
+
+                    <div>
+                      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "10px" }}>
+                        <h3 style={{ fontSize: "15px", fontWeight: 900, color: B.navy, margin: 0 }}>Recent Tests</h3>
+                        <button onClick={() => setActiveTab("test")} style={{ border: "none", background: "transparent", color: B.navy, fontSize: "11px", fontWeight: 900, cursor: "pointer" }}>View all</button>
+                      </div>
+                      {tests.length ? (
+                        <div style={{ display: "grid", gap: "8px" }}>
+                          {tests.slice(0, 5).map((test) => (
+                            <button key={test.attemptId || test.testId} onClick={() => { setSelectedTestAttempt(test); setActiveTab("test"); }} style={{ width: "100%", textAlign: "left", padding: "11px", borderRadius: "10px", background: B.gray50, border: `1px solid ${B.gray200}`, cursor: "pointer", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+                              <div style={{ display: "flex", justifyContent: "space-between", gap: "8px" }}>
+                                <div style={{ fontSize: "12px", fontWeight: 900, color: B.navy, lineHeight: 1.45 }}>{test.topicTitle || test.chapterTitle || "Test"}</div>
+                                <div style={{ fontSize: "12px", fontWeight: 900, color: B.green, flexShrink: 0 }}>{test.percentage || 0}%</div>
+                              </div>
+                              <div style={{ fontSize: "11px", color: B.gray500, marginTop: "4px" }}>{formatMarks(test.score || 0)}/{formatMarks(test.totalMarks || test.total || 20)} marks - {formatSessionDate(test.submittedAt || test.updatedAt)}</div>
+                            </button>
+                          ))}
+                        </div>
+                      ) : (
+                        <div style={{ fontSize: "12px", color: B.gray500, padding: "16px", borderRadius: "12px", background: B.gray50, border: `1px solid ${B.gray200}` }}>No tests attempted yet.</div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div style={{ display: "grid", gap: "14px" }}>
+                <div style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "18px", overflow: "hidden", boxShadow: "0 4px 20px rgba(43,88,136,0.06)" }}>
+                  <div style={{ padding: "16px 18px", borderBottom: `1px solid ${B.gray200}`, display: "flex", justifyContent: "space-between", alignItems: "center", gap: "8px" }}>
+                    <div>
+                      <h3 style={{ fontSize: "15px", fontWeight: 900, color: B.navy, margin: 0 }}>Doubts Needing Attention</h3>
+                      <p style={{ fontSize: "11px", color: B.gray500, margin: "3px 0 0" }}>{activeDoubts.length} active doubt{activeDoubts.length !== 1 ? "s" : ""}</p>
+                    </div>
+                    <button onClick={() => setActiveTab("doubts")} style={{ border: "none", background: B.navyLight, color: B.navy, borderRadius: "9px", padding: "7px 10px", fontSize: "11px", fontWeight: 900, cursor: "pointer" }}>Open</button>
+                  </div>
+                  <div style={{ padding: "14px" }}>
+                    {activeDoubts.length ? (
+                      <div style={{ display: "grid", gap: "8px" }}>
+                        {activeDoubts.slice(0, 4).map((doubt) => (
+                          <button key={doubt.id} onClick={() => { setActiveTab("doubts"); openDoubtChat(doubt); }} style={{ textAlign: "left", padding: "10px", borderRadius: "10px", background: B.gray50, border: `1px solid ${B.gray200}`, cursor: "pointer", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+                            <div style={{ fontSize: "12px", fontWeight: 900, color: B.navy, lineHeight: 1.45 }}>{doubt.title || doubt.topicTitle || "Student doubt"}</div>
+                            <div style={{ fontSize: "11px", color: B.gray500, marginTop: "4px" }}>{formatSessionDate(doubt.createdAt)}</div>
+                          </button>
+                        ))}
+                      </div>
+                    ) : (
+                      <div style={{ fontSize: "12px", color: B.gray500, padding: "10px" }}>No active doubts right now.</div>
+                    )}
+                  </div>
+                </div>
+
+                <div style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "18px", overflow: "hidden", boxShadow: "0 4px 20px rgba(43,88,136,0.06)" }}>
+                  <div style={{ padding: "16px 18px", borderBottom: `1px solid ${B.gray200}` }}>
+                    <h3 style={{ fontSize: "15px", fontWeight: 900, color: B.navy, margin: 0 }}>Learning Actions</h3>
+                    <p style={{ fontSize: "11px", color: B.gray500, margin: "3px 0 0" }}>Study and revision activity</p>
+                  </div>
+                  <div style={{ padding: "14px", display: "grid", gap: "10px" }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", padding: "10px", borderRadius: "10px", background: B.gray50, border: `1px solid ${B.gray200}` }}>
+                      <span style={{ fontSize: "12px", color: B.gray700, fontWeight: 800 }}>Study clicks</span>
+                      <span style={{ fontSize: "12px", color: B.navy, fontWeight: 900 }}>{studiedTopics.length}</span>
+                    </div>
+                    <div style={{ display: "flex", justifyContent: "space-between", padding: "10px", borderRadius: "10px", background: B.gray50, border: `1px solid ${B.gray200}` }}>
+                      <span style={{ fontSize: "12px", color: B.gray700, fontWeight: 800 }}>Revision clicks</span>
+                      <span style={{ fontSize: "12px", color: B.navy, fontWeight: 900 }}>{revisedTopics.length}</span>
+                    </div>
+                    <div style={{ display: "flex", justifyContent: "space-between", padding: "10px", borderRadius: "10px", background: B.gray50, border: `1px solid ${B.gray200}` }}>
+                      <span style={{ fontSize: "12px", color: B.gray700, fontWeight: 800 }}>Overall progress</span>
+                      <span style={{ fontSize: "12px", color: B.green, fontWeight: 900 }}>{overallProgress.percent}%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        })()}
 
         {/* ── TEST TAB ── */}
         {activeTab === "test" && (
@@ -2247,6 +3096,75 @@ ${latestAnswer}`;
             )}
           </div>
         )}
+
+        {/* ── BADGES TAB ── */}
+        {activeTab === "badges" && (() => {
+          const tests = getTestAttempts();
+          const questions = activityLogs.filter((log) => ["question", "voice_question", "diagram_request"].includes(log.type));
+          const completedTopics = Object.values(topicProgress || {}).filter((item) => isCompletedStatus(item.status));
+          const revisedTopics = Object.values(revisionProgress || {}).filter((item) => item?.revised);
+          const resolvedDoubts = doubts.filter((doubt) => doubt.resolved);
+          const bestScore = tests.length ? Math.max(...tests.map((test) => Number(test.percentage || 0))) : 0;
+          const earnedCount = [
+            questions.length >= 1,
+            questions.length >= 10,
+            completedTopics.length >= 1,
+            completedTopics.length >= 10,
+            revisedTopics.length >= 5,
+            tests.length >= 1,
+            bestScore >= 80,
+            notes.length >= 3,
+            resolvedDoubts.length >= 1,
+            reports.length >= 1,
+          ].filter(Boolean).length;
+          const badges = [
+            { title: "First Question", earned: questions.length >= 1, progress: `${Math.min(questions.length, 1)}/1`, hint: "Ask your first question in the chatbot.", color: B.navy },
+            { title: "Curious Learner", earned: questions.length >= 10, progress: `${Math.min(questions.length, 10)}/10`, hint: "Ask 10 questions using text, voice, or diagrams.", color: B.orange },
+            { title: "Topic Starter", earned: completedTopics.length >= 1, progress: `${Math.min(completedTopics.length, 1)}/1`, hint: "Complete your first syllabus topic.", color: B.green },
+            { title: "Progress Builder", earned: completedTopics.length >= 10, progress: `${Math.min(completedTopics.length, 10)}/10`, hint: "Complete 10 syllabus topics.", color: B.navy },
+            { title: "Revision Ready", earned: revisedTopics.length >= 5, progress: `${Math.min(revisedTopics.length, 5)}/5`, hint: "Revise 5 topics.", color: B.green },
+            { title: "Test Starter", earned: tests.length >= 1, progress: `${Math.min(tests.length, 1)}/1`, hint: "Attempt your first test.", color: B.red },
+            { title: "High Scorer", earned: bestScore >= 80, progress: `${bestScore}%`, hint: "Score 80% or more in any test.", color: B.orange },
+            { title: "Note Keeper", earned: notes.length >= 3, progress: `${Math.min(notes.length, 3)}/3`, hint: "Create 3 personal notes.", color: B.navy },
+            { title: "Doubt Solver", earned: resolvedDoubts.length >= 1, progress: `${Math.min(resolvedDoubts.length, 1)}/1`, hint: "Mark one doubt as resolved.", color: B.green },
+            { title: "Report Ready", earned: reports.length >= 1, progress: `${Math.min(reports.length, 1)}/1`, hint: "Save one weekly or monthly report.", color: B.red },
+          ];
+
+          return (
+            <div style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "18px", overflow: "hidden", boxShadow: "0 4px 20px rgba(43,88,136,0.06)" }}>
+              <div style={{ padding: "18px 20px", borderBottom: `1px solid ${B.gray200}`, display: "flex", justifyContent: "space-between", alignItems: "center", gap: "12px", flexWrap: "wrap" }}>
+                <div>
+                  <h2 style={{ fontSize: "18px", fontWeight: 900, color: B.navy, margin: 0 }}>Badges</h2>
+                  <p style={{ fontSize: "12px", color: B.gray500, margin: "4px 0 0" }}>Earn badges by studying, revising, asking doubts, and taking tests.</p>
+                </div>
+                <div style={{ padding: "10px 14px", borderRadius: "12px", background: B.navyLight, color: B.navy, fontSize: "13px", fontWeight: 900 }}>
+                  {earnedCount}/{badges.length} earned
+                </div>
+              </div>
+
+              <div style={{ padding: "18px" }}>
+                <div style={{ height: "10px", borderRadius: "999px", background: B.gray200, overflow: "hidden", marginBottom: "18px" }}>
+                  <div style={{ width: `${Math.round((earnedCount / badges.length) * 100)}%`, height: "100%", background: `linear-gradient(90deg, ${B.navy}, ${B.green})`, borderRadius: "999px" }} />
+                </div>
+
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "12px" }}>
+                  {badges.map((badge) => (
+                    <div key={badge.title} style={{ padding: "16px", borderRadius: "14px", background: badge.earned ? B.white : B.gray50, border: `1px solid ${badge.earned ? badge.color : B.gray200}`, boxShadow: badge.earned ? "0 4px 16px rgba(43,88,136,0.08)" : "none", opacity: badge.earned ? 1 : 0.72 }}>
+                      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "10px", marginBottom: "10px" }}>
+                        <div style={{ width: "36px", height: "36px", borderRadius: "12px", background: badge.earned ? badge.color : B.gray200, color: badge.earned ? B.white : B.gray500, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "17px", fontWeight: 900 }}>
+                          {badge.earned ? "✓" : "•"}
+                        </div>
+                        <div style={{ fontSize: "11px", color: badge.earned ? badge.color : B.gray500, fontWeight: 900 }}>{badge.earned ? "EARNED" : badge.progress}</div>
+                      </div>
+                      <h3 style={{ fontSize: "15px", color: B.navy, fontWeight: 900, margin: "0 0 6px" }}>{badge.title}</h3>
+                      <p style={{ fontSize: "12px", color: B.gray600, margin: 0, lineHeight: 1.55 }}>{badge.earned ? `Completed: ${badge.progress}` : badge.hint}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          );
+        })()}
 
         {/* ── SYLLABUS TAB ── */}
         {activeTab === "syllabus" && (
