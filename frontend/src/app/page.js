@@ -62,6 +62,20 @@ function TeachifyyLogo({ size = 32, showText = true, light = false }) {
   );
 }
 
+function SidebarIcon({ type }) {
+  const paths = {
+    home: <><rect x="3" y="3" width="7" height="9" rx="1" /><rect x="14" y="3" width="7" height="5" rx="1" /><rect x="14" y="12" width="7" height="9" rx="1" /><rect x="3" y="16" width="7" height="5" rx="1" /></>,
+    chat: <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />,
+    syllabus: <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 19.5A2.5 2.5 0 0 0 6.5 22H20M4 19.5V3a1 1 0 0 1 1-1h15v20H5a2 2 0 0 1-1-1z" />,
+    test: <><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /></>,
+    doubts: <><circle cx="12" cy="12" r="10" /><path d="M9.1 9a3 3 0 1 1 5.8 1c0 2-3 3-3 3" /><line x1="12" y1="17" x2="12.01" y2="17" /></>,
+    history: <><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></>,
+    more: <><circle cx="5" cy="12" r="1" /><circle cx="12" cy="12" r="1" /><circle cx="19" cy="12" r="1" /></>,
+    logout: <><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" /><polyline points="16 17 21 12 16 7" /><line x1="21" y1="12" x2="9" y2="12" /></>,
+  };
+  return <svg className="student-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{paths[type]}</svg>;
+}
+
 const STATUS_OPTIONS = ["Not Started", "In Progress", "Completed", "Revision Done", "Test Done"];
 const COMPLETED_STATUSES = ["Completed", "Test Done"];
 const ANSWER_LANGUAGES = [
@@ -80,6 +94,35 @@ function getOrderedSubjects(syllabus = {}) {
     const br = bi === -1 ? SUBJECT_DISPLAY_ORDER.length : bi;
     return ar - br || a.localeCompare(b);
   });
+}
+
+async function readApiJson(response, fallbackMessage = "The AI service is unavailable. Please try again.") {
+  const rawBody = await response.text();
+  let payload = null;
+
+  if (rawBody) {
+    try {
+      payload = JSON.parse(rawBody);
+    } catch {
+      payload = null;
+    }
+  }
+
+  if (!response.ok) {
+    const backendUnavailable = response.status >= 500 && (!payload || rawBody.startsWith("Internal Server Error"));
+    throw new Error(
+      payload?.detail ||
+      (backendUnavailable
+        ? "The AI backend is not running or is temporarily unavailable. Start the local backend and try again."
+        : rawBody || fallbackMessage)
+    );
+  }
+
+  if (!payload) {
+    throw new Error("The AI backend returned an invalid response. Please try again.");
+  }
+
+  return payload;
 }
 
 // ── Typewriter hook ────────────────────────────────────────
@@ -851,8 +894,7 @@ export default function Home() {
     fd.append("answer_language", answerLanguage);
     if (selectedSubject) fd.append("subject", selectedSubject);
     const res = await fetch("/api/ask-text", { method: "POST", body: fd });
-    if (!res.ok) { const err = await res.json(); throw new Error(err.detail || "Could not convert stored content language."); }
-    const data = await res.json();
+    const data = await readApiJson(res, "Could not convert stored content language.");
     return data.answer || sourceText;
   };
 
@@ -1113,11 +1155,7 @@ ${latestAnswer}`;
 
     try {
       const res = await fetch("/api/ask-text", { method: "POST", body: fd });
-      if (!res.ok) {
-        const err = await res.json();
-        throw new Error(err.detail || "Could not prepare the follow-up answer.");
-      }
-      const data = await res.json();
+      const data = await readApiJson(res, "Could not prepare the follow-up answer.");
       setMessages((prev) => [
         ...prev.map((msg) => msg.role === "assistant" ? { ...msg, typing: false } : msg),
         {
@@ -1695,8 +1733,7 @@ ${latestAnswer}`;
 
     try {
       const res = await fetch("/api/ask-text", { method: "POST", body: fd });
-      if (!res.ok) { const err = await res.json(); throw new Error(err.detail || "Server error"); }
-      const data = await res.json();
+      const data = await readApiJson(res, "Could not get an answer from the AI tutor.");
 
       setMessages((prev) => [
         ...prev.map((msg) => msg.role === "assistant" ? { ...msg, typing: false } : msg),
@@ -1953,24 +1990,59 @@ ${latestAnswer}`;
       ].filter((item) => `${item.title} ${item.meta}`.toLowerCase().includes(searchTerm)).slice(0, 6)
     : [];
 
+  const primaryNavigation = [
+    { key: "home", label: "Home", icon: "home" },
+    { key: "chat", label: "AI Tutor", icon: "chat" },
+    { key: "syllabus", label: "Syllabus Tracker", icon: "syllabus" },
+    { key: "test", label: "Tests", icon: "test" },
+    { key: "doubts", label: "Doubt", icon: "doubts", badge: activeDoubts.length },
+    { key: "history", label: "History", icon: "history" },
+  ];
+  const secondaryNavigation = ["notes", "activity", "reports", "parent", "badges"];
+  const secondaryLabels = { notes: "Notes", activity: "Activity", reports: "Reports", parent: "Parent View", badges: "Badges" };
+  const studentInitials = (userProfile?.name || user?.email || "Student")
+    .split(/\s+/).filter(Boolean).slice(0, 2)
+    .map((part) => part[0]?.toUpperCase()).join("");
+
   return (
-    <div style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", background: B.bg, minHeight: "100vh" }}>
-      <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <div className="student-app-layout">
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600&display=swap" rel="stylesheet" />
+
+      <aside className="student-app-sidebar" aria-label="Student portal navigation">
+        <div className="student-sidebar-brand"><img src="/teachifyy-logo-designer.png" alt="Teachifyy" /></div>
+        <nav className="student-sidebar-dock">
+          {primaryNavigation.map((item) => (
+            <button key={item.key} className={`student-nav-tab ${activeTab === item.key ? "active" : ""}`} onClick={() => setActiveTab(item.key)} aria-label={item.label}>
+              <SidebarIcon type={item.icon} />
+              {!!item.badge && <span className="student-nav-badge">{item.badge}</span>}
+              <span className="student-dock-tooltip">{item.label}</span>
+            </button>
+          ))}
+          <div className="student-dock-divider" />
+          <div className="student-more-wrap">
+            <button className={`student-nav-tab ${secondaryNavigation.includes(activeTab) ? "active" : ""}`} aria-label="More sections"><SidebarIcon type="more" /><span className="student-dock-tooltip">More</span></button>
+            <div className="student-more-menu">{secondaryNavigation.map((key) => <button key={key} onClick={() => setActiveTab(key)}>{secondaryLabels[key]}</button>)}</div>
+          </div>
+          <button className="student-nav-tab student-logout" onClick={handleLogout} aria-label="Logout"><SidebarIcon type="logout" /><span className="student-dock-tooltip">Logout</span></button>
+        </nav>
+      </aside>
+
+      <main className="student-app-main">
 
       {/* Navbar */}
-      <nav style={{ background: B.navy, padding: "12px 28px", display: "flex", alignItems: "center", justifyContent: "space-between", boxShadow: "0 2px 12px rgba(43,88,136,0.15)", position: "sticky", top: 0, zIndex: 100 }}>
-        <TeachifyyLogo size={28} light />
-        <div style={{ position: "relative", flex: "1 1 420px", maxWidth: "460px", margin: "0 18px" }}>
+      <header className="student-app-header">
+        <img src="/teachifyy-logo-designer.png" alt="Teachifyy" className="student-header-logo" />
+        <div className="student-search-wrap">
           <input
             value={globalSearch}
             onChange={(e) => setGlobalSearch(e.target.value)}
             placeholder="Search syllabus, doubts, notes, tests..."
-            style={{ width: "100%", padding: "10px 14px", borderRadius: "999px", border: "1px solid rgba(255,255,255,0.22)", background: "rgba(255,255,255,0.12)", color: B.white, outline: "none", fontSize: "13px", boxSizing: "border-box", fontFamily: "'Plus Jakarta Sans', sans-serif" }}
+            className="student-search-input"
           />
           {searchTerm && (
-            <div style={{ position: "absolute", top: "44px", left: 0, right: 0, background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "14px", boxShadow: "0 14px 35px rgba(15,23,42,0.18)", overflow: "hidden", zIndex: 200 }}>
+            <div className="student-search-results">
               {searchResults.length ? searchResults.map((item) => (
-                <button key={`${item.type}-${item.title}-${item.meta}`} onClick={() => { item.action(); setGlobalSearch(""); }} style={{ width: "100%", textAlign: "left", padding: "11px 13px", border: "none", borderBottom: `1px solid ${B.gray200}`, background: B.white, cursor: "pointer", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+                <button key={`${item.type}-${item.title}-${item.meta}`} onClick={() => { item.action(); setGlobalSearch(""); }}>
                   <div style={{ fontSize: "12px", fontWeight: 900, color: B.navy }}>{item.title}</div>
                   <div style={{ fontSize: "11px", color: B.gray500, marginTop: "2px" }}>{item.type} - {item.meta}</div>
                 </button>
@@ -1980,30 +2052,29 @@ ${latestAnswer}`;
             </div>
           )}
         </div>
-        <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-          <div title={notificationItems.join("\n")} style={{ position: "relative", width: "36px", height: "36px", borderRadius: "50%", background: "rgba(255,255,255,0.12)", border: "1px solid rgba(255,255,255,0.2)", display: "flex", alignItems: "center", justifyContent: "center", color: B.white, fontSize: "15px", fontWeight: 900 }}>
+        <div className="student-header-right">
+          <div title={notificationItems.join("\n")} className="student-notification">
             !
             {notificationItems.length > 0 && <span style={{ position: "absolute", top: "7px", right: "8px", width: "7px", height: "7px", borderRadius: "50%", background: B.red }} />}
           </div>
-          <div style={{ textAlign: "right" }}>
+          <div className="student-profile-copy">
             <div style={{ color: B.white, fontSize: "13px", fontWeight: 600 }}>{userProfile?.name || user?.email}</div>
             <div style={{ color: "rgba(255,255,255,0.6)", fontSize: "11px" }}>Class {classLevel} · {board}</div>
           </div>
-          <button onClick={handleLogout} style={{ padding: "7px 14px", borderRadius: "8px", border: "1px solid rgba(255,255,255,0.25)", background: "rgba(255,255,255,0.1)", color: B.white, cursor: "pointer", fontSize: "13px", fontWeight: 500 }}>Logout</button>
+          <div className="student-avatar">{studentInitials || "ST"}</div>
         </div>
-      </nav>
-      <div style={{ height: "3px", background: `linear-gradient(90deg, ${B.red}, ${B.orange}, ${B.warm})` }} />
+      </header>
 
-      <div style={{ maxWidth: "1040px", margin: "0 auto", padding: "28px 16px" }}>
+      <div className="student-view-container">
 
         {/* Hero */}
-        <div style={{ textAlign: "center", marginBottom: "20px" }}>
+        <div className="student-legacy-hero" style={{ textAlign: "center", marginBottom: "20px" }}>
           <h1 style={{ fontSize: "24px", fontWeight: 700, color: B.navy, marginBottom: "4px" }}>Welcome back, {userProfile?.name?.split(" ")[0] || "Student"} 👋</h1>
           <p style={{ fontSize: "13px", color: B.gray500 }}>Your AI tutor, syllabus, tests, doubts, and progress in one place</p>
         </div>
 
         {/* Tabs — now 4 tabs including History */}
-        <div style={{ display: "flex", gap: "6px", marginBottom: "18px", background: B.gray200, padding: "5px", borderRadius: "14px" }}>
+        <div className="student-legacy-tabs" style={{ display: "flex", gap: "6px", marginBottom: "18px", background: B.gray200, padding: "5px", borderRadius: "14px" }}>
           {[
             { key: "home",     label: "Home" },
             { key: "chat",     label: "AI Tutor" },
@@ -2136,9 +2207,9 @@ ${latestAnswer}`;
         )}
 
         {activeTab === "chat" && (
-          <div style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "18px", overflow: "hidden", boxShadow: "0 4px 20px rgba(43,88,136,0.06)" }}>
+          <div className="student-chat-workspace" style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "18px", overflow: "hidden", boxShadow: "0 4px 20px rgba(43,88,136,0.06)" }}>
             {/* Chat header */}
-            <div style={{ padding: "14px 18px", borderBottom: `1px solid ${B.gray200}`, display: "flex", alignItems: "center", justifyContent: "space-between", background: B.white }}>
+            <div className="student-chat-header" style={{ padding: "14px 18px", borderBottom: `1px solid ${B.gray200}`, display: "flex", alignItems: "center", justifyContent: "space-between", background: B.white }}>
               <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
                 <div style={{ width: "10px", height: "10px", borderRadius: "50%", background: "#22c55e", boxShadow: "0 0 6px rgba(34,197,94,0.5)" }} />
                 <span style={{ fontSize: "14px", fontWeight: 700, color: B.navy }}>AI Tutor</span>
@@ -2162,9 +2233,9 @@ ${latestAnswer}`;
             </div>
 
             {/* Messages */}
-            <div style={{ height: "400px", overflowY: "auto", padding: "18px", display: "flex", flexDirection: "column", gap: "14px", background: B.gray50 }}>
+            <div className="student-chat-body" style={{ height: "400px", overflowY: "auto", padding: "18px", display: "flex", flexDirection: "column", gap: "14px", background: B.gray50 }}>
               {messages.length === 0 ? (
-                <div style={{ margin: "auto", textAlign: "center", color: B.gray500 }}>
+                <div className="student-chat-empty" style={{ margin: "auto", textAlign: "center", color: B.gray500 }}>
                   <div style={{ fontSize: "42px", marginBottom: "10px" }}>💬</div>
                   <p style={{ fontSize: "13px", fontWeight: 500 }}>Press the mic or type to start asking</p>
                   <p style={{ fontSize: "12px", color: B.gray500, marginTop: "4px" }}>Supports Hindi · English · Hinglish</p>
@@ -2211,7 +2282,7 @@ ${latestAnswer}`;
             )}
 
             {messages[messages.length - 1]?.role === "assistant" && !isRecording && !isTranscribing && (
-              <div style={{ padding: "10px 16px", borderTop: `1px solid ${B.gray100}`, background: B.white, display: "flex", gap: "8px", flexWrap: "wrap" }}>
+              <div className="student-chat-followups" style={{ padding: "10px 16px", borderTop: `1px solid ${B.gray100}`, background: B.white, display: "flex", gap: "8px", flexWrap: "wrap" }}>
                 {[
                   { key: "simplify", icon: "💡" },
                   { key: "example", icon: "🌍" },
@@ -2252,7 +2323,7 @@ ${latestAnswer}`;
             )}
 
             {/* Input area */}
-            <div style={{ padding: "14px 16px", borderTop: `1px solid ${B.gray200}`, display: "flex", gap: "8px", alignItems: "flex-end", background: B.white }}>
+            <div className="student-chat-composer" style={{ padding: "14px 16px", borderTop: `1px solid ${B.gray200}`, display: "flex", gap: "8px", alignItems: "flex-end", background: B.white }}>
               <textarea
                 placeholder={isTranscribing ? "Transcribing your voice..." : "Type your question here..."}
                 value={textInput}
@@ -2275,7 +2346,7 @@ ${latestAnswer}`;
               <button onClick={handleSend} disabled={isLoading || isRecording || isTranscribing || !textInput.trim()} style={{ width: "42px", height: "42px", borderRadius: "50%", flexShrink: 0, background: textInput.trim() ? `linear-gradient(135deg, ${B.navy}, ${B.navyDark})` : B.gray200, color: B.white, border: "none", cursor: "pointer", fontSize: "16px", display: "flex", alignItems: "center", justifyContent: "center", opacity: (isLoading || isRecording || isTranscribing || !textInput.trim()) ? 0.5 : 1, transition: "all 0.2s" }} title="Send (Enter)">➤</button>
               <button onClick={isRecording ? stopRecordingAndTranscribe : startRecording} disabled={isLoading || isTranscribing} style={{ width: "42px", height: "42px", borderRadius: "50%", flexShrink: 0, border: "none", cursor: "pointer", fontSize: "18px", display: "flex", alignItems: "center", justifyContent: "center", background: isRecording ? B.red : B.greenLight, color: isRecording ? B.white : B.green, opacity: (isLoading || isTranscribing) ? 0.4 : 1, animation: isRecording ? "pulse 1s infinite" : "none", transition: "all 0.2s" }} title={isRecording ? "Stop recording" : "Start recording"}>🎤</button>
             </div>
-            <div style={{ textAlign: "center", fontSize: "11px", color: B.gray500, padding: "8px 16px", borderTop: `1px solid ${B.gray100}`, background: B.white }}>
+            <div className="student-chat-shortcut" style={{ textAlign: "center", fontSize: "11px", color: B.gray500, padding: "8px 16px", borderTop: `1px solid ${B.gray100}`, background: B.white }}>
               Press <kbd style={{ background: B.gray100, padding: "1px 5px", borderRadius: "4px", fontSize: "10px" }}>Enter</kbd> to send · <kbd style={{ background: B.gray100, padding: "1px 5px", borderRadius: "4px", fontSize: "10px" }}>Shift+Enter</kbd> for new line
             </div>
           </div>
@@ -3273,6 +3344,7 @@ ${latestAnswer}`;
           </div>
         )}
       </div>
+      </main>
 
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
@@ -3286,6 +3358,116 @@ ${latestAnswer}`;
         @keyframes bounce { 0%,80%,100%{transform:scale(0.7);opacity:0.5} 40%{transform:scale(1);opacity:1} }
         @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
         @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+        .student-app-layout { --designer-blue:#2c5688; --designer-pink:#fd4463; --designer-fog:#faf8f5; --designer-dove:#e2dcd5; --designer-ink:#1c1c1c; display:flex; width:100vw; height:100vh; overflow:hidden; background:#fff; color:var(--designer-ink); font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; }
+        .student-app-sidebar { width:112px; flex:0 0 112px; padding:22px 14px; background:var(--designer-fog); border-right:1px solid var(--designer-dove); display:flex; flex-direction:column; align-items:center; z-index:30; }
+        .student-sidebar-brand { height:38px; width:82px; display:flex; align-items:center; justify-content:center; overflow:hidden; margin-bottom:16px; }
+        .student-sidebar-brand img { width:80px; height:auto; display:block; }
+        .student-sidebar-dock { display:flex; flex-direction:column; align-items:center; gap:8px; padding:10px; margin-top:8px; background:rgba(255,255,255,.92); border:1px solid var(--designer-dove); border-radius:24px; box-shadow:0 10px 30px rgba(0,0,0,.06),0 1px 3px rgba(0,0,0,.04); }
+        .student-nav-tab { width:46px; height:46px; padding:0; border:0; background:transparent; color:#4c4c4c; border-radius:12px; cursor:pointer; position:relative; display:flex; align-items:center; justify-content:center; transition:transform .25s ease,background-color .2s,color .2s; }
+        .student-nav-tab:hover { background:var(--designer-fog); color:var(--designer-blue); transform:scale(1.08); }
+        .student-nav-tab.active { background:var(--designer-blue); color:#fff; }
+        .student-nav-icon { width:20px; height:20px; }
+        .student-nav-badge { position:absolute; top:1px; right:1px; min-width:17px; padding:1px 4px; border-radius:999px; background:var(--designer-pink); color:#fff; font-size:9px; font-weight:700; line-height:15px; }
+        .student-dock-tooltip { position:absolute; left:calc(100% + 12px); top:50%; transform:translateY(-50%) scale(.94); padding:6px 10px; border-radius:6px; background:var(--designer-ink); color:#fff; font-size:12px; font-weight:500; white-space:nowrap; opacity:0; pointer-events:none; transition:.18s ease; z-index:100; }
+        .student-nav-tab:hover .student-dock-tooltip { opacity:1; transform:translateY(-50%) scale(1); }
+        .student-dock-divider { width:24px; height:1px; margin:4px 0; background:var(--designer-dove); }
+        .student-logout:hover { color:var(--designer-pink); background:#ffe6e9; }
+        .student-more-wrap { position:relative; }
+        .student-more-menu { position:absolute; left:58px; bottom:0; width:150px; padding:7px; border:1px solid var(--designer-dove); border-radius:14px; background:#fff; box-shadow:0 16px 35px rgba(0,0,0,.12); display:none; z-index:90; }
+        .student-more-wrap:hover .student-more-menu,.student-more-wrap:focus-within .student-more-menu { display:grid; }
+        .student-more-menu button { border:0; background:transparent; border-radius:9px; padding:9px 10px; color:#4c4c4c; text-align:left; cursor:pointer; font:500 12px 'Inter',sans-serif; }
+        .student-more-menu button:hover { color:var(--designer-blue); background:var(--designer-fog); }
+        .student-app-main { min-width:0; flex:1; height:100%; overflow:hidden; display:flex; flex-direction:column; background:#fff; }
+        .student-app-header { height:72px; flex:0 0 72px; padding:0 32px; border-bottom:1px solid var(--designer-dove); display:flex; align-items:center; justify-content:space-between; background:#fff; z-index:20; }
+        .student-header-logo { display:none; width:auto; height:38px; object-fit:contain; }
+        .student-search-wrap { position:relative; width:320px; display:flex; align-items:center; }
+        .student-search-input { width:100%; height:40px; padding:10px 14px; border:1px solid var(--designer-dove); border-radius:16px; background:#fff; color:var(--designer-ink); outline:0; font:400 14px 'Inter',sans-serif; }
+        .student-search-input:focus { border-color:var(--designer-blue); box-shadow:0 0 0 3px rgba(44,86,136,.08); }
+        .student-search-results { position:absolute; top:48px; left:0; right:0; overflow:hidden; border:1px solid var(--designer-dove); border-radius:16px; background:#fff; box-shadow:0 16px 35px rgba(0,0,0,.14); z-index:100; }
+        .student-search-results>button { width:100%; padding:11px 13px; border:0; border-bottom:1px solid #eee; background:#fff; text-align:left; cursor:pointer; }
+        .student-search-results>button:hover { background:var(--designer-fog); }
+        .student-header-right { display:flex; align-items:center; gap:14px; }
+        .student-profile-copy { order:1; display:flex; flex-direction:column; padding:3px 0; text-align:left !important; }
+        .student-profile-copy>div:first-child { max-width:180px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; color:var(--designer-ink) !important; font:500 14px 'Inter',sans-serif !important; }
+        .student-profile-copy>div:last-child { color:#777b86 !important; font:400 12px 'Inter',sans-serif !important; }
+        .student-avatar { order:0; width:38px; height:38px; border-radius:50%; background:#ffe6e9; color:var(--designer-ink); display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:600; }
+        .student-notification { order:2; width:40px !important; height:40px !important; border:1px solid var(--designer-dove) !important; border-radius:50% !important; background:#fff !important; color:var(--designer-ink) !important; position:relative; display:flex; align-items:center; justify-content:center; font-size:0 !important; }
+        .student-notification:before { content:' '; width:18px; height:18px; background:no-repeat center/18px 18px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%231c1c1c' stroke-width='2'%3E%3Cpath d='M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9'/%3E%3Cpath d='M13.73 21a2 2 0 0 1-3.46 0'/%3E%3C/svg%3E"); }
+        .student-notification span { top:8px !important; right:9px !important; width:8px !important; height:8px !important; background:var(--designer-pink) !important; }
+        .student-view-container { flex:1; min-height:0; overflow-y:auto; padding:32px; background:#fff; }
+        .student-view-container>div:not(.student-legacy-hero):not(.student-legacy-tabs) { max-width:1200px; margin-left:auto; margin-right:auto; }
+        .student-legacy-hero,.student-legacy-tabs { display:none !important; }
+        .student-chat-workspace { max-width:1080px !important; min-height:calc(100vh - 136px); border:1px solid var(--designer-dove) !important; border-radius:24px !important; box-shadow:0 20px 25px -5px rgba(0,0,0,.08),0 8px 10px -6px rgba(0,0,0,.04) !important; display:flex; flex-direction:column; }
+        .student-chat-header { min-height:76px; padding:16px 22px !important; border-bottom:1px solid var(--designer-dove) !important; }
+        .student-chat-header>div:first-child>span:nth-of-type(1) { color:var(--designer-blue) !important; font-family:'Poppins',sans-serif; font-size:20px !important; }
+        .student-chat-header button { border:1px solid var(--designer-dove) !important; border-radius:10px !important; background:#fff !important; color:var(--designer-blue) !important; min-height:34px; padding:6px 11px !important; font-family:'Inter',sans-serif !important; }
+        .student-chat-body { flex:1; min-height:420px; height:auto !important; padding:24px !important; background:#fff !important; }
+        .student-chat-empty { width:min(680px,90%); padding:34px; border:1px solid #ffd7dc; border-radius:20px; background:#ffe6e9; }
+        .student-chat-empty>div { filter:saturate(.75); }
+        .student-chat-empty p:first-of-type { color:var(--designer-blue) !important; font:600 18px 'Poppins',sans-serif !important; }
+        .student-chat-empty p:last-of-type { color:#4c4c4c !important; font:400 13px 'Inter',sans-serif !important; }
+        .student-chat-followups { padding:12px 18px !important; gap:10px !important; border-top:1px solid var(--designer-dove) !important; background:#fff !important; }
+        .student-chat-followups>button { min-height:42px !important; padding:9px 13px !important; border-color:var(--designer-dove) !important; border-radius:999px !important; background:var(--designer-fog) !important; color:var(--designer-blue) !important; font-family:'Inter',sans-serif !important; justify-content:center !important; text-align:center !important; }
+        .student-chat-composer { padding:14px 18px !important; gap:10px !important; border-top:1px solid var(--designer-dove) !important; background:#fff !important; }
+        .student-chat-composer textarea { min-height:46px; padding:12px 16px !important; border:1px solid var(--designer-dove) !important; border-radius:16px !important; background:#fff !important; font-family:'Inter',sans-serif !important; }
+        .student-chat-composer textarea:focus { border-color:var(--designer-blue) !important; box-shadow:0 0 0 3px rgba(44,86,136,.08); }
+        .student-chat-composer select { height:46px !important; border:1px solid var(--designer-dove) !important; border-radius:14px !important; background:#fff !important; color:var(--designer-blue) !important; font-family:'Inter',sans-serif !important; }
+        .student-chat-composer button { width:46px !important; height:46px !important; }
+        .student-chat-composer button:nth-last-of-type(2) { background:var(--designer-pink) !important; box-shadow:0 4px 12px rgba(253,68,99,.24); }
+        .student-chat-composer button:last-of-type { background:linear-gradient(135deg,var(--designer-pink),#a855f7) !important; color:#fff !important; box-shadow:0 4px 12px rgba(253,68,99,.24); }
+        .student-chat-shortcut { padding:9px 16px !important; border-top:1px solid #f1eeea !important; color:#777b86 !important; background:#fff !important; }
+        @media (max-width:767px) {
+          .student-app-layout { flex-direction:column-reverse; }
+          .student-app-main { width:100%; min-width:0; }
+          .student-app-sidebar { width:100%; height:68px; flex:0 0 68px; padding:7px 10px; border-right:0; border-top:1px solid var(--designer-dove); }
+          .student-sidebar-brand { display:none; }
+          .student-sidebar-dock { width:100%; height:54px; margin:0; padding:4px 8px; flex-direction:row; justify-content:space-around; gap:2px; border:0; border-radius:0; box-shadow:none; background:transparent; }
+          .student-nav-tab { width:40px; height:40px; }
+          .student-dock-tooltip,.student-dock-divider,.student-more-wrap,.student-logout { display:none; }
+          .student-app-header { width:100%; height:64px; flex-basis:64px; padding:0 14px; gap:10px; overflow:hidden; }
+          .student-header-logo { display:block; height:27px; max-width:94px; }
+          .student-search-wrap { width:min(38vw,180px); min-width:0; }
+          .student-search-input { min-width:0; padding:9px 11px; text-overflow:ellipsis; }
+          .student-header-right { gap:6px; }
+          .student-profile-copy { display:none; }
+          .student-avatar { width:34px; height:34px; }
+          .student-notification { width:36px !important; height:36px !important; }
+          .student-view-container { width:100%; min-width:0; padding:14px; overflow-x:hidden; }
+          .student-view-container>div { width:100%; min-width:0; }
+          .student-view-container [style*="grid-template-columns"] { grid-template-columns:minmax(0,1fr) !important; }
+          .student-view-container [style*="minmax(280px"] { grid-template-columns:minmax(0,1fr) !important; }
+          .student-view-container img,.student-view-container video,.student-view-container canvas,.student-view-container svg { max-width:100%; }
+          .student-view-container img { height:auto; object-fit:contain; }
+          .student-view-container table { display:block; width:100%; overflow-x:auto; }
+          .student-view-container pre,.student-view-container code { max-width:100%; white-space:pre-wrap; overflow-wrap:anywhere; }
+          .student-view-container p,.student-view-container h1,.student-view-container h2,.student-view-container h3,.student-view-container h4,.student-view-container span,.student-view-container button { overflow-wrap:anywhere; }
+          .student-view-container button { max-width:100%; white-space:normal; }
+          .student-view-container input,.student-view-container textarea,.student-view-container select { max-width:100%; min-width:0; }
+          .student-chat-workspace { min-height:calc(100vh - 180px); border-radius:18px !important; }
+          .student-chat-header { padding:12px !important; align-items:flex-start !important; gap:10px; }
+          .student-chat-header>div:first-child { flex-wrap:wrap; }
+          .student-chat-body { min-height:340px; padding:14px !important; }
+          .student-chat-empty { width:100%; padding:22px 14px; }
+          .student-chat-followups { width:100%; overflow-x:auto; overscroll-behavior-x:contain; scroll-snap-type:x proximity; flex-wrap:nowrap !important; scrollbar-width:thin; }
+          .student-chat-followups>button { flex:0 0 min(210px,78vw) !important; scroll-snap-align:start; }
+          .student-chat-composer { flex-wrap:wrap; padding:10px !important; }
+          .student-chat-composer textarea { flex:1 1 calc(100% - 112px) !important; }
+          .student-chat-composer select { order:4; width:100%; }
+        }
+        @media (max-width:520px) {
+          .student-search-wrap { display:none; }
+          .student-app-header { justify-content:space-between; }
+          .student-header-right { margin-left:auto; }
+          .student-sidebar-dock { overflow:visible; }
+        }
+        @media (max-width:360px) {
+          .student-app-sidebar { padding-left:4px; padding-right:4px; }
+          .student-sidebar-dock { padding-left:2px; padding-right:2px; }
+          .student-nav-tab { width:36px; height:40px; }
+          .student-view-container { padding:10px; }
+          .student-chat-header { flex-direction:column; }
+          .student-chat-composer textarea { flex-basis:calc(100% - 104px) !important; }
+        }
       `}</style>
     </div>
   );

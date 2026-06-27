@@ -30,8 +30,11 @@ MAX_RETRIES   = 3
 
 def clean_text_for_tts(text: str) -> str:
     """
-    Remove or replace symbols that TTS reads out loud incorrectly.
+    Remove symbols that TTS reads incorrectly and preserve formatted line
+    boundaries as natural spoken pauses.
     """
+    text = text.replace('\r\n', '\n').replace('\r', '\n')
+
     # Remove markdown formatting
     text = re.sub(r'\*\*?(.*?)\*\*?', r'\1', text)   # bold/italic **text** or *text*
     text = re.sub(r'__(.*?)__', r'\1', text)           # __text__
@@ -66,9 +69,20 @@ def clean_text_for_tts(text: str) -> str:
     # Remove URLs
     text = re.sub(r'http\S+', '', text)
 
-    # Remove extra whitespace and blank lines
-    text = re.sub(r'\n{2,}', ' ', text)
-    text = re.sub(r'\s{2,}', ' ', text)
+    # Treat every meaningful formatted line as a spoken phrase. A sentence-ending
+    # mark makes Edge TTS pause briefly before it starts the next heading, bullet,
+    # or paragraph. Do this before collapsing whitespace so newlines are not lost.
+    spoken_lines = []
+    for raw_line in text.split('\n'):
+        line = re.sub(r'[ \t]+', ' ', raw_line).strip()
+        if not line:
+            continue
+        if not re.search(r'[.!?;:,।]$', line):
+            line += '.'
+        spoken_lines.append(line)
+
+    text = ' '.join(spoken_lines)
+    text = re.sub(r' {2,}', ' ', text)
 
     return text.strip()
 

@@ -2,6 +2,7 @@ from dotenv import load_dotenv
 load_dotenv()
  
 import os
+import sys
 import json
 import uuid
 import asyncio
@@ -12,6 +13,11 @@ import traceback
 import urllib.parse
 import urllib.request
 from typing import Optional
+
+for stream in (sys.stdout, sys.stderr):
+    if hasattr(stream, "reconfigure"):
+        stream.reconfigure(encoding="utf-8", errors="replace")
+
 from fastapi import FastAPI, UploadFile, File, Form, HTTPException
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
@@ -252,7 +258,7 @@ async def ask_question(
             f.write(content)
  
         save_time = time.perf_counter() - save_start
-        print(f"[STEP 1] ✅ Saved to {audio_path} ({len(content)} bytes) | Time: {save_time:.2f}s")
+        print(f"[STEP 1] Saved to {audio_path} ({len(content)} bytes) | Time: {save_time:.2f}s")
  
         # ── Speech to Text ───────────────────────────────
         stt_start = time.perf_counter()
@@ -262,7 +268,7 @@ async def ask_question(
  
         stt_time = time.perf_counter() - stt_start
         print(
-            f"[STEP 2] ✅ question='{question}' "
+            f"[STEP 2] question='{question}' "
             f"whisper_language='{whisper_language}' | Time: {stt_time:.2f}s"
         )
  
@@ -315,24 +321,24 @@ async def ask_question(
         answer = clean_text_for_tts(answer)
  
         llm_time = time.perf_counter() - llm_start
-        print(f"[STEP 3] ✅ answer='{answer[:80]}...' | Time: {llm_time:.2f}s")
+        print(f"[STEP 3] Answer generated ({len(answer)} characters) | Time: {llm_time:.2f}s")
  
         # ── Text to Speech ───────────────────────────────
         tts_start = time.perf_counter()
  
         audio_out_path = os.path.join(AUDIO_DIR, f"{unique_id}.mp3")
-        print(f"[STEP 4] Running TTS → {audio_out_path}")
+        print(f"[STEP 4] Running TTS -> {audio_out_path}")
  
         await text_to_speech(answer, tts_language, audio_out_path)
  
         tts_time = time.perf_counter() - tts_start
-        print(f"[STEP 4] ✅ Audio saved | Time: {tts_time:.2f}s")
+        print(f"[STEP 4] Audio saved | Time: {tts_time:.2f}s")
  
         mtime     = os.path.getmtime(audio_out_path)
         audio_url = f"audio/{unique_id}.mp3?t={mtime:.0f}"
  
         total_time = time.perf_counter() - total_start
-        print(f"[STEP 5] ✅ Returning response | TOTAL VOICE TIME: {total_time:.2f}s")
+        print(f"[STEP 5] Returning response | TOTAL VOICE TIME: {total_time:.2f}s")
  
         return {
             "question": question,
@@ -346,7 +352,7 @@ async def ask_question(
         raise
  
     except Exception as e:
-        print("\n[ERROR] ❌ Pipeline crashed:")
+        print("\n[ERROR] Pipeline crashed:")
         traceback.print_exc()
         raise HTTPException(status_code=500, detail=f"[{type(e).__name__}] {str(e)}")
  
@@ -411,10 +417,10 @@ async def ask_question_text(
         )
  
         llm_time = time.perf_counter() - llm_start
-        print(f"[TEXT] ✅ answer='{answer[:80]}...' | LLM Time: {llm_time:.2f}s")
+        print(f"[TEXT] Answer generated ({len(answer)} characters) | LLM Time: {llm_time:.2f}s")
  
         total_time = time.perf_counter() - total_start
-        print(f"[TEXT] ✅ Returning text response | TOTAL TEXT TIME: {total_time:.2f}s")
+        print(f"[TEXT] Returning text response | TOTAL TEXT TIME: {total_time:.2f}s")
  
         return {
             "question": question,
@@ -431,7 +437,7 @@ async def ask_question_text(
         raise
  
     except Exception as e:
-        print("\n[TEXT ERROR] ❌ Pipeline crashed:")
+        print("\n[TEXT ERROR] Pipeline crashed:")
         traceback.print_exc()
         raise HTTPException(
             status_code=500,
@@ -517,7 +523,7 @@ async def generate_test(
  
         total_time = time.perf_counter() - total_start
         print(
-            f"[TEST] ✅ Generated {len(questions)} MCQs "
+            f"[TEST] Generated {len(questions)} MCQs "
             f"| TOTAL TEST TIME: {total_time:.2f}s"
         )
  
@@ -534,7 +540,7 @@ async def generate_test(
         raise
  
     except Exception as e:
-        print("\n[TEST ERROR] ❌ Test generation crashed:")
+        print("\n[TEST ERROR] Test generation crashed:")
         traceback.print_exc()
         raise HTTPException(
             status_code=500,
@@ -623,7 +629,7 @@ async def generate_tts(
         audio_url = f"audio/{unique_id}.mp3?t={mtime:.0f}"
  
         total_time = time.perf_counter() - total_start
-        print(f"[TTS ROUTE] ✅ Returning audio URL | TOTAL TTS TIME: {total_time:.2f}s")
+        print(f"[TTS ROUTE] Returning audio URL | TOTAL TTS TIME: {total_time:.2f}s")
  
         return {
             "audio_url": audio_url,
@@ -633,7 +639,7 @@ async def generate_tts(
         raise
  
     except Exception as e:
-        print("\n[TTS ROUTE ERROR] ❌ TTS generation crashed:")
+        print("\n[TTS ROUTE ERROR] TTS generation crashed:")
         traceback.print_exc()
         raise HTTPException(
             status_code=500,
