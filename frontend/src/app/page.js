@@ -293,6 +293,7 @@ export default function Home() {
   const [activeTab,          setActiveTab]          = useState("home");
   const [selectedSubject,    setSelectedSubject]    = useState(null);
   const [selectedChapter,    setSelectedChapter]    = useState(null);
+  const [selectedTopic,      setSelectedTopic]      = useState(null);
   const [topicProgress,      setTopicProgress]      = useState({});
   const [revisionProgress,   setRevisionProgress]   = useState({});
   const [testResults,        setTestResults]        = useState({});
@@ -303,6 +304,7 @@ export default function Home() {
   const [selectedAnswers,    setSelectedAnswers]    = useState({});
   const [submittedTestResult,setSubmittedTestResult]= useState(null);
   const [selectedTestAttempt,setSelectedTestAttempt]= useState(null);
+  const [testSubjectFilter,   setTestSubjectFilter]   = useState("All");
   const [user,               setUser]               = useState(null);
   const [userProfile,        setUserProfile]        = useState(null);
   const [authMode,           setAuthMode]           = useState("login");
@@ -344,8 +346,19 @@ export default function Home() {
   const [globalSearch,       setGlobalSearch]       = useState("");
 
   const currentSyllabus = SYLLABUS_DATA[classLevel]?.[board] || SYLLABUS_DATA["5"]?.CBSE;
+  const syllabusSubjectOptions = getOrderedSubjects(currentSyllabus);
   const currentChapters = selectedSubject ? currentSyllabus?.[selectedSubject] || [] : [];
-  const currentChapter  = selectedChapter;
+  const currentChapter = typeof selectedChapter === "string"
+    ? currentChapters.find((chapter) => chapter.title === selectedChapter) || null
+    : selectedChapter;
+
+  useEffect(() => {
+    if (activeTab === "syllabus" && !selectedSubject && syllabusSubjectOptions.length) {
+      setSelectedSubject(syllabusSubjectOptions[0]);
+      setSelectedChapter(null);
+      setSelectedTopic(null);
+    }
+  }, [activeTab, selectedSubject, syllabusSubjectOptions]);
 
   const mediaRecorderRef   = useRef(null);
   const audioChunksRef     = useRef([]);
@@ -653,7 +666,7 @@ export default function Home() {
     setUser(null); setUserProfile(null); setMessages([]); setHistory([]); setTextInput("");
     setTopicProgress({}); setRevisionProgress({}); setTestResults({});
     setCurrentTest(null); setSelectedAnswers({}); setSubmittedTestResult(null); setSelectedTestAttempt(null);
-    setActiveTab("chat"); setSelectedSubject(null); setSelectedChapter(null);
+    setActiveTab("chat"); setSelectedSubject(null); setSelectedChapter(null); setSelectedTopic(null);
     setProfileCompleted(false); pendingVoiceDataRef.current = null;
     setChatSessions([]); setCurrentSessionId(null); setViewingSession(null);
     setDoubts([]); setSavingDoubtId(null);
@@ -964,6 +977,20 @@ export default function Home() {
     } catch (err) { console.error("Content library study load error:", err); }
     const prompt = `STUDY_TOPIC_MODE\n\nTopic: ${subtopic}\nChapter: ${currentChapter.title}\nSubject: ${selectedSubject}\nClass: ${classLevel}\nBoard: ${board}\n\nExplain this topic in detail for a school student.\n\nAnswer format:\n1. Meaning of the topic\n2. Why it is important\n3. Step-by-step explanation\n4. Important keywords with simple meanings\n5. One simple real-life example\n6. Quick revision summary\n\nRules:\n- Give a large answer, not 4-5 lines.\n- Use headings and bullet points.\n- Keep the language easy for Class ${classLevel}.\n- Follow the selected answer language.`;
     pendingVoiceDataRef.current = null; setTextInput(prompt); setActiveTab("chat");
+  };
+
+  const askAiAboutTopicDoubt = (subtopic) => {
+    if (!selectedSubject || !currentChapter || !subtopic) return;
+    activeTopicContextRef.current = {
+      classLevel,
+      board,
+      subject: selectedSubject,
+      chapter: currentChapter.title,
+      topic: subtopic,
+    };
+    pendingVoiceDataRef.current = null;
+    setTextInput(`I have a doubt about ${subtopic} from ${currentChapter.title}. Please explain the concept clearly and ask what part I did not understand.`);
+    setActiveTab("chat");
   };
 
   const FOLLOW_UP_ACTIONS = {
@@ -2003,6 +2030,86 @@ ${latestAnswer}`;
   const studentInitials = (userProfile?.name || user?.email || "Student")
     .split(/\s+/).filter(Boolean).slice(0, 2)
     .map((part) => part[0]?.toUpperCase()).join("");
+
+  const testAttemptsByTopic = testAttempts.reduce((groups, attempt) => {
+    const title = attempt.topicTitle || attempt.chapterTitle || "Test";
+    const key = `${attempt.subject || ""}|${title}`;
+    groups[key] = [...(groups[key] || []), attempt];
+    return groups;
+  }, {});
+  const mostImprovedTest = Object.values(testAttemptsByTopic).reduce((best, group) => {
+    if (group.length < 2) return best;
+    const ordered = [...group].sort((a, b) => {
+      const aDate = a.submittedAt?.toDate ? a.submittedAt.toDate() : new Date(a.submittedAt || a.updatedAt || 0);
+      const bDate = b.submittedAt?.toDate ? b.submittedAt.toDate() : new Date(b.submittedAt || b.updatedAt || 0);
+      return aDate - bDate;
+    });
+    const gain = Number(ordered.at(-1)?.percentage || 0) - Number(ordered[0]?.percentage || 0);
+    return gain > (best?.gain || 0)
+      ? { title: ordered.at(-1)?.topicTitle || ordered.at(-1)?.chapterTitle, gain }
+      : best;
+  }, null);
+  const availableTopicTests = syllabusSubjectOptions
+    .filter((subject) => testSubjectFilter === "All" || subject === testSubjectFilter)
+    .flatMap((subject) => (currentSyllabus?.[subject] || []).flatMap((chapter) =>
+      (chapter.subtopics || []).map((topic) => ({ subject, chapter, topic }))
+    ));
+
+  const renderTestCenterLanding = () => (
+    <div className="designer-test-center">
+      <div className="designer-test-heading">
+        <h1>Practice Test Center</h1>
+        <p>Take chapter-level or topic-level tests to check your understanding. Every result is saved in your study progress.</p>
+      </div>
+      <div className="designer-test-stats">
+        <div><span>Total Tests Taken</span><strong>{testAttempts.length}</strong></div>
+        <div><span>Average Score</span><strong>{averageTestScore}%</strong></div>
+        <div><span>Most Improved Topic</span><strong className="topic-stat">{mostImprovedTest ? `${mostImprovedTest.title} +${mostImprovedTest.gain}%` : "No retakes yet"}</strong></div>
+      </div>
+      <div className="designer-test-grid">
+        <section className="designer-test-panel">
+          <div className="designer-test-panel-head">
+            <div><h2>Topic Tests</h2><p>10 questions with MCQ, short, and detailed answers</p></div>
+          </div>
+          <div className="designer-test-filters" role="tablist" aria-label="Filter topic tests by subject">
+            {["All", ...syllabusSubjectOptions].map((subject) => (
+              <button key={subject} className={testSubjectFilter === subject ? "active" : ""} onClick={() => setTestSubjectFilter(subject)} role="tab" aria-selected={testSubjectFilter === subject}>{subject}</button>
+            ))}
+          </div>
+          <div className="designer-test-list">
+            {availableTopicTests.length ? availableTopicTests.map(({ subject, chapter, topic }) => {
+              const testId = getTestId("topic", subject, chapter.title, topic);
+              const lastAttempt = testAttempts.find((attempt) => attempt.testId === testId);
+              return (
+                <article className="designer-available-test" key={`${subject}-${chapter.title}-${topic}`}>
+                  <div className="designer-test-icon" aria-hidden="true">✓</div>
+                  <div className="designer-test-copy">
+                    <h3>{topic}</h3><p>{subject} · {chapter.title}</p>
+                    <span>{lastAttempt ? `Last score: ${formatMarks(lastAttempt.score)}/${formatMarks(lastAttempt.total)}` : "Not attempted"}</span>
+                  </div>
+                  <button disabled={testLoading || isLoading} onClick={() => startTest({ type: "topic", subject, chapterTitle: chapter.title, topicTitle: topic, topics: [topic], questionCount: 10 })} aria-label={`Start test for ${topic}`}>Start</button>
+                </article>
+              );
+            }) : <div className="designer-test-empty">No topic tests found for this subject.</div>}
+          </div>
+        </section>
+        <section className="designer-test-panel">
+          <div className="designer-test-panel-head"><div><h2>Test History</h2><p>{testAttempts.length} completed attempt{testAttempts.length !== 1 ? "s" : ""}</p></div></div>
+          <div className="designer-test-list history">
+            {testAttempts.length ? testAttempts.map((attempt) => {
+              const badge = getScoreCaption(attempt.percentage || 0);
+              return (
+                <button className="designer-test-history-row" key={attempt.attemptId || attempt.testId} onClick={() => setSelectedTestAttempt(attempt)}>
+                  <div><h3>{attempt.topicTitle || attempt.chapterTitle}</h3><p>{attempt.subject} · {attempt.type === "topic" ? "Topic Test" : "Chapter Test"}</p><span>{formatSessionDate(attempt.submittedAt || attempt.updatedAt)}</span></div>
+                  <div className="designer-test-score"><strong>{formatMarks(attempt.score)}/{formatMarks(attempt.total)}</strong><span style={{ color: badge.color, background: badge.bg }}>{badge.label}</span></div>
+                </button>
+              );
+            }) : <div className="designer-test-empty"><strong>No tests attempted yet</strong><span>Choose a topic test to create your first score record.</span></div>}
+          </div>
+        </section>
+      </div>
+    </div>
+  );
 
   return (
     <div className="student-app-layout">
@@ -3061,7 +3168,9 @@ ${latestAnswer}`;
                 })()}
               </div>
             ) : (
-              <div>
+              <>
+                {renderTestCenterLanding()}
+                {false && <div>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "12px", marginBottom: "16px", flexWrap: "wrap" }}>
                   <div>
                     <h2 style={{ fontSize: "19px", fontWeight: 800, color: B.navy, margin: 0 }}>Test History</h2>
@@ -3092,7 +3201,8 @@ ${latestAnswer}`;
                     })}
                   </div>
                 )}
-              </div>
+              </div>}
+              </>
             )}
           </div>
         )}
@@ -3237,8 +3347,161 @@ ${latestAnswer}`;
           );
         })()}
 
-        {/* ── SYLLABUS TAB ── */}
-        {activeTab === "syllabus" && (
+        {/* Designer syllabus tracker */}
+        {activeTab === "syllabus" && selectedSubject && (
+          <div className="designer-syllabus-shell">
+            <div className="designer-syllabus-header">
+              <div className="designer-syllabus-title-block">
+                <h1>Syllabus Tracker</h1>
+                <p>Track topics, log revisions, resolve doubts, and take tests to build concepts.</p>
+                <div className="designer-syllabus-progress-strip">
+                  <div>
+                    <strong>{selectedSubject}: {getSubjectProgress(selectedSubject).completed}/{getSubjectProgress(selectedSubject).total} mastered</strong>
+                    <span>{getSubjectProgress(selectedSubject).percent}%</span>
+                  </div>
+                  <ProgressBar percent={getSubjectProgress(selectedSubject).percent} color={B.red} />
+                </div>
+              </div>
+              <div className="designer-subject-pills" aria-label="Subjects">
+                {syllabusSubjectOptions.map((subject) => (
+                  <button
+                    key={subject}
+                    className={selectedSubject === subject ? "active" : ""}
+                    onClick={() => { setSelectedSubject(subject); setSelectedChapter(null); setSelectedTopic(null); }}
+                  >
+                    {subject}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="designer-syllabus-main">
+              <section className="designer-chapter-panel" aria-label={`${selectedSubject} chapters`}>
+                <div className="designer-panel-heading">
+                  <div>
+                    <span>CLASS {classLevel} · {board}</span>
+                    <h2>{selectedSubject} Chapters</h2>
+                  </div>
+                  <strong>{currentChapters.length}</strong>
+                </div>
+
+                <div className="designer-chapter-accordion">
+                  {currentChapters.map((chapter, chapterIndex) => {
+                    const chapterProgress = getChapterProgress(selectedSubject, chapter);
+                    const expanded = currentChapter?.title === chapter.title;
+                    return (
+                      <article key={chapter.title} className={`designer-chapter-card ${expanded ? "expanded" : ""}`}>
+                        <button
+                          className="designer-chapter-trigger"
+                          onClick={() => {
+                            setSelectedChapter(expanded ? null : chapter);
+                            setSelectedTopic(null);
+                          }}
+                          aria-expanded={expanded}
+                        >
+                          <span className="designer-chapter-number">{chapterIndex + 1}</span>
+                          <span className="designer-chapter-copy">
+                            <strong>{chapter.title}</strong>
+                            <small>{chapterProgress.completed}/{chapterProgress.total} topics · {chapterProgress.status}</small>
+                            <span className="designer-inline-progress"><i style={{ width: `${chapterProgress.percent}%` }} /></span>
+                          </span>
+                          <span className="designer-chevron">{expanded ? "−" : "+"}</span>
+                        </button>
+
+                        {expanded && (
+                          <div className="designer-topic-list">
+                            {(chapter.subtopics || []).map((topic, topicIndex) => {
+                              const status = getTopicStatus(selectedSubject, chapter.title, topic);
+                              const completed = isCompletedStatus(status);
+                              const revised = getRevisionStatus(selectedSubject, chapter.title, topic);
+                              return (
+                                <button
+                                  key={topic}
+                                  className={selectedTopic === topic ? "active" : ""}
+                                  onClick={() => { setSelectedChapter(chapter); setSelectedTopic(topic); }}
+                                >
+                                  <span className={completed ? "completed" : ""}>{completed ? "✓" : topicIndex + 1}</span>
+                                  <span><strong>{topic}</strong><small>{status}{revised ? " · Revised" : ""}</small></span>
+                                  <i>›</i>
+                                </button>
+                              );
+                            })}
+                            <button
+                              className="designer-chapter-test"
+                              disabled={testLoading || isLoading}
+                              onClick={() => startTest({ type: "chapter", subject: selectedSubject, chapterTitle: chapter.title, topicTitle: "", topics: chapter.subtopics || [], questionCount: 20 })}
+                            >
+                              Take Chapter Test
+                            </button>
+                          </div>
+                        )}
+                      </article>
+                    );
+                  })}
+                </div>
+              </section>
+
+              <aside className="designer-topic-drawer">
+                {!selectedTopic || !currentChapter ? (
+                  <div className="designer-drawer-empty">
+                    <div className="designer-drawer-mascot">T</div>
+                    <h2>Syllabus Overview</h2>
+                    <div className="designer-progress-ring" style={{ "--progress": `${getSubjectProgress(selectedSubject).percent * 3.6}deg` }}>
+                      <span>{getSubjectProgress(selectedSubject).percent}%</span>
+                    </div>
+                    <p>Select a chapter and topic to view its progress, revision details, and learning actions.</p>
+                  </div>
+                ) : (() => {
+                  const status = getTopicStatus(selectedSubject, currentChapter.title, selectedTopic);
+                  const completed = isCompletedStatus(status);
+                  const revisionId = getTopicId(selectedSubject, currentChapter.title, selectedTopic);
+                  const revisionEntry = revisionProgress[revisionId];
+                  const revised = Boolean(revisionEntry?.revised);
+                  const savedTest = getSavedTestResult("topic", selectedSubject, currentChapter.title, selectedTopic);
+                  return (
+                    <div className="designer-drawer-content">
+                      <div className="designer-topic-heading">
+                        <span>{selectedSubject.toUpperCase()}</span>
+                        <h2>{selectedTopic}</h2>
+                        <p>{currentChapter.title}</p>
+                        <strong className={completed ? "completed" : ""}>{status}</strong>
+                      </div>
+
+                      {completed && !revised && (
+                        <div className="designer-revision-alert">
+                          <span>↻</span>
+                          <p>This topic is completed. A short revision will help you remember it.</p>
+                        </div>
+                      )}
+
+                      <div className="designer-study-summary">
+                        <span>AI STUDY GUIDE</span>
+                        <p>Your detailed content-library explanation is ready. Open it with AI to study this topic using simple examples and diagrams.</p>
+                      </div>
+
+                      <div className="designer-topic-stats">
+                        <div><span>Revision</span><strong>{revised ? "Completed" : "Not yet"}</strong></div>
+                        <div><span>Latest test</span><strong>{savedTest ? `${savedTest.score}/${savedTest.total}` : "Not attempted"}</strong></div>
+                      </div>
+
+                      <div className="designer-topic-actions">
+                        <span>TOPIC ACTIONS</span>
+                        <button className="primary" disabled={isLoading || testLoading} onClick={() => handleStudyTopic(selectedTopic)}>Start Learning with AI</button>
+                        <button disabled={isLoading || testLoading || completed} onClick={() => updateTopicStatus(selectedSubject, currentChapter.title, selectedTopic, "Completed")}>{completed ? "Completed ✓" : "Mark as Completed"}</button>
+                        <button disabled={isLoading || testLoading} onClick={() => handleReviseTopic(selectedTopic)}>{revised ? "Revise Again" : "Revise with AI"}</button>
+                        <button className="doubt" disabled={isLoading || testLoading} onClick={() => askAiAboutTopicDoubt(selectedTopic)}>Ask AI About a Doubt</button>
+                        <button disabled={isLoading || testLoading} onClick={() => handleTopicTest(selectedTopic)}>Take Topic Test</button>
+                      </div>
+                    </div>
+                  );
+                })()}
+              </aside>
+            </div>
+          </div>
+        )}
+
+        {/* Legacy syllabus tracker retained temporarily as a non-rendered fallback */}
+        {false && activeTab === "syllabus" && (
           <div style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "18px", padding: "24px", boxShadow: "0 4px 20px rgba(43,88,136,0.06)" }}>
             <div style={{ textAlign: "center", marginBottom: "20px" }}>
               <div style={{ fontSize: "36px", marginBottom: "6px" }}>📚</div>
@@ -3416,6 +3679,115 @@ ${latestAnswer}`;
         .student-chat-composer button:nth-last-of-type(2) { background:var(--designer-pink) !important; box-shadow:0 4px 12px rgba(253,68,99,.24); }
         .student-chat-composer button:last-of-type { background:linear-gradient(135deg,var(--designer-pink),#a855f7) !important; color:#fff !important; box-shadow:0 4px 12px rgba(253,68,99,.24); }
         .student-chat-shortcut { padding:9px 16px !important; border-top:1px solid #f1eeea !important; color:#777b86 !important; background:#fff !important; }
+        .designer-syllabus-shell { width:100%; max-width:1200px; margin:0 auto; color:var(--designer-ink); }
+        .designer-syllabus-header { display:flex; align-items:flex-end; justify-content:space-between; gap:28px; margin-bottom:24px; }
+        .designer-syllabus-title-block { flex:1; min-width:0; }
+        .designer-syllabus-title-block h1 { margin:0 0 5px; color:var(--designer-blue); font:600 28px/1.25 'Poppins','Inter',sans-serif; }
+        .designer-syllabus-title-block>p { margin:0; color:#777b86; font-size:13px; line-height:1.55; }
+        .designer-syllabus-progress-strip { max-width:440px; margin-top:16px; }
+        .designer-syllabus-progress-strip>div { display:flex; justify-content:space-between; gap:16px; margin-bottom:7px; color:#4c4c4c; font-size:12px; }
+        .designer-syllabus-progress-strip strong { color:var(--designer-blue); font-weight:650; }
+        .designer-subject-pills { max-width:52%; display:flex; flex-wrap:wrap; justify-content:flex-end; gap:8px; }
+        .designer-subject-pills button { min-height:38px; padding:8px 15px; border:1px solid var(--designer-dove); border-radius:999px; background:#fff; color:#4c4c4c; cursor:pointer; font:600 12px 'Inter',sans-serif; transition:.18s ease; }
+        .designer-subject-pills button:hover { border-color:var(--designer-blue); color:var(--designer-blue); }
+        .designer-subject-pills button.active { border-color:var(--designer-blue); background:var(--designer-blue); color:#fff; box-shadow:0 5px 14px rgba(44,86,136,.18); }
+        .designer-syllabus-main { display:grid; grid-template-columns:minmax(0,1.45fr) minmax(300px,.75fr); align-items:start; gap:22px; }
+        .designer-chapter-panel,.designer-topic-drawer { border:1px solid var(--designer-dove); border-radius:8px; background:#fff; box-shadow:0 12px 30px rgba(44,86,136,.06); }
+        .designer-panel-heading { min-height:78px; padding:17px 20px; border-bottom:1px solid var(--designer-dove); display:flex; align-items:center; justify-content:space-between; gap:16px; }
+        .designer-panel-heading span { display:block; margin-bottom:4px; color:#8a8d96; font-size:10px; font-weight:750; letter-spacing:0; }
+        .designer-panel-heading h2 { margin:0; color:var(--designer-blue); font:600 19px/1.3 'Poppins','Inter',sans-serif; }
+        .designer-panel-heading>strong { min-width:38px; height:38px; border-radius:50%; background:#ffe6e9; color:var(--designer-pink); display:flex; align-items:center; justify-content:center; font-size:13px; }
+        .designer-chapter-accordion { padding:10px; display:grid; gap:8px; }
+        .designer-chapter-card { overflow:hidden; border:1px solid #ece8e3; border-radius:8px; background:#fff; transition:border-color .18s ease,box-shadow .18s ease; }
+        .designer-chapter-card.expanded { border-color:#cbd8e6; box-shadow:0 5px 16px rgba(44,86,136,.07); }
+        .designer-chapter-trigger { width:100%; min-height:76px; padding:13px 14px; border:0; background:#fff; display:flex; align-items:center; gap:13px; color:inherit; text-align:left; cursor:pointer; }
+        .designer-chapter-trigger:hover { background:var(--designer-fog); }
+        .designer-chapter-number { width:36px; height:36px; flex:0 0 36px; border-radius:50%; background:#edf3f8; color:var(--designer-blue); display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:750; }
+        .designer-chapter-card.expanded .designer-chapter-number { background:var(--designer-blue); color:#fff; }
+        .designer-chapter-copy { min-width:0; flex:1; display:block; }
+        .designer-chapter-copy>strong { display:block; color:#252525; font-size:14px; font-weight:650; line-height:1.35; }
+        .designer-chapter-copy>small { display:block; margin:4px 0 7px; color:#858892; font-size:11px; line-height:1.3; }
+        .designer-inline-progress { display:block; width:min(210px,100%); height:4px; overflow:hidden; border-radius:999px; background:#ece8e3; }
+        .designer-inline-progress i { display:block; height:100%; border-radius:inherit; background:var(--designer-pink); }
+        .designer-chevron { width:28px; height:28px; flex:0 0 28px; border-radius:50%; background:#f5f3f0; color:var(--designer-blue); display:flex; align-items:center; justify-content:center; font-size:19px; font-weight:400; }
+        .designer-topic-list { padding:0 12px 12px 61px; display:grid; gap:6px; }
+        .designer-topic-list>button:not(.designer-chapter-test) { width:100%; min-height:52px; padding:8px 10px; border:1px solid transparent; border-radius:7px; background:#fafafa; display:grid; grid-template-columns:28px minmax(0,1fr) 16px; align-items:center; gap:9px; color:#333; text-align:left; cursor:pointer; }
+        .designer-topic-list>button:not(.designer-chapter-test):hover,.designer-topic-list>button.active { border-color:#cbd8e6; background:#f5f8fb; }
+        .designer-topic-list>button>span:first-child { width:25px; height:25px; border-radius:50%; background:#ece8e3; color:#686b74; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:750; }
+        .designer-topic-list>button>span:first-child.completed { background:#e7f8ee; color:#159455; }
+        .designer-topic-list>button>span:nth-child(2) { min-width:0; }
+        .designer-topic-list strong { display:block; overflow:hidden; color:var(--designer-blue); font-size:12px; font-weight:650; line-height:1.35; text-overflow:ellipsis; white-space:nowrap; }
+        .designer-topic-list small { display:block; margin-top:2px; color:#8a8d96; font-size:10px; }
+        .designer-topic-list i { color:#9a9da5; font-size:18px; font-style:normal; }
+        .designer-chapter-test { width:100%; min-height:38px; margin-top:3px; border:1px solid #cbd8e6; border-radius:7px; background:#fff; color:var(--designer-blue); cursor:pointer; font:650 11px 'Inter',sans-serif; }
+        .designer-chapter-test:hover { background:#edf3f8; }
+        .designer-topic-drawer { position:sticky; top:0; min-height:420px; overflow:hidden; }
+        .designer-drawer-empty { min-height:420px; padding:36px 26px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; }
+        .designer-drawer-mascot { width:50px; height:50px; margin-bottom:14px; border-radius:16px; background:linear-gradient(145deg,var(--designer-pink),#a855f7); color:#fff; display:flex; align-items:center; justify-content:center; font:700 21px 'Poppins',sans-serif; box-shadow:0 8px 20px rgba(253,68,99,.22); }
+        .designer-drawer-empty h2 { margin:0 0 16px; color:var(--designer-blue); font:600 18px 'Poppins','Inter',sans-serif; }
+        .designer-drawer-empty p { max-width:280px; margin:16px 0 0; color:#777b86; font-size:12px; line-height:1.6; }
+        .designer-progress-ring { width:104px; height:104px; border-radius:50%; background:conic-gradient(var(--designer-pink) var(--progress),#eeeae6 0); display:grid; place-items:center; position:relative; }
+        .designer-progress-ring:before { content:''; position:absolute; inset:9px; border-radius:50%; background:#fff; }
+        .designer-progress-ring span { z-index:1; color:var(--designer-blue); font-size:18px; font-weight:750; }
+        .designer-drawer-content { padding:22px; }
+        .designer-topic-heading { padding-bottom:18px; border-bottom:1px solid #ece8e3; }
+        .designer-topic-heading>span,.designer-study-summary>span,.designer-topic-actions>span { color:var(--designer-pink); font-size:10px; font-weight:800; letter-spacing:0; }
+        .designer-topic-heading h2 { margin:7px 0 4px; color:var(--designer-blue); font:600 20px/1.3 'Poppins','Inter',sans-serif; overflow-wrap:anywhere; }
+        .designer-topic-heading p { margin:0 0 11px; color:#777b86; font-size:12px; line-height:1.45; }
+        .designer-topic-heading>strong { display:inline-flex; padding:5px 9px; border-radius:999px; background:#f2f0ed; color:#777b86; font-size:10px; }
+        .designer-topic-heading>strong.completed { background:#e7f8ee; color:#159455; }
+        .designer-revision-alert { margin-top:16px; padding:12px; border:1px solid #f5d49a; border-radius:7px; background:#fff9ec; display:flex; align-items:flex-start; gap:10px; color:#7a5a20; }
+        .designer-revision-alert span { font-size:18px; line-height:1; }
+        .designer-revision-alert p { margin:0; font-size:11px; line-height:1.5; }
+        .designer-study-summary { margin-top:16px; padding:14px; border-radius:7px; background:#f5f8fb; }
+        .designer-study-summary p { margin:7px 0 0; color:#4c4c4c; font-size:11px; line-height:1.55; }
+        .designer-topic-stats { margin:14px 0; display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+        .designer-topic-stats>div { padding:11px; border:1px solid #ece8e3; border-radius:7px; background:#fff; }
+        .designer-topic-stats span { display:block; margin-bottom:4px; color:#8a8d96; font-size:9px; }
+        .designer-topic-stats strong { color:var(--designer-blue); font-size:11px; overflow-wrap:anywhere; }
+        .designer-topic-actions { padding-top:3px; display:grid; gap:8px; }
+        .designer-topic-actions>span { margin-bottom:2px; }
+        .designer-topic-actions button { width:100%; min-height:40px; padding:9px 11px; border:1px solid var(--designer-dove); border-radius:7px; background:#fff; color:var(--designer-blue); cursor:pointer; font:650 11px 'Inter',sans-serif; }
+        .designer-topic-actions button:hover:not(:disabled) { border-color:var(--designer-blue); background:#f5f8fb; }
+        .designer-topic-actions button.primary { border-color:var(--designer-blue); background:var(--designer-blue); color:#fff; }
+        .designer-topic-actions button.doubt { border-color:#ffd0d8; color:#d52d4a; }
+        .designer-topic-actions button:disabled,.designer-chapter-test:disabled { cursor:not-allowed; opacity:.55; }
+        .designer-test-center { width:100%; max-width:1200px; margin:0 auto; color:var(--designer-ink); }
+        .designer-test-heading { margin-bottom:20px; }
+        .designer-test-heading h1 { margin:0 0 5px; color:var(--designer-blue); font:600 28px/1.25 'Poppins','Inter',sans-serif; }
+        .designer-test-heading p { max-width:720px; margin:0; color:#777b86; font-size:13px; line-height:1.55; }
+        .designer-test-stats { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin-bottom:18px; }
+        .designer-test-stats>div { min-height:94px; padding:16px; border:1px solid var(--designer-dove); border-radius:8px; background:#fff; box-shadow:0 8px 22px rgba(44,86,136,.05); display:flex; flex-direction:column; justify-content:space-between; }
+        .designer-test-stats span { color:#858892; font-size:10px; font-weight:700; }
+        .designer-test-stats strong { color:var(--designer-blue); font-size:25px; line-height:1.15; }
+        .designer-test-stats strong.topic-stat { font-size:14px; overflow-wrap:anywhere; }
+        .designer-test-grid { display:grid; grid-template-columns:minmax(0,1.18fr) minmax(310px,.82fr); align-items:start; gap:16px; }
+        .designer-test-panel { min-width:0; overflow:hidden; border:1px solid var(--designer-dove); border-radius:8px; background:#fff; box-shadow:0 10px 26px rgba(44,86,136,.05); }
+        .designer-test-panel-head { min-height:75px; padding:16px 18px; border-bottom:1px solid var(--designer-dove); display:flex; align-items:center; justify-content:space-between; }
+        .designer-test-panel-head h2 { margin:0; color:var(--designer-blue); font:600 18px/1.3 'Poppins','Inter',sans-serif; }
+        .designer-test-panel-head p { margin:4px 0 0; color:#858892; font-size:10px; line-height:1.4; }
+        .designer-test-filters { padding:12px 14px 9px; display:flex; gap:7px; overflow-x:auto; scrollbar-width:thin; }
+        .designer-test-filters button { min-height:34px; flex:0 0 auto; padding:7px 12px; border:1px solid var(--designer-dove); border-radius:999px; background:#fff; color:#5f626b; cursor:pointer; font:650 10px 'Inter',sans-serif; }
+        .designer-test-filters button.active { border-color:var(--designer-blue); background:var(--designer-blue); color:#fff; }
+        .designer-test-list { max-height:510px; padding:7px 12px 12px; display:grid; gap:8px; overflow-y:auto; scrollbar-width:thin; }
+        .designer-test-list.history { padding-top:12px; }
+        .designer-available-test { min-width:0; min-height:78px; padding:11px; border:1px solid #ece8e3; border-radius:8px; display:grid; grid-template-columns:34px minmax(0,1fr) auto; align-items:center; gap:10px; }
+        .designer-available-test:hover { border-color:#cbd8e6; background:#fafcfd; }
+        .designer-test-icon { width:32px; height:32px; border-radius:50%; background:#edf3f8; color:var(--designer-blue); display:grid; place-items:center; font-size:12px; font-weight:800; }
+        .designer-test-copy { min-width:0; }
+        .designer-test-copy h3,.designer-test-history-row h3 { margin:0; color:var(--designer-blue); font-size:12px; font-weight:700; line-height:1.35; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+        .designer-test-copy p,.designer-test-history-row p { margin:3px 0; color:#777b86; font-size:9px; line-height:1.4; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+        .designer-test-copy span,.designer-test-history-row>div>span { color:#999ca4; font-size:9px; }
+        .designer-available-test>button { min-width:62px; min-height:34px; padding:7px 12px; border:0; border-radius:7px; background:var(--designer-blue); color:#fff; cursor:pointer; font:700 10px 'Inter',sans-serif; }
+        .designer-available-test>button:disabled { cursor:not-allowed; opacity:.55; }
+        .designer-test-history-row { width:100%; min-width:0; min-height:78px; padding:12px; border:1px solid #ece8e3; border-radius:8px; background:#fff; display:flex; align-items:center; justify-content:space-between; gap:12px; color:inherit; text-align:left; cursor:pointer; }
+        .designer-test-history-row:hover { border-color:#cbd8e6; background:#fafcfd; }
+        .designer-test-history-row>div:first-child { min-width:0; flex:1; }
+        .designer-test-score { flex:0 0 auto; display:flex; flex-direction:column; align-items:flex-end; gap:6px; }
+        .designer-test-score strong { color:var(--designer-blue); font-size:16px; }
+        .designer-test-score span { padding:4px 7px; border-radius:999px; font-size:8px; font-weight:800; }
+        .designer-test-empty { min-height:150px; padding:24px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:6px; color:#858892; text-align:center; font-size:11px; }
+        .designer-test-empty strong { color:var(--designer-blue); font-size:13px; }
         @media (max-width:767px) {
           .student-app-layout { flex-direction:column-reverse; }
           .student-app-main { width:100%; min-width:0; }
@@ -3453,12 +3825,37 @@ ${latestAnswer}`;
           .student-chat-composer { flex-wrap:wrap; padding:10px !important; }
           .student-chat-composer textarea { flex:1 1 calc(100% - 112px) !important; }
           .student-chat-composer select { order:4; width:100%; }
+          .designer-syllabus-header { align-items:stretch; flex-direction:column; gap:16px; margin-bottom:16px; }
+          .designer-syllabus-title-block h1 { font-size:23px; }
+          .designer-subject-pills { max-width:none; width:100%; padding-bottom:4px; flex-wrap:nowrap; justify-content:flex-start; overflow-x:auto; scrollbar-width:thin; }
+          .designer-subject-pills button { flex:0 0 auto; }
+          .designer-syllabus-main { grid-template-columns:minmax(0,1fr); gap:14px; }
+          .designer-topic-drawer { position:static; min-height:0; }
+          .designer-drawer-empty { min-height:310px; }
+          .designer-test-heading h1 { font-size:23px; }
+          .designer-test-grid { grid-template-columns:minmax(0,1fr); }
+          .designer-test-stats { grid-template-columns:repeat(3,minmax(150px,1fr)); overflow-x:auto; padding-bottom:5px; scrollbar-width:thin; }
+          .designer-test-list { max-height:430px; }
         }
         @media (max-width:520px) {
           .student-search-wrap { display:none; }
           .student-app-header { justify-content:space-between; }
           .student-header-right { margin-left:auto; }
           .student-sidebar-dock { overflow:visible; }
+          .designer-syllabus-progress-strip { max-width:none; }
+          .designer-panel-heading { min-height:68px; padding:14px; }
+          .designer-chapter-accordion { padding:7px; }
+          .designer-chapter-trigger { min-height:68px; padding:10px; gap:9px; }
+          .designer-chapter-number { width:31px; height:31px; flex-basis:31px; }
+          .designer-topic-list { padding:0 8px 9px; }
+          .designer-topic-list strong { white-space:normal; }
+          .designer-drawer-content { padding:17px; }
+          .designer-topic-stats { grid-template-columns:1fr; }
+          .designer-test-stats { grid-template-columns:1fr; overflow:visible; }
+          .designer-test-stats>div { min-height:78px; }
+          .designer-available-test { grid-template-columns:30px minmax(0,1fr); }
+          .designer-available-test>button { grid-column:2; width:100%; }
+          .designer-test-history-row { align-items:flex-start; }
         }
         @media (max-width:360px) {
           .student-app-sidebar { padding-left:4px; padding-right:4px; }
