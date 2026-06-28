@@ -48,6 +48,11 @@ const B = {
   greenBorder: "#86efac",
 };
 
+const STUDENT_APP_TABS = new Set([
+  "home", "chat", "syllabus", "test", "doubts", "history",
+  "notes", "activity", "reports", "parent", "badges",
+]);
+
 function TeachifyyLogo({ size = 32, showText = true, light = false }) {
   const textColor = light ? B.white : B.navy;
   return (
@@ -305,6 +310,7 @@ export default function Home() {
   const [submittedTestResult,setSubmittedTestResult]= useState(null);
   const [selectedTestAttempt,setSelectedTestAttempt]= useState(null);
   const [testSubjectFilter,   setTestSubjectFilter]   = useState("All");
+  const [notificationsOpen,   setNotificationsOpen]   = useState(false);
   const [user,               setUser]               = useState(null);
   const [userProfile,        setUserProfile]        = useState(null);
   const [authMode,           setAuthMode]           = useState("login");
@@ -369,11 +375,60 @@ export default function Home() {
   const pendingVoiceDataRef= useRef(null);
   const requestLockRef     = useRef(false);
   const activeTopicContextRef = useRef(null);
+  const tabHistoryReadyRef = useRef(false);
+  const restoringTabRef    = useRef(false);
   // Ref so saveCurrentSession can read latest messages without stale closure
   const messagesRef        = useRef(messages);
   const historyRef         = useRef(history);
   useEffect(() => { messagesRef.current = messages; }, [messages]);
   useEffect(() => { historyRef.current  = history;  }, [history]);
+
+  useEffect(() => {
+    if (!profileCompleted || typeof window === "undefined") {
+      tabHistoryReadyRef.current = false;
+      return undefined;
+    }
+
+    const tabUrl = (tab) => `${window.location.pathname}${window.location.search}${tab === "home" ? "" : `#${tab}`}`;
+    const hashTab = window.location.hash.replace(/^#/, "");
+    const initialTab = STUDENT_APP_TABS.has(hashTab) ? hashTab : "home";
+
+    restoringTabRef.current = true;
+    window.history.replaceState({ ...window.history.state, studentTab: initialTab }, "", tabUrl(initialTab));
+    setActiveTab(initialTab);
+    setNotificationsOpen(false);
+    tabHistoryReadyRef.current = true;
+
+    const handlePopState = (event) => {
+      const eventTab = event.state?.studentTab;
+      const currentHashTab = window.location.hash.replace(/^#/, "");
+      const nextTab = STUDENT_APP_TABS.has(eventTab)
+        ? eventTab
+        : STUDENT_APP_TABS.has(currentHashTab) ? currentHashTab : "home";
+      restoringTabRef.current = true;
+      setNotificationsOpen(false);
+      setActiveTab(nextTab);
+    };
+
+    window.addEventListener("popstate", handlePopState);
+    return () => {
+      window.removeEventListener("popstate", handlePopState);
+      tabHistoryReadyRef.current = false;
+    };
+  }, [profileCompleted]);
+
+  useEffect(() => {
+    if (!profileCompleted || !tabHistoryReadyRef.current || typeof window === "undefined") return;
+    if (restoringTabRef.current) {
+      restoringTabRef.current = false;
+      return;
+    }
+    if (window.history.state?.studentTab === activeTab) return;
+
+    const tabUrl = `${window.location.pathname}${window.location.search}${activeTab === "home" ? "" : `#${activeTab}`}`;
+    window.history.pushState({ ...window.history.state, studentTab: activeTab }, "", tabUrl);
+    setNotificationsOpen(false);
+  }, [activeTab, profileCompleted]);
 
   const labelStyle = { display: "block", fontSize: "13px", fontWeight: 600, color: B.gray700, marginBottom: "6px", fontFamily: "'Plus Jakarta Sans', sans-serif" };
   const inputStyle = { width: "100%", padding: "11px 14px", marginBottom: "14px", borderRadius: "10px", border: `1.5px solid ${B.gray300}`, background: B.white, fontSize: "14px", color: B.gray900, outline: "none", boxSizing: "border-box", fontFamily: "'Plus Jakarta Sans', sans-serif", transition: "border-color 0.2s" };
@@ -2001,9 +2056,33 @@ ${latestAnswer}`;
     .filter(Boolean)
     .slice(0, 4);
   const notificationItems = [
-    activeDoubts.length ? `${activeDoubts.length} doubt${activeDoubts.length !== 1 ? "s" : ""} need attention.` : "",
-    latestTest ? `Latest test score: ${latestTest.percentage || 0}% in ${latestTest.topicTitle || latestTest.chapterTitle || "test"}.` : "Start a topic test to build your score history.",
-    overallProgress.percent < 40 ? "Complete one more syllabus topic today." : "Your syllabus progress is moving well.",
+    activeDoubts.length ? {
+      id: "active-doubts",
+      title: `${activeDoubts.length} doubt${activeDoubts.length !== 1 ? "s" : ""} need attention`,
+      detail: "Open your doubt list and continue the related AI conversations.",
+      type: "doubt",
+      action: () => setActiveTab("doubts"),
+    } : null,
+    latestTest ? {
+      id: "latest-test",
+      title: `Latest test score: ${latestTest.percentage || 0}%`,
+      detail: latestTest.topicTitle || latestTest.chapterTitle || "Open your latest test result.",
+      type: "test",
+      action: () => { setSelectedTestAttempt(latestTest); setActiveTab("test"); },
+    } : {
+      id: "start-test",
+      title: "Start your first topic test",
+      detail: "Choose a topic and begin building your score history.",
+      type: "test",
+      action: () => setActiveTab("test"),
+    },
+    {
+      id: "syllabus-progress",
+      title: overallProgress.percent < 40 ? "Continue your syllabus" : "Your syllabus progress is moving well",
+      detail: overallProgress.percent < 40 ? "Complete one more topic today." : `${overallProgress.percent}% of your syllabus is completed.`,
+      type: "syllabus",
+      action: () => setActiveTab("syllabus"),
+    },
   ].filter(Boolean);
   const searchTerm = globalSearch.trim().toLowerCase();
   const searchResults = searchTerm
@@ -2160,9 +2239,38 @@ ${latestAnswer}`;
           )}
         </div>
         <div className="student-header-right">
-          <div title={notificationItems.join("\n")} className="student-notification">
-            !
-            {notificationItems.length > 0 && <span style={{ position: "absolute", top: "7px", right: "8px", width: "7px", height: "7px", borderRadius: "50%", background: B.red }} />}
+          <div className="student-notification-wrap">
+            <button
+              type="button"
+              className="student-notification"
+              aria-label="Open notifications"
+              aria-expanded={notificationsOpen}
+              onClick={() => setNotificationsOpen((open) => !open)}
+            >
+              {notificationItems.length > 0 && <span className="student-notification-dot" />}
+            </button>
+            {notificationsOpen && (
+              <div className="student-notification-panel" role="dialog" aria-label="Notifications">
+                <div className="student-notification-panel-head">
+                  <div><strong>Notifications</strong><span>{notificationItems.length} updates</span></div>
+                  <button type="button" onClick={() => setNotificationsOpen(false)} aria-label="Close notifications">×</button>
+                </div>
+                <div className="student-notification-list">
+                  {notificationItems.map((item) => (
+                    <button
+                      type="button"
+                      key={item.id}
+                      className={`student-notification-item ${item.type}`}
+                      onClick={() => { setNotificationsOpen(false); item.action(); }}
+                    >
+                      <span className="student-notification-item-icon" aria-hidden="true" />
+                      <span><strong>{item.title}</strong><small>{item.detail}</small></span>
+                      <span className="student-notification-arrow" aria-hidden="true">›</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
           <div className="student-profile-copy">
             <div style={{ color: B.white, fontSize: "13px", fontWeight: 600 }}>{userProfile?.name || user?.email}</div>
@@ -2301,14 +2409,6 @@ ${latestAnswer}`;
                 <button onClick={() => setActiveTab("reports")} style={{ marginTop: "12px", width: "100%", padding: "9px", borderRadius: "10px", border: "none", background: B.navy, color: B.white, fontSize: "12px", fontWeight: 900, cursor: "pointer", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>View reports</button>
               </div>
 
-              <div style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "18px", padding: "18px", boxShadow: "0 4px 20px rgba(43,88,136,0.06)" }}>
-                <h3 style={{ fontSize: "16px", fontWeight: 900, color: B.navy, margin: "0 0 10px" }}>Notifications</h3>
-                <div style={{ display: "grid", gap: "8px" }}>
-                  {notificationItems.map((item) => (
-                    <div key={item} style={{ padding: "10px", borderRadius: "10px", background: B.orangeLight, color: B.gray700, fontSize: "12px", lineHeight: 1.45, fontWeight: 700 }}>{item}</div>
-                  ))}
-                </div>
-              </div>
             </div>
           </div>
         )}
@@ -3654,9 +3754,30 @@ ${latestAnswer}`;
         .student-profile-copy>div:first-child { max-width:180px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; color:var(--designer-ink) !important; font:500 14px 'Inter',sans-serif !important; }
         .student-profile-copy>div:last-child { color:#777b86 !important; font:400 12px 'Inter',sans-serif !important; }
         .student-avatar { order:0; width:38px; height:38px; border-radius:50%; background:#ffe6e9; color:var(--designer-ink); display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:600; }
-        .student-notification { order:2; width:40px !important; height:40px !important; border:1px solid var(--designer-dove) !important; border-radius:50% !important; background:#fff !important; color:var(--designer-ink) !important; position:relative; display:flex; align-items:center; justify-content:center; font-size:0 !important; }
+        .student-notification-wrap { order:2; position:relative; }
+        .student-notification { width:40px !important; height:40px !important; padding:0 !important; border:1px solid var(--designer-dove) !important; border-radius:50% !important; background:#fff !important; color:var(--designer-ink) !important; position:relative; display:flex; align-items:center; justify-content:center; cursor:pointer; font-size:0 !important; }
+        .student-notification:hover,.student-notification[aria-expanded="true"] { border-color:var(--designer-blue) !important; background:var(--designer-fog) !important; }
         .student-notification:before { content:' '; width:18px; height:18px; background:no-repeat center/18px 18px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%231c1c1c' stroke-width='2'%3E%3Cpath d='M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9'/%3E%3Cpath d='M13.73 21a2 2 0 0 1-3.46 0'/%3E%3C/svg%3E"); }
-        .student-notification span { top:8px !important; right:9px !important; width:8px !important; height:8px !important; background:var(--designer-pink) !important; }
+        .student-notification-dot { position:absolute; top:7px; right:8px; width:8px; height:8px; border:2px solid #fff; border-radius:50%; background:var(--designer-pink); }
+        .student-notification-panel { position:absolute; top:49px; right:0; width:min(360px,calc(100vw - 28px)); overflow:hidden; border:1px solid var(--designer-dove); border-radius:8px; background:#fff; box-shadow:0 18px 45px rgba(28,28,28,.16); z-index:160; }
+        .student-notification-panel-head { min-height:62px; padding:13px 14px; border-bottom:1px solid var(--designer-dove); display:flex; align-items:center; justify-content:space-between; gap:12px; }
+        .student-notification-panel-head>div { display:flex; flex-direction:column; gap:2px; }
+        .student-notification-panel-head strong { color:var(--designer-blue); font:600 15px 'Poppins','Inter',sans-serif; }
+        .student-notification-panel-head span { color:#858892; font-size:10px; }
+        .student-notification-panel-head>button { width:30px; height:30px; padding:0; border:0; border-radius:50%; background:var(--designer-fog); color:#676a73; cursor:pointer; font-size:20px; line-height:1; }
+        .student-notification-list { padding:7px; display:grid; gap:4px; }
+        .student-notification-item { width:100%; min-height:68px; padding:10px; border:1px solid transparent; border-radius:7px; background:#fff; display:grid; grid-template-columns:32px minmax(0,1fr) 18px; align-items:center; gap:9px; color:inherit; text-align:left; cursor:pointer; }
+        .student-notification-item:hover { border-color:#d7e1eb; background:#f7f9fb; }
+        .student-notification-item-icon { width:30px; height:30px; border-radius:50%; background:#edf3f8; position:relative; }
+        .student-notification-item-icon:after { content:''; position:absolute; inset:9px; border-radius:50%; background:var(--designer-blue); }
+        .student-notification-item.doubt .student-notification-item-icon { background:#ffe6e9; }
+        .student-notification-item.doubt .student-notification-item-icon:after { background:var(--designer-pink); }
+        .student-notification-item.test .student-notification-item-icon { background:#e7f8ee; }
+        .student-notification-item.test .student-notification-item-icon:after { background:#159455; }
+        .student-notification-item>span:nth-child(2) { min-width:0; }
+        .student-notification-item strong { display:block; color:var(--designer-blue); font-size:11px; font-weight:700; line-height:1.35; }
+        .student-notification-item small { display:block; margin-top:3px; color:#777b86; font-size:9px; line-height:1.45; }
+        .student-notification-arrow { color:#9a9da5; font-size:19px; text-align:center; }
         .student-view-container { flex:1; min-height:0; overflow-y:auto; padding:32px; background:#fff; }
         .student-view-container>div:not(.student-legacy-hero):not(.student-legacy-tabs) { max-width:1200px; margin-left:auto; margin-right:auto; }
         .student-legacy-hero,.student-legacy-tabs { display:none !important; }
@@ -3796,7 +3917,7 @@ ${latestAnswer}`;
           .student-sidebar-dock { width:100%; height:54px; margin:0; padding:4px 8px; flex-direction:row; justify-content:space-around; gap:2px; border:0; border-radius:0; box-shadow:none; background:transparent; }
           .student-nav-tab { width:40px; height:40px; }
           .student-dock-tooltip,.student-dock-divider,.student-more-wrap,.student-logout { display:none; }
-          .student-app-header { width:100%; height:64px; flex-basis:64px; padding:0 14px; gap:10px; overflow:hidden; }
+          .student-app-header { width:100%; height:64px; flex-basis:64px; padding:0 14px; gap:10px; overflow:visible; }
           .student-header-logo { display:block; height:27px; max-width:94px; }
           .student-search-wrap { width:min(38vw,180px); min-width:0; }
           .student-search-input { min-width:0; padding:9px 11px; text-overflow:ellipsis; }
@@ -3804,6 +3925,7 @@ ${latestAnswer}`;
           .student-profile-copy { display:none; }
           .student-avatar { width:34px; height:34px; }
           .student-notification { width:36px !important; height:36px !important; }
+          .student-notification-panel { position:fixed; top:58px; right:10px; width:min(360px,calc(100vw - 20px)); max-height:calc(100vh - 140px); overflow-y:auto; }
           .student-view-container { width:100%; min-width:0; padding:14px; overflow-x:hidden; }
           .student-view-container>div { width:100%; min-width:0; }
           .student-view-container [style*="grid-template-columns"] { grid-template-columns:minmax(0,1fr) !important; }
