@@ -19,6 +19,7 @@ import {
   orderBy,
   limit,
   deleteDoc,
+  increment,
 } from "firebase/firestore";
 import { SYLLABUS_DATA } from "../data/syllabus";
 import { findDiagramForTopic } from "../data/diagramLibrary";
@@ -52,6 +53,20 @@ const STUDENT_APP_TABS = new Set([
   "home", "chat", "syllabus", "test", "doubts", "history",
   "notes", "activity", "reports", "parent", "badges",
 ]);
+
+const USAGE_SECTION_LABELS = {
+  home: "Home",
+  chat: "AI Tutor",
+  syllabus: "Syllabus",
+  test: "Tests",
+  doubts: "Doubts",
+  history: "History",
+  notes: "Notes",
+  activity: "Activity",
+  reports: "Reports",
+  parent: "Parent View",
+  badges: "Badges",
+};
 
 function TeachifyyLogo({ size = 32, showText = true, light = false }) {
   const textColor = light ? B.white : B.navy;
@@ -285,6 +300,23 @@ function groupSessionsByDate(sessions) {
   return groups;
 }
 
+function getLocalDateKey(date = new Date()) {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
+function formatUsageDuration(value) {
+  const seconds = Math.max(0, Math.round(Number(value) || 0));
+  if (seconds < 60) return `${seconds}s`;
+  const minutes = Math.floor(seconds / 60);
+  if (minutes < 60) return `${minutes}m`;
+  const hours = Math.floor(minutes / 60);
+  const remainingMinutes = minutes % 60;
+  return remainingMinutes ? `${hours}h ${remainingMinutes}m` : `${hours}h`;
+}
+
 // ── Main component ─────────────────────────────────────────
 export default function Home() {
   const [messages,           setMessages]           = useState([]);
@@ -350,6 +382,11 @@ export default function Home() {
   const [reportsLoading,     setReportsLoading]     = useState(false);
   const [reportRange,        setReportRange]        = useState("weekly");
   const [globalSearch,       setGlobalSearch]       = useState("");
+  const [usageDays,          setUsageDays]          = useState([]);
+  const [usageLoading,       setUsageLoading]       = useState(false);
+  const [sessionUsageSeconds,setSessionUsageSeconds]= useState(0);
+  const [usageActive,        setUsageActive]        = useState(false);
+  const [pendingUsageByDate, setPendingUsageByDate] = useState({});
 
   const currentSyllabus = SYLLABUS_DATA[classLevel]?.[board] || SYLLABUS_DATA["5"]?.CBSE;
   const syllabusSubjectOptions = getOrderedSubjects(currentSyllabus);
@@ -377,11 +414,18 @@ export default function Home() {
   const activeTopicContextRef = useRef(null);
   const tabHistoryReadyRef = useRef(false);
   const restoringTabRef    = useRef(false);
+  const activeTabRef       = useRef(activeTab);
+  const usagePendingRef    = useRef({});
+  const usageLastInteractionRef = useRef(0);
+  const usageLastTickRef   = useRef(0);
+  const usageLastFlushRef  = useRef(0);
+  const usageFlushLockRef  = useRef(false);
   // Ref so saveCurrentSession can read latest messages without stale closure
   const messagesRef        = useRef(messages);
   const historyRef         = useRef(history);
   useEffect(() => { messagesRef.current = messages; }, [messages]);
   useEffect(() => { historyRef.current  = history;  }, [history]);
+  useEffect(() => { activeTabRef.current = activeTab; }, [activeTab]);
 
   useEffect(() => {
     if (!profileCompleted || typeof window === "undefined") {
@@ -458,6 +502,26 @@ export default function Home() {
     return () => unsubscribe();
   }, []);
 
+  const loadUsageDays = async (uid) => {
+    if (!uid) return;
+    setUsageLoading(true);
+    try {
+      const usageQuery = query(
+        collection(db, "users", uid, "usageDays"),
+        orderBy("date", "desc"),
+        limit(35)
+      );
+      const snap = await getDocs(usageQuery);
+      const loaded = [];
+      snap.forEach((usageDoc) => loaded.push({ id: usageDoc.id, ...usageDoc.data() }));
+      setUsageDays(loaded);
+    } catch (err) {
+      console.error("Usage load error:", err);
+    } finally {
+      setUsageLoading(false);
+    }
+  };
+
   useEffect(() => {
     if (user) {
       loadTopicProgress(user.uid);
@@ -468,6 +532,7 @@ export default function Home() {
       loadNotes(user.uid);
       loadActivityLogs(user.uid);
       loadReports(user.uid);
+      loadUsageDays(user.uid);
     } else {
       setTopicProgress({});
       setRevisionProgress({});
@@ -477,6 +542,10 @@ export default function Home() {
       setNotes([]);
       setActivityLogs([]);
       setReports([]);
+      setUsageDays([]);
+      setSessionUsageSeconds(0);
+      usagePendingRef.current = {};
+      setPendingUsageByDate({});
     }
   }, [user]);
 
@@ -717,6 +786,7 @@ export default function Home() {
   };
 
   const handleLogout = async () => {
+    await flushUsage();
     await signOut(auth);
     setUser(null); setUserProfile(null); setMessages([]); setHistory([]); setTextInput("");
     setTopicProgress({}); setRevisionProgress({}); setTestResults({});
@@ -1482,6 +1552,141 @@ ${latestAnswer}`;
     }
   };
 
+  const flushUsage = useCallback(async () => {
+    if (!user || usageFlushLockRef.current) return;
+    const pendingByDate = usagePendingRef.current;
+    if (!Object.keys(pendingByDate).length) return;
+
+    usageFlushLockRef.current = true;
+    usagePendingRef.current = {};
+    setPendingUsageByDate({});
+    try {
+      await Promise.all(Object.entries(pendingByDate).map(async ([date, bySection]) => {
+        const totalSeconds = Object.values(bySection).reduce((sum, seconds) => sum + Number(seconds || 0), 0);
+        const sectionIncrements = Object.fromEntries(
+          [...STUDENT_APP_TABS].map((section) => [section, increment(Number(bySection[section] || 0))])
+        );
+        await setDoc(doc(db, "users", user.uid, "usageDays", date), {
+          date,
+          totalSeconds: increment(totalSeconds),
+          bySection: sectionIncrements,
+          classLevel,
+          board,
+          updatedAt: serverTimestamp(),
+        }, { merge: true });
+      }));
+
+      setUsageDays((previous) => {
+        const next = [...previous];
+        Object.entries(pendingByDate).forEach(([date, bySection]) => {
+          const totalSeconds = Object.values(bySection).reduce((sum, seconds) => sum + Number(seconds || 0), 0);
+          const index = next.findIndex((day) => day.date === date || day.id === date);
+          const existing = index >= 0 ? next[index] : { id: date, date, totalSeconds: 0, bySection: {} };
+          const mergedSections = { ...(existing.bySection || {}) };
+          Object.entries(bySection).forEach(([section, seconds]) => {
+            mergedSections[section] = Number(mergedSections[section] || 0) + Number(seconds || 0);
+          });
+          const merged = { ...existing, id: date, date, totalSeconds: Number(existing.totalSeconds || 0) + totalSeconds, bySection: mergedSections };
+          if (index >= 0) next[index] = merged;
+          else next.push(merged);
+        });
+        return next.sort((a, b) => String(b.date).localeCompare(String(a.date)));
+      });
+      usageLastFlushRef.current = Date.now();
+    } catch (err) {
+      console.error("Usage save error:", err);
+      Object.entries(pendingByDate).forEach(([date, bySection]) => {
+        const restored = usagePendingRef.current[date] || {};
+        Object.entries(bySection).forEach(([section, seconds]) => {
+          restored[section] = Number(restored[section] || 0) + Number(seconds || 0);
+        });
+        usagePendingRef.current[date] = restored;
+      });
+      setPendingUsageByDate((current) => {
+        const restored = { ...current };
+        Object.entries(pendingByDate).forEach(([date, bySection]) => {
+          const dateUsage = { ...(restored[date] || {}) };
+          Object.entries(bySection).forEach(([section, seconds]) => {
+            dateUsage[section] = Number(dateUsage[section] || 0) + Number(seconds || 0);
+          });
+          restored[date] = dateUsage;
+        });
+        return restored;
+      });
+    } finally {
+      usageFlushLockRef.current = false;
+    }
+  }, [user, classLevel, board]);
+
+  useEffect(() => {
+    if (!user || !profileCompleted || typeof document === "undefined") {
+      return undefined;
+    }
+
+    const idleAfterMs = 3 * 60 * 1000;
+    const initializeTimer = window.setTimeout(() => {
+      const now = Date.now();
+      usageLastInteractionRef.current = now;
+      usageLastTickRef.current = now;
+      if (!usageLastFlushRef.current) usageLastFlushRef.current = now;
+    }, 0);
+
+    const markInteraction = () => {
+      usageLastInteractionRef.current = Date.now();
+      if (document.visibilityState === "visible") setUsageActive(true);
+    };
+
+    const tick = () => {
+      const now = Date.now();
+      const elapsedSeconds = Math.min(10, Math.max(0, Math.floor((now - usageLastTickRef.current) / 1000)));
+      usageLastTickRef.current = now;
+      const isActive = document.visibilityState === "visible" && now - usageLastInteractionRef.current <= idleAfterMs;
+      setUsageActive(isActive);
+      if (!isActive || !elapsedSeconds) return;
+
+      const date = getLocalDateKey();
+      const section = STUDENT_APP_TABS.has(activeTabRef.current) ? activeTabRef.current : "home";
+      const dateUsage = usagePendingRef.current[date] || {};
+      dateUsage[section] = Number(dateUsage[section] || 0) + elapsedSeconds;
+      usagePendingRef.current[date] = dateUsage;
+      setPendingUsageByDate((current) => ({
+        ...current,
+        [date]: {
+          ...(current[date] || {}),
+          [section]: Number(current[date]?.[section] || 0) + elapsedSeconds,
+        },
+      }));
+      setSessionUsageSeconds((seconds) => seconds + elapsedSeconds);
+
+      if (now - usageLastFlushRef.current >= 5 * 60 * 1000) flushUsage();
+    };
+
+    const handleVisibilityChange = () => {
+      usageLastTickRef.current = Date.now();
+      if (document.visibilityState === "hidden") {
+        setUsageActive(false);
+        flushUsage();
+      } else {
+        markInteraction();
+      }
+    };
+    const handlePageHide = () => flushUsage();
+    const interval = window.setInterval(tick, 5000);
+    const interactionEvents = ["pointerdown", "keydown", "touchstart", "scroll"];
+    interactionEvents.forEach((eventName) => window.addEventListener(eventName, markInteraction, { passive: true }));
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    window.addEventListener("pagehide", handlePageHide);
+
+    return () => {
+      window.clearTimeout(initializeTimer);
+      window.clearInterval(interval);
+      interactionEvents.forEach((eventName) => window.removeEventListener(eventName, markInteraction));
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+      window.removeEventListener("pagehide", handlePageHide);
+      flushUsage();
+    };
+  }, [user, profileCompleted, flushUsage]);
+
   const getDateFromValue = (value) => {
     if (!value) return null;
     if (value.toDate) return value.toDate();
@@ -1497,6 +1702,33 @@ ${latestAnswer}`;
     return date >= cutoff;
   };
 
+  const getUsageSummary = (days = 7) => {
+    const cutoff = new Date();
+    cutoff.setHours(0, 0, 0, 0);
+    cutoff.setDate(cutoff.getDate() - Math.max(0, days - 1));
+    const isIncluded = (dateKey) => {
+      const date = new Date(`${dateKey}T00:00:00`);
+      return !Number.isNaN(date.getTime()) && date >= cutoff;
+    };
+    const bySection = {};
+    let totalSeconds = 0;
+
+    usageDays.filter((day) => isIncluded(day.date || day.id)).forEach((day) => {
+      totalSeconds += Number(day.totalSeconds || 0);
+      Object.entries(day.bySection || {}).forEach(([section, seconds]) => {
+        bySection[section] = Number(bySection[section] || 0) + Number(seconds || 0);
+      });
+    });
+    Object.entries(pendingUsageByDate).filter(([date]) => isIncluded(date)).forEach(([, sections]) => {
+      Object.entries(sections).forEach(([section, seconds]) => {
+        const value = Number(seconds || 0);
+        totalSeconds += value;
+        bySection[section] = Number(bySection[section] || 0) + value;
+      });
+    });
+    return { totalSeconds, bySection };
+  };
+
   const buildCurrentReport = (range = reportRange) => {
     const days = range === "monthly" ? 30 : 7;
     const rangeLabel = range === "monthly" ? "Monthly" : "Weekly";
@@ -1508,6 +1740,7 @@ ${latestAnswer}`;
     const revisedTopics = Object.values(revisionProgress || {});
     const scores = recentTests.map((test) => Number(test.percentage || 0)).filter((score) => Number.isFinite(score));
     const averageScore = scores.length ? Math.round(scores.reduce((sum, score) => sum + score, 0) / scores.length) : 0;
+    const usage = getUsageSummary(days);
     const activityCounts = recentActivities.reduce((acc, log) => {
       const key = log.type || "activity";
       acc[key] = (acc[key] || 0) + 1;
@@ -1519,6 +1752,7 @@ ${latestAnswer}`;
       `${recentTests.length} test${recentTests.length !== 1 ? "s" : ""} attempted`,
       `${recentNotes.length} note${recentNotes.length !== 1 ? "s" : ""} created or updated`,
       `${recentDoubts.length} doubt${recentDoubts.length !== 1 ? "s" : ""} marked`,
+      `${formatUsageDuration(usage.totalSeconds)} active study time`,
     ];
     return {
       range,
@@ -1539,6 +1773,7 @@ ${latestAnswer}`;
         activeDoubts: doubts.filter((doubt) => !doubt.resolved).length,
         completedTopics: completedTopics.length,
         revisedTopics: revisedTopics.length,
+        timeSpentSeconds: usage.totalSeconds,
       },
       subjects,
       recentActivities: recentActivities.slice(0, 8),
@@ -2043,6 +2278,11 @@ ${latestAnswer}`;
   const activeDoubts = doubts.filter((doubt) => !doubt.resolved);
   const resolvedDoubts = doubts.filter((doubt) => doubt.resolved);
   const recentQuestions = activityLogs.filter((log) => ["question", "voice_question", "diagram_request"].includes(log.type));
+  const todayUsage = getUsageSummary(1);
+  const weeklyUsage = getUsageSummary(7);
+  const monthlyUsage = getUsageSummary(30);
+  const usageSectionEntries = Object.entries(weeklyUsage.bySection)
+    .sort(([, a], [, b]) => Number(b) - Number(a));
   const weeklyReport = buildCurrentReport("weekly");
   const orderedSubjects = getOrderedSubjects(currentSyllabus);
   const subjectProgressList = orderedSubjects.map((subject) => ({ subject, ...getSubjectProgress(subject) }));
@@ -2335,6 +2575,7 @@ ${latestAnswer}`;
                   { label: "Quiz Average", value: testAttempts.length ? `${averageTestScore}%` : "--", sub: `${testAttempts.length} test${testAttempts.length !== 1 ? "s" : ""} attempted` },
                   { label: "Questions Asked", value: recentQuestions.length, sub: "Text, voice, and diagrams" },
                   { label: "Active Doubts", value: activeDoubts.length, sub: `${resolvedDoubts.length} resolved` },
+                  { label: "Time Today", value: formatUsageDuration(todayUsage.totalSeconds), sub: usageActive ? "Active time is being tracked" : "Paused while idle or hidden" },
                 ].map((card) => (
                   <div key={card.label} style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "16px", padding: "16px", boxShadow: "0 4px 18px rgba(43,88,136,0.06)" }}>
                     <div style={{ fontSize: "11px", color: B.gray500, fontWeight: 900, textTransform: "uppercase" }}>{card.label}</div>
@@ -2828,7 +3069,32 @@ ${latestAnswer}`;
           <div style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "18px", overflow: "hidden", boxShadow: "0 4px 20px rgba(43,88,136,0.06)" }}>
             <div style={{ padding: "16px 20px", borderBottom: `1px solid ${B.gray200}` }}>
               <h2 style={{ fontSize: "17px", fontWeight: 800, color: B.navy, margin: 0 }}>Activity Tracking</h2>
-              <p style={{ fontSize: "12px", color: B.gray500, margin: "3px 0 0" }}>{activityLogs.length} recent activity record{activityLogs.length !== 1 ? "s" : ""}</p>
+              <p style={{ fontSize: "12px", color: B.gray500, margin: "3px 0 0" }}>{usageActive ? "Tracking active app time" : "Time tracking is paused while idle or away"} - {activityLogs.length} recent activity record{activityLogs.length !== 1 ? "s" : ""}</p>
+            </div>
+
+            <div style={{ padding: "16px", borderBottom: `1px solid ${B.gray200}`, background: B.gray50 }}>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(130px, 1fr))", gap: "10px" }}>
+                {[
+                  { label: "Today", value: todayUsage.totalSeconds },
+                  { label: "Last 7 Days", value: weeklyUsage.totalSeconds },
+                  { label: "Last 30 Days", value: monthlyUsage.totalSeconds },
+                  { label: "This Session", value: sessionUsageSeconds },
+                ].map((item) => (
+                  <div key={item.label} style={{ padding: "13px", borderRadius: "12px", background: B.white, border: `1px solid ${B.gray200}` }}>
+                    <div style={{ fontSize: "10px", color: B.gray500, fontWeight: 900, textTransform: "uppercase" }}>{item.label}</div>
+                    <div style={{ fontSize: "22px", color: B.navy, fontWeight: 900, marginTop: "5px" }}>{usageLoading ? "--" : formatUsageDuration(item.value)}</div>
+                  </div>
+                ))}
+              </div>
+              {usageSectionEntries.length > 0 && (
+                <div style={{ marginTop: "12px", display: "flex", gap: "8px", flexWrap: "wrap" }}>
+                  {usageSectionEntries.map(([section, seconds]) => (
+                    <span key={section} style={{ padding: "7px 9px", borderRadius: "9px", background: B.navyLight, color: B.navy, fontSize: "11px", fontWeight: 800 }}>
+                      {USAGE_SECTION_LABELS[section] || section}: {formatUsageDuration(seconds)}
+                    </span>
+                  ))}
+                </div>
+              )}
             </div>
 
             <div style={{ maxHeight: "620px", overflowY: "auto", padding: activityLogs.length ? "16px" : 0 }}>
@@ -2887,6 +3153,7 @@ ${latestAnswer}`;
             { label: "Avg Score", value: report.metrics.tests ? `${report.metrics.averageScore}%` : "--" },
             { label: "Notes", value: report.metrics.notes },
             { label: "Active Doubts", value: report.metrics.activeDoubts },
+            { label: "Time Spent", value: formatUsageDuration(report.metrics.timeSpentSeconds) },
           ];
           return (
             <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1.35fr) minmax(280px, 0.75fr)", gap: "16px", alignItems: "start" }}>
@@ -3008,6 +3275,7 @@ ${latestAnswer}`;
             { label: "Active Doubts", value: activeDoubts.length, hint: `${resolvedDoubts.length} resolved` },
             { label: "Notes Saved", value: notes.length, hint: "Student-created notes" },
             { label: "Reports Saved", value: reports.length, hint: "Weekly/monthly snapshots" },
+            { label: "Time Spent (7 Days)", value: formatUsageDuration(weeklyReport.metrics.timeSpentSeconds), hint: `Today: ${formatUsageDuration(todayUsage.totalSeconds)}` },
           ];
 
           return (

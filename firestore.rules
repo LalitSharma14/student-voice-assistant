@@ -58,6 +58,13 @@ service cloud.firestore {
 
         allow update, delete: if false;
       }
+
+      match /usageDays/{dayId} {
+        allow read, create, update: if request.auth != null
+          && request.auth.uid == userId;
+
+        allow delete: if false;
+      }
     }
   }
 }
