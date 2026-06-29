@@ -271,12 +271,24 @@ function AssistantBubble({ msg, index, playingIndex, playAudio, stopAudio, onTyp
 }
 
 // ── Progress bar ───────────────────────────────────────────
-function ProgressBar({ percent, color = B.navy }) {
+function PencilProgressBar({ percent, color = B.navy, compact = false }) {
+  const safePercent = Math.max(0, Math.min(100, Number(percent) || 0));
   return (
-    <div style={{ width: "100%", height: "6px", borderRadius: "999px", background: B.gray200, overflow: "hidden" }}>
-      <div style={{ width: `${percent}%`, height: "100%", borderRadius: "999px", background: color, transition: "width 0.4s ease" }} />
-    </div>
+    <span className={`student-pencil-track ${compact ? "compact" : ""}`} aria-label={`${safePercent}% complete`}>
+      <span className="student-pencil-fill" style={{ width: `${safePercent}%`, opacity: safePercent ? 1 : 0, "--pencil-color": color }}>
+        <span className="student-pencil-tip" aria-hidden="true">
+          <svg viewBox="0 0 18 20" focusable="false"><path d="M18 0 L0 10 L18 20 Z" fill="#fde4c3" stroke="#1c1c1c" strokeWidth="1.5" strokeLinejoin="round"/><path d="M6 6.67 L0 10 L6 13.33 Z" fill="#2b3542" stroke="#1c1c1c" strokeWidth="1.5" strokeLinejoin="round"/></svg>
+        </span>
+        <span className="student-pencil-body" aria-hidden="true" />
+        <span className="student-pencil-ferrule" aria-hidden="true" />
+        <span className="student-pencil-eraser" aria-hidden="true" />
+      </span>
+    </span>
   );
+}
+
+function ProgressBar({ percent, color = B.navy }) {
+  return <PencilProgressBar percent={percent} color={color} />;
 }
 
 // ── Chat history helpers ───────────────────────────────────
@@ -348,6 +360,7 @@ export default function Home() {
   const [submittedTestResult,setSubmittedTestResult]= useState(null);
   const [selectedTestAttempt,setSelectedTestAttempt]= useState(null);
   const [testSubjectFilter,   setTestSubjectFilter]   = useState("All");
+  const [homeSubjectFilter,   setHomeSubjectFilter]   = useState("All");
   const [notificationsOpen,   setNotificationsOpen]   = useState(false);
   const [user,               setUser]               = useState(null);
   const [userProfile,        setUserProfile]        = useState(null);
@@ -2388,6 +2401,47 @@ ${latestAnswer}`;
   const weeklyReport = buildCurrentReport("weekly");
   const orderedSubjects = getOrderedSubjects(currentSyllabus);
   const subjectProgressList = orderedSubjects.map((subject) => ({ subject, ...getSubjectProgress(subject) }));
+  const revisionEntries = Object.values(revisionProgress || {}).filter((entry) => entry?.revised);
+  const overallRevisionPercent = overallProgress.total
+    ? Math.min(100, Math.round((revisionEntries.length / overallProgress.total) * 100))
+    : 0;
+  const doubtResolutionPercent = doubts.length
+    ? Math.round((resolvedDoubts.length / doubts.length) * 100)
+    : 0;
+  const confidenceParts = [
+    { score: overallProgress.percent, weight: 45 },
+    ...(testAttempts.length ? [{ score: averageTestScore, weight: 35 }] : []),
+    ...(revisionEntries.length ? [{ score: overallRevisionPercent, weight: 10 }] : []),
+    ...(doubts.length ? [{ score: doubtResolutionPercent, weight: 10 }] : []),
+  ];
+  const confidenceWeight = confidenceParts.reduce((sum, part) => sum + part.weight, 0);
+  const overallConfidence = confidenceWeight
+    ? Math.round(confidenceParts.reduce((sum, part) => sum + (part.score * part.weight), 0) / confidenceWeight)
+    : 0;
+  const subjectConfidenceList = subjectProgressList.map((subjectProgress) => {
+    const subjectTests = testAttempts.filter((test) => test.subject === subjectProgress.subject);
+    const subjectTestAverage = subjectTests.length
+      ? Math.round(subjectTests.reduce((sum, test) => sum + Number(test.percentage || 0), 0) / subjectTests.length)
+      : 0;
+    const subjectRevisions = revisionEntries.filter((entry) => entry.subject === subjectProgress.subject).length;
+    const revisionPercent = subjectProgress.total
+      ? Math.min(100, Math.round((subjectRevisions / subjectProgress.total) * 100))
+      : 0;
+    const parts = [
+      { score: subjectProgress.percent, weight: 55 },
+      ...(subjectTests.length ? [{ score: subjectTestAverage, weight: 35 }] : []),
+      ...(subjectRevisions ? [{ score: revisionPercent, weight: 10 }] : []),
+    ];
+    const totalWeight = parts.reduce((sum, part) => sum + part.weight, 0);
+    const activeSubjectDoubts = activeDoubts.filter((doubt) => doubt.subject === subjectProgress.subject).length;
+    const score = Math.max(0, Math.min(100,
+      Math.round(parts.reduce((sum, part) => sum + (part.score * part.weight), 0) / totalWeight)
+      - Math.min(10, activeSubjectDoubts * 3)
+    ));
+    return { ...subjectProgress, score, testAverage: subjectTestAverage, tests: subjectTests.length, revisions: subjectRevisions };
+  }).sort((a, b) => b.score - a.score);
+  const testTrend = testAttempts.slice(0, 8).reverse();
+  const maxWeeklySectionSeconds = Math.max(1, ...usageSectionEntries.map(([, seconds]) => Number(seconds || 0)));
   const continueLessons = subjectProgressList
     .map(({ subject, percent }) => {
       const chapters = currentSyllabus?.[subject] || [];
@@ -2395,8 +2449,17 @@ ${latestAnswer}`;
       const topic = chapter?.subtopics?.find((item) => !isCompletedStatus(getTopicStatus(subject, chapter.title, item))) || chapter?.subtopics?.[0] || "";
       return chapter && topic ? { subject, chapter, topic, percent } : null;
     })
-    .filter(Boolean)
-    .slice(0, 4);
+    .filter(Boolean);
+  const filteredContinueLessons = homeSubjectFilter === "All"
+    ? continueLessons
+    : continueLessons.filter((lesson) => lesson.subject === homeSubjectFilter);
+  const weakestSubject = [...subjectConfidenceList].sort((a, b) => a.score - b.score)[0] || null;
+  const maxDailyStudySeconds = Math.max(1, ...weeklyStudyDays.map((day) => Number(studySecondsByDate[day.dateKey] || 0)));
+  const recentTestAverage = testAttempts.length
+    ? Math.round(testAttempts.slice(0, 3).reduce((sum, test) => sum + Number(test.percentage || 0), 0) / Math.min(3, testAttempts.length))
+    : 0;
+  const greetingHour = new Date().getHours();
+  const dashboardGreeting = greetingHour < 12 ? "Good morning" : greetingHour < 17 ? "Good afternoon" : "Good evening";
   const notificationItems = [
     activeDoubts.length ? {
       id: "active-doubts",
@@ -2660,6 +2723,168 @@ ${latestAnswer}`;
 
         {/* ── CHAT TAB ── */}
         {activeTab === "home" && (
+          <div className="designer-home-dashboard">
+            <section className="designer-home-hero">
+              <div className="designer-home-hero-copy">
+                <div className="designer-streak-pill">
+                  <span className="designer-streak-mark">{studyStreak}</span>
+                  <span>{studyStreak}-day study streak</span>
+                </div>
+                <h1>{dashboardGreeting}, {userProfile?.name?.split(" ")[0] || "Student"}!</h1>
+                <p>You have {DAILY_GOAL_DEFINITIONS.length - completedDailyGoals} learning goal{DAILY_GOAL_DEFINITIONS.length - completedDailyGoals === 1 ? "" : "s"} left today. Keep the momentum going.</p>
+              </div>
+              <button className="designer-ai-active" onClick={() => setActiveTab("chat")}>
+                <span className="designer-ai-orb">AI</span>
+                <span><strong>AI Tutor</strong><small>Active and ready to help</small></span>
+                <i aria-hidden="true">&rarr;</i>
+              </button>
+            </section>
+
+            <section className="designer-kpi-grid" aria-label="Learning overview">
+              {[
+                { mark: "TM", label: "Topics Mastered", value: `${overallProgress.completed}/${overallProgress.total}`, note: `${overallProgress.percent}% of syllabus`, tone: "blue" },
+                { mark: "CS", label: "Confidence Score", value: `${overallConfidence}%`, note: weakestSubject ? `${weakestSubject.subject} needs attention` : "Start learning to build confidence", tone: "pink" },
+                { mark: "QA", label: "Last Quizzes Average", value: testAttempts.length ? `${recentTestAverage}%` : "--", note: `${Math.min(3, testAttempts.length)} recent test${Math.min(3, testAttempts.length) === 1 ? "" : "s"}`, tone: "green" },
+                { mark: "ST", label: "Study Time This Week", value: formatUsageDuration(weeklyUsage.totalSeconds), note: `${weeklyStudyDays.filter((day) => day.active).length} active day${weeklyStudyDays.filter((day) => day.active).length === 1 ? "" : "s"}`, tone: "gold" },
+              ].map((card) => (
+                <article className={`designer-kpi-card ${card.tone}`} key={card.label}>
+                  <div className="designer-kpi-head"><span>{card.label}</span><i>{card.mark}</i></div>
+                  <strong>{card.value}</strong>
+                  <small>{card.note}</small>
+                </article>
+              ))}
+            </section>
+
+            <section className="designer-dashboard-split">
+              <article className="designer-dashboard-card">
+                <div className="designer-card-heading">
+                  <div><span>YOUR ROUTINE</span><h2>This Week</h2></div>
+                  <button onClick={() => setActiveTab("activity")}>View activity</button>
+                </div>
+                <div className="designer-week-strip">
+                  {weeklyStudyDays.map((day) => (
+                    <div className={`${day.active ? "checked" : ""} ${day.today ? "current" : ""}`} key={day.dateKey} title={day.dateKey}>
+                      <span>{day.label}</span>
+                      <strong>{day.active ? "✓" : day.day}</strong>
+                    </div>
+                  ))}
+                </div>
+                <div className="designer-upcoming-list">
+                  <span className="designer-section-label">TODAY&apos;S GOALS</span>
+                  {DAILY_GOAL_DEFINITIONS.map((goal, index) => (
+                    <button key={goal.id} onClick={() => setActiveTab(goal.tab)} className={dailyGoals[goal.id] ? "done" : ""}>
+                      <i>{dailyGoals[goal.id] ? "✓" : index + 1}</i>
+                      <span><strong>{goal.text}</strong><small>{dailyGoals[goal.id] ? "Completed today" : "Continue your learning plan"}</small></span>
+                      <b aria-hidden="true">&rarr;</b>
+                    </button>
+                  ))}
+                </div>
+              </article>
+
+              <article className="designer-dashboard-card designer-confidence-card">
+                <div className="designer-card-heading">
+                  <div><span>AI ANALYSIS</span><h2>Learning Confidence</h2></div>
+                  <em>AI</em>
+                </div>
+                <div className="designer-confidence-body">
+                  <div className="designer-confidence-ring" style={{ "--confidence": `${overallConfidence * 3.6}deg` }}><span>{overallConfidence}%</span></div>
+                  <div className="designer-confidence-bars">
+                    {subjectConfidenceList.slice(0, 4).map((subject, index) => (
+                      <div key={subject.subject}>
+                        <span><strong>{subject.subject}</strong><b>{subject.score}%</b></span>
+                        <PencilProgressBar percent={subject.score} color={["#2c5688", "#fd4463", "#10b981", "#e4a11b"][index % 4]} compact />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <button className="designer-recommendation" onClick={() => setActiveTab(activeDoubts.length ? "doubts" : "syllabus")}>
+                  <i>!</i>
+                  <span>
+                    <strong>{activeDoubts.length ? `${activeDoubts.length} saved doubt${activeDoubts.length === 1 ? "" : "s"} need attention.` : weakestSubject ? `${weakestSubject.subject} needs a boost.` : "Your learning profile is ready."}</strong>
+                    <small>{activeDoubts.length ? "Open Doubts and continue from the exact conversation." : weakestSubject ? `Study the next ${weakestSubject.subject} topic to improve your score.` : "Complete topics and tests for stronger recommendations."}</small>
+                  </span>
+                  <b aria-hidden="true">&rarr;</b>
+                </button>
+                <p className="designer-analysis-time">Updated from your latest learning activity</p>
+              </article>
+            </section>
+
+            <button className="designer-weekly-digest" onClick={() => setActiveTab("reports")}>
+              <span><strong>Weekly Digest</strong><small>{weeklyReport.summary?.[0] || "Your weekly learning report is ready."}</small></span>
+              <b>View full report &rarr;</b>
+            </button>
+
+            <section className="designer-dashboard-three">
+              <article className="designer-dashboard-card designer-analytics-card">
+                <div className="designer-card-heading"><div><span>PROGRESS</span><h2>Overall Syllabus Completion</h2></div></div>
+                <div className="designer-completion-ring" style={{ "--completion": `${overallProgress.percent * 3.6}deg` }}><span><strong>{overallProgress.percent}%</strong><small>Completed</small></span></div>
+                <div className="designer-progress-legend">
+                  <span><i className="green" />{overallProgress.completed} Completed</span>
+                  <span><i className="pink" />{activeDoubts.length} Doubts</span>
+                  <span><i className="grey" />{Math.max(0, overallProgress.total - overallProgress.completed)} Pending</span>
+                </div>
+              </article>
+
+              <article className="designer-dashboard-card designer-analytics-card">
+                <div className="designer-card-heading"><div><span>FOCUS</span><h2>Study Time Breakdown</h2></div></div>
+                <p className="designer-big-stat">{formatUsageDuration(weeklyUsage.totalSeconds)} <small>this week</small></p>
+                <div className="designer-study-bars">
+                  {weeklyStudyDays.map((day) => {
+                    const seconds = Number(studySecondsByDate[day.dateKey] || 0);
+                    return (
+                      <div className={day.today ? "today" : ""} key={day.dateKey} title={`${day.dateKey}: ${formatUsageDuration(seconds)}`}>
+                        <span style={{ height: `${Math.max(seconds ? 8 : 2, (seconds / maxDailyStudySeconds) * 76)}px` }} />
+                        <small>{day.label}</small>
+                      </div>
+                    );
+                  })}
+                </div>
+              </article>
+
+              <article className="designer-dashboard-card designer-analytics-card">
+                <div className="designer-card-heading"><div><span>PERFORMANCE</span><h2>Test Average Trends</h2></div></div>
+                <p className="designer-big-stat">{testAttempts.length ? `${averageTestScore}%` : "--"} <small>overall score</small></p>
+                {testTrend.length ? (
+                  <div className="designer-test-trend">
+                    {testTrend.slice(-6).map((test, index) => (
+                      <div key={test.attemptId || `${test.testId}-${index}`} title={`${test.topicTitle || test.chapterTitle || "Test"}: ${test.percentage || 0}%`}>
+                        <b>{test.percentage || 0}%</b>
+                        <span style={{ height: `${Math.max(5, Number(test.percentage || 0) * 0.76)}px` }} />
+                      </div>
+                    ))}
+                  </div>
+                ) : <div className="designer-empty-stat"><strong>No test history yet</strong><button onClick={() => setActiveTab("test")}>Take your first test</button></div>}
+              </article>
+            </section>
+
+            <section className="designer-continue-section">
+              <div className="designer-continue-heading">
+                <div><h2>Continue Learning</h2><span>AI-PERSONALIZED</span></div>
+                <button onClick={() => setActiveTab("syllabus")}>Open syllabus &rarr;</button>
+              </div>
+              <div className="designer-learning-filters" role="tablist" aria-label="Filter lessons by subject">
+                {["All", ...continueLessons.map((lesson) => lesson.subject).filter((subject, index, list) => list.indexOf(subject) === index)].map((subject) => (
+                  <button className={homeSubjectFilter === subject ? "active" : ""} key={subject} onClick={() => setHomeSubjectFilter(subject)}>{subject}</button>
+                ))}
+              </div>
+              {filteredContinueLessons.length ? (
+                <div className="designer-lesson-grid">
+                  {filteredContinueLessons.slice(0, 4).map((lesson, index) => (
+                    <button className={`designer-lesson-card tone-${index % 4}`} key={`${lesson.subject}-${lesson.chapter.title}-${lesson.topic}`} onClick={() => { setSelectedSubject(lesson.subject); setSelectedChapter(lesson.chapter.title); setSelectedTopic(lesson.topic); setActiveTab("syllabus"); }}>
+                      <div className="designer-lesson-top"><span>{lesson.subject}</span><i>{lesson.percent}%</i></div>
+                      <h3>{lesson.topic}</h3>
+                      <p>{lesson.chapter.title}</p>
+                      <div className="designer-lesson-progress"><PencilProgressBar percent={lesson.percent} color="#fd4463" compact /></div>
+                      <strong>Continue lesson <b aria-hidden="true">&rarr;</b></strong>
+                    </button>
+                  ))}
+                </div>
+              ) : <div className="designer-empty-lessons">No open topics are available for this subject.</div>}
+            </section>
+          </div>
+        )}
+
+        {activeTab === "legacy-home" && (
           <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1.4fr) minmax(280px, 0.8fr)", gap: "16px", alignItems: "start" }}>
             <div style={{ display: "grid", gap: "16px" }}>
               <div style={{ background: `linear-gradient(135deg, ${B.navy}, ${B.navyDark})`, borderRadius: "18px", padding: "22px", color: B.white, boxShadow: "0 10px 30px rgba(43,88,136,0.18)", display: "flex", justifyContent: "space-between", gap: "18px", alignItems: "center", flexWrap: "wrap" }}>
@@ -2683,6 +2908,7 @@ ${latestAnswer}`;
                   { label: "Active Doubts", value: activeDoubts.length, sub: `${resolvedDoubts.length} resolved` },
                   { label: "Time Today", value: formatUsageDuration(todayUsage.totalSeconds), sub: usageActive ? "Active time is being tracked" : "Paused while idle or hidden" },
                   { label: "Study Streak", value: `${studyStreak} day${studyStreak === 1 ? "" : "s"}`, sub: isActiveStudyDate(todayDateKey) ? "Today is counted" : "Study today to keep it going" },
+                  { label: "Confidence Score", value: `${overallConfidence}%`, sub: testAttempts.length ? `${averageTestScore}% test average` : "Build confidence through study and tests" },
                 ].map((card) => (
                   <div key={card.label} style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "16px", padding: "16px", boxShadow: "0 4px 18px rgba(43,88,136,0.06)" }}>
                     <div style={{ fontSize: "11px", color: B.gray500, fontWeight: 900, textTransform: "uppercase" }}>{card.label}</div>
@@ -2690,6 +2916,65 @@ ${latestAnswer}`;
                     <div style={{ fontSize: "11px", color: B.gray500, marginTop: "4px" }}>{card.sub}</div>
                   </div>
                 ))}
+              </div>
+
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "16px" }}>
+                <section style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "18px", padding: "18px", boxShadow: "0 4px 20px rgba(43,88,136,0.06)" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: "12px", marginBottom: "16px" }}>
+                    <div>
+                      <h3 style={{ fontSize: "17px", fontWeight: 900, color: B.navy, margin: 0 }}>Learning Confidence</h3>
+                      <p style={{ fontSize: "11px", color: B.gray500, margin: "4px 0 0" }}>Progress, tests, revision, and resolved doubts</p>
+                    </div>
+                    <div style={{ minWidth: "62px", textAlign: "center", padding: "9px", borderRadius: "12px", background: overallConfidence >= 70 ? B.greenLight : B.navyLight, color: overallConfidence >= 70 ? B.green : B.navy, fontSize: "20px", fontWeight: 900 }}>{overallConfidence}%</div>
+                  </div>
+                  <div style={{ display: "grid", gap: "11px" }}>
+                    {subjectConfidenceList.slice(0, 6).map((subject) => (
+                      <div key={subject.subject}>
+                        <div style={{ display: "flex", justifyContent: "space-between", gap: "10px", marginBottom: "5px", fontSize: "11px", fontWeight: 800 }}>
+                          <span style={{ color: B.gray700 }}>{subject.subject}</span>
+                          <span style={{ color: B.navy }}>{subject.score}%</span>
+                        </div>
+                        <div style={{ height: "7px", borderRadius: "999px", background: B.gray200, overflow: "hidden" }}>
+                          <div style={{ width: `${subject.score}%`, height: "100%", borderRadius: "999px", background: subject.score >= 70 ? B.green : subject.score >= 40 ? B.navy : B.orange, transition: "width 0.35s ease" }} />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+
+                <section style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "18px", padding: "18px", boxShadow: "0 4px 20px rgba(43,88,136,0.06)" }}>
+                  <h3 style={{ fontSize: "17px", fontWeight: 900, color: B.navy, margin: "0 0 14px" }}>Learning Analytics</h3>
+                  <div style={{ marginBottom: "18px" }}>
+                    <div style={{ fontSize: "11px", color: B.gray500, fontWeight: 900, textTransform: "uppercase", marginBottom: "9px" }}>Study Time - Last 7 Days</div>
+                    {usageSectionEntries.length ? (
+                      <div style={{ display: "grid", gap: "7px" }}>
+                        {usageSectionEntries.slice(0, 5).map(([section, seconds]) => (
+                          <div key={section} style={{ display: "grid", gridTemplateColumns: "72px minmax(0, 1fr) 52px", gap: "8px", alignItems: "center" }}>
+                            <span style={{ fontSize: "10px", color: B.gray700, fontWeight: 800, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{USAGE_SECTION_LABELS[section] || section}</span>
+                            <div style={{ height: "7px", borderRadius: "999px", background: B.gray200, overflow: "hidden" }}><div style={{ width: `${Math.max(4, (Number(seconds || 0) / maxWeeklySectionSeconds) * 100)}%`, height: "100%", background: B.navy, borderRadius: "999px" }} /></div>
+                            <span style={{ fontSize: "10px", color: B.gray500, textAlign: "right" }}>{formatUsageDuration(seconds)}</span>
+                          </div>
+                        ))}
+                      </div>
+                    ) : <div style={{ fontSize: "12px", color: B.gray500 }}>No study time recorded yet.</div>}
+                  </div>
+                  <div>
+                    <div style={{ fontSize: "11px", color: B.gray500, fontWeight: 900, textTransform: "uppercase", marginBottom: "9px" }}>Recent Test Scores</div>
+                    {testTrend.length ? (
+                      <div style={{ height: "118px", display: "flex", alignItems: "flex-end", gap: "8px", borderBottom: `1px solid ${B.gray200}`, padding: "0 2px 6px" }}>
+                        {testTrend.map((test, index) => {
+                          const percentage = Number(test.percentage || 0);
+                          return (
+                            <div key={test.attemptId || `${test.testId}-${index}`} title={`${test.topicTitle || test.chapterTitle || "Test"}: ${percentage}%`} style={{ flex: 1, minWidth: 0, height: "100%", display: "flex", flexDirection: "column", justifyContent: "flex-end", alignItems: "center", gap: "4px" }}>
+                              <span style={{ fontSize: "9px", color: B.gray500, fontWeight: 800 }}>{percentage}%</span>
+                              <div style={{ width: "100%", maxWidth: "28px", height: `${Math.max(6, percentage)}%`, borderRadius: "5px 5px 2px 2px", background: percentage >= 75 ? B.green : percentage >= 50 ? B.navy : B.orange }} />
+                            </div>
+                          );
+                        })}
+                      </div>
+                    ) : <div style={{ fontSize: "12px", color: B.gray500 }}>No test scores recorded yet.</div>}
+                  </div>
+                </section>
               </div>
 
               <div style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "18px", padding: "18px", boxShadow: "0 4px 20px rgba(43,88,136,0.06)" }}>
@@ -3062,7 +3347,12 @@ ${latestAnswer}`;
 
         {/* ── HISTORY TAB ── */}
         {activeTab === "history" && (
-          <div style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "18px", overflow: "hidden", boxShadow: "0 4px 20px rgba(43,88,136,0.06)" }}>
+          <>
+            <div className="designer-history-page-heading">
+              <h1>Study History logs</h1>
+              <p>Review your past learning activities and previous AI Tutor conversations.</p>
+            </div>
+            <div className="designer-history-layout designer-history-card" style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "18px", overflow: "hidden", boxShadow: "0 4px 20px rgba(43,88,136,0.06)" }}>
 
             {/* History header */}
             <div style={{ padding: "16px 20px", borderBottom: `1px solid ${B.gray200}`, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
@@ -3070,7 +3360,7 @@ ${latestAnswer}`;
                 <h2 style={{ fontSize: "17px", fontWeight: 700, color: B.navy, margin: 0 }}>Chat History</h2>
                 <p style={{ fontSize: "12px", color: B.gray500, margin: "3px 0 0" }}>{chatSessions.length} saved conversations</p>
               </div>
-              <button onClick={startNewSession} style={{ padding: "8px 14px", borderRadius: "10px", border: "none", background: `linear-gradient(135deg, ${B.navy}, ${B.navyDark})`, color: B.white, fontSize: "13px", fontWeight: 700, cursor: "pointer", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+              <button onClick={startNewSession} style={{ padding: "8px 14px", borderRadius: "10px", border: "none", background: B.navy, color: B.white, fontSize: "13px", fontWeight: 700, cursor: "pointer" }}>
                 + New Chat
               </button>
             </div>
@@ -3188,6 +3478,7 @@ ${latestAnswer}`;
               )}
             </div>
           </div>
+          </>
         )}
 
         {/* ── ACTIVITY TAB ── */}
@@ -3280,6 +3571,7 @@ ${latestAnswer}`;
             { label: "Notes", value: report.metrics.notes },
             { label: "Active Doubts", value: report.metrics.activeDoubts },
             { label: "Time Spent", value: formatUsageDuration(report.metrics.timeSpentSeconds) },
+            { label: "Confidence", value: `${overallConfidence}%` },
           ];
           return (
             <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1.35fr) minmax(280px, 0.75fr)", gap: "16px", alignItems: "start" }}>
@@ -3402,6 +3694,7 @@ ${latestAnswer}`;
             { label: "Notes Saved", value: notes.length, hint: "Student-created notes" },
             { label: "Reports Saved", value: reports.length, hint: "Weekly/monthly snapshots" },
             { label: "Time Spent (7 Days)", value: formatUsageDuration(weeklyReport.metrics.timeSpentSeconds), hint: `Today: ${formatUsageDuration(todayUsage.totalSeconds)}` },
+            { label: "Confidence Score", value: `${overallConfidence}%`, hint: testAttempts.length ? `${averageTestScore}% test average` : "No tests attempted yet" },
           ];
 
           return (
@@ -3897,7 +4190,7 @@ ${latestAnswer}`;
                           <span className="designer-chapter-copy">
                             <strong>{chapter.title}</strong>
                             <small>{chapterProgress.completed}/{chapterProgress.total} topics · {chapterProgress.status}</small>
-                            <span className="designer-inline-progress"><i style={{ width: `${chapterProgress.percent}%` }} /></span>
+                            <PencilProgressBar percent={chapterProgress.percent} color="#fd4463" compact />
                           </span>
                           <span className="designer-chevron">{expanded ? "−" : "+"}</span>
                         </button>
@@ -4174,6 +4467,151 @@ ${latestAnswer}`;
         .student-notification-arrow { color:#9a9da5; font-size:19px; text-align:center; }
         .student-view-container { flex:1; min-height:0; overflow-y:auto; padding:32px; background:#fff; }
         .student-view-container>div:not(.student-legacy-hero):not(.student-legacy-tabs) { max-width:1200px; margin-left:auto; margin-right:auto; }
+        .designer-history-page-heading { width:100%; max-width:1200px; margin:0 auto 20px; }
+        .designer-history-page-heading h1 { margin:0 0 8px; color:var(--designer-blue); font:600 40px/1.1 'Poppins','Inter',sans-serif; letter-spacing:0; }
+        .designer-history-page-heading p { margin:0; color:#4c4c4c; font:400 16px/1.45 'Inter',sans-serif; letter-spacing:0; }
+        .designer-history-layout { width:100%; max-width:1200px; margin:0 auto; font-family:'Inter',sans-serif !important; letter-spacing:0 !important; }
+        .designer-history-layout * { font-family:'Inter',sans-serif !important; letter-spacing:0 !important; }
+        .designer-history-layout h2 { color:var(--designer-blue) !important; font:600 22px/1.25 'Poppins','Inter',sans-serif !important; }
+        .designer-history-layout button { font-family:'Inter',sans-serif !important; }
+        .designer-history-card { border-color:var(--designer-dove) !important; border-radius:24px !important; box-shadow:0 20px 25px -5px rgba(0,0,0,.08),0 8px 10px -6px rgba(0,0,0,.04) !important; }
+        .student-pencil-track { width:100%; height:20px; border:1.5px solid var(--designer-dove); border-radius:999px; background:var(--designer-fog); display:flex; align-items:center; overflow:hidden; }
+        .student-pencil-track.compact { height:15px; }
+        .student-pencil-fill { min-width:38px; height:100%; display:flex; align-items:stretch; position:relative; transform:scaleX(-1); transition:width .8s cubic-bezier(.25,1,.5,1),opacity .25s ease; }
+        .student-pencil-tip { width:18px; height:100%; flex:0 0 18px; overflow:hidden; }
+        .student-pencil-tip svg { width:100%; height:100%; display:block; }
+        .student-pencil-body { flex:1; min-width:0; border:1.5px solid #1c1c1c; border-right:0; background-color:var(--pencil-color,#ffd147); background-image:linear-gradient(to bottom,rgba(255,255,255,.32) 0 30%,#1c1c1c 30% 35%,transparent 35% 65%,#1c1c1c 65% 70%,rgba(0,0,0,.12) 70%); }
+        .student-pencil-ferrule { width:8px; flex:0 0 8px; border:1.5px solid #1c1c1c; background:#e2eff8; }
+        .student-pencil-eraser { width:12px; flex:0 0 12px; border:1.5px solid #1c1c1c; border-left:0; border-radius:0 999px 999px 0; background:#fd5e8c; }
+        .student-pencil-track.compact .student-pencil-tip { width:14px; flex-basis:14px; }
+        .student-pencil-track.compact .student-pencil-fill { min-width:31px; }
+        .student-pencil-track.compact .student-pencil-ferrule { width:6px; flex-basis:6px; }
+        .student-pencil-track.compact .student-pencil-eraser { width:9px; flex-basis:9px; }
+        .designer-home-dashboard { width:100%; display:grid; gap:24px; color:var(--designer-ink); }
+        .designer-home-dashboard button { font-family:'Inter',sans-serif; }
+        .designer-home-hero { min-height:178px; padding:30px 32px; border:1px solid rgba(253,68,99,.16); border-radius:24px; background:#ffe6e9; display:flex; align-items:center; justify-content:space-between; gap:28px; overflow:hidden; position:relative; }
+        .designer-home-hero:after { content:''; position:absolute; width:190px; height:190px; right:-72px; bottom:-108px; border:28px solid rgba(253,68,99,.08); border-radius:50%; pointer-events:none; }
+        .designer-home-hero-copy { min-width:0; position:relative; z-index:1; }
+        .designer-streak-pill { width:max-content; max-width:100%; margin-bottom:13px; padding:6px 10px 6px 7px; border-radius:999px; background:rgba(255,255,255,.74); display:flex; align-items:center; gap:7px; color:#b52943; font-size:11px; font-weight:700; }
+        .designer-streak-mark { width:23px; height:23px; border-radius:50%; background:var(--designer-pink); color:#fff; display:grid; place-items:center; font-size:9px; }
+        .designer-home-hero h1 { margin:0 0 7px; color:var(--designer-blue); font:600 28px/1.25 'Poppins','Inter',sans-serif; letter-spacing:0; }
+        .designer-home-hero p { max-width:620px; margin:0; color:#4c4c4c; font-size:13px; line-height:1.55; letter-spacing:0; }
+        .designer-ai-active { min-width:242px; min-height:72px; padding:12px 14px; border:1px solid rgba(44,86,136,.14); border-radius:18px; background:rgba(255,255,255,.86); display:grid; grid-template-columns:44px minmax(0,1fr) 18px; align-items:center; gap:10px; color:var(--designer-blue); text-align:left; cursor:pointer; position:relative; z-index:1; box-shadow:0 10px 24px rgba(44,86,136,.07); }
+        .designer-ai-active:hover { border-color:var(--designer-blue); transform:translateY(-1px); }
+        .designer-ai-orb { width:42px; height:42px; border-radius:50%; background:linear-gradient(145deg,var(--designer-pink),#a855f7); color:#fff; display:grid; place-items:center; font:700 12px 'Poppins',sans-serif; }
+        .designer-ai-active strong,.designer-ai-active small { display:block; }
+        .designer-ai-active strong { font-size:13px; }
+        .designer-ai-active small { margin-top:3px; color:#777b86; font-size:10px; }
+        .designer-ai-active i { font-size:20px; font-style:normal; }
+        .designer-kpi-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:18px; }
+        .designer-kpi-card { min-width:0; min-height:126px; padding:18px; border:1px solid var(--designer-dove); border-radius:24px; background:#fff; box-shadow:0 12px 25px -15px rgba(0,0,0,.22); display:flex; flex-direction:column; justify-content:space-between; transition:transform .2s ease,box-shadow .2s ease; }
+        .designer-kpi-card:hover { transform:translateY(-3px); box-shadow:0 15px 28px -14px rgba(0,0,0,.25); }
+        .designer-kpi-head { display:flex; align-items:center; justify-content:space-between; gap:8px; }
+        .designer-kpi-head>span { color:#777b86; font-size:10px; font-weight:750; text-transform:uppercase; line-height:1.35; }
+        .designer-kpi-head i { width:31px; height:31px; flex:0 0 31px; border-radius:9px; display:grid; place-items:center; font-size:8px; font-style:normal; font-weight:800; }
+        .designer-kpi-card.blue i { background:#edf3f9; color:#2c5688; }
+        .designer-kpi-card.pink i { background:#ffe6e9; color:#d52d4a; }
+        .designer-kpi-card.green i { background:#e5f7ed; color:#12824c; }
+        .designer-kpi-card.gold i { background:#fff3d8; color:#9a6710; }
+        .designer-kpi-card>strong { margin-top:8px; color:var(--designer-blue); font:600 25px/1.15 'Poppins','Inter',sans-serif; }
+        .designer-kpi-card>small { color:#858892; font-size:10px; line-height:1.35; }
+        .designer-dashboard-split { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+        .designer-dashboard-card { min-width:0; padding:24px; border:1px solid var(--designer-dove); border-radius:24px; background:#fff; box-shadow:0 16px 28px -19px rgba(0,0,0,.24); display:flex; flex-direction:column; gap:18px; }
+        .designer-card-heading { min-width:0; display:flex; align-items:flex-start; justify-content:space-between; gap:12px; }
+        .designer-card-heading>div { min-width:0; }
+        .designer-card-heading span { display:block; margin-bottom:4px; color:#999ca4; font-size:9px; font-weight:750; }
+        .designer-card-heading h2 { margin:0; color:var(--designer-blue); font:600 18px/1.3 'Poppins','Inter',sans-serif; letter-spacing:0; }
+        .designer-card-heading button { padding:6px 0; border:0; background:transparent; color:var(--designer-blue); font-size:10px; font-weight:700; cursor:pointer; }
+        .designer-card-heading em { padding:5px 8px; border-radius:999px; background:#ffe6e9; color:#d52d4a; font-size:9px; font-style:normal; font-weight:800; }
+        .designer-week-strip { display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); gap:7px; }
+        .designer-week-strip>div { min-width:0; min-height:61px; padding:8px 2px; border:1px solid transparent; border-radius:14px; background:var(--designer-fog); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:7px; }
+        .designer-week-strip>div.checked { background:#edf3f9; color:var(--designer-blue); }
+        .designer-week-strip>div.current { border-color:var(--designer-pink); background:#ffe6e9; color:#d52d4a; }
+        .designer-week-strip span { color:#777b86; font-size:9px; font-weight:700; }
+        .designer-week-strip strong { font-size:11px; }
+        .designer-upcoming-list { display:grid; gap:8px; }
+        .designer-section-label { margin:2px 0 1px; color:#999ca4; font-size:9px; font-weight:750; }
+        .designer-upcoming-list button { min-height:58px; padding:8px 9px; border:1px solid transparent; border-radius:10px; background:#fafafa; display:grid; grid-template-columns:31px minmax(0,1fr) 16px; align-items:center; gap:9px; color:inherit; text-align:left; cursor:pointer; }
+        .designer-upcoming-list button:hover { border-color:#cbd8e6; background:#f7fafc; }
+        .designer-upcoming-list button.done { background:#f0faf4; }
+        .designer-upcoming-list button>i { width:29px; height:29px; border-radius:9px; background:#edf3f9; color:var(--designer-blue); display:grid; place-items:center; font-size:10px; font-style:normal; font-weight:800; }
+        .designer-upcoming-list button.done>i { background:#dff5e8; color:#12824c; }
+        .designer-upcoming-list button strong,.designer-upcoming-list button small { display:block; }
+        .designer-upcoming-list button strong { color:var(--designer-blue); font-size:11px; line-height:1.35; }
+        .designer-upcoming-list button small { margin-top:2px; color:#858892; font-size:9px; }
+        .designer-upcoming-list button>b { color:#9a9da5; font-size:15px; }
+        .designer-confidence-body { display:grid; grid-template-columns:118px minmax(0,1fr); align-items:center; gap:20px; }
+        .designer-confidence-ring,.designer-completion-ring { border-radius:50%; background:conic-gradient(var(--designer-pink) var(--confidence),#f0ece8 0); display:grid; place-items:center; position:relative; }
+        .designer-confidence-ring { width:112px; height:112px; }
+        .designer-confidence-ring:before,.designer-completion-ring:before { content:''; position:absolute; border-radius:50%; background:#fff; }
+        .designer-confidence-ring:before { inset:10px; }
+        .designer-confidence-ring>span { z-index:1; color:var(--designer-blue); font:600 19px 'Poppins',sans-serif; }
+        .designer-confidence-bars { display:grid; gap:10px; }
+        .designer-confidence-bars>div>span { display:flex; justify-content:space-between; gap:8px; margin-bottom:5px; }
+        .designer-confidence-bars strong,.designer-confidence-bars b { font-size:9px; }
+        .designer-confidence-bars strong { color:#4c4c4c; }
+        .designer-confidence-bars b { color:var(--designer-blue); }
+        .designer-recommendation { width:100%; min-height:74px; padding:12px; border:1px solid #ffd3da; border-radius:12px; background:#fff4f6; display:grid; grid-template-columns:30px minmax(0,1fr) 16px; align-items:center; gap:9px; color:inherit; text-align:left; cursor:pointer; }
+        .designer-recommendation>i { width:29px; height:29px; border-radius:50%; background:var(--designer-pink); color:#fff; display:grid; place-items:center; font-size:12px; font-style:normal; font-weight:800; }
+        .designer-recommendation strong,.designer-recommendation small { display:block; }
+        .designer-recommendation strong { color:#b52943; font-size:10px; line-height:1.4; }
+        .designer-recommendation small { margin-top:3px; color:#6d5b5e; font-size:9px; line-height:1.45; }
+        .designer-recommendation>b { color:#b52943; }
+        .designer-analysis-time { margin:0; color:#9a9da5; font-size:9px; text-align:right; }
+        .designer-weekly-digest { width:100%; min-height:82px; padding:16px 20px; border:1px solid rgba(44,86,136,.13); border-radius:18px; background:#edf3f9; display:flex; align-items:center; justify-content:space-between; gap:18px; color:inherit; text-align:left; cursor:pointer; }
+        .designer-weekly-digest strong,.designer-weekly-digest small { display:block; }
+        .designer-weekly-digest strong { color:var(--designer-blue); font:600 14px 'Poppins',sans-serif; }
+        .designer-weekly-digest small { max-width:760px; margin-top:4px; color:#4c4c4c; font-size:10px; line-height:1.45; }
+        .designer-weekly-digest>b { flex:0 0 auto; color:var(--designer-blue); font-size:10px; }
+        .designer-dashboard-three { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; }
+        .designer-analytics-card { min-height:315px; align-items:stretch; }
+        .designer-completion-ring { width:142px; height:142px; margin:0 auto; background:conic-gradient(#10b981 var(--completion),#eeeae6 0); }
+        .designer-completion-ring:before { inset:13px; }
+        .designer-completion-ring>span { z-index:1; display:flex; flex-direction:column; align-items:center; }
+        .designer-completion-ring strong { color:var(--designer-blue); font:600 23px 'Poppins',sans-serif; }
+        .designer-completion-ring small { color:#858892; font-size:9px; }
+        .designer-progress-legend { display:flex; flex-wrap:wrap; justify-content:center; gap:9px 13px; }
+        .designer-progress-legend span { display:flex; align-items:center; gap:5px; color:#777b86; font-size:9px; }
+        .designer-progress-legend i { width:7px; height:7px; border-radius:50%; }
+        .designer-progress-legend i.green { background:#10b981; }
+        .designer-progress-legend i.pink { background:#fd4463; }
+        .designer-progress-legend i.grey { background:#c9c5c0; }
+        .designer-big-stat { margin:0; color:var(--designer-blue); font:600 20px 'Poppins',sans-serif; }
+        .designer-big-stat small { color:#858892; font:400 9px 'Inter',sans-serif; }
+        .designer-study-bars,.designer-test-trend { height:116px; padding:0 4px 18px; border-bottom:1px solid #ece8e3; display:flex; align-items:flex-end; justify-content:space-between; gap:7px; }
+        .designer-study-bars>div,.designer-test-trend>div { flex:1; min-width:0; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:flex-end; gap:6px; }
+        .designer-study-bars span,.designer-test-trend span { width:min(25px,80%); min-height:2px; border-radius:5px 5px 2px 2px; background:#b7cce1; }
+        .designer-study-bars>div.today span { background:var(--designer-pink); }
+        .designer-study-bars small { color:#858892; font-size:9px; }
+        .designer-test-trend b { color:#777b86; font-size:8px; }
+        .designer-test-trend span { background:var(--designer-blue); }
+        .designer-empty-stat { min-height:110px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; color:#858892; }
+        .designer-empty-stat strong { font-size:11px; }
+        .designer-empty-stat button { padding:7px 10px; border:0; border-radius:7px; background:var(--designer-blue); color:#fff; font-size:9px; cursor:pointer; }
+        .designer-continue-section { display:grid; gap:16px; }
+        .designer-continue-heading { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+        .designer-continue-heading>div { display:flex; align-items:center; gap:10px; min-width:0; }
+        .designer-continue-heading h2 { margin:0; color:var(--designer-blue); font:600 20px 'Poppins',sans-serif; }
+        .designer-continue-heading span { padding:5px 8px; border-radius:999px; background:#ffe6e9; color:#d52d4a; font-size:8px; font-weight:800; }
+        .designer-continue-heading>button { border:0; background:transparent; color:var(--designer-blue); font-size:10px; font-weight:700; cursor:pointer; }
+        .designer-learning-filters { display:flex; gap:7px; overflow-x:auto; padding-bottom:2px; scrollbar-width:thin; }
+        .designer-learning-filters button { flex:0 0 auto; min-height:34px; padding:7px 13px; border:1px solid var(--designer-dove); border-radius:999px; background:#fff; color:#5f626b; font-size:10px; font-weight:700; cursor:pointer; }
+        .designer-learning-filters button.active { border-color:var(--designer-blue); background:var(--designer-blue); color:#fff; }
+        .designer-lesson-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
+        .designer-lesson-card { min-width:0; min-height:195px; padding:19px; border:1px solid var(--designer-dove); border-radius:24px; background:#fff; display:flex; flex-direction:column; align-items:stretch; color:inherit; text-align:left; cursor:pointer; box-shadow:0 13px 25px -18px rgba(0,0,0,.22); }
+        .designer-lesson-card:hover { border-color:#b8cadd; transform:translateY(-2px); }
+        .designer-lesson-top { display:flex; justify-content:space-between; gap:8px; }
+        .designer-lesson-top span,.designer-lesson-top i { padding:5px 8px; border-radius:999px; font-size:8px; font-style:normal; font-weight:800; }
+        .designer-lesson-card.tone-0 .designer-lesson-top span { background:#c7ddf5; color:#1e3a8a; }
+        .designer-lesson-card.tone-1 .designer-lesson-top span { background:#c9ead3; color:#065f46; }
+        .designer-lesson-card.tone-2 .designer-lesson-top span { background:#f4d9c6; color:#7c2d12; }
+        .designer-lesson-card.tone-3 .designer-lesson-top span { background:#f6d6d9; color:#9d174d; }
+        .designer-lesson-top i { background:#f2f0ed; color:#777b86; }
+        .designer-lesson-card h3 { margin:16px 0 4px; color:var(--designer-blue); font:600 15px/1.4 'Poppins','Inter',sans-serif; letter-spacing:0; overflow-wrap:anywhere; }
+        .designer-lesson-card p { margin:0; color:#858892; font-size:9px; line-height:1.45; }
+        .designer-lesson-progress { margin:15px 0 14px; }
+        .designer-lesson-card>strong { margin-top:auto; display:flex; justify-content:space-between; color:var(--designer-blue); font-size:10px; }
+        .designer-empty-lessons { min-height:120px; padding:30px; border:1px dashed var(--designer-dove); border-radius:16px; display:grid; place-items:center; color:#858892; font-size:11px; }
         .student-legacy-hero,.student-legacy-tabs { display:none !important; }
         .student-chat-workspace { max-width:1080px !important; min-height:calc(100vh - 136px); border:1px solid var(--designer-dove) !important; border-radius:24px !important; box-shadow:0 20px 25px -5px rgba(0,0,0,.08),0 8px 10px -6px rgba(0,0,0,.04) !important; display:flex; flex-direction:column; }
         .student-chat-header { min-height:76px; padding:16px 22px !important; border-bottom:1px solid var(--designer-dove) !important; }
@@ -4222,8 +4660,6 @@ ${latestAnswer}`;
         .designer-chapter-copy { min-width:0; flex:1; display:block; }
         .designer-chapter-copy>strong { display:block; color:#252525; font-size:14px; font-weight:650; line-height:1.35; }
         .designer-chapter-copy>small { display:block; margin:4px 0 7px; color:#858892; font-size:11px; line-height:1.3; }
-        .designer-inline-progress { display:block; width:min(210px,100%); height:4px; overflow:hidden; border-radius:999px; background:#ece8e3; }
-        .designer-inline-progress i { display:block; height:100%; border-radius:inherit; background:var(--designer-pink); }
         .designer-chevron { width:28px; height:28px; flex:0 0 28px; border-radius:50%; background:#f5f3f0; color:var(--designer-blue); display:flex; align-items:center; justify-content:center; font-size:19px; font-weight:400; }
         .designer-topic-list { padding:0 12px 12px 61px; display:grid; gap:6px; }
         .designer-topic-list>button:not(.designer-chapter-test) { width:100%; min-height:52px; padding:8px 10px; border:1px solid transparent; border-radius:7px; background:#fafafa; display:grid; grid-template-columns:28px minmax(0,1fr) 16px; align-items:center; gap:9px; color:#333; text-align:left; cursor:pointer; }
@@ -4303,6 +4739,11 @@ ${latestAnswer}`;
         .designer-test-score span { padding:4px 7px; border-radius:999px; font-size:8px; font-weight:800; }
         .designer-test-empty { min-height:150px; padding:24px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:6px; color:#858892; text-align:center; font-size:11px; }
         .designer-test-empty strong { color:var(--designer-blue); font-size:13px; }
+        @media (max-width:1080px) {
+          .designer-kpi-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+          .designer-dashboard-three { grid-template-columns:repeat(2,minmax(0,1fr)); }
+          .designer-dashboard-three>.designer-dashboard-card:last-child { grid-column:1/-1; }
+        }
         @media (max-width:767px) {
           .student-app-layout { flex-direction:column-reverse; }
           .student-app-main { width:100%; min-width:0; }
@@ -4331,6 +4772,27 @@ ${latestAnswer}`;
           .student-view-container p,.student-view-container h1,.student-view-container h2,.student-view-container h3,.student-view-container h4,.student-view-container span,.student-view-container button { overflow-wrap:anywhere; }
           .student-view-container button { max-width:100%; white-space:normal; }
           .student-view-container input,.student-view-container textarea,.student-view-container select { max-width:100%; min-width:0; }
+          .designer-home-dashboard { gap:16px; }
+          .designer-history-page-heading { margin-bottom:16px; }
+          .designer-history-page-heading h1 { font-size:30px; }
+          .designer-history-page-heading p { font-size:14px; }
+          .designer-history-card { border-radius:18px !important; }
+          .designer-history-layout h2 { font-size:19px !important; }
+          .designer-home-hero { min-height:0; padding:22px 18px; border-radius:18px; flex-direction:column; align-items:stretch; gap:18px; }
+          .designer-home-hero h1 { font-size:23px; }
+          .designer-ai-active { width:100%; min-width:0; border-radius:14px; }
+          .designer-kpi-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+          .designer-kpi-card { min-height:118px; padding:14px; border-radius:16px; }
+          .designer-kpi-card>strong { font-size:21px; }
+          .designer-dashboard-split,.designer-dashboard-three,.designer-lesson-grid { grid-template-columns:minmax(0,1fr); gap:14px; }
+          .designer-dashboard-three>.designer-dashboard-card:last-child { grid-column:auto; }
+          .designer-dashboard-card { padding:18px; border-radius:18px; }
+          .designer-confidence-body { grid-template-columns:98px minmax(0,1fr); gap:13px; }
+          .designer-confidence-ring { width:94px; height:94px; }
+          .designer-weekly-digest { align-items:flex-start; flex-direction:column; gap:9px; border-radius:14px; }
+          .designer-continue-heading { align-items:flex-start; }
+          .designer-continue-heading>div { align-items:flex-start; flex-direction:column; gap:6px; }
+          .designer-lesson-card { min-height:175px; border-radius:18px; }
           .student-chat-workspace { min-height:calc(100vh - 180px); border-radius:18px !important; }
           .student-chat-header { padding:12px !important; align-items:flex-start !important; gap:10px; }
           .student-chat-header>div:first-child { flex-wrap:wrap; }
@@ -4358,6 +4820,12 @@ ${latestAnswer}`;
           .student-app-header { justify-content:space-between; }
           .student-header-right { margin-left:auto; }
           .student-sidebar-dock { overflow:visible; }
+          .designer-kpi-grid { grid-template-columns:minmax(0,1fr); }
+          .designer-home-hero h1 { font-size:21px; }
+          .designer-week-strip { gap:4px; }
+          .designer-week-strip>div { min-height:55px; border-radius:10px; }
+          .designer-confidence-body { grid-template-columns:minmax(0,1fr); justify-items:center; }
+          .designer-confidence-bars { width:100%; }
           .designer-syllabus-progress-strip { max-width:none; }
           .designer-panel-heading { min-height:68px; padding:14px; }
           .designer-chapter-accordion { padding:7px; }
@@ -4378,6 +4846,7 @@ ${latestAnswer}`;
           .student-sidebar-dock { padding-left:2px; padding-right:2px; }
           .student-nav-tab { width:36px; height:40px; }
           .student-view-container { padding:10px; }
+          .designer-continue-heading { flex-direction:column; }
           .student-chat-header { flex-direction:column; }
           .student-chat-composer textarea { flex-basis:calc(100% - 104px) !important; }
         }
