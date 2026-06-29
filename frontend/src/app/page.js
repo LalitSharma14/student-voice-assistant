@@ -68,6 +68,12 @@ const USAGE_SECTION_LABELS = {
   badges: "Badges",
 };
 
+const DAILY_GOAL_DEFINITIONS = [
+  { id: "study", text: "Complete one syllabus topic", tab: "syllabus" },
+  { id: "test", text: "Attempt one topic test", tab: "test" },
+  { id: "question", text: "Ask one AI Tutor question", tab: "chat" },
+];
+
 function TeachifyyLogo({ size = 32, showText = true, light = false }) {
   const textColor = light ? B.white : B.navy;
   return (
@@ -387,6 +393,9 @@ export default function Home() {
   const [sessionUsageSeconds,setSessionUsageSeconds]= useState(0);
   const [usageActive,        setUsageActive]        = useState(false);
   const [pendingUsageByDate, setPendingUsageByDate] = useState({});
+  const [dailyGoalDays,      setDailyGoalDays]      = useState([]);
+  const [dailyGoals,         setDailyGoals]         = useState({ study: false, test: false, question: false });
+  const [dailyGoalsLoading,  setDailyGoalsLoading]  = useState(false);
 
   const currentSyllabus = SYLLABUS_DATA[classLevel]?.[board] || SYLLABUS_DATA["5"]?.CBSE;
   const syllabusSubjectOptions = getOrderedSubjects(currentSyllabus);
@@ -509,7 +518,7 @@ export default function Home() {
       const usageQuery = query(
         collection(db, "users", uid, "usageDays"),
         orderBy("date", "desc"),
-        limit(35)
+        limit(90)
       );
       const snap = await getDocs(usageQuery);
       const loaded = [];
@@ -519,6 +528,56 @@ export default function Home() {
       console.error("Usage load error:", err);
     } finally {
       setUsageLoading(false);
+    }
+  };
+
+  const loadDailyGoals = async (uid) => {
+    if (!uid) return;
+    setDailyGoalsLoading(true);
+    try {
+      const goalsQuery = query(
+        collection(db, "users", uid, "dailyGoals"),
+        orderBy("date", "desc"),
+        limit(90)
+      );
+      const snap = await getDocs(goalsQuery);
+      const loaded = [];
+      snap.forEach((goalDoc) => loaded.push({ id: goalDoc.id, ...goalDoc.data() }));
+      setDailyGoalDays(loaded);
+      const today = loaded.find((day) => (day.date || day.id) === getLocalDateKey());
+      setDailyGoals({
+        study: Boolean(today?.study),
+        test: Boolean(today?.test),
+        question: Boolean(today?.question),
+      });
+    } catch (err) {
+      console.error("Daily goals load error:", err);
+    } finally {
+      setDailyGoalsLoading(false);
+    }
+  };
+
+  const completeDailyGoal = async (goalId) => {
+    if (!user || !["study", "test", "question"].includes(goalId) || dailyGoals[goalId]) return;
+    const date = getLocalDateKey();
+    setDailyGoals((current) => ({ ...current, [goalId]: true }));
+    setDailyGoalDays((current) => {
+      const index = current.findIndex((day) => (day.date || day.id) === date);
+      if (index < 0) return [{ id: date, date, [goalId]: true }, ...current];
+      return current.map((day, dayIndex) => dayIndex === index ? { ...day, [goalId]: true } : day);
+    });
+    try {
+      await setDoc(doc(db, "users", user.uid, "dailyGoals", date), {
+        date,
+        [goalId]: true,
+        classLevel,
+        board,
+        updatedAt: serverTimestamp(),
+      }, { merge: true });
+    } catch (err) {
+      console.error("Daily goal save error:", err);
+      setDailyGoals((current) => ({ ...current, [goalId]: false }));
+      loadDailyGoals(user.uid);
     }
   };
 
@@ -533,6 +592,7 @@ export default function Home() {
       loadActivityLogs(user.uid);
       loadReports(user.uid);
       loadUsageDays(user.uid);
+      loadDailyGoals(user.uid);
     } else {
       setTopicProgress({});
       setRevisionProgress({});
@@ -546,6 +606,8 @@ export default function Home() {
       setSessionUsageSeconds(0);
       usagePendingRef.current = {};
       setPendingUsageByDate({});
+      setDailyGoalDays([]);
+      setDailyGoals({ study: false, test: false, question: false });
     }
   }, [user]);
 
@@ -885,6 +947,7 @@ export default function Home() {
         { ...resultData, submittedAt: serverTimestamp(), updatedAt: serverTimestamp() },
         { merge: true }
       );
+      completeDailyGoal("test");
     }
     catch (err) { console.error("Test result save error:", err); }
   };
@@ -1547,6 +1610,8 @@ ${latestAnswer}`;
     try {
       await setDoc(doc(db, "users", user.uid, "activityLogs", logId), logData);
       setActivityLogs((prev) => [{ ...logData, id: logId, createdAt: { toDate: () => new Date() } }, ...prev].slice(0, 100));
+      if (type === "study") completeDailyGoal("study");
+      if (["question", "voice_question", "diagram_request"].includes(type)) completeDailyGoal("question");
     } catch (err) {
       console.error("Activity save error:", err);
     }
@@ -2283,6 +2348,43 @@ ${latestAnswer}`;
   const monthlyUsage = getUsageSummary(30);
   const usageSectionEntries = Object.entries(weeklyUsage.bySection)
     .sort(([, a], [, b]) => Number(b) - Number(a));
+  const studySecondsByDate = usageDays.reduce((totals, day) => {
+    const date = day.date || day.id;
+    totals[date] = Number(totals[date] || 0) + Number(day.totalSeconds || 0);
+    return totals;
+  }, {});
+  Object.entries(pendingUsageByDate).forEach(([date, sections]) => {
+    studySecondsByDate[date] = Number(studySecondsByDate[date] || 0)
+      + Object.values(sections).reduce((sum, seconds) => sum + Number(seconds || 0), 0);
+  });
+  const goalActivityDates = new Set(dailyGoalDays
+    .filter((day) => day.study || day.test || day.question)
+    .map((day) => day.date || day.id));
+  if (Object.values(dailyGoals).some(Boolean)) goalActivityDates.add(getLocalDateKey());
+  const isActiveStudyDate = (date) => Number(studySecondsByDate[date] || 0) >= 60 || goalActivityDates.has(date);
+  const todayDate = new Date();
+  todayDate.setHours(0, 0, 0, 0);
+  const todayDateKey = getLocalDateKey(todayDate);
+  const streakCursor = new Date(todayDate);
+  if (!isActiveStudyDate(todayDateKey)) streakCursor.setDate(streakCursor.getDate() - 1);
+  let studyStreak = 0;
+  while (studyStreak < 90 && isActiveStudyDate(getLocalDateKey(streakCursor))) {
+    studyStreak += 1;
+    streakCursor.setDate(streakCursor.getDate() - 1);
+  }
+  const weeklyStudyDays = Array.from({ length: 7 }, (_, index) => {
+    const date = new Date(todayDate);
+    date.setDate(date.getDate() - (6 - index));
+    const dateKey = getLocalDateKey(date);
+    return {
+      dateKey,
+      label: date.toLocaleDateString([], { weekday: "narrow" }),
+      day: date.getDate(),
+      active: isActiveStudyDate(dateKey),
+      today: dateKey === todayDateKey,
+    };
+  });
+  const completedDailyGoals = DAILY_GOAL_DEFINITIONS.filter((goal) => dailyGoals[goal.id]).length;
   const weeklyReport = buildCurrentReport("weekly");
   const orderedSubjects = getOrderedSubjects(currentSyllabus);
   const subjectProgressList = orderedSubjects.map((subject) => ({ subject, ...getSubjectProgress(subject) }));
@@ -2562,7 +2664,11 @@ ${latestAnswer}`;
             <div style={{ display: "grid", gap: "16px" }}>
               <div style={{ background: `linear-gradient(135deg, ${B.navy}, ${B.navyDark})`, borderRadius: "18px", padding: "22px", color: B.white, boxShadow: "0 10px 30px rgba(43,88,136,0.18)", display: "flex", justifyContent: "space-between", gap: "18px", alignItems: "center", flexWrap: "wrap" }}>
                 <div>
-                  <div style={{ fontSize: "12px", fontWeight: 800, opacity: 0.8, marginBottom: "8px" }}>AI Tutor Active</div>
+                  <div style={{ display: "flex", alignItems: "center", gap: "8px", flexWrap: "wrap", fontSize: "12px", fontWeight: 800, opacity: 0.88, marginBottom: "8px" }}>
+                    <span>{studyStreak}-day study streak</span>
+                    <span style={{ opacity: 0.55 }}>-</span>
+                    <span>AI Tutor Active</span>
+                  </div>
                   <h2 style={{ fontSize: "24px", fontWeight: 900, margin: "0 0 6px" }}>Good to see you, {userProfile?.name?.split(" ")[0] || "Student"}</h2>
                   <p style={{ fontSize: "13px", margin: 0, opacity: 0.82 }}>You have {activeDoubts.length} active doubt{activeDoubts.length !== 1 ? "s" : ""} and {continueLessons.length} learning path{continueLessons.length !== 1 ? "s" : ""} ready.</p>
                 </div>
@@ -2576,6 +2682,7 @@ ${latestAnswer}`;
                   { label: "Questions Asked", value: recentQuestions.length, sub: "Text, voice, and diagrams" },
                   { label: "Active Doubts", value: activeDoubts.length, sub: `${resolvedDoubts.length} resolved` },
                   { label: "Time Today", value: formatUsageDuration(todayUsage.totalSeconds), sub: usageActive ? "Active time is being tracked" : "Paused while idle or hidden" },
+                  { label: "Study Streak", value: `${studyStreak} day${studyStreak === 1 ? "" : "s"}`, sub: isActiveStudyDate(todayDateKey) ? "Today is counted" : "Study today to keep it going" },
                 ].map((card) => (
                   <div key={card.label} style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "16px", padding: "16px", boxShadow: "0 4px 18px rgba(43,88,136,0.06)" }}>
                     <div style={{ fontSize: "11px", color: B.gray500, fontWeight: 900, textTransform: "uppercase" }}>{card.label}</div>
@@ -2627,17 +2734,36 @@ ${latestAnswer}`;
 
             <div style={{ display: "grid", gap: "16px" }}>
               <div style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "18px", padding: "18px", boxShadow: "0 4px 20px rgba(43,88,136,0.06)" }}>
-                <h3 style={{ fontSize: "16px", fontWeight: 900, color: B.navy, margin: "0 0 12px" }}>Today's Goals</h3>
-                {[
-                  { text: activeDoubts.length ? "Resolve one active doubt" : "Ask one learning question", tab: activeDoubts.length ? "doubts" : "chat" },
-                  { text: "Complete one syllabus topic", tab: "syllabus" },
-                  { text: latestTest ? "Review latest test result" : "Attempt one topic test", tab: "test" },
-                ].map((goal, index) => (
-                  <button key={goal.text} onClick={() => setActiveTab(goal.tab)} style={{ width: "100%", display: "flex", alignItems: "center", gap: "10px", padding: "10px", marginBottom: index === 2 ? 0 : "8px", borderRadius: "11px", border: `1px solid ${B.gray200}`, background: B.gray50, cursor: "pointer", textAlign: "left", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
-                    <span style={{ width: "20px", height: "20px", borderRadius: "50%", background: B.navyLight, color: B.navy, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "11px", fontWeight: 900 }}>{index + 1}</span>
-                    <span style={{ fontSize: "12px", color: B.gray700, fontWeight: 800 }}>{goal.text}</span>
-                  </button>
-                ))}
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "10px", marginBottom: "12px" }}>
+                  <h3 style={{ fontSize: "16px", fontWeight: 900, color: B.navy, margin: 0 }}>Today's Goals</h3>
+                  <span style={{ fontSize: "11px", fontWeight: 900, color: completedDailyGoals === DAILY_GOAL_DEFINITIONS.length ? B.green : B.navy }}>{completedDailyGoals}/{DAILY_GOAL_DEFINITIONS.length}</span>
+                </div>
+                <div style={{ height: "6px", background: B.gray200, borderRadius: "999px", overflow: "hidden", marginBottom: "13px" }}>
+                  <div style={{ width: `${(completedDailyGoals / DAILY_GOAL_DEFINITIONS.length) * 100}%`, height: "100%", background: completedDailyGoals === DAILY_GOAL_DEFINITIONS.length ? B.green : B.navy, borderRadius: "999px", transition: "width 0.3s ease" }} />
+                </div>
+                {DAILY_GOAL_DEFINITIONS.map((goal, index) => {
+                  const completed = Boolean(dailyGoals[goal.id]);
+                  return (
+                    <button key={goal.id} onClick={() => setActiveTab(goal.tab)} disabled={dailyGoalsLoading} style={{ width: "100%", display: "flex", alignItems: "center", gap: "10px", padding: "10px", marginBottom: index === DAILY_GOAL_DEFINITIONS.length - 1 ? 0 : "8px", borderRadius: "11px", border: `1px solid ${completed ? B.greenBorder : B.gray200}`, background: completed ? B.greenLight : B.gray50, cursor: "pointer", textAlign: "left", fontFamily: "'Plus Jakarta Sans', sans-serif", opacity: dailyGoalsLoading ? 0.65 : 1 }}>
+                      <span style={{ width: "20px", height: "20px", flexShrink: 0, borderRadius: "50%", background: completed ? B.green : B.navyLight, color: completed ? B.white : B.navy, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "11px", fontWeight: 900 }}>{completed ? "✓" : index + 1}</span>
+                      <span style={{ fontSize: "12px", color: completed ? B.green : B.gray700, fontWeight: 800, textDecoration: completed ? "line-through" : "none" }}>{goal.text}</span>
+                    </button>
+                  );
+                })}
+                <div style={{ marginTop: "14px", paddingTop: "12px", borderTop: `1px solid ${B.gray200}` }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "9px" }}>
+                    <span style={{ fontSize: "11px", color: B.gray500, fontWeight: 900, textTransform: "uppercase" }}>Last 7 days</span>
+                    <span style={{ fontSize: "11px", color: B.gray500 }}>{isActiveStudyDate(todayDateKey) ? "Streak active" : "Not active today"}</span>
+                  </div>
+                  <div style={{ display: "grid", gridTemplateColumns: "repeat(7, minmax(0, 1fr))", gap: "5px" }}>
+                    {weeklyStudyDays.map((day) => (
+                      <div key={day.dateKey} title={day.dateKey} style={{ minWidth: 0, textAlign: "center", padding: "6px 2px", borderRadius: "8px", border: `1px solid ${day.today ? B.navy : B.gray200}`, background: day.active ? B.navyLight : B.white }}>
+                        <div style={{ fontSize: "9px", color: B.gray500, fontWeight: 800 }}>{day.label}</div>
+                        <div style={{ fontSize: "11px", color: day.active ? B.navy : B.gray500, fontWeight: 900, marginTop: "3px" }}>{day.active ? "✓" : day.day}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
 
               <div style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "18px", padding: "18px", boxShadow: "0 4px 20px rgba(43,88,136,0.06)" }}>
