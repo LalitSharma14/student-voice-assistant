@@ -5,6 +5,10 @@ import { auth, db } from "../lib/firebase";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  GoogleAuthProvider,
+  signInWithPopup,
+  sendEmailVerification,
+  reload,
   onAuthStateChanged,
   signOut,
 } from "firebase/auth";
@@ -532,11 +536,14 @@ export default function Home() {
   const [testSubjectFilter,   setTestSubjectFilter]   = useState("All");
   const [homeSubjectFilter,   setHomeSubjectFilter]   = useState("All");
   const [notificationsOpen,   setNotificationsOpen]   = useState(false);
+  const [profileOpen,         setProfileOpen]         = useState(false);
   const [user,               setUser]               = useState(null);
   const [userProfile,        setUserProfile]        = useState(null);
   const [authMode,           setAuthMode]           = useState("login");
   const [authLoading,        setAuthLoading]        = useState(true);
   const [authError,          setAuthError]          = useState("");
+  const [verificationSent,   setVerificationSent]   = useState(false);
+  const [profileNeedsSetup,  setProfileNeedsSetup]  = useState(false);
   const [signupName,         setSignupName]         = useState("");
   const [signupEmail,        setSignupEmail]        = useState("");
   const [signupMobile,       setSignupMobile]       = useState("");
@@ -549,6 +556,7 @@ export default function Home() {
   const [board,              setBoard]              = useState("CBSE");
   const [answerLanguage,     setAnswerLanguage]     = useState("en");
   const [profileCompleted,   setProfileCompleted]   = useState(false);
+  const [streakCelebration,  setStreakCelebration]  = useState(null);
 
   // ── Chat history state ─────────────────────────────────
   const [chatSessions,       setChatSessions]       = useState([]);   // list of past sessions
@@ -698,6 +706,12 @@ export default function Home() {
           setUserProfile(profile);
           setClassLevel(profile.classLevel || "5");
           setBoard(profile.board || "CBSE");
+          setAnswerLanguage(profile.answerLanguage || "en");
+          setProfileNeedsSetup(!profile.classLevel || !profile.board);
+        } else {
+          setUserProfile(null);
+          setSignupName(currentUser.displayName || "");
+          setProfileNeedsSetup(true);
         }
         setProfileCompleted(false);
       } catch (err) {
@@ -807,6 +821,53 @@ export default function Home() {
       setDailyGoals({ study: false, test: false, question: false });
     }
   }, [user]);
+
+  useEffect(() => {
+    if (!user || !profileCompleted || usageLoading || typeof window === "undefined") return;
+    const today = getLocalDateKey();
+    const storageKey = `teachifyy-streak-celebrated:${user.uid}:${today}`;
+    if (window.localStorage.getItem(storageKey)) return;
+    if (usageDays.some((day) => (day.date || day.id) === today && day.checkIn)) {
+      window.localStorage.setItem(storageKey, "shown");
+      return;
+    }
+
+    const registerDailyCheckIn = async () => {
+      const checkInDays = new Set(
+        usageDays
+          .filter((day) => day.checkIn || Number(day.totalSeconds || 0) > 0)
+          .map((day) => day.date || day.id)
+      );
+      checkInDays.add(today);
+
+      let streak = 0;
+      const cursor = new Date();
+      cursor.setHours(0, 0, 0, 0);
+      while (streak < 365 && checkInDays.has(getLocalDateKey(cursor))) {
+        streak += 1;
+        cursor.setDate(cursor.getDate() - 1);
+      }
+
+      try {
+        await setDoc(doc(db, "users", user.uid, "usageDays", today), {
+          date: today,
+          checkIn: true,
+          firstOpenedAt: serverTimestamp(),
+          classLevel,
+          board,
+        }, { merge: true });
+        setUsageDays((days) => days.some((day) => (day.date || day.id) === today)
+          ? days.map((day) => (day.date || day.id) === today ? { ...day, checkIn: true } : day)
+          : [{ id: today, date: today, checkIn: true, totalSeconds: 0, bySection: {} }, ...days]);
+        window.localStorage.setItem(storageKey, "shown");
+        setStreakCelebration({ streak, date: today });
+      } catch (err) {
+        console.error("Daily streak check-in error:", err);
+      }
+    };
+
+    registerDailyCheckIn();
+  }, [user, profileCompleted, usageLoading, usageDays, classLevel, board]);
 
   // ══════════════════════════════════════════════════════
   //  CHAT SESSION PERSISTENCE
@@ -1054,9 +1115,11 @@ export default function Home() {
       setAuthLoading(true);
       const userCredential = await createUserWithEmailAndPassword(auth, signupEmail.trim(), signupPassword);
       const createdUser = userCredential.user;
-      const profileData = { name: signupName.trim(), email: signupEmail.trim(), mobile: signupMobile.trim(), classLevel: signupClassLevel, board: signupBoard, createdAt: serverTimestamp() };
+      const profileData = { name: signupName.trim(), email: signupEmail.trim(), mobile: signupMobile.trim(), classLevel: signupClassLevel, board: signupBoard, answerLanguage, authProvider: "password", createdAt: serverTimestamp() };
       await setDoc(doc(db, "users", createdUser.uid), profileData);
-      setUser(createdUser); setUserProfile(profileData); setClassLevel(signupClassLevel); setBoard(signupBoard); setProfileCompleted(false);
+      await sendEmailVerification(createdUser);
+      setVerificationSent(true);
+      setUser(createdUser); setUserProfile(profileData); setClassLevel(signupClassLevel); setBoard(signupBoard); setProfileNeedsSetup(false); setProfileCompleted(false);
     } catch (err) { setAuthError(err.message || "Could not create account."); } finally { setAuthLoading(false); }
   };
 
@@ -1078,6 +1141,73 @@ export default function Home() {
     setChatSessions([]); setCurrentSessionId(null); setViewingSession(null);
     setDoubts([]); setSavingDoubtId(null);
     setNotes([]); resetNoteForm();
+  };
+
+  const handleGoogleSignIn = async () => {
+    setAuthError("");
+    try {
+      setAuthLoading(true);
+      const provider = new GoogleAuthProvider();
+      provider.setCustomParameters({ prompt: "select_account" });
+      await signInWithPopup(auth, provider);
+    } catch (err) {
+      setAuthError(err?.code === "auth/popup-closed-by-user" ? "Google sign-in was cancelled." : (err.message || "Could not sign in with Google."));
+    } finally {
+      setAuthLoading(false);
+    }
+  };
+
+  const handleResendVerification = async () => {
+    if (!auth.currentUser) return;
+    setAuthError("");
+    try {
+      await sendEmailVerification(auth.currentUser);
+      setVerificationSent(true);
+    } catch (err) {
+      setAuthError(err.message || "Could not resend the verification email.");
+    }
+  };
+
+  const handleCheckVerification = async () => {
+    if (!auth.currentUser) return;
+    setAuthLoading(true);
+    setAuthError("");
+    try {
+      await reload(auth.currentUser);
+      setUser({ ...auth.currentUser });
+      if (!auth.currentUser.emailVerified) setAuthError("Your email is not verified yet. Open the verification link, then try again.");
+    } catch (err) {
+      setAuthError(err.message || "Could not check verification status.");
+    } finally {
+      setAuthLoading(false);
+    }
+  };
+
+  const handleCompleteGoogleProfile = async () => {
+    if (!user || !signupName.trim()) { setAuthError("Please enter the student's name."); return; }
+    setAuthLoading(true);
+    setAuthError("");
+    try {
+      const profileData = {
+        name: signupName.trim(),
+        email: user.email || "",
+        mobile: signupMobile.trim(),
+        classLevel: signupClassLevel,
+        board: signupBoard,
+        answerLanguage,
+        authProvider: "google",
+        createdAt: serverTimestamp(),
+      };
+      await setDoc(doc(db, "users", user.uid), profileData);
+      setUserProfile(profileData);
+      setClassLevel(signupClassLevel);
+      setBoard(signupBoard);
+      setProfileNeedsSetup(false);
+    } catch (err) {
+      setAuthError(err.message || "Could not save the student profile.");
+    } finally {
+      setAuthLoading(false);
+    }
   };
 
   // ── Progress loaders ───────────────────────────────────
@@ -2521,11 +2651,57 @@ ${latestAnswer}`;
             <button onClick={authMode === "login" ? handleLogin : handleCreateAccount} disabled={authLoading} style={{ width: "100%", padding: "13px 16px", border: "none", borderRadius: "12px", background: `linear-gradient(135deg, ${B.navy}, ${B.navyDark})`, color: B.white, fontSize: "15px", fontWeight: 700, cursor: "pointer", marginTop: "6px", opacity: authLoading ? 0.6 : 1, fontFamily: "'Plus Jakarta Sans', sans-serif", letterSpacing: "0.2px" }}>
               {authMode === "login" ? "Login →" : "Create Account →"}
             </button>
+            <div style={{ display: "flex", alignItems: "center", gap: "10px", margin: "18px 0", color: B.gray500, fontSize: "12px" }}>
+              <span style={{ height: "1px", background: B.gray200, flex: 1 }} /><span>or</span><span style={{ height: "1px", background: B.gray200, flex: 1 }} />
+            </div>
+            <button type="button" onClick={handleGoogleSignIn} disabled={authLoading} style={{ width: "100%", padding: "12px 16px", border: `1.5px solid ${B.gray300}`, borderRadius: "12px", background: B.white, color: B.gray900, fontSize: "14px", fontWeight: 700, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", gap: "10px", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+              <span aria-hidden="true" style={{ color: "#4285f4", fontSize: "18px", fontWeight: 900 }}>G</span>
+              Continue with Google
+            </button>
             <button onClick={() => { setAuthError(""); setAuthMode(authMode === "login" ? "signup" : "login"); }} style={{ width: "100%", marginTop: "14px", background: "transparent", border: "none", color: B.navy, cursor: "pointer", fontSize: "14px", fontWeight: 500, fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
               {authMode === "login" ? "New student? Create account" : "Already have an account? Login"}
             </button>
           </div>
           <p style={{ textAlign: "center", marginTop: "20px", fontSize: "12px", color: B.gray500, fontStyle: "italic" }}>Develop what teaching demands</p>
+        </div>
+      </div>
+    );
+  }
+
+  const usesPasswordProvider = user.providerData?.some((provider) => provider.providerId === "password");
+  if (usesPasswordProvider && !user.emailVerified) {
+    return (
+      <div style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", background: B.bg, minHeight: "100vh", display: "grid", placeItems: "center", padding: "20px" }}>
+        <div style={{ width: "min(440px, 100%)", background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "20px", padding: "32px 28px", textAlign: "center", boxShadow: "0 8px 32px rgba(43,88,136,0.08)" }}>
+          <div style={{ width: "62px", height: "62px", borderRadius: "50%", background: B.navyLight, display: "grid", placeItems: "center", margin: "0 auto 16px", fontSize: "26px" }}>✉️</div>
+          <h1 style={{ color: B.navy, fontSize: "22px", margin: "0 0 8px" }}>Verify your email</h1>
+          <p style={{ color: B.gray500, fontSize: "14px", lineHeight: 1.6, margin: "0 0 18px" }}>We sent a verification link to <strong>{user.email}</strong>. Open it before entering the student dashboard.</p>
+          {verificationSent && <p style={{ color: "#0f9f6e", fontSize: "13px", fontWeight: 700 }}>Verification email sent.</p>}
+          {authError && <p style={{ color: B.red, fontSize: "13px" }}>{authError}</p>}
+          <button onClick={handleCheckVerification} style={{ ...inputStyle, marginBottom: "10px", border: 0, background: B.navy, color: B.white, cursor: "pointer", fontWeight: 700 }}>I have verified my email</button>
+          <button onClick={handleResendVerification} style={{ border: 0, background: "transparent", color: B.navy, cursor: "pointer", fontWeight: 700 }}>Resend verification email</button>
+          <button onClick={handleLogout} style={{ display: "block", margin: "16px auto 0", border: 0, background: "transparent", color: B.gray500, cursor: "pointer" }}>Use another account</button>
+        </div>
+      </div>
+    );
+  }
+
+  if (profileNeedsSetup) {
+    return (
+      <div style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", background: B.bg, minHeight: "100vh", display: "grid", placeItems: "center", padding: "20px" }}>
+        <div style={{ width: "min(460px, 100%)", background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "20px", padding: "30px 28px", boxShadow: "0 8px 32px rgba(43,88,136,0.08)" }}>
+          <h1 style={{ color: B.navy, fontSize: "22px", margin: "0 0 6px" }}>Complete student profile</h1>
+          <p style={{ color: B.gray500, fontSize: "13px", margin: "0 0 22px" }}>Class and board are locked after this step to protect progress records.</p>
+          {authError && <p style={{ color: B.red, fontSize: "13px" }}>{authError}</p>}
+          <label style={labelStyle}>Student name</label>
+          <input value={signupName} onChange={(event) => setSignupName(event.target.value)} style={inputStyle} />
+          <label style={labelStyle}>Mobile number (optional)</label>
+          <input value={signupMobile} onChange={(event) => setSignupMobile(event.target.value)} style={inputStyle} />
+          <label style={labelStyle}>Class</label>
+          <select value={signupClassLevel} onChange={(event) => setSignupClassLevel(event.target.value)} style={inputStyle}>{["5","6","7","8","9","10"].map((value) => <option key={value} value={value}>Class {value}</option>)}</select>
+          <label style={labelStyle}>Board</label>
+          <select value={signupBoard} onChange={(event) => setSignupBoard(event.target.value)} style={inputStyle}>{["CBSE","RBSE","ICSE","Other"].map((value) => <option key={value} value={value}>{value}</option>)}</select>
+          <button onClick={handleCompleteGoogleProfile} disabled={authLoading} style={{ width: "100%", padding: "13px", border: 0, borderRadius: "12px", background: B.navy, color: B.white, fontWeight: 700, cursor: "pointer" }}>Save and continue</button>
         </div>
       </div>
     );
@@ -2602,11 +2778,12 @@ ${latestAnswer}`;
     studySecondsByDate[date] = Number(studySecondsByDate[date] || 0)
       + Object.values(sections).reduce((sum, seconds) => sum + Number(seconds || 0), 0);
   });
+  const dailyCheckInDates = new Set(usageDays.filter((day) => day.checkIn).map((day) => day.date || day.id));
   const goalActivityDates = new Set(dailyGoalDays
     .filter((day) => day.study || day.test || day.question)
     .map((day) => day.date || day.id));
   if (Object.values(dailyGoals).some(Boolean)) goalActivityDates.add(getLocalDateKey());
-  const isActiveStudyDate = (date) => Number(studySecondsByDate[date] || 0) >= 60 || goalActivityDates.has(date);
+  const isActiveStudyDate = (date) => dailyCheckInDates.has(date) || Number(studySecondsByDate[date] || 0) >= 60 || goalActivityDates.has(date);
   const todayDate = new Date();
   todayDate.setHours(0, 0, 0, 0);
   const todayDateKey = getLocalDateKey(todayDate);
@@ -3027,6 +3204,34 @@ ${latestAnswer}`;
     <div className="student-app-layout">
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600&display=swap" rel="stylesheet" />
 
+      {streakCelebration && (
+        <div role="dialog" aria-modal="true" aria-label="Daily study streak" style={{ position: "fixed", inset: 0, zIndex: 3000, display: "grid", placeItems: "center", padding: "20px", background: "rgba(25, 42, 62, 0.42)", backdropFilter: "blur(5px)" }}>
+          <div style={{ width: "min(410px, 100%)", border: "1px solid #ffd0d8", borderRadius: "20px", padding: "30px 26px 24px", background: B.white, textAlign: "center", boxShadow: "0 24px 70px rgba(30,61,92,0.24)" }}>
+            <div style={{ width: "76px", height: "76px", margin: "0 auto 14px", borderRadius: "50%", display: "grid", placeItems: "center", background: "#fff0f3", fontSize: "38px" }}>🔥</div>
+            <div style={{ color: B.red, fontSize: "12px", fontWeight: 800, textTransform: "uppercase" }}>Daily streak added</div>
+            <h2 style={{ margin: "8px 0", color: B.navy, fontSize: "27px", lineHeight: 1.2 }}>Congratulations! 🎉</h2>
+            <p style={{ margin: "0 auto 18px", color: B.gray500, fontSize: "14px", lineHeight: 1.6 }}>You opened Teachifyy today and reached a <strong style={{ color: B.navy }}>{streakCelebration.streak}-day study streak</strong>. Keep showing up!</p>
+            <div style={{ display: "inline-flex", alignItems: "center", gap: "9px", padding: "9px 15px", marginBottom: "20px", borderRadius: "999px", background: B.navyLight, color: B.navy, fontWeight: 800 }}><span>🔥</span><span>Day {streakCelebration.streak}</span><span style={{ color: "#10a875" }}>+1</span></div>
+            <button type="button" onClick={() => setStreakCelebration(null)} style={{ width: "100%", padding: "12px 16px", border: 0, borderRadius: "11px", background: B.navy, color: B.white, cursor: "pointer", fontSize: "14px", fontWeight: 800 }}>Continue learning</button>
+          </div>
+        </div>
+      )}
+
+      {profileOpen && (
+        <div role="dialog" aria-modal="true" aria-label="Student profile" onClick={() => setProfileOpen(false)} style={{ position: "fixed", inset: 0, zIndex: 2900, display: "grid", placeItems: "center", padding: "20px", background: "rgba(25,42,62,.38)", backdropFilter: "blur(4px)" }}>
+          <div onClick={(event) => event.stopPropagation()} style={{ width: "min(430px,100%)", borderRadius: "18px", border: `1px solid ${B.gray200}`, background: B.white, padding: "26px", boxShadow: "0 24px 70px rgba(30,61,92,.22)" }}>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "20px" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: "12px" }}><div className="profile-dialog-avatar">{studentInitials || "ST"}</div><div><h2 style={{ margin: 0, color: B.navy, fontSize: "20px" }}>Student profile</h2><p style={{ margin: "3px 0 0", color: B.gray500, fontSize: "12px" }}>Learning account details</p></div></div>
+              <button type="button" onClick={() => setProfileOpen(false)} aria-label="Close profile" style={{ width: "34px", height: "34px", borderRadius: "50%", border: `1px solid ${B.gray200}`, background: B.white, cursor: "pointer", fontSize: "20px" }}>×</button>
+            </div>
+            {[['Name', userProfile?.name || 'Student'], ['Email', userProfile?.email || user?.email || 'Not available'], ['Mobile', userProfile?.mobile || 'Not provided'], ['Class', `Class ${classLevel} (locked)`], ['Board', `${board} (locked)`], ['Language', ANSWER_LANGUAGES.find((item) => item.value === answerLanguage)?.label || 'English']].map(([label, value]) => (
+              <div key={label} style={{ display: "grid", gridTemplateColumns: "100px minmax(0,1fr)", gap: "14px", padding: "12px 0", borderBottom: `1px solid ${B.gray200}` }}><span style={{ color: B.gray500, fontSize: "12px", fontWeight: 700 }}>{label}</span><strong style={{ color: B.gray900, fontSize: "13px", overflowWrap: "anywhere" }}>{value}</strong></div>
+            ))}
+            <p style={{ margin: "16px 0 0", color: B.gray500, fontSize: "11px", lineHeight: 1.5 }}>Class and board are protected because changing them would mix syllabus and progress records.</p>
+          </div>
+        </div>
+      )}
+
       <aside className="student-app-sidebar" aria-label="Student portal navigation">
         <div className="student-sidebar-brand"><img src="/teachifyy-logo-designer.png" alt="Teachifyy" /></div>
         <nav className="student-sidebar-dock">
@@ -3105,11 +3310,11 @@ ${latestAnswer}`;
               </div>
             )}
           </div>
-          <div className="student-profile-copy">
+          <div className="student-profile-copy" role="button" tabIndex={0} onClick={() => setProfileOpen(true)} onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") setProfileOpen(true); }}>
             <div style={{ color: B.white, fontSize: "13px", fontWeight: 600 }}>{userProfile?.name || user?.email}</div>
             <div style={{ color: "rgba(255,255,255,0.6)", fontSize: "11px" }}>Class {classLevel} · {board}</div>
           </div>
-          <div className="student-avatar">{studentInitials || "ST"}</div>
+          <div className="student-avatar" role="button" tabIndex={0} onClick={() => setProfileOpen(true)} onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") setProfileOpen(true); }}>{studentInitials || "ST"}</div>
         </div>
       </header>
 
@@ -5029,10 +5234,11 @@ ${latestAnswer}`;
         .student-search-results>button { width:100%; padding:11px 13px; border:0; border-bottom:1px solid #eee; background:#fff; text-align:left; cursor:pointer; }
         .student-search-results>button:hover { background:var(--designer-fog); }
         .student-header-right { display:flex; align-items:center; gap:14px; }
-        .student-profile-copy { order:1; display:flex; flex-direction:column; padding:3px 0; text-align:left !important; }
+          .student-profile-copy { order:1; display:flex; flex-direction:column; padding:3px 0; text-align:left !important; cursor:pointer; }
         .student-profile-copy>div:first-child { max-width:180px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; color:var(--designer-ink) !important; font:500 14px 'Inter',sans-serif !important; }
         .student-profile-copy>div:last-child { color:#777b86 !important; font:400 12px 'Inter',sans-serif !important; }
-        .student-avatar { order:0; width:38px; height:38px; border-radius:50%; background:#ffe6e9; color:var(--designer-ink); display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:600; }
+          .student-avatar { order:0; width:38px; height:38px; flex:0 0 38px; border-radius:50%; background:#ffe6e9; color:var(--designer-ink); display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:600; cursor:pointer; }
+          .profile-dialog-avatar { width:46px; height:46px; flex:0 0 46px; border-radius:50%; background:#ffe6e9; color:var(--designer-blue); display:grid; place-items:center; font-size:14px; font-weight:700; }
         .student-notification-wrap { order:2; position:relative; }
         .student-notification { width:40px !important; height:40px !important; padding:0 !important; border:1px solid var(--designer-dove) !important; border-radius:50% !important; background:#fff !important; color:var(--designer-ink) !important; position:relative; display:flex; align-items:center; justify-content:center; cursor:pointer; font-size:0 !important; }
         .student-notification:hover,.student-notification[aria-expanded="true"] { border-color:var(--designer-blue) !important; background:var(--designer-fog) !important; }
@@ -5572,8 +5778,8 @@ ${latestAnswer}`;
           .student-header-logo { display:block; width:auto; height:38px; max-width:none; margin-right:24px; object-fit:contain; }
           .student-search-wrap { width:320px; }
           .student-header-right { margin-left:auto; }
-          .student-avatar { z-index:2; margin-right:-52px; }
-          .student-profile-copy { min-width:184px; min-height:50px; padding:6px 16px 6px 52px; border:1px solid var(--designer-dove); border-radius:999px; justify-content:center; background:#fff; }
+          .student-avatar { z-index:2; margin-right:-10px; }
+          .student-profile-copy { min-width:184px; min-height:50px; padding:6px 16px 6px 22px; border:1px solid var(--designer-dove); border-radius:999px; justify-content:center; background:#fff; }
           .student-app-sidebar { width:80px; flex:0 0 80px; height:calc(100vh - 72px); padding:24px 0; border-right:0; background:transparent; justify-content:center; gap:20px; }
           .student-sidebar-brand { display:none; }
           .student-more-wrap { display:none; }

@@ -11,8 +11,20 @@ service cloud.firestore {
     }
 
     match /users/{userId} {
-      allow read, write: if request.auth != null
+      allow read: if request.auth != null
         && request.auth.uid == userId;
+
+      allow create: if request.auth != null
+        && request.auth.uid == userId
+        && request.resource.data.classLevel is string
+        && request.resource.data.board is string;
+
+      allow update: if request.auth != null
+        && request.auth.uid == userId
+        && request.resource.data.classLevel == resource.data.classLevel
+        && request.resource.data.board == resource.data.board;
+
+      allow delete: if false;
 
       match /topicProgress/{progressId} {
         allow read, write: if request.auth != null
