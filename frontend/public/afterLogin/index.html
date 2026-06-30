@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portal | Teachifyy</title>
+  <meta name="description" content="Teachifyy Student Dashboard: AI learning assistant, syllabus tracker, doubts, and performance analytics.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ── LAYOUT CONTAINER ── -->
+  <div class="app-layout">
+    
+    <!-- ── LEFT SIDEBAR NAVIGATION ── -->
+    <aside class="app-sidebar">
+      <div class="sidebar-brand">
+        <img src="./teachifyy-logo.png" alt="Teachifyy" class="sidebar-logo">
+      </div>
+      
+      <!-- Profile has been shifted to top navigation header -->
+      
+      <!-- Nav Tabs as a Vertical Dock -->
+      <nav class="sidebar-dock">
+        <button class="nav-tab-btn active" data-tab="dashboard">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>
+          <span class="dock-tooltip">Home</span>
+        </button>
+        <button class="nav-tab-btn" data-tab="ai-tutor">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <span class="dock-tooltip">AI Tutor</span>
+        </button>
+        <button class="nav-tab-btn" data-tab="syllabus">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 19.5A2.5 2.5 0 0 0 6.5 22H20M4 19.5V3a1 1 0 0 1 1-1h15v20H5a2 2 0 0 1-1-1z"/></svg>
+          <span class="dock-tooltip">Syllabus Tracker</span>
+        </button>
+        <button class="nav-tab-btn" data-tab="tests">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          <span class="dock-tooltip">Tests</span>
+        </button>
+        <button class="nav-tab-btn" data-tab="doubt">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          <span class="badge-count" id="doubt-badge-count">0</span>
+          <span class="dock-tooltip">Doubt</span>
+        </button>
+
+        <button class="nav-tab-btn" data-tab="history">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span class="dock-tooltip">History</span>
+        </button>
+        
+        <div class="dock-divider"></div>
+        
+        <button class="btn-logout" id="logout-btn">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+          <span class="dock-tooltip">Logout</span>
+        </button>
+      </nav>
+    </aside>
+
+    <!-- ── MAIN CONTENT AREA ── -->
+    <main class="app-main">
+      
+      <!-- ── GLOBAL APP HEADER ── -->
+      <header class="app-header">
+        <div class="header-left">
+          <div class="header-logo-brand">
+            <img src="./teachifyy-logo.png" alt="Teachifyy" class="header-logo">
+          </div>
+          <div class="search-box-wrap">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" placeholder="Search syllabus, doubts, formulas..." class="search-input-field">
+          </div>
+        </div>
+        
+        <div class="header-right">
+          <!-- Student Profile Header Badge -->
+          <div class="header-profile" id="header-profile-trigger">
+            <div class="profile-avatar-badge" id="student-avatar-monogram">HA</div>
+            <div class="profile-info-block">
+              <span class="profile-name" id="student-display-name">Hammad Ahmed</span>
+              <span class="profile-class" id="student-display-class">Class 10 | ICSE</span>
+            </div>
+          </div>
+
+          <!-- Notification Bell -->
+          <div class="notification-wrap">
+            <button class="icon-btn" id="notif-btn">
+              <svg class="header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+              <span class="notif-dot"></span>
+            </button>
+            <div class="notif-dropdown-panel" id="notif-panel">
+              <div class="notif-dropdown-header">
+                <h3>Notifications</h3>
+                <button class="clear-notif-btn" id="clear-notif-btn">Clear All</button>
+              </div>
+              <ul class="notif-list" id="notif-list-items">
+                <li class="notif-item unread">
+                  <span class="notif-indicator"></span>
+                  <div class="notif-details">
+                    <p class="notif-text">Your English confidence is dipping. Try doing vocab practices today.</p>
+                    <span class="notif-time">Just now</span>
+                  </div>
+                </li>
+                <li class="notif-item unread">
+                  <span class="notif-indicator"></span>
+                  <div class="notif-details">
+                    <p class="notif-text">Teacher Maima B. uploaded guidance on exam preparations.</p>
+                    <span class="notif-time">2 hours ago</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Floating background circles behind panels -->
+      <div class="dashboard-decor-circles">
+        <div class="decor-circle circle-pink-1"></div>
+        <div class="decor-circle circle-pink-2"></div>
+        <div class="decor-circle circle-blue-1"></div>
+        <div class="decor-circle circle-blue-2"></div>
+        <div class="decor-circle circle-pink-3"></div>
+        <div class="decor-circle circle-blue-3"></div>
+        <div class="decor-circle circle-pink-4"></div>
+        <div class="decor-circle circle-blue-4"></div>
+        <div class="decor-circle circle-pink-5"></div>
+        <div class="decor-circle circle-blue-5"></div>
+        <div class="decor-circle circle-pink-6"></div>
+        <div class="decor-circle circle-blue-6"></div>
+        <div class="decor-circle circle-pink-7"></div>
+        <div class="decor-circle circle-blue-7"></div>
+        <div class="decor-circle circle-pink-8"></div>
+        <div class="decor-circle circle-blue-8"></div>
+        <div class="decor-circle circle-pink-9"></div>
+        <div class="decor-circle circle-blue-9"></div>
+        <div class="decor-circle circle-pink-10"></div>
+        <div class="decor-circle circle-blue-10"></div>
+        <div class="decor-circle circle-pink-11"></div>
+        <div class="decor-circle circle-blue-11"></div>
+        <div class="decor-circle circle-pink-12"></div>
+        <div class="decor-circle circle-blue-12"></div>
+        <div class="decor-circle circle-pink-13"></div>
+        <div class="decor-circle circle-blue-13"></div>
+        <div class="decor-circle circle-pink-14"></div>
+        <div class="decor-circle circle-blue-14"></div>
+        <div class="decor-circle circle-pink-15"></div>
+        <div class="decor-circle circle-blue-15"></div>
+      </div>
+
+      <!-- ── DYNAMIC PANELS CONTAINER ── -->
+      <div class="view-panel-container">
+        
+        <!-- ── VIEW 1: HOME/DASHBOARD ── -->
+        <section class="view-panel active" id="panel-dashboard">
+          <div class="panel-layout-grid">
+            
+            <!-- Hero Welcome Card -->
+            <div class="hero-welcome-card">
+
+              <div class="welcome-text-col">
+                <span class="streak-badge">
+                  <div class="streak-ring-container">
+                    <svg class="streak-ring-svg" width="28" height="28" viewBox="0 0 28 28">
+                      <circle class="streak-ring-bg" cx="14" cy="14" r="11"></circle>
+                      <circle class="streak-ring-fill" cx="14" cy="14" r="11" id="streak-progress-fill"></circle>
+                    </svg>
+                    <span class="flame-icon">
+                      <svg class="icon-solid" viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M17.66 8a8 8 0 0 1 2.34 5.66A8 8 0 0 1 12 21.66 8 8 0 0 1 4 13.66 8.35 8.35 0 0 1 6.34 8l5.66-6 5.66 6zm-5.66 9.66c1.1 0 2-.9 2-2 0-1.1-.9-2-2-2s-2 .9-2 2c0 1.1.9 2 2 2z"/></svg>
+                    </span>
+                  </div>
+                  <span id="streak-days-text">14-day streak</span>
+                </span>
+                <h1 class="welcome-name-title"><span id="welcome-greeting-text">Good morning</span>, <span id="welcome-student-name">Sarah</span> <svg class="icon-solid" viewBox="0 0 24 24" fill="currentColor" width="28" height="28" style="vertical-align: middle; margin-left: 4px; display: inline-block;"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg></h1>
+                <p class="welcome-tagline">Your AI tutor is ready. You have <span id="welcome-goals-count">3 learning goals</span> today.</p>
+              </div>
+              <div class="ai-status-pill">
+                <span class="status-pulse"></span>
+                <span>AI Tutor Active</span>
+              </div>
+            </div>
+
+            <!-- Stats Rows (Four KPI cards) -->
+            <div class="dashboard-stats-grid">
+              <!-- KPI 1 -->
+              <div class="kpi-card cursor-pointer" data-glow data-glow-color="blue" id="kpi-card-mastery">
+                <span class="kpi-label">Topics Mastered</span>
+                <div class="kpi-row">
+                  <span class="kpi-value" id="kpi-mastery">24<span class="kpi-subval">/60</span></span>
+                </div>
+                <div class="kpi-progress-bar-track">
+                  <div class="kpi-progress-bar-fill" id="kpi-bar-mastery"></div>
+                </div>
+              </div>
+              <!-- KPI 2 -->
+              <div class="kpi-card" data-glow data-glow-color="blue" id="kpi-card-confidence">
+                <span class="kpi-label">Confidence Score</span>
+                <div class="kpi-row">
+                  <span class="kpi-value" id="kpi-confidence">78</span>
+                  <div class="kpi-sparkline-wrap">
+                    <svg class="kpi-sparkline-svg" width="60" height="24" viewBox="0 0 60 24">
+                      <path class="sparkline-path" d="M 2 18 Q 12 12 20 16 T 38 6 T 48 10 T 58 4" fill="none" id="sparkline-trend-path"></path>
+                      <circle class="sparkline-dot" cx="58" cy="4" r="2" id="sparkline-trend-dot"></circle>
+                    </svg>
+                    <span class="delta-badge positive">↑ 4%</span>
+                  </div>
+                </div>
+                <div class="kpi-progress-bar-track">
+                  <div class="kpi-progress-bar-fill" id="kpi-bar-confidence"></div>
+                </div>
+              </div>
+              <!-- KPI 3 -->
+              <div class="kpi-card" data-glow data-glow-color="blue" id="kpi-card-quiz-average">
+                <span class="kpi-label">Last Quizzes Average</span>
+                <div class="kpi-row">
+                  <span class="kpi-value" id="kpi-quiz-average">B+</span>
+                </div>
+                <div class="kpi-progress-bar-track">
+                  <div class="kpi-progress-bar-fill" id="kpi-bar-quiz-average"></div>
+                </div>
+              </div>
+              <!-- KPI 4 -->
+              <div class="kpi-card" data-glow data-glow-color="pink" id="kpi-card-hours">
+                <span class="kpi-label">Study Time This Week</span>
+                <div class="kpi-row">
+                  <span class="kpi-value" id="kpi-hours">3.2h</span>
+                </div>
+                <div class="kpi-progress-bar-track">
+                  <div class="kpi-progress-bar-fill" id="kpi-bar-hours"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Two Column Section: Calendar & Confidence -->
+            <div class="dashboard-split-grid">
+              
+              <!-- Left: Weekly Schedule Calendar Card -->
+              <div class="card-dashboard" data-glow data-glow-color="blue">
+                <div class="card-header-flex">
+                  <h3 class="card-title-serif">This Week</h3>
+                  <a href="#" class="text-link-btn" id="view-all-schedule-btn">View All</a>
+                </div>
+                
+                <div class="calendar-week-strip">
+                  <div class="calendar-day checked" data-day="M">
+                    <span class="day-lbl">M</span>
+                    <span class="day-check">✓</span>
+                  </div>
+                  <div class="calendar-day checked" data-day="T">
+                    <span class="day-lbl">T</span>
+                    <span class="day-check">✓</span>
+                  </div>
+                  <div class="calendar-day checked" data-day="W">
+                    <span class="day-lbl">W</span>
+                    <span class="day-check">✓</span>
+                  </div>
+                  <div class="calendar-day current" data-day="Th">
+                    <span class="day-lbl">T</span>
+                    <span class="day-check-num" id="current-day-number">18</span>
+                  </div>
+                  <div class="calendar-day" data-day="F">
+                    <span class="day-lbl">F</span>
+                    <span class="day-check-empty"></span>
+                  </div>
+                  <div class="calendar-day" data-day="S">
+                    <span class="day-lbl">Sa</span>
+                    <span class="day-check-empty"></span>
+                  </div>
+                  <div class="calendar-day" data-day="Su">
+                    <span class="day-lbl">Su</span>
+                    <span class="day-check-empty"></span>
+                  </div>
+                </div>
+
+                <div class="upcoming-timeline-list">
+                  <span class="subheading-caps">UPCOMING</span>
+                  
+                  <div class="upcoming-item">
+                    <div class="upcoming-icon-box pink-bg">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    </div>
+                    <div class="upcoming-details">
+                      <h4 class="upcoming-title">Algebra Quiz</h4>
+                      <p class="upcoming-meta">Mathematics · Today, 4:30 PM</p>
+                    </div>
+                  </div>
+
+                  <div class="upcoming-item">
+                    <div class="upcoming-icon-box blue-bg">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 22h20C22 13 17 2 12 2S2 13 2 22z"/><path d="M12 22V12"/></svg>
+                    </div>
+                    <div class="upcoming-details">
+                      <h4 class="upcoming-title">Science Assignment</h4>
+                      <p class="upcoming-meta">Lab Work · Fri, 11:00 AM</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right: Learning Confidence Card -->
+              <div class="card-dashboard" data-glow data-glow-color="pink">
+                <div class="card-header-flex">
+                  <h3 class="card-title-serif">Learning Confidence</h3>
+                  <span class="tag-badge">AI</span>
+                </div>
+                
+                <div class="confidence-stats-row">
+                  <!-- Circular Gauge -->
+                  <div class="circular-progress-wrapper">
+                    <svg width="120" height="120" viewBox="0 0 120 120" class="circle-svg">
+                      <circle cx="60" cy="60" r="50" class="circle-bg"></circle>
+                      <circle cx="60" cy="60" r="50" class="circle-fill-bar" id="gauge-circle-fill"></circle>
+                    </svg>
+                    <div class="circle-text-center" id="gauge-score-value">78%</div>
+                  </div>
+                  
+                  <!-- Bar items -->
+                  <div class="subject-bars-list" id="subject-confidence-bars-container">
+                    <!-- Dynamically populated via JS based on class subjects -->
+                  </div>
+                </div>
+
+                <!-- Recommendation box -->
+                <div class="recommendation-callout-box" id="dashboard-recommendation-box">
+                  <div class="rec-icon-wrap">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+                  </div>
+                  <div class="rec-text-wrap">
+                    <h5 class="rec-headline" id="dashboard-rec-headline">English grammar needs a boost.</h5>
+                    <p class="rec-desc" id="dashboard-rec-body">Complete 2 practice sets today to improve your confidence score before the weekend.</p>
+                    <button class="rec-cta-btn" id="dashboard-rec-cta" style="display: none;">Solve with AI Tutor &rarr;</button>
+                  </div>
+                </div>
+
+                <div class="confidence-footer" id="confidence-analysis-time">Last analyzed by AI: 2 mins ago</div>
+              </div>
+
+            </div>
+
+            <!-- Weekly Digest Banner -->
+            <div class="progress-weekly-digest-banner" id="progress-weekly-digest" style="margin-top: 24px; margin-bottom: 24px;"></div>
+
+            <!-- Progress Section Dashboard Widgets (3-column layout) -->
+            <div class="dashboard-three-grid">
+              
+              <!-- Left Card: Completion Donut Chart visual -->
+              <div class="card-dashboard" id="progress-overall-completion-card" data-glow data-glow-color="green">
+                <h3 class="card-title-serif">Overall Syllabus Completion</h3>
+                <div class="overall-progress-donut-container">
+                  <svg width="160" height="160" viewBox="0 0 160 160" class="donut-svg">
+                    <circle cx="80" cy="80" r="70" class="donut-bg" id="donut-fill-pending"></circle>
+                    <circle cx="80" cy="80" r="70" class="donut-fill-doubt" id="donut-fill-doubt"></circle>
+                    <circle cx="80" cy="80" r="70" class="donut-fill-completed" id="donut-fill-completed"></circle>
+                  </svg>
+                  <div class="donut-text-center">
+                    <span class="donut-percent" id="progress-overall-donut-text">0%</span>
+                    <span class="donut-sublabel" id="progress-overall-donut-sublabel">Completed</span>
+                  </div>
+                </div>
+                
+                <div class="progress-legend-row">
+                  <div class="legend-item" id="legend-completed"><span class="legend-dot green"></span> <span id="progress-legend-completed">0 Completed</span></div>
+                  <div class="legend-item" id="legend-doubt"><span class="legend-dot orange-pulse"></span> <span id="progress-legend-doubt">0 Doubts</span></div>
+                  <div class="legend-item" id="legend-pending"><span class="legend-dot grey"></span> <span id="progress-legend-pending">0 Pending</span></div>
+                </div>
+              </div>
+
+              <!-- Center Card: Study Time Breakdown -->
+              <div class="card-dashboard" id="progress-study-time-card" data-glow data-glow-color="blue">
+                <h3 class="card-title-serif">Study Time Breakdown</h3>
+                <p class="stats-big-number" id="progress-total-study-hours">0 hours <span class="sub-label-kpi">this week</span></p>
+                <div class="simple-bar-graph-visual">
+                  <div class="graph-goal-line"><span class="goal-label">Target: 1h/day</span></div>
+                  <div class="graph-bar-col" style="--height: 40px;"><span class="graph-bar-value">Mon: 40m study logged</span><span class="graph-bar-lbl">M</span></div>
+                  <div class="graph-bar-col" style="--height: 60px;"><span class="graph-bar-value">Tue: 60m study logged</span><span class="graph-bar-lbl">T</span></div>
+                  <div class="graph-bar-col" style="--height: 50px;"><span class="graph-bar-value">Wed: 50m study logged</span><span class="graph-bar-lbl">W</span></div>
+                  <div class="graph-bar-col active" style="--height: 42px;"><span class="graph-bar-value">Thu: 42m study logged</span><span class="graph-bar-lbl">T</span></div>
+                  <div class="graph-bar-col" style="--height: 0px;"><span class="graph-bar-value">Fri: 0m study logged</span><span class="graph-bar-lbl">F</span></div>
+                  <div class="graph-bar-col" style="--height: 0px;"><span class="graph-bar-value">Sat: 0m study logged</span><span class="graph-bar-lbl">S</span></div>
+                  <div class="graph-bar-col" style="--height: 0px;"><span class="graph-bar-value">Sun: 0m study logged</span><span class="graph-bar-lbl">S</span></div>
+                </div>
+              </div>
+
+              <!-- Right Card: Test Performance Stats -->
+              <div class="card-dashboard" id="progress-test-trends-card" data-glow data-glow-color="green">
+                <h3 class="card-title-serif">Test Average Trends</h3>
+                <p class="stats-big-number" id="progress-overall-test-average">0% average <span class="sub-label-kpi">overall score</span></p>
+                
+                <div class="test-performance-trend-list" id="progress-test-performance-trend-container">
+                  <!-- Dynamic completed tests average trends -->
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Bottom: Continue Learning Section (AI-Personalized) -->
+            <div class="continue-learning-section" style="margin-top: 24px;">
+              <div class="continue-header">
+                <h2 class="card-title-serif">Continue Learning</h2>
+                <span class="pill-tag-personal font-sohne">AI-PERSONALIZED</span>
+              </div>
+              
+              <!-- Filter chips -->
+              <div class="learning-filter-chips" id="learning-filter-chips-container">
+              </div>
+
+              <!-- Continue Grid -->
+              <div class="continue-lessons-grid" id="continue-lessons-container">
+                <!-- Dynamically populated via JS -->
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- ── VIEW 2: AI TUTOR PANEL ── -->
+        <section class="view-panel" id="panel-ai-tutor">
+          <div class="ai-tutor-container">
+            
+            <!-- Chat screen (aligned 16:10, max width constraints in CSS) -->
+            <div class="chatbot-workspace-panel">
+              
+              <div class="chat-workspace-header">
+                <div class="tutor-brand-block">
+                  <h2 class="card-title-serif">AI Tutor</h2>
+                  <div class="chat-lang-pills">
+                    <button class="lang-pill active" data-lang="English"><span class="lang-character">A</span> English</button>
+                    <button class="lang-pill" data-lang="Hindi"><span class="lang-character">अ</span> Hindi</button>
+                    <button class="lang-pill" data-lang="Hinglish"><span class="lang-character">अ/A</span> Hinglish</button>
+                  </div>
+                </div>
+                <div class="chat-workspace-actions">
+                  <button class="btn-chat-action btn-outline" id="clear-chat-btn">Clear Chat</button>
+                  <button class="btn-chat-action btn-outline" id="new-chat-btn">+ New Chat</button>
+                </div>
+              </div>
+              
+              <div class="chat-workspace-body">
+                <!-- Left Sidebar -->
+                <div class="chat-sidebar-left">
+                  <div class="chat-sidebar-title">Conversations</div>
+                  <div class="chat-sidebar-list" id="chat-sidebar-old-chats-list">
+                    <!-- Dynamically populated via JS -->
+                  </div>
+                </div>
+                
+                <!-- Main Chat Area -->
+                <div class="chat-main-area">
+                  
+                  <!-- Welcome banner inside chat body (only visible when chat is empty) -->
+                  <div class="chat-history-scroller empty-chat-state" id="chat-scroller-body">
+                    <div class="chat-onboarding-card" id="chat-welcome-onboarding">
+                      <div class="onboarding-avatar-block">
+                        <div class="ai-mascot-orb-container">
+                          <div class="tutor-solid-avatar-big" id="chat-tutor-mascot-orb">
+                            <svg class="tutor-solid-icon-big" viewBox="0 0 24 24" fill="currentColor" style="width: 32px; height: 32px; color: var(--white);"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="onboarding-text-block">
+                        <h3 class="onboarding-greeting-title" id="chat-onboarding-greeting">Good morning, Hammad!</h3>
+                        <p class="onboarding-intro-text" id="chat-onboarding-intro">I'm your AI learning assistant. Ask me anything about your syllabus or pick up where you left off on Quadratic Equations?</p>
+                      </div>
+                    </div>
+                    
+                    <!-- Quick Prompts Chips Grid -->
+                    <div class="quick-prompts-grid" id="chat-quick-prompts">
+                      <!-- Dynamically populated in app.js with rotated brand colors -->
+                    </div>
+                    
+                    <!-- Empty Chat State: Horizontal scrollable Recent Topics -->
+                    <div class="chat-recent-lessons-section" id="chat-recent-lessons-section">
+                      <h4 class="recent-lessons-title">Pick up where you left off</h4>
+                      <div class="recent-lessons-scroll-container" id="chat-recent-lessons-container">
+                        <!-- Dynamically populated via JS -->
+                      </div>
+                    </div>
+                    
+                    <!-- Messages container -->
+                    <div class="chat-conversation-thread" id="chat-conversation-container">
+                      <!-- Messages dynamically injected -->
+                    </div>
+                  </div>
+
+                  <!-- Suggested follow-ups (floats above footer) -->
+                  <div class="chat-suggested-followups" id="chat-followups-panel" style="display: none;">
+                    <span class="followup-label">You can also ask:</span>
+                    <div class="followup-chips-row" id="chat-followup-chips-container">
+                      <!-- Dynamically populated -->
+                    </div>
+                  </div>
+
+                  <!-- Chat Input Footer -->
+                  <div class="chat-input-bar-footer">
+                    <div class="chat-attachment-wrapper">
+                      <button class="chat-attachment-btn" id="chat-attach-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                      </button>
+                      <div class="chat-attach-menu" id="chat-attach-menu" style="display: none;">
+                        <button class="chat-attach-menu-item" onclick="handleAttachOption('media')">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                          <span>Media</span>
+                        </button>
+                        <button class="chat-attach-menu-item" onclick="handleAttachOption('document')">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                          <span>Document</span>
+                        </button>
+                      </div>
+                    </div>
+                    
+                    <div class="chat-text-area-wrap">
+                      <input type="text" id="chat-user-textbox" placeholder="Ask your learning question..." class="chat-textbox-field">
+                    </div>
+
+                    <div class="chat-controls-row">
+                      <!-- Mic Button (Realigned next to send button) -->
+                      <button class="chat-mic-btn" id="chat-voice-btn" title="Speak to Tutor">
+                        <span class="mic-wave-pulse"></span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+                      </button>
+                      <!-- Send Button -->
+                      <button class="chat-send-btn-circle" id="chat-send-trigger-btn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                      </button>
+                    </div>
+                  </div>
+
+                </div> <!-- End chat-main-area -->
+              </div> <!-- End chat-workspace-body -->
+
+            </div>
+          </div>
+        </section>
+
+               <!-- ── VIEW 3: SYLLABUS TRACKER ── -->
+        <section class="view-panel" id="panel-syllabus">
+          <div class="syllabus-tracker-layout">
+            <div class="card-header-flex align-top">
+              <div>
+                <h1 class="welcome-name-title font-serif">Syllabus Tracker</h1>
+                <p class="section-desc">Track topics, log revisions, mark doubts, and take quizzes to build concepts.</p>
+                
+                <!-- Persistent mini progress strip -->
+                <div class="syllabus-macro-progress-strip" id="syllabus-macro-progress-strip">
+                  <span class="macro-progress-label" id="syllabus-macro-progress-label">Mathematics: 2/17 mastered</span>
+                  <div class="macro-progress-bar-track">
+                    <div class="macro-progress-bar-fill" id="syllabus-macro-progress-fill" style="width: 11.7%"></div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="syllabus-header-right">
+                <div class="syllabus-subject-pills" id="syllabus-subject-tabs">
+                  <!-- Tabs loaded dynamically -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Main Tracker Grid (Split view: list on left, detail panel on right) -->
+            <div class="syllabus-tracker-main-panel">
+              <div class="syllabus-view-container-wrapper">
+                <div class="syllabus-chapter-list" id="syllabus-topics-accordion">
+                  <!-- Accordion of chapters & topics loaded dynamically -->
+                </div>
+              </div>
+              
+              <!-- Selected Topic Details Side Panel -->
+              <div class="syllabus-topic-detail-drawer" id="syllabus-detail-drawer">
+                <div class="drawer-empty-state" id="drawer-unselected-msg">
+                  <div class="mascot-illustration-box">
+                    <svg viewBox="0 0 120 120" width="90" height="90" class="mascot-svg-tutor">
+                      <circle cx="60" cy="55" r="28" fill="url(#mascot-gradient-syllabus)" class="mascot-body-circle" />
+                      <ellipse cx="50" cy="51" rx="3.5" ry="5" fill="#1C1C1C" />
+                      <ellipse cx="70" cy="51" rx="3.5" ry="5" fill="#1C1C1C" />
+                      <ellipse cx="52" cy="49" rx="1" ry="1.5" fill="#FFFFFF" />
+                      <ellipse cx="72" cy="49" rx="1" ry="1.5" fill="#FFFFFF" />
+                      <circle cx="44" cy="57" r="3" fill="#FF8A9A" opacity="0.6" />
+                      <circle cx="76" cy="57" r="3" fill="#FF8A9A" opacity="0.6" />
+                      <path d="M56 60 Q 60 64 64 60" stroke="#1C1C1C" stroke-width="2" stroke-linecap="round" fill="none" />
+                      
+                      <!-- Graduation cap -->
+                      <path d="M36 33 L 60 23 L 84 33 L 60 43 Z" fill="#1C1C1C" />
+                      <path d="M50 38.5 V 45 Q 50 48 60 48 Q 70 48 70 45 V 38.5" fill="#1C1C1C" />
+                      <path d="M84 33 V 41" stroke="#A855F7" stroke-width="1.5" stroke-linecap="round" />
+                      <circle cx="84" cy="42" r="1.5" fill="#A855F7" />
+                      
+                      <!-- Book mascot is reading -->
+                      <path d="M40 76 Q 60 70 80 76 L 85 92 Q 60 86 35 92 Z" fill="var(--white)" stroke="var(--ink)" stroke-width="1.5" />
+                      <path d="M60 73 V 88" stroke="var(--dove)" stroke-width="1" />
+                      <line x1="45" y1="80" x2="55" y2="78" stroke="var(--slate)" stroke-width="1" />
+                      <line x1="45" y1="84" x2="55" y2="82" stroke="var(--slate)" stroke-width="1" />
+                      <line x1="65" y1="78" x2="75" y2="80" stroke="var(--slate)" stroke-width="1" />
+                      <line x1="65" y1="82" x2="75" y2="84" stroke="var(--slate)" stroke-width="1" />
+
+                      <defs>
+                        <radialGradient id="mascot-gradient-syllabus" cx="30%" cy="30%" r="70%">
+                          <stop offset="0%" stop-color="#FFA3B1" />
+                          <stop offset="40%" stop-color="#FD4463" />
+                          <stop offset="85%" stop-color="#A855F7" />
+                        </radialGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                  <h4 class="unselected-title font-serif">Syllabus Overview</h4>
+                  
+                  <!-- Aggregate subject Donut progress chart -->
+                  <div class="subject-donut-chart-container">
+                    <svg viewBox="0 0 100 100" width="80" height="80" class="progress-donut-svg">
+                      <circle cx="50" cy="50" r="38" stroke="var(--fog)" stroke-width="8" fill="none" />
+                      <circle cx="50" cy="50" r="38" stroke="var(--rust)" stroke-width="8" fill="none" 
+                              stroke-dasharray="238.76" stroke-dashoffset="238.76" id="donut-progress-fill" 
+                              transform="rotate(-90 50 50)" stroke-linecap="round" />
+                      <text x="50" y="55" font-family="var(--font-body)" font-weight="700" font-size="14" 
+                            fill="var(--ink)" text-anchor="middle" id="donut-progress-text">0%</text>
+                    </svg>
+                  </div>
+                  <p class="unselected-desc">Select any topic from the list to view study guides, log revisions, mark doubts, and take practice tests.</p>
+                </div>
+                
+                <div class="drawer-content-body" id="drawer-topic-info-box" style="display: none;">
+                  <div class="detail-header-card">
+                    <span class="detail-subject-badge" id="drawer-topic-subject">MATHEMATICS</span>
+                    <h3 class="detail-topic-title font-serif" id="drawer-topic-title">Quadratic Equations</h3>
+                    <div class="detail-chapter-parent-text" id="drawer-topic-chapter-desc">Chapter 1: Quadratic Equations foundations</div>
+                    <div class="detail-status-row">
+                      <span class="status-pill-badge" id="drawer-topic-status-pill">In Progress</span>
+                    </div>
+                  </div>
+                  
+                  <!-- Bento Box 1: Spaced Repetition Alert -->
+                  <div class="spaced-repetition-alert-box" id="drawer-spaced-repetition-box">
+                    <span class="spaced-repetition-icon">⏳</span>
+                    <span class="spaced-repetition-message" id="drawer-spaced-repetition-message">You completed this topic 12 days ago. Time for a quick revision test?</span>
+                  </div>
+
+                  <!-- Bento Box 2: AI Study Guide Summary -->
+                  <div class="drawer-study-guide-block">
+                    <span class="subheading-caps">AI Study Guide Summary</span>
+                    <p class="study-guide-text-body" id="drawer-topic-summary-text">AI is compiling guide...</p>
+                  </div>
+
+                  <!-- Bento Box 3: Revision History Stats -->
+                  <div class="drawer-revision-stats-block">
+                    <span class="subheading-caps">Revision & Test Stats</span>
+                    <div class="stats-grid-bento">
+                      <div class="stat-bento-card">
+                        <span class="stat-bento-lbl">Revised count</span>
+                        <span class="stat-bento-val" id="drawer-topic-revised-count">2 times</span>
+                      </div>
+                      <div class="stat-bento-card">
+                        <span class="stat-bento-lbl">Last revision</span>
+                        <span class="stat-bento-val" id="drawer-topic-last-revised">1 day ago</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Bento Box 4: Actions Block -->
+                  <div class="drawer-actions-block">
+                    <span class="subheading-caps">Topic Actions</span>
+                    
+                    <button class="drawer-action-btn btn-primary" id="drawer-btn-learn">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                      <span>Start Learning with AI</span>
+                    </button>
+                    
+                    <button class="drawer-action-btn btn-outline" id="drawer-btn-complete">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                      <span>Mark as Completed</span>
+                    </button>
+
+                    <button class="drawer-action-btn btn-outline" id="drawer-btn-revise">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                      <span>Mark as Revised</span>
+                    </button>
+
+                    <button class="drawer-action-btn btn-outline danger" id="drawer-btn-doubt">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                      <span>Mark as Doubt</span>
+                    </button>
+                    
+                    <button class="drawer-action-btn btn-outline" id="drawer-btn-remove-doubt" style="display: none;">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+                      <span>Remove Doubt Mark</span>
+                    </button>
+
+                    <button class="drawer-action-btn btn-outline" id="drawer-btn-test">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                      <span>Take Topic Test</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── VIEW 4: TESTS / QUIZZES ── -->
+        <section class="view-panel" id="panel-tests">
+          <div class="test-center-container">
+            <h1 class="welcome-name-title font-serif">Practice Test Center</h1>
+            <p class="section-desc" id="tests-section-desc">Take chapter-level or topic-level quizzes to test your understanding. Results will save in your study progress metrics.</p>
+            
+            <!-- Aggregate Stats Strip (Bento cards style) -->
+            <div class="test-stats-strip" id="test-stats-strip">
+              <div class="test-stat-card">
+                <span class="test-stat-label">Total Tests Taken</span>
+                <span class="test-stat-val" id="test-stats-total">0</span>
+              </div>
+              <div class="test-stat-card">
+                <span class="test-stat-label">Average Score</span>
+                <span class="test-stat-val" id="test-stats-avg">0%</span>
+              </div>
+              <div class="test-stat-card">
+                <span class="test-stat-label">Most Improved Topic</span>
+                <span class="test-stat-val" id="test-stats-improved">No retakes yet</span>
+              </div>
+            </div>
+            
+            <!-- Dynamic MCQ Test Wizard -->
+            <div class="test-wizard-card card-dashboard" id="test-runner-panel" style="display: none;" data-glow data-glow-color="blue">
+              <div class="test-header-bar">
+                <span class="test-subject-tag" id="run-test-subject">MATHEMATICS</span>
+                <span class="test-question-counter" id="run-test-counter">Question 1 of 3</span>
+              </div>
+              <div class="test-progress-bar-track">
+                <div class="test-progress-bar-fill" id="run-test-progress-fill" style="width: 33%"></div>
+              </div>
+              
+              <h3 class="test-question-body font-serif" id="run-test-question-text">If x^2 - 5x + 6 = 0, what are the values of x?</h3>
+              
+              <div class="test-options-list" id="run-test-options-grid">
+                <!-- MCQ options dynamic -->
+              </div>
+              
+              <div class="test-actions-footer">
+                <button class="btn-outline" id="run-test-quit-btn">Quit Test</button>
+                <button class="btn-primary" id="run-test-submit-btn" disabled>Submit Answer</button>
+              </div>
+            </div>
+
+            <!-- Score Results Modal Overlay -->
+            <div class="test-results-modal-overlay" id="test-results-modal-overlay" style="display: none;">
+              <canvas id="confetti-canvas" class="confetti-canvas-overlay"></canvas>
+              <div class="test-score-panel card-dashboard" id="test-results-panel" data-glow data-glow-color="blue">
+                <div class="test-results-summary-side">
+                  <!-- SVG circular progress ring -->
+                  <div class="score-circle-reveal">
+                    <svg viewBox="0 0 100 100" width="100" height="100" class="score-modal-svg">
+                      <circle cx="50" cy="50" r="42" stroke="var(--fog)" stroke-width="8" fill="none" />
+                      <circle cx="50" cy="50" r="42" stroke="var(--rust)" stroke-width="8" fill="none" 
+                              stroke-dasharray="263.89" stroke-dashoffset="263.89" id="modal-score-ring" 
+                              transform="rotate(-90 50 50)" stroke-linecap="round" />
+                      <text x="50" y="56" font-family="var(--font-body)" font-weight="700" font-size="18" 
+                            fill="var(--ink)" text-anchor="middle" id="modal-score-text">0%</text>
+                    </svg>
+                  </div>
+                  <h2 class="score-main-title font-serif" id="test-results-headline">Test Completed!</h2>
+                  <p class="score-percentage-text" id="test-results-score">You scored 67% (2/3 correct)</p>
+                  
+                  <div class="score-recs-text" id="test-results-feedback">Great job! Let's review the answers and correct explanations.</div>
+                  
+                  <div class="score-actions-row">
+                    <button class="btn-outline" id="test-results-retake-btn">Retake Test</button>
+                    <button class="btn-primary" id="test-results-ai-help-btn" style="display: none;">Ask AI Tutor for Help</button>
+                    <button class="btn-primary" id="test-results-close-btn">Done</button>
+                  </div>
+                </div>
+                
+                <div class="test-answers-review-container" id="test-review-qa-list">
+                  <!-- QA review list dynamically injected -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Main Test Overview Landing Panel (Shown by default) -->
+            <div class="test-landing-dashboard" id="test-landing-panel">
+              <div class="dashboard-split-grid">
+                <!-- Left: Available Tests list -->
+                <div class="card-dashboard" data-glow data-glow-color="blue">
+                  <h3 class="card-title-serif">Topic Tests</h3>
+                  
+                  <!-- Subject filter pills bar -->
+                  <div class="test-subject-filters" id="test-subject-filters-container">
+                    <!-- Filter pills loaded dynamically -->
+                  </div>
+                  
+                  <div class="test-list-wrapper">
+                    <div class="test-list-scrollable" id="test-available-topic-tests-list">
+                      <!-- Loaded dynamically via JS -->
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Right: Test History scores list -->
+                <div class="card-dashboard" data-glow data-glow-color="blue">
+                  <h3 class="card-title-serif">Test History</h3>
+                  
+                  <div class="test-list-wrapper">
+                    <div class="test-history-list" id="test-completed-history-list">
+                      <!-- History runs loaded dynamically -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- ── VIEW 5: DOUBT SECTION ── -->
+        <section class="view-panel" id="panel-doubt">
+          <div class="doubt-center-layout">
+            <h1 class="welcome-name-title font-serif">Doubt Solver Center</h1>
+            <p class="section-desc">Mark topics as doubts from the Syllabus Tracker. They will list here, and you can chat with the AI Tutor to resolve them.</p>
+
+            <!-- Doubt Center Page-level Accomplishment KPIs -->
+            <div class="doubt-resolved-kpi-bar">
+              <div class="kpi-card resolved">
+                <div class="kpi-icon-wrapper">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                </div>
+                <div class="kpi-details">
+                  <span class="kpi-value" id="kpi-resolved-doubts-count">0</span>
+                  <span class="kpi-label">Doubts Resolved This Week</span>
+                </div>
+              </div>
+              <div class="kpi-card active-doubts">
+                <div class="kpi-icon-wrapper">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                </div>
+                <div class="kpi-details">
+                  <span class="kpi-value" id="kpi-active-doubts-count">0</span>
+                  <span class="kpi-label">Active Doubts Pending</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="dashboard-split-grid">
+              
+              <!-- Left Column: Doubt Subjects List -->
+              <div class="card-dashboard" data-glow data-glow-color="pink">
+                <h3 class="card-title-serif">Subjects List</h3>
+                <div class="doubt-subjects-flex" id="doubt-subjects-cards-list">
+                  <!-- Maths, Science, English, SST cards with count labels -->
+                </div>
+              </div>
+
+              <!-- Right Column: Active Doubts for selected subject -->
+              <div class="card-dashboard" data-glow data-glow-color="pink">
+                <div class="card-header-flex">
+                  <h3 class="card-title-serif" id="doubt-subject-detail-title">Mathematics Doubts</h3>
+                  <span class="badge-count" id="doubt-detail-count-badge">0</span>
+                </div>
+                
+                <div class="doubt-topics-detailed-list" id="doubt-subject-topics-container">
+                  <!-- List of doubts inside subject loaded dynamically -->
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+
+
+        <!-- ── VIEW 7: HISTORY LIST ── -->
+        <section class="view-panel" id="panel-history">
+          <div class="history-layout-container">
+            <h1 class="welcome-name-title font-serif">Study History logs</h1>
+            <p class="section-desc">Review your past learning activities, resolved doubts, test history, and previous chatbot conversations.</p>
+
+            <!-- Top Engagement Stats Comparison Strip -->
+            <div class="history-digest-strip">
+              <div class="history-digest-card">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                <span id="history-engagement-stat">5 learning sessions logged this week (+2 from last week)</span>
+              </div>
+            </div>
+
+            <div class="dashboard-split-grid">
+              
+              <!-- Left Card: Chat History -->
+              <div class="card-dashboard" data-glow data-glow-color="blue">
+                <div class="card-header-flex">
+                  <h3 class="card-title-serif">AI Chat Logs</h3>
+                  <button class="btn-outline" id="new-history-chat-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" style="margin-right: 6px; display: inline-block; vertical-align: middle;"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    New Conversation
+                  </button>
+                </div>
+                
+                <div class="history-chat-sessions-list" id="history-chat-conversations-list">
+                  <!-- Chat history sessions list loaded dynamically -->
+                </div>
+              </div>
+
+              <!-- Right Card: Past resolved doubts -->
+              <div class="card-dashboard" data-glow data-glow-color="pink">
+                <h3 class="card-title-serif">Resolved Doubts History</h3>
+                <div class="history-resolved-doubts-list" id="history-resolved-doubts-container">
+                  <!-- Resolved doubts list loaded dynamically -->
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Bottom Section: Chronological Learning Journey Timeline -->
+            <div class="card-dashboard margin-top-24" id="history-timeline-card" data-glow data-glow-color="blue">
+              <div class="card-header-flex" style="flex-wrap: wrap; gap: 16px;">
+                <h3 class="card-title-serif">Your Learning Journey Timeline</h3>
+                
+                <!-- Search & Filters Row -->
+                <div class="history-controls-row">
+                  <input type="text" id="history-search-input" placeholder="Search timeline by topic or keyword..." oninput="filterHistoryTimeline()" />
+                  <select id="history-type-filter" onchange="filterHistoryTimeline()">
+                    <option value="all">All Activities</option>
+                    <option value="chat">AI Chats Only</option>
+                    <option value="test">Practice Tests Only</option>
+                    <option value="doubt">Resolved Doubts Only</option>
+                  </select>
+                </div>
+              </div>
+              
+              <div class="history-timeline-feed" id="history-timeline-feed-container">
+                <!-- Dynamically loaded unified chronological feed -->
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+  </div>
+
+  <!-- Topics Mastered Modal Overlay -->
+  <div class="modal-overlay" id="topics-mastered-modal" style="display: none;">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title font-serif">Topics Mastered</h3>
+        <button class="modal-close-btn" id="close-mastery-modal-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="modal-body" id="mastery-modal-list">
+        <!-- Grouped subjects and topics populated dynamically by JS -->
+      </div>
+    </div>
+  </div>
+  
+  <!-- Celebrate Milestone Toast Overlay -->
+  <div class="milestone-toast-overlay" id="milestone-toast-celebration" style="display: none;">
+    <div class="milestone-toast-card">
+      <div class="milestone-trophy-icon">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #FFD700;"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.66V17c0 .55-.45 1-1 1H4v2h16v-2h-5c-.55 0-1-.45-1-1v-2.34M12 2a4 4 0 0 1 4 4v7a4 4 0 0 1-8 0V6a4 4 0 0 1 4-4z"/></svg>
+      </div>
+      <h3 class="milestone-toast-title font-serif">Unstoppable! 🔥</h3>
+      <p class="milestone-toast-message">You've reached a <strong>14-day streak</strong>! Your dedication is paying off. Keep it up!</p>
+      <button class="btn-milestone-claim" id="milestone-claim-btn">Let's Go!</button>
+    </div>
+  </div>
+  
+  <!-- Read-Only Conversation Transcript Modal Overlay -->
+  <div class="history-modal-overlay" id="history-transcript-modal-overlay" style="display: none;">
+    <div class="history-modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title font-serif" id="history-transcript-modal-title">AI Tutor Conversation</h3>
+        <button class="modal-close-btn" onclick="closeHistoryModals()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="transcript-dialog-container" id="history-transcript-dialog-body">
+          <!-- Dialogue bubble logs loaded dynamically -->
+        </div>
+      </div>
+      <div class="history-modal-footer">
+        <button class="btn-outline" onclick="closeHistoryModals()">Close Preview</button>
+        <button class="btn-primary" id="history-continue-chat-btn">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14" style="margin-right: 6px;"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
+          Continue in AI Tutor
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Resolved Doubt before/after Comparison Modal Overlay -->
+  <div class="history-modal-overlay" id="history-doubt-modal-overlay" style="display: none;">
+    <div class="history-modal-card" style="max-width: 480px;">
+      <div class="modal-header">
+        <h3 class="modal-title font-serif" id="history-doubt-modal-title">Doubt Progression</h3>
+        <button class="modal-close-btn" onclick="closeHistoryModals()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="modal-body" id="history-doubt-modal-body">
+        <!-- Diagnostic growth timeline loaded dynamically -->
+      </div>
+      <div class="history-modal-footer" style="justify-content: flex-end;">
+        <button class="btn-primary" onclick="closeHistoryModals()">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Canvas Confetti Overlay -->
+  <div id="confetti-canvas-container" style="position: fixed; inset: 0; pointer-events: none; z-index: 9999;"></div>
+
+  <!-- ── SCRIPTS ── -->
+  <script src="app.js"></script>
+</body>
+</html>

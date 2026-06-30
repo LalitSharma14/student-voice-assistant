@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Students | Teachifyy</title>
+  <meta name="description" content="Redesigning the future of learning for Classes 5 to 10. Concepts first, AI readiness, and Math & Science masterclass.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ── NAVIGATION BAR ── -->
+  <nav id="navbar">
+    <a href="#" class="nav-brand">
+      <img src="./teachifyy-logo.png" alt="Teachifyy" class="nav-logo-img">
+    </a>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">For Teachers</a></li>
+      <li><a href="#" class="active">For Students</a></li>
+      <li><a href="#">Blogs</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn btn-outline open-login-modal">Login</button>
+    </div>
+  </nav>
+
+  <!-- ── HERO SECTION ── -->
+  <section id="home" class="hero-section">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-container">
+      <div class="hero-text-col">
+        <span class="eyebrow eyebrow-pink">SCIENCE · MATHS · AI MASTERCLASS</span>
+        <h1 class="hero-title">Your Child Doesn't Need More Tuition.<br><span>They Need the Right Learning Companion.</span></h1>
+        <p class="hero-subtitle">
+          Today's children face a very different world than the one we grew up in. Teachifyy builds deeper understanding, stronger confidence, and future-ready skills, without adding more pressure.
+        </p>
+        
+        <div class="hero-features">
+          <div class="hero-feat-item">
+            <span class="hero-feat-icon">✓</span>
+            <span>Personalised for Classes 5 to 10</span>
+          </div>
+          <div class="hero-feat-item">
+            <span class="hero-feat-icon">✓</span>
+            <span>Concept-first, not exam-first</span>
+          </div>
+          <div class="hero-feat-item">
+            <span class="hero-feat-icon">✓</span>
+            <span>AI-age readiness built-in</span>
+          </div>
+          <div class="hero-feat-item">
+            <span class="hero-feat-icon">✓</span>
+            <span>Individual attention at scale</span>
+          </div>
+        </div>
+
+        <div class="hero-ctas">
+          <a href="#quiz" class="btn btn-primary">Find My Path →</a>
+          <a href="#curriculum" class="btn btn-outline">Explore Syllabus</a>
+        </div>
+        
+        <div class="hero-login-link-wrap">
+          <a href="#" class="open-login-modal hero-login-link">Already registered? Student Login</a>
+        </div>
+
+        <div class="hero-badge-strip">
+          Classes 5–10 <span>·</span> Science &amp; Maths <span>·</span> AI Curriculum <span>·</span> Future Skills
+        </div>
+      </div>
+
+      <div class="hero-illustration-col">
+        <div class="hero-image-sequence-container">
+          <img id="hero-frame-img" src="./frames_processed/studying/ezgif-frame-001.png" alt="Interactive studying companion">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ALIGNED WITH PARTNERS ── -->
+  <section class="partner-section">
+    <div class="partner-label">Recognised &amp; Aligned With</div>
+    <div class="partner-marquee">
+      <div class="marquee-track">
+        <!-- First set of logos -->
+        <div class="marquee-item"><img src="logo-5.jpg" alt="CBSE"></div>
+        <div class="marquee-item"><img src="logo-3.png" alt="NCERT"></div>
+        <div class="marquee-item"><img src="logo-4.png" alt="NASSCOM"></div>
+        <div class="marquee-item"><img src="logo-2.png" alt="Google for Education"></div>
+        <div class="marquee-item"><img src="logo-1.png" alt="NEP 2020"></div>
+        <!-- Duplicate set for seamless looping -->
+        <div class="marquee-item"><img src="logo-5.jpg" alt="CBSE"></div>
+        <div class="marquee-item"><img src="logo-3.png" alt="NCERT"></div>
+        <div class="marquee-item"><img src="logo-4.png" alt="NASSCOM"></div>
+        <div class="marquee-item"><img src="logo-2.png" alt="Google for Education"></div>
+        <div class="marquee-item"><img src="logo-1.png" alt="NEP 2020"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SKELETON BROCHURE PAIN POINTS ── -->
+  <section id="challenges" class="pain-points-section">
+    <!-- Peeking Student Illustration (Confused/Overwhelmed - Right Side, Boy) -->
+    <div class="challenges-peeking-student peeking-student-base peeking-student-right">
+      <svg viewBox="0 0 440 520" xmlns="http://www.w3.org/2000/svg">
+        <!-- Hair back -->
+        <path d="M 230,360 C 200,370 184,330 184,290 C 184,240 200,190 230,160 C 250,140 290,130 330,130 C 370,130 400,160 410,190 C 424,220 424,250 424,290 C 424,340 400,360 370,360 Z" fill="#2C1B12" />
+        <!-- Messy hair back spikes (closed) -->
+        <path d="M 190,220 L 170,210 L 196,190 L 180,176 L 216,156 L 204,140 L 244,130 L 244,220 Z" fill="#2C1B12" />
+        <!-- Left Ear -->
+        <path d="M 190,250 C 170,250 160,270 170,290 C 180,310 200,300 200,280 Z" fill="#FAD0B1" stroke="#E0A37E" stroke-width="3" />
+        <path d="M 180,274 C 174,274 172,282 180,286" fill="none" stroke="#E0A37E" stroke-width="2.5" stroke-linecap="round" />
+        <!-- Neck -->
+        <path d="M 290,380 L 290,430 C 290,430 310,444 340,430 L 340,380 Z" fill="#FAD0B1" />
+        <!-- Neck shadow -->
+        <path d="M 290,380 C 310,400 330,400 340,380 L 340,396 C 330,412 310,412 290,396 Z" fill="#E2AC8A" />
+        <!-- T-shirt (white uniform) -->
+        <path d="M 440,430 C 410,430 370,440 340,450 C 310,440 270,430 240,430 C 220,430 210,460 210,520 L 440,520 Z" fill="#FFFFFF" />
+        <path d="M 280,440 C 290,456 330,456 340,440" fill="none" stroke="#2C5688" stroke-width="5" stroke-linecap="round" />
+        <!-- Face skin -->
+        <path d="M 200,270 C 200,180 270,150 340,160 C 410,170 430,250 424,310 C 416,370 340,410 270,400 C 220,390 200,330 200,270 Z" fill="#FCE3C8" />
+        <!-- Cheeks -->
+        <circle cx="240" cy="310" r="30" fill="#FF8DA1" opacity="0.3" />
+        <circle cx="370" cy="316" r="26" fill="#FF8DA1" opacity="0.3" />
+        <!-- Nose -->
+        <path d="M 296,284 Q 306,294 314,286" fill="none" stroke="#C48E72" stroke-width="4.5" stroke-linecap="round" />
+        <!-- Worried Mouth -->
+        <path d="M 270,350 Q 296,332 320,350" fill="none" stroke="#3A2312" stroke-width="4.5" stroke-linecap="round" />
+        <!-- Eyeballs -->
+        <ellipse cx="256" cy="236" rx="40" ry="48" fill="#FFFFFF" stroke="#3A2312" stroke-width="4.5" />
+        <ellipse cx="356" cy="240" rx="36" ry="44" fill="#FFFFFF" stroke="#3A2312" stroke-width="4.5" />
+        <!-- Pupils (Animated) -->
+        <g class="pupils">
+          <!-- Left Eye Pupil Details -->
+          <g transform="translate(0, 0)">
+            <ellipse cx="256" cy="236" rx="22" ry="28" fill="#3A2312" />
+            <ellipse cx="256" cy="236" rx="14" ry="18" fill="#110B07" />
+            <circle cx="248" cy="224" r="8" fill="#FFFFFF" />
+            <circle cx="264" cy="244" r="4.5" fill="#FFFFFF" />
+          </g>
+          <!-- Right Eye Pupil Details -->
+          <g transform="translate(0, 0)">
+            <ellipse cx="356" cy="240" rx="20" ry="26" fill="#3A2312" />
+            <ellipse cx="356" cy="240" rx="13" ry="17" fill="#110B07" />
+            <circle cx="348" cy="228" r="7.5" fill="#FFFFFF" />
+            <circle cx="364" cy="248" r="4" fill="#FFFFFF" />
+          </g>
+        </g>
+        <!-- Hair front/spikes -->
+        <path d="M 190,230 C 190,230 220,176 270,180 C 290,180 304,196 316,184 C 330,170 356,164 390,176 C 416,184 420,210 420,236 Q 384,210 350,216 Q 310,196 270,216 Q 230,210 190,230 Z" fill="#2C1B12" />
+        <!-- Eyebrows (Worried) -->
+        <path class="left-brow" d="M 224,196 Q 260,190 290,176" fill="none" stroke="#1C1C1C" stroke-width="6.5" stroke-linecap="round" />
+        <path class="right-brow" d="M 326,176 Q 352,190 382,196" fill="none" stroke="#1C1C1C" stroke-width="6.5" stroke-linecap="round" />
+        <!-- Hand removed -->
+      </svg>
+      <!-- Thought Bubbles -->
+      <div class="section-bubble cb-1" style="--delay: 0s;"><svg viewBox="0 0 24 24" fill="none" stroke="#2C5688" stroke-width="2.5" stroke-linecap="round"><path d="M 9.09 9 a 3 3 0 0 1 5.83 1 c 0 2 -3 3 -3 3 M 12 17 h .01" /></svg></div>
+      <div class="section-bubble cb-2" style="--delay: 1.5s;"><svg viewBox="0 0 24 24" fill="none" stroke="#2C5688" stroke-width="2" stroke-linecap="round"><path d="M6 18c2-4 4-8 8-8s6 4 4 6-6-2-8 0 4 6 8 0" /></svg></div>
+      <div class="section-bubble cb-3" style="--delay: 3s;"><svg viewBox="0 0 24 24" fill="none" stroke="#FD4463" stroke-width="2" stroke-linecap="round"><path d="M4 20l6-6M9 11l6-6M13 13l2-2" /><path d="M12 20l8-8M17 19l2-2" /></svg></div>
+      <div class="section-bubble cb-4" style="--delay: 4.5s;"><svg viewBox="0 0 24 24" fill="none" stroke="#FD4463" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg></div>
+    </div>
+
+    <div class="pain-points-inner">
+      <div class="section-header">
+        <span class="eyebrow eyebrow-blue">THE HARD TRUTHS</span>
+        <h2>The Hidden Challenges Most Students Face</h2>
+        <p>Success isn't just about school marks. Traditional methods often fail to address the core barriers that hold children back.</p>
+      </div>
+
+    <!-- Restored Original Pain Grid (4 Columns in center) -->
+    <div class="pain-grid">
+      <!-- Card 1 -->
+      <div class="pain-card">
+        <div class="pain-icon-wrap">
+          <svg class="stroke-icon" width="24" height="24" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="8" x2="12" y2="12"></line>
+            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+          </svg>
+        </div>
+        <h3>Learning Stops When Doubts Begin</h3>
+        <p>A child gets stuck on a concept today. The next chance to ask may come days later. By then, motivation drops, confusion grows, and confidence weakens.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="pain-card">
+        <div class="pain-icon-wrap">
+          <svg class="stroke-icon" width="24" height="24" viewBox="0 0 24 24">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+          </svg>
+        </div>
+        <h3>Dozens of Speeds, One Teacher</h3>
+        <p>In classrooms of 40+ students, children are forced to learn at a single uniform speed. Some move ahead, while many silently fall behind.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="pain-card">
+        <div class="pain-icon-wrap">
+          <svg class="stroke-icon" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+        </div>
+        <h3>Marks Don't Mean Understanding</h3>
+        <p>A student may score well in exams by memorizing rules but fail to explain the concept weeks later. Real learning is being able to apply knowledge independently.</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="pain-card">
+        <div class="pain-icon-wrap">
+          <svg class="stroke-icon" width="24" height="24" viewBox="0 0 24 24">
+            <line x1="18" y1="20" x2="18" y2="10"></line>
+            <line x1="12" y1="20" x2="12" y2="4"></line>
+            <line x1="6" y1="20" x2="6" y2="14"></line>
+          </svg>
+        </div>
+        <h3>The Middle-School Confidence Gap</h3>
+        <p>Many students lose confidence in Science &amp; Maths during Classes 8 and 9, not due to lack of ability, but due to lack of personalized conceptual pathways.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- ── CONFIDENCE TRACKER & LIVE SIMULATOR ── -->
+  <section id="confidence" class="simulator-section">
+    <!-- Peeking Student Illustration (Confidence Tracker - Left Side, Girl) -->
+    <div class="confidence-peeking-student peeking-student-base peeking-student-left">
+      <svg viewBox="0 0 440 520" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(440, 0) scale(-1, 1)">
+          <!-- Hair back / Ponytail sweep -->
+          <path d="M 240,380 C 180,380 140,340 150,280 C 130,260 120,220 140,190 C 130,160 150,120 190,130 C 210,90 250,80 290,100 C 330,70 380,90 400,130 C 430,130 460,170 450,220 C 460,260 450,320 420,360 Z" fill="#3A2312" />
+          <!-- Braid knot on side -->
+          <circle cx="160" cy="300" r="18" fill="#FD4463" />
+          <!-- Left Ear -->
+          <path d="M 190,250 C 170,250 160,270 170,290 C 180,310 200,300 200,280 Z" fill="#FAD0B1" stroke="#E0A37E" stroke-width="3" />
+          <!-- Neck -->
+          <path d="M 290,380 L 290,430 C 290,430 310,444 340,430 L 340,380 Z" fill="#FAD0B1" />
+          <path d="M 290,380 C 310,400 330,400 340,380 L 340,396 C 330,412 310,412 290,396 Z" fill="#E2AC8A" />
+          <!-- T-shirt (pink shirt uniform) -->
+          <path d="M 440,430 C 410,430 370,440 340,450 C 310,440 270,430 240,430 C 220,430 210,460 210,520 L 440,520 Z" fill="#FD4463" />
+          <path d="M 280,440 C 290,456 330,456 340,440" fill="none" stroke="#FFF0F3" stroke-width="4" stroke-linecap="round" />
+          <!-- Face skin -->
+          <path d="M 200,270 C 200,180 270,150 340,160 C 410,170 430,250 424,310 C 416,370 340,410 270,400 C 220,390 200,330 200,270 Z" fill="#FCE3C8" />
+          <!-- Cheeks -->
+          <circle cx="240" cy="310" r="30" fill="#FF8DA1" opacity="0.3" />
+          <circle cx="370" cy="316" r="26" fill="#FF8DA1" opacity="0.3" />
+          <!-- Nose -->
+          <path d="M 296,284 Q 306,294 314,286" fill="none" stroke="#C48E72" stroke-width="4.5" stroke-linecap="round" />
+          <!-- Thinking mouth (straight line) -->
+          <path id="sim-character-mouth" d="M 270,340 Q 300,332 330,340" fill="none" stroke="#3A2312" stroke-width="4.5" stroke-linecap="round" />
+          <!-- Eyeballs -->
+          <ellipse cx="256" cy="236" rx="40" ry="48" fill="#FFFFFF" stroke="#3A2312" stroke-width="4.5" />
+          <ellipse cx="356" cy="240" rx="36" ry="44" fill="#FFFFFF" stroke="#3A2312" stroke-width="4.5" />
+          <!-- Eyelashes removed -->
+          <!-- Pupils (Animated - looking up) -->
+          <g class="pupils-look-up">
+            <!-- Left Eye Pupil Details -->
+            <g transform="translate(0, 0)">
+              <ellipse cx="256" cy="236" rx="22" ry="28" fill="#3A2312" />
+              <ellipse cx="256" cy="236" rx="14" ry="18" fill="#110B07" />
+              <circle cx="248" cy="224" r="8" fill="#FFFFFF" />
+              <circle cx="264" cy="244" r="4.5" fill="#FFFFFF" />
+            </g>
+            <!-- Right Eye Pupil Details -->
+            <g transform="translate(0, 0)">
+              <ellipse cx="356" cy="240" rx="20" ry="26" fill="#3A2312" />
+              <ellipse cx="356" cy="240" rx="13" ry="17" fill="#110B07" />
+              <circle cx="348" cy="228" r="7.5" fill="#FFFFFF" />
+              <circle cx="364" cy="248" r="4" fill="#FFFFFF" />
+            </g>
+          </g>
+          <!-- Hair front/bangs -->
+          <path d="M 192,220 C 180,170 230,140 270,150 C 300,120 360,130 390,156 C 420,170 430,200 430,230 C 410,210 390,210 380,224 C 360,190 320,190 300,220 C 280,190 230,190 210,224 Z" fill="#3A2312" />
+          <!-- Eyebrows (one raised) -->
+          <path id="sim-character-left-brow" class="left-brow" d="M 224,188 Q 260,170 290,190" fill="none" stroke="#1C1C1C" stroke-width="6.5" stroke-linecap="round" />
+          <path id="sim-character-right-brow" class="right-brow" d="M 326,172 Q 352,156 382,170" fill="none" stroke="#1C1C1C" stroke-width="6.5" stroke-linecap="round" />
+          <!-- Hand removed -->
+        </g>
+      </svg>
+      <!-- Thought Bubble: Lightbulb -->
+      <div id="sim-thought-bubble" class="section-bubble cb-1" style="--delay: 0s;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#2C5688" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 18h6M10 22h4M15.09 14c.91-.9 1.91-2.2 1.91-4a5 5 0 0 0-10 0c0 1.8 1 3.1 1.91 4" />
+        </svg>
+      </div>
+    </div>
+    <div class="simulator-inner">
+      <div class="sim-info">
+        <span class="eyebrow eyebrow-pink">INSIDE THE TEACHIFYY APP</span>
+        <h2>Discover where you're strong and what to unlock next.</h2>
+        <p class="sub">
+          The <strong>Confidence Score</strong> is your child's personal learning identity inside the Teachifyy app. It tracks how they're growing across Math, Science, and English, not what their marks say, but how confident they actually are.
+        </p>
+
+        <div class="sim-sliders">
+          <div class="slider-group">
+            <div class="slider-label-wrap">
+              <span class="slider-label">Math Progress</span>
+              <span id="math-slider-val" class="slider-value">88%</span>
+            </div>
+            <input type="range" id="slider-math" class="slider-input" min="20" max="100" value="88">
+          </div>
+
+          <div class="slider-group">
+            <div class="slider-label-wrap">
+              <span class="slider-label">Science Progress</span>
+              <span id="science-slider-val" class="slider-value">72%</span>
+            </div>
+            <input type="range" id="slider-science" class="slider-input" min="20" max="100" value="72">
+          </div>
+
+          <div class="slider-group">
+            <div class="slider-label-wrap">
+              <span class="slider-label">English Progress</span>
+              <span id="english-slider-val" class="slider-value">65%</span>
+            </div>
+            <input type="range" id="slider-english" class="slider-input" min="20" max="100" value="65">
+          </div>
+        </div>
+        <div style="margin-top: 32px;">
+          <a href="#download" class="btn btn-primary">Explore your Journey →</a>
+        </div>
+      </div>
+
+      <!-- Dashboard Interactive Widget -->
+      <div class="dashboard-widget">
+        <div class="dash-header">
+          <div class="dash-title-wrap">
+            <svg class="dash-title-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="20" x2="18" y2="10"></line>
+              <line x1="12" y1="20" x2="12" y2="4"></line>
+              <line x1="6" y1="20" x2="6" y2="14"></line>
+            </svg>
+            <span class="dash-title">Learning Confidence</span>
+          </div>
+          <span class="dash-ai-badge">AI</span>
+        </div>
+
+        <div class="dash-stats-row">
+          <!-- Circular Score Ring -->
+          <div class="dash-ring-container">
+            <svg width="140" height="140" viewBox="0 0 140 140">
+              <circle class="dash-ring-circle-bg" cx="70" cy="70" r="60"></circle>
+              <circle id="dash-circle" class="dash-ring-circle-val" cx="70" cy="70" r="60"></circle>
+            </svg>
+            <div id="dash-score-text" class="dash-ring-text">78%</div>
+          </div>
+
+          <!-- Progress Bars -->
+          <div class="dash-progress-bars">
+            <div class="dash-bar-item">
+              <div class="dash-bar-labels">
+                <span>Math</span>
+                <span id="dash-val-math">88%</span>
+              </div>
+              <div class="dash-bar-track">
+                <div id="dash-bar-math" class="dash-bar-fill"></div>
+              </div>
+            </div>
+
+            <div class="dash-bar-item">
+              <div class="dash-bar-labels">
+                <span>Science</span>
+                <span id="dash-val-science">72%</span>
+              </div>
+              <div class="dash-bar-track">
+                <div id="dash-bar-science" class="dash-bar-fill"></div>
+              </div>
+            </div>
+
+            <div class="dash-bar-item">
+              <div class="dash-bar-labels">
+                <span>English</span>
+                <span id="dash-val-english">65%</span>
+              </div>
+              <div class="dash-bar-track">
+                <div id="dash-bar-english" class="dash-bar-fill dash-bar-fill-pink"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recommendation Banner -->
+        <div class="dash-rec-card">
+          <div class="dash-rec-icon-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+          </div>
+          <div class="dash-rec-text-wrap">
+            <div id="dash-rec-title" class="dash-rec-title">English grammar needs a boost.</div>
+            <div id="dash-rec-desc" class="dash-rec-desc">Complete 2 practice sets today to improve your confidence score before the weekend.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── DYNAMIC CURRICULUM EXPLORER ── -->
+  <section id="curriculum" class="curriculum-section">
+    <!-- Peeking Student Illustration (Curriculum Explorer - Right Side, Boy with Glasses) -->
+    <div class="curriculum-peeking-student peeking-student-base peeking-student-right">
+      <svg viewBox="0 0 440 520" xmlns="http://www.w3.org/2000/svg">
+        <!-- Hair back -->
+        <path d="M 230,360 C 200,370 184,330 184,290 C 184,240 200,190 230,160 C 250,140 290,130 330,130 C 370,130 400,160 410,190 C 424,220 424,250 424,290 C 424,340 400,360 370,360 Z" fill="#2C1B12" />
+        <!-- Left Ear -->
+        <path d="M 190,250 C 170,250 160,270 170,290 C 180,310 200,300 200,280 Z" fill="#FAD0B1" stroke="#E0A37E" stroke-width="3" />
+        <path d="M 180,274 C 174,274 172,282 180,286" fill="none" stroke="#E0A37E" stroke-width="2.5" stroke-linecap="round" />
+        <!-- Neck -->
+        <path d="M 290,380 L 290,430 C 290,430 310,444 340,430 L 340,380 Z" fill="#FAD0B1" />
+        <path d="M 290,380 C 310,400 330,400 340,380 L 340,396 C 330,412 310,412 290,396 Z" fill="#E2AC8A" />
+        <!-- T-shirt (white uniform) -->
+        <path d="M 440,430 C 410,430 370,440 340,450 C 310,440 270,430 240,430 C 220,430 210,460 210,520 L 440,520 Z" fill="#FFFFFF" />
+        <path d="M 280,440 C 290,456 330,456 340,440" fill="none" stroke="#2C5688" stroke-width="5" stroke-linecap="round" />
+        <!-- Face skin -->
+        <path d="M 200,270 C 200,180 270,150 340,160 C 410,170 430,250 424,310 C 416,370 340,410 270,400 C 220,390 200,330 200,270 Z" fill="#FCE3C8" />
+        <!-- Cheeks -->
+        <circle cx="240" cy="310" r="30" fill="#FF8DA1" opacity="0.3" />
+        <circle cx="370" cy="316" r="26" fill="#FF8DA1" opacity="0.3" />
+        <!-- Nose -->
+        <path d="M 296,284 Q 306,294 314,286" fill="none" stroke="#C48E72" stroke-width="4.5" stroke-linecap="round" />
+        <!-- Smile Mouth -->
+        <path d="M 270,330 Q 300,356 330,330" fill="none" stroke="#3A2312" stroke-width="4.5" stroke-linecap="round" />
+        <!-- Eyeballs -->
+        <ellipse cx="256" cy="236" rx="40" ry="48" fill="#FFFFFF" stroke="#3A2312" stroke-width="4.5" />
+        <ellipse cx="356" cy="240" rx="36" ry="44" fill="#FFFFFF" stroke="#3A2312" stroke-width="4.5" />
+        <!-- Pupils -->
+        <g class="pupils">
+          <!-- Left Eye Pupil Details -->
+          <g transform="translate(0, 0)">
+            <ellipse cx="256" cy="236" rx="22" ry="28" fill="#3A2312" />
+            <ellipse cx="256" cy="236" rx="14" ry="18" fill="#110B07" />
+            <circle cx="248" cy="224" r="8" fill="#FFFFFF" />
+            <circle cx="264" cy="244" r="4.5" fill="#FFFFFF" />
+          </g>
+          <!-- Right Eye Pupil Details -->
+          <g transform="translate(0, 0)">
+            <ellipse cx="356" cy="240" rx="20" ry="26" fill="#3A2312" />
+            <ellipse cx="356" cy="240" rx="13" ry="17" fill="#110B07" />
+            <circle cx="348" cy="228" r="7.5" fill="#FFFFFF" />
+            <circle cx="364" cy="248" r="4" fill="#FFFFFF" />
+          </g>
+        </g>
+        <!-- Glasses -->
+        <circle cx="256" cy="236" r="46" fill="none" stroke="#1C1C1C" stroke-width="6" />
+        <circle cx="356" cy="240" r="42" fill="none" stroke="#1C1C1C" stroke-width="6" />
+        <line x1="302" y1="238" x2="314" y2="238" stroke="#1C1C1C" stroke-width="6" stroke-linecap="round" />
+        <line x1="210" y1="230" x2="190" y2="240" stroke="#1C1C1C" stroke-width="5" stroke-linecap="round" />
+        <!-- Hair front/spikes -->
+        <path d="M 190,230 C 190,230 220,176 270,180 C 290,180 304,196 316,184 C 330,170 356,164 390,176 C 416,184 420,210 420,236 Q 384,210 350,216 Q 310,196 270,216 Q 230,210 190,230 Z" fill="#2C1B12" />
+        <!-- Eyebrows -->
+        <path class="left-brow" d="M 224,180 Q 260,164 290,180" fill="none" stroke="#1C1C1C" stroke-width="6.5" stroke-linecap="round" />
+        <path class="right-brow" d="M 326,180 Q 352,164 382,180" fill="none" stroke="#1C1C1C" stroke-width="6.5" stroke-linecap="round" />
+        <!-- Hand removed -->
+      </svg>
+      <!-- Math/science bubbles -->
+      <div class="section-bubble cb-1" style="--delay: 0s;"><svg viewBox="0 0 24 24" fill="none" stroke="#2C5688" stroke-width="2.5" stroke-linecap="round"><path d="M 12 5 v 14 M 5 12 h 14" /></svg></div>
+      <div class="section-bubble cb-2" style="--delay: 2.5s;"><svg viewBox="0 0 24 24" fill="none" stroke="#FD4463" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5" /><path d="M2 12h20M12 2v20" /></svg></div>
+    </div>
+    <div class="curriculum-inner">
+      <div class="section-header">
+      <span class="eyebrow eyebrow-blue">OUR K10 SYLLABUS</span>
+      <h2>Explore What You'll Learn</h2>
+      <p>Select your class grade below to see how our curriculum builds future-ready AI, Math, and Science capabilities.</p>
+    </div>
+
+    <!-- Grade Filter Strip -->
+    <div class="grade-explorer-strip">
+      <button class="grade-explorer-pill active" data-grade="5">Grade 5</button>
+      <button class="grade-explorer-pill" data-grade="6">Grade 6</button>
+      <button class="grade-explorer-pill" data-grade="7">Grade 7</button>
+      <button class="grade-explorer-pill" data-grade="8">Grade 8</button>
+      <button class="grade-explorer-pill" data-grade="9">Grade 9</button>
+      <button class="grade-explorer-pill" data-grade="10">Grade 10</button>
+    </div>
+
+    <!-- Syllabus Card Display -->
+    <div class="syllabus-display-card">
+      <div class="syllabus-overview">
+        <span id="syllabus-badge" class="syllabus-header-badge">CLASSES 5-6 | AGE 10-12 | AI ORIGINS</span>
+        <h3 id="syllabus-title" class="syllabus-grade-title">Grade 5 AI Syllabus</h3>
+        <p id="syllabus-tagline" class="syllabus-grade-tagline">"Explore the digital sandbox where coding starts."</p>
+        
+        <div style="margin-top: auto;">
+          <h4 class="syllabus-outcome-title">Learning Outcomes:</h4>
+          <p id="syllabus-outcomes" class="syllabus-outcome-desc">Develop computational thinking, block coding concepts, and understand AI limitations.</p>
+        </div>
+      </div>
+
+      <div class="syllabus-timeline-wrap">
+        <h4 class="syllabus-timeline-title">Curriculum Path</h4>
+        <div id="syllabus-timeline" style="display:flex; flex-direction:column; gap: 24px;">
+          <!-- Content Dynamically Injected by app.js -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- ── PATHFINDER QUIZ WIZARD ── -->
+  <section id="quiz" class="quiz-section">
+    <!-- Peeking Student Illustration (Pathfinder Quiz - Left Side, Girl) -->
+    <div class="quiz-peeking-student peeking-student-base peeking-student-left">
+      <svg viewBox="0 0 440 520" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(440, 0) scale(-1, 1)">
+          <!-- Hair back -->
+          <path d="M 240,380 C 180,380 140,340 150,280 C 130,260 120,220 140,190 C 130,160 150,120 190,130 C 210,90 250,80 290,100 C 330,70 380,90 400,130 C 430,130 460,170 450,220 C 460,260 450,320 420,360 Z" fill="#3A2312" />
+          <!-- Left Ear -->
+          <path d="M 190,250 C 170,250 160,270 170,290 C 180,310 200,300 200,280 Z" fill="#FAD0B1" stroke="#E0A37E" stroke-width="3" />
+          <!-- Neck -->
+          <path d="M 290,380 L 290,430 C 290,430 310,444 340,430 L 340,380 Z" fill="#FAD0B1" />
+          <path d="M 290,380 C 310,400 330,400 340,380 L 340,396 C 330,412 310,412 290,396 Z" fill="#E2AC8A" />
+          <!-- T-shirt (teal shirt) -->
+          <path d="M 440,430 C 410,430 370,440 340,450 C 310,440 270,430 240,430 C 220,430 210,460 210,520 L 440,520 Z" fill="#4ABFB0" />
+          <path d="M 280,440 C 290,456 330,456 340,440" fill="none" stroke="#EBF8F7" stroke-width="4" stroke-linecap="round" />
+          <!-- Face skin -->
+          <path d="M 200,270 C 200,180 270,150 340,160 C 410,170 430,250 424,310 C 416,370 340,410 270,400 C 220,390 200,330 200,270 Z" fill="#FCE3C8" />
+          <!-- Cheeks -->
+          <circle cx="240" cy="310" r="30" fill="#FF8DA1" opacity="0.3" />
+          <circle cx="370" cy="316" r="26" fill="#FF8DA1" opacity="0.3" />
+          <!-- Nose -->
+          <path d="M 296,284 Q 306,294 314,286" fill="none" stroke="#C48E72" stroke-width="4.5" stroke-linecap="round" />
+          <!-- Happy mouth (open smile) -->
+          <path d="M 270,324 Q 300,370 330,324 Z" fill="#3A2312" />
+          <path d="M 282,346 C 288,336 312,336 318,346" fill="#FF8DA1" />
+          <!-- Eyeballs -->
+          <ellipse cx="256" cy="236" rx="40" ry="48" fill="#FFFFFF" stroke="#3A2312" stroke-width="4.5" />
+          <ellipse cx="356" cy="240" rx="36" ry="44" fill="#FFFFFF" stroke="#3A2312" stroke-width="4.5" />
+          <!-- Eyelashes removed -->
+          <!-- Pupils (Animated - excited) -->
+          <g class="pupils-excited">
+            <!-- Left Eye Pupil Details -->
+            <g transform="translate(0, 0)">
+              <ellipse cx="256" cy="236" rx="22" ry="28" fill="#3A2312" />
+              <ellipse cx="256" cy="236" rx="14" ry="18" fill="#110B07" />
+              <circle cx="248" cy="224" r="8" fill="#FFFFFF" />
+              <circle cx="264" cy="244" r="4.5" fill="#FFFFFF" />
+            </g>
+            <!-- Right Eye Pupil Details -->
+            <g transform="translate(0, 0)">
+              <ellipse cx="356" cy="240" rx="20" ry="26" fill="#3A2312" />
+              <ellipse cx="356" cy="240" rx="13" ry="17" fill="#110B07" />
+              <circle cx="348" cy="228" r="7.5" fill="#FFFFFF" />
+              <circle cx="364" cy="248" r="4" fill="#FFFFFF" />
+            </g>
+          </g>
+          <!-- Hair front/bangs -->
+          <path d="M 192,220 C 180,170 230,140 270,150 C 300,120 360,130 390,156 C 420,170 430,200 430,230 C 410,210 390,210 380,224 C 360,190 320,190 300,220 C 280,190 230,190 210,224 Z" fill="#3A2312" />
+          <!-- Eyebrows (excitedly raised) -->
+          <path class="left-brow" d="M 224,176 Q 260,160 290,176" fill="none" stroke="#1C1C1C" stroke-width="6.5" stroke-linecap="round" />
+          <path class="right-brow" d="M 326,176 Q 352,160 382,176" fill="none" stroke="#1C1C1C" stroke-width="6.5" stroke-linecap="round" />
+          <!-- Hand removed -->
+        </g>
+      </svg>
+      <!-- Checkmark bubble -->
+      <div class="section-bubble cb-1" style="--delay: 0s;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#4ABFB0" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12" /></svg>
+      </div>
+    </div>
+    <div class="quiz-container">
+      <div class="section-header">
+        <span class="eyebrow eyebrow-pink">FIND YOUR PATH</span>
+        <h2>Pathfinder Learning Profile</h2>
+        <p>Answer a few quick questions to find the Teachifyy curriculum and learning path built for you.</p>
+      </div>
+
+      <div class="quiz-card">
+        <div id="quiz-content">
+          <div class="quiz-progress-section">
+            <span id="quiz-cat" class="quiz-category">ABOUT YOU</span>
+            <span id="quiz-step" class="quiz-step-indicator">Question 1 of 10</span>
+          </div>
+          <div class="quiz-progressbar-track">
+            <div id="quiz-prog-fill" class="quiz-progressbar-fill"></div>
+          </div>
+          
+          <h3 id="quiz-q-text" class="quiz-question-text">Which grade are you in?</h3>
+          <div id="quiz-opts-grid" class="quiz-options-grid">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+
+        <!-- Quiz Results -->
+        <div id="quiz-results" class="quiz-results-card" style="display: none;">
+          <div class="quiz-results-badge">✓</div>
+          <h3 id="quiz-results-title" class="quiz-results-title">Path discovered for you!</h3>
+          <p class="quiz-results-sub">Based on your learning profile, we suggest focusing on these customized Teachifyy streams:</p>
+          
+          <div id="quiz-recs" class="quiz-recs-container">
+            <!-- Dynamically populated recommendations -->
+          </div>
+
+          <div class="quiz-results-actions">
+            <button class="btn btn-outline" onclick="resetQuiz()">Retake Quiz</button>
+            <button class="btn btn-primary open-reg-modal">Book Demo Batch</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── STUDENT STORIES ── -->
+  <section class="stories-section">
+    <!-- Peeking Student Illustration (Student Stories - Right Side, Boy Laughing) -->
+    <div class="stories-peeking-student peeking-student-base peeking-student-right">
+      <svg viewBox="0 0 440 520" xmlns="http://www.w3.org/2000/svg">
+        <!-- Hair back -->
+        <path d="M 230,360 C 200,370 184,330 184,290 C 184,240 200,190 230,160 C 250,140 290,130 330,130 C 370,130 400,160 410,190 C 424,220 424,250 424,290 C 424,340 400,360 370,360 Z" fill="#2C1B12" />
+        <!-- Left Ear -->
+        <path d="M 190,250 C 170,250 160,270 170,290 C 180,310 200,300 200,280 Z" fill="#FAD0B1" stroke="#E0A37E" stroke-width="3" />
+        <path d="M 180,274 C 174,274 172,282 180,286" fill="none" stroke="#E0A37E" stroke-width="2.5" stroke-linecap="round" />
+        <!-- Neck -->
+        <path d="M 290,380 L 290,430 C 290,430 310,444 340,430 L 340,380 Z" fill="#FAD0B1" />
+        <path d="M 290,380 C 310,400 330,400 340,380 L 340,396 C 330,412 310,412 290,396 Z" fill="#E2AC8A" />
+        <!-- T-shirt (pink collar uniform) -->
+        <path d="M 440,430 C 410,430 370,440 340,450 C 310,440 270,430 240,430 C 220,430 210,460 210,520 L 440,520 Z" fill="#FD4463" />
+        <path d="M 280,440 C 290,456 330,456 340,440" fill="none" stroke="#FFD6DE" stroke-width="5" stroke-linecap="round" />
+        <!-- Face skin -->
+        <path d="M 200,270 C 200,180 270,150 340,160 C 410,170 430,250 424,310 C 416,370 340,410 270,400 C 220,390 200,330 200,270 Z" fill="#FCE3C8" />
+        <!-- Cheeks -->
+        <circle cx="240" cy="310" r="30" fill="#FF8DA1" opacity="0.3" />
+        <circle cx="370" cy="316" r="26" fill="#FF8DA1" opacity="0.3" />
+        <!-- Nose -->
+        <path d="M 296,284 Q 306,294 314,286" fill="none" stroke="#C48E72" stroke-width="4.5" stroke-linecap="round" />
+        <!-- Laughing mouth -->
+        <path d="M 270,320 Q 300,370 330,320 Z" fill="#3A2312" />
+        <path d="M 284,342 C 290,332 310,332 316,342" fill="#FF8DA1" />
+        <!-- Laughing eyes (closed curves) -->
+        <path d="M 224,236 Q 250,216 276,236" fill="none" stroke="#3A2312" stroke-width="6" stroke-linecap="round" />
+        <path d="M 332,240 Q 358,220 384,240" fill="none" stroke="#3A2312" stroke-width="6" stroke-linecap="round" />
+        <!-- Hair front/spikes -->
+        <path d="M 190,230 C 190,230 220,176 270,180 C 290,180 304,196 316,184 C 330,170 356,164 390,176 C 416,184 420,210 420,236 Q 384,210 350,216 Q 310,196 270,216 Q 230,210 190,230 Z" fill="#2C1B12" />
+        <!-- Eyebrows -->
+        <path class="left-brow" d="M 224,180 Q 260,164 290,180" fill="none" stroke="#1C1C1C" stroke-width="6.5" stroke-linecap="round" />
+        <path class="right-brow" d="M 326,180 Q 352,164 382,180" fill="none" stroke="#1C1C1C" stroke-width="6.5" stroke-linecap="round" />
+        <!-- Hand removed -->
+      </svg>
+      <!-- Star bubble -->
+      <div class="section-bubble cb-1" style="--delay: 0s;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#FD4463" stroke-width="2" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+      </div>
+    </div>
+    <div class="section-header">
+      <span class="eyebrow eyebrow-pink">TESTIMONIALS</span>
+      <h2>Hear It From Students Like You</h2>
+      <p>Real feedback from parents and students experiencing the Teachifyy growth journey.</p>
+    </div>
+
+    <div class="stories-slider-container">
+      <div class="stories-slider-track">
+        <!-- Story 1 -->
+        <div class="story-card">
+          <div class="story-stars">
+            <span class="star-filled">★</span>
+            <span class="star-filled">★</span>
+            <span class="star-filled">★</span>
+            <span class="star-filled">★</span>
+            <span class="star-filled">★</span>
+          </div>
+          
+          <div class="wa-chat-mock">
+            <div class="wa-header">
+              <div class="wa-avatar" style="background:var(--blue);">P</div>
+              <div class="wa-profile-info">
+                <span class="wa-name">Priya's Mum</span>
+                <span class="wa-status">Online</span>
+              </div>
+            </div>
+            <div class="wa-bubble">
+              <p class="wa-text">Priya has completely changed. She used to dread Science homework but now she actually asks to do extra modules! 😊</p>
+              <div class="wa-time">11:42 AM</div>
+            </div>
+            <div class="wa-bubble sent">
+              <p class="wa-text">That's wonderful to hear! Her Confidence Score jumped from 54 to 79 this month 🎉</p>
+              <div class="wa-time">11:44 AM</div>
+            </div>
+          </div>
+          
+          <p class="story-quote">"I used to find Science boring. Now I actually look forward to studying, and I'm topping my class."</p>
+          
+          <div class="story-author">
+            <div class="author-avatar avatar-pink">P</div>
+            <div class="author-details">
+              <span class="author-name">Priya</span>
+              <span class="author-meta">Class 7 · Pune</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story 2 -->
+        <div class="story-card">
+          <div class="story-stars">
+            <span class="star-filled">★</span>
+            <span class="star-filled">★</span>
+            <span class="star-filled">★</span>
+            <span class="star-filled">★</span>
+            <span class="star-filled">★</span>
+          </div>
+          
+          <div class="wa-chat-mock">
+            <div class="wa-header">
+              <div class="wa-avatar" style="background:var(--blue);">K</div>
+              <div class="wa-profile-info">
+                <span class="wa-name">Kabir's Dad</span>
+                <span class="wa-status">Online</span>
+              </div>
+            </div>
+            <div class="wa-bubble">
+              <p class="wa-text">My son's Confidence Score went from 48 to 71 in one month. My wife and I are genuinely shocked 🙏</p>
+              <div class="wa-time">9:15 AM</div>
+            </div>
+            <div class="wa-bubble sent">
+              <p class="wa-text">Kabir has been putting in real effort, and the growth is completely his! 💪</p>
+              <div class="wa-time">9:18 AM</div>
+            </div>
+          </div>
+          
+          <p class="story-quote">"My Confidence Score went from 48 to 71 in one month. My parents couldn't believe it."</p>
+          
+          <div class="story-author">
+            <div class="author-avatar avatar-blue">K</div>
+            <div class="author-details">
+              <span class="author-name">Kabir</span>
+              <span class="author-meta">Class 9 · Delhi</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story 3 -->
+        <div class="story-card">
+          <div class="story-stars">
+            <span class="star-filled">★</span>
+            <span class="star-filled">★</span>
+            <span class="star-filled">★</span>
+            <span class="star-filled">★</span>
+            <span class="star-empty">★</span>
+          </div>
+          
+          <div class="wa-chat-mock">
+            <div class="wa-header">
+              <div class="wa-avatar" style="background:var(--blue);">A</div>
+              <div class="wa-profile-info">
+                <span class="wa-name">Ananya</span>
+                <span class="wa-status">Online</span>
+              </div>
+            </div>
+            <div class="wa-bubble">
+              <p class="wa-text">I scored 94% on the AI project capstone! I honestly didn't think I had a chance to complete it this term 😭😭</p>
+              <div class="wa-time">6:32 PM</div>
+            </div>
+            <div class="wa-bubble sent">
+              <p class="wa-text">Ananya you earned every bit of this! Congratulations 💻🏆</p>
+              <div class="wa-time">6:35 PM</div>
+            </div>
+          </div>
+          
+          <p class="story-quote">"I didn't think I could write Python chatbots. I registered anyway and built a project catalog."</p>
+          
+          <div class="story-author">
+            <div class="author-avatar avatar-beige">A</div>
+            <div class="author-details">
+              <span class="author-name">Ananya</span>
+              <span class="author-meta">Class 10 · Bengaluru</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── MASTERCLASS TEACHERS ── -->
+  <section class="teachers-section">
+    <div class="section-header">
+      <span class="eyebrow eyebrow-blue">EXPERT TEAM</span>
+      <h2>Our Masterclass Teachers</h2>
+      <p>Every Teachifyy educator is chosen for subject mastery, simple teaching styles, and student growth passion.</p>
+    </div>
+
+    <div class="teachers-grid">
+      <!-- Teacher 1 -->
+      <div class="teacher-card">
+        <div class="teacher-photo tp-pink">KR</div>
+        <div class="teacher-name">Khushnuma Rahaman</div>
+        <div class="teacher-sub">School Management &amp; Coordination (Kolkata)</div>
+        <p class="teacher-exp">Master of Education. Focuses on academic planning, institutional leadership, and developing collaborative school structures.</p>
+        <div class="teacher-tags">
+          <span class="teacher-tag">Leadership</span>
+          <span class="teacher-tag">Planning</span>
+          <span class="teacher-tag">Operations</span>
+        </div>
+      </div>
+
+      <!-- Teacher 2 -->
+      <div class="teacher-card">
+        <div class="teacher-photo tp-blue">MB</div>
+        <div class="teacher-name">Maima B</div>
+        <div class="teacher-sub">Child Psychology &amp; Guidance (Bangalore)</div>
+        <p class="teacher-exp">MSc in Child Development. Specializes in adolescent counseling, cognitive growth, and supportive pedagogy.</p>
+        <div class="teacher-tags">
+          <span class="teacher-tag">Counseling</span>
+          <span class="teacher-tag">Pedagogy</span>
+          <span class="teacher-tag">Wellness</span>
+        </div>
+      </div>
+
+      <!-- Teacher 3 -->
+      <div class="teacher-card">
+        <div class="teacher-photo tp-navy">VL</div>
+        <div class="teacher-name">Vanlallawmpuii</div>
+        <div class="teacher-sub">TESOL &amp; Communication (Aizawl)</div>
+        <p class="teacher-exp">Certified TESOL Trainer. Expert in language acquisition, conversational fluency, and building speaking confidence.</p>
+        <div class="teacher-tags">
+          <span class="teacher-tag">Phonetics</span>
+          <span class="teacher-tag">Speaking</span>
+          <span class="teacher-tag">TESOL</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── REGISTRATIONS COUNT BAND ── -->
+  <section class="count-band">
+    <div class="count-stats-grid">
+      <div class="count-stat-item">
+        <span id="c-students" class="num">0</span>
+        <div class="label">students registered</div>
+      </div>
+      <div class="count-stat-item">
+        <span id="c-cities" class="num">0</span>
+        <div class="label">cities represented</div>
+      </div>
+      <div class="count-stat-item">
+        <span id="c-days" class="num">0</span>
+        <div class="label">days left to join</div>
+      </div>
+    </div>
+    <p class="count-sub">Don't wait. Join thousands of students building future competence today.</p>
+    <button class="btn btn-white open-reg-modal">Secure Your Free Demo Spot →</button>
+  </section>
+
+  <!-- ── PARENT FAQS ── -->
+  <section class="faq-section">
+    <!-- Peeking Student Illustration (FAQ Section - Left Side, Girl Smiling) -->
+    <div class="faq-peeking-student peeking-student-base peeking-student-left">
+      <svg viewBox="0 0 440 520" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(440, 0) scale(-1, 1)">
+          <!-- Hair back -->
+          <path d="M 240,380 C 180,380 140,340 150,280 C 130,260 120,220 140,190 C 130,160 150,120 190,130 C 210,90 250,80 290,100 C 330,70 380,90 400,130 C 430,130 460,170 450,220 C 460,260 450,320 420,360 Z" fill="#3A2312" />
+          <!-- Left Ear -->
+          <path d="M 190,250 C 170,250 160,270 170,290 C 180,310 200,300 200,280 Z" fill="#FAD0B1" stroke="#E0A37E" stroke-width="3" />
+          <!-- Neck -->
+          <path d="M 290,380 L 290,430 C 290,430 310,444 340,430 L 340,380 Z" fill="#FAD0B1" />
+          <path d="M 290,380 C 310,400 330,400 340,380 L 340,396 Z" fill="#E2AC8A" />
+          <!-- T-shirt (blue uniform) -->
+          <path d="M 440,430 C 410,430 370,440 340,450 C 310,440 270,430 240,430 C 220,430 210,460 210,520 L 440,520 Z" fill="#2C5688" />
+          <path d="M 280,440 C 290,456 330,456 340,440" fill="none" stroke="#EDF3F9" stroke-width="4" stroke-linecap="round" />
+          <!-- Face skin -->
+          <path d="M 200,270 C 200,180 270,150 340,160 C 410,170 430,250 424,310 C 416,370 340,410 270,400 C 220,390 200,330 200,270 Z" fill="#FCE3C8" />
+          <!-- Cheeks -->
+          <circle cx="240" cy="310" r="30" fill="#FF8DA1" opacity="0.3" />
+          <circle cx="370" cy="316" r="26" fill="#FF8DA1" opacity="0.3" />
+          <!-- Nose -->
+          <path d="M 296,284 Q 306,294 314,286" fill="none" stroke="#C48E72" stroke-width="4.5" stroke-linecap="round" />
+          <!-- Smile Mouth -->
+          <path d="M 270,330 Q 300,356 330,330" fill="none" stroke="#3A2312" stroke-width="4.5" stroke-linecap="round" />
+          <!-- Eyeballs -->
+          <ellipse cx="256" cy="236" rx="40" ry="48" fill="#FFFFFF" stroke="#3A2312" stroke-width="4.5" />
+          <ellipse cx="356" cy="240" rx="36" ry="44" fill="#FFFFFF" stroke="#3A2312" stroke-width="4.5" />
+          <!-- Eyelashes removed -->
+          <!-- Pupils -->
+          <g class="pupils">
+            <!-- Left Eye Pupil Details -->
+            <g transform="translate(0, 0)">
+              <ellipse cx="256" cy="236" rx="22" ry="28" fill="#3A2312" />
+              <ellipse cx="256" cy="236" rx="14" ry="18" fill="#110B07" />
+              <circle cx="248" cy="224" r="8" fill="#FFFFFF" />
+              <circle cx="264" cy="244" r="4.5" fill="#FFFFFF" />
+            </g>
+            <!-- Right Eye Pupil Details -->
+            <g transform="translate(0, 0)">
+              <ellipse cx="356" cy="240" rx="20" ry="26" fill="#3A2312" />
+              <ellipse cx="356" cy="240" rx="13" ry="17" fill="#110B07" />
+              <circle cx="348" cy="228" r="7.5" fill="#FFFFFF" />
+              <circle cx="364" cy="248" r="4" fill="#FFFFFF" />
+            </g>
+          </g>
+          <!-- Hair front/bangs -->
+          <path d="M 192,220 C 180,170 230,140 270,150 C 300,120 360,130 390,156 C 420,170 430,200 430,230 C 410,210 390,210 380,224 C 360,190 320,190 300,220 C 280,190 230,190 210,224 Z" fill="#3A2312" />
+          <!-- Eyebrows -->
+          <path class="left-brow" d="M 224,184 Q 260,170 290,190" fill="none" stroke="#1C1C1C" stroke-width="6.5" stroke-linecap="round" />
+          <path class="right-brow" d="M 326,188 Q 352,172 382,184" fill="none" stroke="#1C1C1C" stroke-width="6.5" stroke-linecap="round" />
+          <!-- Hand removed -->
+        </g>
+      </svg>
+      <!-- Dialog bubble -->
+      <div class="section-bubble cb-1" style="--delay: 0s;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#2C5688" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /></svg>
+      </div>
+    </div>
+    <div class="faq-container">
+      <div class="section-header">
+        <span class="eyebrow eyebrow-beige">HELP &amp; SUPPORT</span>
+        <h2>Frequently Asked Questions</h2>
+        <p>Common questions from parents looking to provide their children with the right educational companions.</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item open">
+          <button class="faq-q">Is Teachifyy aligned with the CBSE/NCERT syllabus?<span class="faq-icon-box">+</span></button>
+          <div class="faq-a">Yes. All academic content is mapped to class-appropriate CBSE/NCERT learning outcomes, emphasizing NEP 2020 conceptual clarity rather than rote memory drills.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">What is the cost of joining Teachifyy?<span class="faq-icon-box">+</span></button>
+          <div class="faq-a">The Pathfinder Quiz, Confidence Assessment, and core diagnostic checks are free. Live academic masterclass programs have accessible monthly subscriptions.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">What is the Confidence Score and how is it calculated?<span class="faq-icon-box">+</span></button>
+          <div class="faq-a">The score uses regular in-app assessments, topic quizzes, and activity completion metrics to calculate class confidence averages. It adjusts dynamically to show active learning progression across Math, Science, and English.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">Is the platform safe for my child?<span class="faq-icon-box">+</span></button>
+          <div class="faq-a">Yes. The Teachifyy student portal has zero external links or public social sharing features, ensuring a safe, focused environment reviewed regularly by educators.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FINAL CALL TO ACTION ── -->
+  <section id="download" class="final-cta-section">
+    <h2>Give Your Child An Advantage That Lasts</h2>
+    <p>Unlock their potential with Science, Maths, and AI masterplans. batches are starting soon.</p>
+    
+    <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap; margin-bottom:32px;">
+      <button class="btn btn-white open-reg-modal">Book a Demo Session</button>
+      <button class="btn btn-white open-login-modal" style="background-color:transparent; border:1.5px solid var(--white); color:var(--white);">Already Registered? Login</button>
+    </div>
+    
+    <div class="app-badges">
+      <a href="#" class="app-badge-btn">
+        <img src="./logo-play-transparent.png" alt="Google Play" class="app-badge-img">
+        <div class="app-badge-text">
+          <span class="app-badge-sub">GET IT ON</span>
+          <span class="app-badge-main">Google Play</span>
+        </div>
+      </a>
+      <a href="#" class="app-badge-btn">
+        <img src="./logo-apple-transparent.png" alt="App Store" class="app-badge-img">
+        <div class="app-badge-text">
+          <span class="app-badge-sub">DOWNLOAD ON</span>
+          <span class="app-badge-main">App Store</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="./teachifyy-logo.png" alt="Teachifyy" class="footer-logo-img">
+        <p>Building confident learners for the future. Science, Maths &amp; AI for Classes 5 to 10 across India.</p>
+      </div>
+      <div class="footer-col">
+        <h4>For Students</h4>
+        <ul class="footer-links">
+          <li><a href="#curriculum">Syllabus</a></li>
+          <li><a href="#confidence">Confidence Score</a></li>
+          <li><a href="#quiz">Pathfinder Quiz</a></li>
+          <li><a href="#" class="open-login-modal">Student Login</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul class="footer-links">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">For Schools</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Safety &amp; Terms</h4>
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Child Safety Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Teachifyy. All rights reserved. Claremont Education LLP.</span>
+      <span>Building confident learners for the future.</span>
+    </div>
+  </footer>
+
+  <!-- ── BOOKING MODAL OVERLAY ── -->
+  <div id="reg-modal" class="modal-overlay">
+    <div class="modal-card">
+      <button class="modal-close-btn">&times;</button>
+      <h3 class="modal-title">Book a Free Demo Class</h3>
+      <p class="modal-desc">Fill in details to reserve a live demo batch matching your child's class and schedule.</p>
+      
+      <form id="demo-booking-form" class="modal-form">
+        <div class="form-group">
+          <label class="form-label" for="parent-name">Parent Name</label>
+          <input type="text" id="parent-name" class="form-input" placeholder="Enter parent name" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="phone">Phone Number</label>
+          <input type="tel" id="phone" class="form-input" placeholder="Enter 10-digit mobile" pattern="[0-9]{10}" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="student-grade">Student Grade</label>
+          <select id="student-grade" class="form-input" required>
+            <option value="">Select Grade</option>
+            <option value="5">Class 5</option>
+            <option value="6">Class 6</option>
+            <option value="7">Class 7</option>
+            <option value="8">Class 8</option>
+            <option value="9">Class 9</option>
+            <option value="10">Class 10</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary" style="margin-top:10px;width:100%;">Reserve My Demo Spot</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ── STUDENT LOGIN MODAL OVERLAY ── -->
+  <div id="login-modal" class="modal-overlay">
+    <div class="modal-card">
+      <button class="modal-close-btn">&times;</button>
+      <h3 class="modal-title">Student Login</h3>
+      <p class="modal-desc">Access your personalised Teachifyy learning tracker and live batch links.</p>
+      
+      <form id="student-login-form" class="modal-form">
+        <div class="form-group">
+          <label class="form-label" for="student-email">Email or Mobile Number</label>
+          <input type="text" id="student-email" class="form-input" placeholder="Enter student email or mobile" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="student-password">Password / OTP</label>
+          <input type="password" id="student-password" class="form-input" placeholder="Enter password or code" required>
+        </div>
+        <button type="submit" class="btn btn-secondary" style="margin-top:10px;width:100%;">Login to Dashboard</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

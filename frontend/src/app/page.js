@@ -292,6 +292,149 @@ function PencilProgressBar({ percent, color = B.navy, compact = false }) {
   );
 }
 
+const BACKGROUND_BUBBLES = [
+  { size: 140, top: "7%", right: "7%", color: "pink", opacity: 0.05, float: 1, duration: 12 },
+  { size: 80, top: "18%", right: "20%", color: "pink", opacity: 0.055, float: 2, duration: 9 },
+  { size: 110, bottom: "10%", left: "12%", color: "blue", opacity: 0.055, float: 1, duration: 15 },
+  { size: 70, bottom: "24%", right: "10%", color: "blue", opacity: 0.05, float: 3, duration: 10 },
+  { size: 90, top: "43%", left: "6%", color: "pink", opacity: 0.04, float: 2, duration: 14 },
+  { size: 120, top: "4%", left: "10%", color: "blue", opacity: 0.05, float: 3, duration: 18 },
+  { size: 50, top: "57%", right: "3%", color: "pink", opacity: 0.045, float: 4, duration: 11 },
+  { size: 75, top: "34%", right: "29%", color: "blue", opacity: 0.05, float: 1, duration: 13 },
+  { size: 85, bottom: "5%", left: "41%", color: "pink", opacity: 0.04, float: 2, duration: 16 },
+  { size: 55, top: "22%", left: "52%", color: "blue", opacity: 0.045, float: 4, duration: 14 },
+  { size: 95, top: "73%", left: "34%", color: "pink", opacity: 0.04, float: 1, duration: 14 },
+  { size: 65, top: "84%", right: "39%", color: "blue", opacity: 0.05, float: 2, duration: 11 },
+  { size: 110, top: "29%", left: "21%", color: "pink", opacity: 0.03, float: 3, duration: 16 },
+  { size: 85, top: "61%", right: "19%", color: "blue", opacity: 0.04, float: 4, duration: 13 },
+  { size: 50, bottom: "34%", left: "24%", color: "pink", opacity: 0.04, float: 1, duration: 10 },
+  { size: 100, bottom: "44%", right: "14%", color: "blue", opacity: 0.05, float: 2, duration: 15 },
+  { size: 75, top: "14%", left: "65%", color: "pink", opacity: 0.04, float: 3, duration: 12 },
+  { size: 90, top: "49%", right: "34%", color: "blue", opacity: 0.05, float: 4, duration: 17 },
+  { size: 125, bottom: "7%", right: "27%", color: "pink", opacity: 0.03, float: 1, duration: 19 },
+  { size: 60, top: "68%", left: "67%", color: "blue", opacity: 0.045, float: 3, duration: 12 },
+];
+
+function InteractiveBackgroundBubbles() {
+  const layerRef = useRef(null);
+
+  useEffect(() => {
+    const layer = layerRef.current;
+    if (!layer || window.matchMedia("(prefers-reduced-motion: reduce)").matches || window.matchMedia("(pointer: coarse)").matches) return;
+
+    const elements = Array.from(layer.querySelectorAll(".student-background-bubble"));
+    const states = elements.map((element) => ({ element, x: 0, y: 0, vx: 0, vy: 0, cx: 0, cy: 0 }));
+    let mouseX = -1000;
+    let mouseY = -1000;
+    let previousMouseX = -1000;
+    let previousMouseY = -1000;
+    let mouseVx = 0;
+    let mouseVy = 0;
+    let lastTime = performance.now();
+    let frameId = 0;
+
+    const measure = () => {
+      states.forEach((state) => {
+        const rect = state.element.getBoundingClientRect();
+        state.cx = rect.left + rect.width / 2 - state.x;
+        state.cy = rect.top + rect.height / 2 - state.y;
+      });
+    };
+
+    const handlePointerMove = (event) => {
+      const now = performance.now();
+      const elapsed = Math.max(1, now - lastTime);
+      lastTime = now;
+      mouseX = event.clientX;
+      mouseY = event.clientY;
+      if (previousMouseX === -1000) {
+        previousMouseX = mouseX;
+        previousMouseY = mouseY;
+      }
+      mouseVx = (mouseX - previousMouseX) / elapsed;
+      mouseVy = (mouseY - previousMouseY) / elapsed;
+      previousMouseX = mouseX;
+      previousMouseY = mouseY;
+    };
+
+    const handlePointerLeave = () => {
+      mouseX = -1000;
+      mouseY = -1000;
+      previousMouseX = -1000;
+      previousMouseY = -1000;
+      mouseVx = 0;
+      mouseVy = 0;
+    };
+
+    const update = () => {
+      states.forEach((state) => {
+        const dx = state.cx + state.x - mouseX;
+        const dy = state.cy + state.y - mouseY;
+        const distance = Math.hypot(dx, dy);
+        if (distance < 150 && distance > 0) {
+          const proximity = (150 - distance) / 150;
+          const force = proximity * proximity;
+          const radialForce = force * 12;
+          state.vx += mouseVx * force * 80 + (dx / distance) * radialForce;
+          state.vy += mouseVy * force * 80 + (dy / distance) * radialForce;
+        }
+
+        state.vx = (state.vx - state.x * 0.06) * 0.85;
+        state.vy = (state.vy - state.y * 0.06) * 0.85;
+        state.x += state.vx;
+        state.y += state.vy;
+
+        const displacement = Math.hypot(state.x, state.y);
+        if (displacement > 200) {
+          state.x = (state.x / displacement) * 200;
+          state.y = (state.y / displacement) * 200;
+        }
+        state.element.style.setProperty("--bubble-shift-x", `${state.x}px`);
+        state.element.style.setProperty("--bubble-shift-y", `${state.y}px`);
+      });
+      mouseVx *= 0.9;
+      mouseVy *= 0.9;
+      frameId = window.requestAnimationFrame(update);
+    };
+
+    measure();
+    window.addEventListener("pointermove", handlePointerMove, { passive: true });
+    document.documentElement.addEventListener("pointerleave", handlePointerLeave);
+    window.addEventListener("resize", measure, { passive: true });
+    frameId = window.requestAnimationFrame(update);
+
+    return () => {
+      window.cancelAnimationFrame(frameId);
+      window.removeEventListener("pointermove", handlePointerMove);
+      document.documentElement.removeEventListener("pointerleave", handlePointerLeave);
+      window.removeEventListener("resize", measure);
+    };
+  }, []);
+
+  return (
+    <div className="student-background-bubbles" ref={layerRef} aria-hidden="true">
+      {BACKGROUND_BUBBLES.map((bubble, index) => (
+        <span
+          className={`student-background-bubble ${bubble.color}`}
+          key={`${bubble.color}-${index}`}
+          style={{
+            width: bubble.size,
+            height: bubble.size,
+            top: bubble.top,
+            right: bubble.right,
+            bottom: bubble.bottom,
+            left: bubble.left,
+            opacity: bubble.opacity,
+            animationName: `student-bubble-float-${bubble.float}`,
+            animationDuration: `${bubble.duration}s`,
+            animationDelay: `${-(index % 6) * 1.7}s`,
+          }}
+        />
+      ))}
+    </div>
+  );
+}
+
 function ProgressBar({ percent, color = B.navy }) {
   return <PencilProgressBar percent={percent} color={color} />;
 }
@@ -374,6 +517,7 @@ export default function Home() {
   const [selectedSubject,    setSelectedSubject]    = useState(null);
   const [selectedChapter,    setSelectedChapter]    = useState(null);
   const [selectedTopic,      setSelectedTopic]      = useState(null);
+  const [expandedChapters,   setExpandedChapters]   = useState([]);
   const [topicProgress,      setTopicProgress]      = useState({});
   const [revisionProgress,   setRevisionProgress]   = useState({});
   const [testResults,        setTestResults]        = useState({});
@@ -381,6 +525,7 @@ export default function Home() {
   const [testLoading,        setTestLoading]        = useState(false);
   const [testSubmitting,     setTestSubmitting]     = useState(false);
   const [currentTest,        setCurrentTest]        = useState(null);
+  const [testQuestionIndex,  setTestQuestionIndex]  = useState(0);
   const [selectedAnswers,    setSelectedAnswers]    = useState({});
   const [submittedTestResult,setSubmittedTestResult]= useState(null);
   const [selectedTestAttempt,setSelectedTestAttempt]= useState(null);
@@ -450,8 +595,17 @@ export default function Home() {
       setSelectedSubject(syllabusSubjectOptions[0]);
       setSelectedChapter(null);
       setSelectedTopic(null);
+      setExpandedChapters([]);
     }
   }, [activeTab, selectedSubject, syllabusSubjectOptions]);
+
+  useEffect(() => {
+    if (!currentChapter?.title) return;
+    setExpandedChapters((previous) => previous.includes(currentChapter.title)
+      ? previous
+      : [...previous, currentChapter.title]
+    );
+  }, [currentChapter?.title]);
 
   const mediaRecorderRef   = useRef(null);
   const audioChunksRef     = useRef([]);
@@ -918,8 +1072,8 @@ export default function Home() {
     await signOut(auth);
     setUser(null); setUserProfile(null); setMessages([]); setHistory([]); setTextInput("");
     setTopicProgress({}); setRevisionProgress({}); setTestResults({});
-    setCurrentTest(null); setSelectedAnswers({}); setSubmittedTestResult(null); setSelectedTestAttempt(null);
-    setActiveTab("chat"); setSelectedSubject(null); setSelectedChapter(null); setSelectedTopic(null);
+    setCurrentTest(null); setTestQuestionIndex(0); setSelectedAnswers({}); setSubmittedTestResult(null); setSelectedTestAttempt(null);
+    setActiveTab("chat"); setSelectedSubject(null); setSelectedChapter(null); setSelectedTopic(null); setExpandedChapters([]);
     setProfileCompleted(false); pendingVoiceDataRef.current = null;
     setChatSessions([]); setCurrentSessionId(null); setViewingSession(null);
     setDoubts([]); setSavingDoubtId(null);
@@ -1020,7 +1174,7 @@ export default function Home() {
 
   const startTest = async ({ type, subject, chapterTitle, topicTitle = "", topics = [], questionCount }) => {
     if (!user) { setError("Please login to start a test."); return; }
-    setError(""); setTestLoading(true); setSelectedAnswers({}); setSubmittedTestResult(null); setSelectedTestAttempt(null); setCurrentTest(null); setActiveTab("test");
+    setError(""); setTestLoading(true); setTestQuestionIndex(0); setSelectedAnswers({}); setSubmittedTestResult(null); setSelectedTestAttempt(null); setCurrentTest(null); setActiveTab("test");
     const testId = getTestId(type, subject, chapterTitle, topicTitle);
     const fd = new FormData();
     fd.append("test_type", type); fd.append("subject", subject); fd.append("chapter_title", chapterTitle);
@@ -1092,7 +1246,7 @@ export default function Home() {
     }
   };
 
-  const resetTestView = () => { setCurrentTest(null); setSelectedAnswers({}); setSubmittedTestResult(null); setSelectedTestAttempt(null); setActiveTab("syllabus"); };
+  const resetTestView = () => { setCurrentTest(null); setTestQuestionIndex(0); setSelectedAnswers({}); setSubmittedTestResult(null); setSelectedTestAttempt(null); setActiveTab("test"); };
 
   const formatList     = (items = []) => items.filter(Boolean).map((item) => `- ${item}`).join("\n");
   const formatTermList = (items = []) => items.filter(Boolean).map((item) => `- ${item.term}: ${item.meaning}`).join("\n");
@@ -2416,6 +2570,23 @@ ${latestAnswer}`;
     : 0;
   const activeDoubts = doubts.filter((doubt) => !doubt.resolved);
   const resolvedDoubts = doubts.filter((doubt) => doubt.resolved);
+  const getSyllabusTopicDisplayStatus = (subject, chapterTitle, topicTitle) => {
+    const normalizedTopic = String(topicTitle || "").trim().toLowerCase();
+    const savedStatus = getTopicStatus(subject, chapterTitle, topicTitle);
+    const hasDoubt = activeDoubts.some((doubt) => {
+      const doubtText = `${doubt.topicName || ""} ${doubt.title || ""} ${doubt.topicTitle || ""}`.toLowerCase();
+      return normalizedTopic && doubtText.includes(normalizedTopic);
+    });
+    if (hasDoubt) return "Marked Doubt";
+    if (isCompletedStatus(savedStatus)) return "Completed";
+    if (savedStatus === "In Progress") return "In Progress";
+
+    const revisionId = getTopicId(subject, chapterTitle, topicTitle);
+    const hasLearningActivity = Boolean(revisionProgress[revisionId]?.revised)
+      || activityLogs.some((item) => String(item.topicTitle || "").trim().toLowerCase() === normalizedTopic)
+      || chatSessions.some((session) => getChatTopicTitle(session.title).trim().toLowerCase() === normalizedTopic);
+    return hasLearningActivity ? "In Progress" : "Not Started";
+  };
   const recentQuestions = activityLogs.filter((log) => ["question", "voice_question", "diagram_request"].includes(log.type));
   const todayUsage = getUsageSummary(1);
   const weeklyUsage = getUsageSummary(7);
@@ -2660,21 +2831,21 @@ ${latestAnswer}`;
     <div className="designer-test-center">
       <div className="designer-test-heading">
         <h1>Practice Test Center</h1>
-        <p>Take chapter-level or topic-level tests to check your understanding. Every result is saved in your study progress.</p>
+        <p>Take chapter-level or topic-level quizzes to test your understanding. Results will save in your study progress metrics.</p>
       </div>
       <div className="designer-test-stats">
         <div><span>Total Tests Taken</span><strong>{testAttempts.length}</strong></div>
         <div><span>Average Score</span><strong>{averageTestScore}%</strong></div>
-        <div><span>Most Improved Topic</span><strong className="topic-stat">{mostImprovedTest ? `${mostImprovedTest.title} +${mostImprovedTest.gain}%` : "No retakes yet"}</strong></div>
+        <div><span>Most Improved Topic</span><strong className="topic-stat">{mostImprovedTest ? `${mostImprovedTest.title} +${mostImprovedTest.gain}%` : "No improvement yet"}</strong></div>
       </div>
       <div className="designer-test-grid">
         <section className="designer-test-panel">
           <div className="designer-test-panel-head">
-            <div><h2>Topic Tests</h2><p>10 questions with MCQ, short, and detailed answers</p></div>
+            <div><h2>Topic Tests</h2></div>
           </div>
           <div className="designer-test-filters" role="tablist" aria-label="Filter topic tests by subject">
             {["All", ...syllabusSubjectOptions].map((subject) => (
-              <button key={subject} className={testSubjectFilter === subject ? "active" : ""} onClick={() => setTestSubjectFilter(subject)} role="tab" aria-selected={testSubjectFilter === subject}>{subject}</button>
+              <button key={subject} className={testSubjectFilter === subject ? "active" : ""} onClick={() => setTestSubjectFilter(subject)} role="tab" aria-selected={testSubjectFilter === subject}>{subject === "All" ? "All Subjects" : subject}</button>
             ))}
           </div>
           <div className="designer-test-list">
@@ -2682,13 +2853,11 @@ ${latestAnswer}`;
               const testId = getTestId("topic", subject, chapter.title, topic);
               const lastAttempt = testAttempts.find((attempt) => attempt.testId === testId);
               return (
-                <article className="designer-available-test" key={`${subject}-${chapter.title}-${topic}`}>
-                  <div className="designer-test-icon" aria-hidden="true">✓</div>
+                <article className={`designer-available-test ${lastAttempt ? "attempted" : ""}`} key={`${subject}-${chapter.title}-${topic}`}>
                   <div className="designer-test-copy">
-                    <h3>{topic}</h3><p>{subject} · {chapter.title}</p>
-                    <span>{lastAttempt ? `Last score: ${formatMarks(lastAttempt.score)}/${formatMarks(lastAttempt.total)}` : "Not attempted"}</span>
+                    <h3>{topic}</h3><p>{subject} · 10 Questions · ~12 min</p>
                   </div>
-                  <button disabled={testLoading || isLoading} onClick={() => startTest({ type: "topic", subject, chapterTitle: chapter.title, topicTitle: topic, topics: [topic], questionCount: 10 })} aria-label={`Start test for ${topic}`}>Start</button>
+                  <button disabled={testLoading || isLoading} onClick={() => startTest({ type: "topic", subject, chapterTitle: chapter.title, topicTitle: topic, topics: [topic], questionCount: 10 })} aria-label={`Start test for ${topic}`}>{lastAttempt ? "Retake Test" : "Start Test"}</button>
                 </article>
               );
             }) : <div className="designer-test-empty">No topic tests found for this subject.</div>}
@@ -2698,11 +2867,12 @@ ${latestAnswer}`;
           <div className="designer-test-panel-head"><div><h2>Test History</h2><p>{testAttempts.length} completed attempt{testAttempts.length !== 1 ? "s" : ""}</p></div></div>
           <div className="designer-test-list history">
             {testAttempts.length ? testAttempts.map((attempt) => {
-              const badge = getScoreCaption(attempt.percentage || 0);
+              const percent = Number(attempt.percentage || 0);
+              const scoreClass = percent >= 80 ? "score-high" : percent >= 55 ? "score-mid" : "score-low";
               return (
-                <button className="designer-test-history-row" key={attempt.attemptId || attempt.testId} onClick={() => setSelectedTestAttempt(attempt)}>
-                  <div><h3>{attempt.topicTitle || attempt.chapterTitle}</h3><p>{attempt.subject} · {attempt.type === "topic" ? "Topic Test" : "Chapter Test"}</p><span>{formatSessionDate(attempt.submittedAt || attempt.updatedAt)}</span></div>
-                  <div className="designer-test-score"><strong>{formatMarks(attempt.score)}/{formatMarks(attempt.total)}</strong><span style={{ color: badge.color, background: badge.bg }}>{badge.label}</span></div>
+                <button className={`designer-test-history-row ${scoreClass}`} key={attempt.attemptId || attempt.testId} onClick={() => setSelectedTestAttempt(attempt)}>
+                  <div><h3>{attempt.topicTitle || attempt.chapterTitle}</h3><p>{formatSessionDate(attempt.submittedAt || attempt.updatedAt)} · {formatMarks(attempt.score)}/{formatMarks(attempt.total)} Correct · {attempt.subject}</p></div>
+                  <div className="designer-test-score"><strong>{percent}%</strong></div>
                 </button>
               );
             }) : <div className="designer-test-empty"><strong>No tests attempted yet</strong><span>Choose a topic test to create your first score record.</span></div>}
@@ -2711,6 +2881,147 @@ ${latestAnswer}`;
       </div>
     </div>
   );
+
+  const renderTestResultOverlay = (result) => {
+    const percentage = Number(result?.percentage || 0);
+    const questions = result?.questions || currentTest?.questions || [];
+    const answers = result?.answers || selectedAnswers || {};
+    const grades = result?.grades || [];
+    const title = result?.topicTitle || result?.chapterTitle || "Test";
+    const circleOffset = 263.89 - (263.89 * percentage / 100);
+    return (
+      <div className="designer-test-results-overlay" role="dialog" aria-modal="true" aria-label={`Results for ${title}`}>
+        <div className="designer-test-results-card">
+          <section className="designer-test-results-summary">
+            <svg viewBox="0 0 100 100" className="designer-test-score-ring" aria-label={`${percentage}% score`}>
+              <circle cx="50" cy="50" r="42" />
+              <circle className="score-fill" cx="50" cy="50" r="42" strokeDasharray="263.89" strokeDashoffset={circleOffset} transform="rotate(-90 50 50)" />
+              <text x="50" y="56" textAnchor="middle">{percentage}%</text>
+            </svg>
+            <h2>Test Completed!</h2>
+            <p>You scored {formatMarks(result?.score || 0)}/{formatMarks(result?.total || 0)} marks</p>
+            <span>{getScoreCaption(percentage).label}. Your teacher-style feedback is ready.</span>
+            <div className="designer-test-result-actions">
+              <button onClick={() => startTest({
+                type: result.type,
+                subject: result.subject,
+                chapterTitle: result.chapterTitle,
+                topicTitle: result.topicTitle || "",
+                topics: result.topicTitle ? [result.topicTitle] : [],
+                questionCount: result.type === "topic" ? 10 : 20,
+              })}>Retake Test</button>
+              <button className="primary" onClick={resetTestView}>Done</button>
+            </div>
+          </section>
+          <section className="designer-test-answer-review" aria-label="Answer review">
+            {!questions.length && (
+              <div className="designer-test-review-empty">
+                <strong>Detailed answer review unavailable</strong>
+                <span>This attempt was saved before teacher-style question reviews were introduced. Reattempt the test to generate full feedback.</span>
+              </div>
+            )}
+            {questions.map((question, qi) => {
+              const grade = grades.find((item) => Number(item.index) === qi);
+              const answer = answers?.[qi] ?? answers?.[String(qi)] ?? "";
+              const maxMarks = Number(grade?.maxMarks || question.marks || 1);
+              const awarded = Number(grade?.score || 0);
+              const answerText = question.type === "mcq" ? (question.options?.[Number(answer)] || "Not answered") : (answer || "Not answered");
+              const outcome = awarded >= maxMarks ? "correct" : awarded > 0 ? "partial" : "incorrect";
+              return (
+                <article className={`designer-test-review-card ${outcome}`} key={qi}>
+                  <div className="designer-test-review-head">
+                    <span>Question {qi + 1}</span>
+                    <strong>{formatMarks(awarded)}/{formatMarks(maxMarks)}</strong>
+                  </div>
+                  <h3>{question.question}</h3>
+                  <p className="answer-status">{outcome === "correct" ? "✓ Correct answer" : outcome === "partial" ? "◐ Partly correct" : "× Needs improvement"}</p>
+                  <p><b>Your answer:</b> {answerText}</p>
+                  {grade?.feedback && <div><b>Teacher feedback:</b> {grade.feedback}</div>}
+                  {(grade?.idealAnswer || question.explanation) && <div><b>Better answer:</b> {grade?.idealAnswer || question.explanation}</div>}
+                </article>
+              );
+            })}
+          </section>
+        </div>
+      </div>
+    );
+  };
+
+  const renderTestRunner = () => {
+    if (!currentTest?.questions?.length) return null;
+    const question = currentTest.questions[testQuestionIndex];
+    const answer = selectedAnswers[testQuestionIndex];
+    const answeredCount = currentTest.questions.filter((item, index) => {
+      const savedAnswer = selectedAnswers[index];
+      return item.type === "mcq" ? savedAnswer !== undefined : String(savedAnswer || "").trim().length > 0;
+    }).length;
+    const currentAnswered = question.type === "mcq" ? answer !== undefined : String(answer || "").trim().length > 0;
+    const isLastQuestion = testQuestionIndex === currentTest.questions.length - 1;
+    const canSubmit = answeredCount === currentTest.questions.length && !testSubmitting;
+    const wordCount = question.type === "mcq" ? 0 : String(answer || "").trim().split(/\s+/).filter(Boolean).length;
+    const moveForward = () => {
+      if (!currentAnswered) return;
+      if (isLastQuestion) submitCurrentTest();
+      else setTestQuestionIndex((index) => Math.min(index + 1, currentTest.questions.length - 1));
+    };
+    return (
+      <div className="designer-test-center">
+        <div className="designer-test-heading">
+          <h1>Practice Test Center</h1>
+          <p>Answer one question at a time. Short and detailed answers are checked using teacher-style marking.</p>
+        </div>
+        <div className="designer-test-stats">
+          <div><span>Questions</span><strong>{currentTest.questions.length}</strong></div>
+          <div><span>Total Marks</span><strong>{formatMarks(currentTest.totalMarks)}</strong></div>
+          <div><span>Answered</span><strong>{answeredCount}/{currentTest.questions.length}</strong></div>
+        </div>
+        <section className="designer-test-runner-card">
+          <div className="designer-test-runner-meta">
+            <span>{currentTest.subject.toUpperCase()}</span>
+            <span>Question {testQuestionIndex + 1} of {currentTest.questions.length}</span>
+          </div>
+          <div className="designer-test-runner-progress"><span style={{ width: `${((testQuestionIndex + 1) / currentTest.questions.length) * 100}%` }} /></div>
+          <div className="designer-test-question-meta">
+            <span>{question.type === "mcq" ? "Multiple choice" : question.type === "long" ? "Detailed answer" : "Short answer"}</span>
+            <strong>{formatMarks(question.marks || 1)} marks{question.wordLimit ? ` · ${question.wordLimit} words` : ""}</strong>
+          </div>
+          <h2>{question.question}</h2>
+          {question.type === "mcq" ? (
+            <div className="designer-test-options">
+              {(question.options || []).map((option, optionIndex) => (
+                <button
+                  className={Number(answer) === optionIndex ? "selected" : ""}
+                  key={optionIndex}
+                  onClick={() => setSelectedAnswers((previous) => ({ ...previous, [testQuestionIndex]: optionIndex }))}
+                >
+                  <span>{String.fromCharCode(65 + optionIndex)}</span>{option}
+                </button>
+              ))}
+            </div>
+          ) : (
+            <div className="designer-test-written-answer">
+              <textarea
+                value={answer || ""}
+                maxLength={(question.wordLimit || 80) * 8}
+                onChange={(event) => setSelectedAnswers((previous) => ({ ...previous, [testQuestionIndex]: event.target.value }))}
+                placeholder={`Write your answer within ${question.wordLimit || 80} words`}
+              />
+              <span className={wordCount > (question.wordLimit || 80) ? "over" : ""}>{wordCount}/{question.wordLimit || 80} words</span>
+            </div>
+          )}
+          <div className="designer-test-runner-actions">
+            <button onClick={resetTestView}>Quit Test</button>
+            <div>
+              {testQuestionIndex > 0 && <button onClick={() => setTestQuestionIndex((index) => Math.max(index - 1, 0))}>Previous</button>}
+              <button className="primary" disabled={!currentAnswered || (isLastQuestion && !canSubmit)} onClick={moveForward}>
+                {testSubmitting ? "Checking like a teacher..." : isLastQuestion ? "Submit Test" : "Next Question"}
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    );
+  };
 
   return (
     <div className="student-app-layout">
@@ -2803,6 +3114,7 @@ ${latestAnswer}`;
       </header>
 
       <div className="student-view-container">
+        <InteractiveBackgroundBubbles />
 
         {/* Hero */}
         <div className="student-legacy-hero" style={{ textAlign: "center", marginBottom: "20px" }}>
@@ -4051,6 +4363,27 @@ ${latestAnswer}`;
 
         {/* ── TEST TAB ── */}
         {activeTab === "test" && (
+          testLoading ? (
+            <div className="designer-test-center">
+              <div className="designer-test-heading"><h1>Practice Test Center</h1><p>Your class-appropriate test is being prepared.</p></div>
+              <div className="designer-test-loading">
+                <span />
+                <h2>Generating your test...</h2>
+                <p>Creating MCQs, short answers, and detailed questions with suitable marks and word limits.</p>
+              </div>
+            </div>
+          ) : selectedTestAttempt ? (
+            renderTestResultOverlay(selectedTestAttempt)
+          ) : submittedTestResult ? (
+            renderTestResultOverlay(submittedTestResult)
+          ) : currentTest ? (
+            renderTestRunner()
+          ) : (
+            renderTestCenterLanding()
+          )
+        )}
+
+        {false && activeTab === "test" && (
           <div style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "18px", padding: "22px", boxShadow: "0 4px 20px rgba(43,88,136,0.06)" }}>
             {testLoading ? (
               <div style={{ textAlign: "center", padding: "48px 12px" }}>
@@ -4374,15 +4707,25 @@ ${latestAnswer}`;
                 </div>
               </div>
               <div className="designer-subject-pills" aria-label="Subjects">
-                {syllabusSubjectOptions.map((subject) => (
-                  <button
-                    key={subject}
-                    className={selectedSubject === subject ? "active" : ""}
-                    onClick={() => { setSelectedSubject(subject); setSelectedChapter(null); setSelectedTopic(null); }}
-                  >
-                    {subject}
-                  </button>
-                ))}
+                {syllabusSubjectOptions.map((subject) => {
+                  const subjectProgress = getSubjectProgress(subject);
+                  const subjectClass = `subject-${subject.toLowerCase().replace(/\s+/g, "-")}`;
+                  const ringOffset = 28.27 - (28.27 * subjectProgress.percent / 100);
+                  return (
+                    <button
+                      key={subject}
+                      className={`${subjectClass} ${selectedSubject === subject ? "active" : ""}`}
+                      onClick={() => { setSelectedSubject(subject); setSelectedChapter(null); setSelectedTopic(null); setExpandedChapters([]); }}
+                      title={`${subject}: ${subjectProgress.percent}% complete`}
+                    >
+                      <svg className="designer-subject-progress-ring" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                        <circle cx="6" cy="6" r="4.5" fill="none" stroke="rgba(0,0,0,0.10)" strokeWidth="1.5" />
+                        <circle className="designer-subject-progress-fill" cx="6" cy="6" r="4.5" fill="none" stroke="currentColor" strokeWidth="1.5" strokeDasharray="28.27" strokeDashoffset={ringOffset} transform="rotate(-90 6 6)" />
+                      </svg>
+                      <span>{subject}</span>
+                    </button>
+                  );
+                })}
               </div>
             </div>
 
@@ -4399,51 +4742,54 @@ ${latestAnswer}`;
                 <div className="designer-chapter-accordion">
                   {currentChapters.map((chapter, chapterIndex) => {
                     const chapterProgress = getChapterProgress(selectedSubject, chapter);
-                    const expanded = currentChapter?.title === chapter.title;
+                    const expanded = expandedChapters.includes(chapter.title);
                     return (
                       <article key={chapter.title} className={`designer-chapter-card ${expanded ? "expanded" : ""}`}>
                         <button
                           className="designer-chapter-trigger"
                           onClick={() => {
-                            setSelectedChapter(expanded ? null : chapter);
-                            setSelectedTopic(null);
+                            setExpandedChapters((previous) => expanded
+                              ? previous.filter((title) => title !== chapter.title)
+                              : [...previous, chapter.title]
+                            );
+                            if (expanded && currentChapter?.title === chapter.title) {
+                              setSelectedChapter(null);
+                              setSelectedTopic(null);
+                            } else if (!expanded) {
+                              setSelectedChapter(chapter);
+                              setSelectedTopic(null);
+                            }
                           }}
                           aria-expanded={expanded}
                         >
-                          <span className="designer-chapter-number">{chapterIndex + 1}</span>
                           <span className="designer-chapter-copy">
+                            <small>CHAPTER {chapterIndex + 1}</small>
                             <strong>{chapter.title}</strong>
-                            <small>{chapterProgress.completed}/{chapterProgress.total} topics · {chapterProgress.status}</small>
-                            <PencilProgressBar percent={chapterProgress.percent} color="#fd4463" compact />
+                            <span className="designer-chapter-progress-pill">
+                              <b>{chapterProgress.completed}/{chapterProgress.total} topics</b>
+                              <i><em style={{ width: `${chapterProgress.percent}%` }} /></i>
+                            </span>
                           </span>
                           <span className="designer-chevron">{expanded ? "−" : "+"}</span>
                         </button>
 
                         {expanded && (
                           <div className="designer-topic-list">
-                            {(chapter.subtopics || []).map((topic, topicIndex) => {
-                              const status = getTopicStatus(selectedSubject, chapter.title, topic);
-                              const completed = isCompletedStatus(status);
-                              const revised = getRevisionStatus(selectedSubject, chapter.title, topic);
+                            {(chapter.subtopics || []).map((topic) => {
+                              const displayStatus = getSyllabusTopicDisplayStatus(selectedSubject, chapter.title, topic);
+                              const statusClass = displayStatus.toLowerCase().replace(/\s+/g, "-");
                               return (
                                 <button
                                   key={topic}
                                   className={selectedTopic === topic ? "active" : ""}
                                   onClick={() => { setSelectedChapter(chapter); setSelectedTopic(topic); }}
                                 >
-                                  <span className={completed ? "completed" : ""}>{completed ? "✓" : topicIndex + 1}</span>
-                                  <span><strong>{topic}</strong><small>{status}{revised ? " · Revised" : ""}</small></span>
-                                  <i>›</i>
+                                  <span className={`designer-topic-dot ${statusClass}`} aria-hidden="true" />
+                                  <strong>{topic}</strong>
+                                  <span className={`designer-topic-status ${statusClass}`}>{displayStatus}</span>
                                 </button>
                               );
                             })}
-                            <button
-                              className="designer-chapter-test"
-                              disabled={testLoading || isLoading}
-                              onClick={() => startTest({ type: "chapter", subject: selectedSubject, chapterTitle: chapter.title, topicTitle: "", topics: chapter.subtopics || [], questionCount: 20 })}
-                            >
-                              Take Chapter Test
-                            </button>
                           </div>
                         )}
                       </article>
@@ -4456,11 +4802,12 @@ ${latestAnswer}`;
                 {!selectedTopic || !currentChapter ? (
                   <div className="designer-drawer-empty">
                     <div className="designer-drawer-mascot">T</div>
-                    <h2>Syllabus Overview</h2>
-                    <div className="designer-progress-ring" style={{ "--progress": `${getSubjectProgress(selectedSubject).percent * 3.6}deg` }}>
-                      <span>{getSubjectProgress(selectedSubject).percent}%</span>
+                    <h2>{currentChapter ? currentChapter.title : "Syllabus Overview"}</h2>
+                    <div className="designer-progress-ring" style={{ "--progress": `${(currentChapter ? getChapterProgress(selectedSubject, currentChapter).percent : getSubjectProgress(selectedSubject).percent) * 3.6}deg` }}>
+                      <span>{currentChapter ? getChapterProgress(selectedSubject, currentChapter).percent : getSubjectProgress(selectedSubject).percent}%</span>
                     </div>
-                    <p>Select a chapter and topic to view its progress, revision details, and learning actions.</p>
+                    <p>{currentChapter ? "Select a topic to view its progress and learning actions, or test the complete chapter." : "Select a chapter and topic to view its progress, revision details, and learning actions."}</p>
+                    {currentChapter && <button className="designer-drawer-chapter-test" disabled={testLoading || isLoading} onClick={() => startTest({ type: "chapter", subject: selectedSubject, chapterTitle: currentChapter.title, topicTitle: "", topics: currentChapter.subtopics || [], questionCount: 20 })}>Take Chapter Test</button>}
                   </div>
                 ) : (() => {
                   const status = getTopicStatus(selectedSubject, currentChapter.title, selectedTopic);
@@ -4469,39 +4816,60 @@ ${latestAnswer}`;
                   const revisionEntry = revisionProgress[revisionId];
                   const revised = Boolean(revisionEntry?.revised);
                   const savedTest = getSavedTestResult("topic", selectedSubject, currentChapter.title, selectedTopic);
+                  const displayStatus = getSyllabusTopicDisplayStatus(selectedSubject, currentChapter.title, selectedTopic);
+                  const statusClass = displayStatus.toLowerCase().replace(/\s+/g, "-");
+                  const latestTestScore = savedTest
+                    ? `${formatMarks(savedTest.score || 0)}/${formatMarks(savedTest.totalMarks || savedTest.total || 0)}`
+                    : "Not attempted";
                   return (
                     <div className="designer-drawer-content">
                       <div className="designer-topic-heading">
                         <span>{selectedSubject.toUpperCase()}</span>
                         <h2>{selectedTopic}</h2>
-                        <p>{currentChapter.title}</p>
-                        <strong className={completed ? "completed" : ""}>{status}</strong>
+                        <p>Chapter: {currentChapter.title}</p>
+                        <strong className={statusClass}>{displayStatus}</strong>
                       </div>
 
-                      {completed && !revised && (
+                      {(completed || revised) && (
                         <div className="designer-revision-alert">
                           <span>↻</span>
-                          <p>This topic is completed. A short revision will help you remember it.</p>
+                          <p>
+                            {revised
+                              ? `Last revised ${formatSessionDate(revisionEntry.updatedAt)}. A quick self-test will strengthen long-term memory.`
+                              : "This topic is completed. A short revision now will help you remember it for longer."}
+                          </p>
                         </div>
                       )}
 
-                      <div className="designer-study-summary">
-                        <span>AI STUDY GUIDE</span>
-                        <p>Your detailed content-library explanation is ready. Open it with AI to study this topic using simple examples and diagrams.</p>
-                      </div>
-
                       <div className="designer-topic-stats">
-                        <div><span>Revision</span><strong>{revised ? "Completed" : "Not yet"}</strong></div>
-                        <div><span>Latest test</span><strong>{savedTest ? `${savedTest.score}/${savedTest.total}` : "Not attempted"}</strong></div>
+                        <div><span>REVISED COUNT</span><strong>{revised ? "1 time" : "0 times"}</strong></div>
+                        <div><span>LAST REVISION</span><strong>{revised ? formatSessionDate(revisionEntry.updatedAt) : "Never"}</strong></div>
+                        <div><span>LATEST TEST</span><strong>{latestTestScore}</strong></div>
+                        <div><span>TOPIC STATUS</span><strong>{displayStatus}</strong></div>
                       </div>
 
                       <div className="designer-topic-actions">
                         <span>TOPIC ACTIONS</span>
-                        <button className="primary" disabled={isLoading || testLoading} onClick={() => handleStudyTopic(selectedTopic)}>Start Learning with AI</button>
-                        <button disabled={isLoading || testLoading || completed} onClick={() => updateTopicStatus(selectedSubject, currentChapter.title, selectedTopic, "Completed")}>{completed ? "Completed ✓" : "Mark as Completed"}</button>
-                        <button disabled={isLoading || testLoading} onClick={() => handleReviseTopic(selectedTopic)}>{revised ? "Revise Again" : "Revise with AI"}</button>
-                        <button className="doubt" disabled={isLoading || testLoading} onClick={() => askAiAboutTopicDoubt(selectedTopic)}>Ask AI About a Doubt</button>
-                        <button disabled={isLoading || testLoading} onClick={() => handleTopicTest(selectedTopic)}>Take Topic Test</button>
+                        <button className="primary" disabled={isLoading || testLoading} onClick={() => handleStudyTopic(selectedTopic)}>
+                          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 3 14 9-14 9V3Z" /></svg>
+                          <span>Start Learning with AI</span>
+                        </button>
+                        <button disabled={isLoading || testLoading || completed} onClick={() => updateTopicStatus(selectedSubject, currentChapter.title, selectedTopic, "Completed")}>
+                          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m20 6-11 11-5-5" /></svg>
+                          <span>{completed ? "Completed" : "Mark as Completed"}</span>
+                        </button>
+                        <button disabled={isLoading || testLoading} onClick={() => handleReviseTopic(selectedTopic)}>
+                          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.34-5.66M20 4v6h-6" /></svg>
+                          <span>{revised ? "Revise Again" : "Revise with AI"}</span>
+                        </button>
+                        <button className="doubt" disabled={isLoading || testLoading} onClick={() => askAiAboutTopicDoubt(selectedTopic)}>
+                          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M9.8 9a2.4 2.4 0 1 1 3.7 2c-.9.6-1.5 1.1-1.5 2.2M12 17h.01" /></svg>
+                          <span>Ask AI About a Doubt</span>
+                        </button>
+                        <button disabled={isLoading || testLoading} onClick={() => handleTopicTest(selectedTopic)}>
+                          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6V3Z M14 3v5h5 M9 13h7 M9 17h5" /></svg>
+                          <span>Take Topic Test</span>
+                        </button>
                       </div>
                     </div>
                   );
@@ -4689,8 +5057,20 @@ ${latestAnswer}`;
         .student-notification-item strong { display:block; color:var(--designer-blue); font-size:11px; font-weight:700; line-height:1.35; }
         .student-notification-item small { display:block; margin-top:3px; color:#777b86; font-size:9px; line-height:1.45; }
         .student-notification-arrow { color:#9a9da5; font-size:19px; text-align:center; }
-        .student-view-container { flex:1; min-height:0; overflow-y:auto; padding:32px; background:#fff; }
-        .student-view-container>div:not(.student-legacy-hero):not(.student-legacy-tabs) { max-width:1200px; margin-left:auto; margin-right:auto; }
+        .student-view-container { flex:1; min-height:0; overflow-y:auto; padding:32px; position:relative; isolation:isolate; background:#fff; }
+        .student-view-container>*:not(.student-background-bubbles) { position:relative; z-index:1; }
+        .student-view-container>div:not(.student-legacy-hero):not(.student-legacy-tabs):not(.student-background-bubbles) { max-width:1200px; margin-left:auto; margin-right:auto; }
+        .student-background-bubbles { position:fixed; inset:72px 0 0 112px; overflow:hidden; pointer-events:none; z-index:0; }
+        .student-background-bubble { --bubble-shift-x:0px; --bubble-shift-y:0px; position:absolute; display:block; border-radius:50%; animation-timing-function:ease-in-out; animation-iteration-count:infinite; will-change:transform; }
+        .student-background-bubble.pink { background:#fd4463; }
+        .student-background-bubble.blue { background:#5f84ab; }
+        @keyframes student-bubble-float-1 { 0%,100%{transform:translate(var(--bubble-shift-x),var(--bubble-shift-y)) scale(1)} 50%{transform:translate(calc(25px + var(--bubble-shift-x)),calc(-15px + var(--bubble-shift-y))) scale(1.05)} }
+        @keyframes student-bubble-float-2 { 0%,100%{transform:translate(var(--bubble-shift-x),var(--bubble-shift-y)) scale(1.05)} 50%{transform:translate(calc(-15px + var(--bubble-shift-x)),calc(20px + var(--bubble-shift-y))) scale(.95)} }
+        @keyframes student-bubble-float-3 { 0%,100%{transform:translate(var(--bubble-shift-x),var(--bubble-shift-y)) scale(.95)} 50%{transform:translate(calc(15px + var(--bubble-shift-x)),calc(15px + var(--bubble-shift-y))) scale(1.05)} }
+        @keyframes student-bubble-float-4 { 0%,100%{transform:translate(var(--bubble-shift-x),var(--bubble-shift-y)) scale(1)} 50%{transform:translate(calc(-20px + var(--bubble-shift-x)),calc(-20px + var(--bubble-shift-y))) scale(1.08)} }
+        @media (prefers-reduced-motion:reduce) {
+          .student-background-bubble { animation:none; transform:none; will-change:auto; }
+        }
         .designer-history-page-heading { width:100%; max-width:1200px; margin:0 auto 20px; }
         .designer-history-page-heading h1 { margin:0 0 8px; color:var(--designer-blue); font:600 40px/1.1 'Poppins','Inter',sans-serif; letter-spacing:0; }
         .designer-history-page-heading p { margin:0; color:#4c4c4c; font:400 16px/1.45 'Inter',sans-serif; letter-spacing:0; }
@@ -5009,104 +5389,183 @@ ${latestAnswer}`;
         .designer-syllabus-progress-strip>div { display:flex; justify-content:space-between; gap:16px; margin-bottom:7px; color:#4c4c4c; font-size:12px; }
         .designer-syllabus-progress-strip strong { color:var(--designer-blue); font-weight:650; }
         .designer-subject-pills { max-width:52%; display:flex; flex-wrap:wrap; justify-content:flex-end; gap:8px; }
-        .designer-subject-pills button { min-height:38px; padding:8px 15px; border:1px solid var(--designer-dove); border-radius:999px; background:#fff; color:#4c4c4c; cursor:pointer; font:600 12px 'Inter',sans-serif; transition:.18s ease; }
-        .designer-subject-pills button:hover { border-color:var(--designer-blue); color:var(--designer-blue); }
-        .designer-subject-pills button.active { border-color:var(--designer-blue); background:var(--designer-blue); color:#fff; box-shadow:0 5px 14px rgba(44,86,136,.18); }
+        .designer-subject-pills button { min-height:34px; padding:6px 15px; border:1px solid color-mix(in srgb,currentColor 28%,transparent); border-radius:999px; background:#fff; color:#4c4c4c; cursor:pointer; display:inline-flex; align-items:center; gap:8px; font:600 12px 'Inter',sans-serif; transition:.18s ease; }
+        .designer-subject-pills button:hover { border-color:currentColor; background:color-mix(in srgb,currentColor 7%,#fff); transform:translateY(-1px); }
+        .designer-subject-pills button.active { border-color:currentColor; background:color-mix(in srgb,currentColor 16%,#fff); box-shadow:0 5px 14px rgba(44,86,136,.12); }
+        .designer-subject-pills button.subject-maths,.designer-subject-pills button.subject-mathematics { color:#1e3a8a; }
+        .designer-subject-pills button.subject-science { color:#065f46; }
+        .designer-subject-pills button.subject-social-science,.designer-subject-pills button.subject-social-studies { color:#7c2d12; }
+        .designer-subject-pills button.subject-english { color:#9d174d; }
+        .designer-subject-pills button.subject-hindi { color:#9a3412; }
+        .designer-subject-pills button.subject-sanskrit { color:#78350f; }
+        .designer-subject-pills button.subject-evs { color:#115e59; }
+        .designer-subject-pills button.subject-art,.designer-subject-pills button.subject-art-education { color:#5b21b6; }
+        .designer-subject-pills button.subject-skill-education { color:#374151; }
+        .designer-subject-progress-ring { flex:0 0 12px; display:block; }
+        .designer-subject-progress-fill { transition:stroke-dashoffset .6s cubic-bezier(.25,1,.5,1); }
         .designer-syllabus-main { display:grid; grid-template-columns:minmax(0,1.45fr) minmax(300px,.75fr); align-items:start; gap:22px; }
         .designer-chapter-panel,.designer-topic-drawer { border:1px solid var(--designer-dove); border-radius:8px; background:#fff; box-shadow:0 12px 30px rgba(44,86,136,.06); }
         .designer-panel-heading { min-height:78px; padding:17px 20px; border-bottom:1px solid var(--designer-dove); display:flex; align-items:center; justify-content:space-between; gap:16px; }
         .designer-panel-heading span { display:block; margin-bottom:4px; color:#8a8d96; font-size:10px; font-weight:750; letter-spacing:0; }
         .designer-panel-heading h2 { margin:0; color:var(--designer-blue); font:600 19px/1.3 'Poppins','Inter',sans-serif; }
         .designer-panel-heading>strong { min-width:38px; height:38px; border-radius:50%; background:#ffe6e9; color:var(--designer-pink); display:flex; align-items:center; justify-content:center; font-size:13px; }
-        .designer-chapter-accordion { padding:10px; display:grid; gap:8px; }
-        .designer-chapter-card { overflow:hidden; border:1px solid #ece8e3; border-radius:8px; background:#fff; transition:border-color .18s ease,box-shadow .18s ease; }
-        .designer-chapter-card.expanded { border-color:#cbd8e6; box-shadow:0 5px 16px rgba(44,86,136,.07); }
-        .designer-chapter-trigger { width:100%; min-height:76px; padding:13px 14px; border:0; background:#fff; display:flex; align-items:center; gap:13px; color:inherit; text-align:left; cursor:pointer; }
-        .designer-chapter-trigger:hover { background:var(--designer-fog); }
-        .designer-chapter-number { width:36px; height:36px; flex:0 0 36px; border-radius:50%; background:#edf3f8; color:var(--designer-blue); display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:750; }
-        .designer-chapter-card.expanded .designer-chapter-number { background:var(--designer-blue); color:#fff; }
+        .designer-chapter-accordion { padding:12px; display:grid; gap:20px; }
+        .designer-chapter-card { overflow:hidden; border:1px solid #ded8d2; border-radius:20px; background:#fff; transition:border-color .18s ease,box-shadow .18s ease; }
+        .designer-chapter-card.expanded { border-color:#c6d8ea; box-shadow:0 5px 16px rgba(44,86,136,.05); }
+        .designer-chapter-trigger { width:100%; min-height:120px; padding:20px 24px; border:0; background:#c5dcf3; display:flex; align-items:center; gap:16px; color:inherit; text-align:left; cursor:pointer; }
+        .designer-chapter-trigger:hover { background:#bdd6ef; }
+        .designer-chapter-trigger:focus,.designer-topic-list>button:focus { outline:none; }
+        .designer-chapter-trigger:focus-visible,.designer-topic-list>button:focus-visible { outline:2px solid #143f82; outline-offset:-2px; }
         .designer-chapter-copy { min-width:0; flex:1; display:block; }
-        .designer-chapter-copy>strong { display:block; color:#252525; font-size:14px; font-weight:650; line-height:1.35; }
-        .designer-chapter-copy>small { display:block; margin:4px 0 7px; color:#858892; font-size:11px; line-height:1.3; }
-        .designer-chevron { width:28px; height:28px; flex:0 0 28px; border-radius:50%; background:#f5f3f0; color:var(--designer-blue); display:flex; align-items:center; justify-content:center; font-size:19px; font-weight:400; }
-        .designer-topic-list { padding:0 12px 12px 61px; display:grid; gap:6px; }
-        .designer-topic-list>button:not(.designer-chapter-test) { width:100%; min-height:52px; padding:8px 10px; border:1px solid transparent; border-radius:7px; background:#fafafa; display:grid; grid-template-columns:28px minmax(0,1fr) 16px; align-items:center; gap:9px; color:#333; text-align:left; cursor:pointer; }
-        .designer-topic-list>button:not(.designer-chapter-test):hover,.designer-topic-list>button.active { border-color:#cbd8e6; background:#f5f8fb; }
-        .designer-topic-list>button>span:first-child { width:25px; height:25px; border-radius:50%; background:#ece8e3; color:#686b74; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:750; }
-        .designer-topic-list>button>span:first-child.completed { background:#e7f8ee; color:#159455; }
-        .designer-topic-list>button>span:nth-child(2) { min-width:0; }
-        .designer-topic-list strong { display:block; overflow:hidden; color:var(--designer-blue); font-size:12px; font-weight:650; line-height:1.35; text-overflow:ellipsis; white-space:nowrap; }
-        .designer-topic-list small { display:block; margin-top:2px; color:#8a8d96; font-size:10px; }
-        .designer-topic-list i { color:#9a9da5; font-size:18px; font-style:normal; }
-        .designer-chapter-test { width:100%; min-height:38px; margin-top:3px; border:1px solid #cbd8e6; border-radius:7px; background:#fff; color:var(--designer-blue); cursor:pointer; font:650 11px 'Inter',sans-serif; }
-        .designer-chapter-test:hover { background:#edf3f8; }
-        .designer-topic-drawer { position:sticky; top:0; min-height:420px; overflow:hidden; }
+        .designer-chapter-copy>small { display:block; margin:0 0 8px; color:#143f82; font-size:12px; font-weight:750; line-height:1.2; }
+        .designer-chapter-copy>strong { display:block; color:#143f82; font-size:19px; font-weight:650; line-height:1.35; }
+        .designer-chapter-progress-pill { width:max-content; min-width:156px; margin-top:9px; padding:4px 10px; border:1px solid #adc9e6; border-radius:8px; background:#e9f2fb; display:flex; align-items:center; gap:10px; }
+        .designer-chapter-progress-pill b { color:#143f82; font-size:11px; font-weight:750; white-space:nowrap; }
+        .designer-chapter-progress-pill i { width:62px; height:4px; border-radius:999px; background:#ddd8d1; overflow:hidden; }
+        .designer-chapter-progress-pill em { height:100%; display:block; border-radius:inherit; background:#153f88; }
+        .designer-chevron { width:28px; height:28px; flex:0 0 28px; color:#143f82; display:flex; align-items:center; justify-content:center; font-size:21px; font-weight:700; }
+        .designer-topic-list { padding:0; display:grid; gap:0; }
+        .designer-topic-list>button { width:100%; min-height:57px; padding:10px 24px; border:0; border-top:1px solid #e8e2dc; border-radius:0; background:#fff; display:grid; grid-template-columns:14px minmax(0,1fr) auto; align-items:center; gap:13px; color:#171717; text-align:left; cursor:pointer; }
+        .designer-topic-list>button:hover,.designer-topic-list>button.active { background:#f7faff; }
+        .designer-topic-list strong { min-width:0; display:block; overflow:hidden; color:#171717; font-size:15px; font-weight:500; line-height:1.35; text-overflow:ellipsis; white-space:nowrap; }
+        .designer-topic-dot { width:10px; height:10px; border-radius:50%; background:#929292; box-shadow:0 1px 5px rgba(0,0,0,.12); }
+        .designer-topic-dot.in-progress { background:#3b82f6; box-shadow:0 0 8px rgba(59,130,246,.42); }
+        .designer-topic-dot.completed { background:#12b981; box-shadow:0 0 8px rgba(18,185,129,.32); }
+        .designer-topic-dot.marked-doubt { background:#ff4164; box-shadow:0 0 8px rgba(255,65,100,.35); }
+        .designer-topic-status { padding:4px 11px; border-radius:999px; background:#f5f3f0; color:#898989; font-size:11px; font-weight:700; line-height:1; text-transform:uppercase; white-space:nowrap; }
+        .designer-topic-status.in-progress { background:#eaf2ff; color:#3b75e8; }
+        .designer-topic-status.completed { background:#d8f8e9; color:#08a972; }
+        .designer-topic-status.marked-doubt { background:#ffe3e9; color:#ff4164; }
+        .designer-topic-drawer { position:sticky; top:0; min-height:420px; max-height:calc(100vh - 120px); overflow-x:hidden; overflow-y:auto; overscroll-behavior:contain; scrollbar-gutter:stable; }
+        .designer-topic-drawer::-webkit-scrollbar { width:7px; }
+        .designer-topic-drawer::-webkit-scrollbar-track { background:#f4f1ed; }
+        .designer-topic-drawer::-webkit-scrollbar-thumb { border:2px solid #f4f1ed; border-radius:999px; background:#aebdcb; }
         .designer-drawer-empty { min-height:420px; padding:36px 26px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; }
         .designer-drawer-mascot { width:50px; height:50px; margin-bottom:14px; border-radius:16px; background:linear-gradient(145deg,var(--designer-pink),#a855f7); color:#fff; display:flex; align-items:center; justify-content:center; font:700 21px 'Poppins',sans-serif; box-shadow:0 8px 20px rgba(253,68,99,.22); }
         .designer-drawer-empty h2 { margin:0 0 16px; color:var(--designer-blue); font:600 18px 'Poppins','Inter',sans-serif; }
         .designer-drawer-empty p { max-width:280px; margin:16px 0 0; color:#777b86; font-size:12px; line-height:1.6; }
+        .designer-drawer-chapter-test { width:min(240px,100%); min-height:40px; margin-top:18px; border:1px solid var(--designer-blue); border-radius:7px; background:var(--designer-blue); color:#fff; cursor:pointer; font:650 11px 'Inter',sans-serif; }
+        .designer-drawer-chapter-test:disabled { cursor:not-allowed; opacity:.55; }
         .designer-progress-ring { width:104px; height:104px; border-radius:50%; background:conic-gradient(var(--designer-pink) var(--progress),#eeeae6 0); display:grid; place-items:center; position:relative; }
         .designer-progress-ring:before { content:''; position:absolute; inset:9px; border-radius:50%; background:#fff; }
         .designer-progress-ring span { z-index:1; color:var(--designer-blue); font-size:18px; font-weight:750; }
-        .designer-drawer-content { padding:22px; }
-        .designer-topic-heading { padding-bottom:18px; border-bottom:1px solid #ece8e3; }
-        .designer-topic-heading>span,.designer-study-summary>span,.designer-topic-actions>span { color:var(--designer-pink); font-size:10px; font-weight:800; letter-spacing:0; }
-        .designer-topic-heading h2 { margin:7px 0 4px; color:var(--designer-blue); font:600 20px/1.3 'Poppins','Inter',sans-serif; overflow-wrap:anywhere; }
-        .designer-topic-heading p { margin:0 0 11px; color:#777b86; font-size:12px; line-height:1.45; }
-        .designer-topic-heading>strong { display:inline-flex; padding:5px 9px; border-radius:999px; background:#f2f0ed; color:#777b86; font-size:10px; }
+        .designer-drawer-content { padding:22px; display:flex; flex-direction:column; gap:16px; }
+        .designer-topic-heading { padding:16px; border:1px solid var(--designer-dove); border-radius:12px; background:var(--designer-fog); }
+        .designer-topic-heading>span,.designer-topic-actions>span { color:var(--designer-pink); font-size:11px; font-weight:800; letter-spacing:0; }
+        .designer-topic-heading h2 { margin:8px 0 5px; color:var(--designer-blue); font:600 23px/1.3 'Poppins','Inter',sans-serif; overflow-wrap:anywhere; }
+        .designer-topic-heading p { margin:0 0 12px; color:#666a73; font-size:14px; line-height:1.5; }
+        .designer-topic-heading>strong { display:inline-flex; padding:6px 10px; border-radius:999px; background:#f2f0ed; color:#666a73; font-size:11px; }
         .designer-topic-heading>strong.completed { background:#e7f8ee; color:#159455; }
-        .designer-revision-alert { margin-top:16px; padding:12px; border:1px solid #f5d49a; border-radius:7px; background:#fff9ec; display:flex; align-items:flex-start; gap:10px; color:#7a5a20; }
+        .designer-topic-heading>strong.in-progress { background:#eaf2ff; color:#3b75e8; }
+        .designer-topic-heading>strong.marked-doubt { background:#ffe3e9; color:#ff4164; }
+        .designer-revision-alert { padding:11px 13px; border:1px dashed rgba(245,158,11,.45); border-radius:8px; background:rgba(245,158,11,.08); display:flex; align-items:flex-start; gap:10px; color:#a85b08; }
         .designer-revision-alert span { font-size:18px; line-height:1; }
-        .designer-revision-alert p { margin:0; font-size:11px; line-height:1.5; }
-        .designer-study-summary { margin-top:16px; padding:14px; border-radius:7px; background:#f5f8fb; }
-        .designer-study-summary p { margin:7px 0 0; color:#4c4c4c; font-size:11px; line-height:1.55; }
-        .designer-topic-stats { margin:14px 0; display:grid; grid-template-columns:1fr 1fr; gap:8px; }
-        .designer-topic-stats>div { padding:11px; border:1px solid #ece8e3; border-radius:7px; background:#fff; }
-        .designer-topic-stats span { display:block; margin-bottom:4px; color:#8a8d96; font-size:9px; }
-        .designer-topic-stats strong { color:var(--designer-blue); font-size:11px; overflow-wrap:anywhere; }
-        .designer-topic-actions { padding-top:3px; display:grid; gap:8px; }
-        .designer-topic-actions>span { margin-bottom:2px; }
-        .designer-topic-actions button { width:100%; min-height:40px; padding:9px 11px; border:1px solid var(--designer-dove); border-radius:7px; background:#fff; color:var(--designer-blue); cursor:pointer; font:650 11px 'Inter',sans-serif; }
+        .designer-revision-alert p { margin:0; font-size:13px; line-height:1.55; }
+        .designer-topic-stats { padding:16px; border:1px solid var(--designer-dove); border-radius:12px; display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+        .designer-topic-stats>div { padding:10px 11px; border:1px solid #ece8e3; border-radius:8px; background:var(--designer-fog); }
+        .designer-topic-stats span { display:block; margin-bottom:5px; color:#777b86; font-size:10px; font-weight:700; }
+        .designer-topic-stats strong { color:var(--designer-blue); font-size:13px; line-height:1.4; overflow-wrap:anywhere; }
+        .designer-topic-actions { padding:16px; border:1px solid var(--designer-dove); border-radius:12px; background:#fff; display:grid; gap:10px; }
+        .designer-topic-actions>span { margin-bottom:3px; }
+        .designer-topic-actions button { width:100%; min-height:46px; padding:11px 16px; border:1px solid var(--designer-dove); border-radius:8px; background:#fff; color:var(--designer-blue); cursor:pointer; display:flex; align-items:center; justify-content:flex-start; gap:11px; font:650 13px 'Inter',sans-serif; }
+        .designer-topic-actions button svg { width:18px; height:18px; flex:0 0 18px; fill:none; stroke:currentColor; stroke-width:1.9; stroke-linecap:round; stroke-linejoin:round; }
         .designer-topic-actions button:hover:not(:disabled) { border-color:var(--designer-blue); background:#f5f8fb; }
         .designer-topic-actions button.primary { border-color:var(--designer-blue); background:var(--designer-blue); color:#fff; }
         .designer-topic-actions button.doubt { border-color:#ffd0d8; color:#d52d4a; }
-        .designer-topic-actions button:disabled,.designer-chapter-test:disabled { cursor:not-allowed; opacity:.55; }
+        .designer-topic-actions button:disabled { cursor:not-allowed; opacity:.55; }
         .designer-test-center { width:100%; max-width:1200px; margin:0 auto; color:var(--designer-ink); }
-        .designer-test-heading { margin-bottom:20px; }
-        .designer-test-heading h1 { margin:0 0 5px; color:var(--designer-blue); font:600 28px/1.25 'Poppins','Inter',sans-serif; }
-        .designer-test-heading p { max-width:720px; margin:0; color:#777b86; font-size:13px; line-height:1.55; }
-        .designer-test-stats { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin-bottom:18px; }
-        .designer-test-stats>div { min-height:94px; padding:16px; border:1px solid var(--designer-dove); border-radius:8px; background:#fff; box-shadow:0 8px 22px rgba(44,86,136,.05); display:flex; flex-direction:column; justify-content:space-between; }
-        .designer-test-stats span { color:#858892; font-size:10px; font-weight:700; }
-        .designer-test-stats strong { color:var(--designer-blue); font-size:25px; line-height:1.15; }
-        .designer-test-stats strong.topic-stat { font-size:14px; overflow-wrap:anywhere; }
-        .designer-test-grid { display:grid; grid-template-columns:minmax(0,1.18fr) minmax(310px,.82fr); align-items:start; gap:16px; }
-        .designer-test-panel { min-width:0; overflow:hidden; border:1px solid var(--designer-dove); border-radius:8px; background:#fff; box-shadow:0 10px 26px rgba(44,86,136,.05); }
-        .designer-test-panel-head { min-height:75px; padding:16px 18px; border-bottom:1px solid var(--designer-dove); display:flex; align-items:center; justify-content:space-between; }
-        .designer-test-panel-head h2 { margin:0; color:var(--designer-blue); font:600 18px/1.3 'Poppins','Inter',sans-serif; }
+        .designer-test-heading { margin-bottom:22px; }
+        .designer-test-heading h1 { margin:0 0 22px; color:var(--designer-blue); font:600 38px/1.2 'Poppins','Inter',sans-serif; }
+        .designer-test-heading p { max-width:920px; margin:0; color:#4f5158; font-size:15px; line-height:1.55; }
+        .designer-test-stats { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; margin-bottom:42px; }
+        .designer-test-stats>div { min-height:76px; padding:16px 20px; border:1px solid var(--designer-dove); border-radius:14px; background:#fff; box-shadow:0 6px 16px rgba(44,86,136,.05); display:flex; flex-direction:column; justify-content:center; gap:6px; }
+        .designer-test-stats span { color:#777b86; font-size:10px; font-weight:750; text-transform:uppercase; }
+        .designer-test-stats strong { color:#171717; font-size:20px; line-height:1.15; }
+        .designer-test-stats strong.topic-stat { font-size:17px; overflow-wrap:anywhere; }
+        .designer-test-grid { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); align-items:start; gap:24px; }
+        .designer-test-panel { min-width:0; min-height:440px; overflow:hidden; border:1px solid #ccd9e6; border-radius:24px; background:#fff; box-shadow:0 10px 26px rgba(44,86,136,.05); }
+        .designer-test-panel-head { min-height:74px; padding:22px 24px 8px; display:flex; align-items:center; justify-content:space-between; }
+        .designer-test-panel-head h2 { margin:0; color:var(--designer-blue); font:600 22px/1.3 'Poppins','Inter',sans-serif; }
         .designer-test-panel-head p { margin:4px 0 0; color:#858892; font-size:10px; line-height:1.4; }
-        .designer-test-filters { padding:12px 14px 9px; display:flex; gap:7px; overflow-x:auto; scrollbar-width:thin; }
-        .designer-test-filters button { min-height:34px; flex:0 0 auto; padding:7px 12px; border:1px solid var(--designer-dove); border-radius:999px; background:#fff; color:#5f626b; cursor:pointer; font:650 10px 'Inter',sans-serif; }
-        .designer-test-filters button.active { border-color:var(--designer-blue); background:var(--designer-blue); color:#fff; }
-        .designer-test-list { max-height:510px; padding:7px 12px 12px; display:grid; gap:8px; overflow-y:auto; scrollbar-width:thin; }
-        .designer-test-list.history { padding-top:12px; }
-        .designer-available-test { min-width:0; min-height:78px; padding:11px; border:1px solid #ece8e3; border-radius:8px; display:grid; grid-template-columns:34px minmax(0,1fr) auto; align-items:center; gap:10px; }
-        .designer-available-test:hover { border-color:#cbd8e6; background:#fafcfd; }
-        .designer-test-icon { width:32px; height:32px; border-radius:50%; background:#edf3f8; color:var(--designer-blue); display:grid; place-items:center; font-size:12px; font-weight:800; }
+        .designer-test-filters { padding:10px 24px 24px; display:flex; flex-wrap:wrap; gap:8px; overflow-x:auto; scrollbar-width:thin; }
+        .designer-test-filters button { min-height:28px; flex:0 0 auto; padding:5px 14px; border:1px solid var(--designer-dove); border-radius:999px; background:#faf8f5; color:#5f626b; cursor:pointer; font:650 10px 'Inter',sans-serif; }
+        .designer-test-filters button.active { border-color:#171717; background:#171717; color:#fff; }
+        .designer-test-list { max-height:390px; padding:8px 24px 24px; display:grid; gap:12px; overflow-y:auto; scrollbar-width:thin; }
+        .designer-test-list.history { padding-top:14px; }
+        .designer-available-test { min-width:0; min-height:64px; padding:12px 16px; border:1px solid #a9c7e5; border-radius:16px; background:#c5dcf3; display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:center; gap:12px; }
+        .designer-available-test:hover { border-color:#7da7d1; background:#bad4ee; }
+        .designer-available-test.attempted { background:#d8e8f6; }
         .designer-test-copy { min-width:0; }
-        .designer-test-copy h3,.designer-test-history-row h3 { margin:0; color:var(--designer-blue); font-size:12px; font-weight:700; line-height:1.35; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
-        .designer-test-copy p,.designer-test-history-row p { margin:3px 0; color:#777b86; font-size:9px; line-height:1.4; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
-        .designer-test-copy span,.designer-test-history-row>div>span { color:#999ca4; font-size:9px; }
-        .designer-available-test>button { min-width:62px; min-height:34px; padding:7px 12px; border:0; border-radius:7px; background:var(--designer-blue); color:#fff; cursor:pointer; font:700 10px 'Inter',sans-serif; }
+        .designer-test-copy h3,.designer-test-history-row h3 { margin:0; color:#171717; font-size:14px; font-weight:700; line-height:1.35; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+        .designer-test-copy p,.designer-test-history-row p { margin:3px 0 0; color:#6d7078; font-size:10px; line-height:1.4; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+        .designer-available-test>button { min-width:88px; min-height:34px; padding:7px 14px; border:0; border-radius:999px; background:#153f88; color:#fff; cursor:pointer; font:700 10px 'Inter',sans-serif; }
         .designer-available-test>button:disabled { cursor:not-allowed; opacity:.55; }
-        .designer-test-history-row { width:100%; min-width:0; min-height:78px; padding:12px; border:1px solid #ece8e3; border-radius:8px; background:#fff; display:flex; align-items:center; justify-content:space-between; gap:12px; color:inherit; text-align:left; cursor:pointer; }
-        .designer-test-history-row:hover { border-color:#cbd8e6; background:#fafcfd; }
+        .designer-test-history-row { width:100%; min-width:0; min-height:64px; padding:12px 16px; border:1px solid #abd3bd; border-radius:16px; background:#ccebd8; display:flex; align-items:center; justify-content:space-between; gap:12px; color:inherit; text-align:left; cursor:pointer; }
+        .designer-test-history-row.score-high { border-color:#9dbbd8; background:#c5dcf3; }
+        .designer-test-history-row.score-mid { border-color:#abd3bd; background:#ccebd8; }
+        .designer-test-history-row.score-low { border-color:#efb8c3; background:#f9dce2; }
+        .designer-test-history-row:hover { filter:brightness(.98); }
         .designer-test-history-row>div:first-child { min-width:0; flex:1; }
         .designer-test-score { flex:0 0 auto; display:flex; flex-direction:column; align-items:flex-end; gap:6px; }
-        .designer-test-score strong { color:var(--designer-blue); font-size:16px; }
+        .designer-test-score strong { padding:5px 9px; border-radius:8px; background:rgba(255,255,255,.38); color:#171717; font-size:14px; }
         .designer-test-score span { padding:4px 7px; border-radius:999px; font-size:8px; font-weight:800; }
         .designer-test-empty { min-height:150px; padding:24px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:6px; color:#858892; text-align:center; font-size:11px; }
         .designer-test-empty strong { color:var(--designer-blue); font-size:13px; }
+        .designer-test-loading { width:min(570px,100%); min-height:360px; margin:72px auto 0; padding:48px; border:1px solid #adc9e6; border-radius:24px; background:#fff; box-shadow:0 15px 35px rgba(44,86,136,.12); display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; }
+        .designer-test-loading>span { width:46px; height:46px; margin-bottom:20px; border:4px solid #dce8f3; border-top-color:var(--designer-blue); border-radius:50%; animation:designer-test-spin .8s linear infinite; }
+        .designer-test-loading h2 { margin:0 0 8px; color:var(--designer-blue); font:600 22px 'Poppins','Inter',sans-serif; }
+        .designer-test-loading p { max-width:420px; margin:0; color:#777b86; font-size:13px; line-height:1.55; }
+        @keyframes designer-test-spin { to { transform:rotate(360deg); } }
+        .designer-test-runner-card { width:min(570px,100%); margin:72px auto 0; padding:26px; border:1px solid #8cb1d5; border-radius:24px; background:#fff; box-shadow:0 15px 34px rgba(44,86,136,.13); }
+        .designer-test-runner-meta { display:flex; align-items:center; justify-content:space-between; gap:14px; color:#5f626b; font-size:11px; }
+        .designer-test-runner-meta span:first-child { font-weight:800; letter-spacing:.04em; }
+        .designer-test-runner-progress { height:3px; margin:20px 0 28px; overflow:hidden; background:#e4dfd9; }
+        .designer-test-runner-progress span { height:100%; display:block; background:#153f88; transition:width .25s ease; }
+        .designer-test-question-meta { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:8px; color:#858892; font-size:10px; }
+        .designer-test-question-meta span { text-transform:uppercase; font-weight:750; }
+        .designer-test-question-meta strong { color:#5f626b; font-weight:650; }
+        .designer-test-runner-card h2 { margin:0 0 26px; color:var(--designer-blue); font:600 20px/1.45 'Poppins','Inter',sans-serif; }
+        .designer-test-options { display:grid; gap:12px; }
+        .designer-test-options button { min-height:54px; padding:12px 18px; border:1px solid var(--designer-dove); border-radius:16px; background:#fff; color:#242424; cursor:pointer; display:flex; align-items:center; gap:12px; text-align:left; font:500 14px 'Inter',sans-serif; transition:.16s ease; }
+        .designer-test-options button:hover { border-color:#8eb1d4; background:#f8fbfd; }
+        .designer-test-options button.selected { border-color:#153f88; background:#eaf2fa; box-shadow:0 0 0 2px rgba(21,63,136,.08); }
+        .designer-test-options button>span { width:27px; height:27px; flex:0 0 27px; border-radius:50%; background:#edf3f8; color:#153f88; display:grid; place-items:center; font-size:11px; font-weight:800; }
+        .designer-test-written-answer { position:relative; }
+        .designer-test-written-answer textarea { width:100%; min-height:190px; padding:16px 16px 38px; border:1px solid var(--designer-dove); border-radius:16px; background:#fff; color:#242424; outline:none; resize:vertical; font:400 14px/1.6 'Inter',sans-serif; }
+        .designer-test-written-answer textarea:focus { border-color:#153f88; box-shadow:0 0 0 3px rgba(21,63,136,.08); }
+        .designer-test-written-answer>span { position:absolute; right:14px; bottom:12px; color:#777b86; font-size:10px; }
+        .designer-test-written-answer>span.over { color:var(--designer-pink); }
+        .designer-test-runner-actions { margin-top:34px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+        .designer-test-runner-actions>div { display:flex; gap:8px; }
+        .designer-test-runner-actions button { min-height:42px; padding:9px 24px; border:1px solid var(--designer-dove); border-radius:999px; background:#fff; color:#242424; cursor:pointer; font:600 12px 'Inter',sans-serif; }
+        .designer-test-runner-actions button.primary { min-width:150px; border-color:#315f91; background:#315f91; color:#fff; }
+        .designer-test-runner-actions button:disabled { cursor:not-allowed; border-color:#e1ddd8; background:#e5e0da; color:#fff; }
+        .designer-test-results-overlay { position:fixed; inset:72px 0 0 80px; z-index:500; padding:26px 5vw; overflow-y:auto; background:rgba(28,28,28,.34); backdrop-filter:blur(7px); }
+        .designer-test-results-card { width:min(1000px,100%); min-height:560px; margin:0 auto; overflow:hidden; border-radius:24px; background:#fff; box-shadow:0 25px 60px rgba(0,0,0,.22); display:grid; grid-template-columns:38% 62%; }
+        .designer-test-results-summary { padding:42px 32px 30px; border-right:1px solid #e7e1db; display:flex; flex-direction:column; align-items:center; text-align:center; }
+        .designer-test-score-ring { width:110px; height:110px; overflow:visible; }
+        .designer-test-score-ring circle { fill:none; stroke:#f1eeea; stroke-width:8; }
+        .designer-test-score-ring circle.score-fill { stroke:#12b981; stroke-linecap:round; transition:stroke-dashoffset .5s ease; }
+        .designer-test-score-ring text { fill:#171717; font-size:18px; font-weight:750; }
+        .designer-test-results-summary h2 { margin:28px 0 12px; color:var(--designer-blue); font:600 27px 'Poppins','Inter',sans-serif; }
+        .designer-test-results-summary p { margin:0; color:#171717; font-size:16px; font-weight:700; }
+        .designer-test-results-summary>span { max-width:310px; margin:18px 0; color:#4f5158; font-size:13px; line-height:1.45; }
+        .designer-test-result-actions { width:100%; margin-top:auto; display:grid; gap:10px; }
+        .designer-test-result-actions button { min-height:42px; border:1px solid var(--designer-dove); border-radius:999px; background:#fff; color:#242424; cursor:pointer; font:600 13px 'Inter',sans-serif; }
+        .designer-test-result-actions button.primary { border-color:#315f91; background:#315f91; color:#fff; }
+        .designer-test-answer-review { max-height:calc(100vh - 150px); padding:26px 32px; overflow-y:auto; display:grid; align-content:start; gap:16px; }
+        .designer-test-review-empty { min-height:460px; padding:40px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:9px; color:#777b86; text-align:center; }
+        .designer-test-review-empty strong { color:var(--designer-blue); font-size:17px; }
+        .designer-test-review-empty span { max-width:360px; font-size:12px; line-height:1.55; }
+        .designer-test-review-card { padding:16px; border:1px solid var(--designer-dove); border-radius:16px; background:#faf8f5; }
+        .designer-test-review-head { display:flex; justify-content:space-between; gap:12px; color:#777b86; font-size:10px; }
+        .designer-test-review-head strong { color:var(--designer-blue); font-size:11px; }
+        .designer-test-review-card h3 { margin:5px 0 9px; color:#242424; font-size:13px; font-weight:600; line-height:1.45; }
+        .designer-test-review-card p { margin:4px 0; color:#315f91; font-size:11px; line-height:1.45; }
+        .designer-test-review-card p.answer-status { color:#12a675; font-weight:700; }
+        .designer-test-review-card.partial p.answer-status { color:#c27b09; }
+        .designer-test-review-card.incorrect p.answer-status { color:#d52d4a; }
+        .designer-test-review-card>div:not(.designer-test-review-head) { margin-top:8px; padding:9px 11px; border:1px solid #e2dcd5; border-radius:8px; background:#fff; color:#4f5158; font-size:11px; line-height:1.5; }
         @media (min-width:768px) {
           .student-app-layout { padding-top:72px; height:100vh; }
           .student-app-header { position:fixed; top:0; left:0; width:100%; height:72px; padding:0 32px; z-index:1000; justify-content:flex-start; }
@@ -5145,6 +5604,8 @@ ${latestAnswer}`;
           .student-notification { width:36px !important; height:36px !important; }
           .student-notification-panel { position:fixed; top:58px; right:10px; width:min(360px,calc(100vw - 20px)); max-height:calc(100vh - 140px); overflow-y:auto; }
           .student-view-container { width:100%; min-width:0; padding:14px; overflow-x:hidden; }
+          .student-background-bubbles { inset:58px 0 68px; }
+          .student-background-bubble:nth-child(n+13) { display:none; }
           .student-view-container>div { width:100%; min-width:0; }
           .student-view-container [style*="grid-template-columns"] { grid-template-columns:minmax(0,1fr) !important; }
           .student-view-container [style*="minmax(280px"] { grid-template-columns:minmax(0,1fr) !important; }
@@ -5222,12 +5683,18 @@ ${latestAnswer}`;
           .designer-subject-pills { max-width:none; width:100%; padding-bottom:4px; flex-wrap:nowrap; justify-content:flex-start; overflow-x:auto; scrollbar-width:thin; }
           .designer-subject-pills button { flex:0 0 auto; }
           .designer-syllabus-main { grid-template-columns:minmax(0,1fr); gap:14px; }
-          .designer-topic-drawer { position:static; min-height:0; }
+          .designer-topic-drawer { position:static; min-height:0; max-height:72vh; overflow-y:auto; }
           .designer-drawer-empty { min-height:310px; }
-          .designer-test-heading h1 { font-size:23px; }
+          .designer-test-heading h1 { margin-bottom:12px; font-size:28px; }
           .designer-test-grid { grid-template-columns:minmax(0,1fr); }
           .designer-test-stats { grid-template-columns:repeat(3,minmax(150px,1fr)); overflow-x:auto; padding-bottom:5px; scrollbar-width:thin; }
           .designer-test-list { max-height:430px; }
+          .designer-test-runner-card { margin-top:28px; padding:20px; }
+          .designer-test-results-overlay { inset:64px 0 68px; padding:12px; }
+          .designer-test-results-card { grid-template-columns:minmax(0,1fr); }
+          .designer-test-results-summary { padding:26px 20px; border-right:0; border-bottom:1px solid #e7e1db; }
+          .designer-test-result-actions { margin-top:16px; }
+          .designer-test-answer-review { max-height:none; padding:18px; }
         }
         @media (max-width:520px) {
           .student-search-wrap { display:none; }
@@ -5250,18 +5717,30 @@ ${latestAnswer}`;
           .designer-chat-header-actions button { flex:1; }
           .designer-syllabus-progress-strip { max-width:none; }
           .designer-panel-heading { min-height:68px; padding:14px; }
-          .designer-chapter-accordion { padding:7px; }
-          .designer-chapter-trigger { min-height:68px; padding:10px; gap:9px; }
-          .designer-chapter-number { width:31px; height:31px; flex-basis:31px; }
-          .designer-topic-list { padding:0 8px 9px; }
-          .designer-topic-list strong { white-space:normal; }
+          .designer-chapter-accordion { padding:0; gap:12px; }
+          .designer-chapter-card { border-radius:15px; }
+          .designer-chapter-trigger { min-height:102px; padding:15px 16px; gap:9px; }
+          .designer-chapter-copy>small { margin-bottom:6px; font-size:10px; }
+          .designer-chapter-copy>strong { font-size:16px; }
+          .designer-chapter-progress-pill { min-width:140px; gap:7px; }
+          .designer-chapter-progress-pill i { width:48px; }
+          .designer-topic-list { padding:0; }
+          .designer-topic-list>button { min-height:54px; padding:9px 13px; gap:9px; }
+          .designer-topic-list strong { font-size:13px; white-space:normal; }
+          .designer-topic-status { padding:4px 7px; font-size:9px; }
           .designer-drawer-content { padding:17px; }
           .designer-topic-stats { grid-template-columns:1fr; }
           .designer-test-stats { grid-template-columns:1fr; overflow:visible; }
           .designer-test-stats>div { min-height:78px; }
-          .designer-available-test { grid-template-columns:30px minmax(0,1fr); }
-          .designer-available-test>button { grid-column:2; width:100%; }
+          .designer-test-stats { gap:10px; margin-bottom:20px; }
+          .designer-test-panel { min-height:0; border-radius:18px; }
+          .designer-available-test { grid-template-columns:minmax(0,1fr); }
+          .designer-available-test>button { width:100%; }
           .designer-test-history-row { align-items:flex-start; }
+          .designer-test-runner-card h2 { font-size:17px; }
+          .designer-test-runner-actions { align-items:stretch; flex-direction:column; }
+          .designer-test-runner-actions>div { width:100%; }
+          .designer-test-runner-actions button { flex:1; padding:9px 12px; }
         }
         @media (max-width:360px) {
           .student-app-sidebar { padding-left:4px; padding-right:4px; }
