@@ -203,7 +203,7 @@ function DiagramCard({ diagram }) {
   );
 }
 
-function AssistantBubble({ msg, index, playingIndex, playAudio, stopAudio, onTypingComplete }) {
+function AssistantBubble({ msg, index, playingIndex, playAudio, stopAudio, onTypingComplete, onRegenerate }) {
   const { displayed, done } = useTypewriter(msg.typing ? msg.text : "");
   const [audioReady, setAudioReady] = useState(false);
   const ttsStarted = useRef(false);
@@ -215,10 +215,15 @@ function AssistantBubble({ msg, index, playingIndex, playAudio, stopAudio, onTyp
   }, [msg.audioUrl, msg.typing]);
 
   const textToShow = msg.typing ? displayed : msg.text;
+  const copyAnswer = async () => {
+    try { await navigator.clipboard.writeText(msg.text || ""); }
+    catch (err) { console.error("Copy answer failed:", err); }
+  };
   return (
-    <div style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
-      <div style={{ width: "32px", height: "32px", borderRadius: "50%", flexShrink: 0, background: `linear-gradient(135deg, ${B.navy}, ${B.navyDark})`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "12px", fontWeight: 700, color: B.white, marginTop: "2px" }}>AI</div>
-      <div style={{ maxWidth: "82%", padding: "12px 16px", borderRadius: "4px 16px 16px 16px", background: B.white, border: `1px solid ${B.gray200}`, fontSize: "14px", lineHeight: "1.7", color: B.gray900, boxShadow: "0 1px 4px rgba(43,88,136,0.06)" }}>
+    <div className="designer-assistant-row" style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
+      <div className="designer-assistant-avatar" style={{ width: "32px", height: "32px", borderRadius: "50%", flexShrink: 0, background: `linear-gradient(135deg, ${B.navy}, ${B.navyDark})`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "12px", fontWeight: 700, color: B.white, marginTop: "2px" }}><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3Zm-7 10.18v4L12 21l7-3.82v-4L12 17l-7-3.82Z" /></svg></div>
+      <div className="designer-assistant-bubble" style={{ maxWidth: "82%", padding: "12px 16px", borderRadius: "4px 16px 16px 16px", background: B.white, border: `1px solid ${B.gray200}`, fontSize: "14px", lineHeight: "1.7", color: B.gray900, boxShadow: "0 1px 4px rgba(43,88,136,0.06)" }}>
+        {!msg.typing && <div className="designer-bubble-actions"><button onClick={copyAnswer}>Copy</button><button onClick={onRegenerate}>Regenerate</button></div>}
         <div style={{ whiteSpace: "pre-wrap", lineHeight: "1.7", maxHeight: "320px", overflowY: "auto", paddingRight: textToShow.length > 400 ? "4px" : "0" }}>
           {textToShow.split("\n").map((line, i) => {
             const cleanLine = line.replace(/\*\*/g, "");
@@ -318,6 +323,26 @@ function groupSessionsByDate(sessions) {
   return groups;
 }
 
+function getChatTopicTitle(value = "") {
+  const raw = String(value || "").replace(/\*\*/g, " ").replace(/\s+/g, " ").trim();
+  if (!raw) return "New conversation";
+
+  const explicitTopic = raw.match(/(?:^|\s)Topic:\s*([^\n]+?)(?:\s+Chapter:|\s+Subject:|$)/i)?.[1];
+  if (explicitTopic) return explicitTopic.trim().slice(0, 70);
+
+  const doubtTopic = raw.match(/^I have a doubt about\s+(.+?)\s+from\s+/i)?.[1];
+  if (doubtTopic) return doubtTopic.trim().slice(0, 70);
+
+  return raw
+    .replace(/^(Study Topic|Revision):\s*/i, "")
+    .replace(/^(Explain|Describe|Teach me|Tell me about|Help me understand)\s+/i, "")
+    .replace(/^(What is|What are)\s+/i, "")
+    .replace(/\s+(in detail|in simple words|with examples).*$/i, "")
+    .replace(/[?.!]+$/g, "")
+    .trim()
+    .slice(0, 70) || "New conversation";
+}
+
 function getLocalDateKey(date = new Date()) {
   const year = date.getFullYear();
   const month = String(date.getMonth() + 1).padStart(2, "0");
@@ -385,6 +410,9 @@ export default function Home() {
   const [historyLoading,     setHistoryLoading]     = useState(false);
   const [currentSessionId,   setCurrentSessionId]   = useState(null); // active session being saved
   const [viewingSession,     setViewingSession]     = useState(null); // session being viewed in history tab
+  const [chatSidebarOpen,    setChatSidebarOpen]    = useState(false);
+  const [chatAttachOpen,     setChatAttachOpen]     = useState(false);
+  const [chatHeaderCompact,  setChatHeaderCompact]  = useState(false);
   const [doubts,             setDoubts]             = useState([]);
   const [doubtsLoading,      setDoubtsLoading]      = useState(false);
   const [savingDoubtId,      setSavingDoubtId]      = useState(null);
@@ -428,6 +456,8 @@ export default function Home() {
   const mediaRecorderRef   = useRef(null);
   const audioChunksRef     = useRef([]);
   const chatEndRef         = useRef(null);
+  const chatScrollTopRef   = useRef(0);
+  const chatHeaderToggleLockRef = useRef(0);
   const audioRef           = useRef(null);
   const abortControllerRef = useRef(null);
   const cancelledRef       = useRef(false);
@@ -644,7 +674,10 @@ export default function Home() {
       );
       const snap = await getDocs(q);
       const loaded = [];
-      snap.forEach((d) => loaded.push({ id: d.id, ...d.data() }));
+      snap.forEach((d) => {
+        const session = d.data();
+        loaded.push({ id: d.id, ...session, title: getChatTopicTitle(session.title) });
+      });
       setChatSessions(loaded);
     } catch (err) {
       console.error("Chat sessions load error:", err);
@@ -667,9 +700,7 @@ export default function Home() {
     // Strip audioUrl before saving — audio files are ephemeral
     const msgsToSave = msgs.map(({ audioUrl: _a, typing: _t, ...rest }) => rest);
 
-    const title = firstQuestion
-      ? firstQuestion.slice(0, 70)
-      : (msgs.find((m) => m.role === "user")?.text || "Chat").slice(0, 70);
+    const title = getChatTopicTitle(firstQuestion || msgs.find((m) => m.role === "user")?.text || "New conversation");
 
     const sessionData = {
       title,
@@ -725,6 +756,9 @@ export default function Home() {
     setTextInput("");
     pendingVoiceDataRef.current = null;
     requestLockRef.current = false;
+    chatScrollTopRef.current = 0;
+    chatHeaderToggleLockRef.current = 0;
+    setChatHeaderCompact(false);
     setCurrentSessionId(crypto.randomUUID());
     setActiveTab("chat");
   };
@@ -746,7 +780,26 @@ export default function Home() {
     setViewingSession(null);
     setActiveTab("chat");
     setError("");
+    chatScrollTopRef.current = 0;
+    chatHeaderToggleLockRef.current = 0;
+    setChatHeaderCompact(false);
     pendingVoiceDataRef.current = null;
+  };
+
+  const handleChatScroll = (event) => {
+    const nextTop = event.currentTarget.scrollTop;
+    const now = Date.now();
+    chatScrollTopRef.current = nextTop;
+
+    if (now < chatHeaderToggleLockRef.current) return;
+
+    if (!chatHeaderCompact && nextTop > 80) {
+      chatHeaderToggleLockRef.current = now + 350;
+      setChatHeaderCompact(true);
+    } else if (chatHeaderCompact && nextTop < 20) {
+      chatHeaderToggleLockRef.current = now + 350;
+      setChatHeaderCompact(false);
+    }
   };
 
   // Initialise session ID on first mount after login
@@ -2099,10 +2152,11 @@ ${latestAnswer}`;
     }
   };
 
-  const handleTextSend = async () => {
-    if (!textInput.trim() || isLoading || requestLockRef.current) return;
+  const handleTextSend = async (questionOverride = "") => {
+    const submittedQuestion = String(questionOverride || textInput).trim();
+    if (!submittedQuestion || isLoading || requestLockRef.current) return;
     requestLockRef.current = true;
-    const question    = textInput.trim();
+    const question    = submittedQuestion;
     const assistantId = crypto.randomUUID();
     // Capture first question for session title (before messages update)
     const isFirstMsg  = messages.length === 0;
@@ -2110,7 +2164,7 @@ ${latestAnswer}`;
     setTextInput(""); setError(""); setIsLoading(true);
     setMessages((prev) => [
       ...prev.map((msg) => msg.role === "assistant" ? { ...msg, typing: false } : msg),
-      { id: crypto.randomUUID(), role: "user", text: question, isVoice: false },
+      { id: crypto.randomUUID(), role: "user", text: question, isVoice: false, createdAt: new Date().toISOString() },
     ]);
 
     if (isDiagramRequest(question)) {
@@ -2132,7 +2186,7 @@ ${latestAnswer}`;
 
       setMessages((prev) => [
         ...prev.map((msg) => msg.role === "assistant" ? { ...msg, typing: false } : msg),
-        { id: assistantId, role: "assistant", text: data.answer, audioUrl: null, typing: true },
+        { id: assistantId, role: "assistant", text: data.answer, audioUrl: null, typing: true, createdAt: new Date().toISOString() },
       ]);
       updateHistory(question, data.answer);
       logActivity({
@@ -2159,6 +2213,13 @@ ${latestAnswer}`;
       setIsLoading(false);
       requestLockRef.current = false;
     }
+  };
+
+  const sendChatPrompt = async (prompt) => {
+    if (!prompt || isLoading || isRecording || isTranscribing || requestLockRef.current) return;
+    pendingVoiceDataRef.current = null;
+    setChatAttachOpen(false);
+    await handleTextSend(prompt);
   };
 
   // ── Voice send ─────────────────────────────────────────
@@ -2460,6 +2521,62 @@ ${latestAnswer}`;
     : 0;
   const greetingHour = new Date().getHours();
   const dashboardGreeting = greetingHour < 12 ? "Good morning" : greetingHour < 17 ? "Good afternoon" : "Good evening";
+  const latestActivityTopic = activityLogs.find((item) => item.topicTitle)?.topicTitle || "";
+  const recentProgressTopics = Object.values(topicProgress || {})
+    .filter((item) => item?.topicTitle)
+    .sort((a, b) => {
+      const aTime = a.updatedAt?.toDate ? a.updatedAt.toDate().getTime() : new Date(a.updatedAt || 0).getTime();
+      const bTime = b.updatedAt?.toDate ? b.updatedAt.toDate().getTime() : new Date(b.updatedAt || 0).getTime();
+      return bTime - aTime;
+    });
+  const latestProgressTopic = recentProgressTopics[0]?.topicTitle || "";
+  const latestSessionTopic = chatSessions[0]?.title ? getChatTopicTitle(chatSessions[0].title) : "";
+  const chatContextTopic = selectedTopic || latestActivityTopic || latestProgressTopic || latestSessionTopic || continueLessons[0]?.topic || "your next topic";
+  const storedStudentName = userProfile?.name?.trim() || user?.displayName?.trim() || user?.email?.split("@")[0] || "Student";
+  const studentFirstName = storedStudentName.split(" ")[0];
+  const chatWelcomeGreeting = answerLanguage === "hi"
+    ? `नमस्ते, ${studentFirstName}!`
+    : `${dashboardGreeting}, ${studentFirstName}!`;
+  const chatWelcomeText = answerLanguage === "hi"
+    ? `${chatContextTopic} से आगे पढ़ें। मैं विषय समझा सकती हूं, क्विज बना सकती हूं या अध्याय का सारांश दे सकती हूं।`
+    : answerLanguage === "hinglish"
+      ? `${chatContextTopic} par jahan chhoda tha, wahan se continue karein. Main concept samjha sakti hoon, quiz bana sakti hoon ya chapter summarize kar sakti hoon.`
+      : `Pick up where you left off on ${chatContextTopic}. I can explain concepts, create quizzes, or summarize the chapter.`;
+  const chatQuickPrompts = answerLanguage === "hi"
+    ? [
+        { label: "विषय समझाएं", prompt: `मुझे ${chatContextTopic} आसान भाषा में विस्तार से समझाएं।`, tone: "red" },
+        { label: "क्विज बनाएं", prompt: `${chatContextTopic} पर एक छोटा क्विज बनाएं।`, tone: "purple" },
+        { label: "अध्याय का सारांश", prompt: `${chatContextTopic} से जुड़े अध्याय का सरल सारांश दें।`, tone: "green" },
+        { label: "असाइनमेंट में मदद", prompt: `${chatContextTopic} के असाइनमेंट में मेरी मदद करें।`, tone: "blue" },
+        { label: "परीक्षा की तैयारी", prompt: `${chatContextTopic} की परीक्षा की तैयारी कराएं।`, tone: "gold" },
+      ]
+    : answerLanguage === "hinglish"
+      ? [
+          { label: "Topic samjhao", prompt: `${chatContextTopic} ko easy Hinglish mein detail se samjhao.`, tone: "red" },
+          { label: "Quiz banao", prompt: `${chatContextTopic} par ek short quiz banao.`, tone: "purple" },
+          { label: "Chapter summarize karo", prompt: `${chatContextTopic} wale chapter ka simple summary do.`, tone: "green" },
+          { label: "Assignment me help", prompt: `${chatContextTopic} ke assignment mein meri help karo.`, tone: "blue" },
+          { label: "Exam prep", prompt: `${chatContextTopic} ki exam preparation karao.`, tone: "gold" },
+        ]
+      : [
+          { label: "Explain this topic", prompt: `Explain ${chatContextTopic} in simple words with examples.`, tone: "red" },
+          { label: "Create quiz", prompt: `Create a short quiz about ${chatContextTopic}.`, tone: "purple" },
+          { label: "Summarize chapter", prompt: `Summarize the chapter containing ${chatContextTopic}.`, tone: "green" },
+          { label: "Help with assignment", prompt: `Help me with an assignment about ${chatContextTopic}.`, tone: "blue" },
+          { label: "Exam preparation", prompt: `Help me prepare ${chatContextTopic} for an exam.`, tone: "gold" },
+        ];
+  const chatRecentTopics = chatSessions.slice(0, 4).map((session) => {
+    const topic = getChatTopicTitle(session.title);
+    const normalizedTopic = topic.toLowerCase();
+    const relatedActivity = activityLogs.find((item) => String(item.topicTitle || "").toLowerCase() === normalizedTopic);
+    const relatedProgress = recentProgressTopics.find((item) => String(item.topicTitle || "").toLowerCase() === normalizedTopic);
+    return {
+      subject: relatedActivity?.subject || relatedProgress?.subject || session.subject || "Saved chat",
+      topic,
+      status: "Open conversation",
+      session,
+    };
+  });
   const notificationItems = [
     activeDoubts.length ? {
       id: "active-doubts",
@@ -3086,6 +3203,93 @@ ${latestAnswer}`;
         )}
 
         {activeTab === "chat" && (
+          <div className={`designer-chat-workspace ${chatSidebarOpen ? "sidebar-open" : ""} ${chatHeaderCompact ? "header-compact" : ""}`}>
+            <div className="designer-chat-header">
+              <div className="designer-chat-brand">
+                <button className="designer-chat-history-toggle" onClick={() => setChatSidebarOpen((open) => !open)} aria-label="Open conversations"><SidebarIcon type="history" /><span>Conversations</span></button>
+                <div>
+                  <h2>AI Tutor</h2>
+                  <div className="designer-chat-language" role="group" aria-label="Answer language">
+                    {ANSWER_LANGUAGES.map((language) => (
+                      <button key={language.value} className={answerLanguage === language.value ? "active" : ""} onClick={() => handleAnswerLanguageChange(language.value)} disabled={isLoading || isRecording || isTranscribing}>
+                        <span>{language.value === "en" ? "A" : language.value === "hi" ? "अ" : "अ/A"}</span>{language.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <div className="designer-chat-header-actions">
+                <button onClick={clearConversation} disabled={!messages.length}>Clear Chat</button>
+                <button onClick={startNewSession}>+ New Chat</button>
+              </div>
+            </div>
+
+            <div className="designer-chat-layout">
+              <aside className="designer-chat-sidebar" aria-label="Saved conversations">
+                <div className="designer-chat-sidebar-title"><span>Conversations</span><button onClick={() => setChatSidebarOpen(false)} aria-label="Close conversations">&times;</button></div>
+                <div className="designer-chat-session-list">
+                  {historyLoading ? <p>Loading conversations...</p> : chatSessions.length ? chatSessions.slice(0, 20).map((session) => (
+                    <button className={currentSessionId === session.id ? "active" : ""} key={session.id} onClick={() => { openSession(session); setChatSidebarOpen(false); }}>
+                      <SidebarIcon type="chat" />
+                      <span><strong>{getChatTopicTitle(session.title) || "Saved conversation"}</strong><small>{formatSessionDate(session.updatedAt || session.createdAt)}</small></span>
+                    </button>
+                  )) : <p>No old chats.</p>}
+                </div>
+              </aside>
+              {chatSidebarOpen && <button className="designer-chat-sidebar-backdrop" onClick={() => setChatSidebarOpen(false)} aria-label="Close conversations" />}
+
+              <section className="designer-chat-main">
+                {selectedSubject && <div className="designer-chat-context"><span>Current learning context</span><strong>{selectedSubject}{chatContextTopic ? ` · ${chatContextTopic}` : ""}</strong></div>}
+                <div className={`designer-chat-body ${messages.length === 0 ? "empty" : ""}`} onScroll={handleChatScroll}>
+                  {messages.length === 0 ? (
+                    <div className="designer-chat-welcome">
+                      <div className="designer-chat-onboarding">
+                        <div className="designer-tutor-avatar" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3Zm-7 10.18v4L12 21l7-3.82v-4L12 17l-7-3.82Z" /></svg></div>
+                        <div><h3>{chatWelcomeGreeting}</h3><p>{chatWelcomeText}</p></div>
+                      </div>
+                      <div className="designer-chat-quick-prompts">
+                        {chatQuickPrompts.map((prompt) => <button className={`tone-${prompt.tone}`} key={prompt.label} onClick={() => sendChatPrompt(prompt.prompt)} disabled={isLoading}><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 3 3 8l9 5 9-5-9-5Z" /><path d="m5 12 7 4 7-4M5 16l7 4 7-4" /></svg></i><span>{prompt.label}</span></button>)}
+                        {activeDoubts.length > 0 && <button className="doubt" onClick={() => openDoubtChat(activeDoubts[0])}><i aria-hidden="true">?</i><span>Solve my {getDoubtDisplayTitle(activeDoubts[0])} doubt</span></button>}
+                      </div>
+                      {chatRecentTopics.length > 0 && <div className="designer-chat-recent"><h4>Pick up where you left off</h4><div>{chatRecentTopics.map((item) => <button key={item.session.id} onClick={() => { if (item.subject !== "Saved chat") setSelectedSubject(item.subject); setSelectedTopic(item.topic); openSession(item.session); }}><span>{item.subject}</span><strong>{item.topic}</strong><small>{item.status} <b aria-hidden="true">&rarr;</b></small></button>)}</div></div>}
+                    </div>
+                  ) : messages.map((msg, i) => (
+                    <div className={`designer-chat-message ${msg.role}`} key={msg.id} id={`chat-message-${msg.id}`}>
+                      {msg.role === "user" ? <div className="designer-user-bubble"><div>{msg.text}</div>{msg.createdAt && <time>{new Date(msg.createdAt).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })} ✓✓</time>}</div> : <AssistantBubble msg={msg} index={i} playingIndex={playingIndex} playAudio={playAudio} stopAudio={stopAudio} onTypingComplete={markTypingComplete} onRegenerate={() => sendChatPrompt("Please regenerate your previous answer with clear headings and examples.")} />}
+                    </div>
+                  ))}
+                  {isLoading && <div className="designer-chat-thinking"><div className="designer-tutor-avatar small"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3Zm-7 10.18v4L12 21l7-3.82v-4L12 17l-7-3.82Z" /></svg></div><div><span>AI Tutor is thinking</span><i /><i /><i /></div></div>}
+                  <div ref={chatEndRef} />
+                </div>
+
+                {error && <div className="designer-chat-status error">{error}</div>}
+                {isTranscribing && <div className="designer-chat-status processing"><span>Processing your voice...</span><button onClick={cancelProcessing}>Cancel</button></div>}
+                {isRecording && <div className="designer-chat-status recording"><span>Recording... press the microphone again to stop</span></div>}
+
+                {messages[messages.length - 1]?.role === "assistant" && !isRecording && !isTranscribing && (
+                  <div className="designer-chat-followups"><div>{[
+                    { key: "simplify", symbol: "?" }, { key: "example", symbol: "◎" }, { key: "quiz", symbol: "✓" },
+                  ].map(({ key, symbol }) => {
+                    const action = FOLLOW_UP_ACTIONS[key];
+                    const latestAssistant = messages[messages.length - 1];
+                    const showMarkAsDoubt = key === latestAssistant.followUpType;
+                    const savedDoubt = showMarkAsDoubt ? doubts.find((doubt) => doubt.assistantMessageId === latestAssistant.id) : null;
+                    const doubtSaved = Boolean(savedDoubt && !isInterfaceDoubtTitle(savedDoubt.topicName));
+                    return <button key={key} onClick={() => showMarkAsDoubt ? markAsDoubt(latestAssistant) : handleFollowUp(key)} disabled={isLoading || doubtSaved || savingDoubtId === latestAssistant.id}><i aria-hidden="true">{showMarkAsDoubt ? (doubtSaved ? "✓" : "?") : symbol}</i>{showMarkAsDoubt ? doubtSaved ? "Saved in Doubts" : savingDoubtId === latestAssistant.id ? "Saving doubt..." : "Mark as doubt" : getFollowUpLabel(action)}</button>;
+                  })}</div></div>
+                )}
+                <div className="designer-chat-composer">
+                  <div className="designer-chat-attachment"><button onClick={() => setChatAttachOpen((open) => !open)} aria-label="Add attachment" title="Add attachment">+</button>{chatAttachOpen && <div><button onClick={() => { setChatAttachOpen(false); setError("Media attachment support will be connected in the backend next."); }}>Media</button><button onClick={() => { setChatAttachOpen(false); setError("Document attachment support will be connected in the backend next."); }}>Document</button></div>}</div>
+                  <textarea placeholder={isTranscribing ? "Transcribing your voice..." : answerLanguage === "hi" ? "अपना प्रश्न यहां पूछें..." : answerLanguage === "hinglish" ? "Apna doubt/question pucho..." : "Ask your learning question..."} value={textInput} onChange={(e) => { setTextInput(e.target.value); if (pendingVoiceDataRef.current) pendingVoiceDataRef.current = null; }} onKeyDown={(e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); handleSend(); } }} disabled={isLoading || isRecording || isTranscribing} rows={1} />
+                  <button className={`designer-chat-mic ${isRecording ? "recording" : ""}`} onClick={isRecording ? stopRecordingAndTranscribe : startRecording} disabled={isLoading || isTranscribing} aria-label={isRecording ? "Stop recording" : "Start recording"} title={isRecording ? "Stop recording" : "Speak to Tutor"}><span /><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" /><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v3M8 22h8" /></svg></button>
+                  <button className="designer-chat-send" onClick={handleSend} disabled={isLoading || isRecording || isTranscribing || !textInput.trim()} aria-label="Send question" title="Send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="m22 2-7 20-4-9-9-4 20-7Z" /><path d="M22 2 11 13" /></svg></button>
+                </div>
+              </section>
+            </div>
+          </div>
+        )}
+
+        {activeTab === "chat-legacy" && (
           <div className="student-chat-workspace" style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "18px", overflow: "hidden", boxShadow: "0 4px 20px rgba(43,88,136,0.06)" }}>
             {/* Chat header */}
             <div className="student-chat-header" style={{ padding: "14px 18px", borderBottom: `1px solid ${B.gray200}`, display: "flex", alignItems: "center", justifyContent: "space-between", background: B.white }}>
@@ -4677,6 +4881,125 @@ ${latestAnswer}`;
         .student-chat-composer button:nth-last-of-type(2) { background:var(--designer-pink) !important; box-shadow:0 4px 12px rgba(253,68,99,.24); }
         .student-chat-composer button:last-of-type { background:linear-gradient(135deg,var(--designer-pink),#a855f7) !important; color:#fff !important; box-shadow:0 4px 12px rgba(253,68,99,.24); }
         .student-chat-shortcut { padding:9px 16px !important; border-top:1px solid #f1eeea !important; color:#777b86 !important; background:#fff !important; }
+        .designer-chat-workspace { width:100%; max-width:1100px; height:calc(100vh - 132px); min-height:660px; margin:0 auto; border:1px solid var(--designer-dove); border-radius:24px; background:#fff; box-shadow:0 20px 25px -5px rgba(0,0,0,.08),0 8px 10px -6px rgba(0,0,0,.04); display:flex; flex-direction:column; overflow:hidden; color:var(--designer-ink); }
+        .designer-chat-header { min-height:96px; padding:15px 24px; border-bottom:1px solid var(--designer-dove); display:flex; align-items:center; justify-content:space-between; gap:20px; background:#fff; transition:min-height .22s ease,padding .22s ease,gap .22s ease; }
+        .designer-chat-brand { min-width:0; display:flex; align-items:flex-start; gap:12px; }
+        .designer-chat-brand>div { max-width:640px; max-height:78px; opacity:1; overflow:hidden; transform:translateY(0); transition:max-width .22s ease,max-height .22s ease,opacity .16s ease,transform .22s ease; }
+        .designer-chat-brand h2 { margin:0; color:var(--designer-blue); font:600 22px/1.25 'Poppins','Inter',sans-serif; }
+        .designer-chat-history-toggle { min-height:38px; padding:8px 11px; border:1px solid var(--designer-dove); border-radius:10px; background:#fff; color:var(--designer-blue); display:flex; align-items:center; gap:7px; font-size:12px; font-weight:650; cursor:pointer; }
+        .designer-chat-history-toggle .student-nav-icon { width:17px; height:17px; }
+        .designer-chat-language { width:max-content; margin-top:8px; padding:4px; border:1px solid var(--designer-dove); border-radius:999px; background:var(--designer-fog); display:flex; gap:4px; }
+        .designer-chat-language button { min-height:30px; padding:5px 13px; border:0; border-radius:999px; background:transparent; color:#777b86; display:flex; align-items:center; gap:5px; font:600 12px 'Inter',sans-serif; cursor:pointer; }
+        .designer-chat-language button>span { min-width:21px; padding:2px 4px; border-radius:4px; background:rgba(28,28,28,.07); display:inline-grid; place-items:center; font-size:10px; }
+        .designer-chat-language button.active { background:var(--designer-blue); color:#fff; }
+        .designer-chat-language button.active>span { background:rgba(255,255,255,.18); }
+        .designer-chat-header-actions { display:flex; align-items:center; gap:10px; }
+        .designer-chat-header-actions button { min-height:38px; padding:8px 14px; border:1px solid var(--designer-dove); border-radius:10px; background:#fff; color:var(--designer-blue); font:600 13px 'Inter',sans-serif; cursor:pointer; }
+        .designer-chat-header-actions button:disabled { opacity:.42; cursor:not-allowed; }
+        .designer-chat-workspace.header-compact .designer-chat-header { min-height:58px; padding-top:9px; padding-bottom:9px; }
+        .designer-chat-workspace.header-compact .designer-chat-brand>div { display:none; max-width:0; max-height:0; opacity:0; transform:translateY(-12px); pointer-events:none; }
+        .designer-chat-workspace.header-compact .designer-chat-context { display:none; }
+        .designer-chat-layout { flex:1; min-height:0; display:flex; position:relative; }
+        .designer-chat-sidebar { position:absolute; inset:0 auto 0 0; width:250px; min-height:0; border-right:1px solid var(--designer-dove); background:#fff; display:flex; flex-direction:column; z-index:12; transform:translateX(-105%); transition:transform .22s ease; box-shadow:12px 0 28px rgba(0,0,0,.12); }
+        .designer-chat-workspace.sidebar-open .designer-chat-sidebar { transform:translateX(0); }
+        .designer-chat-sidebar-title { padding:16px 18px 8px; display:flex; align-items:center; justify-content:space-between; color:#777b86; font-size:11px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; }
+        .designer-chat-sidebar-title button { display:block; border:0; background:transparent; color:#777b86; font-size:24px; cursor:pointer; }
+        .designer-chat-session-list { min-height:0; padding:8px; display:flex; flex-direction:column; gap:4px; overflow-y:auto; }
+        .designer-chat-session-list>p { margin:12px; color:#858892; font-size:13px; text-align:center; }
+        .designer-chat-session-list>button { width:100%; min-height:54px; padding:9px 10px; border:0; border-radius:12px; background:transparent; color:#4c4c4c; display:grid; grid-template-columns:18px minmax(0,1fr); align-items:center; gap:9px; text-align:left; cursor:pointer; }
+        .designer-chat-session-list>button:hover { background:var(--designer-fog); }
+        .designer-chat-session-list>button.active { background:#edf3f9; color:var(--designer-blue); }
+        .designer-chat-session-list .student-nav-icon { width:16px; height:16px; }
+        .designer-chat-session-list strong,.designer-chat-session-list small { display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+        .designer-chat-session-list strong { font-size:13px; font-weight:600; }
+        .designer-chat-session-list small { margin-top:3px; color:#999ca4; font-size:10px; }
+        .designer-chat-sidebar-backdrop { position:absolute; inset:0; z-index:11; border:0; background:rgba(28,28,28,.22); display:block; }
+        .designer-chat-main { flex:1; min-width:0; min-height:0; display:flex; flex-direction:column; background:#fff; }
+        .designer-chat-context { min-height:36px; padding:7px 20px; border-bottom:1px solid #f0ece8; display:flex; align-items:center; gap:8px; color:#777b86; font-size:11px; }
+        .designer-chat-context span { text-transform:uppercase; letter-spacing:.05em; font-weight:700; }
+        .designer-chat-context strong { color:var(--designer-blue); font-weight:650; }
+        .designer-chat-body { flex:1; min-height:0; padding:24px; display:flex; flex-direction:column; gap:20px; overflow-y:auto; background:#fff; }
+        .designer-chat-body.empty { background-color:#fff; }
+        .designer-chat-welcome { width:100%; margin:auto; display:grid; gap:18px; }
+        .designer-chat-onboarding { width:min(550px,100%); margin:0 auto; padding:20px; border:1px solid rgba(253,68,99,.16); border-radius:24px; background:#ffe8eb; display:flex; align-items:center; gap:16px; }
+        .designer-tutor-avatar { width:64px; height:64px; flex:0 0 64px; border-radius:50%; background:var(--designer-blue); color:#fff; display:grid; place-items:center; box-shadow:0 8px 24px rgba(44,86,136,.24); }
+        .designer-tutor-avatar svg { width:32px; height:32px; }
+        .designer-tutor-avatar.small { width:32px; height:32px; flex-basis:32px; box-shadow:0 2px 8px rgba(44,86,136,.2); }
+        .designer-tutor-avatar.small svg { width:17px; height:17px; }
+        .designer-chat-onboarding h3 { margin:0 0 4px; color:#1c1c1c; font:600 18px/1.35 'Poppins','Inter',sans-serif; }
+        .designer-chat-onboarding p { margin:0; color:#5f626b; font-size:14px; line-height:1.45; }
+        .designer-chat-quick-prompts { width:min(650px,100%); margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:12px; }
+        .designer-chat-quick-prompts>button { min-height:50px; padding:10px 13px; border:1px solid var(--designer-dove); border-radius:9px; background:#fff; color:#1c1c1c; display:flex; align-items:center; gap:10px; text-align:left; font:600 12px 'Inter',sans-serif; cursor:pointer; transition:transform .2s ease,box-shadow .2s ease; }
+        .designer-chat-quick-prompts>button:hover { transform:translateY(-2px); box-shadow:0 5px 14px rgba(0,0,0,.06); }
+        .designer-chat-quick-prompts i { width:28px; height:28px; flex:0 0 28px; border-radius:7px; display:grid; place-items:center; font-style:normal; }
+        .designer-chat-quick-prompts i svg { width:16px; height:16px; }
+        .designer-chat-quick-prompts .tone-red i { background:#fff0f3; color:#d52d4a; }
+        .designer-chat-quick-prompts .tone-purple i { background:#f4eafe; color:#8f45d5; }
+        .designer-chat-quick-prompts .tone-green i { background:#e7f7ee; color:#168153; }
+        .designer-chat-quick-prompts .tone-blue i { background:#edf3f9; color:var(--designer-blue); }
+        .designer-chat-quick-prompts .tone-gold i { background:#fff4db; color:#9a6710; }
+        .designer-chat-quick-prompts>button.doubt { border-color:transparent; background-image:linear-gradient(#fff,#fff),linear-gradient(135deg,#a855f7,#2ecc71); background-origin:border-box; background-clip:padding-box,border-box; }
+        .designer-chat-quick-prompts>button.doubt i { background:linear-gradient(135deg,#a855f7,#2ecc71); color:#fff; }
+        .designer-chat-recent { width:100%; margin-top:clamp(28px,5vh,56px); box-sizing:border-box; transition:padding-left .22s ease; }
+        @media (min-width:769px) {
+          .designer-chat-workspace.sidebar-open .designer-chat-recent { padding-left:262px; }
+        }
+        .designer-chat-recent h4 { margin:0 0 10px; color:#777b86; font-size:11px; letter-spacing:.05em; text-transform:uppercase; }
+        .designer-chat-recent>div { padding-bottom:6px; display:flex; gap:12px; overflow-x:auto; }
+        .designer-chat-recent button { flex:0 0 190px; min-height:104px; padding:12px 12px 12px 16px; border:1px solid var(--designer-dove); border-radius:10px; background:#fff; display:flex; flex-direction:column; align-items:flex-start; gap:6px; position:relative; overflow:hidden; text-align:left; cursor:pointer; }
+        .designer-chat-recent button:before { content:''; position:absolute; inset:0 auto 0 0; width:4px; background:var(--designer-pink); }
+        .designer-chat-recent button>span { color:#d52d4a; font-size:9px; font-weight:800; letter-spacing:.05em; text-transform:uppercase; }
+        .designer-chat-recent button>strong { color:var(--designer-blue); font-size:12px; line-height:1.35; }
+        .designer-chat-recent button>small { margin-top:auto; color:#777b86; font-size:10px; }
+        .designer-chat-message.user { display:flex; justify-content:flex-end; }
+        .designer-user-bubble { max-width:75%; padding:15px 19px; border-radius:20px 20px 4px 20px; background:#f1f1f1; color:#1c1c1c; font-size:15px; line-height:1.5; }
+        .designer-user-bubble time { margin-top:7px; display:block; color:#858892; font-size:10px; text-align:right; }
+        .designer-assistant-row { width:100%; gap:12px !important; }
+        .designer-assistant-avatar { width:32px !important; height:32px !important; background:var(--designer-blue) !important; }
+        .designer-assistant-avatar svg { width:17px; height:17px; }
+        .designer-assistant-bubble { max-width:75% !important; padding:16px 20px !important; border-radius:20px 20px 20px 4px !important; font-size:15px !important; line-height:1.48 !important; position:relative; box-shadow:0 4px 12px rgba(0,0,0,.025) !important; }
+        .designer-assistant-bubble>div:first-of-type { line-height:1.55 !important; max-height:none !important; }
+        .designer-bubble-actions { margin:-4px 0 10px; display:flex; flex-wrap:wrap; gap:9px; }
+        .designer-bubble-actions button { padding:0; border:0; background:transparent; color:#777b86; font-size:11px; cursor:pointer; }
+        .designer-bubble-actions button:hover { color:var(--designer-blue); text-decoration:underline; }
+        .designer-assistant-bubble>div:last-child>button { min-width:30px; min-height:30px; padding:5px 9px !important; border:0 !important; background:transparent !important; color:#777b86 !important; }
+        .designer-chat-thinking { display:flex; align-items:flex-start; gap:12px; }
+        .designer-chat-thinking>div:last-child { min-height:46px; padding:12px 16px; border:1px solid var(--designer-dove); border-radius:20px 20px 20px 4px; display:flex; align-items:center; gap:5px; color:#777b86; font-size:12px; }
+        .designer-chat-thinking>div:last-child span { margin-right:4px; color:var(--designer-blue); font-weight:600; }
+        .designer-chat-thinking i { width:6px; height:6px; border-radius:50%; background:var(--designer-blue); animation:bounce 1.2s infinite; }
+        .designer-chat-thinking i:nth-of-type(2) { animation-delay:.2s; }
+        .designer-chat-thinking i:nth-of-type(3) { animation-delay:.4s; }
+        .designer-chat-status { margin:0 20px 10px; padding:10px 13px; border-radius:10px; display:flex; align-items:center; justify-content:space-between; gap:12px; font-size:12px; }
+        .designer-chat-status.error,.designer-chat-status.recording { border:1px solid #ffb7c2; background:#fff0f3; color:#b52943; }
+        .designer-chat-status.processing { border:1px solid #b7cce1; background:#edf3f9; color:var(--designer-blue); }
+        .designer-chat-status button { padding:4px 10px; border:1px solid currentColor; border-radius:999px; background:#fff; color:inherit; }
+        .designer-chat-followups { width:min(100%,1100px); margin:0 auto; padding:6px 16px 7px; background:transparent; box-sizing:border-box; }
+        .designer-chat-followups>div { display:flex; justify-content:center; gap:10px; overflow-x:auto; padding:2px; }
+        .designer-chat-followups button { flex:0 0 auto; min-height:36px; padding:6px 13px 6px 8px; border:1px solid #cbd9e7; border-radius:999px; background:#f4f8fc; color:#203f63; display:flex; align-items:center; gap:8px; font-size:12px; font-weight:600; white-space:nowrap; cursor:pointer; box-shadow:0 3px 9px rgba(44,86,136,.07); transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease; }
+        .designer-chat-followups button:nth-child(2) { border-color:#bfe0d0; background:#f1faf5; color:#176346; }
+        .designer-chat-followups button:nth-child(3) { border-color:#f0d7a5; background:#fff9ec; color:#7b5812; }
+        .designer-chat-followups button:hover { transform:translateY(-2px); border-color:currentColor; box-shadow:0 6px 14px rgba(44,86,136,.12); }
+        .designer-chat-followups button i { width:22px; height:22px; border-radius:50%; background:#dce9f5; color:var(--designer-blue); display:grid; place-items:center; font-style:normal; font-weight:800; }
+        .designer-chat-followups button:nth-child(2) i { background:#dff3e8; color:#168153; }
+        .designer-chat-followups button:nth-child(3) i { background:#fff0ca; color:#9a6710; }
+        .designer-chat-review-note { padding:5px 24px 8px; color:var(--designer-blue); font-size:11px; }
+        .designer-chat-composer { width:min(100%,1100px); margin:0 auto; padding:18px 24px; border-top:1px solid var(--designer-dove); background:#fff; display:flex; align-items:center; justify-content:center; gap:12px; box-sizing:border-box; }
+        .designer-chat-composer textarea { flex:1; min-width:0; height:48px; min-height:48px; max-height:110px; padding:13px 18px; border:1px solid #cad6e2; border-radius:17px; background:#fbfdff; color:#1c1c1c; font:400 14px/1.5 'Inter',sans-serif; resize:none; outline:none; box-shadow:inset 0 1px 2px rgba(44,86,136,.03),0 3px 10px rgba(44,86,136,.05); }
+        .designer-chat-composer textarea:focus { border-color:var(--designer-blue); box-shadow:0 0 0 3px rgba(44,86,136,.08); }
+        .designer-chat-attachment { position:relative; }
+        .designer-chat-attachment>button,.designer-chat-mic,.designer-chat-send { width:48px; height:48px; flex:0 0 48px; border-radius:50%; display:grid; place-items:center; cursor:pointer; }
+        .designer-chat-attachment>button { border:1px solid #cbd9e7; background:#f4f8fc; color:var(--designer-blue); font-size:25px; font-weight:300; box-shadow:0 3px 9px rgba(44,86,136,.07); }
+        .designer-chat-attachment>div { position:absolute; left:0; bottom:52px; width:142px; padding:6px; border:1px solid var(--designer-dove); border-radius:12px; background:#fff; box-shadow:0 12px 28px rgba(0,0,0,.12); display:grid; gap:3px; z-index:5; }
+        .designer-chat-attachment>div button { padding:8px 10px; border:0; border-radius:8px; background:#fff; color:#4c4c4c; text-align:left; font-size:12px; }
+        .designer-chat-attachment>div button:hover { background:var(--designer-fog); }
+        .designer-chat-mic,.designer-chat-send { border:0; color:#fff; }
+        .designer-chat-mic { position:relative; background:linear-gradient(135deg,var(--designer-pink),#a855f7); box-shadow:0 3px 9px rgba(253,68,99,.25); }
+        .designer-chat-mic>span { position:absolute; inset:-4px; border:1px solid rgba(253,68,99,.35); border-radius:50%; opacity:0; }
+        .designer-chat-mic.recording>span { animation:designer-mic-pulse 1s infinite; }
+        .designer-chat-send { background:var(--designer-blue); }
+        .designer-chat-mic svg,.designer-chat-send svg { width:20px; height:20px; }
+        .designer-chat-mic:disabled,.designer-chat-send:disabled { background:#d9d5d0; box-shadow:none; cursor:not-allowed; }
+        @keyframes designer-mic-pulse { 0% { transform:scale(.9); opacity:.9; } 100% { transform:scale(1.35); opacity:0; } }
         .designer-syllabus-shell { width:100%; max-width:1200px; margin:0 auto; color:var(--designer-ink); }
         .designer-syllabus-header { display:flex; align-items:flex-end; justify-content:space-between; gap:28px; margin-bottom:24px; }
         .designer-syllabus-title-block { flex:1; min-width:0; }
@@ -4863,6 +5186,37 @@ ${latestAnswer}`;
           .student-chat-composer { flex-wrap:wrap; padding:10px !important; }
           .student-chat-composer textarea { flex:1 1 calc(100% - 112px) !important; }
           .student-chat-composer select { order:4; width:100%; }
+          .designer-chat-workspace { height:calc(100vh - 142px); min-height:560px; border-radius:18px; }
+          .designer-chat-header { min-height:0; padding:12px 14px; align-items:flex-start; }
+          .designer-chat-workspace.header-compact .designer-chat-header { min-height:52px; padding:7px 14px; align-items:center; }
+          .designer-chat-history-toggle { display:grid; place-items:center; }
+          .designer-chat-history-toggle>span { display:none; }
+          .designer-chat-brand h2 { font-size:19px; }
+          .designer-chat-language { max-width:calc(100vw - 155px); overflow-x:auto; }
+          .designer-chat-language button { padding:5px 10px; }
+          .designer-chat-header-actions { flex-direction:column; align-items:stretch; gap:6px; }
+          .designer-chat-header-actions button { min-height:32px; padding:6px 9px; font-size:11px; }
+          .designer-chat-sidebar { position:absolute; inset:0 auto 0 0; width:min(290px,84vw); z-index:12; transform:translateX(-105%); transition:transform .22s ease; box-shadow:12px 0 28px rgba(0,0,0,.12); }
+          .designer-chat-workspace.sidebar-open .designer-chat-sidebar { transform:translateX(0); }
+          .designer-chat-sidebar-title button { display:block; }
+          .designer-chat-sidebar-backdrop { position:absolute; inset:0; z-index:11; border:0; background:rgba(28,28,28,.22); display:block; }
+          .designer-chat-context { padding:7px 13px; align-items:flex-start; flex-direction:column; gap:2px; }
+          .designer-chat-body { padding:16px 14px; }
+          .designer-chat-onboarding { padding:16px; border-radius:18px; align-items:flex-start; }
+          .designer-tutor-avatar { width:48px; height:48px; flex-basis:48px; }
+          .designer-tutor-avatar svg { width:25px; height:25px; }
+          .designer-chat-onboarding h3 { font-size:16px; }
+          .designer-chat-onboarding p { font-size:12px; }
+          .designer-chat-quick-prompts { grid-template-columns:minmax(0,1fr); gap:8px; }
+          .designer-chat-quick-prompts>button { min-height:44px; }
+          .designer-user-bubble,.designer-assistant-bubble { max-width:90% !important; }
+          .designer-assistant-bubble { padding:14px !important; font-size:14px !important; }
+          .designer-bubble-actions { gap:7px; }
+          .designer-chat-followups { padding:5px 10px 6px; }
+          .designer-chat-followups>div { justify-content:flex-start; }
+          .designer-chat-composer { padding:10px 12px; gap:8px; }
+          .designer-chat-attachment>button,.designer-chat-mic,.designer-chat-send { width:42px; height:42px; flex-basis:42px; }
+          .designer-chat-composer textarea { height:42px; min-height:42px; padding:10px 13px; }
           .designer-syllabus-header { align-items:stretch; flex-direction:column; gap:16px; margin-bottom:16px; }
           .designer-syllabus-title-block h1 { font-size:23px; }
           .designer-subject-pills { max-width:none; width:100%; padding-bottom:4px; flex-wrap:nowrap; justify-content:flex-start; overflow-x:auto; scrollbar-width:thin; }
@@ -4886,6 +5240,14 @@ ${latestAnswer}`;
           .designer-week-strip>div { min-height:55px; border-radius:10px; }
           .designer-confidence-body { grid-template-columns:minmax(0,1fr); justify-items:center; }
           .designer-confidence-bars { width:100%; }
+          .designer-chat-header { flex-direction:column; align-items:stretch; gap:10px; }
+          .designer-chat-workspace.header-compact .designer-chat-header { gap:6px; }
+          .designer-chat-brand { width:100%; }
+          .designer-chat-brand>div { flex:1; min-width:0; }
+          .designer-chat-language { max-width:100%; width:100%; }
+          .designer-chat-language button { flex:1; justify-content:center; }
+          .designer-chat-header-actions { width:100%; flex-direction:row; }
+          .designer-chat-header-actions button { flex:1; }
           .designer-syllabus-progress-strip { max-width:none; }
           .designer-panel-heading { min-height:68px; padding:14px; }
           .designer-chapter-accordion { padding:7px; }
