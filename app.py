@@ -31,6 +31,29 @@ UPLOAD_DIR = "uploads"
 AUDIO_DIR  = "audio"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 os.makedirs(AUDIO_DIR,  exist_ok=True)
+
+MAX_AUDIO_BYTES = 15 * 1024 * 1024
+MAX_QUESTION_CHARS = 5000
+MAX_HISTORY_CHARS = 100000
+MAX_TTS_CHARS = 12000
+MAX_TEST_PAYLOAD_CHARS = 250000
+
+
+def parse_json_form(raw_value: Optional[str], expected_type: type, field_name: str):
+    value = raw_value or ("[]" if expected_type is list else "{}")
+    if len(value) > MAX_TEST_PAYLOAD_CHARS:
+        raise HTTPException(status_code=413, detail=f"{field_name} is too large.")
+    try:
+        parsed = json.loads(value)
+    except (TypeError, json.JSONDecodeError):
+        raise HTTPException(status_code=422, detail=f"{field_name} contains invalid JSON.")
+    if not isinstance(parsed, expected_type):
+        raise HTTPException(status_code=422, detail=f"{field_name} has an invalid format.")
+    return parsed
+
+
+def safe_server_error(message: str):
+    return HTTPException(status_code=500, detail=message)
  
 # ── Language style detection ───────────────────────────────
 HINGLISH_WORDS = {
@@ -280,6 +303,10 @@ async def ask_question(
  
         if not content:
             raise HTTPException(status_code=400, detail="Uploaded file is empty.")
+        if len(content) > MAX_AUDIO_BYTES:
+            raise HTTPException(status_code=413, detail="Audio recording is too large. Please record a shorter question.")
+        if history and len(history) > MAX_HISTORY_CHARS:
+            raise HTTPException(status_code=413, detail="Conversation history is too large. Please start a new chat.")
  
         with open(audio_path, "wb") as f:
             f.write(content)
@@ -335,7 +362,7 @@ async def ask_question(
         llm_start = time.perf_counter()
  
         print("[STEP 3] Calling LLM...")
-        chat_history = json.loads(history)
+        chat_history = parse_json_form(history, list, "Conversation history")
         answer = await asyncio.to_thread(
             ask_llm,
             question,
@@ -381,7 +408,7 @@ async def ask_question(
     except Exception as e:
         print("\n[ERROR] Pipeline crashed:")
         traceback.print_exc()
-        raise HTTPException(status_code=500, detail=f"[{type(e).__name__}] {str(e)}")
+        raise safe_server_error("Voice processing failed. Please try recording again.")
  
     finally:
         if os.path.exists(audio_path):
@@ -400,6 +427,10 @@ async def ask_question_text(
     try:
         if not question.strip():
             raise HTTPException(status_code=422, detail="Question cannot be empty.")
+        if len(question) > MAX_QUESTION_CHARS:
+            raise HTTPException(status_code=413, detail="Question is too long. Please shorten it.")
+        if history and len(history) > MAX_HISTORY_CHARS:
+            raise HTTPException(status_code=413, detail="Conversation history is too large. Please start a new chat.")
  
         # ── Validate student profile received from frontend ──
         allowed_classes = {"5", "6", "7", "8", "9", "10"}
@@ -432,7 +463,7 @@ async def ask_question_text(
         llm_start = time.perf_counter()
         print("[TEXT] Calling LLM...")
  
-        chat_history = json.loads(history)
+        chat_history = parse_json_form(history, list, "Conversation history")
  
         answer = await asyncio.to_thread(
             ask_llm,
@@ -466,10 +497,7 @@ async def ask_question_text(
     except Exception as e:
         print("\n[TEXT ERROR] Pipeline crashed:")
         traceback.print_exc()
-        raise HTTPException(
-            status_code=500,
-            detail=f"[{type(e).__name__}] {str(e)}"
-        )
+        raise safe_server_error("The AI tutor could not answer right now. Please try again.")
  
  
 @app.post("/generate-test/")
@@ -502,6 +530,8 @@ async def generate_test(
  
         if test_type not in allowed_types:
             raise HTTPException(status_code=422, detail="Invalid test type.")
+        if any(len(value or "") > 500 for value in (subject, chapter_title, topic_title)):
+            raise HTTPException(status_code=413, detail="Test topic information is too large.")
  
         validated_class_level = (
             class_level if class_level in allowed_classes else None
@@ -520,13 +550,7 @@ async def generate_test(
         else:
             question_count = 20
  
-        try:
-            parsed_topics = json.loads(topics or "[]")
-        except Exception:
-            parsed_topics = []
- 
-        if not isinstance(parsed_topics, list):
-            parsed_topics = []
+        parsed_topics = parse_json_form(topics, list, "Topics")
  
         print(
             f"[TEST] type='{test_type}' subject='{subject}' "
@@ -569,10 +593,7 @@ async def generate_test(
     except Exception as e:
         print("\n[TEST ERROR] Test generation crashed:")
         traceback.print_exc()
-        raise HTTPException(
-            status_code=500,
-            detail=f"[{type(e).__name__}] {str(e)}"
-        )
+        raise safe_server_error("The test could not be generated right now. Please try again.")
  
  
 @app.post("/grade-test/")
@@ -592,13 +613,8 @@ async def grade_test(
         validated_board = board if board in allowed_boards else None
         language = answer_language if answer_language in allowed_languages else "en"
 
-        parsed_questions = json.loads(questions or "[]")
-        parsed_answers = json.loads(answers or "{}")
-
-        if not isinstance(parsed_questions, list):
-            raise HTTPException(status_code=422, detail="Questions must be a list.")
-        if not isinstance(parsed_answers, dict):
-            raise HTTPException(status_code=422, detail="Answers must be an object.")
+        parsed_questions = parse_json_form(questions, list, "Questions")
+        parsed_answers = parse_json_form(answers, dict, "Answers")
 
         grades = await asyncio.to_thread(
             grade_test_answers,
@@ -625,10 +641,7 @@ async def grade_test(
     except Exception as e:
         print("\n[GRADE ERROR] Test grading crashed:")
         traceback.print_exc()
-        raise HTTPException(
-            status_code=500,
-            detail=f"[{type(e).__name__}] {str(e)}"
-        )
+        raise safe_server_error("The test could not be graded right now. Please try again.")
 
 
 @app.post("/tts/")
@@ -642,6 +655,8 @@ async def generate_tts(
     try:
         if not text.strip():
             raise HTTPException(status_code=422, detail="Text cannot be empty.")
+        if len(text) > MAX_TTS_CHARS:
+            raise HTTPException(status_code=413, detail="Answer is too long to read aloud.")
  
         # Clean the text here too — the /tts/ endpoint receives
         # already-cleaned text from ask-text, but clean again
@@ -668,7 +683,4 @@ async def generate_tts(
     except Exception as e:
         print("\n[TTS ROUTE ERROR] TTS generation crashed:")
         traceback.print_exc()
-        raise HTTPException(
-            status_code=500,
-            detail=f"[{type(e).__name__}] {str(e)}"
-        )
+        raise safe_server_error("Audio could not be generated right now. Please try again.")
