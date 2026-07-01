@@ -99,10 +99,26 @@ def detect_language_style(text: str) -> str:
  
 # ── App ────────────────────────────────────────────────────
 app = FastAPI(title="Student Voice Assistant API")
+
+DEFAULT_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "http://localhost:3001",
+    "https://teachifyy.com",
+    "https://www.teachifyy.com",
+]
+ALLOWED_ORIGINS = [
+    origin.strip()
+    for origin in os.getenv(
+        "ALLOWED_ORIGINS",
+        ",".join(DEFAULT_ALLOWED_ORIGINS),
+    ).split(",")
+    if origin.strip()
+]
  
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=ALLOWED_ORIGINS,
+    allow_origin_regex=r"https://[a-zA-Z0-9-]+\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -193,6 +209,17 @@ def search_commons_diagram(
 @app.get("/")
 def home():
     return {"message": "Student Voice Assistant Backend Running ✅"}
+
+
+@app.get("/health")
+def health():
+    llm_configured = bool(os.getenv("GEMINI_API_KEY") or os.getenv("GROQ_API_KEY"))
+    return {
+        "status": "ok" if llm_configured else "degraded",
+        "service": "student-voice-assistant-backend",
+        "llmConfigured": llm_configured,
+        "ttsConfigured": True,
+    }
  
  
 @app.post("/diagram-search/")
