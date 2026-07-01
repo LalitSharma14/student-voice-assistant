@@ -17,7 +17,8 @@ service cloud.firestore {
       allow create: if request.auth != null
         && request.auth.uid == userId
         && request.resource.data.classLevel is string
-        && request.resource.data.board is string;
+        && request.resource.data.classLevel in ["5", "6", "7", "9", "10"]
+        && request.resource.data.board == "CBSE";
 
       allow update: if request.auth != null
         && request.auth.uid == userId
@@ -41,7 +42,6 @@ service cloud.firestore {
           && request.auth.uid == userId;
       }
 
-      // ADD THIS
       match /chatSessions/{sessionId} {
         allow read, write: if request.auth != null
           && request.auth.uid == userId;

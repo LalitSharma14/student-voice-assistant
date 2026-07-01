@@ -114,6 +114,7 @@ const ANSWER_LANGUAGES = [
   { value: "hi",       label: "Hindi"    },
 ];
 const SUPPORTED_CLASS_LEVELS = ["5", "6", "7", "9", "10"];
+const SUPPORTED_BOARDS = ["CBSE"];
 
 const SUBJECT_DISPLAY_ORDER = ["Maths", "Science", "Social Science", "SST", "English", "Hindi"];
 
@@ -2646,7 +2647,7 @@ ${latestAnswer}`;
                 <label style={labelStyle}>Class</label>
                 <select value={signupClassLevel} onChange={(e) => setSignupClassLevel(e.target.value)} style={inputStyle}>{SUPPORTED_CLASS_LEVELS.map((c) => <option key={c} value={c}>Class {c}</option>)}</select>
                 <label style={labelStyle}>Board</label>
-                <select value={signupBoard} onChange={(e) => setSignupBoard(e.target.value)} style={inputStyle}>{["CBSE","RBSE","ICSE","Other"].map((b) => <option key={b} value={b}>{b}</option>)}</select>
+                <select value={signupBoard} onChange={(e) => setSignupBoard(e.target.value)} style={inputStyle}>{SUPPORTED_BOARDS.map((b) => <option key={b} value={b}>{b}</option>)}</select>
               </>
             )}
             <button onClick={authMode === "login" ? handleLogin : handleCreateAccount} disabled={authLoading} style={{ width: "100%", padding: "13px 16px", border: "none", borderRadius: "12px", background: `linear-gradient(135deg, ${B.navy}, ${B.navyDark})`, color: B.white, fontSize: "15px", fontWeight: 700, cursor: "pointer", marginTop: "6px", opacity: authLoading ? 0.6 : 1, fontFamily: "'Plus Jakarta Sans', sans-serif", letterSpacing: "0.2px" }}>
@@ -2701,7 +2702,7 @@ ${latestAnswer}`;
           <label style={labelStyle}>Class</label>
           <select value={signupClassLevel} onChange={(event) => setSignupClassLevel(event.target.value)} style={inputStyle}>{SUPPORTED_CLASS_LEVELS.map((value) => <option key={value} value={value}>Class {value}</option>)}</select>
           <label style={labelStyle}>Board</label>
-          <select value={signupBoard} onChange={(event) => setSignupBoard(event.target.value)} style={inputStyle}>{["CBSE","RBSE","ICSE","Other"].map((value) => <option key={value} value={value}>{value}</option>)}</select>
+          <select value={signupBoard} onChange={(event) => setSignupBoard(event.target.value)} style={inputStyle}>{SUPPORTED_BOARDS.map((value) => <option key={value} value={value}>{value}</option>)}</select>
           <button onClick={handleCompleteGoogleProfile} disabled={authLoading} style={{ width: "100%", padding: "13px", border: 0, borderRadius: "12px", background: B.navy, color: B.white, fontWeight: 700, cursor: "pointer" }}>Save and continue</button>
         </div>
       </div>
