@@ -113,6 +113,7 @@ const ANSWER_LANGUAGES = [
   { value: "hinglish", label: "Hinglish" },
   { value: "hi",       label: "Hindi"    },
 ];
+const SUPPORTED_CLASS_LEVELS = ["5", "6", "7", "9", "10"];
 
 const SUBJECT_DISPLAY_ORDER = ["Maths", "Science", "Social Science", "SST", "English", "Hindi"];
 
@@ -591,7 +592,7 @@ export default function Home() {
   const [dailyGoals,         setDailyGoals]         = useState({ study: false, test: false, question: false });
   const [dailyGoalsLoading,  setDailyGoalsLoading]  = useState(false);
 
-  const currentSyllabus = SYLLABUS_DATA[classLevel]?.[board] || SYLLABUS_DATA["5"]?.CBSE;
+  const currentSyllabus = SYLLABUS_DATA[classLevel]?.[board] || {};
   const syllabusSubjectOptions = getOrderedSubjects(currentSyllabus);
   const currentChapters = selectedSubject ? currentSyllabus?.[selectedSubject] || [] : [];
   const currentChapter = typeof selectedChapter === "string"
@@ -2643,7 +2644,7 @@ ${latestAnswer}`;
             {authMode === "signup" && (
               <>
                 <label style={labelStyle}>Class</label>
-                <select value={signupClassLevel} onChange={(e) => setSignupClassLevel(e.target.value)} style={inputStyle}>{["5","6","7","8","9","10"].map((c) => <option key={c} value={c}>Class {c}</option>)}</select>
+                <select value={signupClassLevel} onChange={(e) => setSignupClassLevel(e.target.value)} style={inputStyle}>{SUPPORTED_CLASS_LEVELS.map((c) => <option key={c} value={c}>Class {c}</option>)}</select>
                 <label style={labelStyle}>Board</label>
                 <select value={signupBoard} onChange={(e) => setSignupBoard(e.target.value)} style={inputStyle}>{["CBSE","RBSE","ICSE","Other"].map((b) => <option key={b} value={b}>{b}</option>)}</select>
               </>
@@ -2698,7 +2699,7 @@ ${latestAnswer}`;
           <label style={labelStyle}>Mobile number (optional)</label>
           <input value={signupMobile} onChange={(event) => setSignupMobile(event.target.value)} style={inputStyle} />
           <label style={labelStyle}>Class</label>
-          <select value={signupClassLevel} onChange={(event) => setSignupClassLevel(event.target.value)} style={inputStyle}>{["5","6","7","8","9","10"].map((value) => <option key={value} value={value}>Class {value}</option>)}</select>
+          <select value={signupClassLevel} onChange={(event) => setSignupClassLevel(event.target.value)} style={inputStyle}>{SUPPORTED_CLASS_LEVELS.map((value) => <option key={value} value={value}>Class {value}</option>)}</select>
           <label style={labelStyle}>Board</label>
           <select value={signupBoard} onChange={(event) => setSignupBoard(event.target.value)} style={inputStyle}>{["CBSE","RBSE","ICSE","Other"].map((value) => <option key={value} value={value}>{value}</option>)}</select>
           <button onClick={handleCompleteGoogleProfile} disabled={authLoading} style={{ width: "100%", padding: "13px", border: 0, borderRadius: "12px", background: B.navy, color: B.white, fontWeight: 700, cursor: "pointer" }}>Save and continue</button>
