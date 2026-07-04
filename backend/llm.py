@@ -79,7 +79,9 @@ def build_language_instruction(language: str) -> str:
     if language == "hi":
         return (
             "Output language instruction: Answer entirely in simple Hindi using "
-            "Devanagari script only. Do not write the answer in Roman Hinglish."
+            "Devanagari script only. Do not write the answer in Roman Hinglish. "
+            "Translate technical terms into commonly understood Hindi. Do not include "
+            "English spellings or English terms in parentheses anywhere in the answer."
         )
  
     if language == "hinglish":
@@ -459,7 +461,10 @@ Give a detailed answer of 4 to 6 sentences with one simple example and one encou
 Student question:
 {question}"""
  
-    return f"""Give a short answer only: 2 to 3 sentences maximum, with one simple example only if helpful.
+    return f"""Give exactly 2 or 3 complete sentences, with one simple example only if helpful.
+
+Do not add a greeting, motivational line, praise, closing sentence, or phrases such as "Keep learning".
+Answer the question immediately and stop after the explanation.
  
 {profile_instruction}
  
@@ -514,6 +519,25 @@ def clean_chat_history(history: list[dict]) -> list[dict]:
         )
  
     return clean_history
+
+
+def clean_normal_answer(answer: str) -> str:
+    """Remove UI-style greetings and closings from short normal answers."""
+
+    text = str(answer or "").strip()
+    text = re.sub(
+        r"^(?:hello|hi|hey|namaste|नमस्ते)\s*[!,.।?]*\s*",
+        "",
+        text,
+        flags=re.IGNORECASE,
+    )
+    text = re.sub(
+        r"\s*(?:keep learning|happy learning|aise hi questions poochte raho|बहुत अच्छा[^।!?]*|सीखते रहो)\s*[!।.]*\s*$",
+        "",
+        text,
+        flags=re.IGNORECASE,
+    )
+    return text.strip()
  
  
 def ask_llm(
@@ -538,6 +562,9 @@ def ask_llm(
     follow_up_prompt = is_follow_up_prompt(question)
     follow_up_mode = get_follow_up_mode(question)
     doubt_title_prompt = is_doubt_title_prompt(question)
+    normal_answer = not any(
+        [detailed, study_topic_prompt, revision_topic_prompt, follow_up_prompt, doubt_title_prompt]
+    )
  
     user_message = build_user_message(
         question,
@@ -569,7 +596,7 @@ Student question:
  
     # Normal answers stay short.
     # Syllabus topic explanations get more output space.
-    max_tokens = 80 if doubt_title_prompt else 1000 if revision_topic_prompt else 2200 if study_topic_prompt or follow_up_prompt else 600
+    max_tokens = 80 if doubt_title_prompt else 1000 if revision_topic_prompt else 2200 if study_topic_prompt or follow_up_prompt else 300
  
     clean_history = clean_chat_history(history)
  
@@ -608,6 +635,8 @@ Student question:
                     f"Incomplete follow-up answer from {model_name}: "
                     f"mode={follow_up_mode}, words={len(answer.split())}"
                 )
+            if normal_answer:
+                answer = clean_normal_answer(answer)
  
             print(
                 f"[LLM] Used: {model_name} "
@@ -701,6 +730,8 @@ Student question:
                 f"Groq returned an incomplete follow-up after retry: "
                 f"mode={follow_up_mode}, words={len(answer.split())}"
             )
+        if normal_answer:
+            answer = clean_normal_answer(answer)
  
         print(
             f"[LLM] Groq answered "
