@@ -5784,7 +5784,7 @@ ${latestAnswer}`;
           .student-profile-copy { min-width:184px; min-height:50px; padding:6px 16px 6px 22px; border:1px solid var(--designer-dove); border-radius:999px; justify-content:center; background:#fff; }
           .student-app-sidebar { width:80px; flex:0 0 80px; height:calc(100vh - 72px); padding:24px 0; border-right:0; background:transparent; justify-content:center; gap:20px; }
           .student-sidebar-brand { display:none; }
-          .student-more-wrap { display:none; }
+          .student-more-wrap { display:block; }
           .student-sidebar-dock { width:auto; margin:10px 0 0; animation:student-dock-float 5s ease-in-out infinite; }
           .student-app-main { height:calc(100vh - 72px); }
           @keyframes student-dock-float { 0%,100%{transform:translate3d(0,0,0)} 50%{transform:translate3d(0,-6px,0)} }
