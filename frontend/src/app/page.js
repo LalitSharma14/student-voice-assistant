@@ -158,21 +158,24 @@ async function readApiJson(response, fallbackMessage = "The AI service is unavai
 }
 
 // ── Typewriter hook ────────────────────────────────────────
-function useTypewriter(text, speed = 120) {
+function useTypewriter(text, speed = 120, startedAt = 0) {
   const [displayed, setDisplayed] = useState("");
   const [done, setDone] = useState(false);
   useEffect(() => {
     if (!text) { setDisplayed(""); setDone(true); return; }
-    setDisplayed(""); setDone(false);
     const words = text.split(" ");
-    let index = 0;
+    const startTime = Number(startedAt) || Date.now();
+    let index = Math.min(words.length, Math.floor(Math.max(0, Date.now() - startTime) / speed));
+    setDisplayed(words.slice(0, index).join(" "));
+    setDone(index >= words.length);
+    if (index >= words.length) return;
     const interval = setInterval(() => {
       if (index >= words.length) { setDone(true); clearInterval(interval); return; }
       setDisplayed(words.slice(0, index + 1).join(" "));
       index += 1;
     }, speed);
     return () => clearInterval(interval);
-  }, [text, speed]);
+  }, [text, speed, startedAt]);
   return { displayed, done };
 }
 
@@ -210,7 +213,7 @@ function DiagramCard({ diagram }) {
 }
 
 function AssistantBubble({ msg, index, playingIndex, playAudio, stopAudio, onTypingComplete, onRegenerate }) {
-  const { displayed, done } = useTypewriter(msg.typing ? msg.text : "");
+  const { displayed, done } = useTypewriter(msg.typing ? msg.text : "", 120, msg.typingStartedAt);
   const [audioReady, setAudioReady] = useState(false);
   const ttsStarted = useRef(false);
 
@@ -915,7 +918,7 @@ export default function Home() {
     if (!msgs.length) return;
 
     // Strip audioUrl before saving — audio files are ephemeral
-    const msgsToSave = msgs.map(({ audioUrl: _a, typing: _t, ...rest }) => rest);
+    const msgsToSave = msgs.map(({ audioUrl: _a, typing: _t, typingStartedAt: _ts, ...rest }) => rest);
 
     const title = getChatTopicTitle(firstQuestion || msgs.find((m) => m.role === "user")?.text || "New conversation");
 
@@ -1428,7 +1431,7 @@ export default function Home() {
     setMessages((prev) => [
       ...prev.map((msg) => msg.role === "assistant" ? { ...msg, typing: false } : msg),
       { id: crypto.randomUUID(), role: "user", text: label, isVoice: false },
-      { id: assistantId, role: "assistant", text: answer, audioUrl: null, typing: true, diagram },
+      { id: assistantId, role: "assistant", text: answer, audioUrl: null, typing: true, typingStartedAt: Date.now(), diagram },
     ]);
     updateHistory(label, answer);
     setActiveTab("chat");
@@ -1731,6 +1734,7 @@ ${latestAnswer}`;
           text: data.answer,
           audioUrl: null,
           typing: true,
+          typingStartedAt: Date.now(),
           followUpType: actionKey,
           doubtTopic: doubtTopic || sourceQuestion,
           doubtSourceQuestion: sourceQuestion,
@@ -2411,7 +2415,7 @@ ${latestAnswer}`;
     const answer = getDiagramReplyText(diagram, context);
     setMessages((prev) => [
       ...prev.map((msg) => msg.role === "assistant" ? { ...msg, typing: false } : msg),
-      { id: assistantId, role: "assistant", text: answer, audioUrl: null, typing: true, diagram },
+      { id: assistantId, role: "assistant", text: answer, audioUrl: null, typing: true, typingStartedAt: Date.now(), diagram },
     ]);
     updateHistory(question, answer);
     logActivity({
@@ -2472,7 +2476,7 @@ ${latestAnswer}`;
 
       setMessages((prev) => [
         ...prev.map((msg) => msg.role === "assistant" ? { ...msg, typing: false } : msg),
-        { id: assistantId, role: "assistant", text: data.answer, audioUrl: null, typing: true, createdAt: new Date().toISOString() },
+        { id: assistantId, role: "assistant", text: data.answer, audioUrl: null, typing: true, typingStartedAt: Date.now(), createdAt: new Date().toISOString() },
       ]);
       updateHistory(question, data.answer);
       logActivity({
