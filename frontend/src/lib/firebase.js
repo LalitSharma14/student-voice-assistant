@@ -4,7 +4,10 @@ import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyC06SgM-DrsaaPgDIQMHFP4pMzcCppMTCE",
-  authDomain: "student-tutor-d124f.firebaseapp.com",
+  authDomain:
+    process.env.NODE_ENV === "production"
+      ? "student-voice-assistant.vercel.app"
+      : "student-tutor-d124f.firebaseapp.com",
   projectId: "student-tutor-d124f",
   storageBucket: "student-tutor-d124f.firebasestorage.app",
   messagingSenderId: "635191881051",

@@ -10,6 +10,10 @@ const nextConfig = {
   async rewrites() {
     return [
       {
+        source: "/__/auth/:path*",
+        destination: "https://student-tutor-d124f.firebaseapp.com/__/auth/:path*",
+      },
+      {
         source: "/api",
         destination: `${BACKEND_URL}/`,
       },
