@@ -60,6 +60,20 @@ def import_seed(
         from firebase_admin import firestore
         server_timestamp = firestore.SERVER_TIMESTAMP
 
+    batch = db.batch() if db else None
+    batch_size = 0
+    batch_ids = []
+
+    def commit_batch():
+        nonlocal batch, batch_size, batch_ids
+        if not batch or not batch_size:
+            return
+        batch.commit()
+        print(f"Imported {batch_size} content documents ({batch_ids[0]} ... {batch_ids[-1]})")
+        batch = db.batch()
+        batch_size = 0
+        batch_ids = []
+
     for topic in selected_topics:
         content_id = topic.get("id")
         if not content_id:
@@ -73,14 +87,20 @@ def import_seed(
             continue
 
         doc_ref = db.collection("contentLibrary").document(content_id)
-        doc_ref.set(
+        batch.set(
+            doc_ref,
             {
                 **data,
                 "updatedAt": server_timestamp,
             },
             merge=True,
         )
-        print(f"Imported contentLibrary/{content_id}")
+        batch_size += 1
+        batch_ids.append(content_id)
+        if batch_size == 400:
+            commit_batch()
+
+    commit_batch()
 
     if prune_missing:
         if dry_run:

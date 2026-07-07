@@ -5,18 +5,20 @@ from pathlib import Path
 
 
 BASE_DIR = Path(__file__).resolve().parent
-OUTPUT_PATH = BASE_DIR / "class_9_cbse_all_subjects.json"
-DEFAULT_SOURCE_DIR = BASE_DIR / "class9_ncert_json_notes"
-FRONTEND_SYLLABUS_PATH = BASE_DIR.parent.parent / "frontend" / "src" / "data" / "class9Syllabus.js"
+OUTPUT_PATH = BASE_DIR / "class_8_cbse_all_subjects.json"
+DEFAULT_SOURCE_DIR = BASE_DIR / "class8_ncert_json_notes"
+FRONTEND_SYLLABUS_PATH = BASE_DIR.parent.parent / "frontend" / "src" / "data" / "class8Syllabus.js"
 
-SOURCE_GROUPS = [
-    ("Maths", ["class9_mathematics.json"]),
-    ("Science", ["class9_science.json"]),
-    ("Social Science", ["class9_social_science.json"]),
-    ("English", ["class9_english.json"]),
-    ("Hindi", ["class9_hindi.json"]),
-    ("Skill Education", ["class9_skill_education.json"]),
-]
+SOURCE_FILES = {
+    "English": "class8_english.json",
+    "Maths": "class8_mathematics.json",
+    "Science": "class8_science.json",
+    "Social Science": "class8_social_science.json",
+    "Hindi": "class8_hindi.json",
+    "Sanskrit": "class8_sanskrit.json",
+    "Art": "class8_art.json",
+    "Skill Education": "class8_skill_education.json",
+}
 
 
 def slug(value: str) -> str:
@@ -24,7 +26,7 @@ def slug(value: str) -> str:
     for char in value.lower():
         if char.isascii() and char.isalnum():
             pieces.append(char)
-        elif char.isspace() or char in "-_./'?:":
+        elif char.isspace() or char in "-_./'’:":
             pieces.append("_")
         elif char.isalnum():
             pieces.append(f"u{ord(char):x}")
@@ -34,22 +36,14 @@ def slug(value: str) -> str:
 
 
 def content_id(subject: str, chapter: str, topic: str) -> str:
-    return slug(f"class_9_CBSE_{subject}_{chapter}_{topic}")
+    return slug(f"class_8_CBSE_{subject}_{chapter}_{topic}")
 
 
 def as_list(value) -> list[str]:
     if value is None:
         return []
     if isinstance(value, list):
-        result = []
-        for item in value:
-            if isinstance(item, dict):
-                text = str(item.get("explanation") or item.get("text") or item.get("title") or item).strip()
-            else:
-                text = str(item).strip()
-            if text:
-                result.append(text)
-        return result
+        return [str(item).strip() for item in value if str(item).strip()]
     if isinstance(value, str):
         parts = [part.strip() for part in value.split(";")]
         return [part for part in parts if part]
@@ -67,13 +61,18 @@ def keyword_terms(value) -> list[dict]:
                 meaning = str(item.get("definition") or item.get("meaning") or "").strip()
                 example = str(item.get("simpleExample") or item.get("example") or "").strip()
                 if term:
-                    terms.append({"term": term, "meaning": meaning or term, "example": example})
+                    terms.append({
+                        "term": term,
+                        "meaning": meaning or term,
+                        "example": example,
+                    })
             else:
                 text = str(item).strip()
                 if text:
                     terms.append({"term": text, "meaning": text, "example": ""})
         return terms
-    return [{"term": term, "meaning": term, "example": ""} for term in as_list(value)]
+    terms = as_list(value)
+    return [{"term": term, "meaning": term, "example": ""} for term in terms]
 
 
 def step_by_step_items(topic: dict, fallback_examples: list[str]) -> list[str]:
@@ -100,50 +99,30 @@ def step_by_step_items(topic: dict, fallback_examples: list[str]) -> list[str]:
     return fallback_examples
 
 
-def load_source_file(source_dir: Path, filename: str) -> dict:
-    path = source_dir / filename
+def load_subject_file(source_dir: Path, subject: str) -> dict:
+    path = source_dir / SOURCE_FILES[subject]
     if not path.exists():
-        raise FileNotFoundError(f"Missing Class 9 source JSON: {path}")
-    with path.open("r", encoding="utf-8-sig") as file:
+        raise FileNotFoundError(f"Missing Class 8 source JSON: {path}")
+    with path.open("r", encoding="utf-8") as file:
         data = json.load(file)
     if isinstance(data, list):
-        return {"chapters": data, "bookName": path.stem}
+        return {"chapters": data}
     if isinstance(data, dict) and "chapters" in data:
-        data.setdefault("bookName", path.stem)
         return data
-    raise ValueError(f"{path} must contain a chapters array or an object with a chapters array.")
-
-
-
-def display_topic_title(subject: str, chapter_title: str, topic_title: str) -> str:
-    if subject == "Maths" and chapter_title == "Exploring Algebraic Identities":
-        if "(a + b)^2" in topic_title:
-            return f"{topic_title} (plus form)"
-        if "(a - b)^2" in topic_title:
-            return f"{topic_title} (minus form)"
-    return topic_title
-
-def language_for(subject: str, source: dict, chapter: dict) -> str:
-    explicit = source.get("language") or chapter.get("language")
-    if explicit:
-        return str(explicit).strip()
-    if subject == "Hindi":
-        return "hi"
-    return "en"
+    raise ValueError(f"{path} must contain a chapters array or a JSON object with a chapters array.")
 
 
 def make_doc(subject: str, source: dict, chapter: dict, topic: dict) -> dict:
     chapter_title = str(chapter.get("chapter") or "").strip()
-    raw_topic_title = str(topic.get("topic") or "").strip()
-    topic_title = display_topic_title(subject, chapter_title, raw_topic_title)
-    if not chapter_title or not raw_topic_title:
+    topic_title = str(topic.get("topic") or "").strip()
+    if not chapter_title or not topic_title:
         raise ValueError(f"Missing chapter/topic title in {subject}: {chapter}")
 
     examples = as_list(topic.get("examples"))
     step_by_step = step_by_step_items(topic, examples)
     revision_notes = as_list(topic.get("revisionNotes"))
     quick_summary = str(topic.get("quickSummary") or "").strip()
-    book_name = str(chapter.get("bookName") or source.get("bookName") or "").strip()
+    book_name = str(source.get("bookName") or chapter.get("bookName") or "").strip()
     source_label = (
         f"Based on NCERT {book_name} + AI-generated teacher-style explanation"
         if book_name
@@ -152,13 +131,13 @@ def make_doc(subject: str, source: dict, chapter: dict, topic: dict) -> dict:
 
     return {
         "id": content_id(subject, chapter_title, topic_title),
-        "classLevel": "9",
+        "classLevel": "8",
         "board": str(source.get("board") or chapter.get("board") or "CBSE").strip(),
         "subject": subject,
         "chapterNumber": chapter.get("chapterNumber"),
         "chapterTitle": chapter_title,
         "topicTitle": topic_title,
-        "language": language_for(subject, source, chapter),
+        "language": source.get("language") or chapter.get("language") or ("hi" if subject == "Hindi" else "sa" if subject == "Sanskrit" else "en"),
         "status": "published",
         "sourceLabel": source_label,
         "studyContent": {
@@ -172,7 +151,7 @@ def make_doc(subject: str, source: dict, chapter: dict, topic: dict) -> dict:
             "diagram": {
                 "type": "text",
                 "title": f"{topic_title} Flow",
-                "content": " -> ".join([topic_title, "Concept", "Example", "Revision"]),
+                "content": " -> ".join([topic_title, "Meaning", "Examples", "Quick revision"]),
             },
             "summary": [quick_summary] if quick_summary else revision_notes,
         },
@@ -185,22 +164,17 @@ def make_doc(subject: str, source: dict, chapter: dict, topic: dict) -> dict:
             "examPoints": [
                 f"Explain {topic_title}.",
                 "Write two important points.",
-                "Give one example from the chapter or daily life.",
+                "Give one example from the lesson or daily life.",
             ],
         },
     }
 
 
-def iter_subject_sources(source_dir: Path):
-    for subject, filenames in SOURCE_GROUPS:
-        for filename in filenames:
-            yield subject, load_source_file(source_dir, filename)
-
-
 def build_seed(source_dir: Path) -> list[dict]:
     docs = []
     seen = set()
-    for subject, data in iter_subject_sources(source_dir):
+    for subject in SOURCE_FILES:
+        data = load_subject_file(source_dir, subject)
         for chapter in data.get("chapters", []):
             for topic in chapter.get("topics", []):
                 doc = make_doc(subject, data, chapter, topic)
@@ -213,30 +187,35 @@ def build_seed(source_dir: Path) -> list[dict]:
 
 def build_frontend_syllabus(source_dir: Path) -> dict:
     syllabus = {}
-    for subject, filenames in SOURCE_GROUPS:
-        chapters = []
-        for filename in filenames:
-            data = load_source_file(source_dir, filename)
-            for chapter in data.get("chapters", []):
-                chapter_title = str(chapter.get("chapter") or "").strip()
-                if not chapter_title:
-                    continue
-                chapters.append({
-                    "title": chapter_title,
-                    "subtopics": [
-                        display_topic_title(subject, chapter_title, str(topic.get("topic") or "").strip())
-                        for topic in chapter.get("topics", [])
-                        if str(topic.get("topic") or "").strip()
-                    ],
-                })
-        syllabus[subject] = chapters
+    for subject in SOURCE_FILES:
+        data = load_subject_file(source_dir, subject)
+        syllabus[subject] = [
+            {
+                "title": str(chapter.get("chapter") or "").strip(),
+                "subtopics": [
+                    str(topic.get("topic") or "").strip()
+                    for topic in chapter.get("topics", [])
+                    if str(topic.get("topic") or "").strip()
+                ],
+            }
+            for chapter in data.get("chapters", [])
+            if str(chapter.get("chapter") or "").strip()
+        ]
     return syllabus
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Generate Class 9 CBSE content seed from NCERT JSON notes.")
-    parser.add_argument("--source-dir", default=str(DEFAULT_SOURCE_DIR), help="Directory containing Class 9 JSON files.")
-    parser.add_argument("--output", default=str(OUTPUT_PATH), help="Output seed JSON path.")
+    parser = argparse.ArgumentParser(description="Generate Class 8 CBSE content seed from NCERT JSON notes.")
+    parser.add_argument(
+        "--source-dir",
+        default=str(DEFAULT_SOURCE_DIR),
+        help="Directory containing the Class 8 curriculum JSON files.",
+    )
+    parser.add_argument(
+        "--output",
+        default=str(OUTPUT_PATH),
+        help="Output seed JSON path.",
+    )
     args = parser.parse_args()
 
     docs = build_seed(Path(args.source_dir))
@@ -244,7 +223,7 @@ def main():
     output_path.write_text(json.dumps(docs, ensure_ascii=False, indent=2), encoding="utf-8")
     frontend_syllabus = build_frontend_syllabus(Path(args.source_dir))
     FRONTEND_SYLLABUS_PATH.write_text(
-        "export const CLASS_9_CBSE_SYLLABUS = "
+        "export const CLASS_8_CBSE_SYLLABUS = "
         + json.dumps(frontend_syllabus, ensure_ascii=False, indent=2)
         + ";\n",
         encoding="utf-8",

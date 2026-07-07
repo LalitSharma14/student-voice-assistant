@@ -1,0 +1,3498 @@
+{
+ "class": 8,
+ "board": "CBSE",
+ "source": "NCERT",
+ "subject": "Science (Vocational Skills - Kaushal Bodh)",
+ "bookName": "Kaushal Bodh (Grade 8)",
+ "chapters": [
+  {
+   "chapterNumber": 1,
+   "chapter": "Hydroponics: Growing Plants without Soil (Work with Life Forms)",
+   "topics": [
+    {
+     "topicId": "sci8_ch1_t1",
+     "topic": "What is Hydroponics",
+     "meaning": "Hydroponics is a method of growing plants in nutrient-rich water instead of soil.",
+     "ncertBasedExplanation": "Hydroponics comes from the Greek words 'hydro' (water) and 'ponos' (labour), so it literally means 'working with water'. In this method, plants are not planted in soil; instead their roots are placed directly in water that has all the nutrients the plant needs dissolved in it, or in a soil-less growing medium like cocopeat that is kept moist with nutrient water. Because the plant gets food directly from the water, it does not have to spend energy growing long roots to search for nutrients in soil. Hydroponics lets people grow fresh vegetables even where there is little land, poor soil, or limited space such as a balcony or rooftop.",
+     "easyExplanation": "Hydroponics means growing plants in water instead of soil. The roots sit in water that already has plant food mixed in, so the plant gets everything it needs without any soil.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Meaning of the word",
+       "explanation": "Hydro means water and ponos means labour, so hydroponics is 'working with water'."
+      },
+      {
+       "step": 2,
+       "title": "No soil needed",
+       "explanation": "Roots are placed in nutrient water or a moist soil-less medium like cocopeat."
+      },
+      {
+       "step": 3,
+       "title": "Food in the water",
+       "explanation": "All the nutrients a plant needs are dissolved in the water."
+      },
+      {
+       "step": 4,
+       "title": "Grows almost anywhere",
+       "explanation": "It can be done on rooftops, balconies or land with poor soil."
+      }
+     ],
+     "examples": [
+      "Growing spinach with roots dipped in nutrient water is hydroponics.",
+      "A rooftop garden using PET bottles filled with cocopeat and nutrient water."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Hydroponics",
+       "definition": "Growing plants in nutrient water without soil.",
+       "simpleExample": "Lettuce grown in water channels is hydroponic."
+      },
+      {
+       "keyword": "Nutrient solution",
+       "definition": "Water with plant nutrients dissolved in it.",
+       "simpleExample": "The reservoir is filled with nutrient solution."
+      },
+      {
+       "keyword": "Growing medium",
+       "definition": "A soil-less material that supports roots, like cocopeat.",
+       "simpleExample": "Cocopeat holds water around the roots."
+      }
+     ],
+     "quickSummary": "Hydroponics is growing plants in nutrient-rich water (or a moist soil-less medium) instead of soil, useful where land or good soil is limited.",
+     "revisionNotes": [
+      "Hydro + ponos = working with water.",
+      "No soil; roots get food from water.",
+      "Can be grown in small spaces.",
+      "Cocopeat is a common growing medium."
+     ]
+    },
+    {
+     "topicId": "sci8_ch1_t2",
+     "topic": "Why Hydroponics Matters",
+     "meaning": "As population grows, the demand for food rises, and hydroponics helps grow more food without harming forests and soil.",
+     "ncertBasedExplanation": "Farmers work hard to grow healthy food quickly, but as the world's population grows the demand for food also increases. To meet this demand, more land is needed, and this land is often taken from forests, leading to deforestation. Deforestation causes loss of biodiversity and adds to climate change. Another problem is that using the same land year after year removes nutrients from it, a problem called soil degradation, and heavy use of fertilisers to make up for this damages the soil further. Hydroponics offers a solution: it grows food in a small space using water, without needing large areas of farmland, so it reduces pressure on forests and soil.",
+     "easyExplanation": "We need more and more food, but clearing forests and overusing soil is harmful. Hydroponics grows lots of food in a small space using water, so it protects forests and soil.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Rising demand",
+       "explanation": "More people means more food is needed every year."
+      },
+      {
+       "step": 2,
+       "title": "Pressure on land",
+       "explanation": "Extra farmland is often taken from forests, causing deforestation."
+      },
+      {
+       "step": 3,
+       "title": "Soil degradation",
+       "explanation": "Using the same soil repeatedly removes its nutrients."
+      },
+      {
+       "step": 4,
+       "title": "Hydroponics helps",
+       "explanation": "It grows food in small spaces with water, easing the pressure on land and soil."
+      }
+     ],
+     "examples": [
+      "A city family grows vegetables on a balcony instead of buying land.",
+      "Hydroponic farms produce greens without clearing any forest."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Deforestation",
+       "definition": "Cutting down forests, often to make farmland.",
+       "simpleExample": "Deforestation reduces the number of wild species."
+      },
+      {
+       "keyword": "Soil degradation",
+       "definition": "Loss of soil nutrients from overuse.",
+       "simpleExample": "Repeated cropping causes soil degradation."
+      },
+      {
+       "keyword": "Biodiversity",
+       "definition": "The variety of living things in an area.",
+       "simpleExample": "Forests are rich in biodiversity."
+      }
+     ],
+     "quickSummary": "Hydroponics matters because it grows more food in small spaces with water, reducing deforestation and soil degradation caused by expanding farmland.",
+     "revisionNotes": [
+      "Food demand rises with population.",
+      "Farmland expansion harms forests.",
+      "Overused soil loses nutrients.",
+      "Hydroponics saves land and soil."
+     ]
+    },
+    {
+     "topicId": "sci8_ch1_t3",
+     "topic": "What Plants Need to Grow",
+     "meaning": "Every plant needs water, nutrients, light, air (oxygen for roots) and support to grow healthily.",
+     "ncertBasedExplanation": "For healthy growth, a plant needs several things: water, mineral nutrients (such as nitrogen, phosphorus and potassium), sunlight for making food through photosynthesis, oxygen at the roots so they can breathe, a suitable temperature, and some support to hold the plant upright. In normal farming, soil provides nutrients, support and air pockets for the roots. In hydroponics there is no soil, so the system must supply each of these needs in another way: nutrients are dissolved in the water, support comes from a growing medium or net pots, and oxygen is added to the water using an aerator so the roots do not suffocate. Any hydroponic unit must fulfil all these needs for plants to grow well.",
+     "easyExplanation": "Plants need water, food (nutrients), light, air at the roots, the right warmth, and support. In hydroponics we must give each of these without soil.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Water",
+       "explanation": "Plants need water to live and to carry nutrients."
+      },
+      {
+       "step": 2,
+       "title": "Nutrients",
+       "explanation": "Minerals like nitrogen, phosphorus and potassium are needed for growth."
+      },
+      {
+       "step": 3,
+       "title": "Light",
+       "explanation": "Sunlight lets plants make food by photosynthesis."
+      },
+      {
+       "step": 4,
+       "title": "Oxygen at roots",
+       "explanation": "Roots need to breathe, so air or an aerator supplies oxygen."
+      },
+      {
+       "step": 5,
+       "title": "Support",
+       "explanation": "A medium or net pot holds the plant upright."
+      }
+     ],
+     "examples": [
+      "An aerator bubbles air into the water so roots get oxygen.",
+      "Net pots filled with cocopeat give the plant support."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Nutrients",
+       "definition": "Minerals that plants need to grow.",
+       "simpleExample": "Nitrogen is an important nutrient."
+      },
+      {
+       "keyword": "Photosynthesis",
+       "definition": "How plants make food using sunlight.",
+       "simpleExample": "Leaves carry out photosynthesis."
+      },
+      {
+       "keyword": "Aerator",
+       "definition": "A device that adds air to water.",
+       "simpleExample": "An aerator keeps roots supplied with oxygen."
+      }
+     ],
+     "quickSummary": "Plants need water, nutrients, light, oxygen at the roots, suitable temperature and support; a hydroponic system must supply all of these without soil.",
+     "revisionNotes": [
+      "Needs: water, nutrients, light, oxygen, support.",
+      "Soil normally gives nutrients and support.",
+      "Aerator supplies oxygen to roots.",
+      "All needs must be met for good growth."
+     ]
+    },
+    {
+     "topicId": "sci8_ch1_t4",
+     "topic": "Growing Microgreens",
+     "meaning": "Microgreens are young, tender shoots of vegetables harvested soon after they sprout, and they are easy to grow at home.",
+     "ncertBasedExplanation": "Microgreens are the young seedlings of vegetables and herbs, cut and eaten just after the first leaves appear. To grow them you take a flat tray or earthen pot (about 10 cm x 30 cm), make small drainage holes, fill it about 2 inches deep with soil or cocopeat, moisten it evenly with water, spread the seeds, and cover them with a thin layer of medium. In a few days the seeds sprout, and the microgreens are harvested by cutting them with scissors just above the surface. Microgreens grow quickly, need little space, and are full of nutrients, which makes them a simple first hydroponics-style project.",
+     "easyExplanation": "Microgreens are baby vegetable shoots you snip and eat soon after they grow. Spread seeds on moist cocopeat in a tray, wait a few days, then cut them with scissors.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Prepare the tray",
+       "explanation": "Use a flat pot or tray with drainage holes and fill with cocopeat or soil."
+      },
+      {
+       "step": 2,
+       "title": "Moisten the medium",
+       "explanation": "Add water until the medium is evenly damp."
+      },
+      {
+       "step": 3,
+       "title": "Sow the seeds",
+       "explanation": "Spread seeds and cover with a thin layer of medium."
+      },
+      {
+       "step": 4,
+       "title": "Let them sprout",
+       "explanation": "Keep moist; seeds sprout in a few days."
+      },
+      {
+       "step": 5,
+       "title": "Harvest",
+       "explanation": "Cut the shoots with scissors just above the surface."
+      }
+     ],
+     "examples": [
+      "Microgreens can be used as a salad or a garnish on food.",
+      "Mustard or fenugreek seeds grow into microgreens within a week."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Microgreens",
+       "definition": "Young vegetable shoots eaten soon after sprouting.",
+       "simpleExample": "Microgreens make a healthy garnish."
+      },
+      {
+       "keyword": "Cocopeat",
+       "definition": "A soil-less medium made from coconut husk.",
+       "simpleExample": "Cocopeat holds moisture for the seeds."
+      },
+      {
+       "keyword": "Harvest",
+       "definition": "To gather a crop when it is ready.",
+       "simpleExample": "Harvest microgreens by cutting them."
+      }
+     ],
+     "quickSummary": "Microgreens are young shoots grown quickly on moist cocopeat in a tray and harvested with scissors; they are a simple, nutritious starter project.",
+     "revisionNotes": [
+      "Microgreens = baby vegetable shoots.",
+      "Grow on moist cocopeat in a shallow tray.",
+      "Harvest in a few days with scissors.",
+      "Rich in nutrients, need little space."
+     ]
+    },
+    {
+     "topicId": "sci8_ch1_t5",
+     "topic": "The Wick System",
+     "meaning": "The wick system is a simple hydroponic method where a cloth or thread wick draws nutrient water up to the plant roots.",
+     "ncertBasedExplanation": "The wick system is the simplest hydroponic setup and uses no electricity. A plant sits in a growing medium in the top part of a container, and a wick (a cotton thread or strip of cloth) hangs down into a reservoir of nutrient water below. By capillary action, the wick soaks up water and carries it up to the roots, keeping the medium moist and feeding the plant steadily. A common build uses a 2-litre PET bottle cut in half: the top is flipped upside down to hold the medium and plant, the wick passes through the bottle neck, and the bottom holds the nutrient solution. The wick system is reliable for small, leafy plants.",
+     "easyExplanation": "In the wick system, a piece of cloth or thread acts like a straw: it soaks up nutrient water from below and feeds it to the roots. No electricity is needed.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Set up two parts",
+       "explanation": "A top holds the plant and medium; a bottom holds nutrient water."
+      },
+      {
+       "step": 2,
+       "title": "Add the wick",
+       "explanation": "A cotton wick connects the medium to the water below."
+      },
+      {
+       "step": 3,
+       "title": "Capillary action",
+       "explanation": "The wick draws water upward to the roots."
+      },
+      {
+       "step": 4,
+       "title": "Steady feeding",
+       "explanation": "The medium stays moist and the plant feeds continuously."
+      }
+     ],
+     "examples": [
+      "A PET bottle cut in half, flipped, with a cloth wick makes a wick system.",
+      "Capillary action is the same effect that lets a tissue soak up water."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Wick",
+       "definition": "A cloth or thread that carries water upward.",
+       "simpleExample": "The wick keeps the cocopeat moist."
+      },
+      {
+       "keyword": "Capillary action",
+       "definition": "The rise of water through a thin material.",
+       "simpleExample": "Capillary action pulls water up the wick."
+      },
+      {
+       "keyword": "Reservoir",
+       "definition": "A container that stores the nutrient water.",
+       "simpleExample": "The bottle's lower half is the reservoir."
+      }
+     ],
+     "quickSummary": "The wick system uses a cloth wick and capillary action to draw nutrient water up to the roots, needing no electricity and suiting small leafy plants.",
+     "revisionNotes": [
+      "Simplest hydroponic method, no power needed.",
+      "Wick carries water up by capillary action.",
+      "Made easily from a cut PET bottle.",
+      "Good for small leafy plants."
+     ]
+    },
+    {
+     "topicId": "sci8_ch1_t6",
+     "topic": "Deep Water Culture (DWC)",
+     "meaning": "In Deep Water Culture, plant roots hang directly in nutrient water that is kept oxygen-rich with an aerator.",
+     "ncertBasedExplanation": "Deep Water Culture (DWC) is a hydroponic method in which the plant's roots are suspended directly in a tub or bucket of nutrient water. The plant is held in a net pot filled with a medium such as cocopeat, and the net pot fits firmly into a hole in a lid so the roots reach down into the water. Because the roots are constantly under water, they could suffocate, so an aerator (air pump) is placed in the tub to bubble oxygen through the water. A typical build uses a 10 to 15 litre bucket, net cups spaced a few centimetres apart, and the water level kept just touching the base of the net pots. DWC suits leafy plants like spinach.",
+     "easyExplanation": "In DWC the roots dangle in a tub of nutrient water. An air pump bubbles oxygen into the water so the underwater roots can still breathe.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Use a water tub",
+       "explanation": "Take a leak-proof bucket of 10 to 15 litres."
+      },
+      {
+       "step": 2,
+       "title": "Place the plant",
+       "explanation": "Fix a net pot with cocopeat and seedlings into a hole in the lid."
+      },
+      {
+       "step": 3,
+       "title": "Set the water level",
+       "explanation": "Keep water just touching the base of the net pot."
+      },
+      {
+       "step": 4,
+       "title": "Add an aerator",
+       "explanation": "An air pump bubbles oxygen so roots do not suffocate."
+      },
+      {
+       "step": 5,
+       "title": "Observe growth",
+       "explanation": "Check the plants regularly as roots grow into the water."
+      }
+     ],
+     "examples": [
+      "Spinach grown in a bucket with an air pump is a DWC system.",
+      "Without the aerator the roots would run out of oxygen and rot."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Deep Water Culture",
+       "definition": "Roots suspended in oxygenated nutrient water.",
+       "simpleExample": "DWC suits leafy greens."
+      },
+      {
+       "keyword": "Net pot",
+       "definition": "A pot with holes that holds the plant and medium.",
+       "simpleExample": "The net pot sits in the lid."
+      },
+      {
+       "keyword": "Aerator",
+       "definition": "An air pump that adds oxygen to water.",
+       "simpleExample": "The aerator keeps the water oxygen-rich."
+      }
+     ],
+     "quickSummary": "Deep Water Culture suspends roots in nutrient water kept oxygen-rich by an aerator, with plants held in net pots; it suits leafy plants like spinach.",
+     "revisionNotes": [
+      "Roots hang in nutrient water.",
+      "Net pots hold the plants in the lid.",
+      "Aerator supplies oxygen to roots.",
+      "Good for spinach and leafy greens."
+     ]
+    },
+    {
+     "topicId": "sci8_ch1_t7",
+     "topic": "Nutrient Film Technique (NFT)",
+     "meaning": "NFT is a hydroponic method where a thin film of flowing nutrient water passes over the roots inside a sloped pipe.",
+     "ncertBasedExplanation": "In the Nutrient Film Technique (NFT), plants are placed in net pots set along a gently sloped pipe (often a PVC pipe), and a thin, continuous film of nutrient water flows down the pipe over the lower part of the roots. A pump pushes water from a reservoir to the top of the pipe; the water trickles over the roots and drains back to the reservoir to be used again, so the system recycles water efficiently. Because only a thin film touches the roots, the upper roots stay exposed to air and get plenty of oxygen, while the lower roots take up water and nutrients. Unlike DWC, where roots stand in still water, NFT uses gently flowing water and uses horizontal space along the pipe.",
+     "easyExplanation": "In NFT, nutrient water flows as a thin stream down a slightly tilted pipe and over the roots, then drains back to be reused. The roots get both water and air.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Sloped pipe",
+       "explanation": "Net pots are placed along a gently tilted PVC pipe."
+      },
+      {
+       "step": 2,
+       "title": "Pump the water",
+       "explanation": "A pump sends nutrient water to the top of the pipe."
+      },
+      {
+       "step": 3,
+       "title": "Thin flowing film",
+       "explanation": "Water flows as a thin film over the lower roots."
+      },
+      {
+       "step": 4,
+       "title": "Recycle",
+       "explanation": "Water drains back to the reservoir and is reused."
+      },
+      {
+       "step": 5,
+       "title": "Air for roots",
+       "explanation": "Upper roots stay in air and get oxygen."
+      }
+     ],
+     "examples": [
+      "A row of lettuce in net pots along a sloping PVC pipe is an NFT system.",
+      "NFT recycles water, so it wastes very little."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Nutrient Film Technique",
+       "definition": "A thin flowing film of nutrient water over roots.",
+       "simpleExample": "NFT uses a sloped pipe."
+      },
+      {
+       "keyword": "Slope",
+       "definition": "A gentle tilt that lets water flow.",
+       "simpleExample": "The pipe has a slight slope."
+      },
+      {
+       "keyword": "Recirculation",
+       "definition": "Reusing water by draining it back.",
+       "simpleExample": "NFT recirculates the nutrient solution."
+      }
+     ],
+     "quickSummary": "NFT flows a thin film of nutrient water down a sloped pipe over the roots and recycles it; roots get both nutrients and oxygen, and water use is efficient.",
+     "revisionNotes": [
+      "Thin film of water flows over roots.",
+      "Pipe is gently sloped; a pump moves water.",
+      "Water is recycled to the reservoir.",
+      "Roots get water and oxygen together."
+     ]
+    },
+    {
+     "topicId": "sci8_ch1_t8",
+     "topic": "Safety, Records and Skills",
+     "meaning": "Working safely, recording observations carefully, and reflecting on what you learn are key parts of any hydroponics project.",
+     "ncertBasedExplanation": "A hydroponics project is not only about growing plants but also about working safely and learning to observe and record. Key safety steps include wearing gloves when handling tools, taking special care with sharp tools and power-driven machines like drills and submersible pumps, and working only under a teacher's supervision when using electrical gadgets. Throughout the project, students record details such as the type of seeds used, the quantity of soil or cocopeat, the number of plants that survived, and the growth of plants over time in observation tables. Comparing results across the wick, DWC and NFT methods, and writing down what worked and what to do differently next time, builds skills in careful observation, data recording, problem-solving and teamwork that are useful in farming and beyond.",
+     "easyExplanation": "Stay safe with tools and electricity, write down what you see (seeds used, plants grown, height), and think about what you would improve next time.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Tool safety",
+       "explanation": "Wear gloves and handle sharp or power tools carefully."
+      },
+      {
+       "step": 2,
+       "title": "Electrical safety",
+       "explanation": "Use pumps and aerators only with a teacher's supervision."
+      },
+      {
+       "step": 3,
+       "title": "Record observations",
+       "explanation": "Note seeds used, medium, survival and growth in tables."
+      },
+      {
+       "step": 4,
+       "title": "Compare methods",
+       "explanation": "See how wick, DWC and NFT systems performed."
+      },
+      {
+       "step": 5,
+       "title": "Reflect",
+       "explanation": "Write what worked and what to change next time."
+      }
+     ],
+     "examples": [
+      "A table records the average height increase every 15 days.",
+      "After the project, a student lists three challenges they faced."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Observation table",
+       "definition": "A chart used to record what you see.",
+       "simpleExample": "Plant heights go in the observation table."
+      },
+      {
+       "keyword": "Reflection",
+       "definition": "Thinking about what you learned.",
+       "simpleExample": "Reflection helps improve next time."
+      },
+      {
+       "keyword": "Supervision",
+       "definition": "Being watched and guided by a teacher.",
+       "simpleExample": "Use the pump only under supervision."
+      }
+     ],
+     "quickSummary": "Safe handling of tools and electricity, careful recording of observations in tables, and reflecting on results are essential skills built through the hydroponics project.",
+     "revisionNotes": [
+      "Wear gloves; handle sharp and power tools carefully.",
+      "Use electrical gadgets under supervision.",
+      "Record seeds, medium, survival and growth.",
+      "Reflect on what to improve."
+     ]
+    }
+   ]
+  },
+  {
+   "chapterNumber": 2,
+   "chapter": "Feeding and Caring for Farm Animals (Work with Life Forms)",
+   "topics": [
+    {
+     "topicId": "sci8_ch2_t1",
+     "topic": "Farm Animals and Why They Need Care",
+     "meaning": "Farm animals such as cattle, sheep, goats, pigs and poultry play an essential role in our lives and, like all living beings, need proper care.",
+     "ncertBasedExplanation": "Farm animals are domestic animals raised by people for useful products and services. Cattle, sheep, goats, pigs and poultry give us milk, meat, eggs, wool, leather and manure, and some animals also help with farm work and transport. Because they are living beings just like humans, they have needs: good food, clean water, shelter, health care and gentle handling. Caring for farm animals well keeps them healthy and productive and is also a responsibility, since the animals depend completely on their keepers. This project introduces the essential practices of feeding and looking after farm animals.",
+     "easyExplanation": "Farm animals like cows, goats and hens give us milk, eggs, wool and more. They are living beings, so they need food, water, shelter and care, just like us.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "What farm animals are",
+       "explanation": "Domestic animals raised for milk, meat, eggs, wool and work."
+      },
+      {
+       "step": 2,
+       "title": "They are living beings",
+       "explanation": "Like humans, they feel and have needs."
+      },
+      {
+       "step": 3,
+       "title": "Their needs",
+       "explanation": "Good food, clean water, shelter and health care."
+      },
+      {
+       "step": 4,
+       "title": "Our responsibility",
+       "explanation": "Animals depend on their keepers for everything."
+      }
+     ],
+     "examples": [
+      "A cow gives milk and manure; a hen gives eggs.",
+      "Goats provide milk and are kept by many small farmers."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Farm animals",
+       "definition": "Domestic animals raised for useful products.",
+       "simpleExample": "Cattle and poultry are farm animals."
+      },
+      {
+       "keyword": "Poultry",
+       "definition": "Domestic birds like hens kept for eggs and meat.",
+       "simpleExample": "Poultry are kept for eggs."
+      },
+      {
+       "keyword": "Animal husbandry",
+       "definition": "The care and breeding of farm animals.",
+       "simpleExample": "Animal husbandry includes feeding and health care."
+      }
+     ],
+     "quickSummary": "Farm animals like cattle, goats and poultry give us many products and, being living beings, need good food, water, shelter and care from their keepers.",
+     "revisionNotes": [
+      "Farm animals: cattle, sheep, goats, pigs, poultry.",
+      "They give milk, meat, eggs, wool, manure.",
+      "They are living beings with needs.",
+      "Caring for them is a responsibility."
+     ]
+    },
+    {
+     "topicId": "sci8_ch2_t2",
+     "topic": "Identifying Local Farm Animals",
+     "meaning": "The first step in caring for animals is to identify the farm animals kept in your own area and learn about them.",
+     "ncertBasedExplanation": "Before caring for animals, it helps to know which farm animals are common in your local area, since different regions keep different animals depending on climate, food and farming needs. By visiting a nearby farm and observing, students can identify animals such as cows, buffaloes, goats, sheep, hens or pigs, note their breeds, and record information about how many are kept, what they are used for, and how they are housed and fed. Recording this information in a table builds a clear picture of local animal keeping and forms the basis for planning their care.",
+     "easyExplanation": "Look around your area to see which farm animals people keep, such as cows, goats or hens, and note details about them in a table.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Visit a farm",
+       "explanation": "Go to a nearby farm to observe the animals."
+      },
+      {
+       "step": 2,
+       "title": "Identify the animals",
+       "explanation": "Recognise cows, buffaloes, goats, sheep, hens or pigs."
+      },
+      {
+       "step": 3,
+       "title": "Note their use",
+       "explanation": "Record whether they give milk, eggs, meat or wool."
+      },
+      {
+       "step": 4,
+       "title": "Record details",
+       "explanation": "Write the numbers, breeds and housing in a table."
+      }
+     ],
+     "examples": [
+      "A village survey finds cows, buffaloes and goats are most common.",
+      "A table lists each animal, its breed and its use."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Breed",
+       "definition": "A particular type within an animal species.",
+       "simpleExample": "Murrah is a buffalo breed."
+      },
+      {
+       "keyword": "Survey",
+       "definition": "Collecting information by observing and asking.",
+       "simpleExample": "A farm survey records local animals."
+      },
+      {
+       "keyword": "Observation",
+       "definition": "Watching carefully to gather facts.",
+       "simpleExample": "Observation helps identify animals."
+      }
+     ],
+     "quickSummary": "Identifying which farm animals are kept locally, their breeds and uses, and recording this in a table is the first step in planning their care.",
+     "revisionNotes": [
+      "Different areas keep different animals.",
+      "Visit a farm to observe and identify them.",
+      "Note breed, number and use.",
+      "Record findings in a table."
+     ]
+    },
+    {
+     "topicId": "sci8_ch2_t3",
+     "topic": "Observing Animal Health",
+     "meaning": "Healthy animals show clear signs such as good appetite, bright eyes, normal movement and a clean coat, which can be observed and recorded.",
+     "ncertBasedExplanation": "Caring for farm animals means watching for signs of good and poor health. Healthy animals usually eat well, are alert, have bright clear eyes, a smooth clean coat or feathers, move normally and produce the expected amount of milk or eggs. Signs of illness include loss of appetite, dullness, watery eyes or nose, limping, rough coat, and a sudden drop in milk or egg production. By regularly observing these health parameters and recording them, a keeper can notice problems early and call for help before an illness becomes serious. Early observation protects both the animal and the farmer's livelihood.",
+     "easyExplanation": "Healthy animals eat well, look alert, have bright eyes and a clean coat. If an animal stops eating or looks dull, it may be sick and needs attention.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Watch eating",
+       "explanation": "A healthy animal has a good appetite."
+      },
+      {
+       "step": 2,
+       "title": "Check appearance",
+       "explanation": "Bright eyes and a clean coat show good health."
+      },
+      {
+       "step": 3,
+       "title": "Watch movement",
+       "explanation": "Normal walking; limping can mean a problem."
+      },
+      {
+       "step": 4,
+       "title": "Track output",
+       "explanation": "A drop in milk or eggs can signal illness."
+      },
+      {
+       "step": 5,
+       "title": "Record regularly",
+       "explanation": "Note health parameters to spot problems early."
+      }
+     ],
+     "examples": [
+      "A cow that stops eating and looks dull may be unwell.",
+      "Recording daily milk yield helps notice a sudden drop."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Health parameter",
+       "definition": "A sign used to judge an animal's health.",
+       "simpleExample": "Appetite is a health parameter."
+      },
+      {
+       "keyword": "Appetite",
+       "definition": "The desire to eat.",
+       "simpleExample": "Loss of appetite can mean illness."
+      },
+      {
+       "keyword": "Symptom",
+       "definition": "A sign that shows something is wrong.",
+       "simpleExample": "A rough coat is a symptom of poor health."
+      }
+     ],
+     "quickSummary": "Observing health parameters like appetite, eyes, coat, movement and output, and recording them regularly, helps keepers spot illness early.",
+     "revisionNotes": [
+      "Healthy: good appetite, bright eyes, clean coat.",
+      "Sick: dullness, watery eyes, limping, less output.",
+      "Observe regularly.",
+      "Early notice prevents serious illness."
+     ]
+    },
+    {
+     "topicId": "sci8_ch2_t4",
+     "topic": "Vaccination and Health Check-ups",
+     "meaning": "Vaccinations and regular health check-ups protect farm animals from diseases and keep them productive.",
+     "ncertBasedExplanation": "Just like humans, farm animals can be protected from many diseases through vaccination, where a vaccine prepares the animal's body to fight a particular illness. Animals are given vaccines on a planned schedule, often once a year for certain diseases, and this annual vaccination schedule is recorded so no animal is missed. Regular health check-ups by a veterinarian, along with deworming and timely treatment, keep animals healthy and prevent diseases from spreading through a herd. Students can learn by participating in or observing a vaccination drive or health check-up and recording the schedule in a table.",
+     "easyExplanation": "Vaccines protect animals from diseases by preparing their bodies to fight them. Animals get vaccinated on a yearly plan, and a vet checks their health regularly.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Why vaccinate",
+       "explanation": "Vaccines protect animals from serious diseases."
+      },
+      {
+       "step": 2,
+       "title": "Follow a schedule",
+       "explanation": "Some vaccines are given once a year on a plan."
+      },
+      {
+       "step": 3,
+       "title": "Keep records",
+       "explanation": "An annual vaccination schedule ensures no animal is missed."
+      },
+      {
+       "step": 4,
+       "title": "Vet check-ups",
+       "explanation": "A veterinarian examines animals and treats problems."
+      },
+      {
+       "step": 5,
+       "title": "Prevent spread",
+       "explanation": "Healthy herds avoid disease outbreaks."
+      }
+     ],
+     "examples": [
+      "A table records each animal's annual vaccination dates.",
+      "A veterinarian visits to deworm and check the herd."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Vaccination",
+       "definition": "Giving a vaccine to prevent disease.",
+       "simpleExample": "Vaccination protects cattle from disease."
+      },
+      {
+       "keyword": "Veterinarian",
+       "definition": "A doctor who treats animals.",
+       "simpleExample": "The veterinarian checks the goats."
+      },
+      {
+       "keyword": "Deworming",
+       "definition": "Removing internal worms from an animal.",
+       "simpleExample": "Deworming keeps animals healthy."
+      }
+     ],
+     "quickSummary": "Vaccinations on a recorded annual schedule and regular veterinary check-ups protect farm animals from disease and keep herds healthy.",
+     "revisionNotes": [
+      "Vaccines prepare the body to fight disease.",
+      "Follow an annual vaccination schedule.",
+      "A vet does check-ups and deworming.",
+      "Healthy herds avoid outbreaks."
+     ]
+    },
+    {
+     "topicId": "sci8_ch2_t5",
+     "topic": "Estimating an Animal's Weight",
+     "meaning": "An animal's weight can be estimated from its body measurements, which helps decide the right amount of feed and medicine.",
+     "ncertBasedExplanation": "Knowing an animal's weight is important for giving the correct amount of feed and the right dose of medicine, but farm animals are hard to put on a weighing scale. Instead, keepers estimate weight using body measurements: by measuring the animal's heart girth (the distance around the body just behind the front legs) and its body length, and putting these numbers into a standard formula, they can estimate the weight quite accurately. Students record these body measurements in a table and use the formula to estimate the weight, learning that measurement and simple calculation are useful, practical skills.",
+     "easyExplanation": "It is hard to weigh a big animal on a scale, so we measure its body (around the chest and its length) and use a formula to estimate the weight.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Why weight matters",
+       "explanation": "Weight decides the correct feed and medicine dose."
+      },
+      {
+       "step": 2,
+       "title": "Hard to weigh directly",
+       "explanation": "Big animals cannot easily stand on a scale."
+      },
+      {
+       "step": 3,
+       "title": "Measure the body",
+       "explanation": "Take the heart girth and body length."
+      },
+      {
+       "step": 4,
+       "title": "Use a formula",
+       "explanation": "Put the measurements into a standard formula."
+      },
+      {
+       "step": 5,
+       "title": "Record results",
+       "explanation": "Note measurements and the estimated weight in a table."
+      }
+     ],
+     "examples": [
+      "A goat's chest girth and length give its estimated weight.",
+      "The correct medicine dose depends on the animal's weight."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Heart girth",
+       "definition": "The distance around the body behind the front legs.",
+       "simpleExample": "Heart girth is measured with a tape."
+      },
+      {
+       "keyword": "Estimate",
+       "definition": "To find an approximate value.",
+       "simpleExample": "We estimate weight from measurements."
+      },
+      {
+       "keyword": "Formula",
+       "definition": "A rule using numbers to calculate something.",
+       "simpleExample": "A formula converts measurements to weight."
+      }
+     ],
+     "quickSummary": "Since farm animals are hard to weigh directly, their weight is estimated from heart girth and body length using a formula, guiding feed and medicine amounts.",
+     "revisionNotes": [
+      "Weight guides feed and medicine.",
+      "Big animals are hard to weigh on scales.",
+      "Measure heart girth and body length.",
+      "A formula estimates the weight."
+     ]
+    },
+    {
+     "topicId": "sci8_ch2_t6",
+     "topic": "Feed and Nutrition",
+     "meaning": "Farm animals need the right kind and amount of feed each day so they stay healthy and produce well.",
+     "ncertBasedExplanation": "Like all living things, farm animals need balanced nutrition to grow, stay healthy and produce milk, eggs or wool. Their feed includes green fodder (grasses and leafy plants), dry fodder (such as straw), grains and concentrates that give energy and protein, plus minerals and plenty of clean water. The amount of feed an animal needs depends on its size, age and what it produces; a milking cow, for example, needs more energy than a resting one. By estimating an animal's weight and looking up its feed requirement, students can calculate how much feed an animal such as a goat needs each day and record it in a table.",
+     "easyExplanation": "Animals need a balanced diet of green fodder, dry fodder, grains, minerals and clean water. Bigger or milk-giving animals need more feed than smaller ones.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Balanced diet",
+       "explanation": "Animals need fodder, grains, minerals and water."
+      },
+      {
+       "step": 2,
+       "title": "Green and dry fodder",
+       "explanation": "Green fodder is fresh plants; dry fodder is straw."
+      },
+      {
+       "step": 3,
+       "title": "Energy and protein",
+       "explanation": "Grains and concentrates supply energy and protein."
+      },
+      {
+       "step": 4,
+       "title": "Amount varies",
+       "explanation": "Feed depends on the animal's size, age and output."
+      },
+      {
+       "step": 5,
+       "title": "Calculate the feed",
+       "explanation": "Use weight and feed tables to work out daily feed."
+      }
+     ],
+     "examples": [
+      "A milking cow needs more feed than a resting cow.",
+      "A feed table gives a goat's daily requirement by weight."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Fodder",
+       "definition": "Food given to farm animals, like grass and straw.",
+       "simpleExample": "Green fodder is fresh grass."
+      },
+      {
+       "keyword": "Concentrate",
+       "definition": "Energy-rich feed like grains.",
+       "simpleExample": "Concentrates boost an animal's energy."
+      },
+      {
+       "keyword": "Balanced diet",
+       "definition": "Food with all the needed nutrients.",
+       "simpleExample": "A balanced diet keeps animals healthy."
+      }
+     ],
+     "quickSummary": "Farm animals need a balanced diet of green and dry fodder, grains, minerals and clean water, with amounts based on size, age and production.",
+     "revisionNotes": [
+      "Diet: green fodder, dry fodder, grains, minerals, water.",
+      "Energy and protein come from grains.",
+      "Feed amount depends on size and output.",
+      "Calculate daily feed using weight."
+     ]
+    },
+    {
+     "topicId": "sci8_ch2_t7",
+     "topic": "Housing, Hygiene and Safety",
+     "meaning": "Clean, well-built shelters and good hygiene keep farm animals comfortable, healthy and safe.",
+     "ncertBasedExplanation": "Farm animals need proper housing that protects them from heat, cold, rain and predators, with enough space, fresh air, light and a dry floor. Good hygiene is just as important: shelters and feeding areas should be cleaned regularly, waste removed, and clean drinking water provided, because dirty surroundings spread disease. Keepers must also handle animals gently and safely, since frightened or large animals can injure people; wearing suitable clothing, moving calmly and working under guidance helps prevent accidents. Together, good housing, hygiene and safe handling protect both the animals and the people who care for them.",
+     "easyExplanation": "Animals need clean, airy shelters that protect them from weather and predators. Keeping the shelter clean stops disease, and handling animals gently keeps everyone safe.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Good shelter",
+       "explanation": "Protects animals from weather and predators with space and air."
+      },
+      {
+       "step": 2,
+       "title": "Keep it clean",
+       "explanation": "Remove waste and clean feeding areas regularly."
+      },
+      {
+       "step": 3,
+       "title": "Clean water",
+       "explanation": "Always provide fresh drinking water."
+      },
+      {
+       "step": 4,
+       "title": "Handle gently",
+       "explanation": "Move calmly so animals are not frightened."
+      },
+      {
+       "step": 5,
+       "title": "Stay safe",
+       "explanation": "Use proper clothing and work under guidance."
+      }
+     ],
+     "examples": [
+      "A dry, airy shed keeps cattle comfortable in all seasons.",
+      "Cleaning the shed daily prevents the spread of disease."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Hygiene",
+       "definition": "Keeping things clean to prevent disease.",
+       "simpleExample": "Good hygiene keeps animals healthy."
+      },
+      {
+       "keyword": "Shelter",
+       "definition": "A structure that protects animals.",
+       "simpleExample": "The shelter keeps out rain and sun."
+      },
+      {
+       "keyword": "Predator",
+       "definition": "An animal that hunts other animals.",
+       "simpleExample": "Fences keep predators away."
+      }
+     ],
+     "quickSummary": "Proper housing, regular cleaning and hygiene, clean water, and gentle, safe handling keep farm animals healthy and protect their keepers.",
+     "revisionNotes": [
+      "Shelter protects from weather and predators.",
+      "Clean the shed and provide fresh water.",
+      "Dirty surroundings spread disease.",
+      "Handle animals gently and safely."
+     ]
+    },
+    {
+     "topicId": "sci8_ch2_t8",
+     "topic": "Skills and Careers in Animal Care",
+     "meaning": "Caring for farm animals builds practical skills and can lead to careers such as veterinary science, dairy farming and animal husbandry.",
+     "ncertBasedExplanation": "Working on this project teaches students many useful skills: observing animals carefully, recording data, measuring and calculating, planning feed and care, and handling living beings responsibly. These skills connect to real careers and livelihoods. People who work with animals include veterinarians, who treat animal diseases; dairy and poultry farmers, who raise animals for milk and eggs; and animal husbandry workers, who manage feeding, breeding and health. Veterinarians, for example, must be prepared to work calmly and safely with animals. Learning to care for farm animals shows students how science and responsibility come together in valuable work.",
+     "easyExplanation": "This project builds skills like observing, recording, measuring and caring responsibly. These can lead to jobs like vet, dairy farmer or animal husbandry worker.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Skills gained",
+       "explanation": "Observation, recording, measuring and responsible care."
+      },
+      {
+       "step": 2,
+       "title": "Veterinary science",
+       "explanation": "Vets treat and prevent animal diseases."
+      },
+      {
+       "step": 3,
+       "title": "Dairy and poultry",
+       "explanation": "Farmers raise animals for milk and eggs."
+      },
+      {
+       "step": 4,
+       "title": "Animal husbandry",
+       "explanation": "Workers manage feeding, breeding and health."
+      },
+      {
+       "step": 5,
+       "title": "Science and responsibility",
+       "explanation": "Animal care joins knowledge with caring."
+      }
+     ],
+     "examples": [
+      "A veterinarian must work calmly and safely with animals.",
+      "A dairy farmer plans feed and milking schedules."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Veterinary science",
+       "definition": "The study and treatment of animal health.",
+       "simpleExample": "A vet trains in veterinary science."
+      },
+      {
+       "keyword": "Dairy farming",
+       "definition": "Raising animals for milk.",
+       "simpleExample": "Dairy farming produces milk and curd."
+      },
+      {
+       "keyword": "Livelihood",
+       "definition": "A way of earning a living.",
+       "simpleExample": "Animal care can be a livelihood."
+      }
+     ],
+     "quickSummary": "Caring for farm animals builds observation, recording and responsible-handling skills that connect to careers in veterinary science, dairy and animal husbandry.",
+     "revisionNotes": [
+      "Skills: observe, record, measure, care responsibly.",
+      "Careers: vet, dairy/poultry farmer, husbandry.",
+      "Vets treat animal diseases.",
+      "Animal care joins science and responsibility."
+     ]
+    }
+   ]
+  },
+  {
+   "chapterNumber": 3,
+   "chapter": "Working with Wood and Bamboo (Work with Machines and Materials)",
+   "topics": [
+    {
+     "topicId": "sci8_ch3_t1",
+     "topic": "Wood and Bamboo in Our Lives",
+     "meaning": "Wood and bamboo are natural materials used all around us, from furniture and doors to tools and crafts.",
+     "ncertBasedExplanation": "Wood and bamboo are natural materials that are indispensable in daily life. From the wooden doors of our homes and the handles of kitchen tools to bookshelves, carts, furniture and even fishermen's boats, wood is everywhere. India is famous for ancient buildings and palaces with intricate woodwork, such as the Padmanabhapuram Palace in Tamil Nadu, one of Asia's largest wooden palaces. Wood is used as fuel, as construction material, and for making tools, furniture, packaging, artworks and paper. Bamboo, a fast-growing grass, is light and strong and is used for scaffolding, baskets, mats and crafts. Both materials are renewable and increasingly preferred over concrete because they are eco-friendly.",
+     "easyExplanation": "Wood and bamboo are natural materials we see everywhere, in doors, furniture, tools and crafts. They are strong, useful and eco-friendly.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Everywhere around us",
+       "explanation": "Doors, furniture, tools and carts use wood."
+      },
+      {
+       "step": 2,
+       "title": "Rich heritage",
+       "explanation": "India has famous wooden palaces and carvings."
+      },
+      {
+       "step": 3,
+       "title": "Many uses",
+       "explanation": "Wood is used for building, fuel, tools, paper and art."
+      },
+      {
+       "step": 4,
+       "title": "Bamboo too",
+       "explanation": "Bamboo is light, strong and good for crafts and scaffolding."
+      },
+      {
+       "step": 5,
+       "title": "Eco-friendly",
+       "explanation": "Both are renewable and better for the environment."
+      }
+     ],
+     "examples": [
+      "Padmanabhapuram Palace is one of Asia's largest wooden palaces.",
+      "Bamboo is used to make baskets, mats and scaffolding."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Renewable",
+       "definition": "Able to be replaced by nature over time.",
+       "simpleExample": "Wood is a renewable material."
+      },
+      {
+       "keyword": "Bamboo",
+       "definition": "A fast-growing, strong grass used like wood.",
+       "simpleExample": "Bamboo makes light, strong products."
+      },
+      {
+       "keyword": "Carpentry",
+       "definition": "The craft of making things from wood.",
+       "simpleExample": "Carpentry shapes wood into furniture."
+      }
+     ],
+     "quickSummary": "Wood and bamboo are renewable natural materials used everywhere, for building, tools, furniture and crafts, and are eco-friendly alternatives to concrete.",
+     "revisionNotes": [
+      "Wood and bamboo are everywhere in daily life.",
+      "India has a rich woodwork heritage.",
+      "Uses: building, fuel, tools, furniture, paper.",
+      "Both are renewable and eco-friendly."
+     ]
+    },
+    {
+     "topicId": "sci8_ch3_t2",
+     "topic": "Properties of Wood and Bamboo",
+     "meaning": "Different woods and bamboo have different properties such as hardness, grain, strength and weight, which decide how they are used.",
+     "ncertBasedExplanation": "Not all wood is the same. Woods are often grouped as softwood and hardwood, and they differ in hardness, weight, strength, colour and the pattern of lines called the grain. Softwoods are easier to cut and shape and are good for beginners, while hardwoods are stronger and used for long-lasting furniture. Bamboo is technically a grass, but it is remarkably strong for its light weight, hollow, and flexible, which makes it ideal for structures and woven products. Understanding these properties helps a maker choose the right material for a product: a light bamboo basket, a sturdy hardwood table, or an easy-to-carve softwood toy.",
+     "easyExplanation": "Woods can be soft or hard, light or heavy, with different grain patterns. Bamboo is light, hollow and very strong. We pick the material to match the product.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Soft and hard wood",
+       "explanation": "Softwood is easy to shape; hardwood is strong and lasting."
+      },
+      {
+       "step": 2,
+       "title": "Grain",
+       "explanation": "Wood has a pattern of lines called the grain."
+      },
+      {
+       "step": 3,
+       "title": "Bamboo's properties",
+       "explanation": "Bamboo is light, hollow, flexible and strong."
+      },
+      {
+       "step": 4,
+       "title": "Strength and weight",
+       "explanation": "Materials differ in how strong and heavy they are."
+      },
+      {
+       "step": 5,
+       "title": "Choosing material",
+       "explanation": "Match the material to what the product needs."
+      }
+     ],
+     "examples": [
+      "Softwood is good for a beginner's carving project.",
+      "Bamboo's light strength makes it ideal for scaffolding."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Grain",
+       "definition": "The pattern of lines in wood.",
+       "simpleExample": "Cut along the grain for a smooth finish."
+      },
+      {
+       "keyword": "Hardwood",
+       "definition": "Strong, dense wood for lasting products.",
+       "simpleExample": "Hardwood is used for sturdy furniture."
+      },
+      {
+       "keyword": "Softwood",
+       "definition": "Lighter wood that is easy to shape.",
+       "simpleExample": "Softwood is easy to carve."
+      }
+     ],
+     "quickSummary": "Woods vary in hardness, weight, strength and grain, and bamboo is light, hollow and strong; knowing these properties helps choose the right material.",
+     "revisionNotes": [
+      "Softwood: easy to shape; hardwood: strong.",
+      "Grain is the line pattern in wood.",
+      "Bamboo is light, hollow and strong.",
+      "Choose material to suit the product."
+     ]
+    },
+    {
+     "topicId": "sci8_ch3_t3",
+     "topic": "Carpentry Tools and Safety",
+     "meaning": "Basic carpentry tools like saws, hammers, chisels and measuring tools are used to shape wood and bamboo, and must be handled safely.",
+     "ncertBasedExplanation": "To work with wood and bamboo you need basic carpentry tools: measuring tools (ruler, tape, try square and pencil) for marking, saws for cutting, planes and chisels for shaping and smoothing, a hammer and nails or screws for joining, and sandpaper for finishing. Because many of these tools are sharp or heavy, safety is essential. Workers should wear protective gear, keep fingers away from cutting edges, clamp the material firmly before cutting, carry tools pointing down, and use power tools only under a teacher's supervision. Learning to use each tool correctly produces neat work and prevents injuries.",
+     "easyExplanation": "Carpentry uses tools like rulers, saws, chisels, hammers and sandpaper. Many are sharp, so wear protection, clamp the wood, and work carefully under guidance.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Measuring tools",
+       "explanation": "Ruler, tape and try square help mark accurately."
+      },
+      {
+       "step": 2,
+       "title": "Cutting and shaping",
+       "explanation": "Saws cut; planes and chisels shape and smooth."
+      },
+      {
+       "step": 3,
+       "title": "Joining and finishing",
+       "explanation": "Hammers, nails or screws join; sandpaper finishes."
+      },
+      {
+       "step": 4,
+       "title": "Handle safely",
+       "explanation": "Keep fingers clear and clamp the material firmly."
+      },
+      {
+       "step": 5,
+       "title": "Supervision",
+       "explanation": "Use power tools only under a teacher's guidance."
+      }
+     ],
+     "examples": [
+      "A try square helps mark a right angle before cutting.",
+      "Clamping the wood keeps it steady and safe while sawing."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Chisel",
+       "definition": "A sharp tool for shaping wood.",
+       "simpleExample": "A chisel carves grooves in wood."
+      },
+      {
+       "keyword": "Try square",
+       "definition": "A tool to mark and check right angles.",
+       "simpleExample": "The try square ensures a square corner."
+      },
+      {
+       "keyword": "Clamp",
+       "definition": "A device that holds material firmly.",
+       "simpleExample": "A clamp holds the wood while you saw."
+      }
+     ],
+     "quickSummary": "Carpentry uses measuring, cutting, shaping, joining and finishing tools; because many are sharp, safe handling and supervision are essential.",
+     "revisionNotes": [
+      "Tools: ruler, try square, saw, chisel, hammer, sandpaper.",
+      "Measure and mark before cutting.",
+      "Clamp material and keep fingers clear.",
+      "Use power tools under supervision."
+     ]
+    },
+    {
+     "topicId": "sci8_ch3_t4",
+     "topic": "Joints: Holding Pieces Together",
+     "meaning": "A joint is the way two pieces of wood or bamboo are connected, and different joints suit different products.",
+     "ncertBasedExplanation": "When making a product from several pieces of wood or bamboo, the pieces must be joined together, and the connection is called a joint. There are several kinds: in an overlap (lap) joint, pieces overlap each other and are fixed with nails, screws or glue; other joints slot pieces into each other for extra strength. The choice of joint depends on how much strength is needed and how the product will be used. Strong, well-made joints keep a product sturdy and safe, while weak joints make it wobbly. Learning about joints helps students design products that hold together well.",
+     "easyExplanation": "A joint is how two pieces are connected. For example, in an overlap joint the pieces lie over each other and are fixed with nails, screws or glue.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "What a joint is",
+       "explanation": "The way two pieces are connected together."
+      },
+      {
+       "step": 2,
+       "title": "Overlap joint",
+       "explanation": "Pieces overlap and are fixed with nails, screws or glue."
+      },
+      {
+       "step": 3,
+       "title": "Other joints",
+       "explanation": "Some joints slot pieces together for more strength."
+      },
+      {
+       "step": 4,
+       "title": "Choose by need",
+       "explanation": "Pick a joint based on strength and use."
+      },
+      {
+       "step": 5,
+       "title": "Strong joints matter",
+       "explanation": "Good joints keep a product sturdy and safe."
+      }
+     ],
+     "examples": [
+      "An overlap joint fixes two strips with screws.",
+      "A wobbly chair often has weak joints."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Joint",
+       "definition": "A connection between two pieces.",
+       "simpleExample": "An overlap joint connects two strips."
+      },
+      {
+       "keyword": "Overlap",
+       "definition": "When one piece lies over another.",
+       "simpleExample": "The pieces overlap at the corner."
+      },
+      {
+       "keyword": "Assemble",
+       "definition": "To put parts together.",
+       "simpleExample": "Assemble the pieces using joints."
+      }
+     ],
+     "quickSummary": "A joint is how pieces of wood or bamboo are connected; overlap and other joints are chosen by the strength needed to keep a product sturdy.",
+     "revisionNotes": [
+      "A joint connects two pieces.",
+      "Overlap joint: pieces lie over each other.",
+      "Choose joints by strength needed.",
+      "Strong joints keep products sturdy."
+     ]
+    },
+    {
+     "topicId": "sci8_ch3_t5",
+     "topic": "Designing and Sketching a Product",
+     "meaning": "Before building, a maker plans the product by sketching a three-dimensional design with measurements.",
+     "ncertBasedExplanation": "Good products start with a plan. Before cutting any material, students sketch a three-dimensional drawing of the object they want to make, showing its shape from different sides and marking the dimensions (length, width and height). This design helps work out how much material is needed, how the parts will fit together, and which joints to use. A clear sketch with measurements acts like a map for the whole project, reducing mistakes and waste. Designing first and building second is a habit used by carpenters, engineers and architects everywhere.",
+     "easyExplanation": "Before building, draw the product in 3D and write its measurements. The sketch is like a map that shows what to cut and how the parts fit.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Plan first",
+       "explanation": "Sketch the object before cutting any material."
+      },
+      {
+       "step": 2,
+       "title": "Show three dimensions",
+       "explanation": "Draw the shape from different sides."
+      },
+      {
+       "step": 3,
+       "title": "Mark dimensions",
+       "explanation": "Write length, width and height on the sketch."
+      },
+      {
+       "step": 4,
+       "title": "Plan the parts",
+       "explanation": "Work out the pieces and joints needed."
+      },
+      {
+       "step": 5,
+       "title": "Reduce waste",
+       "explanation": "A clear plan avoids mistakes and wasted material."
+      }
+     ],
+     "examples": [
+      "A sketch of a pen stand shows its height, width and depth.",
+      "Marking dimensions tells you how much wood to cut."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Design",
+       "definition": "A plan or drawing of what to make.",
+       "simpleExample": "The design shows the product's shape."
+      },
+      {
+       "keyword": "Dimensions",
+       "definition": "Measurements like length, width and height.",
+       "simpleExample": "Mark the dimensions on the sketch."
+      },
+      {
+       "keyword": "Three-dimensional",
+       "definition": "Having length, width and height.",
+       "simpleExample": "A 3D sketch shows depth."
+      }
+     ],
+     "quickSummary": "Planning a product by sketching a 3D design with measurements acts as a map, showing the parts, joints and material needed and reducing waste.",
+     "revisionNotes": [
+      "Plan before you build.",
+      "Sketch in 3D with measurements.",
+      "The design shows parts and joints.",
+      "A clear plan reduces waste."
+     ]
+    },
+    {
+     "topicId": "sci8_ch3_t6",
+     "topic": "Making a Prototype",
+     "meaning": "A prototype is a trial model, often made from cardboard or waste material, used to test a design before making the final product.",
+     "ncertBasedExplanation": "Before making a product from real wood or bamboo, it is wise to build a prototype, a rough trial model, using cheap or waste material such as cardboard. The prototype lets the maker check whether the design works, whether the parts fit, and whether the size and shape are right, without wasting good material. If something does not work, the design can be changed easily at this stage. After testing and improving the prototype, the maker is ready to build the real product with confidence. Reflecting on what to do differently next time is an important part of using a prototype.",
+     "easyExplanation": "A prototype is a practice model made from cardboard or waste. You test your design on it first, so you do not waste real wood if something needs changing.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "What a prototype is",
+       "explanation": "A trial model of the product."
+      },
+      {
+       "step": 2,
+       "title": "Use cheap material",
+       "explanation": "Make it from cardboard or waste."
+      },
+      {
+       "step": 3,
+       "title": "Test the design",
+       "explanation": "Check that parts fit and sizes are right."
+      },
+      {
+       "step": 4,
+       "title": "Improve it",
+       "explanation": "Change the design if something does not work."
+      },
+      {
+       "step": 5,
+       "title": "Then build for real",
+       "explanation": "Make the final product with confidence."
+      }
+     ],
+     "examples": [
+      "A cardboard model of a shelf tests the design first.",
+      "After the prototype, a student notes what to do differently."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Prototype",
+       "definition": "A trial model used to test a design.",
+       "simpleExample": "The cardboard prototype tests the idea."
+      },
+      {
+       "keyword": "Trial",
+       "definition": "A test to see if something works.",
+       "simpleExample": "A trial shows if the parts fit."
+      },
+      {
+       "keyword": "Improve",
+       "definition": "To make something better.",
+       "simpleExample": "Improve the prototype before building."
+      }
+     ],
+     "quickSummary": "A prototype is a cheap trial model used to test and improve a design before making the final product, saving good material and avoiding mistakes.",
+     "revisionNotes": [
+      "A prototype is a trial model.",
+      "Make it from cardboard or waste.",
+      "Test fit, size and shape.",
+      "Improve it, then build for real."
+     ]
+    },
+    {
+     "topicId": "sci8_ch3_t7",
+     "topic": "Making a Wood Product",
+     "meaning": "Using the design and prototype, a useful and attractive product is made from soft wood by measuring, cutting, joining and finishing.",
+     "ncertBasedExplanation": "With the design tested, students make a real product from soft wood by following clear steps: measure and mark the wood using the design, cut the pieces carefully with a saw, smooth them with a plane and sandpaper, assemble the parts using suitable joints, and finally finish the product to make it attractive, for example by sanding smooth and applying polish or paint. Throughout, safety and accuracy matter: careful measuring gives a good fit, and smooth finishing makes the product pleasant to use. The finished item, such as a pen stand or small box, shows how a plan becomes a real, useful object.",
+     "easyExplanation": "Now make the real wooden product: measure and cut the pieces, smooth them, join them, and finish with sanding and polish to make it neat and attractive.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Measure and mark",
+       "explanation": "Use the design to mark the wood accurately."
+      },
+      {
+       "step": 2,
+       "title": "Cut the pieces",
+       "explanation": "Saw the pieces carefully to size."
+      },
+      {
+       "step": 3,
+       "title": "Smooth them",
+       "explanation": "Use a plane and sandpaper to smooth surfaces."
+      },
+      {
+       "step": 4,
+       "title": "Assemble",
+       "explanation": "Join the parts with suitable joints."
+      },
+      {
+       "step": 5,
+       "title": "Finish",
+       "explanation": "Sand smooth and apply polish or paint to make it attractive."
+      }
+     ],
+     "examples": [
+      "A wooden pen stand is made from cut and joined soft wood.",
+      "Sanding and polishing make the product look attractive."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Finishing",
+       "definition": "Final steps that make a product neat.",
+       "simpleExample": "Finishing includes sanding and polishing."
+      },
+      {
+       "keyword": "Assemble",
+       "definition": "To put the parts together.",
+       "simpleExample": "Assemble the box with glue and nails."
+      },
+      {
+       "keyword": "Soft wood",
+       "definition": "Light wood that is easy to work.",
+       "simpleExample": "Soft wood is good for beginners."
+      }
+     ],
+     "quickSummary": "A wood product is made by measuring, cutting, smoothing, assembling with joints and finishing, turning a tested design into a useful, attractive object.",
+     "revisionNotes": [
+      "Measure and mark using the design.",
+      "Cut, smooth, then assemble with joints.",
+      "Finish with sanding and polish.",
+      "A plan becomes a real product."
+     ]
+    },
+    {
+     "topicId": "sci8_ch3_t8",
+     "topic": "Making a Bamboo Product and Reflection",
+     "meaning": "Bamboo can be cut and shaped into useful products, and reflecting on the work builds skills for next time.",
+     "ncertBasedExplanation": "Bamboo, being light, strong and flexible, can be cut, split and shaped into many useful products such as pen holders, baskets, frames or small stools. Working with bamboo needs care because it can splinter, so cutting and smoothing must be done carefully. After making the product, students reflect on the whole experience: what they made, how attractive it looks, what challenges they faced, and what they would do differently next time. This reflection, along with the practical skills of measuring, cutting, joining and finishing, prepares students for crafts and trades and shows the value of careful, hands-on work.",
+     "easyExplanation": "Bamboo can be cut and shaped into things like pen holders and baskets. After making it, think about what went well and what you would improve next time.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Bamboo's uses",
+       "explanation": "Make pen holders, baskets, frames and stools."
+      },
+      {
+       "step": 2,
+       "title": "Work carefully",
+       "explanation": "Bamboo can splinter, so cut and smooth with care."
+      },
+      {
+       "step": 3,
+       "title": "Make the product",
+       "explanation": "Shape and join the bamboo pieces."
+      },
+      {
+       "step": 4,
+       "title": "Reflect",
+       "explanation": "Note what you made and how it looks."
+      },
+      {
+       "step": 5,
+       "title": "Plan improvements",
+       "explanation": "Think about what to do differently next time."
+      }
+     ],
+     "examples": [
+      "A bamboo pen holder is made by cutting and smoothing a section.",
+      "After finishing, a student lists challenges they faced."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Splinter",
+       "definition": "A sharp sliver that can break off bamboo or wood.",
+       "simpleExample": "Smooth edges to avoid splinters."
+      },
+      {
+       "keyword": "Reflection",
+       "definition": "Thinking back on what you learned.",
+       "simpleExample": "Reflection helps improve next time."
+      },
+      {
+       "keyword": "Craft",
+       "definition": "A skill of making things by hand.",
+       "simpleExample": "Bamboo work is a useful craft."
+      }
+     ],
+     "quickSummary": "Bamboo is shaped into useful products with careful handling, and reflecting on the work builds practical skills and prepares students for crafts and trades.",
+     "revisionNotes": [
+      "Bamboo makes holders, baskets and frames.",
+      "Handle carefully to avoid splinters.",
+      "Make and finish the product.",
+      "Reflect and plan improvements."
+     ]
+    }
+   ]
+  },
+  {
+   "chapterNumber": 4,
+   "chapter": "Home Automation (Work with Machines and Materials)",
+   "topics": [
+    {
+     "topicId": "sci8_ch4_t1",
+     "topic": "What is Home Automation",
+     "meaning": "Home automation means using technology to make devices at home work automatically.",
+     "ncertBasedExplanation": "Home automation is the use of technology to operate devices in a home automatically, with little or no manual effort. Instead of switching a light or fan on and off by hand, an automated system can do it on its own, for example turning on a light when it gets dark or a fan when a room gets hot. Such systems use electronic circuits and simple programs to sense conditions and respond to them. Home automation makes life more convenient, can save energy by switching things off when not needed, and helps people who find manual operation difficult. In this project, students learn to build electronic circuits and write simple programs.",
+     "easyExplanation": "Home automation uses technology so that devices, like lights and fans, work by themselves. For example, a light can switch on automatically when it gets dark.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Automatic operation",
+       "explanation": "Devices work on their own without manual switching."
+      },
+      {
+       "step": 2,
+       "title": "Senses conditions",
+       "explanation": "The system detects things like darkness or heat."
+      },
+      {
+       "step": 3,
+       "title": "Responds",
+       "explanation": "It turns devices on or off in response."
+      },
+      {
+       "step": 4,
+       "title": "Benefits",
+       "explanation": "It is convenient and can save energy."
+      },
+      {
+       "step": 5,
+       "title": "What you learn",
+       "explanation": "Build circuits and write simple programs."
+      }
+     ],
+     "examples": [
+      "A light that turns on automatically at dusk is home automation.",
+      "A fan that switches on when the room gets hot."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Automation",
+       "definition": "Making things work automatically.",
+       "simpleExample": "Automation switches the light by itself."
+      },
+      {
+       "keyword": "Device",
+       "definition": "A piece of equipment like a light or fan.",
+       "simpleExample": "The device is controlled automatically."
+      },
+      {
+       "keyword": "Convenient",
+       "definition": "Easy and saving effort.",
+       "simpleExample": "Automation makes life convenient."
+      }
+     ],
+     "quickSummary": "Home automation uses electronic circuits and programs to make home devices work automatically, adding convenience and saving energy.",
+     "revisionNotes": [
+      "Automation makes devices work by themselves.",
+      "It senses conditions and responds.",
+      "Saves effort and energy.",
+      "Built with circuits and simple programs."
+     ]
+    },
+    {
+     "topicId": "sci8_ch4_t2",
+     "topic": "Electronic Components and Circuits",
+     "meaning": "An electronic circuit is a complete path for electric current, built from components like cells, wires, switches, bulbs and resistors.",
+     "ncertBasedExplanation": "An electronic circuit is a closed path through which electric current can flow. It is made from components, each with a job: a cell or battery provides energy, wires carry the current, a switch opens or closes the path, a bulb or LED gives light, and a resistor controls how much current flows. Current flows only when the circuit is complete (closed); if there is a break (open circuit), nothing works. To build a circuit, components are connected in the right order so current can travel from the battery, through the parts, and back. Understanding these basic components and how they connect is the foundation of all automation projects.",
+     "easyExplanation": "A circuit is a complete loop that lets electricity flow. It needs parts like a battery, wires, a switch and a bulb. If the loop is broken, nothing works.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "A complete path",
+       "explanation": "Current flows only in a closed loop."
+      },
+      {
+       "step": 2,
+       "title": "The battery",
+       "explanation": "A cell or battery supplies the energy."
+      },
+      {
+       "step": 3,
+       "title": "Wires and switch",
+       "explanation": "Wires carry current; a switch opens or closes the path."
+      },
+      {
+       "step": 4,
+       "title": "Output parts",
+       "explanation": "A bulb or LED gives light when current flows."
+      },
+      {
+       "step": 5,
+       "title": "Resistor",
+       "explanation": "Controls how much current flows."
+      }
+     ],
+     "examples": [
+      "A torch is a simple circuit: cell, switch, bulb and wires.",
+      "An LED lights up only when the circuit is closed."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Circuit",
+       "definition": "A closed path for electric current.",
+       "simpleExample": "A torch is a simple circuit."
+      },
+      {
+       "keyword": "Component",
+       "definition": "A part of a circuit.",
+       "simpleExample": "A resistor is a component."
+      },
+      {
+       "keyword": "Resistor",
+       "definition": "A part that limits current.",
+       "simpleExample": "A resistor protects the LED."
+      }
+     ],
+     "quickSummary": "An electronic circuit is a closed path for current built from components like a battery, wires, switch, bulb and resistor; current flows only when the loop is complete.",
+     "revisionNotes": [
+      "A circuit is a closed loop for current.",
+      "Parts: battery, wires, switch, bulb, resistor.",
+      "Current flows only when the loop is closed.",
+      "Resistors control current."
+     ]
+    },
+    {
+     "topicId": "sci8_ch4_t3",
+     "topic": "Simple Programs and Logic",
+     "meaning": "A program is a set of instructions that tells a device what to do, often using simple logic like 'if this, then that'.",
+     "ncertBasedExplanation": "Automated systems are controlled by programs, which are step-by-step instructions a device follows. Many automation programs use simple logic of the form 'if a condition is true, then do an action', for example 'if it is dark, then turn on the light'. Programs can also repeat actions or check conditions over and over. By writing such instructions, students tell a circuit how to behave automatically. Even without complex coding, arranging clear logical steps, deciding what the system should sense and how it should respond, is the heart of programming an automated device.",
+     "easyExplanation": "A program is a list of instructions for a device. It often uses 'if-then' logic, like 'if it is dark, then turn on the light'.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "What a program is",
+       "explanation": "A set of instructions a device follows."
+      },
+      {
+       "step": 2,
+       "title": "If-then logic",
+       "explanation": "'If a condition is true, then do an action.'"
+      },
+      {
+       "step": 3,
+       "title": "Repeating",
+       "explanation": "Programs can repeat or keep checking conditions."
+      },
+      {
+       "step": 4,
+       "title": "Plan the behaviour",
+       "explanation": "Decide what to sense and how to respond."
+      },
+      {
+       "step": 5,
+       "title": "Clear steps",
+       "explanation": "Logical steps make the device act automatically."
+      }
+     ],
+     "examples": [
+      "'If it is dark, then turn on the light' is a simple rule.",
+      "A program keeps checking the temperature and switches the fan."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Program",
+       "definition": "Instructions that tell a device what to do.",
+       "simpleExample": "The program turns the light on at dusk."
+      },
+      {
+       "keyword": "Logic",
+       "definition": "Reasoning using conditions and actions.",
+       "simpleExample": "If-then logic controls the system."
+      },
+      {
+       "keyword": "Condition",
+       "definition": "Something that may be true or false.",
+       "simpleExample": "Darkness is the condition checked."
+      }
+     ],
+     "quickSummary": "A program is a set of instructions, often using if-then logic, that tells an automated device what to sense and how to respond.",
+     "revisionNotes": [
+      "A program is a list of instructions.",
+      "If-then logic: condition then action.",
+      "Programs can repeat and keep checking.",
+      "Logic makes devices act automatically."
+     ]
+    },
+    {
+     "topicId": "sci8_ch4_t4",
+     "topic": "Exploring Circuits with Simulation",
+     "meaning": "Simulation software like Tinkercad lets students build and test circuits safely on a computer before using real parts.",
+     "ncertBasedExplanation": "Before building a real circuit, students can explore circuits using a simulation platform such as Tinkercad. A simulator is a computer program that lets you drag and drop virtual components, connect them, and see whether the circuit works, all on screen. This is safe, cheap and quick: you can test ideas, fix mistakes and try different designs without any risk of electric shock or wasting components. To use it, you open the platform, place the components, make the connections, and run the simulation to test the circuit. Once the design works in the simulator, it can be built with real parts more confidently.",
+     "easyExplanation": "Tinkercad and similar tools let you build circuits on a computer. You can test and fix your design safely on screen before making it with real parts.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Open the platform",
+       "explanation": "Start Tinkercad or another simulator."
+      },
+      {
+       "step": 2,
+       "title": "Place components",
+       "explanation": "Drag and drop virtual parts."
+      },
+      {
+       "step": 3,
+       "title": "Make connections",
+       "explanation": "Wire the components together on screen."
+      },
+      {
+       "step": 4,
+       "title": "Run and test",
+       "explanation": "Simulate to see if the circuit works."
+      },
+      {
+       "step": 5,
+       "title": "Then build real",
+       "explanation": "Build the working design with real parts."
+      }
+     ],
+     "examples": [
+      "Tinkercad shows whether an LED lights up before you wire it.",
+      "A wrong connection can be fixed on screen with no risk."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Simulation",
+       "definition": "Testing something on a computer model.",
+       "simpleExample": "Simulation tests a circuit safely."
+      },
+      {
+       "keyword": "Tinkercad",
+       "definition": "An online platform for designing circuits.",
+       "simpleExample": "Tinkercad simulates electronics."
+      },
+      {
+       "keyword": "Virtual",
+       "definition": "Existing on a computer, not physically.",
+       "simpleExample": "Virtual parts are used in the simulator."
+      }
+     ],
+     "quickSummary": "Simulation tools like Tinkercad let students build and test circuits safely and cheaply on screen, fixing mistakes before using real components.",
+     "revisionNotes": [
+      "Simulators test circuits on a computer.",
+      "Open, place parts, connect, run.",
+      "Safe, cheap and quick to try ideas.",
+      "Build the working design for real."
+     ]
+    },
+    {
+     "topicId": "sci8_ch4_t5",
+     "topic": "Building a Physical Circuit",
+     "meaning": "After testing in simulation, students build a real circuit using physical components and check that it works.",
+     "ncertBasedExplanation": "Once a design works in simulation, students build it with physical components. This means gathering real parts, a battery, wires, a switch, an LED or bulb and a resistor, and connecting them on a breadboard or with simple connectors exactly as in the tested design. Care is needed to connect parts correctly: the right way round for components like LEDs, with the resistor in place to protect them. After building, the circuit is tested to check it behaves as expected, and observations are recorded. If it does not work, the connections are checked and corrected. Building a real circuit turns the on-screen plan into a working device.",
+     "easyExplanation": "Now build the circuit for real with actual parts, connecting them just like the tested design. Then check it works and fix any wrong connections.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Gather parts",
+       "explanation": "Collect battery, wires, switch, LED and resistor."
+      },
+      {
+       "step": 2,
+       "title": "Connect carefully",
+       "explanation": "Wire parts as in the tested design."
+      },
+      {
+       "step": 3,
+       "title": "Mind the direction",
+       "explanation": "Connect LEDs the right way round."
+      },
+      {
+       "step": 4,
+       "title": "Test it",
+       "explanation": "Check the circuit behaves as expected."
+      },
+      {
+       "step": 5,
+       "title": "Fix problems",
+       "explanation": "Recheck connections if it does not work."
+      }
+     ],
+     "examples": [
+      "An LED circuit is built on a breadboard from real parts.",
+      "If the LED does not light, the connections are checked."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Breadboard",
+       "definition": "A board for building circuits without soldering.",
+       "simpleExample": "Parts plug into a breadboard."
+      },
+      {
+       "keyword": "LED",
+       "definition": "A small light that glows when current flows.",
+       "simpleExample": "The LED lights when the circuit closes."
+      },
+      {
+       "keyword": "Connection",
+       "definition": "A join between two components.",
+       "simpleExample": "A loose connection stops the circuit."
+      }
+     ],
+     "quickSummary": "After simulation, a physical circuit is built from real parts connected as designed, then tested and corrected so it works as a real device.",
+     "revisionNotes": [
+      "Build the tested design with real parts.",
+      "Use a breadboard or connectors.",
+      "Connect LEDs the right way round.",
+      "Test and fix connections."
+     ]
+    },
+    {
+     "topicId": "sci8_ch4_t6",
+     "topic": "Making the Circuit Smart with Sensors",
+     "meaning": "Adding a sensor lets a circuit respond automatically to its surroundings, such as light, heat or moisture.",
+     "ncertBasedExplanation": "A circuit becomes 'smart' when it can sense its surroundings and respond on its own. This is done with sensors, components that detect a condition such as light, temperature, sound or moisture and send a signal to the circuit. For example, a light sensor (LDR) can detect darkness and trigger a light to switch on, or a temperature sensor can switch on a fan when it gets hot. By combining a sensor with the program logic ('if dark, then light on'), the circuit acts automatically without anyone pressing a switch. Sensors are what make true home automation possible.",
+     "easyExplanation": "A sensor lets a circuit feel its surroundings. For example, a light sensor notices darkness and switches the light on by itself, making the circuit 'smart'.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "What a sensor does",
+       "explanation": "It detects a condition like light or heat."
+      },
+      {
+       "step": 2,
+       "title": "Sends a signal",
+       "explanation": "The sensor tells the circuit what it detected."
+      },
+      {
+       "step": 3,
+       "title": "Combine with logic",
+       "explanation": "Use 'if-then' rules to decide the action."
+      },
+      {
+       "step": 4,
+       "title": "Automatic response",
+       "explanation": "The device acts without anyone switching it."
+      },
+      {
+       "step": 5,
+       "title": "Enables automation",
+       "explanation": "Sensors make home automation possible."
+      }
+     ],
+     "examples": [
+      "An LDR sensor switches a light on when it gets dark.",
+      "A temperature sensor turns on a fan when a room gets hot."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Sensor",
+       "definition": "A part that detects a condition.",
+       "simpleExample": "A light sensor detects darkness."
+      },
+      {
+       "keyword": "LDR",
+       "definition": "A light-detecting resistor.",
+       "simpleExample": "An LDR senses how bright it is."
+      },
+      {
+       "keyword": "Signal",
+       "definition": "Information sent to the circuit.",
+       "simpleExample": "The sensor sends a signal."
+      }
+     ],
+     "quickSummary": "Sensors detect conditions like light or heat and signal the circuit, which, combined with if-then logic, lets the system respond automatically.",
+     "revisionNotes": [
+      "Sensors detect light, heat, sound or moisture.",
+      "They signal the circuit.",
+      "Combine with if-then logic.",
+      "Sensors enable true automation."
+     ]
+    },
+    {
+     "topicId": "sci8_ch4_t7",
+     "topic": "How Automation Works: Input, Process, Output",
+     "meaning": "Automation works in three stages: an input is sensed, it is processed by logic, and an output action is produced.",
+     "ncertBasedExplanation": "Every automated system works through three stages. First comes the input: a sensor detects a condition, such as darkness or a rise in temperature. Next comes the process: the system's logic or program decides what to do, for instance 'if it is dark, turn on the light'. Finally comes the output: the system performs an action, like switching on the light or fan. This input-process-output cycle repeats continuously, so the system keeps sensing and responding on its own. Understanding these three stages helps students see how every automatic device, from a streetlight to a washing machine, actually works.",
+     "easyExplanation": "Automation has three steps: input (a sensor notices something), process (the logic decides what to do), and output (the device acts). This repeats over and over.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Input",
+       "explanation": "A sensor detects a condition like darkness."
+      },
+      {
+       "step": 2,
+       "title": "Process",
+       "explanation": "The program logic decides what to do."
+      },
+      {
+       "step": 3,
+       "title": "Output",
+       "explanation": "The system performs an action, like switching on a light."
+      },
+      {
+       "step": 4,
+       "title": "Repeats",
+       "explanation": "The cycle keeps running automatically."
+      },
+      {
+       "step": 5,
+       "title": "Everywhere",
+       "explanation": "Streetlights and washing machines work this way."
+      }
+     ],
+     "examples": [
+      "A streetlight: input = darkness, process = if dark, output = light on.",
+      "A washing machine senses, decides and acts in stages."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Input",
+       "definition": "Information that goes into a system.",
+       "simpleExample": "Darkness is the input."
+      },
+      {
+       "keyword": "Process",
+       "definition": "Deciding what to do with the input.",
+       "simpleExample": "The process applies the logic."
+      },
+      {
+       "keyword": "Output",
+       "definition": "The action a system produces.",
+       "simpleExample": "Light switching on is the output."
+      }
+     ],
+     "quickSummary": "Automation follows an input-process-output cycle: a sensor inputs a condition, logic processes it, and the system outputs an action, repeating continuously.",
+     "revisionNotes": [
+      "Three stages: input, process, output.",
+      "Sensor inputs; logic processes; device outputs.",
+      "The cycle repeats automatically.",
+      "Most automatic devices work this way."
+     ]
+    },
+    {
+     "topicId": "sci8_ch4_t8",
+     "topic": "Designing Your Own Automation System",
+     "meaning": "Students apply what they learned to design, build and safely test their own home automation system.",
+     "ncertBasedExplanation": "The project ends with students designing their own automation system to solve a real need at home, such as a light that comes on at night or an alarm for a full water tank. They plan what the system should sense and do, choose the sensor and components, design the circuit and program logic, test it in simulation, then build and test it for real, recording observations along the way. Safety is essential throughout: working only with low-voltage batteries, never the mains supply, and under a teacher's supervision. Designing a complete system from idea to working device brings together sensing, logic, circuits and problem-solving.",
+     "easyExplanation": "Finally, design your own automation, like a night light or a tank-full alarm. Plan it, build it, test it safely with batteries (never mains), and record what happens.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Find a need",
+       "explanation": "Pick a real problem to solve at home."
+      },
+      {
+       "step": 2,
+       "title": "Plan the system",
+       "explanation": "Decide what to sense and what to do."
+      },
+      {
+       "step": 3,
+       "title": "Choose parts",
+       "explanation": "Select the sensor and components."
+      },
+      {
+       "step": 4,
+       "title": "Build and test",
+       "explanation": "Simulate, then build and test for real."
+      },
+      {
+       "step": 5,
+       "title": "Stay safe",
+       "explanation": "Use only batteries and a teacher's supervision."
+      }
+     ],
+     "examples": [
+      "A night light that comes on automatically after dark.",
+      "An alarm that sounds when a water tank is full."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Design",
+       "definition": "To plan and create something.",
+       "simpleExample": "Design a system for a real need."
+      },
+      {
+       "keyword": "Low voltage",
+       "definition": "Small, safe electrical power like a battery.",
+       "simpleExample": "Use low-voltage batteries only."
+      },
+      {
+       "keyword": "Problem-solving",
+       "definition": "Finding a way to solve a problem.",
+       "simpleExample": "Automation is good problem-solving."
+      }
+     ],
+     "quickSummary": "Students design their own automation system for a real need, planning, building and safely testing it with batteries, combining sensing, logic and circuits.",
+     "revisionNotes": [
+      "Design automation for a real home need.",
+      "Plan what to sense and do.",
+      "Simulate, then build and test.",
+      "Use only batteries, under supervision."
+     ]
+    }
+   ]
+  },
+  {
+   "chapterNumber": 5,
+   "chapter": "Water Audit for Water Management (Work in Human Services)",
+   "topics": [
+    {
+     "topicId": "sci8_ch5_t1",
+     "topic": "What is a Water Audit",
+     "meaning": "A water audit is a systematic process of collecting and studying data about how much water is used, to manage it better.",
+     "ncertBasedExplanation": "A water audit is a careful, systematic process through which data about water use is collected and analysed. Just as a money audit checks how money is spent, a water audit checks how much water a home or community uses, where it comes from, and where it goes. The aim is to understand water use clearly so that waste can be found and reduced. Water is a precious and limited resource, and even small wastage adds up; for example, leaving a tap running for five minutes wastes a surprising amount of water. By auditing water, families and schools can manage this resource wisely and save it for the future.",
+     "easyExplanation": "A water audit is like a check-up of how water is used at home. You measure where water comes from and where it goes, so you can find and stop waste.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "What it is",
+       "explanation": "A systematic study of how water is used."
+      },
+      {
+       "step": 2,
+       "title": "Like a money audit",
+       "explanation": "It checks water use the way an audit checks spending."
+      },
+      {
+       "step": 3,
+       "title": "Find the waste",
+       "explanation": "The aim is to find and reduce wastage."
+      },
+      {
+       "step": 4,
+       "title": "Water is precious",
+       "explanation": "Water is limited, so small waste adds up."
+      },
+      {
+       "step": 5,
+       "title": "Manage wisely",
+       "explanation": "Auditing helps families and schools save water."
+      }
+     ],
+     "examples": [
+      "Leaving a tap running for five minutes wastes a lot of water.",
+      "A school water audit finds water leaking from a tank."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Water audit",
+       "definition": "A systematic study of water use.",
+       "simpleExample": "A water audit finds where water is wasted."
+      },
+      {
+       "keyword": "Resource",
+       "definition": "Something useful that we use, like water.",
+       "simpleExample": "Water is a precious resource."
+      },
+      {
+       "keyword": "Wastage",
+       "definition": "Using more than needed or losing it.",
+       "simpleExample": "A leaking tap causes wastage."
+      }
+     ],
+     "quickSummary": "A water audit systematically collects and studies data on water use to find and reduce wastage and manage this precious, limited resource wisely.",
+     "revisionNotes": [
+      "A water audit studies how water is used.",
+      "Aim: find and reduce waste.",
+      "Water is precious and limited.",
+      "Helps homes and schools save water."
+     ]
+    },
+    {
+     "topicId": "sci8_ch5_t2",
+     "topic": "Sources and Uses of Water",
+     "meaning": "Before measuring use, a water audit identifies where a home's water comes from and all the ways it is used.",
+     "ncertBasedExplanation": "To audit water, you first find out the sources of water, where it comes from, such as a municipal supply, a borewell, a well, a hand pump or stored rainwater. Then you list all the uses of water in the home: drinking and cooking, bathing, washing clothes and utensils, cleaning, flushing toilets, and watering plants. Knowing both the sources and the uses gives a full picture of the water cycle within the household. It also reveals which activities use the most water, which is the first clue to where savings can be made. This information is recorded carefully as the basis for the audit.",
+     "easyExplanation": "First find where your water comes from (tap, borewell, well) and list every way you use it (drinking, bathing, washing, cleaning). This shows the full picture.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Find the sources",
+       "explanation": "Note the supply, borewell, well or stored rainwater."
+      },
+      {
+       "step": 2,
+       "title": "List the uses",
+       "explanation": "Drinking, cooking, bathing, washing, cleaning, flushing."
+      },
+      {
+       "step": 3,
+       "title": "Full picture",
+       "explanation": "Sources and uses together show the water flow."
+      },
+      {
+       "step": 4,
+       "title": "Spot big users",
+       "explanation": "See which activities use the most water."
+      },
+      {
+       "step": 5,
+       "title": "Record it",
+       "explanation": "Write the sources and uses for the audit."
+      }
+     ],
+     "examples": [
+      "Water sources may include a municipal tap and a borewell.",
+      "Bathing and washing clothes often use the most water."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Source",
+       "definition": "Where water comes from.",
+       "simpleExample": "A borewell is a water source."
+      },
+      {
+       "keyword": "Use",
+       "definition": "A way water is consumed.",
+       "simpleExample": "Bathing is a use of water."
+      },
+      {
+       "keyword": "Municipal supply",
+       "definition": "Water provided by the local authority.",
+       "simpleExample": "The municipal supply fills the tank."
+      }
+     ],
+     "quickSummary": "A water audit begins by identifying a home's water sources and all its uses, giving a full picture and showing which activities use the most water.",
+     "revisionNotes": [
+      "Sources: supply, borewell, well, rainwater.",
+      "Uses: drinking, bathing, washing, cleaning.",
+      "Together they show the water flow.",
+      "Spot the biggest water users."
+     ]
+    },
+    {
+     "topicId": "sci8_ch5_t3",
+     "topic": "Measuring Water Consumption",
+     "meaning": "Water consumption is measured by recording how much water is used by each activity and each family member.",
+     "ncertBasedExplanation": "The core of a water audit is measuring how much water is actually used. This is done by recording quantities, for example how many litres a family uses per day for each activity, and how much each member consumes. Measurements can be taken by counting buckets or containers, reading a water meter, or estimating the capacity of taps and storage tanks. Careful, honest measurement over several days gives reliable figures. The data answers questions like how much water the family consumes per day overall and for each purpose, which is essential before any saving plan can be made.",
+     "easyExplanation": "Measure how much water is used by counting buckets, reading the meter, or noting tank capacity. Record litres used per activity and per person over a few days.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Measure the amount",
+       "explanation": "Find how many litres are used each day."
+      },
+      {
+       "step": 2,
+       "title": "By activity and person",
+       "explanation": "Record use for each activity and member."
+      },
+      {
+       "step": 3,
+       "title": "How to measure",
+       "explanation": "Count buckets, read a meter, or use tank capacity."
+      },
+      {
+       "step": 4,
+       "title": "Be honest and careful",
+       "explanation": "Accurate data over several days is reliable."
+      },
+      {
+       "step": 5,
+       "title": "Answer key questions",
+       "explanation": "How much is used per day and for each purpose?"
+      }
+     ],
+     "examples": [
+      "Counting buckets used for bathing measures that activity's water.",
+      "A water meter reading shows total daily consumption."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Consumption",
+       "definition": "The amount of something used.",
+       "simpleExample": "Daily consumption is measured in litres."
+      },
+      {
+       "keyword": "Water meter",
+       "definition": "A device that measures water used.",
+       "simpleExample": "The water meter reads total use."
+      },
+      {
+       "keyword": "Litre",
+       "definition": "A unit for measuring liquid.",
+       "simpleExample": "A bucket may hold about 15 litres."
+      }
+     ],
+     "quickSummary": "Measuring water consumption by recording litres used per activity and per person, using buckets, meters or tank capacity, gives the data the audit needs.",
+     "revisionNotes": [
+      "Measure litres used per day.",
+      "Record by activity and per person.",
+      "Count buckets or read the meter.",
+      "Accurate data over several days is best."
+     ]
+    },
+    {
+     "topicId": "sci8_ch5_t4",
+     "topic": "Recording and Tabulating Data",
+     "meaning": "Audit data is organised into clear tables so it can be compared and understood easily.",
+     "ncertBasedExplanation": "Raw measurements are only useful when they are organised. In a water audit, data is recorded in tables, with rows and columns showing, for example, each day, each activity, each family member, and the litres used. Tabulating data this way makes it easy to add up totals, compare different days or activities, and spot patterns, such as which day used the most water or which activity is the biggest user. Neat, well-labelled tables also make it possible to share findings with others and to analyse the data later using tools like spreadsheets. Good record-keeping is the backbone of any audit.",
+     "easyExplanation": "Put your measurements into neat tables, with rows and columns for days, activities and litres. Tables make it easy to add totals and compare and spot patterns.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Organise the data",
+       "explanation": "Put measurements into tables."
+      },
+      {
+       "step": 2,
+       "title": "Rows and columns",
+       "explanation": "Show days, activities, members and litres."
+      },
+      {
+       "step": 3,
+       "title": "Add and compare",
+       "explanation": "Totals and comparisons become easy."
+      },
+      {
+       "step": 4,
+       "title": "Spot patterns",
+       "explanation": "See which day or activity uses the most."
+      },
+      {
+       "step": 5,
+       "title": "Share and analyse",
+       "explanation": "Neat tables help share and analyse later."
+      }
+     ],
+     "examples": [
+      "A table shows litres used each day for bathing and washing.",
+      "Totals reveal which activity is the biggest water user."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Table",
+       "definition": "Data arranged in rows and columns.",
+       "simpleExample": "The table records daily water use."
+      },
+      {
+       "keyword": "Tabulate",
+       "definition": "To arrange data in a table.",
+       "simpleExample": "Tabulate the readings each day."
+      },
+      {
+       "keyword": "Pattern",
+       "definition": "A regular trend in the data.",
+       "simpleExample": "A pattern shows weekend use is higher."
+      }
+     ],
+     "quickSummary": "Recording audit data in clear, labelled tables makes it easy to total, compare and spot patterns, and to share and analyse the results later.",
+     "revisionNotes": [
+      "Organise measurements into tables.",
+      "Rows/columns: days, activities, litres.",
+      "Tables ease totals and comparisons.",
+      "Good records are the audit's backbone."
+     ]
+    },
+    {
+     "topicId": "sci8_ch5_t5",
+     "topic": "Analysing Data with Spreadsheets",
+     "meaning": "Spreadsheet software like Excel uses formulas to add up and analyse water-use data quickly and accurately.",
+     "ncertBasedExplanation": "Once data is in tables, a spreadsheet program such as Excel makes analysis fast and accurate. In a spreadsheet, data is typed into cells arranged in rows and columns, and formulas can automatically add up totals, find averages, and calculate how much water each activity or person uses. For example, a SUM formula adds a column of daily readings, and other formulas can work out the percentage each activity contributes. Spreadsheets also make charts that show the data visually. Using formulas in Excel to analyse the audit data turns a long list of numbers into clear, useful information without tedious hand calculation.",
+     "easyExplanation": "A spreadsheet like Excel can add up your data automatically using formulas, find averages and make charts, so you understand the numbers quickly and accurately.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Enter data in cells",
+       "explanation": "Type readings into rows and columns."
+      },
+      {
+       "step": 2,
+       "title": "Use formulas",
+       "explanation": "A SUM formula adds a column automatically."
+      },
+      {
+       "step": 3,
+       "title": "Find totals and averages",
+       "explanation": "Formulas calculate totals and averages."
+      },
+      {
+       "step": 4,
+       "title": "Work out shares",
+       "explanation": "Find the percentage each activity uses."
+      },
+      {
+       "step": 5,
+       "title": "Make charts",
+       "explanation": "Spreadsheets show data as charts."
+      }
+     ],
+     "examples": [
+      "A SUM formula adds up a week's daily water readings.",
+      "A chart shows what share each activity uses."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Spreadsheet",
+       "definition": "A program for organising data in cells.",
+       "simpleExample": "Excel is a spreadsheet program."
+      },
+      {
+       "keyword": "Formula",
+       "definition": "An instruction that calculates a value.",
+       "simpleExample": "A SUM formula adds the column."
+      },
+      {
+       "keyword": "Cell",
+       "definition": "A box in a spreadsheet that holds data.",
+       "simpleExample": "Each reading goes in a cell."
+      }
+     ],
+     "quickSummary": "Spreadsheets like Excel use formulas to total, average and analyse water-use data quickly and accurately, and can display it as charts.",
+     "revisionNotes": [
+      "Spreadsheets organise data in cells.",
+      "Formulas like SUM add data automatically.",
+      "They find totals, averages and shares.",
+      "Charts show data visually."
+     ]
+    },
+    {
+     "topicId": "sci8_ch5_t6",
+     "topic": "Finding Water Wastage and Leaks",
+     "meaning": "Analysing audit data and checking the home reveals wastage and leaks that can then be fixed.",
+     "ncertBasedExplanation": "A key purpose of the audit is to find where water is wasted. Analysis of the data may show activities using far more water than necessary, while a physical check of the home can reveal leaks, a dripping tap, a leaking pipe or an overflowing tank, that waste water silently day and night. Even a slow drip adds up to many litres over time. Once wastage and leaks are identified, they can be reduced: fixing leaks, turning off taps, and changing wasteful habits. Comparing water use before and after these changes shows how much water has been saved.",
+     "easyExplanation": "Study the data and check the house for leaks like dripping taps or overflowing tanks. Even a slow drip wastes lots of water. Fixing these saves water.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Study the data",
+       "explanation": "Find activities using more water than needed."
+      },
+      {
+       "step": 2,
+       "title": "Check for leaks",
+       "explanation": "Look for dripping taps, leaking pipes, overflowing tanks."
+      },
+      {
+       "step": 3,
+       "title": "Small leaks add up",
+       "explanation": "Even a slow drip wastes many litres."
+      },
+      {
+       "step": 4,
+       "title": "Fix and change habits",
+       "explanation": "Repair leaks and stop wasteful habits."
+      },
+      {
+       "step": 5,
+       "title": "Compare results",
+       "explanation": "See the saving by comparing before and after."
+      }
+     ],
+     "examples": [
+      "A dripping tap can waste many litres over a day.",
+      "An overflowing tank wastes water silently."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Leak",
+       "definition": "Water escaping where it should not.",
+       "simpleExample": "A leaking pipe wastes water."
+      },
+      {
+       "keyword": "Wastage",
+       "definition": "Using or losing more than needed.",
+       "simpleExample": "Fixing leaks reduces wastage."
+      },
+      {
+       "keyword": "Conserve",
+       "definition": "To save and use carefully.",
+       "simpleExample": "We conserve water by fixing leaks."
+      }
+     ],
+     "quickSummary": "Analysing data and inspecting the home reveals wastage and leaks like dripping taps, which, once fixed, save large amounts of water.",
+     "revisionNotes": [
+      "Find activities that overuse water.",
+      "Check for dripping taps and leaks.",
+      "Small drips waste many litres.",
+      "Fix leaks and compare the saving."
+     ]
+    },
+    {
+     "topicId": "sci8_ch5_t7",
+     "topic": "Estimating Future Water Demand",
+     "meaning": "Audit data can be used to estimate how much water will be needed in the future as needs grow.",
+     "ncertBasedExplanation": "A water audit looks not only at present use but also at the future. Using current data, students estimate future water demand by considering scenarios, such as a growing family, a hotter season, or more people in a community. By calculating how demand would increase in each scenario, they can see whether the current water supply will be enough and plan ahead. This forward thinking is important because water is limited and demand keeps rising. Recording the data on increased demand in different scenarios helps families and communities prepare, store enough water, and avoid shortages.",
+     "easyExplanation": "Use your data to guess how much water you will need in future, for example if the family grows or summers get hotter. This helps plan ahead and avoid shortages.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Look ahead",
+       "explanation": "Estimate water needed in the future, not just now."
+      },
+      {
+       "step": 2,
+       "title": "Use scenarios",
+       "explanation": "Consider a bigger family, a hotter season, more people."
+      },
+      {
+       "step": 3,
+       "title": "Calculate the increase",
+       "explanation": "Work out how demand grows in each case."
+      },
+      {
+       "step": 4,
+       "title": "Check the supply",
+       "explanation": "See if current water will be enough."
+      },
+      {
+       "step": 5,
+       "title": "Plan ahead",
+       "explanation": "Prepare and store to avoid shortages."
+      }
+     ],
+     "examples": [
+      "If a family grows, daily water demand will increase.",
+      "A hotter summer scenario raises expected water use."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Demand",
+       "definition": "The amount of water needed.",
+       "simpleExample": "Future demand may rise."
+      },
+      {
+       "keyword": "Scenario",
+       "definition": "A possible future situation.",
+       "simpleExample": "A growing-family scenario raises demand."
+      },
+      {
+       "keyword": "Estimate",
+       "definition": "To work out an approximate value.",
+       "simpleExample": "Estimate the future water demand."
+      }
+     ],
+     "quickSummary": "Using audit data, students estimate future water demand under different scenarios to check if supply will suffice and plan ahead to avoid shortages.",
+     "revisionNotes": [
+      "Estimate future, not just current, demand.",
+      "Use scenarios: bigger family, hotter season.",
+      "Calculate how demand grows.",
+      "Plan ahead to avoid shortages."
+     ]
+    },
+    {
+     "topicId": "sci8_ch5_t8",
+     "topic": "A Water Conservation Action Plan",
+     "meaning": "The audit ends with a practical action plan to save water, sharing what was learned with the family and community.",
+     "ncertBasedExplanation": "The final outcome of a water audit is action. Based on the findings, students make a water conservation action plan, a clear list of steps to reduce water use, such as fixing all leaks, turning off taps while brushing, reusing water where possible, harvesting rainwater, and using water-saving habits for washing and cleaning. They also reflect on what they learned and how long the work took, and share their findings with family, neighbours and the community to encourage everyone to save water. Putting the plan into practice and seeing real savings shows how careful study leads to responsible action and helps protect a precious resource.",
+     "easyExplanation": "Finally, make an action plan to save water: fix leaks, turn off taps, reuse and harvest water. Then share what you learned with your family and community.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Make a plan",
+       "explanation": "List clear steps to reduce water use."
+      },
+      {
+       "step": 2,
+       "title": "Practical steps",
+       "explanation": "Fix leaks, close taps, reuse and harvest rainwater."
+      },
+      {
+       "step": 3,
+       "title": "Reflect",
+       "explanation": "Note what you learned and the time taken."
+      },
+      {
+       "step": 4,
+       "title": "Share findings",
+       "explanation": "Tell family and community to encourage saving."
+      },
+      {
+       "step": 5,
+       "title": "Take action",
+       "explanation": "Put the plan into practice and see real savings."
+      }
+     ],
+     "examples": [
+      "Turning off the tap while brushing saves water daily.",
+      "Harvesting rainwater is part of a conservation plan."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Action plan",
+       "definition": "A list of steps to achieve a goal.",
+       "simpleExample": "The action plan lists water-saving steps."
+      },
+      {
+       "keyword": "Conservation",
+       "definition": "Saving and protecting a resource.",
+       "simpleExample": "Water conservation protects supplies."
+      },
+      {
+       "keyword": "Rainwater harvesting",
+       "definition": "Collecting rainwater for use.",
+       "simpleExample": "Rainwater harvesting saves water."
+      }
+     ],
+     "quickSummary": "A water audit ends with a conservation action plan of practical steps to save water, shared with the community, turning study into responsible action.",
+     "revisionNotes": [
+      "End with a water-saving action plan.",
+      "Steps: fix leaks, close taps, reuse, harvest.",
+      "Reflect on what you learned.",
+      "Share with family and community."
+     ]
+    }
+   ]
+  },
+  {
+   "chapterNumber": 6,
+   "chapter": "Creating Advertisements (Work in Human Services)",
+   "topics": [
+    {
+     "topicId": "sci8_ch6_t1",
+     "topic": "What is an Advertisement",
+     "meaning": "An advertisement is a message that persuades people to do something, such as buy a product, use a service, or support a cause.",
+     "ncertBasedExplanation": "An advertisement is a message designed to persuade people to take a specific action, for example to buy a product, pay for a service, or support a social cause. Advertisements are all around us, on television, radio, the internet, posters, newspapers and even by word of mouth. A good advertisement grabs attention, gives clear information, and convinces the audience that the product or idea is worth their interest. In this project, students learn how advertisements work and design one for a small business in their locality. Understanding advertising helps people both create messages and think critically about the messages they receive every day.",
+     "easyExplanation": "An advertisement is a message that tries to persuade people, for example to buy something or support a cause. We see ads on TV, posters, the internet and more.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "What it is",
+       "explanation": "A message that persuades people to act."
+      },
+      {
+       "step": 2,
+       "title": "Its purpose",
+       "explanation": "To sell a product, service or support a cause."
+      },
+      {
+       "step": 3,
+       "title": "Found everywhere",
+       "explanation": "On TV, radio, internet, posters and more."
+      },
+      {
+       "step": 4,
+       "title": "A good ad",
+       "explanation": "Grabs attention, informs and convinces."
+      },
+      {
+       "step": 5,
+       "title": "Why learn it",
+       "explanation": "To create ads and think critically about them."
+      }
+     ],
+     "examples": [
+      "A poster urging people to save water is a social-cause ad.",
+      "A TV ad persuades viewers to buy a product."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Advertisement",
+       "definition": "A message that persuades people to act.",
+       "simpleExample": "A poster ad promotes a shop."
+      },
+      {
+       "keyword": "Persuade",
+       "definition": "To convince someone to do something.",
+       "simpleExample": "An ad persuades you to buy."
+      },
+      {
+       "keyword": "Social cause",
+       "definition": "A goal that benefits society.",
+       "simpleExample": "Saving water is a social cause."
+      }
+     ],
+     "quickSummary": "An advertisement is a persuasive message, seen across many media, that aims to make people buy, use or support something; learning it builds creation and critical thinking.",
+     "revisionNotes": [
+      "An ad persuades people to act.",
+      "Purpose: sell a product/service or support a cause.",
+      "Ads appear in many media.",
+      "Good ads attract, inform and convince."
+     ]
+    },
+    {
+     "topicId": "sci8_ch6_t2",
+     "topic": "Types of Advertisements",
+     "meaning": "Advertisements come in many forms, including print, audio, video and digital, each suited to different audiences.",
+     "ncertBasedExplanation": "There are many types of advertisements, grouped by the medium they use. Print advertisements appear in newspapers, magazines, posters and pamphlets. Audio advertisements, such as on radio, use voice, music and sound. Video advertisements, on television or the internet, combine moving pictures, speech, music and text. Digital and social-media advertisements reach people online. Even today, many people still rely on word-of-mouth advertising, where satisfied customers recommend a business. Each type has strengths: print is good for detail, audio for catchy messages, and video for showing a product in action. Choosing the right type depends on the audience and the message.",
+     "easyExplanation": "Ads come in different forms: print (posters, newspapers), audio (radio), video (TV, internet) and digital. Even word-of-mouth is a kind of advertising.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Print ads",
+       "explanation": "Newspapers, magazines, posters and pamphlets."
+      },
+      {
+       "step": 2,
+       "title": "Audio ads",
+       "explanation": "Radio ads using voice, music and sound."
+      },
+      {
+       "step": 3,
+       "title": "Video ads",
+       "explanation": "TV or internet ads with moving pictures and sound."
+      },
+      {
+       "step": 4,
+       "title": "Digital ads",
+       "explanation": "Advertisements shown online and on social media."
+      },
+      {
+       "step": 5,
+       "title": "Word of mouth",
+       "explanation": "Customers recommending a business to others."
+      }
+     ],
+     "examples": [
+      "A radio jingle is an audio advertisement.",
+      "A happy customer recommending a shop is word-of-mouth advertising."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Medium",
+       "definition": "The means used to carry a message.",
+       "simpleExample": "Radio is an audio medium."
+      },
+      {
+       "keyword": "Print ad",
+       "definition": "An advertisement on paper.",
+       "simpleExample": "A poster is a print ad."
+      },
+      {
+       "keyword": "Word of mouth",
+       "definition": "Recommendation by people talking.",
+       "simpleExample": "Word of mouth spreads a shop's name."
+      }
+     ],
+     "quickSummary": "Advertisements take many forms, print, audio, video, digital and word-of-mouth, and the right type is chosen to suit the audience and the message.",
+     "revisionNotes": [
+      "Types: print, audio, video, digital, word-of-mouth.",
+      "Each medium has its strengths.",
+      "Print: detail; audio: catchy; video: action.",
+      "Choose by audience and message."
+     ]
+    },
+    {
+     "topicId": "sci8_ch6_t3",
+     "topic": "Elements of an Advertisement",
+     "meaning": "Whatever the medium, an advertisement usually has key elements such as a headline, image, message and a call to action.",
+     "ncertBasedExplanation": "Although advertisements differ, most share certain elements. A headline or slogan grabs attention quickly. An image or visual shows the product or idea attractively. A clear message explains the benefit, what the product does or why a cause matters. Many ads include the brand name or logo so people remember the business, and contact details so they can respond. Most importantly, an ad has a call to action, telling the audience exactly what to do, such as 'Visit today' or 'Call now'. In video and audio ads, background music and sound effects add mood. Knowing these elements helps a maker design an ad that is clear and effective.",
+     "easyExplanation": "Most ads share parts: a catchy headline, an image, a clear message, the brand name, contact details, and a call to action telling you what to do.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Headline or slogan",
+       "explanation": "A catchy line that grabs attention."
+      },
+      {
+       "step": 2,
+       "title": "Image or visual",
+       "explanation": "An attractive picture of the product or idea."
+      },
+      {
+       "step": 3,
+       "title": "Clear message",
+       "explanation": "Explains the benefit or why it matters."
+      },
+      {
+       "step": 4,
+       "title": "Brand and contact",
+       "explanation": "The name, logo and how to respond."
+      },
+      {
+       "step": 5,
+       "title": "Call to action",
+       "explanation": "Tells the audience what to do next."
+      }
+     ],
+     "examples": [
+      "'Visit today!' is a call to action.",
+      "A logo helps people remember the business."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Headline",
+       "definition": "A short, catchy attention-grabbing line.",
+       "simpleExample": "The headline draws the reader in."
+      },
+      {
+       "keyword": "Call to action",
+       "definition": "An instruction telling people what to do.",
+       "simpleExample": "'Call now' is a call to action."
+      },
+      {
+       "keyword": "Logo",
+       "definition": "A symbol that represents a brand.",
+       "simpleExample": "The logo identifies the business."
+      }
+     ],
+     "quickSummary": "Most advertisements share elements, a headline, image, clear message, brand and contact details, and a call to action, that make them clear and effective.",
+     "revisionNotes": [
+      "Elements: headline, image, message, brand, call to action.",
+      "Headline grabs attention.",
+      "Call to action tells people what to do.",
+      "Music adds mood in audio/video ads."
+     ]
+    },
+    {
+     "topicId": "sci8_ch6_t4",
+     "topic": "Identifying a Client and Business",
+     "meaning": "Creating an advertisement starts with choosing a client, a small local business, and understanding what it offers.",
+     "ncertBasedExplanation": "An advertisement is always made for someone, the client. In this project, students choose a small business in their locality as the client, such as a local shop, tailor, food stall or service provider. They then meet the owner and learn about the business: what product or service it offers, what makes it special, who its customers are, and what it wants the advertisement to achieve. Understanding the small business thoroughly is essential, because the advertisement must honestly and attractively present what the business actually offers. This step also teaches students to listen to a client's needs, a skill used in every service profession.",
+     "easyExplanation": "First pick a client, a small local business like a shop or food stall, and learn all about it: what it sells, what makes it special, and who its customers are.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Choose a client",
+       "explanation": "Pick a small local business to advertise."
+      },
+      {
+       "step": 2,
+       "title": "Meet the owner",
+       "explanation": "Talk to the owner about the business."
+      },
+      {
+       "step": 3,
+       "title": "Learn what it offers",
+       "explanation": "Find out the product or service and what is special."
+      },
+      {
+       "step": 4,
+       "title": "Know the goal",
+       "explanation": "Understand what the ad should achieve."
+      },
+      {
+       "step": 5,
+       "title": "Listen to needs",
+       "explanation": "Understanding the client is a key service skill."
+      }
+     ],
+     "examples": [
+      "A local tailor or food stall can be the client.",
+      "Meeting the owner reveals what makes the business special."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Client",
+       "definition": "The person or business an ad is made for.",
+       "simpleExample": "The shop owner is the client."
+      },
+      {
+       "keyword": "Small business",
+       "definition": "A small local shop or service.",
+       "simpleExample": "A food stall is a small business."
+      },
+      {
+       "keyword": "Service",
+       "definition": "Useful work done for others.",
+       "simpleExample": "A tailor provides a service."
+      }
+     ],
+     "quickSummary": "Creating an advertisement begins by choosing a small local business as the client and understanding its product, strengths, customers and goals.",
+     "revisionNotes": [
+      "Start by choosing a client business.",
+      "Meet the owner to learn about it.",
+      "Know what it offers and its goal.",
+      "Understanding the client is a service skill."
+     ]
+    },
+    {
+     "topicId": "sci8_ch6_t5",
+     "topic": "Understanding the Target Audience",
+     "meaning": "An effective advertisement is designed for a specific audience, the people most likely to be interested in the business.",
+     "ncertBasedExplanation": "Every advertisement is aimed at a target audience, the particular group of people most likely to use the product or service. Before designing an ad, students think about who the business's customers are: their age, interests, where they live, and what they need. An ad for a children's toy shop will look and sound very different from one for a tailoring service for adults. By picturing the target audience clearly, the maker can choose the right words, images, colours and medium to appeal to exactly those people. Matching the message to the audience is what makes an advertisement persuasive rather than ignored.",
+     "easyExplanation": "Every ad is made for a particular group of people, the target audience. Think about who they are so you can choose words and images that appeal to them.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Who they are",
+       "explanation": "The people most likely to want the product."
+      },
+      {
+       "step": 2,
+       "title": "Think about them",
+       "explanation": "Consider their age, interests and needs."
+      },
+      {
+       "step": 3,
+       "title": "Audiences differ",
+       "explanation": "A toy ad differs from a tailoring ad."
+      },
+      {
+       "step": 4,
+       "title": "Match the message",
+       "explanation": "Choose words, images and colours to appeal."
+      },
+      {
+       "step": 5,
+       "title": "Why it matters",
+       "explanation": "Matching the audience makes the ad persuasive."
+      }
+     ],
+     "examples": [
+      "An ad for a toy shop targets children and parents.",
+      "Colours and words are chosen to appeal to the audience."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Target audience",
+       "definition": "The group an ad is aimed at.",
+       "simpleExample": "Children are the target audience for toys."
+      },
+      {
+       "keyword": "Appeal",
+       "definition": "To attract someone's interest.",
+       "simpleExample": "Bright colours appeal to children."
+      },
+      {
+       "keyword": "Interest",
+       "definition": "What a person likes or cares about.",
+       "simpleExample": "Match the ad to the audience's interests."
+      }
+     ],
+     "quickSummary": "An effective advertisement is designed for a specific target audience, choosing words, images and medium that appeal to the people most likely to be interested.",
+     "revisionNotes": [
+      "Every ad has a target audience.",
+      "Consider their age, interests and needs.",
+      "Different audiences need different ads.",
+      "Match the message to the audience."
+     ]
+    },
+    {
+     "topicId": "sci8_ch6_t6",
+     "topic": "Designing the Advertisement",
+     "meaning": "With the client and audience understood, students design the advertisement, planning its content using a storyboard or key frames.",
+     "ncertBasedExplanation": "Now students design the advertisement itself. They decide the medium (poster, audio or video), write the headline and message, choose images, colours and a layout, and plan how the parts fit together. For a video or animated ad, they plan the key frames, the main scenes that tell the story in order, much like a storyboard. They also decide what background music or sound effects to include to set the mood. Planning the design carefully before producing it ensures the ad is clear, attractive and delivers its message in the limited time or space available. This stage turns understanding into a concrete creative plan.",
+     "easyExplanation": "Now design the ad: pick the medium, write the headline and message, choose images and colours, and plan the scenes (key frames) and any music.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Choose the medium",
+       "explanation": "Decide on a poster, audio or video ad."
+      },
+      {
+       "step": 2,
+       "title": "Write the content",
+       "explanation": "Create the headline and message."
+      },
+      {
+       "step": 3,
+       "title": "Choose visuals",
+       "explanation": "Pick images, colours and a layout."
+      },
+      {
+       "step": 4,
+       "title": "Plan key frames",
+       "explanation": "Plan the main scenes in order for a video."
+      },
+      {
+       "step": 5,
+       "title": "Add sound",
+       "explanation": "Decide on background music or sound effects."
+      }
+     ],
+     "examples": [
+      "A storyboard shows the key frames of a video ad in order.",
+      "Background music sets the mood of the advertisement."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Storyboard",
+       "definition": "A sequence of sketches planning scenes.",
+       "simpleExample": "The storyboard maps the ad's scenes."
+      },
+      {
+       "keyword": "Key frame",
+       "definition": "A main scene in a video.",
+       "simpleExample": "Each key frame shows one moment."
+      },
+      {
+       "keyword": "Layout",
+       "definition": "How parts are arranged in a design.",
+       "simpleExample": "A clear layout makes the poster readable."
+      }
+     ],
+     "quickSummary": "Designing the advertisement means choosing the medium, writing the message, selecting visuals, planning key frames or a storyboard, and adding sound.",
+     "revisionNotes": [
+      "Choose the medium and write the message.",
+      "Pick images, colours and layout.",
+      "Plan key frames like a storyboard.",
+      "Add music or sound effects."
+     ]
+    },
+    {
+     "topicId": "sci8_ch6_t7",
+     "topic": "Producing the Advertisement",
+     "meaning": "Students create the actual advertisement from their design, combining text, visuals and sound into a finished product.",
+     "ncertBasedExplanation": "With the design planned, students produce the actual advertisement. For a poster, this means arranging the headline, images and message neatly with good colours and clear text. For an audio ad, they record the voice, add music and edit it to the right length. For a video ad, they shoot or assemble the key frames, add titles and sound, and edit them together. Throughout, they keep the target audience and the client's message in mind, making sure the ad is honest, attractive and easy to understand. Producing the ad brings together creativity and technical skills like writing, design, recording and editing.",
+     "easyExplanation": "Now make the real ad from your plan: arrange a poster, or record and edit audio or video. Keep it honest, attractive and easy to understand.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Build from the design",
+       "explanation": "Create the ad following your plan."
+      },
+      {
+       "step": 2,
+       "title": "Poster",
+       "explanation": "Arrange headline, images and message neatly."
+      },
+      {
+       "step": 3,
+       "title": "Audio",
+       "explanation": "Record voice, add music and edit the length."
+      },
+      {
+       "step": 4,
+       "title": "Video",
+       "explanation": "Assemble key frames, add titles and sound, and edit."
+      },
+      {
+       "step": 5,
+       "title": "Keep focus",
+       "explanation": "Honest, attractive and clear for the audience."
+      }
+     ],
+     "examples": [
+      "A finished poster combines headline, image and contact details.",
+      "A video ad edits key frames together with music."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Produce",
+       "definition": "To create the finished product.",
+       "simpleExample": "Produce the ad from the design."
+      },
+      {
+       "keyword": "Edit",
+       "definition": "To arrange and improve recorded material.",
+       "simpleExample": "Edit the video to the right length."
+      },
+      {
+       "keyword": "Honest",
+       "definition": "Truthful and not misleading.",
+       "simpleExample": "An ad should be honest about the product."
+      }
+     ],
+     "quickSummary": "Students produce the finished advertisement from their design, combining text, visuals and sound honestly and clearly using writing, design and editing skills.",
+     "revisionNotes": [
+      "Build the ad from your plan.",
+      "Poster: arrange neatly; audio/video: record and edit.",
+      "Keep it honest and clear.",
+      "Combines creativity and technical skills."
+     ]
+    },
+    {
+     "topicId": "sci8_ch6_t8",
+     "topic": "Reviewing and Improving the Advertisement",
+     "meaning": "The finished advertisement is reviewed and improved based on feedback before it is shared.",
+     "ncertBasedExplanation": "Before an advertisement is finished, it is reviewed. Students check whether it grabs attention, gives a clear message, suits the target audience, and represents the client honestly. They show it to others, including the client, and gather feedback: Is it clear? Is it attractive? Does it make you want to act? Based on this feedback, they improve the ad, perhaps changing the headline, colours, images or sound. Reviewing and revising is a normal part of creative work; even professionals improve their ads many times. This step teaches students to accept feedback gracefully and to keep refining their work until it is as effective as possible.",
+     "easyExplanation": "Before finishing, review the ad and get feedback: is it clear, attractive and convincing? Then improve it based on what people say.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Review the ad",
+       "explanation": "Check attention, clarity, audience fit and honesty."
+      },
+      {
+       "step": 2,
+       "title": "Get feedback",
+       "explanation": "Show it to others and the client."
+      },
+      {
+       "step": 3,
+       "title": "Ask key questions",
+       "explanation": "Is it clear, attractive and convincing?"
+      },
+      {
+       "step": 4,
+       "title": "Improve it",
+       "explanation": "Change the headline, visuals or sound as needed."
+      },
+      {
+       "step": 5,
+       "title": "Refine",
+       "explanation": "Keep improving until it is as effective as possible."
+      }
+     ],
+     "examples": [
+      "Feedback may suggest a clearer headline.",
+      "The client checks that the ad represents the business well."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Feedback",
+       "definition": "Comments that help improve something.",
+       "simpleExample": "Feedback improves the ad."
+      },
+      {
+       "keyword": "Review",
+       "definition": "To examine and judge something.",
+       "simpleExample": "Review the ad before sharing."
+      },
+      {
+       "keyword": "Revise",
+       "definition": "To change and improve.",
+       "simpleExample": "Revise the ad after feedback."
+      }
+     ],
+     "quickSummary": "The advertisement is reviewed against its goals, improved using feedback from others and the client, and refined until it is clear, attractive and effective.",
+     "revisionNotes": [
+      "Review for attention, clarity and honesty.",
+      "Get feedback from others and the client.",
+      "Improve based on the feedback.",
+      "Refining work is normal, even for professionals."
+     ]
+    }
+   ]
+  },
+  {
+   "chapterNumber": 7,
+   "chapter": "Planning for Kaushal Mela",
+   "topics": [
+    {
+     "topicId": "sci8_ch7_t1",
+     "topic": "What is Kaushal Mela",
+     "meaning": "Kaushal Mela is a skill fair where students display and share the projects and skills they have worked on.",
+     "ncertBasedExplanation": "Kaushal Mela means a 'skills fair'. It is an event where students share what they did in their projects, and how they did it, with others, such as fellow students, teachers, parents and the community. After working on projects like hydroponics, animal care, woodwork or advertising, students may have shared bits of their work with classmates during the year; Kaushal Mela is a bigger occasion to show the finished work to everyone. It celebrates learning by doing, lets students take pride in their skills, and gives visitors a chance to learn from the projects on display.",
+     "easyExplanation": "Kaushal Mela is a skills fair where students show everyone, classmates, teachers and parents, the projects and skills they worked on during the year.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Meaning",
+       "explanation": "Kaushal Mela means a skills fair."
+      },
+      {
+       "step": 2,
+       "title": "Sharing work",
+       "explanation": "Students show what they did and how."
+      },
+      {
+       "step": 3,
+       "title": "For everyone",
+       "explanation": "Classmates, teachers, parents and community attend."
+      },
+      {
+       "step": 4,
+       "title": "Celebrates learning",
+       "explanation": "It honours learning by doing."
+      },
+      {
+       "step": 5,
+       "title": "A chance to learn",
+       "explanation": "Visitors learn from the projects shown."
+      }
+     ],
+     "examples": [
+      "Students display their hydroponics setup at the mela.",
+      "Parents visit the fair to see the projects."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Kaushal Mela",
+       "definition": "A fair where students showcase their skills.",
+       "simpleExample": "The Kaushal Mela displays student projects."
+      },
+      {
+       "keyword": "Showcase",
+       "definition": "To display something proudly.",
+       "simpleExample": "Students showcase their work."
+      },
+      {
+       "keyword": "Community",
+       "definition": "The people of a local area.",
+       "simpleExample": "The community is invited to the mela."
+      }
+     ],
+     "quickSummary": "Kaushal Mela is a skills fair where students proudly display and explain their projects to classmates, teachers, parents and the community.",
+     "revisionNotes": [
+      "Kaushal Mela = skills fair.",
+      "Students show their finished projects.",
+      "Open to teachers, parents and community.",
+      "Celebrates learning by doing."
+     ]
+    },
+    {
+     "topicId": "sci8_ch7_t2",
+     "topic": "Why Showcase Your Work",
+     "meaning": "Showcasing work lets students share knowledge, build confidence, and inspire others.",
+     "ncertBasedExplanation": "Showcasing work at Kaushal Mela has many benefits. It lets students share what they have learned so others can benefit, builds confidence as students explain their projects and answer questions, and develops communication skills. It also gives a sense of pride and achievement, encourages careful, finished work because it will be seen by others, and can inspire visitors to try similar projects. Sharing also invites feedback and new ideas. In this way, the mela turns private learning into something valuable for the whole community and motivates students to do their best.",
+     "easyExplanation": "Showing your work helps others learn, builds your confidence, and makes you proud. It also gets you feedback and can inspire other people to try projects too.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Share knowledge",
+       "explanation": "Others learn from what you did."
+      },
+      {
+       "step": 2,
+       "title": "Build confidence",
+       "explanation": "Explaining your work makes you confident."
+      },
+      {
+       "step": 3,
+       "title": "Feel proud",
+       "explanation": "You take pride in your achievement."
+      },
+      {
+       "step": 4,
+       "title": "Encourage quality",
+       "explanation": "Work seen by others is done more carefully."
+      },
+      {
+       "step": 5,
+       "title": "Inspire others",
+       "explanation": "Visitors may try similar projects."
+      }
+     ],
+     "examples": [
+      "Explaining a project to visitors builds confidence.",
+      "A visitor is inspired to start their own kitchen garden."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Confidence",
+       "definition": "Belief in one's own ability.",
+       "simpleExample": "Showcasing builds confidence."
+      },
+      {
+       "keyword": "Communication",
+       "definition": "Sharing ideas clearly.",
+       "simpleExample": "Explaining projects improves communication."
+      },
+      {
+       "keyword": "Inspire",
+       "definition": "To make someone want to do something.",
+       "simpleExample": "A project can inspire others."
+      }
+     ],
+     "quickSummary": "Showcasing work shares knowledge, builds confidence and communication skills, instils pride, and inspires others, benefiting both students and the community.",
+     "revisionNotes": [
+      "Sharing helps others learn.",
+      "Explaining builds confidence and communication.",
+      "Gives pride and encourages quality work.",
+      "Can inspire visitors to try projects."
+     ]
+    },
+    {
+     "topicId": "sci8_ch7_t3",
+     "topic": "Planning the Event",
+     "meaning": "A successful mela needs careful planning of the date, venue, activities and resources well in advance.",
+     "ncertBasedExplanation": "Like any event, Kaushal Mela must be planned carefully in advance. Planning includes deciding the date and time, choosing and arranging the venue, listing which projects will be displayed, working out what materials and equipment each display needs, and preparing a schedule for the day. Students also plan how visitors will move around, where each stall will be, and who is responsible for what. Good planning, ideally written down as a checklist or plan, prevents last-minute confusion and makes sure everything is ready. Planning ahead is itself an important skill that applies to organising any event.",
+     "easyExplanation": "Plan the mela ahead of time: decide the date and place, list the displays, gather the materials needed, and make a schedule so nothing is forgotten.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Set date and venue",
+       "explanation": "Decide when and where the mela will be."
+      },
+      {
+       "step": 2,
+       "title": "List the displays",
+       "explanation": "Note which projects will be shown."
+      },
+      {
+       "step": 3,
+       "title": "Plan resources",
+       "explanation": "Work out the materials and equipment needed."
+      },
+      {
+       "step": 4,
+       "title": "Make a schedule",
+       "explanation": "Prepare a plan for the day."
+      },
+      {
+       "step": 5,
+       "title": "Write it down",
+       "explanation": "A checklist prevents last-minute confusion."
+      }
+     ],
+     "examples": [
+      "A checklist lists the date, venue and materials needed.",
+      "A schedule sets the timings for the day."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Venue",
+       "definition": "The place where an event is held.",
+       "simpleExample": "The school hall is the venue."
+      },
+      {
+       "keyword": "Schedule",
+       "definition": "A plan of timings.",
+       "simpleExample": "The schedule shows the day's plan."
+      },
+      {
+       "keyword": "Checklist",
+       "definition": "A list of things to do or arrange.",
+       "simpleExample": "A checklist keeps planning organised."
+      }
+     ],
+     "quickSummary": "A successful Kaushal Mela needs advance planning of date, venue, displays, resources and a schedule, written down to avoid confusion.",
+     "revisionNotes": [
+      "Plan date, time and venue early.",
+      "List displays and needed resources.",
+      "Make a schedule for the day.",
+      "Write a checklist to stay organised."
+     ]
+    },
+    {
+     "topicId": "sci8_ch7_t4",
+     "topic": "Organising Stalls and Displays",
+     "meaning": "Each project is presented at a stall or display arranged neatly so visitors can see and understand it.",
+     "ncertBasedExplanation": "At the mela, each project is presented at a stall or display. Organising these well makes a big difference. A good display arranges the project, models, charts, photos and any working demonstration neatly so visitors can see everything clearly. Labels and short notes explain what the project is and what it shows. Displays should be safe, especially those with water, electricity or sharp tools, and placed so visitors can move around easily. An attractive, well-labelled, tidy stall draws people in and helps them understand the work quickly. Setting up displays teaches students about presentation and organisation.",
+     "easyExplanation": "Set up each project at a neat stall with the model, charts and labels so visitors can see and understand it easily and safely.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Set up a stall",
+       "explanation": "Give each project its own display space."
+      },
+      {
+       "step": 2,
+       "title": "Arrange neatly",
+       "explanation": "Lay out models, charts and photos clearly."
+      },
+      {
+       "step": 3,
+       "title": "Add labels",
+       "explanation": "Short notes explain what the project shows."
+      },
+      {
+       "step": 4,
+       "title": "Keep it safe",
+       "explanation": "Make displays with water or electricity safe."
+      },
+      {
+       "step": 5,
+       "title": "Allow movement",
+       "explanation": "Place stalls so visitors can move easily."
+      }
+     ],
+     "examples": [
+      "A hydroponics stall shows the setup with a labelled chart.",
+      "Labels explain each part of the display to visitors."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Stall",
+       "definition": "A small stand for displaying a project.",
+       "simpleExample": "Each project has a stall."
+      },
+      {
+       "keyword": "Display",
+       "definition": "An arrangement shown to the public.",
+       "simpleExample": "The display shows the model and charts."
+      },
+      {
+       "keyword": "Label",
+       "definition": "A short note explaining something.",
+       "simpleExample": "A label names each part."
+      }
+     ],
+     "quickSummary": "Each project is presented at a neat, well-labelled and safe stall arranged so visitors can see and understand the work easily.",
+     "revisionNotes": [
+      "Each project gets a stall.",
+      "Arrange models, charts and photos neatly.",
+      "Add labels and short notes.",
+      "Keep displays safe and easy to walk around."
+     ]
+    },
+    {
+     "topicId": "sci8_ch7_t5",
+     "topic": "Presenting and Demonstrating",
+     "meaning": "Students present their projects to visitors, explaining clearly and demonstrating how things work.",
+     "ncertBasedExplanation": "A key part of the mela is presenting the project to visitors. Students explain what their project is, why it matters, how they did it, and what they learned, in clear, simple language. Where possible, they give a demonstration, showing the project actually working, such as a working circuit lighting up or a wick system feeding a plant, which makes the work come alive. Good presenters speak clearly, make eye contact, welcome questions, and answer honestly. Presenting and demonstrating build communication and confidence and help visitors truly understand and appreciate the project.",
+     "easyExplanation": "Explain your project to visitors clearly, what it is, how you did it, and what you learned, and show it working if you can.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Explain the project",
+       "explanation": "Say what it is and why it matters."
+      },
+      {
+       "step": 2,
+       "title": "Describe the process",
+       "explanation": "Tell how you did it and what you learned."
+      },
+      {
+       "step": 3,
+       "title": "Demonstrate",
+       "explanation": "Show the project working if possible."
+      },
+      {
+       "step": 4,
+       "title": "Speak clearly",
+       "explanation": "Use simple language and make eye contact."
+      },
+      {
+       "step": 5,
+       "title": "Welcome questions",
+       "explanation": "Answer visitors' questions honestly."
+      }
+     ],
+     "examples": [
+      "A student demonstrates a working automatic light.",
+      "Explaining clearly helps visitors understand the project."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Present",
+       "definition": "To explain something to an audience.",
+       "simpleExample": "Students present their projects."
+      },
+      {
+       "keyword": "Demonstrate",
+       "definition": "To show how something works.",
+       "simpleExample": "Demonstrate the working circuit."
+      },
+      {
+       "keyword": "Explain",
+       "definition": "To make something clear.",
+       "simpleExample": "Explain the project in simple words."
+      }
+     ],
+     "quickSummary": "Students present their projects to visitors with clear explanations and live demonstrations, building communication and confidence.",
+     "revisionNotes": [
+      "Explain what the project is and why it matters.",
+      "Tell how you did it and what you learned.",
+      "Demonstrate it working if possible.",
+      "Speak clearly and welcome questions."
+     ]
+    },
+    {
+     "topicId": "sci8_ch7_t6",
+     "topic": "Roles and Teamwork",
+     "meaning": "Organising a mela needs teamwork, with different students taking on different roles and responsibilities.",
+     "ncertBasedExplanation": "A mela is too big for one person, so it depends on teamwork. Different students take on different roles: some set up displays, some welcome and guide visitors, some present projects, some manage materials or safety, and some handle the schedule. When roles are shared clearly and everyone does their part, the event runs smoothly. Teamwork also means helping each other, communicating, and solving problems together when something goes wrong. Learning to work as a team, share responsibility and rely on one another is one of the most valuable skills the mela teaches, and it applies far beyond school.",
+     "easyExplanation": "A mela needs teamwork. Different students take different jobs, setting up, guiding visitors, presenting, so everyone shares the work and the event runs smoothly.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Share the work",
+       "explanation": "A mela is too big for one person."
+      },
+      {
+       "step": 2,
+       "title": "Take roles",
+       "explanation": "Setup, guiding, presenting, materials, safety, schedule."
+      },
+      {
+       "step": 3,
+       "title": "Do your part",
+       "explanation": "Smooth running needs everyone to contribute."
+      },
+      {
+       "step": 4,
+       "title": "Help each other",
+       "explanation": "Communicate and solve problems together."
+      },
+      {
+       "step": 5,
+       "title": "A key skill",
+       "explanation": "Teamwork is valuable far beyond school."
+      }
+     ],
+     "examples": [
+      "One student guides visitors while another presents.",
+      "The team solves a problem together when a display fails."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Teamwork",
+       "definition": "Working together towards a goal.",
+       "simpleExample": "Teamwork makes the mela succeed."
+      },
+      {
+       "keyword": "Role",
+       "definition": "A job or responsibility.",
+       "simpleExample": "Each student has a role."
+      },
+      {
+       "keyword": "Responsibility",
+       "definition": "A duty one is trusted with.",
+       "simpleExample": "Setting up is one student's responsibility."
+      }
+     ],
+     "quickSummary": "Organising a mela relies on teamwork, with students taking clear roles and helping each other, building a skill valuable well beyond school.",
+     "revisionNotes": [
+      "A mela needs shared teamwork.",
+      "Students take clear roles.",
+      "Everyone doing their part runs it smoothly.",
+      "Teamwork is a valuable life skill."
+     ]
+    },
+    {
+     "topicId": "sci8_ch7_t7",
+     "topic": "Engaging Visitors",
+     "meaning": "Making the mela welcoming and interactive helps visitors enjoy it and learn from the projects.",
+     "ncertBasedExplanation": "A mela is more enjoyable and useful when visitors are engaged. Students can engage visitors by inviting them warmly, encouraging them to look closely, ask questions and even try simple hands-on activities at the stall. Interactive displays, where a visitor can press a switch, taste a microgreen, or watch a demonstration, are far more memorable than ones you can only look at. Clear, friendly explanations and enthusiasm draw people in. Engaging visitors well spreads interest in the projects, makes the event lively, and helps the whole community appreciate the students' learning.",
+     "easyExplanation": "Make the mela fun and welcoming: invite visitors, let them ask questions and try hands-on activities. Interactive displays are more memorable.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Welcome visitors",
+       "explanation": "Invite people warmly to your stall."
+      },
+      {
+       "step": 2,
+       "title": "Encourage questions",
+       "explanation": "Let visitors look closely and ask."
+      },
+      {
+       "step": 3,
+       "title": "Be interactive",
+       "explanation": "Let them try simple hands-on activities."
+      },
+      {
+       "step": 4,
+       "title": "Be enthusiastic",
+       "explanation": "Friendly energy draws people in."
+      },
+      {
+       "step": 5,
+       "title": "Spread interest",
+       "explanation": "Engagement makes the event lively and memorable."
+      }
+     ],
+     "examples": [
+      "Visitors press a switch to see the automatic light work.",
+      "Letting visitors taste a microgreen makes the stall memorable."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Engage",
+       "definition": "To involve and interest someone.",
+       "simpleExample": "Interactive stalls engage visitors."
+      },
+      {
+       "keyword": "Interactive",
+       "definition": "Allowing people to take part.",
+       "simpleExample": "An interactive display invites trying."
+      },
+      {
+       "keyword": "Enthusiasm",
+       "definition": "Lively interest and energy.",
+       "simpleExample": "Enthusiasm draws visitors in."
+      }
+     ],
+     "quickSummary": "Engaging visitors with warm invitations, questions and hands-on, interactive displays makes the mela lively, memorable and valuable to the community.",
+     "revisionNotes": [
+      "Welcome visitors warmly.",
+      "Encourage questions and hands-on trying.",
+      "Interactive displays are memorable.",
+      "Engagement spreads interest in the work."
+     ]
+    },
+    {
+     "topicId": "sci8_ch7_t8",
+     "topic": "Reflection and Feedback",
+     "meaning": "After the mela, students reflect on what went well, gather feedback, and learn how to do better next time.",
+     "ncertBasedExplanation": "The mela is not complete until students reflect on it. They think about what went well, what was difficult, how visitors responded, and what they would do differently next time. They also gather feedback from visitors, teachers and teammates: which displays were clearest, what could be improved, and what people enjoyed. Honest reflection and feedback turn the experience into lasting learning, helping students improve their projects, presentation and teamwork for the future. This habit of reviewing and learning from experience is valuable in every field of work and life.",
+     "easyExplanation": "After the mela, think about what went well and what to improve, and ask visitors and teachers for feedback. This helps you do even better next time.",
+     "stepByStepExplanation": [
+      {
+       "step": 1,
+       "title": "Reflect",
+       "explanation": "Think about what went well and what was hard."
+      },
+      {
+       "step": 2,
+       "title": "Note responses",
+       "explanation": "Consider how visitors reacted."
+      },
+      {
+       "step": 3,
+       "title": "Gather feedback",
+       "explanation": "Ask visitors, teachers and teammates."
+      },
+      {
+       "step": 4,
+       "title": "Find improvements",
+       "explanation": "Learn what to do differently next time."
+      },
+      {
+       "step": 5,
+       "title": "Lasting learning",
+       "explanation": "Reviewing turns the event into real learning."
+      }
+     ],
+     "examples": [
+      "Visitors' feedback shows which display was clearest.",
+      "A student notes what to improve for next year's mela."
+     ],
+     "importantKeywords": [
+      {
+       "keyword": "Reflection",
+       "definition": "Thinking back on an experience.",
+       "simpleExample": "Reflection improves future work."
+      },
+      {
+       "keyword": "Feedback",
+       "definition": "Helpful comments from others.",
+       "simpleExample": "Feedback shows what to improve."
+      },
+      {
+       "keyword": "Improve",
+       "definition": "To make better.",
+       "simpleExample": "Feedback helps you improve."
+      }
+     ],
+     "quickSummary": "After the mela, students reflect on their experience and gather feedback to learn what worked and how to improve their work and teamwork in future.",
+     "revisionNotes": [
+      "Reflect on what went well and what was hard.",
+      "Note how visitors responded.",
+      "Gather feedback from all.",
+      "Use it to improve next time."
+     ]
+    }
+   ]
+  }
+ ]
+}

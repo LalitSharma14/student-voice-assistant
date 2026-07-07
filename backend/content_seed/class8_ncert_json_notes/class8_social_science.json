@@ -1,0 +1,3243 @@
+{
+  "class": 8,
+  "board": "CBSE",
+  "source": "NCERT",
+  "subject": "Social Science",
+  "bookName": "Exploring Society: India and Beyond (Part 1)",
+  "chapters": [
+    {
+      "chapterNumber": 1,
+      "chapter": "Natural Resources and Their Use",
+      "topics": [
+        {
+          "topicId": "sst8_ch1_t1",
+          "topic": "What are Natural Resources",
+          "meaning": "Natural resources are useful things provided by nature, such as water, soil, air, minerals and forests.",
+          "ncertBasedExplanation": "Natural resources are materials and forces found in nature that people use to meet their needs. They include water, soil, air, sunlight, minerals, forests, plants and animals. Some, like sunlight and air, are freely available everywhere; others, like minerals and fertile soil, are found only in certain places. Human life and the whole economy depend on natural resources for food, water, energy, shelter and raw materials. Because they are so important, we must use them wisely and not waste or destroy them.",
+          "easyExplanation": "Natural resources are useful things from nature, like water, soil, air, minerals and forests. We depend on them for food, energy and materials.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "From nature",
+              "explanation": "Natural resources are provided by nature."
+            },
+            {
+              "step": 2,
+              "title": "Many kinds",
+              "explanation": "Water, soil, air, minerals, forests and more."
+            },
+            {
+              "step": 3,
+              "title": "We depend on them",
+              "explanation": "They give food, water, energy and raw materials."
+            },
+            {
+              "step": 4,
+              "title": "Use wisely",
+              "explanation": "They must not be wasted or destroyed."
+            }
+          ],
+          "examples": [
+            "Water, soil and forests are natural resources.",
+            "Minerals are natural resources used in industry."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Natural resource",
+              "definition": "A useful thing from nature.",
+              "simpleExample": "Water is a natural resource."
+            },
+            {
+              "keyword": "Raw material",
+              "definition": "A material used to make goods.",
+              "simpleExample": "Cotton is a raw material."
+            },
+            {
+              "keyword": "Resource",
+              "definition": "Something useful that can be used.",
+              "simpleExample": "Soil is a resource."
+            }
+          ],
+          "quickSummary": "Natural resources are useful things provided by nature, like water, soil, air, minerals and forests, on which human life and the economy depend.",
+          "revisionNotes": [
+            "Natural resources come from nature.",
+            "Water, soil, air, minerals, forests.",
+            "We depend on them for life and economy.",
+            "Must be used wisely."
+          ]
+        },
+        {
+          "topicId": "sst8_ch1_t2",
+          "topic": "Nature's Restoration and Regeneration",
+          "meaning": "Nature works in a restorative and regenerative way, healing and renewing itself over time.",
+          "ncertBasedExplanation": "A general principle of nature is that it functions in a restorative and regenerative way. Restoration is the process of returning something to its original healthy state after it has been damaged, like a cut on the skin healing or a forest recovering after a fire. Regeneration goes further, as nature creates new life: seeds grow into new plants, and ecosystems renew themselves. Nature works in cycles where there is no waste; a fallen tree decomposes and enriches the soil, and new plants grow from it. Understanding this helps us see how resources can stay available if we do not disturb nature's rhythm.",
+          "easyExplanation": "Nature heals and renews itself: this is restoration and regeneration. A forest recovers after a fire and new plants grow from fallen ones.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Restoration",
+              "explanation": "Returning to a healthy state after damage."
+            },
+            {
+              "step": 2,
+              "title": "Regeneration",
+              "explanation": "Nature creating new life."
+            },
+            {
+              "step": 3,
+              "title": "Cycles, no waste",
+              "explanation": "A fallen tree enriches the soil."
+            },
+            {
+              "step": 4,
+              "title": "Keeps resources available",
+              "explanation": "If we do not disturb nature's rhythm."
+            }
+          ],
+          "examples": [
+            "A forest recovers after a wildfire.",
+            "A fallen tree decomposes and enriches the soil."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Restoration",
+              "definition": "Returning to a healthy state.",
+              "simpleExample": "A cut heals by restoration."
+            },
+            {
+              "keyword": "Regeneration",
+              "definition": "Creating new life.",
+              "simpleExample": "Forests regenerate."
+            },
+            {
+              "keyword": "Ecosystem",
+              "definition": "A community of living things and their surroundings.",
+              "simpleExample": "A forest is an ecosystem."
+            }
+          ],
+          "quickSummary": "Nature works in a restorative and regenerative way, healing damage and creating new life in cycles, which keeps resources available if its rhythm is not disturbed.",
+          "revisionNotes": [
+            "Nature restores and regenerates.",
+            "Restoration: heals damage.",
+            "Regeneration: creates new life.",
+            "Works in cycles with no waste."
+          ]
+        },
+        {
+          "topicId": "sst8_ch1_t3",
+          "topic": "Renewable Resources",
+          "meaning": "Renewable resources can renew themselves naturally over time if used carefully.",
+          "ncertBasedExplanation": "Renewable resources are those that nature can replace or renew within a reasonable time, as long as we use them sustainably. Examples include solar energy, wind, flowing water, forests and soil. Rivers are fed by rain and melting glaciers, forests renew themselves by growing new trees, and soil replenishes through natural processes. However, for them to remain renewable, the natural rhythm of restoration and regeneration must not be disturbed. If we harvest timber faster than a forest can grow, even a renewable resource can be used up.",
+          "easyExplanation": "Renewable resources renew themselves over time, like sunlight, wind, water and forests, if we use them carefully and not too fast.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Renew naturally",
+              "explanation": "Nature replaces them over time."
+            },
+            {
+              "step": 2,
+              "title": "Examples",
+              "explanation": "Solar, wind, water, forests, soil."
+            },
+            {
+              "step": 3,
+              "title": "A condition",
+              "explanation": "We must not use them too fast."
+            },
+            {
+              "step": 4,
+              "title": "Can still run out",
+              "explanation": "Over-harvesting can exhaust them."
+            }
+          ],
+          "examples": [
+            "Solar and wind energy are renewable.",
+            "Forests renew if not cut too fast."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Renewable resource",
+              "definition": "One nature can renew over time.",
+              "simpleExample": "Sunlight is renewable."
+            },
+            {
+              "keyword": "Sustainable",
+              "definition": "Used in a way that lasts.",
+              "simpleExample": "Sustainable use keeps forests renewable."
+            },
+            {
+              "keyword": "Replenish",
+              "definition": "To fill up again.",
+              "simpleExample": "Soil replenishes naturally."
+            }
+          ],
+          "quickSummary": "Renewable resources, like sunlight, wind, water and forests, renew themselves over time if used sustainably and not faster than they regenerate.",
+          "revisionNotes": [
+            "Renewable: renew over time.",
+            "Sun, wind, water, forests, soil.",
+            "Need careful, slow use.",
+            "Can run out if overused."
+          ]
+        },
+        {
+          "topicId": "sst8_ch1_t4",
+          "topic": "Non-Renewable Resources",
+          "meaning": "Non-renewable resources exist in limited amounts and cannot be replaced once used up.",
+          "ncertBasedExplanation": "Non-renewable resources are those that exist in fixed, limited amounts and cannot be renewed within a human timescale. Examples include coal, petroleum, natural gas and most minerals and metals. These took millions of years to form, so once they are used up, they are gone for practical purposes. Because we depend heavily on them for energy and industry, and because they are running low, it is very important to use them carefully, avoid waste, and develop renewable alternatives like solar and wind energy.",
+          "easyExplanation": "Non-renewable resources are limited and cannot be replaced, like coal, oil and minerals. Once used up, they are gone.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Limited amount",
+              "explanation": "They exist in fixed quantities."
+            },
+            {
+              "step": 2,
+              "title": "Cannot be renewed",
+              "explanation": "They took millions of years to form."
+            },
+            {
+              "step": 3,
+              "title": "Examples",
+              "explanation": "Coal, petroleum, natural gas, minerals."
+            },
+            {
+              "step": 4,
+              "title": "Use carefully",
+              "explanation": "Avoid waste; develop alternatives."
+            }
+          ],
+          "examples": [
+            "Coal and petroleum are non-renewable.",
+            "Minerals cannot be replaced once used."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Non-renewable resource",
+              "definition": "One that cannot be replaced.",
+              "simpleExample": "Coal is non-renewable."
+            },
+            {
+              "keyword": "Fossil fuel",
+              "definition": "Fuel from ancient remains.",
+              "simpleExample": "Petroleum is a fossil fuel."
+            },
+            {
+              "keyword": "Mineral",
+              "definition": "A natural solid from the earth.",
+              "simpleExample": "Iron ore is a mineral."
+            }
+          ],
+          "quickSummary": "Non-renewable resources, like coal, petroleum and minerals, exist in limited amounts and cannot be replaced once used, so they must be used carefully.",
+          "revisionNotes": [
+            "Non-renewable: limited, cannot be replaced.",
+            "Coal, oil, gas, minerals.",
+            "Took millions of years to form.",
+            "Use carefully; find alternatives."
+          ]
+        },
+        {
+          "topicId": "sst8_ch1_t5",
+          "topic": "Types of Natural Resources",
+          "meaning": "Natural resources can be classified in different ways, such as biotic and abiotic, or renewable and non-renewable.",
+          "ncertBasedExplanation": "Natural resources can be grouped in several ways. One way is biotic and abiotic: biotic resources come from living things (forests, animals, crops), while abiotic resources come from non-living things (water, minerals, air, soil). Another way is renewable and non-renewable, based on whether nature can replace them. Resources can also be classified by where they are found or how they are used. These classifications help us understand the nature of each resource and decide how to use and protect it wisely.",
+          "easyExplanation": "Resources are classified as biotic (from living things) or abiotic (from non-living things), and as renewable or non-renewable.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Several ways",
+              "explanation": "Resources can be grouped differently."
+            },
+            {
+              "step": 2,
+              "title": "Biotic",
+              "explanation": "From living things, like forests and animals."
+            },
+            {
+              "step": 3,
+              "title": "Abiotic",
+              "explanation": "From non-living things, like water and minerals."
+            },
+            {
+              "step": 4,
+              "title": "Renewable or not",
+              "explanation": "Based on whether nature can replace them."
+            }
+          ],
+          "examples": [
+            "Forests are biotic; minerals are abiotic.",
+            "Resources are also grouped as renewable or non-renewable."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Biotic resource",
+              "definition": "From living things.",
+              "simpleExample": "A forest is biotic."
+            },
+            {
+              "keyword": "Abiotic resource",
+              "definition": "From non-living things.",
+              "simpleExample": "Water is abiotic."
+            },
+            {
+              "keyword": "Classify",
+              "definition": "To sort into groups.",
+              "simpleExample": "Classify resources by type."
+            }
+          ],
+          "quickSummary": "Natural resources can be classified as biotic (from living things) or abiotic (from non-living things), and as renewable or non-renewable, helping us use them wisely.",
+          "revisionNotes": [
+            "Resources grouped in different ways.",
+            "Biotic: from living things.",
+            "Abiotic: from non-living things.",
+            "Also renewable vs non-renewable."
+          ]
+        },
+        {
+          "topicId": "sst8_ch1_t6",
+          "topic": "Land, Water and Forest Resources",
+          "meaning": "Land, water and forests are vital natural resources that support life, farming and industry.",
+          "ncertBasedExplanation": "Among the most important natural resources are land, water and forests. Land provides space for farming, building, roads and forests, and fertile soil is needed to grow food. Water is essential for drinking, farming, industry and life itself, and most usable fresh water comes from rivers, lakes and groundwater. Forests give timber, fuel, medicines and homes for wildlife, and they protect soil, store water and clean the air. These three resources are deeply connected, and caring for one helps the others. Their wise use is central to a healthy environment and economy.",
+          "easyExplanation": "Land, water and forests are vital resources. Land gives space and soil, water supports life and farming, and forests give timber and protect nature.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Land",
+              "explanation": "Provides space and fertile soil for food."
+            },
+            {
+              "step": 2,
+              "title": "Water",
+              "explanation": "Essential for drinking, farming and industry."
+            },
+            {
+              "step": 3,
+              "title": "Forests",
+              "explanation": "Give timber, fuel and protect soil and air."
+            },
+            {
+              "step": 4,
+              "title": "Connected",
+              "explanation": "Caring for one helps the others."
+            }
+          ],
+          "examples": [
+            "Fertile land grows our food.",
+            "Forests protect soil and store water."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Land resource",
+              "definition": "Soil and space provided by land.",
+              "simpleExample": "Farming uses land."
+            },
+            {
+              "keyword": "Water resource",
+              "definition": "Usable water for life and use.",
+              "simpleExample": "Rivers are a water resource."
+            },
+            {
+              "keyword": "Forest resource",
+              "definition": "The useful products and roles of forests.",
+              "simpleExample": "Timber is a forest resource."
+            }
+          ],
+          "quickSummary": "Land, water and forests are vital, connected natural resources: land gives space and soil, water supports life and farming, and forests give products and protect the environment.",
+          "revisionNotes": [
+            "Land: space and fertile soil.",
+            "Water: drinking, farming, industry.",
+            "Forests: timber, fuel, protect nature.",
+            "All three are connected."
+          ]
+        },
+        {
+          "topicId": "sst8_ch1_t7",
+          "topic": "Overuse and Depletion of Resources",
+          "meaning": "Using resources faster than nature can renew them leads to their depletion and harms the environment.",
+          "ncertBasedExplanation": "When people use natural resources carelessly or too fast, the resources become depleted, used up or seriously reduced. Cutting forests faster than they regrow leads to deforestation; over-pumping groundwater lowers the water table; overusing soil reduces its fertility; and burning fossil fuels pollutes the air and uses up limited stocks. Depletion not only removes the resource but also damages the environment, harming wildlife, climate and human health. Recognising the dangers of overuse is the first step toward using resources responsibly.",
+          "easyExplanation": "Using resources too fast depletes them: cutting forests, over-pumping water and burning fuels harm both the resource and the environment.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Overuse",
+              "explanation": "Using resources faster than they renew."
+            },
+            {
+              "step": 2,
+              "title": "Depletion",
+              "explanation": "Resources get used up or reduced."
+            },
+            {
+              "step": 3,
+              "title": "Examples",
+              "explanation": "Deforestation, falling water tables, pollution."
+            },
+            {
+              "step": 4,
+              "title": "Wider harm",
+              "explanation": "Damages wildlife, climate and health."
+            }
+          ],
+          "examples": [
+            "Cutting forests too fast causes deforestation.",
+            "Over-pumping lowers the groundwater level."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Depletion",
+              "definition": "Using up a resource.",
+              "simpleExample": "Overuse causes depletion."
+            },
+            {
+              "keyword": "Deforestation",
+              "definition": "Clearing of forests.",
+              "simpleExample": "Deforestation reduces forests."
+            },
+            {
+              "keyword": "Overuse",
+              "definition": "Using too much, too fast.",
+              "simpleExample": "Overuse harms resources."
+            }
+          ],
+          "quickSummary": "Using natural resources faster than nature can renew them causes depletion, like deforestation and falling water tables, which also harms the wider environment.",
+          "revisionNotes": [
+            "Overuse depletes resources.",
+            "Cutting forests, over-pumping water, pollution.",
+            "Harms wildlife, climate, health.",
+            "First step: recognise the danger."
+          ]
+        },
+        {
+          "topicId": "sst8_ch1_t8",
+          "topic": "Conservation and Sustainable Use",
+          "meaning": "Conservation means using resources carefully and sustainably so they last for the future.",
+          "ncertBasedExplanation": "Conservation is the careful and wise use of natural resources so that they are not wasted and remain available for the future. Sustainable use means meeting our present needs without harming the ability of future generations to meet theirs. We can conserve resources by saving water and electricity, planting trees, recycling, reducing waste, using renewable energy, and protecting forests and wildlife. Governments make laws and set up protected areas, while each of us can help through daily habits. Conservation respects nature's principle of restoration and keeps resources flowing for generations to come.",
+          "easyExplanation": "Conservation means using resources wisely so they last. We save water and power, plant trees, recycle and use renewable energy.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Wise use",
+              "explanation": "Conservation means careful, non-wasteful use."
+            },
+            {
+              "step": 2,
+              "title": "Sustainable",
+              "explanation": "Meet present needs without harming the future."
+            },
+            {
+              "step": 3,
+              "title": "How to help",
+              "explanation": "Save water and power, plant trees, recycle."
+            },
+            {
+              "step": 4,
+              "title": "Everyone's role",
+              "explanation": "Governments and individuals both act."
+            }
+          ],
+          "examples": [
+            "Saving water and planting trees conserve resources.",
+            "Using solar energy is sustainable."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Conservation",
+              "definition": "Careful, wise use of resources.",
+              "simpleExample": "Saving water is conservation."
+            },
+            {
+              "keyword": "Sustainable use",
+              "definition": "Use that lasts for the future.",
+              "simpleExample": "Sustainable farming protects soil."
+            },
+            {
+              "keyword": "Recycle",
+              "definition": "To reuse materials.",
+              "simpleExample": "Recycling reduces waste."
+            }
+          ],
+          "quickSummary": "Conservation means using natural resources wisely and sustainably, through saving, planting, recycling and renewable energy, so they last for future generations.",
+          "revisionNotes": [
+            "Conservation = wise, non-wasteful use.",
+            "Sustainable: don't harm the future.",
+            "Save water/power, plant trees, recycle.",
+            "Both governments and individuals help."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 2,
+      "chapter": "Reshaping India's Political Map",
+      "topics": [
+        {
+          "topicId": "sst8_ch2_t1",
+          "topic": "India's Changing Political Map",
+          "meaning": "Over the centuries, India's political map changed many times as kingdoms and empires rose and fell.",
+          "ncertBasedExplanation": "India's political map, showing which rulers and states controlled different regions, has changed many times through history. Between roughly the 13th and 18th centuries, many powers rose and fell: sultanates, empires, regional kingdoms and, later, European trading companies. As one power weakened, others grew, redrawing the boundaries of who ruled where. Studying these changes helps us understand how medieval and early modern India was shaped, and how the foundations of later India were laid through this constant reshaping of power.",
+          "easyExplanation": "India's political map changed many times as kingdoms and empires rose and fell between the 13th and 18th centuries.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Political map",
+              "explanation": "Shows who rules which region."
+            },
+            {
+              "step": 2,
+              "title": "Constant change",
+              "explanation": "Powers rose and fell over centuries."
+            },
+            {
+              "step": 3,
+              "title": "Many powers",
+              "explanation": "Sultanates, empires, regional kingdoms, Europeans."
+            },
+            {
+              "step": 4,
+              "title": "Shaped India",
+              "explanation": "These changes shaped later India."
+            }
+          ],
+          "examples": [
+            "As one empire weakened, new powers rose.",
+            "The political map of India was redrawn many times."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Political map",
+              "definition": "Map of who rules which area.",
+              "simpleExample": "India's political map changed."
+            },
+            {
+              "keyword": "Empire",
+              "definition": "A large state ruling many regions.",
+              "simpleExample": "An empire controls a wide area."
+            },
+            {
+              "keyword": "Dynasty",
+              "definition": "A ruling family.",
+              "simpleExample": "A new dynasty took power."
+            }
+          ],
+          "quickSummary": "India's political map changed repeatedly between the 13th and 18th centuries as sultanates, empires, regional kingdoms and Europeans rose and fell, shaping later India.",
+          "revisionNotes": [
+            "Political map = who rules where.",
+            "Changed many times, 13th-18th centuries.",
+            "Sultanates, empires, kingdoms, Europeans.",
+            "Shaped the India that followed."
+          ]
+        },
+        {
+          "topicId": "sst8_ch2_t2",
+          "topic": "The Delhi Sultanate",
+          "meaning": "The Delhi Sultanate was a Muslim kingdom based at Delhi that ruled much of northern India for over 300 years.",
+          "ncertBasedExplanation": "The Delhi Sultanate was established around the early 13th century, when rulers from Central Asia set up a Muslim kingdom with its capital at Delhi. Over more than three hundred years, several dynasties ruled the Sultanate, expanding their power over large parts of northern and central India. The Sultanate built forts, mosques and monuments such as the Qutub Minar, developed administration and trade, and brought new styles of art and architecture. Its rise was a major change in India's political map, even though it later weakened and broke up.",
+          "easyExplanation": "The Delhi Sultanate was a Muslim kingdom based at Delhi that ruled much of north India for over 300 years and built monuments like the Qutub Minar.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Established",
+              "explanation": "Set up at Delhi in the early 13th century."
+            },
+            {
+              "step": 2,
+              "title": "Many dynasties",
+              "explanation": "Several dynasties ruled over 300 years."
+            },
+            {
+              "step": 3,
+              "title": "Wide rule",
+              "explanation": "Controlled much of northern and central India."
+            },
+            {
+              "step": 4,
+              "title": "Monuments",
+              "explanation": "Built the Qutub Minar and other structures."
+            }
+          ],
+          "examples": [
+            "The Qutub Minar was built during the Delhi Sultanate.",
+            "Several dynasties ruled the Sultanate in turn."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Delhi Sultanate",
+              "definition": "A Muslim kingdom based at Delhi.",
+              "simpleExample": "It ruled north India for centuries."
+            },
+            {
+              "keyword": "Sultan",
+              "definition": "The ruler of a sultanate.",
+              "simpleExample": "The Sultan ruled from Delhi."
+            },
+            {
+              "keyword": "Dynasty",
+              "definition": "A ruling family.",
+              "simpleExample": "Different dynasties ruled the Sultanate."
+            }
+          ],
+          "quickSummary": "The Delhi Sultanate was a Muslim kingdom based at Delhi that, through several dynasties, ruled much of north India for over 300 years and built monuments like the Qutub Minar.",
+          "revisionNotes": [
+            "Delhi Sultanate: based at Delhi.",
+            "Ruled north India 300+ years.",
+            "Several dynasties in turn.",
+            "Built the Qutub Minar."
+          ]
+        },
+        {
+          "topicId": "sst8_ch2_t3",
+          "topic": "The Vijayanagara Empire",
+          "meaning": "The Vijayanagara Empire was a powerful southern kingdom known for its wealth, temples and capital city.",
+          "ncertBasedExplanation": "In southern India, the Vijayanagara Empire rose in the 14th century and became one of the most powerful and wealthy kingdoms of its time. Its magnificent capital, Vijayanagara (near Hampi), was famous for its temples, markets, palaces and water systems, and was admired by foreign travellers. The empire supported art, literature, music and temple-building, and protected and promoted southern culture. Vijayanagara was an important power on India's political map for over two centuries before it declined, leaving behind splendid ruins that still stand today.",
+          "easyExplanation": "The Vijayanagara Empire was a rich, powerful southern kingdom famous for its grand capital at Hampi and its temples and art.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Rose in the south",
+              "explanation": "Founded in the 14th century in south India."
+            },
+            {
+              "step": 2,
+              "title": "Wealthy and powerful",
+              "explanation": "One of the strongest kingdoms of its time."
+            },
+            {
+              "step": 3,
+              "title": "Grand capital",
+              "explanation": "Hampi had temples, markets and palaces."
+            },
+            {
+              "step": 4,
+              "title": "Supported culture",
+              "explanation": "Promoted art, literature and temples."
+            }
+          ],
+          "examples": [
+            "The ruins of Hampi are from Vijayanagara.",
+            "Vijayanagara was admired by foreign travellers."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Vijayanagara Empire",
+              "definition": "A powerful southern kingdom.",
+              "simpleExample": "Vijayanagara ruled the south."
+            },
+            {
+              "keyword": "Hampi",
+              "definition": "The empire's grand capital city.",
+              "simpleExample": "Hampi has famous ruins."
+            },
+            {
+              "keyword": "Empire",
+              "definition": "A large powerful state.",
+              "simpleExample": "Vijayanagara was an empire."
+            }
+          ],
+          "quickSummary": "The Vijayanagara Empire was a wealthy, powerful southern kingdom famous for its grand capital at Hampi, its temples and its support of art and culture.",
+          "revisionNotes": [
+            "Vijayanagara: powerful southern empire.",
+            "Capital Hampi: temples, markets, palaces.",
+            "Wealthy and admired by travellers.",
+            "Promoted southern art and culture."
+          ]
+        },
+        {
+          "topicId": "sst8_ch2_t4",
+          "topic": "The Bahmani Sultanate and Deccan Kingdoms",
+          "meaning": "The Bahmani Sultanate and other Deccan kingdoms were important powers in central-southern India.",
+          "ncertBasedExplanation": "In the Deccan region of central-southern India, the Bahmani Sultanate rose in the 14th century as a strong Muslim kingdom, often rivalling Vijayanagara. Over time, the Bahmani Sultanate broke up into several smaller Deccan sultanates. These kingdoms were known for their forts, architecture, and a blending of different cultures and languages. The Deccan kingdoms were significant powers on India's political map, and their rivalries and alliances shaped the history of the region for a long time.",
+          "easyExplanation": "The Bahmani Sultanate was a strong Deccan kingdom that later split into smaller sultanates, known for forts and a mix of cultures.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "In the Deccan",
+              "explanation": "Rose in central-southern India."
+            },
+            {
+              "step": 2,
+              "title": "Rivalled Vijayanagara",
+              "explanation": "The two powers often clashed."
+            },
+            {
+              "step": 3,
+              "title": "Broke up",
+              "explanation": "Split into smaller Deccan sultanates."
+            },
+            {
+              "step": 4,
+              "title": "Known for",
+              "explanation": "Forts, architecture and mixed cultures."
+            }
+          ],
+          "examples": [
+            "The Bahmani Sultanate rivalled Vijayanagara.",
+            "The Deccan sultanates built strong forts."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Bahmani Sultanate",
+              "definition": "A Muslim kingdom in the Deccan.",
+              "simpleExample": "The Bahmani Sultanate ruled the Deccan."
+            },
+            {
+              "keyword": "Deccan",
+              "definition": "The plateau of central-southern India.",
+              "simpleExample": "The Deccan had several kingdoms."
+            },
+            {
+              "keyword": "Rival",
+              "definition": "An opposing power.",
+              "simpleExample": "Vijayanagara was a rival."
+            }
+          ],
+          "quickSummary": "The Bahmani Sultanate was a strong Deccan kingdom, often rivalling Vijayanagara, that later split into smaller sultanates known for forts and mixed cultures.",
+          "revisionNotes": [
+            "Bahmani Sultanate: in the Deccan.",
+            "Rivalled Vijayanagara.",
+            "Split into smaller sultanates.",
+            "Known for forts and mixed cultures."
+          ]
+        },
+        {
+          "topicId": "sst8_ch2_t5",
+          "topic": "Regional Kingdoms",
+          "meaning": "Many regional kingdoms across India kept their own power and identity during this period.",
+          "ncertBasedExplanation": "Alongside the great sultanates and empires, many regional kingdoms across India held their own power and culture. The Rajput kingdoms, such as Mewar, were known for their bravery and resistance; other regions had their own rulers in Bengal, Gujarat, Kashmir, Odisha and the south. These regional powers maintained distinct languages, art, temples and traditions, and sometimes allied with or resisted the larger empires. Their presence made India's political map a patchwork of many powers, reflecting the country's great diversity.",
+          "easyExplanation": "Many regional kingdoms, like the Rajput state of Mewar, kept their own power, culture and traditions across India.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Alongside empires",
+              "explanation": "Regional kingdoms held their own power."
+            },
+            {
+              "step": 2,
+              "title": "Rajput kingdoms",
+              "explanation": "Mewar and others were known for bravery."
+            },
+            {
+              "step": 3,
+              "title": "Across India",
+              "explanation": "Bengal, Gujarat, Kashmir, Odisha and more."
+            },
+            {
+              "step": 4,
+              "title": "Distinct culture",
+              "explanation": "They kept their own languages and traditions."
+            }
+          ],
+          "examples": [
+            "Mewar was a famous Rajput kingdom.",
+            "Many regions had their own rulers and culture."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Regional kingdom",
+              "definition": "A kingdom ruling one region.",
+              "simpleExample": "Mewar was a regional kingdom."
+            },
+            {
+              "keyword": "Rajput",
+              "definition": "Warrior clans of north-west India.",
+              "simpleExample": "Mewar was a Rajput state."
+            },
+            {
+              "keyword": "Identity",
+              "definition": "A distinct character.",
+              "simpleExample": "Each kingdom kept its identity."
+            }
+          ],
+          "quickSummary": "Many regional kingdoms, like the Rajput state of Mewar, kept their own power, culture and traditions, making India's political map a diverse patchwork of powers.",
+          "revisionNotes": [
+            "Regional kingdoms held their own power.",
+            "Rajput Mewar known for bravery.",
+            "Spread across many regions.",
+            "Kept distinct languages and traditions."
+          ]
+        },
+        {
+          "topicId": "sst8_ch2_t6",
+          "topic": "The Mughal Empire",
+          "meaning": "The Mughal Empire was a large and powerful empire that united much of India for about two centuries.",
+          "ncertBasedExplanation": "The Mughal Empire, founded in the early 16th century, grew into one of the largest and most powerful empires in Indian history, ruling much of the subcontinent for roughly two centuries. Famous Mughal rulers built a strong central administration, encouraged trade, and created splendid art and architecture, including monuments like the Taj Mahal and many forts, gardens and cities. Under the Mughals, much of India was united under one rule, and a rich blend of cultures, languages and styles developed. The Mughal Empire was a major chapter in the reshaping of India's political map.",
+          "easyExplanation": "The Mughal Empire was a large, powerful empire that united much of India for about 200 years and built monuments like the Taj Mahal.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Founded",
+              "explanation": "Began in the early 16th century."
+            },
+            {
+              "step": 2,
+              "title": "Large and powerful",
+              "explanation": "Ruled much of the subcontinent."
+            },
+            {
+              "step": 3,
+              "title": "Strong administration",
+              "explanation": "Built central rule and trade."
+            },
+            {
+              "step": 4,
+              "title": "Splendid art",
+              "explanation": "Created the Taj Mahal and other monuments."
+            }
+          ],
+          "examples": [
+            "The Taj Mahal was built by the Mughals.",
+            "The Mughal Empire united much of India."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Mughal Empire",
+              "definition": "A large empire ruling much of India.",
+              "simpleExample": "The Mughals ruled for centuries."
+            },
+            {
+              "keyword": "Empire",
+              "definition": "A large powerful state.",
+              "simpleExample": "The Mughal Empire was vast."
+            },
+            {
+              "keyword": "Administration",
+              "definition": "The running of a state.",
+              "simpleExample": "The Mughals had strong administration."
+            }
+          ],
+          "quickSummary": "The Mughal Empire was a large, powerful empire that united much of India for about two centuries, with strong administration and splendid art like the Taj Mahal.",
+          "revisionNotes": [
+            "Mughal Empire: founded 16th century.",
+            "Ruled much of India ~200 years.",
+            "Strong central administration.",
+            "Built the Taj Mahal and other monuments."
+          ]
+        },
+        {
+          "topicId": "sst8_ch2_t7",
+          "topic": "Decline of Empires and Rise of Regional Powers",
+          "meaning": "As large empires like the Mughals weakened, regional powers rose and reshaped the political map.",
+          "ncertBasedExplanation": "No empire lasts forever. As the Mughal Empire weakened in the 18th century, due to weak rulers, wars, and internal problems, its control loosened, and many regional powers rose to fill the gap. New states and rulers emerged, such as the Marathas, the Sikhs, the Nawabs of Bengal and Awadh, and others, each carving out their own territory. This breakup of central power into many regional states once again reshaped India's political map and set the stage for the entry and expansion of European powers.",
+          "easyExplanation": "As the Mughal Empire weakened in the 18th century, regional powers like the Marathas and Sikhs rose and reshaped the map.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Empires weaken",
+              "explanation": "The Mughal Empire declined in the 18th century."
+            },
+            {
+              "step": 2,
+              "title": "Reasons",
+              "explanation": "Weak rulers, wars and internal problems."
+            },
+            {
+              "step": 3,
+              "title": "Regional powers rise",
+              "explanation": "Marathas, Sikhs, Nawabs and others."
+            },
+            {
+              "step": 4,
+              "title": "Map reshaped",
+              "explanation": "Central power split into many states."
+            }
+          ],
+          "examples": [
+            "The Marathas rose as the Mughals declined.",
+            "Nawabs of Bengal became powerful regional rulers."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Decline",
+              "definition": "Becoming weaker.",
+              "simpleExample": "The Mughal Empire declined."
+            },
+            {
+              "keyword": "Regional power",
+              "definition": "A state ruling one region.",
+              "simpleExample": "The Marathas were a regional power."
+            },
+            {
+              "keyword": "Nawab",
+              "definition": "A regional ruler.",
+              "simpleExample": "The Nawab of Bengal."
+            }
+          ],
+          "quickSummary": "As the Mughal Empire weakened in the 18th century, regional powers like the Marathas, Sikhs and Nawabs rose, reshaping the political map and opening the way for Europeans.",
+          "revisionNotes": [
+            "Mughal Empire declined in the 18th century.",
+            "Weak rulers, wars, internal problems.",
+            "Marathas, Sikhs, Nawabs rose.",
+            "Set the stage for Europeans."
+          ]
+        },
+        {
+          "topicId": "sst8_ch2_t8",
+          "topic": "Arrival of European Powers",
+          "meaning": "European trading companies, beginning with the Portuguese, arrived in India and gradually gained power.",
+          "ncertBasedExplanation": "From the late 15th century, European powers began arriving in India by sea in search of trade, especially in spices. The Portuguese came first, followed by the Dutch, English and French, who set up trading posts along the coasts. At first they came only to trade, but as Indian empires weakened and regional powers competed, the European companies, especially the British East India Company, used alliances, wars and politics to gain territory and power. The arrival of these European powers was a turning point that would eventually reshape India's political map under colonial rule.",
+          "easyExplanation": "European traders like the Portuguese, then the Dutch, English and French, came for trade and gradually gained power as Indian states weakened.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Came for trade",
+              "explanation": "Europeans arrived by sea for spices and trade."
+            },
+            {
+              "step": 2,
+              "title": "Portuguese first",
+              "explanation": "Followed by Dutch, English and French."
+            },
+            {
+              "step": 3,
+              "title": "Trading posts",
+              "explanation": "They set up posts along the coasts."
+            },
+            {
+              "step": 4,
+              "title": "Gained power",
+              "explanation": "Used alliances and wars as states weakened."
+            }
+          ],
+          "examples": [
+            "The Portuguese were the first Europeans to arrive by sea.",
+            "The British East India Company later gained power."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "European powers",
+              "definition": "Trading nations from Europe.",
+              "simpleExample": "The Portuguese were a European power."
+            },
+            {
+              "keyword": "Trading post",
+              "definition": "A base for trade.",
+              "simpleExample": "Europeans set up trading posts."
+            },
+            {
+              "keyword": "East India Company",
+              "definition": "A British trading company.",
+              "simpleExample": "The Company gained territory."
+            }
+          ],
+          "quickSummary": "European trading powers, the Portuguese first, then the Dutch, English and French, arrived for trade and gradually gained power as Indian states weakened, a turning point toward colonial rule.",
+          "revisionNotes": [
+            "Europeans arrived by sea for trade.",
+            "Portuguese first, then Dutch, English, French.",
+            "Set up coastal trading posts.",
+            "Gained power as Indian states weakened."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 3,
+      "chapter": "The Rise of the Marathas",
+      "topics": [
+        {
+          "topicId": "sst8_ch3_t1",
+          "topic": "The Deccan and the Marathas",
+          "meaning": "The Marathas were a people of the western Deccan who rose to form a powerful state in the 17th century.",
+          "ncertBasedExplanation": "The Marathas were a community of the western Deccan region, in present-day Maharashtra, a land of hills, forts and valleys. In the 17th century, under the leadership of Shivaji, the Marathas rose from being soldiers and small chiefs serving other rulers to founding their own independent state. The rugged landscape of the Deccan, with its many hill forts, helped the Marathas defend themselves and grow strong. Their rise was one of the most important developments in the reshaping of India's political map.",
+          "easyExplanation": "The Marathas were a people of the western Deccan (Maharashtra) who rose in the 17th century under Shivaji to form their own state.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Western Deccan",
+              "explanation": "The Marathas came from present-day Maharashtra."
+            },
+            {
+              "step": 2,
+              "title": "Hilly land",
+              "explanation": "A region of hills and forts."
+            },
+            {
+              "step": 3,
+              "title": "Rose under Shivaji",
+              "explanation": "They founded their own state in the 17th century."
+            },
+            {
+              "step": 4,
+              "title": "From service to power",
+              "explanation": "They grew from soldiers to rulers."
+            }
+          ],
+          "examples": [
+            "The Marathas came from the western Deccan.",
+            "Hill forts helped the Marathas grow strong."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Maratha",
+              "definition": "A people of the western Deccan.",
+              "simpleExample": "The Marathas founded a state."
+            },
+            {
+              "keyword": "Deccan",
+              "definition": "The plateau of central-southern India.",
+              "simpleExample": "The Marathas lived in the Deccan."
+            },
+            {
+              "keyword": "Fort",
+              "definition": "A strong building for defence.",
+              "simpleExample": "Hill forts protected the Marathas."
+            }
+          ],
+          "quickSummary": "The Marathas were a people of the western Deccan who, under Shivaji in the 17th century, rose from service to found their own powerful state, aided by the region's hill forts.",
+          "revisionNotes": [
+            "Marathas: from the western Deccan (Maharashtra).",
+            "Land of hills and forts.",
+            "Rose under Shivaji in the 17th century.",
+            "From soldiers to rulers."
+          ]
+        },
+        {
+          "topicId": "sst8_ch3_t2",
+          "topic": "Shivaji",
+          "meaning": "Shivaji was the founder and greatest leader of the Maratha state, known for his courage and skill.",
+          "ncertBasedExplanation": "Shivaji, born in the early 17th century, was the founder of the Maratha state and one of the most admired figures in Indian history. A brave and brilliant leader, he united Maratha chiefs, captured many forts, and built an independent kingdom in the Deccan despite facing powerful enemies, including the Mughals and the Deccan sultanates. He was crowned with the title Chhatrapati. Shivaji was known not only for his military skill but also for his good governance, his respect for all religions, and his care for ordinary people, making him a lasting symbol of courage and just rule.",
+          "easyExplanation": "Shivaji was the brave founder of the Maratha state, who captured forts, built a kingdom, and ruled justly with respect for all religions.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Founder",
+              "explanation": "Shivaji founded the Maratha state."
+            },
+            {
+              "step": 2,
+              "title": "Brave leader",
+              "explanation": "He united chiefs and captured many forts."
+            },
+            {
+              "step": 3,
+              "title": "Chhatrapati",
+              "explanation": "He was crowned with this royal title."
+            },
+            {
+              "step": 4,
+              "title": "Just ruler",
+              "explanation": "Known for good governance and respect for all faiths."
+            }
+          ],
+          "examples": [
+            "Shivaji captured many hill forts in the Deccan.",
+            "Shivaji was crowned Chhatrapati."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Shivaji",
+              "definition": "Founder of the Maratha state.",
+              "simpleExample": "Shivaji built a kingdom."
+            },
+            {
+              "keyword": "Chhatrapati",
+              "definition": "A royal title meaning sovereign.",
+              "simpleExample": "Shivaji became Chhatrapati."
+            },
+            {
+              "keyword": "Governance",
+              "definition": "The running of a state.",
+              "simpleExample": "Shivaji was known for good governance."
+            }
+          ],
+          "quickSummary": "Shivaji was the brave founder and greatest leader of the Maratha state, who captured forts, built an independent kingdom, took the title Chhatrapati, and ruled justly.",
+          "revisionNotes": [
+            "Shivaji founded the Maratha state.",
+            "Brave; captured many forts.",
+            "Crowned Chhatrapati.",
+            "Known for just rule and tolerance."
+          ]
+        },
+        {
+          "topicId": "sst8_ch3_t3",
+          "topic": "Shivaji's Administration",
+          "meaning": "Shivaji set up an efficient and well-organised system of administration for his kingdom.",
+          "ncertBasedExplanation": "Shivaji was not only a great warrior but also a skilled administrator. He organised his kingdom with a council of ministers, called the Ashtapradhan (council of eight ministers), each responsible for a different department such as finance, war or foreign affairs. He set up a fair system of collecting revenue from land, kept a disciplined army, and made sure officials served the people honestly. He encouraged the use of local languages in administration. This sound system of governance made the Maratha state strong and well-run, and became a model admired by later rulers.",
+          "easyExplanation": "Shivaji ran his kingdom well with a council of eight ministers, fair revenue collection, a disciplined army and honest officials.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Skilled administrator",
+              "explanation": "Shivaji organised his kingdom well."
+            },
+            {
+              "step": 2,
+              "title": "Council of ministers",
+              "explanation": "The Ashtapradhan of eight ministers."
+            },
+            {
+              "step": 3,
+              "title": "Fair revenue",
+              "explanation": "A just system of land revenue."
+            },
+            {
+              "step": 4,
+              "title": "Disciplined army",
+              "explanation": "Kept a strong, orderly army."
+            }
+          ],
+          "examples": [
+            "The Ashtapradhan was Shivaji's council of eight ministers.",
+            "Shivaji kept a disciplined army and honest officials."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Administration",
+              "definition": "The running of a state.",
+              "simpleExample": "Shivaji's administration was efficient."
+            },
+            {
+              "keyword": "Ashtapradhan",
+              "definition": "Shivaji's council of eight ministers.",
+              "simpleExample": "The Ashtapradhan ran departments."
+            },
+            {
+              "keyword": "Revenue",
+              "definition": "Income from taxes or land.",
+              "simpleExample": "Shivaji collected land revenue fairly."
+            }
+          ],
+          "quickSummary": "Shivaji set up an efficient administration with a council of eight ministers (Ashtapradhan), fair revenue collection, a disciplined army and honest officials.",
+          "revisionNotes": [
+            "Shivaji was a skilled administrator.",
+            "Ashtapradhan: council of eight ministers.",
+            "Fair land revenue system.",
+            "Disciplined army; honest officials."
+          ]
+        },
+        {
+          "topicId": "sst8_ch3_t4",
+          "topic": "Forts and Navy",
+          "meaning": "Shivaji's strength rested on his many hill forts and a navy that guarded the western coast.",
+          "ncertBasedExplanation": "Forts were the backbone of Maratha power. Shivaji captured, built and strengthened many hill forts across the Deccan, which served as strongholds for defence, control of territory, and safe bases for his army. He understood that controlling forts meant controlling the land around them. Shivaji also built a navy to protect the western coast from enemies and pirates, making the Marathas one of the few Indian powers of the time with sea strength. This combination of forts and navy made his kingdom secure and hard to defeat.",
+          "easyExplanation": "Shivaji built and captured many hill forts for defence and also created a navy to guard the western coast.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Forts as strongholds",
+              "explanation": "Forts gave defence and control of land."
+            },
+            {
+              "step": 2,
+              "title": "Many forts",
+              "explanation": "Shivaji captured and strengthened many."
+            },
+            {
+              "step": 3,
+              "title": "Control the land",
+              "explanation": "Controlling forts controlled the region."
+            },
+            {
+              "step": 4,
+              "title": "A navy",
+              "explanation": "He built ships to guard the coast."
+            }
+          ],
+          "examples": [
+            "Hill forts were the backbone of Maratha power.",
+            "Shivaji built a navy to guard the western coast."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Fort",
+              "definition": "A strong building for defence.",
+              "simpleExample": "Forts protected the Marathas."
+            },
+            {
+              "keyword": "Navy",
+              "definition": "Ships used for war at sea.",
+              "simpleExample": "Shivaji built a navy."
+            },
+            {
+              "keyword": "Stronghold",
+              "definition": "A well-defended place.",
+              "simpleExample": "Forts were strongholds."
+            }
+          ],
+          "quickSummary": "Shivaji's power rested on many hill forts that gave defence and control of land, and a navy he built to guard the western coast, making his kingdom secure.",
+          "revisionNotes": [
+            "Forts were the backbone of power.",
+            "Captured and strengthened many forts.",
+            "Controlling forts controlled the land.",
+            "Built a navy to guard the coast."
+          ]
+        },
+        {
+          "topicId": "sst8_ch3_t5",
+          "topic": "Expansion after Shivaji",
+          "meaning": "After Shivaji, the Maratha state expanded greatly, with the Peshwas leading its growth.",
+          "ncertBasedExplanation": "After Shivaji's death, the Maratha state continued to grow, especially under the leadership of the Peshwas, who were the chief ministers and became the real heads of the Maratha government. Under the Peshwas, Maratha power spread far beyond the Deccan into many parts of northern, central and western India, making the Marathas one of the strongest powers in 18th-century India. They collected tribute from wide areas and influenced the politics of the whole subcontinent. This expansion made the Marathas central to the reshaping of India's political map after the decline of the Mughals.",
+          "easyExplanation": "After Shivaji, the Marathas expanded greatly under the Peshwas, spreading their power across much of India in the 18th century.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Growth continued",
+              "explanation": "The state grew after Shivaji."
+            },
+            {
+              "step": 2,
+              "title": "The Peshwas",
+              "explanation": "Chief ministers who led the expansion."
+            },
+            {
+              "step": 3,
+              "title": "Wide spread",
+              "explanation": "Power reached north, central and west India."
+            },
+            {
+              "step": 4,
+              "title": "Major power",
+              "explanation": "The Marathas became one of the strongest powers."
+            }
+          ],
+          "examples": [
+            "The Peshwas led the Maratha expansion.",
+            "Maratha power spread far beyond the Deccan."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Peshwa",
+              "definition": "The Maratha chief minister and leader.",
+              "simpleExample": "The Peshwas led the Marathas."
+            },
+            {
+              "keyword": "Expansion",
+              "definition": "Growing in size and power.",
+              "simpleExample": "Maratha expansion spread widely."
+            },
+            {
+              "keyword": "Tribute",
+              "definition": "Payment from a subordinate ruler.",
+              "simpleExample": "The Marathas collected tribute."
+            }
+          ],
+          "quickSummary": "After Shivaji, the Maratha state expanded greatly under the Peshwas, spreading its power across much of India and becoming one of the strongest 18th-century powers.",
+          "revisionNotes": [
+            "Marathas grew after Shivaji.",
+            "Led by the Peshwas (chief ministers).",
+            "Spread across north, central, west India.",
+            "Among the strongest 18th-century powers."
+          ]
+        },
+        {
+          "topicId": "sst8_ch3_t6",
+          "topic": "The Maratha Confederacy",
+          "meaning": "The Maratha Empire became a confederacy of several chiefs who controlled different regions.",
+          "ncertBasedExplanation": "As the Maratha state grew very large, it became difficult for one centre to control everything. It developed into a confederacy, a union of several powerful Maratha chiefs (such as the Scindias, Holkars, Gaekwads and Bhonsles) who controlled different regions while accepting the leadership of the Peshwa. This arrangement let the Marathas govern a vast area, but it also meant that the chiefs sometimes acted on their own and did not always unite. The confederacy was a unique way of holding together a large and diverse empire.",
+          "easyExplanation": "The Maratha Empire became a confederacy of several chiefs ruling different regions while accepting the Peshwa's leadership.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "A large empire",
+              "explanation": "The state grew too big for one centre."
+            },
+            {
+              "step": 2,
+              "title": "A confederacy",
+              "explanation": "A union of several powerful chiefs."
+            },
+            {
+              "step": 3,
+              "title": "Chiefs and regions",
+              "explanation": "Scindias, Holkars and others ruled regions."
+            },
+            {
+              "step": 4,
+              "title": "Strength and weakness",
+              "explanation": "Chiefs sometimes did not unite."
+            }
+          ],
+          "examples": [
+            "The Scindias and Holkars were Maratha chiefs.",
+            "The Marathas formed a confederacy of chiefs."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Confederacy",
+              "definition": "A union of separate powers.",
+              "simpleExample": "The Marathas were a confederacy."
+            },
+            {
+              "keyword": "Chief",
+              "definition": "A regional Maratha leader.",
+              "simpleExample": "Each chief ruled a region."
+            },
+            {
+              "keyword": "Union",
+              "definition": "A joining together.",
+              "simpleExample": "A union of Maratha chiefs."
+            }
+          ],
+          "quickSummary": "The Maratha Empire became a confederacy of powerful chiefs ruling different regions under the Peshwa's leadership, which governed a vast area but sometimes lacked unity.",
+          "revisionNotes": [
+            "Empire became a confederacy.",
+            "Several chiefs ruled different regions.",
+            "Scindias, Holkars, Gaekwads, Bhonsles.",
+            "Under the Peshwa, but not always united."
+          ]
+        },
+        {
+          "topicId": "sst8_ch3_t7",
+          "topic": "Maratha Society and Culture",
+          "meaning": "The Marathas developed a rich society and culture rooted in their language, religion and traditions.",
+          "ncertBasedExplanation": "Maratha society was rooted in the language and culture of the western Deccan, especially the Marathi language and local traditions. The Marathas were known for their devotion, their saints and the bhakti tradition, which taught equality and devotion to God. They valued bravery, simple living and loyalty. Maratha rulers supported temples, learning and the arts, and encouraged the use of Marathi in administration. This strong sense of shared culture and identity helped bind the Marathas together and gave their state a distinct character.",
+          "easyExplanation": "Maratha society was rooted in the Marathi language, the bhakti tradition and values of bravery and devotion. Rulers supported temples and arts.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Rooted in culture",
+              "explanation": "Based on Marathi language and traditions."
+            },
+            {
+              "step": 2,
+              "title": "Bhakti tradition",
+              "explanation": "Saints taught devotion and equality."
+            },
+            {
+              "step": 3,
+              "title": "Valued bravery",
+              "explanation": "Courage, simple living and loyalty."
+            },
+            {
+              "step": 4,
+              "title": "Supported arts",
+              "explanation": "Rulers backed temples and learning."
+            }
+          ],
+          "examples": [
+            "The Marathi language was central to Maratha culture.",
+            "The bhakti tradition shaped Maratha society."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Culture",
+              "definition": "A people's way of life.",
+              "simpleExample": "Maratha culture was distinct."
+            },
+            {
+              "keyword": "Bhakti",
+              "definition": "Devotion to God, teaching equality.",
+              "simpleExample": "The bhakti tradition was strong."
+            },
+            {
+              "keyword": "Marathi",
+              "definition": "The language of the Marathas.",
+              "simpleExample": "Marathi was used in administration."
+            }
+          ],
+          "quickSummary": "Maratha society was rooted in the Marathi language and the bhakti tradition, valuing bravery and devotion, with rulers supporting temples, learning and the arts.",
+          "revisionNotes": [
+            "Rooted in Marathi language and traditions.",
+            "Bhakti tradition: devotion and equality.",
+            "Valued bravery, simplicity, loyalty.",
+            "Rulers supported temples and arts."
+          ]
+        },
+        {
+          "topicId": "sst8_ch3_t8",
+          "topic": "Decline and Legacy of the Marathas",
+          "meaning": "The Marathas declined after losses and disunity but left a lasting legacy in Indian history.",
+          "ncertBasedExplanation": "Despite their great power, the Marathas eventually declined. Costly wars, defeats such as at major battles, disunity among the chiefs, and the growing strength of the British East India Company gradually weakened them, until the British defeated them in the early 19th century. Yet the Marathas left a powerful legacy: they had resisted and weakened the Mughals, ruled a vast empire, and inspired pride and a spirit of self-rule. Shivaji in particular remains a lasting symbol of courage, good governance and resistance to injustice, admired across India today.",
+          "easyExplanation": "The Marathas declined due to wars, disunity and British power, but left a proud legacy, with Shivaji remembered as a symbol of courage and good rule.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Eventual decline",
+              "explanation": "Wars, defeats and disunity weakened them."
+            },
+            {
+              "step": 2,
+              "title": "British power",
+              "explanation": "The East India Company defeated them."
+            },
+            {
+              "step": 3,
+              "title": "Lasting legacy",
+              "explanation": "They ruled a vast empire and inspired pride."
+            },
+            {
+              "step": 4,
+              "title": "Shivaji's symbol",
+              "explanation": "Remembered for courage and good governance."
+            }
+          ],
+          "examples": [
+            "Disunity among chiefs weakened the Marathas.",
+            "Shivaji remains a symbol of courage and just rule."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Decline",
+              "definition": "Becoming weaker.",
+              "simpleExample": "The Marathas declined."
+            },
+            {
+              "keyword": "Disunity",
+              "definition": "Lack of unity.",
+              "simpleExample": "Disunity weakened the chiefs."
+            },
+            {
+              "keyword": "Legacy",
+              "definition": "What is left for the future.",
+              "simpleExample": "The Marathas left a proud legacy."
+            }
+          ],
+          "quickSummary": "The Marathas declined due to wars, disunity and British power, but left a proud legacy of resistance and self-rule, with Shivaji remembered as a symbol of courage and good governance.",
+          "revisionNotes": [
+            "Declined: wars, disunity, British power.",
+            "Defeated by the British in the early 19th century.",
+            "Legacy: vast empire, spirit of self-rule.",
+            "Shivaji: lasting symbol of courage."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 4,
+      "chapter": "The Colonial Era in India",
+      "topics": [
+        {
+          "topicId": "sst8_ch4_t1",
+          "topic": "What is Colonialism",
+          "meaning": "Colonialism is when one country takes control of another land and rules it for its own benefit.",
+          "ncertBasedExplanation": "Colonialism is a system in which a powerful country takes control of another land and its people, ruling them mainly for its own profit and benefit. The controlling country, the coloniser, uses the colony's resources, labour and markets to enrich itself, often at the expense of the local people. In India, colonial rule was established by the British, who, beginning as traders, gradually took political control. Understanding colonialism helps us see how India lost its freedom and wealth, and why the struggle for independence became so important.",
+          "easyExplanation": "Colonialism is when one country controls and rules another land for its own benefit. In India, the British became the colonial rulers.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Control of another land",
+              "explanation": "One country rules another."
+            },
+            {
+              "step": 2,
+              "title": "For its own benefit",
+              "explanation": "The coloniser profits from the colony."
+            },
+            {
+              "step": 3,
+              "title": "Uses resources",
+              "explanation": "It takes resources, labour and markets."
+            },
+            {
+              "step": 4,
+              "title": "British in India",
+              "explanation": "The British became colonial rulers of India."
+            }
+          ],
+          "examples": [
+            "The British ruled India as a colony.",
+            "Colonisers use a colony's resources for profit."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Colonialism",
+              "definition": "One country ruling another for profit.",
+              "simpleExample": "British colonialism in India."
+            },
+            {
+              "keyword": "Colony",
+              "definition": "A land ruled by another country.",
+              "simpleExample": "India was a British colony."
+            },
+            {
+              "keyword": "Coloniser",
+              "definition": "The country that rules a colony.",
+              "simpleExample": "Britain was the coloniser."
+            }
+          ],
+          "quickSummary": "Colonialism is when a powerful country controls and rules another land for its own benefit; in India, the British established colonial rule.",
+          "revisionNotes": [
+            "Colonialism: one country rules another for profit.",
+            "Uses the colony's resources, labour, markets.",
+            "Harms the local people.",
+            "British colonised India."
+          ]
+        },
+        {
+          "topicId": "sst8_ch4_t2",
+          "topic": "The East India Company",
+          "meaning": "The British East India Company began as a trading company and grew into a ruler of large parts of India.",
+          "ncertBasedExplanation": "The British East India Company was founded around 1600 as a trading company to buy Indian goods like spices, cloth and tea. Over time, taking advantage of the decline of the Mughals and the rivalries among Indian rulers, the Company built up armies, formed alliances, and won wars, gradually turning from a trader into a political power. After key victories in the 18th century, especially in Bengal, the Company began to govern and tax large parts of India directly. Thus a private company came to rule millions of people, an unusual and important step in the colonial era.",
+          "easyExplanation": "The East India Company started as a trader around 1600 but grew armies and won wars, becoming the ruler of large parts of India.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "A trading company",
+              "explanation": "Founded around 1600 to trade."
+            },
+            {
+              "step": 2,
+              "title": "Built armies",
+              "explanation": "It raised armies and made alliances."
+            },
+            {
+              "step": 3,
+              "title": "Won wars",
+              "explanation": "Especially in Bengal in the 18th century."
+            },
+            {
+              "step": 4,
+              "title": "Became a ruler",
+              "explanation": "A company came to govern millions."
+            }
+          ],
+          "examples": [
+            "The East India Company first came to India to trade.",
+            "After victories in Bengal, the Company began to rule."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "East India Company",
+              "definition": "A British trading company that ruled India.",
+              "simpleExample": "The Company taxed Bengal."
+            },
+            {
+              "keyword": "Trade",
+              "definition": "Buying and selling goods.",
+              "simpleExample": "The Company began with trade."
+            },
+            {
+              "keyword": "Ally",
+              "definition": "A partner in war or politics.",
+              "simpleExample": "The Company made allies."
+            }
+          ],
+          "quickSummary": "The British East India Company began as a trader around 1600 but, exploiting Mughal decline, built armies and won wars to become the ruler of large parts of India.",
+          "revisionNotes": [
+            "East India Company: founded ~1600 to trade.",
+            "Built armies and made alliances.",
+            "Won wars, especially in Bengal.",
+            "A company came to rule millions."
+          ]
+        },
+        {
+          "topicId": "sst8_ch4_t3",
+          "topic": "Establishment of British Rule",
+          "meaning": "Through wars, alliances and policies, the British gradually established their rule over most of India.",
+          "ncertBasedExplanation": "The British extended their control over India step by step. They defeated or made subordinate one Indian power after another, the Nawabs, the Marathas, the Sikhs and others, through wars and clever policies. They used methods like supporting friendly rulers, taking over states on various excuses, and signing treaties that gave them control. By the mid-19th century, the British, through the East India Company, controlled most of the subcontinent directly or indirectly. Later, the British Crown took over direct rule. This slow but steady expansion brought almost all of India under colonial control.",
+          "easyExplanation": "The British gradually took over India through wars, alliances and policies, controlling most of the country by the mid-19th century.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Step by step",
+              "explanation": "The British expanded control gradually."
+            },
+            {
+              "step": 2,
+              "title": "Defeated Indian powers",
+              "explanation": "Nawabs, Marathas, Sikhs and others."
+            },
+            {
+              "step": 3,
+              "title": "Clever policies",
+              "explanation": "Treaties, takeovers and friendly rulers."
+            },
+            {
+              "step": 4,
+              "title": "Most of India",
+              "explanation": "Controlled by the mid-19th century."
+            }
+          ],
+          "examples": [
+            "The British defeated the Marathas and Sikhs.",
+            "By the mid-19th century, the British controlled most of India."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "British rule",
+              "definition": "Control of India by Britain.",
+              "simpleExample": "British rule spread across India."
+            },
+            {
+              "keyword": "Treaty",
+              "definition": "A formal agreement.",
+              "simpleExample": "Treaties gave the British control."
+            },
+            {
+              "keyword": "Annex",
+              "definition": "To take over a territory.",
+              "simpleExample": "The British annexed states."
+            }
+          ],
+          "quickSummary": "Through wars, alliances and clever policies, the British defeated or absorbed Indian powers one by one, controlling most of India by the mid-19th century.",
+          "revisionNotes": [
+            "British expanded control step by step.",
+            "Defeated Nawabs, Marathas, Sikhs.",
+            "Used treaties, takeovers, friendly rulers.",
+            "Controlled most of India by mid-19th century."
+          ]
+        },
+        {
+          "topicId": "sst8_ch4_t4",
+          "topic": "Economic Impact of Colonial Rule",
+          "meaning": "Colonial rule drained India's wealth and reshaped its economy to benefit Britain.",
+          "ncertBasedExplanation": "Colonial rule had a deep and harmful effect on India's economy. The British used India's wealth, taxes and resources largely for Britain's benefit, a process often called the drain of wealth. They taxed Indian farmers heavily, took raw materials like cotton cheaply, and sold British factory goods in India, which hurt local producers. India was turned into a supplier of raw materials and a market for British goods, rather than being allowed to develop its own industries. As a result, India, once wealthy, became poorer under colonial rule while Britain grew richer.",
+          "easyExplanation": "Colonial rule drained India's wealth to Britain through heavy taxes and one-sided trade, making India poorer while Britain grew richer.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Wealth drained",
+              "explanation": "India's wealth went to Britain."
+            },
+            {
+              "step": 2,
+              "title": "Heavy taxes",
+              "explanation": "Farmers were taxed heavily."
+            },
+            {
+              "step": 3,
+              "title": "One-sided trade",
+              "explanation": "Cheap raw materials out, British goods in."
+            },
+            {
+              "step": 4,
+              "title": "India made poorer",
+              "explanation": "Once-rich India became poorer."
+            }
+          ],
+          "examples": [
+            "The 'drain of wealth' sent India's riches to Britain.",
+            "Heavy taxes burdened Indian farmers."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Drain of wealth",
+              "definition": "India's wealth flowing to Britain.",
+              "simpleExample": "The drain of wealth impoverished India."
+            },
+            {
+              "keyword": "Raw material",
+              "definition": "A material used to make goods.",
+              "simpleExample": "Cotton was taken as a raw material."
+            },
+            {
+              "keyword": "Market",
+              "definition": "A place to sell goods.",
+              "simpleExample": "India became a market for British goods."
+            }
+          ],
+          "quickSummary": "Colonial rule drained India's wealth to Britain through heavy taxes and one-sided trade, turning India into a supplier of raw materials and a market, and making it poorer.",
+          "revisionNotes": [
+            "Colonial rule drained India's wealth.",
+            "Heavy taxes on farmers.",
+            "Cheap raw materials out, British goods in.",
+            "India poorer; Britain richer."
+          ]
+        },
+        {
+          "topicId": "sst8_ch4_t5",
+          "topic": "Effect on Industry and Agriculture",
+          "meaning": "Colonial policies ruined India's traditional industries and changed its farming to suit British needs.",
+          "ncertBasedExplanation": "Before colonial rule, India was famous for its handmade goods, especially fine cotton and silk textiles, which were sold all over the world. Under the British, cheap machine-made cloth from British factories flooded India, and Indian handicrafts and weavers were ruined, a process called deindustrialisation. In farming, the British forced many farmers to grow cash crops like indigo, cotton and opium for export instead of food, which sometimes led to food shortages and famines. These policies damaged India's self-reliant economy and caused great hardship to artisans and farmers.",
+          "easyExplanation": "British policies ruined India's handicrafts with cheap factory cloth (deindustrialisation) and forced farmers to grow cash crops, causing hardship.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Famous handicrafts",
+              "explanation": "India was known for fine textiles."
+            },
+            {
+              "step": 2,
+              "title": "Deindustrialisation",
+              "explanation": "Cheap British cloth ruined Indian weavers."
+            },
+            {
+              "step": 3,
+              "title": "Cash crops",
+              "explanation": "Farmers forced to grow indigo, cotton, opium."
+            },
+            {
+              "step": 4,
+              "title": "Hardship",
+              "explanation": "Food shortages and famines resulted."
+            }
+          ],
+          "examples": [
+            "Cheap British cloth ruined Indian weavers.",
+            "Farmers were forced to grow indigo for export."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Deindustrialisation",
+              "definition": "Decline of local industries.",
+              "simpleExample": "Deindustrialisation ruined weavers."
+            },
+            {
+              "keyword": "Cash crop",
+              "definition": "A crop grown to sell, not eat.",
+              "simpleExample": "Indigo was a cash crop."
+            },
+            {
+              "keyword": "Famine",
+              "definition": "A severe shortage of food.",
+              "simpleExample": "Cash cropping led to famines."
+            }
+          ],
+          "quickSummary": "Colonial policies ruined India's handicrafts through cheap factory cloth (deindustrialisation) and forced farmers to grow cash crops for export, causing food shortages and hardship.",
+          "revisionNotes": [
+            "India's fine textiles were famous.",
+            "Cheap British cloth ruined weavers (deindustrialisation).",
+            "Farmers forced into cash crops (indigo, opium).",
+            "Caused food shortages and famines."
+          ]
+        },
+        {
+          "topicId": "sst8_ch4_t6",
+          "topic": "Social and Administrative Changes",
+          "meaning": "Colonial rule brought new administration, laws, railways and education, with mixed effects on Indian society.",
+          "ncertBasedExplanation": "The British introduced many changes to administer their vast colony. They set up a centralised administration with civil servants, police and courts, and a uniform system of laws. They built railways, roads, the telegraph and a postal system, mainly to move goods and troops and to strengthen their control, though these also connected the country. They introduced English education, which created a new educated class. While some of these changes had useful long-term effects, they were made chiefly to serve British interests, and they often disrupted traditional Indian society.",
+          "easyExplanation": "The British built railways, courts and English education, mainly to serve their rule, with mixed effects on Indian society.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "New administration",
+              "explanation": "Civil servants, police, courts and laws."
+            },
+            {
+              "step": 2,
+              "title": "Railways and telegraph",
+              "explanation": "Built to move goods, troops and control."
+            },
+            {
+              "step": 3,
+              "title": "English education",
+              "explanation": "Created a new educated class."
+            },
+            {
+              "step": 4,
+              "title": "Mixed effects",
+              "explanation": "Useful at times, but served British interests."
+            }
+          ],
+          "examples": [
+            "The British built railways across India.",
+            "English education created a new educated class."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Administration",
+              "definition": "The running of a state.",
+              "simpleExample": "The British set up a new administration."
+            },
+            {
+              "keyword": "Railway",
+              "definition": "A network of train tracks.",
+              "simpleExample": "Railways moved goods and troops."
+            },
+            {
+              "keyword": "Civil servant",
+              "definition": "An official who runs the government.",
+              "simpleExample": "Civil servants ran the administration."
+            }
+          ],
+          "quickSummary": "Colonial rule brought new administration, laws, railways and English education, built chiefly to serve British control but with mixed long-term effects on Indian society.",
+          "revisionNotes": [
+            "New administration: civil servants, courts, laws.",
+            "Railways and telegraph for control.",
+            "English education made a new class.",
+            "Mainly served British interests."
+          ]
+        },
+        {
+          "topicId": "sst8_ch4_t7",
+          "topic": "Resistance to Colonial Rule",
+          "meaning": "Indians resisted colonial rule through revolts and movements, leading toward the freedom struggle.",
+          "ncertBasedExplanation": "Indians did not accept colonial rule quietly. From the beginning, there were many revolts and uprisings by rulers, farmers, tribes and soldiers against British control and harsh policies. A major uprising in 1857 shook British rule across large parts of India. Although such revolts were eventually suppressed, they showed deep discontent with colonial rule. Over time, this resistance grew into an organised freedom struggle, with leaders and movements demanding rights and, finally, independence. The spirit of resistance kept alive the desire for self-rule throughout the colonial era.",
+          "easyExplanation": "Indians resisted colonial rule through many revolts, including a major uprising in 1857, which grew into the organised freedom struggle.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Did not accept quietly",
+              "explanation": "Indians resisted colonial rule."
+            },
+            {
+              "step": 2,
+              "title": "Many revolts",
+              "explanation": "Rulers, farmers, tribes and soldiers rose up."
+            },
+            {
+              "step": 3,
+              "title": "1857 uprising",
+              "explanation": "A major revolt shook British rule."
+            },
+            {
+              "step": 4,
+              "title": "Grew into a struggle",
+              "explanation": "Resistance led to the freedom movement."
+            }
+          ],
+          "examples": [
+            "A major uprising took place in 1857.",
+            "Farmers and tribes revolted against harsh policies."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Resistance",
+              "definition": "Opposing and fighting back.",
+              "simpleExample": "Indians showed resistance."
+            },
+            {
+              "keyword": "Revolt",
+              "definition": "An uprising against rule.",
+              "simpleExample": "The 1857 revolt."
+            },
+            {
+              "keyword": "Freedom struggle",
+              "definition": "The movement for independence.",
+              "simpleExample": "Resistance grew into a freedom struggle."
+            }
+          ],
+          "quickSummary": "Indians resisted colonial rule through many revolts, including the major 1857 uprising, and this resistance grew into the organised struggle for freedom.",
+          "revisionNotes": [
+            "Indians resisted colonial rule.",
+            "Many revolts by rulers, farmers, soldiers.",
+            "Major uprising in 1857.",
+            "Grew into the freedom struggle."
+          ]
+        },
+        {
+          "topicId": "sst8_ch4_t8",
+          "topic": "Legacy of the Colonial Era",
+          "meaning": "The colonial era left deep effects on India that shaped the country even after independence.",
+          "ncertBasedExplanation": "The colonial era left a deep and lasting mark on India. It drained the country's wealth and left it poorer, but it also, unintentionally, created some shared institutions, a common administration, railways and a network of communication, and a sense of unity in the struggle against foreign rule. The experience of colonialism shaped India's economy, politics and society, and the lessons learned, about self-reliance, unity and freedom, guided the building of independent India. Studying this era helps us understand both the harm of colonial rule and the strength Indians showed in overcoming it.",
+          "easyExplanation": "The colonial era drained India's wealth but also left shared institutions and a strong desire for unity and freedom that shaped independent India.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Lasting mark",
+              "explanation": "Colonial rule deeply affected India."
+            },
+            {
+              "step": 2,
+              "title": "Drained wealth",
+              "explanation": "It left the country poorer."
+            },
+            {
+              "step": 3,
+              "title": "Shared institutions",
+              "explanation": "Common administration, railways, communication."
+            },
+            {
+              "step": 4,
+              "title": "Shaped independent India",
+              "explanation": "Lessons of unity and self-reliance."
+            }
+          ],
+          "examples": [
+            "Colonialism left India poorer but more unified in struggle.",
+            "Lessons of self-reliance guided independent India."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Legacy",
+              "definition": "What is left from the past.",
+              "simpleExample": "The colonial legacy shaped India."
+            },
+            {
+              "keyword": "Self-reliance",
+              "definition": "Depending on oneself.",
+              "simpleExample": "Indians valued self-reliance."
+            },
+            {
+              "keyword": "Unity",
+              "definition": "Being united as one.",
+              "simpleExample": "The struggle built unity."
+            }
+          ],
+          "quickSummary": "The colonial era drained India's wealth but also left shared institutions and a strong desire for unity and freedom that guided the building of independent India.",
+          "revisionNotes": [
+            "Colonial rule left a deep mark.",
+            "Drained wealth; left India poorer.",
+            "Also left shared institutions.",
+            "Shaped a united, free India."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 5,
+      "chapter": "Universal Franchise and India's Democracy",
+      "topics": [
+        {
+          "topicId": "sst8_ch5_t1",
+          "topic": "What is Universal Adult Franchise",
+          "meaning": "Universal adult franchise means every adult citizen has the right to vote, regardless of differences.",
+          "ncertBasedExplanation": "Universal adult franchise is the principle that every adult citizen of a country has the right to vote in elections, regardless of their religion, caste, gender, wealth, education or any other difference. The word franchise means the right to vote. 'Universal' means it applies to all adults, and 'adult' means people above a certain age (18 in India). This principle treats all citizens as equal and gives everyone a say in choosing their government. It is one of the most important features of a democracy.",
+          "easyExplanation": "Universal adult franchise means every adult citizen can vote, no matter their religion, caste, gender or wealth. In India, adults are 18 and above.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Right to vote",
+              "explanation": "Franchise means the right to vote."
+            },
+            {
+              "step": 2,
+              "title": "For all adults",
+              "explanation": "Every adult citizen can vote."
+            },
+            {
+              "step": 3,
+              "title": "Regardless of differences",
+              "explanation": "No matter caste, gender, wealth or religion."
+            },
+            {
+              "step": 4,
+              "title": "Adult age",
+              "explanation": "In India, 18 years and above."
+            }
+          ],
+          "examples": [
+            "Every Indian aged 18 and above can vote.",
+            "Universal franchise treats all citizens as equal."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Franchise",
+              "definition": "The right to vote.",
+              "simpleExample": "Franchise lets citizens choose leaders."
+            },
+            {
+              "keyword": "Universal adult franchise",
+              "definition": "Every adult's right to vote.",
+              "simpleExample": "India has universal adult franchise."
+            },
+            {
+              "keyword": "Adult",
+              "definition": "A person above a set age.",
+              "simpleExample": "In India, adults are 18 and above."
+            }
+          ],
+          "quickSummary": "Universal adult franchise means every adult citizen has the right to vote regardless of differences; in India, all citizens aged 18 and above can vote.",
+          "revisionNotes": [
+            "Franchise = the right to vote.",
+            "Universal: all adults.",
+            "Regardless of caste, gender, wealth, religion.",
+            "In India, age 18 and above."
+          ]
+        },
+        {
+          "topicId": "sst8_ch5_t2",
+          "topic": "The Right to Vote",
+          "meaning": "The right to vote allows citizens to choose their representatives and influence how they are governed.",
+          "ncertBasedExplanation": "The right to vote is one of the most powerful rights citizens have in a democracy. By casting a vote, each citizen helps choose the representatives who will form the government and make decisions on their behalf. The right to vote gives ordinary people a real say in how they are governed and makes leaders answerable to them; if people are unhappy, they can vote for different leaders next time. Because each adult has one vote of equal value, the right to vote also expresses the equality of all citizens.",
+          "easyExplanation": "The right to vote lets citizens choose their leaders and have a say in government. Each adult has one vote of equal value.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "A powerful right",
+              "explanation": "Voting is a key democratic right."
+            },
+            {
+              "step": 2,
+              "title": "Choose representatives",
+              "explanation": "Voters pick who forms the government."
+            },
+            {
+              "step": 3,
+              "title": "A real say",
+              "explanation": "People influence how they are governed."
+            },
+            {
+              "step": 4,
+              "title": "Equal value",
+              "explanation": "Each adult has one equal vote."
+            }
+          ],
+          "examples": [
+            "By voting, citizens choose their representatives.",
+            "One person, one vote shows everyone is equal."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Right to vote",
+              "definition": "The power to choose leaders by voting.",
+              "simpleExample": "Voting is a key right."
+            },
+            {
+              "keyword": "Representative",
+              "definition": "A person elected to act for others.",
+              "simpleExample": "We elect representatives."
+            },
+            {
+              "keyword": "Answerable",
+              "definition": "Having to explain to others.",
+              "simpleExample": "Leaders are answerable to voters."
+            }
+          ],
+          "quickSummary": "The right to vote lets citizens choose their representatives and have a say in government, with each adult's single equal vote expressing the equality of all.",
+          "revisionNotes": [
+            "Voting is a powerful right.",
+            "Citizens choose their representatives.",
+            "Gives a real say in government.",
+            "One person, one equal vote."
+          ]
+        },
+        {
+          "topicId": "sst8_ch5_t3",
+          "topic": "The Struggle for Voting Rights",
+          "meaning": "In many countries, people had to struggle for a long time to win the right to vote for everyone.",
+          "ncertBasedExplanation": "Universal adult franchise was not always granted; in many countries, the right to vote was won only after long struggles. In the past, voting was often limited to wealthy men, or to people of a certain religion, race or property, while women, the poor and others were denied the vote. Through movements and campaigns over many years, people fought to extend the franchise until, gradually, all adults gained the right to vote. Knowing this history helps us value the right to vote and not take it for granted.",
+          "easyExplanation": "In many countries, voting was once limited to wealthy men, and people struggled for years to win the vote for all adults.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Not always granted",
+              "explanation": "The vote was won through struggle."
+            },
+            {
+              "step": 2,
+              "title": "Once limited",
+              "explanation": "Restricted to wealthy men or certain groups."
+            },
+            {
+              "step": 3,
+              "title": "Many were denied",
+              "explanation": "Women, the poor and others could not vote."
+            },
+            {
+              "step": 4,
+              "title": "Won over time",
+              "explanation": "Movements extended the vote to all adults."
+            }
+          ],
+          "examples": [
+            "In the past, only wealthy men could vote in some countries.",
+            "People struggled for years to win the vote for all."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Struggle",
+              "definition": "A long effort to win something.",
+              "simpleExample": "The struggle for voting rights."
+            },
+            {
+              "keyword": "Restricted",
+              "definition": "Limited to a few.",
+              "simpleExample": "Voting was once restricted."
+            },
+            {
+              "keyword": "Extend the franchise",
+              "definition": "Give more people the vote.",
+              "simpleExample": "Movements extended the franchise."
+            }
+          ],
+          "quickSummary": "Universal adult franchise was won only after long struggles, as voting was once limited to wealthy men and others were denied it until movements extended it to all adults.",
+          "revisionNotes": [
+            "Voting was once limited to a few.",
+            "Wealthy men only in many places.",
+            "Women and poor were denied.",
+            "Won through long struggles."
+          ]
+        },
+        {
+          "topicId": "sst8_ch5_t4",
+          "topic": "Universal Franchise in India",
+          "meaning": "India adopted universal adult franchise from the start, giving every adult the vote.",
+          "ncertBasedExplanation": "When India became independent and adopted its Constitution, it made a bold and remarkable choice: it gave universal adult franchise to all citizens from the very beginning. Unlike many countries that extended the vote slowly over time, India gave every adult, rich or poor, man or woman, of every caste and religion, the right to vote at once. This was a powerful statement of equality in a country with great diversity and many inequalities. It made India the world's largest democracy and reflected the faith of its leaders in the ability of ordinary people to choose wisely.",
+          "easyExplanation": "India gave universal adult franchise to all citizens from the start, making it the world's largest democracy, a bold step toward equality.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "From the start",
+              "explanation": "India adopted it with the Constitution."
+            },
+            {
+              "step": 2,
+              "title": "To every adult",
+              "explanation": "Rich or poor, man or woman, all castes."
+            },
+            {
+              "step": 3,
+              "title": "Bold choice",
+              "explanation": "Unlike countries that extended it slowly."
+            },
+            {
+              "step": 4,
+              "title": "Largest democracy",
+              "explanation": "It made India the world's largest democracy."
+            }
+          ],
+          "examples": [
+            "India gave all adults the vote from the start.",
+            "Universal franchise made India the largest democracy."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Universal franchise",
+              "definition": "Every adult's right to vote.",
+              "simpleExample": "India adopted universal franchise."
+            },
+            {
+              "keyword": "Constitution",
+              "definition": "The basic rules of a country.",
+              "simpleExample": "The Constitution gave the franchise."
+            },
+            {
+              "keyword": "Equality",
+              "definition": "Being treated the same.",
+              "simpleExample": "Universal franchise shows equality."
+            }
+          ],
+          "quickSummary": "India adopted universal adult franchise from the very start with its Constitution, giving every adult the vote and becoming the world's largest democracy.",
+          "revisionNotes": [
+            "India gave universal franchise from the start.",
+            "To every adult, regardless of differences.",
+            "A bold step toward equality.",
+            "Made India the largest democracy."
+          ]
+        },
+        {
+          "topicId": "sst8_ch5_t5",
+          "topic": "Elections in India",
+          "meaning": "Elections are the process by which citizens choose their representatives by voting.",
+          "ncertBasedExplanation": "Elections are the way a democracy lets people choose their government. In India, elections are held regularly to choose representatives for the Lok Sabha (the national level), the state assemblies, and local bodies. Candidates from different political parties stand for election, campaign to win support, and citizens cast secret votes to choose among them. The candidate with the most votes in an area wins. Free and fair elections, held at fixed times, ensure that the government reflects the will of the people and remains answerable to them.",
+          "easyExplanation": "Elections let citizens choose their representatives by voting. In India they are held regularly for Parliament, states and local bodies.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Choosing government",
+              "explanation": "Elections let people choose leaders."
+            },
+            {
+              "step": 2,
+              "title": "Held regularly",
+              "explanation": "For Lok Sabha, states and local bodies."
+            },
+            {
+              "step": 3,
+              "title": "Candidates and parties",
+              "explanation": "People stand and campaign for votes."
+            },
+            {
+              "step": 4,
+              "title": "Secret vote",
+              "explanation": "Citizens vote secretly; the most votes win."
+            }
+          ],
+          "examples": [
+            "Elections to the Lok Sabha choose national leaders.",
+            "Candidates campaign to win citizens' votes."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Election",
+              "definition": "Choosing leaders by voting.",
+              "simpleExample": "Elections are held regularly."
+            },
+            {
+              "keyword": "Candidate",
+              "definition": "A person standing for election.",
+              "simpleExample": "Candidates campaign for votes."
+            },
+            {
+              "keyword": "Political party",
+              "definition": "A group seeking to form government.",
+              "simpleExample": "Parties contest elections."
+            }
+          ],
+          "quickSummary": "Elections let citizens choose their representatives by secret voting; in India they are held regularly for Parliament, state assemblies and local bodies to keep government answerable.",
+          "revisionNotes": [
+            "Elections: choosing representatives by voting.",
+            "Held regularly for Parliament, states, local bodies.",
+            "Candidates and parties campaign.",
+            "Secret vote; most votes win."
+          ]
+        },
+        {
+          "topicId": "sst8_ch5_t6",
+          "topic": "The Election Commission",
+          "meaning": "The Election Commission is an independent body that conducts free and fair elections in India.",
+          "ncertBasedExplanation": "To make sure elections are free and fair, India has an independent Election Commission. This body organises and supervises elections, prepares the voters' list, fixes the dates, sets rules for candidates and parties (a code of conduct), and ensures that voting and counting are honest. Being independent of the government, the Election Commission can act without fear or favour, so that no party can misuse power to win unfairly. Its work is essential for keeping India's democracy strong and trustworthy.",
+          "easyExplanation": "The Election Commission is an independent body that conducts free and fair elections in India, organising voting and setting the rules.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Independent body",
+              "explanation": "It is free of government control."
+            },
+            {
+              "step": 2,
+              "title": "Organises elections",
+              "explanation": "Prepares voter lists and fixes dates."
+            },
+            {
+              "step": 3,
+              "title": "Sets the rules",
+              "explanation": "A code of conduct for candidates and parties."
+            },
+            {
+              "step": 4,
+              "title": "Ensures fairness",
+              "explanation": "Keeps voting and counting honest."
+            }
+          ],
+          "examples": [
+            "The Election Commission fixes election dates and rules.",
+            "An independent commission keeps elections fair."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Election Commission",
+              "definition": "Body that conducts elections.",
+              "simpleExample": "The Election Commission runs elections."
+            },
+            {
+              "keyword": "Independent",
+              "definition": "Free of outside control.",
+              "simpleExample": "The Commission is independent."
+            },
+            {
+              "keyword": "Code of conduct",
+              "definition": "Rules for fair behaviour.",
+              "simpleExample": "Parties follow a code of conduct."
+            }
+          ],
+          "quickSummary": "The Election Commission is an independent body that conducts free and fair elections in India by organising voting, preparing voter lists and enforcing rules.",
+          "revisionNotes": [
+            "Election Commission: independent body.",
+            "Organises and supervises elections.",
+            "Prepares voter lists; sets rules.",
+            "Keeps elections free and fair."
+          ]
+        },
+        {
+          "topicId": "sst8_ch5_t7",
+          "topic": "Importance of Voting",
+          "meaning": "Voting is important because it lets citizens shape their government and strengthens democracy.",
+          "ncertBasedExplanation": "Voting matters because it is the main way ordinary citizens take part in running their country. Every vote helps decide who governs and what policies are followed, so voting gives people power over decisions that affect their lives. When many people vote, the government truly reflects the people's wishes and is more answerable. When people do not vote, they give up their say. Voting is also a duty as well as a right, because a strong democracy depends on citizens taking part. Each vote, however small it seems, adds up to shape the nation.",
+          "easyExplanation": "Voting matters because it lets citizens shape their government and policies. When people vote, democracy is stronger and more answerable.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Taking part",
+              "explanation": "Voting is how citizens take part in governing."
+            },
+            {
+              "step": 2,
+              "title": "Shapes government",
+              "explanation": "Votes decide who governs and how."
+            },
+            {
+              "step": 3,
+              "title": "Reflects the people",
+              "explanation": "More voting means a more answerable government."
+            },
+            {
+              "step": 4,
+              "title": "A right and duty",
+              "explanation": "Strong democracy needs citizens to vote."
+            }
+          ],
+          "examples": [
+            "Every vote helps decide who governs.",
+            "Not voting means giving up your say."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Voting",
+              "definition": "Casting a vote in an election.",
+              "simpleExample": "Voting shapes the government."
+            },
+            {
+              "keyword": "Participation",
+              "definition": "Taking part.",
+              "simpleExample": "Voting is participation in democracy."
+            },
+            {
+              "keyword": "Duty",
+              "definition": "Something one should do.",
+              "simpleExample": "Voting is a duty."
+            }
+          ],
+          "quickSummary": "Voting is important because it lets citizens shape their government and policies; high participation makes democracy stronger and more answerable, so voting is both a right and a duty.",
+          "revisionNotes": [
+            "Voting lets citizens shape government.",
+            "Every vote helps decide who governs.",
+            "High turnout strengthens democracy.",
+            "A right and a duty."
+          ]
+        },
+        {
+          "topicId": "sst8_ch5_t8",
+          "topic": "Being a Responsible Voter",
+          "meaning": "A responsible voter votes thoughtfully and honestly, helping democracy work well.",
+          "ncertBasedExplanation": "Having the right to vote also brings responsibility. A responsible voter learns about the candidates and issues, thinks carefully rather than voting blindly, and chooses based on what is good for the country and community, not on money, fear or narrow loyalties. Responsible voters also encourage others to vote, respect the rules, and accept election results peacefully. When citizens vote responsibly, they elect good leaders and keep democracy healthy. Even though students cannot yet vote, they can prepare by learning about democracy and discussing issues thoughtfully.",
+          "easyExplanation": "A responsible voter learns about the issues, votes thoughtfully for the common good, and respects the rules and results.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Responsibility with the right",
+              "explanation": "Voting carries responsibility."
+            },
+            {
+              "step": 2,
+              "title": "Be informed",
+              "explanation": "Learn about candidates and issues."
+            },
+            {
+              "step": 3,
+              "title": "Vote for the common good",
+              "explanation": "Not for money, fear or narrow loyalty."
+            },
+            {
+              "step": 4,
+              "title": "Respect the process",
+              "explanation": "Encourage others; accept results peacefully."
+            }
+          ],
+          "examples": [
+            "A responsible voter studies the issues before voting.",
+            "Students can prepare by learning about democracy."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Responsible voter",
+              "definition": "One who votes thoughtfully and honestly.",
+              "simpleExample": "Be a responsible voter."
+            },
+            {
+              "keyword": "Informed",
+              "definition": "Knowing the facts.",
+              "simpleExample": "An informed voter knows the issues."
+            },
+            {
+              "keyword": "Common good",
+              "definition": "The good of everyone.",
+              "simpleExample": "Vote for the common good."
+            }
+          ],
+          "quickSummary": "A responsible voter learns about the issues, votes thoughtfully for the common good, and respects the rules and results, helping democracy work well.",
+          "revisionNotes": [
+            "Voting brings responsibility.",
+            "Be informed about candidates and issues.",
+            "Vote for the common good.",
+            "Respect rules; accept results peacefully."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 6,
+      "chapter": "The Parliamentary System",
+      "topics": [
+        {
+          "topicId": "sst8_ch6_t1",
+          "topic": "What is a Parliamentary System",
+          "meaning": "A parliamentary system is a form of government in which the elected legislature (parliament) is central and the executive is drawn from and answerable to it.",
+          "ncertBasedExplanation": "India follows a parliamentary system of government. In this system, people elect representatives to a legislature called the Parliament, and the government (the executive), led by the Prime Minister, is formed from the party or group with majority support in Parliament. The government must keep the support of Parliament to stay in power and is answerable to it. This is different from a system where a president is elected separately. The parliamentary system links the law-making body and the government closely and keeps the government responsible to the elected representatives of the people.",
+          "easyExplanation": "In a parliamentary system, people elect a Parliament, and the government led by the Prime Minister comes from and is answerable to that Parliament.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "People elect Parliament",
+              "explanation": "Voters choose representatives."
+            },
+            {
+              "step": 2,
+              "title": "Government from Parliament",
+              "explanation": "The PM and ministers come from Parliament."
+            },
+            {
+              "step": 3,
+              "title": "Needs majority support",
+              "explanation": "The government must keep Parliament's support."
+            },
+            {
+              "step": 4,
+              "title": "Answerable",
+              "explanation": "The government is responsible to Parliament."
+            }
+          ],
+          "examples": [
+            "India has a parliamentary system.",
+            "The government must keep the support of Parliament."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Parliamentary system",
+              "definition": "Government answerable to parliament.",
+              "simpleExample": "India has a parliamentary system."
+            },
+            {
+              "keyword": "Legislature",
+              "definition": "The law-making body.",
+              "simpleExample": "Parliament is the legislature."
+            },
+            {
+              "keyword": "Executive",
+              "definition": "The government that runs the country.",
+              "simpleExample": "The PM leads the executive."
+            }
+          ],
+          "quickSummary": "In a parliamentary system, people elect a Parliament, and the government led by the Prime Minister is drawn from and answerable to it, as in India.",
+          "revisionNotes": [
+            "Parliamentary system: Parliament is central.",
+            "People elect representatives.",
+            "Government comes from Parliament.",
+            "Answerable to Parliament; led by the PM."
+          ]
+        },
+        {
+          "topicId": "sst8_ch6_t2",
+          "topic": "The Parliament of India",
+          "meaning": "The Parliament of India is the country's highest law-making body, made up of two houses and the President.",
+          "ncertBasedExplanation": "The Parliament of India is the supreme law-making body of the country. It is made up of two houses, the Lok Sabha (House of the People) and the Rajya Sabha (Council of States), together with the President of India. Parliament makes laws for the whole country, controls government finances, and holds the government answerable through questions and debates. It represents the people of India and is the centre of the country's democracy. Major decisions about laws, taxes and national matters are taken in Parliament.",
+          "easyExplanation": "The Parliament of India is the highest law-making body, with two houses, the Lok Sabha and Rajya Sabha, plus the President.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Highest law-making body",
+              "explanation": "Parliament makes laws for the country."
+            },
+            {
+              "step": 2,
+              "title": "Two houses",
+              "explanation": "The Lok Sabha and the Rajya Sabha."
+            },
+            {
+              "step": 3,
+              "title": "With the President",
+              "explanation": "The President is part of Parliament."
+            },
+            {
+              "step": 4,
+              "title": "Holds government answerable",
+              "explanation": "Through questions and debates."
+            }
+          ],
+          "examples": [
+            "Parliament has two houses, the Lok Sabha and Rajya Sabha.",
+            "Parliament makes laws and controls finances."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Parliament",
+              "definition": "The highest law-making body.",
+              "simpleExample": "Parliament makes national laws."
+            },
+            {
+              "keyword": "Lok Sabha",
+              "definition": "The House of the People.",
+              "simpleExample": "The Lok Sabha is directly elected."
+            },
+            {
+              "keyword": "Rajya Sabha",
+              "definition": "The Council of States.",
+              "simpleExample": "The Rajya Sabha represents the states."
+            }
+          ],
+          "quickSummary": "The Parliament of India is the country's highest law-making body, made up of the Lok Sabha, the Rajya Sabha and the President, which makes laws and holds the government answerable.",
+          "revisionNotes": [
+            "Parliament: highest law-making body.",
+            "Two houses: Lok Sabha, Rajya Sabha.",
+            "Plus the President.",
+            "Makes laws; holds government answerable."
+          ]
+        },
+        {
+          "topicId": "sst8_ch6_t3",
+          "topic": "The Lok Sabha",
+          "meaning": "The Lok Sabha is the House of the People, whose members are directly elected by the people.",
+          "ncertBasedExplanation": "The Lok Sabha, or House of the People, is the lower house of Parliament and the one closest to the people. Its members (Members of Parliament, or MPs) are directly elected by the citizens through general elections, with each MP representing a constituency. The party or group with a majority in the Lok Sabha forms the government, and the Prime Minister is usually a leader of that majority. The Lok Sabha plays the main role in making laws and controlling government finances, and the government is mainly answerable to it.",
+          "easyExplanation": "The Lok Sabha (House of the People) has members directly elected by the people. The majority party in it forms the government.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "House of the People",
+              "explanation": "The Lok Sabha is the lower house."
+            },
+            {
+              "step": 2,
+              "title": "Directly elected",
+              "explanation": "Members are chosen by the people."
+            },
+            {
+              "step": 3,
+              "title": "Constituencies",
+              "explanation": "Each MP represents an area."
+            },
+            {
+              "step": 4,
+              "title": "Forms government",
+              "explanation": "The majority forms the government."
+            }
+          ],
+          "examples": [
+            "Lok Sabha members are directly elected by citizens.",
+            "The majority party in the Lok Sabha forms the government."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Lok Sabha",
+              "definition": "The directly elected House of the People.",
+              "simpleExample": "Lok Sabha members are MPs."
+            },
+            {
+              "keyword": "Member of Parliament",
+              "definition": "An elected member of Parliament.",
+              "simpleExample": "An MP represents a constituency."
+            },
+            {
+              "keyword": "Constituency",
+              "definition": "An area that elects a representative.",
+              "simpleExample": "Each MP has a constituency."
+            }
+          ],
+          "quickSummary": "The Lok Sabha is the House of the People whose members are directly elected; the majority party in it forms the government and it leads law-making and finance.",
+          "revisionNotes": [
+            "Lok Sabha: House of the People.",
+            "Members directly elected by citizens.",
+            "Each MP represents a constituency.",
+            "Majority forms the government."
+          ]
+        },
+        {
+          "topicId": "sst8_ch6_t4",
+          "topic": "The Rajya Sabha",
+          "meaning": "The Rajya Sabha is the Council of States, representing the states of India.",
+          "ncertBasedExplanation": "The Rajya Sabha, or Council of States, is the upper house of Parliament. Its members are not directly elected by the people; instead, they are mostly elected by the elected members of the state legislatures, so that the states are represented at the national level. A few members are nominated for their special knowledge in fields like art, science or social service. The Rajya Sabha reviews and revises laws passed by the Lok Sabha, gives the states a voice, and provides a second look at important decisions. It is a permanent house that is never fully dissolved.",
+          "easyExplanation": "The Rajya Sabha (Council of States) represents the states. Its members are mostly elected by state legislatures, not directly by people.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Council of States",
+              "explanation": "The Rajya Sabha is the upper house."
+            },
+            {
+              "step": 2,
+              "title": "Represents states",
+              "explanation": "It gives the states a voice."
+            },
+            {
+              "step": 3,
+              "title": "Indirectly elected",
+              "explanation": "Mostly chosen by state legislatures."
+            },
+            {
+              "step": 4,
+              "title": "Reviews laws",
+              "explanation": "It revises laws and gives a second look."
+            }
+          ],
+          "examples": [
+            "Rajya Sabha members are elected by state legislatures.",
+            "The Rajya Sabha gives the states a voice."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Rajya Sabha",
+              "definition": "The Council of States.",
+              "simpleExample": "The Rajya Sabha represents states."
+            },
+            {
+              "keyword": "Upper house",
+              "definition": "The reviewing house of Parliament.",
+              "simpleExample": "The Rajya Sabha is the upper house."
+            },
+            {
+              "keyword": "Nominated",
+              "definition": "Appointed for special knowledge.",
+              "simpleExample": "Some members are nominated."
+            }
+          ],
+          "quickSummary": "The Rajya Sabha is the Council of States, representing the states, with members mostly elected by state legislatures; it reviews laws and gives the states a voice.",
+          "revisionNotes": [
+            "Rajya Sabha: Council of States.",
+            "Represents the states.",
+            "Members elected by state legislatures.",
+            "Reviews and revises laws."
+          ]
+        },
+        {
+          "topicId": "sst8_ch6_t5",
+          "topic": "The President of India",
+          "meaning": "The President is the constitutional head of the country and a part of Parliament.",
+          "ncertBasedExplanation": "The President of India is the head of the state and the constitutional head of the country. The President is part of Parliament and performs important duties: a bill becomes a law only after the President's assent, the President appoints the Prime Minister and other key officials, and is the supreme commander of the armed forces. However, in the parliamentary system, the President normally acts on the advice of the Council of Ministers led by the Prime Minister, who runs the actual government. So the President's role is mainly to uphold the Constitution and represent the nation.",
+          "easyExplanation": "The President is the head of state and part of Parliament. A bill becomes law with the President's assent, but the President acts on the advice of the Council of Ministers.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Head of state",
+              "explanation": "The President heads the country."
+            },
+            {
+              "step": 2,
+              "title": "Part of Parliament",
+              "explanation": "Bills need the President's assent."
+            },
+            {
+              "step": 3,
+              "title": "Key appointments",
+              "explanation": "Appoints the PM and others."
+            },
+            {
+              "step": 4,
+              "title": "Acts on advice",
+              "explanation": "Normally follows the Council of Ministers."
+            }
+          ],
+          "examples": [
+            "A bill becomes law after the President's assent.",
+            "The President appoints the Prime Minister."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "President",
+              "definition": "The constitutional head of state.",
+              "simpleExample": "The President heads the country."
+            },
+            {
+              "keyword": "Assent",
+              "definition": "Approval that makes a bill law.",
+              "simpleExample": "A bill needs the President's assent."
+            },
+            {
+              "keyword": "Council of Ministers",
+              "definition": "The PM and ministers who govern.",
+              "simpleExample": "The President acts on their advice."
+            }
+          ],
+          "quickSummary": "The President is the constitutional head of state and part of Parliament whose assent makes bills law, but who normally acts on the advice of the Council of Ministers.",
+          "revisionNotes": [
+            "President: head of state.",
+            "Part of Parliament; gives assent to bills.",
+            "Appoints the PM and key officials.",
+            "Acts on the Council of Ministers' advice."
+          ]
+        },
+        {
+          "topicId": "sst8_ch6_t6",
+          "topic": "How a Law is Made",
+          "meaning": "A law is made when a proposal called a bill is passed by both houses of Parliament and approved by the President.",
+          "ncertBasedExplanation": "Laws in India are made through a careful process in Parliament. A proposed law is called a bill. A bill is introduced in one of the houses, where it is discussed, debated and may be changed. If it is passed by that house, it goes to the other house, where the same happens. Once both the Lok Sabha and the Rajya Sabha pass the bill, it goes to the President; after the President gives assent, the bill becomes a law (an Act). This step-by-step process, with debate in both houses, ensures that laws are carefully considered before they are made.",
+          "easyExplanation": "A proposed law (bill) is debated and passed by both houses of Parliament, then signed by the President, to become a law.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "A bill",
+              "explanation": "A proposed law is called a bill."
+            },
+            {
+              "step": 2,
+              "title": "Debated in a house",
+              "explanation": "It is discussed and may be changed."
+            },
+            {
+              "step": 3,
+              "title": "Passed by both houses",
+              "explanation": "Both the Lok Sabha and Rajya Sabha must pass it."
+            },
+            {
+              "step": 4,
+              "title": "President's assent",
+              "explanation": "Then it becomes a law (an Act)."
+            }
+          ],
+          "examples": [
+            "A bill must pass both houses to become law.",
+            "After the President's assent, a bill becomes an Act."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Bill",
+              "definition": "A proposed law.",
+              "simpleExample": "A bill is debated in Parliament."
+            },
+            {
+              "keyword": "Act",
+              "definition": "A bill that has become law.",
+              "simpleExample": "A passed bill becomes an Act."
+            },
+            {
+              "keyword": "Debate",
+              "definition": "Discussion of a bill.",
+              "simpleExample": "Bills are debated before passing."
+            }
+          ],
+          "quickSummary": "A law is made when a bill is introduced, debated and passed by both houses of Parliament and then given assent by the President, becoming an Act.",
+          "revisionNotes": [
+            "A proposed law is a bill.",
+            "Debated and passed by both houses.",
+            "Then the President gives assent.",
+            "It becomes a law (an Act)."
+          ]
+        },
+        {
+          "topicId": "sst8_ch6_t7",
+          "topic": "The Executive: Prime Minister and Ministers",
+          "meaning": "The executive, led by the Prime Minister and the Council of Ministers, runs the day-to-day government.",
+          "ncertBasedExplanation": "While Parliament makes laws, the executive runs the country from day to day. The head of the executive is the Prime Minister, usually the leader of the majority party in the Lok Sabha. The Prime Minister leads the Council of Ministers, each of whom heads a department such as finance, defence, health or education. Together they make policies, carry out the laws, and run the administration. The executive is drawn from Parliament and is answerable to it; if it loses the support of the Lok Sabha, it must resign. This keeps the government responsible to the people's representatives.",
+          "easyExplanation": "The executive, led by the Prime Minister and Council of Ministers, runs the government day to day and is answerable to Parliament.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Runs the country",
+              "explanation": "The executive carries out the laws."
+            },
+            {
+              "step": 2,
+              "title": "Prime Minister",
+              "explanation": "Head of the executive, leader of the majority."
+            },
+            {
+              "step": 3,
+              "title": "Council of Ministers",
+              "explanation": "Each heads a department."
+            },
+            {
+              "step": 4,
+              "title": "Answerable",
+              "explanation": "Must keep the Lok Sabha's support."
+            }
+          ],
+          "examples": [
+            "The Prime Minister leads the Council of Ministers.",
+            "The executive must keep the Lok Sabha's support."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Executive",
+              "definition": "The part that runs the country.",
+              "simpleExample": "The PM leads the executive."
+            },
+            {
+              "keyword": "Prime Minister",
+              "definition": "Head of the government.",
+              "simpleExample": "The PM leads the ministers."
+            },
+            {
+              "keyword": "Council of Ministers",
+              "definition": "The ministers running departments.",
+              "simpleExample": "Each minister heads a department."
+            }
+          ],
+          "quickSummary": "The executive, led by the Prime Minister and the Council of Ministers, runs the day-to-day government, carrying out laws and remaining answerable to Parliament.",
+          "revisionNotes": [
+            "Executive runs the country day to day.",
+            "Led by the Prime Minister.",
+            "Council of Ministers heads departments.",
+            "Answerable to the Lok Sabha."
+          ]
+        },
+        {
+          "topicId": "sst8_ch6_t8",
+          "topic": "Role and Importance of Parliament",
+          "meaning": "Parliament is important because it makes laws, controls finances, represents the people and checks the government.",
+          "ncertBasedExplanation": "Parliament plays several vital roles in India's democracy. It makes the laws of the country; it controls public finances, since the government cannot raise or spend money without Parliament's approval; it represents the diverse people of India through elected members; and it holds the government answerable by questioning and debating its actions. Through these roles, Parliament ensures that the country is governed by laws made by the people's representatives and that power is not misused. A strong and active Parliament is essential for a healthy democracy.",
+          "easyExplanation": "Parliament makes laws, controls finances, represents the people and checks the government, making it central to India's democracy.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Makes laws",
+              "explanation": "Parliament passes the country's laws."
+            },
+            {
+              "step": 2,
+              "title": "Controls finances",
+              "explanation": "Government needs Parliament's approval to spend."
+            },
+            {
+              "step": 3,
+              "title": "Represents the people",
+              "explanation": "Elected members reflect India's diversity."
+            },
+            {
+              "step": 4,
+              "title": "Checks the government",
+              "explanation": "It questions and debates government actions."
+            }
+          ],
+          "examples": [
+            "Parliament must approve government spending.",
+            "Parliament questions and debates the government's actions."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Parliament",
+              "definition": "The highest law-making body.",
+              "simpleExample": "Parliament checks the government."
+            },
+            {
+              "keyword": "Finances",
+              "definition": "Money matters of the government.",
+              "simpleExample": "Parliament controls finances."
+            },
+            {
+              "keyword": "Accountable",
+              "definition": "Answerable for actions.",
+              "simpleExample": "Parliament keeps the government accountable."
+            }
+          ],
+          "quickSummary": "Parliament is important because it makes laws, controls finances, represents the people and holds the government answerable, ensuring rule by the people's representatives.",
+          "revisionNotes": [
+            "Parliament makes the laws.",
+            "Controls public finances.",
+            "Represents diverse India.",
+            "Checks and questions the government."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterNumber": 7,
+      "chapter": "Factors of Production",
+      "topics": [
+        {
+          "topicId": "sst8_ch7_t1",
+          "topic": "What is Production",
+          "meaning": "Production is the process of making goods and services using resources.",
+          "ncertBasedExplanation": "Every product around us, our clothes, shoes, school bags, furniture and phones, goes through a process before it reaches us. Production is this process of making goods and services by combining and using resources, called inputs. For example, to make bread, we need wheat, a bakery, workers and machines. Production turns raw inputs into useful outputs that satisfy human wants. Understanding production helps us see how the things we use every day are made and how the economy works to provide them.",
+          "easyExplanation": "Production is the process of making goods and services using resources (inputs). For example, making bread needs wheat, a bakery and workers.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Making goods and services",
+              "explanation": "Production creates the things we use."
+            },
+            {
+              "step": 2,
+              "title": "Uses inputs",
+              "explanation": "It combines resources or inputs."
+            },
+            {
+              "step": 3,
+              "title": "Inputs to outputs",
+              "explanation": "Turns raw materials into useful products."
+            },
+            {
+              "step": 4,
+              "title": "Satisfies wants",
+              "explanation": "Products meet human needs and wants."
+            }
+          ],
+          "examples": [
+            "Making bread is a production process.",
+            "Every product goes through production before reaching us."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Production",
+              "definition": "Making goods and services.",
+              "simpleExample": "Baking bread is production."
+            },
+            {
+              "keyword": "Input",
+              "definition": "A resource used in production.",
+              "simpleExample": "Wheat is an input."
+            },
+            {
+              "keyword": "Output",
+              "definition": "The finished good or service.",
+              "simpleExample": "Bread is the output."
+            }
+          ],
+          "quickSummary": "Production is the process of making goods and services by combining resources (inputs) into useful outputs that satisfy human wants.",
+          "revisionNotes": [
+            "Production = making goods and services.",
+            "Uses resources called inputs.",
+            "Turns inputs into outputs.",
+            "Satisfies human wants."
+          ]
+        },
+        {
+          "topicId": "sst8_ch7_t2",
+          "topic": "The Factors of Production",
+          "meaning": "The resources used to produce goods and services are called the factors of production: land, labour, capital and enterprise.",
+          "ncertBasedExplanation": "The resources or inputs used in producing goods and services are called the factors of production. There are four main factors: land (natural resources), labour (human work), capital (tools, machines and money used in production), and enterprise (the skill of organising the other factors and taking risks). All four are needed together to produce goods and services; for example, a factory needs land to stand on, workers, machines, and an entrepreneur to run it. Understanding these four factors helps us analyse how anything is produced.",
+          "easyExplanation": "The four factors of production are land, labour, capital and enterprise. All four are needed together to make goods and services.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Inputs to production",
+              "explanation": "The factors are the resources used."
+            },
+            {
+              "step": 2,
+              "title": "Four factors",
+              "explanation": "Land, labour, capital and enterprise."
+            },
+            {
+              "step": 3,
+              "title": "All needed together",
+              "explanation": "Each plays a part in production."
+            },
+            {
+              "step": 4,
+              "title": "Example",
+              "explanation": "A factory needs land, workers, machines and an entrepreneur."
+            }
+          ],
+          "examples": [
+            "Land, labour, capital and enterprise are the factors of production.",
+            "A factory needs all four factors together."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Factors of production",
+              "definition": "Resources used to produce.",
+              "simpleExample": "Land and labour are factors."
+            },
+            {
+              "keyword": "Input",
+              "definition": "A resource used in production.",
+              "simpleExample": "Machines are an input."
+            },
+            {
+              "keyword": "Goods and services",
+              "definition": "Things produced for use.",
+              "simpleExample": "Bread and haircuts are goods and services."
+            }
+          ],
+          "quickSummary": "The factors of production are the four resources, land, labour, capital and enterprise, that are combined to produce goods and services.",
+          "revisionNotes": [
+            "Factors of production = inputs used.",
+            "Four: land, labour, capital, enterprise.",
+            "All needed together.",
+            "Used to make goods and services."
+          ]
+        },
+        {
+          "topicId": "sst8_ch7_t3",
+          "topic": "Land",
+          "meaning": "Land as a factor of production means all natural resources used in producing goods and services.",
+          "ncertBasedExplanation": "In economics, 'land' as a factor of production means much more than just soil. It includes all the natural resources used in production: the ground itself, water, forests, minerals, sunlight and climate. Land provides the space on which production takes place and the raw materials taken from nature. For example, farming uses the soil and water, a factory needs a plot to stand on, and mining uses minerals from the earth. Because natural resources are limited and some cannot be renewed, using land wisely is very important.",
+          "easyExplanation": "Land as a factor means all natural resources, soil, water, forests and minerals, used in production. It is the gift of nature.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "More than soil",
+              "explanation": "Land means all natural resources."
+            },
+            {
+              "step": 2,
+              "title": "Includes",
+              "explanation": "Soil, water, forests, minerals, climate."
+            },
+            {
+              "step": 3,
+              "title": "Provides space and materials",
+              "explanation": "Production needs land and raw materials."
+            },
+            {
+              "step": 4,
+              "title": "Use wisely",
+              "explanation": "Natural resources are limited."
+            }
+          ],
+          "examples": [
+            "Farming uses land and water.",
+            "Mining takes minerals from the land."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Land",
+              "definition": "All natural resources used in production.",
+              "simpleExample": "Soil and minerals are land."
+            },
+            {
+              "keyword": "Natural resource",
+              "definition": "A useful thing from nature.",
+              "simpleExample": "Water is a natural resource."
+            },
+            {
+              "keyword": "Raw material",
+              "definition": "A material taken from nature.",
+              "simpleExample": "Minerals are raw materials."
+            }
+          ],
+          "quickSummary": "Land as a factor of production means all natural resources, soil, water, forests and minerals, used in producing goods and services.",
+          "revisionNotes": [
+            "Land = all natural resources.",
+            "Includes soil, water, forests, minerals.",
+            "Provides space and raw materials.",
+            "Limited, so use wisely."
+          ]
+        },
+        {
+          "topicId": "sst8_ch7_t4",
+          "topic": "Labour",
+          "meaning": "Labour is the human effort, physical and mental, used in producing goods and services.",
+          "ncertBasedExplanation": "Labour is the human effort, both physical and mental, that goes into producing goods and services. It includes the farmer in the field, the worker in the factory, the teacher in the classroom and the engineer who designs. Labour is essential because nothing can be produced without human work. The quality of labour can be improved through education, training, health and skills, which makes workers more productive. Because labour means people, treating workers fairly and helping them develop their skills is important for both the economy and society.",
+          "easyExplanation": "Labour is human effort, physical and mental, used in production. Education and training make labour more productive.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Human effort",
+              "explanation": "Labour is the work people do."
+            },
+            {
+              "step": 2,
+              "title": "Physical and mental",
+              "explanation": "Both kinds of effort count."
+            },
+            {
+              "step": 3,
+              "title": "Essential",
+              "explanation": "Nothing is produced without labour."
+            },
+            {
+              "step": 4,
+              "title": "Can be improved",
+              "explanation": "Education and training raise productivity."
+            }
+          ],
+          "examples": [
+            "A factory worker provides labour.",
+            "Training makes labour more productive."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Labour",
+              "definition": "Human effort used in production.",
+              "simpleExample": "A worker provides labour."
+            },
+            {
+              "keyword": "Productive",
+              "definition": "Producing more efficiently.",
+              "simpleExample": "Skilled labour is productive."
+            },
+            {
+              "keyword": "Skill",
+              "definition": "An ability gained by training.",
+              "simpleExample": "Training builds skills."
+            }
+          ],
+          "quickSummary": "Labour is the human effort, physical and mental, used in production; it is essential and can be made more productive through education, training and health.",
+          "revisionNotes": [
+            "Labour = human effort in production.",
+            "Physical and mental.",
+            "Essential to all production.",
+            "Improved by education and training."
+          ]
+        },
+        {
+          "topicId": "sst8_ch7_t5",
+          "topic": "Capital",
+          "meaning": "Capital is the man-made resources, like tools, machines and money, used to produce goods and services.",
+          "ncertBasedExplanation": "Capital, as a factor of production, means the man-made resources used to produce other goods and services. This includes tools, machines, factories, equipment, and the money used to buy them. Unlike land, capital is created by people, often by saving and investing rather than spending everything. For example, a tailor's sewing machine, a farmer's tractor and a factory's equipment are all capital. Capital makes labour more productive, because workers with good tools and machines can produce much more than those without.",
+          "easyExplanation": "Capital is man-made resources like tools, machines and money used in production. Good capital makes workers more productive.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Man-made resources",
+              "explanation": "Capital is created by people."
+            },
+            {
+              "step": 2,
+              "title": "Includes",
+              "explanation": "Tools, machines, factories and money."
+            },
+            {
+              "step": 3,
+              "title": "From saving",
+              "explanation": "Made by saving and investing."
+            },
+            {
+              "step": 4,
+              "title": "Boosts productivity",
+              "explanation": "Good tools help workers produce more."
+            }
+          ],
+          "examples": [
+            "A tractor and a sewing machine are capital.",
+            "Capital makes labour more productive."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Capital",
+              "definition": "Man-made resources used in production.",
+              "simpleExample": "Machines are capital."
+            },
+            {
+              "keyword": "Investment",
+              "definition": "Spending to create capital.",
+              "simpleExample": "Buying a machine is investment."
+            },
+            {
+              "keyword": "Tool",
+              "definition": "Equipment used in work.",
+              "simpleExample": "A tool is capital."
+            }
+          ],
+          "quickSummary": "Capital is the man-made resources, tools, machines, factories and money, used to produce goods and services, and it makes labour more productive.",
+          "revisionNotes": [
+            "Capital = man-made resources.",
+            "Tools, machines, factories, money.",
+            "Created by saving and investing.",
+            "Makes labour more productive."
+          ]
+        },
+        {
+          "topicId": "sst8_ch7_t6",
+          "topic": "Enterprise",
+          "meaning": "Enterprise is the skill of organising the other factors of production and taking risks to produce.",
+          "ncertBasedExplanation": "Enterprise is the fourth factor of production: the ability to bring together land, labour and capital, organise them, and take the risks needed to produce goods and services. The person who does this is called an entrepreneur. The entrepreneur decides what to produce, arranges the resources, manages the work, and bears the risk of loss if the business fails, while hoping to earn a profit if it succeeds. For example, a person who starts a bakery, hires workers, buys ovens and runs the business is an entrepreneur. Enterprise is the spark that sets production going.",
+          "easyExplanation": "Enterprise is the skill of organising land, labour and capital and taking risks. The entrepreneur runs the business and bears the risk.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "The fourth factor",
+              "explanation": "Enterprise organises the others."
+            },
+            {
+              "step": 2,
+              "title": "The entrepreneur",
+              "explanation": "The person who does this."
+            },
+            {
+              "step": 3,
+              "title": "Takes risks",
+              "explanation": "Bears loss if the business fails."
+            },
+            {
+              "step": 4,
+              "title": "Starts production",
+              "explanation": "Enterprise sets production going."
+            }
+          ],
+          "examples": [
+            "A person starting a bakery is an entrepreneur.",
+            "Enterprise brings together land, labour and capital."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Enterprise",
+              "definition": "Organising production and taking risks.",
+              "simpleExample": "Enterprise starts a business."
+            },
+            {
+              "keyword": "Entrepreneur",
+              "definition": "The person who runs the enterprise.",
+              "simpleExample": "A bakery owner is an entrepreneur."
+            },
+            {
+              "keyword": "Risk",
+              "definition": "The chance of loss.",
+              "simpleExample": "Entrepreneurs take risks."
+            }
+          ],
+          "quickSummary": "Enterprise is the skill of organising land, labour and capital and taking the risks to produce; the entrepreneur runs the business and bears the risk.",
+          "revisionNotes": [
+            "Enterprise organises the other factors.",
+            "The entrepreneur runs the business.",
+            "Takes risks; seeks profit.",
+            "Sets production going."
+          ]
+        },
+        {
+          "topicId": "sst8_ch7_t7",
+          "topic": "Combining the Factors of Production",
+          "meaning": "Goods and services are produced by combining all four factors of production together.",
+          "ncertBasedExplanation": "No single factor can produce anything on its own; goods and services are made by combining land, labour, capital and enterprise together in the right way. For example, to grow wheat, a farmer needs land (the field), labour (the work of farming), capital (seeds, tools, a tractor) and enterprise (deciding what and how to grow). The entrepreneur's role is to bring the other three together and organise them efficiently. How well the factors are combined affects how much is produced and at what cost. Good combination of factors leads to more and better production.",
+          "easyExplanation": "Production needs all four factors combined together. A farmer growing wheat uses land, labour, capital and enterprise.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "None alone",
+              "explanation": "No factor produces on its own."
+            },
+            {
+              "step": 2,
+              "title": "Combine all four",
+              "explanation": "Land, labour, capital and enterprise together."
+            },
+            {
+              "step": 3,
+              "title": "Example",
+              "explanation": "Growing wheat uses all four."
+            },
+            {
+              "step": 4,
+              "title": "Good combination",
+              "explanation": "Efficient combining means more output."
+            }
+          ],
+          "examples": [
+            "Growing wheat needs land, labour, capital and enterprise.",
+            "The entrepreneur combines the factors efficiently."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Combine",
+              "definition": "To bring together.",
+              "simpleExample": "Combine the factors to produce."
+            },
+            {
+              "keyword": "Efficient",
+              "definition": "Getting more from less.",
+              "simpleExample": "Efficient production uses factors well."
+            },
+            {
+              "keyword": "Output",
+              "definition": "The amount produced.",
+              "simpleExample": "Good combination raises output."
+            }
+          ],
+          "quickSummary": "Goods and services are produced by combining all four factors, land, labour, capital and enterprise, together, with the entrepreneur organising them efficiently.",
+          "revisionNotes": [
+            "No factor produces alone.",
+            "Combine land, labour, capital, enterprise.",
+            "Wheat needs all four.",
+            "Good combination raises output."
+          ]
+        },
+        {
+          "topicId": "sst8_ch7_t8",
+          "topic": "Production and the Economy",
+          "meaning": "Production using the factors creates the goods, services, jobs and income that make up the economy.",
+          "ncertBasedExplanation": "Production is at the heart of the economy. By combining the factors of production, businesses and farms create the goods and services people need, from food and clothing to phones and education. In the process, production provides jobs and incomes: workers earn wages, owners of land and capital earn rent and interest, and entrepreneurs earn profit. The more efficiently a country uses its factors of production, the more wealth and well-being it can create. Understanding production helps us see how a country grows richer and how the things we use are made and shared.",
+          "easyExplanation": "Production combines the factors to create goods, services, jobs and incomes, which together make up the economy.",
+          "stepByStepExplanation": [
+            {
+              "step": 1,
+              "title": "Heart of the economy",
+              "explanation": "Production creates what people need."
+            },
+            {
+              "step": 2,
+              "title": "Provides jobs and income",
+              "explanation": "Wages, rent, interest and profit."
+            },
+            {
+              "step": 3,
+              "title": "Efficiency matters",
+              "explanation": "Better use of factors creates more wealth."
+            },
+            {
+              "step": 4,
+              "title": "Helps a country grow",
+              "explanation": "Production builds wealth and well-being."
+            }
+          ],
+          "examples": [
+            "Production creates jobs and incomes.",
+            "Efficient production helps a country grow richer."
+          ],
+          "importantKeywords": [
+            {
+              "keyword": "Economy",
+              "definition": "The system of making and using wealth.",
+              "simpleExample": "Production drives the economy."
+            },
+            {
+              "keyword": "Income",
+              "definition": "Money earned.",
+              "simpleExample": "Wages and profit are income."
+            },
+            {
+              "keyword": "Wealth",
+              "definition": "Valuable resources and goods.",
+              "simpleExample": "Production creates wealth."
+            }
+          ],
+          "quickSummary": "Production combines the factors of production to create goods, services, jobs and incomes, which together make up the economy and help a country grow richer.",
+          "revisionNotes": [
+            "Production is the heart of the economy.",
+            "Creates goods, services, jobs, income.",
+            "Pays wages, rent, interest, profit.",
+            "Efficient production builds wealth."
+          ]
+        }
+      ]
+    }
+  ]
+}

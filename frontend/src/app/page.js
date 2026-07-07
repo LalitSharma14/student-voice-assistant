@@ -9,6 +9,7 @@ import {
   signInWithPopup,
   sendEmailVerification,
   reload,
+  getIdTokenResult,
   onAuthStateChanged,
   signOut,
 } from "firebase/auth";
@@ -581,6 +582,7 @@ export default function Home() {
   const [loginEmail,         setLoginEmail]         = useState("");
   const [loginPassword,      setLoginPassword]      = useState("");
   const [classLevel,         setClassLevel]         = useState("5");
+  const [isQaTester,         setIsQaTester]         = useState(false);
   const [board,              setBoard]              = useState("CBSE");
   const [answerLanguage,     setAnswerLanguage]     = useState("en");
   const [profileCompleted,   setProfileCompleted]   = useState(false);
@@ -726,8 +728,10 @@ export default function Home() {
     const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
       setAuthLoading(true);
       try {
-        if (!currentUser) { setUser(null); setUserProfile(null); setProfileCompleted(false); setAuthLoading(false); return; }
+        if (!currentUser) { setUser(null); setUserProfile(null); setIsQaTester(false); setProfileCompleted(false); setAuthLoading(false); return; }
         setUser(currentUser);
+        const tokenResult = await getIdTokenResult(currentUser);
+        setIsQaTester(tokenResult.claims.qa_tester === true);
         const userSnap = await getDoc(doc(db, "users", currentUser.uid));
         if (userSnap.exists()) {
           const profile = userSnap.data();
@@ -3306,6 +3310,27 @@ ${latestAnswer}`;
           )}
         </div>
         <div className="student-header-right">
+          {isQaTester && (
+            <label style={{ display: "flex", alignItems: "center", gap: "7px", color: B.white, fontSize: "11px", fontWeight: 700 }}>
+              QA CLASS
+              <select
+                aria-label="QA class preview"
+                value={classLevel}
+                onChange={(event) => {
+                  setClassLevel(event.target.value);
+                  setSelectedSubject(null);
+                  setSelectedChapter(null);
+                  setSelectedTopic(null);
+                  setExpandedChapters([]);
+                  setCurrentTest(null);
+                  setSubmittedTestResult(null);
+                }}
+                style={{ border: "1px solid rgba(255,255,255,0.35)", borderRadius: "7px", background: B.white, color: B.navy, padding: "6px 8px", fontSize: "12px", fontWeight: 700 }}
+              >
+                {SUPPORTED_CLASS_LEVELS.map((level) => <option key={level} value={level}>Class {level}</option>)}
+              </select>
+            </label>
+          )}
           <div className="student-notification-wrap">
             <button
               type="button"

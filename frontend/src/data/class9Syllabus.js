@@ -294,6 +294,268 @@ export const CLASS_9_CBSE_SYLLABUS = {
       ]
     }
   ],
+  "Social Science": [
+    {
+      "title": "The French Revolution",
+      "subtopics": [
+        "French Society under the Old Regime",
+        "The Financial Crisis and Estates-General",
+        "The National Assembly and Bastille",
+        "Declaration of the Rights of Man",
+        "France Becomes a Republic",
+        "Reign of Terror and Its Aftermath",
+        "Women and the Revolution",
+        "Legacy of the French Revolution"
+      ]
+    },
+    {
+      "title": "Socialism in Europe and the Russian Revolution",
+      "subtopics": [
+        "Social Change and Socialist Ideas",
+        "Russia under the Tsars",
+        "The Revolution of 1905",
+        "First World War and the Russian Crisis",
+        "February Revolution of 1917",
+        "October Revolution and the Bolsheviks",
+        "Civil War and Formation of the USSR",
+        "Consequences of the Russian Revolution"
+      ]
+    },
+    {
+      "title": "Nazism and the Rise of Hitler",
+      "subtopics": [
+        "Weimar Republic and the Treaty of Versailles",
+        "Economic Crisis and Hitler's Rise",
+        "Destruction of Democracy",
+        "Nazi Worldview and Racial State",
+        "Youth and Education under Nazism",
+        "Persecution of Jews and the Holocaust",
+        "Propaganda and Control",
+        "War Defeat and Historical Responsibility"
+      ]
+    },
+    {
+      "title": "Forest Society and Colonialism",
+      "subtopics": [
+        "Why Colonial States Wanted Forests",
+        "Scientific Forestry",
+        "Forest Laws and Restricted Access",
+        "Shifting Cultivation and Pastoral Life",
+        "Forest Communities and Resistance",
+        "Plantations and Timber Extraction",
+        "Bastar Rebellion",
+        "Comparing Colonial Forestry in India and Java"
+      ]
+    },
+    {
+      "title": "Pastoralists in the Modern World",
+      "subtopics": [
+        "Meaning of Pastoralism",
+        "Seasonal Movement and Grazing Cycles",
+        "Pastoral Communities in India",
+        "Colonial Laws and Grazing Restrictions",
+        "Criminal Tribes Act and Surveillance",
+        "Pastoralism in Africa",
+        "Adaptation to Markets and Boundaries",
+        "Importance of Mobile Livelihoods"
+      ]
+    },
+    {
+      "title": "India - Size and Location",
+      "subtopics": [
+        "Latitudinal and Longitudinal Extent",
+        "Tropic of Cancer and Standard Meridian",
+        "Indian Standard Time",
+        "India's Size and Area",
+        "India and the Indian Ocean",
+        "Neighbouring Countries",
+        "Administrative Divisions",
+        "Strategic Importance of Location"
+      ]
+    },
+    {
+      "title": "Physical Features of India",
+      "subtopics": [
+        "Geological Formation of India",
+        "The Himalayan Mountains",
+        "The Northern Plains",
+        "The Peninsular Plateau",
+        "The Indian Desert",
+        "Coastal Plains",
+        "Island Groups",
+        "Importance of Physiographic Diversity"
+      ]
+    },
+    {
+      "title": "Drainage",
+      "subtopics": [
+        "Drainage Basins and Water Divides",
+        "Himalayan River Systems",
+        "Indus River System",
+        "Ganga and Brahmaputra Systems",
+        "Peninsular River Systems",
+        "Lakes and Their Importance",
+        "Role of Rivers in the Economy",
+        "River Pollution and Conservation"
+      ]
+    },
+    {
+      "title": "Climate",
+      "subtopics": [
+        "Weather Climate and Climatic Controls",
+        "Mechanism of the Monsoon",
+        "Cold Weather Season",
+        "Hot Weather Season",
+        "Advancing Monsoon",
+        "Retreating Monsoon",
+        "Distribution of Rainfall",
+        "Monsoon as a Unifying Bond"
+      ]
+    },
+    {
+      "title": "Natural Vegetation and Wildlife",
+      "subtopics": [
+        "Factors Affecting Natural Vegetation",
+        "Tropical Evergreen Forests",
+        "Tropical Deciduous Forests",
+        "Thorn Forests and Scrubs",
+        "Montane Forests",
+        "Mangrove Forests",
+        "Wildlife Diversity",
+        "Conservation of Flora and Fauna"
+      ]
+    },
+    {
+      "title": "Population",
+      "subtopics": [
+        "Population Size and Distribution",
+        "Population Density",
+        "Population Growth and Change",
+        "Age Composition",
+        "Sex Ratio",
+        "Literacy Rate",
+        "Occupational Structure",
+        "National Population Policy"
+      ]
+    },
+    {
+      "title": "What is Democracy? Why Democracy?",
+      "subtopics": [
+        "Meaning and Features of Democracy",
+        "Major Decisions by Elected Leaders",
+        "Free and Fair Electoral Competition",
+        "One Person One Vote One Value",
+        "Rule of Law and Rights",
+        "Arguments for Democracy",
+        "Limitations and Challenges",
+        "Democracy as Accountable Government"
+      ]
+    },
+    {
+      "title": "Constitutional Design",
+      "subtopics": [
+        "South Africa and Apartheid",
+        "Democratic Constitution in South Africa",
+        "Why a Constitution is Needed",
+        "Making of the Indian Constitution",
+        "Constituent Assembly",
+        "Guiding Values of the Constitution",
+        "The Preamble",
+        "Institutional Design and Constitutional Change"
+      ]
+    },
+    {
+      "title": "Electoral Politics",
+      "subtopics": [
+        "Why Elections are Necessary",
+        "Constituencies and Representation",
+        "Voters' List and Universal Franchise",
+        "Nomination and Election Campaign",
+        "Polling and Counting",
+        "Reserved Constituencies",
+        "Election Commission",
+        "Challenges to Free and Fair Elections"
+      ]
+    },
+    {
+      "title": "Working of Institutions",
+      "subtopics": [
+        "Need for Political Institutions",
+        "Parliament and Law Making",
+        "Political Executive and Permanent Executive",
+        "Prime Minister and Council of Ministers",
+        "President of India",
+        "The Judiciary",
+        "Checks and Balances",
+        "Decision Making through Institutions"
+      ]
+    },
+    {
+      "title": "Democratic Rights",
+      "subtopics": [
+        "Meaning and Need for Rights",
+        "Life without Democratic Rights",
+        "Fundamental Rights",
+        "Right to Equality",
+        "Right to Freedom",
+        "Freedom of Religion and Cultural Rights",
+        "Right to Constitutional Remedies",
+        "Expanding Scope of Rights"
+      ]
+    },
+    {
+      "title": "The Story of Village Palampur",
+      "subtopics": [
+        "Organisation of Production",
+        "Land as a Fixed Resource",
+        "Labour and Human Effort",
+        "Physical and Human Capital",
+        "Multiple Cropping and Modern Farming",
+        "Distribution of Land and Farm Labour",
+        "Non-Farm Activities",
+        "Sustainable Use of Resources"
+      ]
+    },
+    {
+      "title": "People as Resource",
+      "subtopics": [
+        "Population as an Asset",
+        "Human Capital Formation",
+        "Role of Education",
+        "Role of Health",
+        "Economic Activities by Men and Women",
+        "Market and Non-Market Activities",
+        "Unemployment",
+        "Quality of Population"
+      ]
+    },
+    {
+      "title": "Poverty as a Challenge",
+      "subtopics": [
+        "Meaning and Dimensions of Poverty",
+        "Poverty Line",
+        "Poverty Trends in India",
+        "Vulnerable Groups",
+        "Inter-State Disparities",
+        "Causes of Poverty",
+        "Anti-Poverty Measures",
+        "Future Challenges and Human Development"
+      ]
+    },
+    {
+      "title": "Food Security in India",
+      "subtopics": [
+        "Meaning and Dimensions of Food Security",
+        "Who is Food Insecure",
+        "Hunger and Famine",
+        "Green Revolution",
+        "Buffer Stock",
+        "Public Distribution System",
+        "Cooperatives and Food Security",
+        "Challenges in Ensuring Nutrition"
+      ]
+    }
+  ],
   "English": [
     {
       "title": "How I Taught My Grandmother to Read",
