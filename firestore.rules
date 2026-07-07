@@ -17,7 +17,7 @@ service cloud.firestore {
       allow create: if request.auth != null
         && request.auth.uid == userId
         && request.resource.data.classLevel is string
-        && request.resource.data.classLevel in ["5", "6", "7", "9", "10"]
+        && request.resource.data.classLevel in ["5", "6", "7", "8", "9", "10"]
         && request.resource.data.board == "CBSE";
 
       allow update: if request.auth != null

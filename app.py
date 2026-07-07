@@ -12,13 +12,15 @@ import unicodedata
 import traceback
 import urllib.parse
 import urllib.request
+from collections import defaultdict, deque
 from typing import Optional
 
 for stream in (sys.stdout, sys.stderr):
     if hasattr(stream, "reconfigure"):
         stream.reconfigure(encoding="utf-8", errors="replace")
 
-from fastapi import FastAPI, UploadFile, File, Form, HTTPException
+from fastapi import FastAPI, UploadFile, File, Form, HTTPException, Request
+from fastapi.responses import JSONResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
  
@@ -37,6 +39,18 @@ MAX_QUESTION_CHARS = 5000
 MAX_HISTORY_CHARS = 100000
 MAX_TTS_CHARS = 12000
 MAX_TEST_PAYLOAD_CHARS = 250000
+
+# Per-client limits for routes that consume speech or model capacity.
+RATE_LIMITS = {
+    "/ask/": (12, 60),
+    "/ask-text/": (60, 60),
+    "/generate-test/": (20, 300),
+    "/grade-test/": (30, 300),
+    "/tts/": (60, 60),
+    "/diagram-search/": (30, 60),
+}
+rate_limit_hits = defaultdict(deque)
+rate_limit_lock = asyncio.Lock()
 
 
 def parse_json_form(raw_value: Optional[str], expected_type: type, field_name: str):
@@ -123,11 +137,46 @@ def detect_language_style(text: str) -> str:
 # ── App ────────────────────────────────────────────────────
 app = FastAPI(title="Student Voice Assistant API")
 
+
+def get_client_key(request: Request) -> str:
+    forwarded_for = request.headers.get("x-forwarded-for", "")
+    client_ip = forwarded_for.split(",", 1)[0].strip()
+    if not client_ip and request.client:
+        client_ip = request.client.host
+    return client_ip or "unknown"
+
+
+@app.middleware("http")
+async def rate_limit_expensive_routes(request: Request, call_next):
+    limit_config = RATE_LIMITS.get(request.url.path) if request.method == "POST" else None
+    if not limit_config:
+        return await call_next(request)
+
+    request_limit, window_seconds = limit_config
+    now = time.monotonic()
+    key = (get_client_key(request), request.url.path)
+
+    async with rate_limit_lock:
+        hits = rate_limit_hits[key]
+        while hits and now - hits[0] >= window_seconds:
+            hits.popleft()
+        if len(hits) >= request_limit:
+            retry_after = max(1, int(window_seconds - (now - hits[0])))
+            return JSONResponse(
+                status_code=429,
+                content={"detail": "Too many requests. Please wait a moment and try again."},
+                headers={"Retry-After": str(retry_after)},
+            )
+        hits.append(now)
+
+    return await call_next(request)
+
 DEFAULT_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://localhost:3001",
     "https://teachifyy.com",
     "https://www.teachifyy.com",
+    "https://student-voice-assistant.vercel.app",
 ]
 ALLOWED_ORIGINS = [
     origin.strip()
@@ -138,10 +187,12 @@ ALLOWED_ORIGINS = [
     if origin.strip()
 ]
  
+allow_vercel_previews = os.getenv("ALLOW_VERCEL_PREVIEWS", "false").lower() == "true"
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=ALLOWED_ORIGINS,
-    allow_origin_regex=r"https://[a-zA-Z0-9-]+\.vercel\.app",
+    allow_origin_regex=r"https://[a-zA-Z0-9-]+\.vercel\.app" if allow_vercel_previews else None,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

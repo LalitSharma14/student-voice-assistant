@@ -113,7 +113,7 @@ const ANSWER_LANGUAGES = [
   { value: "hinglish", label: "Hinglish" },
   { value: "hi",       label: "Hindi"    },
 ];
-const SUPPORTED_CLASS_LEVELS = ["5", "6", "7", "9", "10"];
+const SUPPORTED_CLASS_LEVELS = ["5", "6", "7", "8", "9", "10"];
 const SUPPORTED_BOARDS = ["CBSE"];
 
 const SUBJECT_DISPLAY_ORDER = ["Maths", "Science", "Social Science", "SST", "English", "Hindi"];
@@ -155,6 +155,29 @@ async function readApiJson(response, fallbackMessage = "The AI service is unavai
   }
 
   return payload;
+}
+
+async function fetchApi(url, options = {}, timeoutMs = 60000) {
+  const controller = new AbortController();
+  const externalSignal = options.signal;
+  const abortFromCaller = () => controller.abort();
+  if (externalSignal) {
+    if (externalSignal.aborted) controller.abort();
+    else externalSignal.addEventListener("abort", abortFromCaller, { once: true });
+  }
+  const timeout = setTimeout(() => controller.abort(), timeoutMs);
+
+  try {
+    return await fetch(url, { ...options, signal: controller.signal });
+  } catch (error) {
+    if (error?.name === "AbortError" && !externalSignal?.aborted) {
+      throw new Error("The AI service is taking too long. Please try again in a moment.");
+    }
+    throw error;
+  } finally {
+    clearTimeout(timeout);
+    externalSignal?.removeEventListener("abort", abortFromCaller);
+  }
 }
 
 // ── Typewriter hook ────────────────────────────────────────
@@ -1061,7 +1084,7 @@ export default function Home() {
     const fd = new FormData();
     fd.append("text", text);
     fd.append("language", language);
-    const res = await fetch("/api/tts", { method: "POST", body: fd });
+    const res = await fetchApi("/api/tts", { method: "POST", body: fd }, 30000);
     if (!res.ok) return null;
     const data = await res.json();
     return data.audio_url || null;
@@ -1317,7 +1340,7 @@ export default function Home() {
     fd.append("question_count", String(questionCount)); fd.append("class_level", classLevel);
     fd.append("board", board); fd.append("answer_language", answerLanguage);
     try {
-      const res = await fetch("/api/generate-test", { method: "POST", body: fd });
+      const res = await fetchApi("/api/generate-test", { method: "POST", body: fd }, 90000);
       if (!res.ok) { const err = await res.json(); throw new Error(err.detail || "Could not generate test."); }
       const data = await res.json();
       const questions = Array.isArray(data.questions) ? data.questions : [];
@@ -1350,7 +1373,7 @@ export default function Home() {
       fd.append("class_level", classLevel);
       fd.append("board", board);
       fd.append("answer_language", answerLanguage);
-      const res = await fetch("/api/grade-test", { method: "POST", body: fd });
+      const res = await fetchApi("/api/grade-test", { method: "POST", body: fd }, 90000);
       if (!res.ok) { const err = await res.json(); throw new Error(err.detail || "Could not grade test."); }
       const data = await res.json();
       const attemptId = `${currentTest.testId}_${Date.now()}`;
@@ -1449,7 +1472,7 @@ export default function Home() {
     fd.append("board", board);
     fd.append("answer_language", answerLanguage);
     if (selectedSubject) fd.append("subject", selectedSubject);
-    const res = await fetch("/api/ask-text", { method: "POST", body: fd });
+    const res = await fetchApi("/api/ask-text", { method: "POST", body: fd });
     const data = await readApiJson(res, "Could not convert stored content language.");
     return data.answer || sourceText;
   };
@@ -1724,7 +1747,7 @@ ${latestAnswer}`;
     if (selectedSubject) fd.append("subject", selectedSubject);
 
     try {
-      const res = await fetch("/api/ask-text", { method: "POST", body: fd });
+      const res = await fetchApi("/api/ask-text", { method: "POST", body: fd });
       const data = await readApiJson(res, "Could not prepare the follow-up answer.");
       setMessages((prev) => [
         ...prev.map((msg) => msg.role === "assistant" ? { ...msg, typing: false } : msg),
@@ -2382,7 +2405,7 @@ ${latestAnswer}`;
     fd.append("chapter", context.chapter || "");
     fd.append("topic", context.topic || "");
 
-    const res = await fetch("/api/diagram-search", { method: "POST", body: fd });
+    const res = await fetchApi("/api/diagram-search", { method: "POST", body: fd }, 15000);
     if (!res.ok) return null;
     const data = await res.json();
     return data.diagram || null;
@@ -2471,7 +2494,7 @@ ${latestAnswer}`;
     if (selectedSubject) fd.append("subject", selectedSubject);
 
     try {
-      const res = await fetch("/api/ask-text", { method: "POST", body: fd });
+      const res = await fetchApi("/api/ask-text", { method: "POST", body: fd });
       const data = await readApiJson(res, "Could not get an answer from the AI tutor.");
 
       setMessages((prev) => [
@@ -2529,7 +2552,7 @@ ${latestAnswer}`;
       fd.append("answer_language", answerLanguage);
       if (selectedSubject) fd.append("subject", selectedSubject);
       try {
-        const res = await fetch("/api/ask", { method: "POST", body: fd, signal: abortControllerRef.current.signal });
+        const res = await fetchApi("/api/ask", { method: "POST", body: fd, signal: abortControllerRef.current.signal }, 90000);
         if (cancelledRef.current) return;
         if (!res.ok) { const err = await res.json(); throw new Error(err.detail || "Server error"); }
         const data = await res.json();
