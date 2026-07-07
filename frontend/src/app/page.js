@@ -8,6 +8,7 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
   sendEmailVerification,
+  sendPasswordResetEmail,
   reload,
   getIdTokenResult,
   onAuthStateChanged,
@@ -571,6 +572,8 @@ export default function Home() {
   const [authMode,           setAuthMode]           = useState("login");
   const [authLoading,        setAuthLoading]        = useState(true);
   const [authError,          setAuthError]          = useState("");
+  const [authNotice,         setAuthNotice]         = useState("");
+  const [passwordResetLoading,setPasswordResetLoading]= useState(false);
   const [verificationSent,   setVerificationSent]   = useState(false);
   const [profileNeedsSetup,  setProfileNeedsSetup]  = useState(false);
   const [signupName,         setSignupName]         = useState("");
@@ -1157,6 +1160,7 @@ export default function Home() {
 
   const handleLogin = async () => {
     setAuthError("");
+    setAuthNotice("");
     if (!loginEmail.trim() || !loginPassword.trim()) { setAuthError("Please enter email and password."); return; }
     try { setAuthLoading(true); await signInWithEmailAndPassword(auth, loginEmail.trim(), loginPassword); }
     catch (err) { setAuthError(err.message || "Could not login."); } finally { setAuthLoading(false); }
@@ -1173,6 +1177,26 @@ export default function Home() {
     setChatSessions([]); setCurrentSessionId(null); setViewingSession(null);
     setDoubts([]); setSavingDoubtId(null);
     setNotes([]); resetNoteForm();
+  };
+
+  const handleForgotPassword = async () => {
+    const email = loginEmail.trim();
+    setAuthError("");
+    setAuthNotice("");
+    if (!email) {
+      setAuthError("Enter your email address first, then select Forgot password.");
+      return;
+    }
+    try {
+      setPasswordResetLoading(true);
+      await sendPasswordResetEmail(auth, email);
+      setAuthNotice("If an account uses this email, a password reset link has been sent. Check your inbox and spam folder.");
+    } catch (err) {
+      if (err?.code === "auth/invalid-email") setAuthError("Please enter a valid email address.");
+      else setAuthNotice("If an account uses this email, a password reset link has been sent. Check your inbox and spam folder.");
+    } finally {
+      setPasswordResetLoading(false);
+    }
   };
 
   const handleGoogleSignIn = async () => {
@@ -2661,6 +2685,7 @@ ${latestAnswer}`;
               <p style={{ fontSize: "14px", color: B.gray500, margin: 0 }}>{authMode === "login" ? "Login to continue learning." : "Create your student profile."}</p>
             </div>
             {authError && <div style={{ marginBottom: "16px", padding: "10px 14px", background: B.redLight, border: `1px solid ${B.red}`, borderRadius: "10px", color: B.red, fontSize: "13px", fontWeight: 500 }}>⚠️ {authError}</div>}
+            {authNotice && <div role="status" style={{ marginBottom: "16px", padding: "10px 14px", background: "#ecfdf5", border: "1px solid #34d399", borderRadius: "10px", color: "#047857", fontSize: "13px", fontWeight: 500 }}>{authNotice}</div>}
             {authMode === "signup" && (
               <>
                 <label style={labelStyle}>Full Name</label>
@@ -2673,6 +2698,13 @@ ${latestAnswer}`;
             <input type="email" value={authMode === "login" ? loginEmail : signupEmail} onChange={(e) => authMode === "login" ? setLoginEmail(e.target.value) : setSignupEmail(e.target.value)} placeholder="Enter email" style={inputStyle} />
             <label style={labelStyle}>Password</label>
             <input type="password" value={authMode === "login" ? loginPassword : signupPassword} onChange={(e) => authMode === "login" ? setLoginPassword(e.target.value) : setSignupPassword(e.target.value)} placeholder="Enter password" style={inputStyle} />
+            {authMode === "login" && (
+              <div style={{ display: "flex", justifyContent: "flex-end", marginTop: "-8px", marginBottom: "14px" }}>
+                <button type="button" onClick={handleForgotPassword} disabled={passwordResetLoading} style={{ border: "none", padding: "2px 0", background: "transparent", color: B.navy, cursor: passwordResetLoading ? "wait" : "pointer", fontSize: "13px", fontWeight: 600, fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+                  {passwordResetLoading ? "Sending reset link..." : "Forgot password?"}
+                </button>
+              </div>
+            )}
             {authMode === "signup" && (
               <>
                 <label style={labelStyle}>Class</label>
@@ -2691,7 +2723,7 @@ ${latestAnswer}`;
               <span aria-hidden="true" style={{ color: "#4285f4", fontSize: "18px", fontWeight: 900 }}>G</span>
               Continue with Google
             </button>
-            <button onClick={() => { setAuthError(""); setAuthMode(authMode === "login" ? "signup" : "login"); }} style={{ width: "100%", marginTop: "14px", background: "transparent", border: "none", color: B.navy, cursor: "pointer", fontSize: "14px", fontWeight: 500, fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+            <button onClick={() => { setAuthError(""); setAuthNotice(""); setAuthMode(authMode === "login" ? "signup" : "login"); }} style={{ width: "100%", marginTop: "14px", background: "transparent", border: "none", color: B.navy, cursor: "pointer", fontSize: "14px", fontWeight: 500, fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
               {authMode === "login" ? "New student? Create account" : "Already have an account? Login"}
             </button>
           </div>
