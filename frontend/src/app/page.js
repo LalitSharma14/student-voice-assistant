@@ -56,7 +56,7 @@ const B = {
 };
 
 const STUDENT_APP_TABS = new Set([
-  "home", "chat", "syllabus", "ncert", "test", "doubts", "history",
+  "home", "chat", "syllabus", "test", "doubts", "history",
   "notes", "activity", "reports", "parent", "badges",
 ]);
 
@@ -64,7 +64,6 @@ const USAGE_SECTION_LABELS = {
   home: "Home",
   chat: "AI Tutor",
   syllabus: "Syllabus",
-  ncert: "NCERT Library",
   test: "Tests",
   doubts: "Doubts",
   history: "History",
@@ -100,7 +99,6 @@ function SidebarIcon({ type }) {
     home: <><rect x="3" y="3" width="7" height="9" rx="1" /><rect x="14" y="3" width="7" height="5" rx="1" /><rect x="14" y="12" width="7" height="9" rx="1" /><rect x="3" y="16" width="7" height="5" rx="1" /></>,
     chat: <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />,
     syllabus: <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 19.5A2.5 2.5 0 0 0 6.5 22H20M4 19.5V3a1 1 0 0 1 1-1h15v20H5a2 2 0 0 1-1-1z" />,
-    ncert: <><path d="M2 4h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2z" /><path d="M22 4h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7z" /></>,
     test: <><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /></>,
     doubts: <><circle cx="12" cy="12" r="10" /><path d="M9.1 9a3 3 0 1 1 5.8 1c0 2-3 3-3 3" /><line x1="12" y1="17" x2="12.01" y2="17" /></>,
     history: <><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></>,
@@ -628,14 +626,15 @@ export default function Home() {
 
   const currentSyllabus = SYLLABUS_DATA[classLevel]?.[board] || {};
   const syllabusSubjectOptions = getOrderedSubjects(currentSyllabus);
+  const isSubjectComingSoon = (subject) => String(classLevel) === "8" && subject === "English";
   const currentChapters = selectedSubject ? currentSyllabus?.[selectedSubject] || [] : [];
   const currentChapter = typeof selectedChapter === "string"
     ? currentChapters.find((chapter) => chapter.title === selectedChapter) || null
     : selectedChapter;
 
   useEffect(() => {
-    if (activeTab === "syllabus" && !selectedSubject && syllabusSubjectOptions.length) {
-      setSelectedSubject(syllabusSubjectOptions[0]);
+    if (activeTab === "syllabus" && (!selectedSubject || isSubjectComingSoon(selectedSubject)) && syllabusSubjectOptions.length) {
+      setSelectedSubject(syllabusSubjectOptions.find((subject) => !isSubjectComingSoon(subject)) || null);
       setSelectedChapter(null);
       setSelectedTopic(null);
       setExpandedChapters([]);
@@ -3037,7 +3036,6 @@ ${latestAnswer}`;
     { key: "home", label: "Home", icon: "home" },
     { key: "chat", label: "AI Tutor", icon: "chat" },
     { key: "syllabus", label: "Syllabus Tracker", icon: "syllabus" },
-    { key: "ncert", label: "NCERT Library", icon: "ncert", comingSoon: true },
     { key: "test", label: "Tests", icon: "test" },
     { key: "doubts", label: "Doubt", icon: "doubts", badge: activeDoubts.length },
     { key: "history", label: "History", icon: "history" },
@@ -3304,11 +3302,10 @@ ${latestAnswer}`;
         <div className="student-sidebar-brand"><img src="/teachifyy-logo-designer.png" alt="Teachifyy" /></div>
         <nav className="student-sidebar-dock">
           {primaryNavigation.map((item) => (
-            <button key={item.key} className={`student-nav-tab ${activeTab === item.key ? "active" : ""}`} onClick={() => setActiveTab(item.key)} aria-label={`${item.label}${item.comingSoon ? ", coming soon" : ""}`}>
+            <button key={item.key} className={`student-nav-tab ${activeTab === item.key ? "active" : ""}`} onClick={() => setActiveTab(item.key)} aria-label={item.label}>
               <SidebarIcon type={item.icon} />
               {!!item.badge && <span className="student-nav-badge">{item.badge}</span>}
-              {item.comingSoon && <span className="student-coming-soon-badge">Soon</span>}
-              <span className="student-dock-tooltip">{item.label}{item.comingSoon ? " · Coming Soon" : ""}</span>
+              <span className="student-dock-tooltip">{item.label}</span>
             </button>
           ))}
           <div className="student-dock-divider" />
@@ -3430,7 +3427,6 @@ ${latestAnswer}`;
             { key: "notes",    label: "Notes" },
             { key: "badges",   label: "Badges" },
             { key: "syllabus", label: "Syllabus" },
-            { key: "ncert",    label: "NCERT" },
             { key: "test",     label: "Tests" },
           ].map(({ key, label, disabled }) => (
             <button
@@ -4679,15 +4675,6 @@ ${latestAnswer}`;
           )
         )}
 
-        {activeTab === "ncert" && (
-          <section className="ncert-coming-soon" aria-labelledby="ncert-library-title">
-            <div className="ncert-coming-soon-icon" aria-hidden="true"><SidebarIcon type="ncert" /></div>
-            <span>COMING SOON</span>
-            <h1 id="ncert-library-title">NCERT Library</h1>
-            <p>Class 5–10 · CBSE</p>
-          </section>
-        )}
-
         {false && activeTab === "test" && (
           <div style={{ background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "18px", padding: "22px", boxShadow: "0 4px 20px rgba(43,88,136,0.06)" }}>
             {testLoading ? (
@@ -5016,18 +5003,20 @@ ${latestAnswer}`;
                   const subjectProgress = getSubjectProgress(subject);
                   const subjectClass = `subject-${subject.toLowerCase().replace(/\s+/g, "-")}`;
                   const ringOffset = 28.27 - (28.27 * subjectProgress.percent / 100);
+                  const comingSoon = isSubjectComingSoon(subject);
                   return (
                     <button
                       key={subject}
-                      className={`${subjectClass} ${selectedSubject === subject ? "active" : ""}`}
+                      className={`${subjectClass} ${selectedSubject === subject ? "active" : ""} ${comingSoon ? "coming-soon" : ""}`}
                       onClick={() => { setSelectedSubject(subject); setSelectedChapter(null); setSelectedTopic(null); setExpandedChapters([]); }}
-                      title={`${subject}: ${subjectProgress.percent}% complete`}
+                      title={comingSoon ? `${subject}: Coming Soon` : `${subject}: ${subjectProgress.percent}% complete`}
+                      disabled={comingSoon}
                     >
                       <svg className="designer-subject-progress-ring" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
                         <circle cx="6" cy="6" r="4.5" fill="none" stroke="rgba(0,0,0,0.10)" strokeWidth="1.5" />
                         <circle className="designer-subject-progress-fill" cx="6" cy="6" r="4.5" fill="none" stroke="currentColor" strokeWidth="1.5" strokeDasharray="28.27" strokeDashoffset={ringOffset} transform="rotate(-90 6 6)" />
                       </svg>
-                      <span>{subject}</span>
+                      <span>{subject}{comingSoon && <small>Coming Soon</small>}</span>
                     </button>
                   );
                 })}
@@ -5313,17 +5302,10 @@ ${latestAnswer}`;
         .student-nav-tab { width:46px; height:46px; padding:0; border:0; background:transparent; color:#4c4c4c; border-radius:12px; cursor:pointer; position:relative; display:flex; align-items:center; justify-content:center; transition:transform .25s ease,background-color .2s,color .2s; }
         .student-nav-tab:hover { background:var(--designer-fog); color:var(--designer-blue); transform:scale(1.08); }
         .student-nav-tab.active { background:var(--designer-blue); color:#fff; }
-        .student-coming-soon-badge { position:absolute; top:-5px; right:-12px; min-width:31px; padding:2px 4px; border-radius:8px; background:#ff3f5f; color:#fff; font-size:8px; font-weight:800; line-height:1; box-shadow:0 2px 7px rgba(255,63,95,.25); }
         .student-nav-icon { width:20px; height:20px; }
         .student-nav-badge { position:absolute; top:1px; right:1px; min-width:17px; padding:1px 4px; border-radius:999px; background:var(--designer-pink); color:#fff; font-size:9px; font-weight:700; line-height:15px; }
         .student-dock-tooltip { position:absolute; left:calc(100% + 12px); top:50%; transform:translateY(-50%) scale(.94); padding:6px 10px; border-radius:6px; background:var(--designer-ink); color:#fff; font-size:12px; font-weight:500; white-space:nowrap; opacity:0; pointer-events:none; transition:.18s ease; z-index:100; }
         .student-nav-tab:hover .student-dock-tooltip { opacity:1; transform:translateY(-50%) scale(1); }
-        .ncert-coming-soon { min-height:calc(100vh - 170px); display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:48px 20px; position:relative; z-index:1; }
-        .ncert-coming-soon-icon { width:78px; height:78px; border-radius:50%; display:flex; align-items:center; justify-content:center; color:var(--designer-blue); background:#eef5fc; border:1px solid #c9dcf0; margin-bottom:20px; box-shadow:0 12px 28px rgba(43,88,136,.12); }
-        .ncert-coming-soon-icon .student-nav-icon { width:36px; height:36px; }
-        .ncert-coming-soon > span { color:#ff3f5f; font-size:11px; font-weight:900; letter-spacing:1.4px; }
-        .ncert-coming-soon h1 { margin:8px 0 6px; color:var(--designer-blue); font-size:34px; font-weight:800; letter-spacing:0; }
-        .ncert-coming-soon p { margin:0; color:#747b88; font-size:14px; }
         .student-dock-divider { width:24px; height:1px; margin:4px 0; background:var(--designer-dove); }
         .student-logout:hover { color:var(--designer-pink); background:#ffe6e9; }
         .student-more-wrap { position:relative; }
@@ -5705,6 +5687,8 @@ ${latestAnswer}`;
         .designer-subject-pills button { min-height:34px; padding:6px 15px; border:1px solid color-mix(in srgb,currentColor 28%,transparent); border-radius:999px; background:#fff; color:#4c4c4c; cursor:pointer; display:inline-flex; align-items:center; gap:8px; font:600 12px 'Inter',sans-serif; transition:.18s ease; }
         .designer-subject-pills button:hover { border-color:currentColor; background:color-mix(in srgb,currentColor 7%,#fff); transform:translateY(-1px); }
         .designer-subject-pills button.active { border-color:currentColor; background:color-mix(in srgb,currentColor 16%,#fff); box-shadow:0 5px 14px rgba(44,86,136,.12); }
+        .designer-subject-pills button.coming-soon { cursor:not-allowed; color:#7d8490; border-style:dashed; background:#f7f7f8; opacity:.82; transform:none; }
+        .designer-subject-pills button.coming-soon small { display:block; margin-left:5px; padding:2px 5px; border-radius:5px; background:#ffe6eb; color:#d92f4d; font-size:8px; font-weight:800; line-height:1; text-transform:uppercase; }
         .designer-subject-pills button.subject-maths,.designer-subject-pills button.subject-mathematics { color:#1e3a8a; }
         .designer-subject-pills button.subject-science { color:#065f46; }
         .designer-subject-pills button.subject-social-science,.designer-subject-pills button.subject-social-studies { color:#7c2d12; }
