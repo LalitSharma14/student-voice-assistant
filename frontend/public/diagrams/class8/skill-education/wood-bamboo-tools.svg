@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420">
+  <rect width="760" height="420" fill="#fbfdff"/>
+  <text x="380" y="48" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#164b80">Working with Wood and Bamboo</text>
+  <g font-family="Arial, sans-serif" text-anchor="middle" font-size="17" font-weight="700">
+    <rect x="55" y="150" width="105" height="80" rx="14" fill="#e7f1ff" stroke="#2f5f98" stroke-width="3"/><text x="108" y="184">Design</text><text x="108" y="207">Sketch</text>
+    <rect x="185" y="150" width="105" height="80" rx="14" fill="#fff3df" stroke="#b36b00" stroke-width="3"/><text x="238" y="184">Measure</text><text x="238" y="207">Mark</text>
+    <rect x="315" y="150" width="105" height="80" rx="14" fill="#fee2e2" stroke="#c0262d" stroke-width="3"/><text x="368" y="184">Cut</text><text x="368" y="207">Safely</text>
+    <rect x="445" y="150" width="105" height="80" rx="14" fill="#dcfce7" stroke="#16845b" stroke-width="3"/><text x="498" y="184">Join</text><text x="498" y="207">Pieces</text>
+    <rect x="575" y="150" width="105" height="80" rx="14" fill="#ede9fe" stroke="#7c3aed" stroke-width="3"/><text x="628" y="184">Sand</text><text x="628" y="207">Finish</text>
+  </g>
+  <text x="380" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#475467">Use tools carefully and follow the design step by step.</text>
+</svg>

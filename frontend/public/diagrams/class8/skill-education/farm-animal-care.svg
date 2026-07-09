@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420">
+  <rect width="760" height="420" fill="#fbfdff"/>
+  <text x="380" y="48" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#164b80">Farm Animal Care</text>
+  <g font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle">
+    <circle cx="380" cy="210" r="68" fill="#fff3df" stroke="#b36b00" stroke-width="4"/><text x="380" y="205" fill="#101828">Healthy</text><text x="380" y="230" fill="#101828">Animal</text>
+    <circle cx="380" cy="90" r="52" fill="#dcfce7" stroke="#16845b" stroke-width="4"/><text x="380" y="95">Feed</text>
+    <circle cx="560" cy="165" r="52" fill="#dbeafe" stroke="#2f5f98" stroke-width="4"/><text x="560" y="160">Clean</text><text x="560" y="184">Water</text>
+    <circle cx="510" cy="320" r="52" fill="#fce7f3" stroke="#c0266d" stroke-width="4"/><text x="510" y="325">Shelter</text>
+    <circle cx="250" cy="320" r="52" fill="#ede9fe" stroke="#7c3aed" stroke-width="4"/><text x="250" y="315">Health</text><text x="250" y="339">Check</text>
+    <circle cx="200" cy="165" r="52" fill="#fef9c3" stroke="#ca8a04" stroke-width="4"/><text x="200" y="170">Records</text>
+  </g>
+</svg>

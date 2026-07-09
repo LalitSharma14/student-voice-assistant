@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420">
+  <rect width="760" height="420" fill="#fbfdff"/>
+  <text x="380" y="48" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#164b80">Place Value and Zero</text>
+  <g transform="translate(80 105)" font-family="Arial, sans-serif">
+    <rect x="0" y="0" width="600" height="190" rx="18" fill="#fff" stroke="#cbd5e1" stroke-width="3"/>
+    <g fill="#e7f1ff" stroke="#2f5f98" stroke-width="2">
+      <rect x="25" y="45" width="110" height="95" rx="10"/><rect x="145" y="45" width="110" height="95" rx="10"/><rect x="265" y="45" width="110" height="95" rx="10"/><rect x="385" y="45" width="110" height="95" rx="10"/>
+    </g>
+    <text x="80" y="35" text-anchor="middle" font-size="18" font-weight="700" fill="#164b80">Thousands</text>
+    <text x="200" y="35" text-anchor="middle" font-size="18" font-weight="700" fill="#164b80">Hundreds</text>
+    <text x="320" y="35" text-anchor="middle" font-size="18" font-weight="700" fill="#164b80">Tens</text>
+    <text x="440" y="35" text-anchor="middle" font-size="18" font-weight="700" fill="#164b80">Ones</text>
+    <text x="80" y="105" text-anchor="middle" font-size="38" font-weight="700" fill="#101828">2</text>
+    <text x="200" y="105" text-anchor="middle" font-size="38" font-weight="700" fill="#101828">0</text>
+    <text x="320" y="105" text-anchor="middle" font-size="38" font-weight="700" fill="#101828">4</text>
+    <text x="440" y="105" text-anchor="middle" font-size="38" font-weight="700" fill="#101828">6</text>
+    <text x="550" y="105" text-anchor="middle" font-size="28" font-weight="700" fill="#12b76a">2046</text>
+  </g>
+  <text x="380" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" fill="#475467">Zero keeps a place empty so each digit gets the correct value.</text>
+</svg>

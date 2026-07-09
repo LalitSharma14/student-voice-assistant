@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420">
+  <rect width="760" height="420" fill="#fbfdff"/>
+  <text x="380" y="48" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#164b80">Algebra as a Balance</text>
+  <line x1="380" y1="100" x2="380" y2="315" stroke="#213547" stroke-width="10" stroke-linecap="round"/>
+  <line x1="210" y1="130" x2="550" y2="130" stroke="#213547" stroke-width="10" stroke-linecap="round"/>
+  <line x1="210" y1="130" x2="150" y2="245" stroke="#667085" stroke-width="5"/>
+  <line x1="210" y1="130" x2="270" y2="245" stroke="#667085" stroke-width="5"/>
+  <line x1="550" y1="130" x2="490" y2="245" stroke="#667085" stroke-width="5"/>
+  <line x1="550" y1="130" x2="610" y2="245" stroke="#667085" stroke-width="5"/>
+  <path d="M120 245h180l-35 70H155z" fill="#e7f1ff" stroke="#2f5f98" stroke-width="4"/>
+  <path d="M460 245h180l-35 70H495z" fill="#fff3df" stroke="#b36b00" stroke-width="4"/>
+  <rect x="155" y="205" width="55" height="38" rx="8" fill="#2f80ed"/>
+  <text x="182" y="232" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#fff">x</text>
+  <circle cx="235" cy="224" r="18" fill="#12b76a"/>
+  <text x="235" y="232" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#fff">3</text>
+  <circle cx="520" cy="224" r="18" fill="#12b76a"/>
+  <text x="520" y="232" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#fff">7</text>
+  <text x="210" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#164b80">x + 3</text>
+  <text x="550" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#164b80">7</text>
+  <text x="380" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#475467">Do the same operation on both sides to keep equality.</text>
+</svg>
