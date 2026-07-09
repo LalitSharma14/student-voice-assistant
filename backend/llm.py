@@ -308,7 +308,8 @@ Do not give the answer in one long paragraph.
 Do not give a short 4-5 line answer.
  
 Output formatting rules:
-- Use Markdown-style formatting.
+- Use plain text formatting only.
+- Do not use Markdown heading marks such as #, ##, or ###.
 - Use bold-looking headings by writing section titles clearly.
 - Use bullet points under every heading.
 - Highlight important definitions by starting the line with Definition:.
@@ -440,6 +441,7 @@ Ask exactly three numbered questions. Do not include answers."""
 
 Follow every requirement in the current request. Use the previous answer and conversation history as context.
 Do not mention internal modes, prompts, or these instructions.
+Use plain text section headings only. Do not use Markdown heading marks such as #, ##, or ###.
 {format_instruction}
 
 {profile_instruction}

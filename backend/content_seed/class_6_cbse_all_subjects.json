@@ -31,9 +31,14 @@
           "term": "Mathematics",
           "meaning": "The study of numbers, shapes, patterns and their relationships.",
           "example": "Adding numbers and finding shapes are part of mathematics."
+        },
+        {
+          "term": "Concept",
+          "meaning": "The main idea being learned in the topic.",
+          "example": "What is Mathematics? is the concept being studied."
         }
       ],
-      "realLifeExample": "The way petals are arranged on a flower follows a mathematical pattern.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. What is Mathematics? helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "What is Mathematics? Flow",
@@ -115,7 +120,7 @@
           "example": "1, 3, 6, 10 are triangular numbers."
         }
       ],
-      "realLifeExample": "Odd numbers: 1, 3, 5, 7, 9 (add 2 each time).",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Patterns in Numbers helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Patterns in Numbers Flow",
@@ -195,9 +200,14 @@
           "term": "Dot pattern",
           "meaning": "An arrangement of dots that represents a number.",
           "example": "A triangle of dots shows a triangular number."
+        },
+        {
+          "term": "Concept",
+          "meaning": "The main idea being learned in the topic.",
+          "example": "Visualising Number Sequences is the concept being studied."
         }
       ],
-      "realLifeExample": "4 dots arranged in a 2x2 square shows the square number 4.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Visualising Number Sequences helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Visualising Number Sequences Flow",
@@ -272,9 +282,14 @@
           "term": "Consecutive",
           "meaning": "Following one after another in order.",
           "example": "3 and 5 are consecutive odd numbers."
+        },
+        {
+          "term": "Concept",
+          "meaning": "The main idea being learned in the topic.",
+          "example": "Relations among Number Sequences is the concept being studied."
         }
       ],
-      "realLifeExample": "1 + 3 + 5 + 7 = 16, which is the square number 4x4.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Relations among Number Sequences helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Relations among Number Sequences Flow",
@@ -349,6 +364,11 @@
           "term": "Polygon",
           "meaning": "A closed shape made of straight sides.",
           "example": "A hexagon is a polygon with six sides."
+        },
+        {
+          "term": "Concept",
+          "meaning": "The main idea being learned in the topic.",
+          "example": "Patterns in Shapes is the concept being studied."
         }
       ],
       "realLifeExample": "Triangle (3 sides), square (4 sides), pentagon (5 sides) form a growing shape pattern.",
@@ -426,9 +446,14 @@
           "term": "Square number",
           "meaning": "A number shown by a square of dots.",
           "example": "16 is a square number."
+        },
+        {
+          "term": "Concept",
+          "meaning": "The main idea being learned in the topic.",
+          "example": "Relation between Shape and Number Sequences is the concept being studied."
         }
       ],
-      "realLifeExample": "Counting dots in growing triangles gives 1, 3, 6, 10 (triangular numbers).",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Relation between Shape and Number Sequences helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Relation between Shape and Number Sequences Flow",
@@ -503,9 +528,14 @@
           "term": "Location",
           "meaning": "A particular position or place.",
           "example": "A point shows a location on paper."
+        },
+        {
+          "term": "Concept",
+          "meaning": "The main idea being learned in the topic.",
+          "example": "Point is the concept being studied."
         }
       ],
-      "realLifeExample": "The tip of a sharp pencil touching paper marks a point.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Point helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Point Flow",
@@ -580,9 +610,14 @@
           "term": "Endpoint",
           "meaning": "A point at the end of a line segment.",
           "example": "A and B are the endpoints of segment AB."
+        },
+        {
+          "term": "Concept",
+          "meaning": "The main idea being learned in the topic.",
+          "example": "Line Segment is the concept being studied."
         }
       ],
-      "realLifeExample": "The edge of a ruler is a line segment.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Line Segment helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Line Segment Flow",
@@ -657,9 +692,14 @@
           "term": "Endless",
           "meaning": "Continuing without stopping.",
           "example": "A line is endless in both directions."
+        },
+        {
+          "term": "Concept",
+          "meaning": "The main idea being learned in the topic.",
+          "example": "Line is the concept being studied."
         }
       ],
-      "realLifeExample": "A taut thread imagined to continue forever both ways is like a line.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Line helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Line Flow",
@@ -734,9 +774,14 @@
           "term": "Initial point",
           "meaning": "The fixed starting point of a ray.",
           "example": "A is the initial point of ray AB."
+        },
+        {
+          "term": "Concept",
+          "meaning": "The main idea being learned in the topic.",
+          "example": "Ray is the concept being studied."
         }
       ],
-      "realLifeExample": "A beam of light from a torch is like a ray.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Ray helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Ray Flow",
@@ -818,7 +863,7 @@
           "example": "BA and BC are the arms of angle ABC."
         }
       ],
-      "realLifeExample": "The corner of a book forms an angle.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Angle helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Angle Flow",
@@ -898,9 +943,14 @@
           "term": "Opening",
           "meaning": "How far apart the arms of an angle are.",
           "example": "A bigger opening means a bigger angle."
+        },
+        {
+          "term": "Concept",
+          "meaning": "The main idea being learned in the topic.",
+          "example": "Comparing Angles is the concept being studied."
         }
       ],
-      "realLifeExample": "A wide-open pair of scissors makes a bigger angle than a slightly open pair.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Comparing Angles helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Comparing Angles Flow",
@@ -975,6 +1025,11 @@
           "term": "Rotating arm",
           "meaning": "An arm that turns about a fixed point to form angles.",
           "example": "A clock hand is like a rotating arm."
+        },
+        {
+          "term": "Concept",
+          "meaning": "The main idea being learned in the topic.",
+          "example": "Making Rotating Arms is the concept being studied."
         }
       ],
       "realLifeExample": "Turning the minute hand of a clock away from the hour hand increases the angle between them.",
@@ -1059,7 +1114,7 @@
           "example": "One full rotation makes a complete angle."
         }
       ],
-      "realLifeExample": "The corner of a table is a right angle.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Special Types of Angles helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Special Types of Angles Flow",
@@ -1146,7 +1201,7 @@
           "example": "One full turn is 360 degrees."
         }
       ],
-      "realLifeExample": "A right angle measures 90 degrees on a protractor.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Measuring Angles helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Measuring Angles Flow",
@@ -1226,9 +1281,14 @@
           "term": "Vertex",
           "meaning": "The corner point of the angle being drawn.",
           "example": "The protractor centre is placed on the vertex."
+        },
+        {
+          "term": "Concept",
+          "meaning": "The main idea being learned in the topic.",
+          "example": "Drawing Angles is the concept being studied."
         }
       ],
-      "realLifeExample": "To draw a 60-degree angle, mark 60 on the protractor and join it to the vertex.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Drawing Angles helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Drawing Angles Flow",
@@ -1310,7 +1370,7 @@
           "example": "A 200-degree angle is reflex."
         }
       ],
-      "realLifeExample": "A 45-degree angle is acute, while a 120-degree angle is obtuse.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Types of Angles and their Measures helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Types of Angles and their Measures Flow",
@@ -1390,9 +1450,14 @@
           "term": "Reasoning",
           "meaning": "Thinking logically to reach a conclusion.",
           "example": "We use reasoning to arrange people from their numbers."
+        },
+        {
+          "term": "Concept",
+          "meaning": "The main idea being learned in the topic.",
+          "example": "Numbers can Tell us Things is the concept being studied."
         }
       ],
-      "realLifeExample": "If a child says '2', it means two people taller than them are standing nearby.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Numbers can Tell us Things helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Numbers can Tell us Things Flow",
@@ -1467,9 +1532,14 @@
           "term": "Neighbour",
           "meaning": "A cell next to a given cell.",
           "example": "In a row, the cells on either side are neighbours."
+        },
+        {
+          "term": "Concept",
+          "meaning": "The main idea being learned in the topic.",
+          "example": "Supercells is the concept being studied."
         }
       ],
-      "realLifeExample": "In a row 3, 9, 5, the cell with 9 is a supercell because 9 > 3 and 9 > 5.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Supercells helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Supercells Flow",
@@ -1544,9 +1614,14 @@
           "term": "Order",
           "meaning": "The arrangement of numbers from smaller to larger.",
           "example": "On a number line, numbers are in order."
+        },
+        {
+          "term": "Concept",
+          "meaning": "The main idea being learned in the topic.",
+          "example": "Patterns of Numbers on the Number Line is the concept being studied."
         }
       ],
-      "realLifeExample": "On a number line, 7 lies to the right of 3, so 7 is greater than 3.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Patterns of Numbers on the Number Line helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Patterns of Numbers on the Number Line Flow",
@@ -1621,9 +1696,14 @@
           "term": "Place value",
           "meaning": "The value of a digit based on its position.",
           "example": "In 360, the 3 has a place value of 300."
+        },
+        {
+          "term": "Concept",
+          "meaning": "The main idea being learned in the topic.",
+          "example": "Playing with Digits is the concept being studied."
         }
       ],
-      "realLifeExample": "Using digits 5, 2, 9, the largest number is 952 and the smallest is 259.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Playing with Digits helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Playing with Digits Flow",
@@ -1698,9 +1778,14 @@
           "term": "Reverse",
           "meaning": "To write the digits in the opposite order.",
           "example": "The reverse of 17 is 71."
+        },
+        {
+          "term": "Concept",
+          "meaning": "The main idea being learned in the topic.",
+          "example": "Pretty Palindromic Patterns is the concept being studied."
         }
       ],
-      "realLifeExample": "121 and 4554 are palindromic numbers.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Pretty Palindromic Patterns helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Pretty Palindromic Patterns Flow",
@@ -1775,9 +1860,14 @@
           "term": "Descending order",
           "meaning": "Arranging digits from largest to smallest.",
           "example": "Digits of 3524 in descending order: 5432."
+        },
+        {
+          "term": "Concept",
+          "meaning": "The main idea being learned in the topic.",
+          "example": "The Magic Number of Kaprekar is the concept being studied."
         }
       ],
-      "realLifeExample": "From 3524: 5432 - 2345 = 3087, and repeating the process leads to 6174.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. The Magic Number of Kaprekar helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "The Magic Number of Kaprekar Flow",
@@ -1852,9 +1942,14 @@
           "term": "Pattern",
           "meaning": "A regular, repeating arrangement.",
           "example": "Calendar columns differ by 7, which is a pattern."
+        },
+        {
+          "term": "Concept",
+          "meaning": "The main idea being learned in the topic.",
+          "example": "Clock and Calendar Numbers is the concept being studied."
         }
       ],
-      "realLifeExample": "On a calendar, 3, 10, 17, 24 lie in the same column, each 7 more than the last.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Clock and Calendar Numbers helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Clock and Calendar Numbers Flow",
@@ -1929,9 +2024,14 @@
           "term": "Estimation",
           "meaning": "Finding an answer that is close to the exact value.",
           "example": "Estimating 49 + 52 as about 100."
+        },
+        {
+          "term": "Concept",
+          "meaning": "The main idea being learned in the topic.",
+          "example": "Mental Math is the concept being studied."
         }
       ],
-      "realLifeExample": "To add 47 + 38, think 47 + 40 = 87, then subtract 2 to get 85.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Mental Math helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Mental Math Flow",
@@ -2006,9 +2106,14 @@
           "term": "Trick",
           "meaning": "A surprising result that works because of a pattern.",
           "example": "A number trick that always gives 5."
+        },
+        {
+          "term": "Concept",
+          "meaning": "The main idea being learned in the topic.",
+          "example": "Playing with Number Patterns is the concept being studied."
         }
       ],
-      "realLifeExample": "Adding 1 + 2 + 3 + ... + 9 always gives 45.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Playing with Number Patterns helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Playing with Number Patterns Flow",
@@ -2083,9 +2188,14 @@
           "term": "Unsolved problem",
           "meaning": "A question mathematicians have not yet answered.",
           "example": "The Collatz problem is unsolved."
+        },
+        {
+          "term": "Concept",
+          "meaning": "The main idea being learned in the topic.",
+          "example": "An Unsolved Mystery (the Collatz Problem) is the concept being studied."
         }
       ],
-      "realLifeExample": "Starting with 6: 6 -> 3 -> 10 -> 5 -> 16 -> 8 -> 4 -> 2 -> 1.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. An Unsolved Mystery (the Collatz Problem) helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "An Unsolved Mystery (the Collatz Problem) Flow",
@@ -2167,7 +2277,7 @@
           "example": "700 is the approximate sum of 298 and 405."
         }
       ],
-      "realLifeExample": "To estimate 298 + 405, round to 300 + 400 = 700.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Simple Estimation helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Simple Estimation Flow",
@@ -2247,9 +2357,14 @@
           "term": "Winning position",
           "meaning": "A position from which a player can always win.",
           "example": "Reaching 18 first may be a winning position."
+        },
+        {
+          "term": "Concept",
+          "meaning": "The main idea being learned in the topic.",
+          "example": "Games and Winning Strategies is the concept being studied."
         }
       ],
-      "realLifeExample": "In a game adding up to 21, reaching certain totals first guarantees a win.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Games and Winning Strategies helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Games and Winning Strategies Flow",
@@ -2411,9 +2526,14 @@
           "term": "Key",
           "meaning": "A note showing how many items each symbol represents.",
           "example": "The key 'one star = 10' tells the symbol's value."
+        },
+        {
+          "term": "Concept",
+          "meaning": "The main idea being learned in the topic.",
+          "example": "Pictographs is the concept being studied."
         }
       ],
-      "realLifeExample": "If one apple symbol stands for 5 apples, then 4 symbols mean 20 apples.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Pictographs helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Pictographs Flow",
@@ -2495,7 +2615,7 @@
           "example": "A scale of 1 unit = 10 makes bars easier to draw."
         }
       ],
-      "realLifeExample": "A bar graph of favourite sports has a taller bar for the most popular sport.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Bar Graphs helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Bar Graphs Flow",
@@ -2582,7 +2702,7 @@
           "example": "Each axis of a bar graph needs a label."
         }
       ],
-      "realLifeExample": "With a scale of 1 unit = 5, a value of 20 is drawn as a bar 4 units tall.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Drawing a Bar Graph helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Drawing a Bar Graph Flow",
@@ -2662,9 +2782,14 @@
           "term": "Misleading",
           "meaning": "Giving a wrong or false impression.",
           "example": "An unfair scale can make a graph misleading."
+        },
+        {
+          "term": "Concept",
+          "meaning": "The main idea being learned in the topic.",
+          "example": "Artistic and Aesthetic Considerations is the concept being studied."
         }
       ],
-      "realLifeExample": "Using equal-sized symbols in a pictograph keeps it fair and clear.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Artistic and Aesthetic Considerations helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Artistic and Aesthetic Considerations Flow",
@@ -2746,7 +2871,7 @@
           "example": "6 is a common factor of 12 and 18."
         }
       ],
-      "realLifeExample": "Common factors of 12 and 18 are 1, 2, 3 and 6.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Common Multiples and Common Factors helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Common Multiples and Common Factors Flow",
@@ -2833,7 +2958,7 @@
           "example": "2 is a factor of 8."
         }
       ],
-      "realLifeExample": "7 is prime because its only factors are 1 and 7.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Prime Numbers helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Prime Numbers Flow",
@@ -2913,9 +3038,14 @@
           "term": "Common factor",
           "meaning": "A factor shared by two numbers.",
           "example": "The only common factor of co-prime numbers is 1."
+        },
+        {
+          "term": "Concept",
+          "meaning": "The main idea being learned in the topic.",
+          "example": "Co-prime Numbers is the concept being studied."
         }
       ],
-      "realLifeExample": "8 and 9 are co-prime because their only common factor is 1.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Co-prime Numbers helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Co-prime Numbers Flow",
@@ -2990,9 +3120,14 @@
           "term": "Prime factor",
           "meaning": "A factor that is a prime number.",
           "example": "3 is a prime factor of 12."
+        },
+        {
+          "term": "Concept",
+          "meaning": "The main idea being learned in the topic.",
+          "example": "Prime Factorisation is the concept being studied."
         }
       ],
-      "realLifeExample": "12 = 2 x 2 x 3.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Prime Factorisation helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Prime Factorisation Flow",
@@ -3067,9 +3202,14 @@
           "term": "Divisibility test",
           "meaning": "A rule to check divisibility quickly.",
           "example": "The test for 5 is that the number ends in 0 or 5."
+        },
+        {
+          "term": "Concept",
+          "meaning": "The main idea being learned in the topic.",
+          "example": "Divisibility Tests is the concept being studied."
         }
       ],
-      "realLifeExample": "246 is divisible by 3 because 2 + 4 + 6 = 12, which is divisible by 3.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Divisibility Tests helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Divisibility Tests Flow",
@@ -3144,9 +3284,14 @@
           "term": "Sieve of Eratosthenes",
           "meaning": "A method to find prime numbers by crossing out multiples.",
           "example": "We use the sieve to list primes up to 50."
+        },
+        {
+          "term": "Concept",
+          "meaning": "The main idea being learned in the topic.",
+          "example": "Fun with Numbers is the concept being studied."
         }
       ],
-      "realLifeExample": "11 and 13 are twin primes because they are both prime and differ by 2.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Fun with Numbers helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Fun with Numbers Flow",
@@ -3228,7 +3373,7 @@
           "example": "A door is shaped like a rectangle."
         }
       ],
-      "realLifeExample": "A rectangle 5 cm by 3 cm has perimeter 2 x (5 + 3) = 16 cm.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Perimeter helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Perimeter Flow",
@@ -3315,7 +3460,7 @@
           "example": "Area of a rectangle = length x breadth."
         }
       ],
-      "realLifeExample": "A rectangle 5 cm by 3 cm has area 5 x 3 = 15 square cm.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Area helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Area Flow",
@@ -3489,7 +3634,7 @@
           "example": "In 3/4, the denominator is 4."
         }
       ],
-      "realLifeExample": "Sharing one chapati equally among 4 children gives each 1/4.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Fractional Units and Equal Shares helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Fractional Units and Equal Shares Flow",
@@ -3576,7 +3721,7 @@
           "example": "Each of 4 equal parts is 1/4."
         }
       ],
-      "realLifeExample": "1/4 is one of four equal parts of a whole.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Fractional Units as Parts of a Whole helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Fractional Units as Parts of a Whole Flow",
@@ -3663,7 +3808,7 @@
           "example": "2 1/2 is an in-between amount."
         }
       ],
-      "realLifeExample": "A ribbon may be 3 and a half units long, written 3 1/2.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Measuring Using Fractional Units helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Measuring Using Fractional Units Flow",
@@ -3837,7 +3982,7 @@
           "example": "1 1/2 is a mixed fraction."
         }
       ],
-      "realLifeExample": "7/4 written as a mixed fraction is 1 3/4.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Mixed Fractions helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Mixed Fractions Flow",
@@ -3924,7 +4069,7 @@
           "example": "2 is a common factor of 6 and 8."
         }
       ],
-      "realLifeExample": "1/2, 2/4 and 3/6 are equivalent fractions.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Equivalent Fractions helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Equivalent Fractions Flow",
@@ -4004,9 +4149,14 @@
           "term": "Compare",
           "meaning": "To decide which value is greater.",
           "example": "We compare 2/3 and 3/4 by using a common denominator."
+        },
+        {
+          "term": "Concept",
+          "meaning": "The main idea being learned in the topic.",
+          "example": "Comparing Fractions is the concept being studied."
         }
       ],
-      "realLifeExample": "3/5 is greater than 2/5 because they share a denominator and 3 > 2.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Comparing Fractions helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Comparing Fractions Flow",
@@ -4088,7 +4238,7 @@
           "example": "4/8 in simplest form is 1/2."
         }
       ],
-      "realLifeExample": "1/4 + 2/4 = 3/4.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Addition and Subtraction of Fractions helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Addition and Subtraction of Fractions Flow",
@@ -4168,9 +4318,14 @@
           "term": "Civilisation",
           "meaning": "An advanced society with its own culture and knowledge.",
           "example": "The Egyptian civilisation used fractions."
+        },
+        {
+          "term": "Concept",
+          "meaning": "The main idea being learned in the topic.",
+          "example": "A Pinch of History (of Fractions) is the concept being studied."
         }
       ],
-      "realLifeExample": "Ancient Egyptians wrote fractions in a special way using unit fractions.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. A Pinch of History (of Fractions) helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "A Pinch of History (of Fractions) Flow",
@@ -4339,7 +4494,7 @@
           "example": "Each corner of a rectangle is a right angle."
         }
       ],
-      "realLifeExample": "A book cover is shaped like a rectangle with right-angled corners.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Squares and Rectangles helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Squares and Rectangles Flow",
@@ -4426,7 +4581,7 @@
           "example": "A square has four equal sides."
         }
       ],
-      "realLifeExample": "Constructing a rectangle 5 cm by 3 cm using right angles at each corner.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Constructing Squares and Rectangles helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Constructing Squares and Rectangles Flow",
@@ -4513,7 +4668,7 @@
           "example": "Comparing rectangles is an exploration."
         }
       ],
-      "realLifeExample": "Rectangles 1 by 6 and 2 by 3 both have area 6 but different perimeters.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. An Exploration in Rectangles helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "An Exploration in Rectangles Flow",
@@ -4600,7 +4755,7 @@
           "example": "A square's diagonals cross at right angles."
         }
       ],
-      "realLifeExample": "Drawing both diagonals of a rectangle shows they are the same length.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Exploring Diagonals of Rectangles and Squares helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Exploring Diagonals of Rectangles and Squares Flow",
@@ -4774,7 +4929,7 @@
           "example": "A square shows symmetry."
         }
       ],
-      "realLifeExample": "The letter A has one vertical line of symmetry.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Line of Symmetry helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Line of Symmetry Flow",
@@ -4948,7 +5103,7 @@
           "example": "Zero is neither positive nor negative."
         }
       ],
-      "realLifeExample": "The second basement of a building can be labelled -2.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Bela's Building of Fun (Above and Below Zero) helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Bela's Building of Fun (Above and Below Zero) Flow",
@@ -5035,7 +5190,7 @@
           "example": "-2 is an integer."
         }
       ],
-      "realLifeExample": "3 positive and 2 negative tokens cancel to leave 1, so 3 + (-2) = 1.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. The Token Model helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "The Token Model Flow",
@@ -5122,7 +5277,7 @@
           "example": "Owing 50 rupees can be written as -50."
         }
       ],
-      "realLifeExample": "A temperature of 4 degrees below zero is written as -4 degrees Celsius.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Integers in Other Places helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Integers in Other Places Flow",
@@ -5209,7 +5364,7 @@
           "example": "The sign of -6 is negative."
         }
       ],
-      "realLifeExample": "On a number line, 3 + (-5) moves left to give -2.",
+      "realLifeExample": "In a school activity, suppose students need to compare marks, divide materials equally, measure a board, or identify a pattern. Explorations with Integers (Adding and Subtracting) helps them choose the correct method instead of guessing, write the working clearly, and check whether the final answer is reasonable.",
       "diagram": {
         "type": "text",
         "title": "Explorations with Integers (Adding and Subtracting) Flow",
@@ -5464,6 +5619,11 @@
           "term": "Inquiry",
           "meaning": "The act of asking questions and investigating to learn.",
           "example": "Investigating why plants near a window grow towards it is inquiry."
+        },
+        {
+          "term": "Concept",
+          "meaning": "The main idea being learned in the topic.",
+          "example": "Science in Everyday Life is the concept being studied."
         }
       ],
       "realLifeExample": "Wondering why the sky changes colour at sunset and trying to find out is doing science.",
@@ -5640,7 +5800,7 @@
           "example": "Putting all water animals together is classification."
         }
       ],
-      "realLifeExample": "Tulsi is a herb, rose is a shrub, and mango is a tree.",
+      "realLifeExample": "A simple classroom or home observation can show How to Group Plants and Animals. For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from Diversity in the Living World.",
       "diagram": {
         "type": "text",
         "title": "How to Group Plants and Animals Flow",
@@ -5921,7 +6081,7 @@
           "example": "Whole fruits and vegetables give us roughage."
         }
       ],
-      "realLifeExample": "Rice, potato and bread are rich in carbohydrates for energy.",
+      "realLifeExample": "A simple classroom or home observation can show Components of Food. For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from Mindful Eating: A Path to a Healthy Body.",
       "diagram": {
         "type": "text",
         "title": "Components of Food Flow",
@@ -6013,7 +6173,7 @@
           "example": "Butter and oil are fats."
         }
       ],
-      "realLifeExample": "A drop of iodine on boiled potato turns blue-black, showing it has starch.",
+      "realLifeExample": "A simple classroom or home observation can show Testing the Components of Food. For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from Mindful Eating: A Path to a Healthy Body.",
       "diagram": {
         "type": "text",
         "title": "Testing the Components of Food Flow",
@@ -6187,7 +6347,7 @@
           "example": "Jowar is a cereal."
         }
       ],
-      "realLifeExample": "Ragi can be used to make porridge, dosa or laddoo.",
+      "realLifeExample": "A simple classroom or home observation can show Millets: Nutrition-rich Cereals. For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from Mindful Eating: A Path to a Healthy Body.",
       "diagram": {
         "type": "text",
         "title": "Millets: Nutrition-rich Cereals Flow",
@@ -6361,7 +6521,7 @@
           "example": "Plastic is a non-magnetic material."
         }
       ],
-      "realLifeExample": "A magnet picks up iron nails and pins, showing they are magnetic.",
+      "realLifeExample": "A simple classroom or home observation can show Magnetic and Non-magnetic Materials. For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from Exploring Magnets.",
       "diagram": {
         "type": "text",
         "title": "Magnetic and Non-magnetic Materials Flow",
@@ -6528,9 +6688,14 @@
           "term": "Magnetic needle",
           "meaning": "A small, light magnet that can turn freely to point north-south.",
           "example": "The needle in a compass is a magnetic needle."
+        },
+        {
+          "term": "Concept",
+          "meaning": "The main idea being learned in the topic.",
+          "example": "Finding Directions is the concept being studied."
         }
       ],
-      "realLifeExample": "A bar magnet hung from a thread slowly turns and stops pointing north-south.",
+      "realLifeExample": "A simple classroom or home observation can show Finding Directions. For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from Exploring Magnets.",
       "diagram": {
         "type": "text",
         "title": "Finding Directions Flow",
@@ -6612,7 +6777,7 @@
           "example": "Like poles repel."
         }
       ],
-      "realLifeExample": "Two north poles brought together push each other apart.",
+      "realLifeExample": "A simple classroom or home observation can show Attraction and Repulsion between Magnets. For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from Exploring Magnets.",
       "diagram": {
         "type": "text",
         "title": "Attraction and Repulsion between Magnets Flow",
@@ -6786,7 +6951,7 @@
           "example": "A desk might be 6 hand spans wide."
         }
       ],
-      "realLifeExample": "Measuring a table as '5 hand spans' long depends on whose hand is used.",
+      "realLifeExample": "A simple classroom or home observation can show How do we Measure?. For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from Measurement of Length and Motion.",
       "diagram": {
         "type": "text",
         "title": "How do we Measure? Flow",
@@ -7040,9 +7205,14 @@
           "term": "Thread method",
           "meaning": "Using a thread to measure a curved length, then a scale.",
           "example": "A curved path is measured with the thread method."
+        },
+        {
+          "term": "Concept",
+          "meaning": "The main idea being learned in the topic.",
+          "example": "Measuring the Length of a Curved Line is the concept being studied."
         }
       ],
-      "realLifeExample": "Measuring the curved boundary of a leaf using a thread and then a ruler.",
+      "realLifeExample": "A simple classroom or home observation can show Measuring the Length of a Curved Line. For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from Measurement of Length and Motion.",
       "diagram": {
         "type": "text",
         "title": "Measuring the Length of a Curved Line Flow",
@@ -7117,6 +7287,11 @@
           "term": "Reference point",
           "meaning": "A fixed point used to describe the position of an object.",
           "example": "A lamp post can be a reference point on a street."
+        },
+        {
+          "term": "Concept",
+          "meaning": "The main idea being learned in the topic.",
+          "example": "Describing Position is the concept being studied."
         }
       ],
       "realLifeExample": "A bus stop that is '200 metres south of the temple' uses the temple as the reference point.",
@@ -7201,7 +7376,7 @@
           "example": "Motion is relative to a reference point."
         }
       ],
-      "realLifeExample": "A car moving on the road changes its position, so it is in motion.",
+      "realLifeExample": "A simple classroom or home observation can show Moving Things (Rest and Motion). For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from Measurement of Length and Motion.",
       "diagram": {
         "type": "text",
         "title": "Moving Things (Rest and Motion) Flow",
@@ -7288,7 +7463,7 @@
           "example": "A swing shows oscillatory motion."
         }
       ],
-      "realLifeExample": "A pendulum of a wall clock shows oscillatory motion.",
+      "realLifeExample": "A simple classroom or home observation can show Types of Motion. For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from Measurement of Length and Motion.",
       "diagram": {
         "type": "text",
         "title": "Types of Motion Flow",
@@ -7375,7 +7550,7 @@
           "example": "Strength is a property of iron."
         }
       ],
-      "realLifeExample": "A spoon may be made of steel, plastic or wood.",
+      "realLifeExample": "A simple classroom or home observation can show Observing Objects Around Us. For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from Materials Around Us.",
       "diagram": {
         "type": "text",
         "title": "Observing Objects Around Us Flow",
@@ -7462,7 +7637,7 @@
           "example": "Clear glass is transparent."
         }
       ],
-      "realLifeExample": "Iron and gold are shiny, while chalk and wood are dull.",
+      "realLifeExample": "A simple classroom or home observation can show How to Group Materials. For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from Materials Around Us.",
       "diagram": {
         "type": "text",
         "title": "How to Group Materials Flow",
@@ -7549,7 +7724,7 @@
           "example": "Butter paper is translucent."
         }
       ],
-      "realLifeExample": "A diamond is extremely hard, while clay is soft and easy to mould.",
+      "realLifeExample": "A simple classroom or home observation can show Properties of Materials. For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from Materials Around Us.",
       "diagram": {
         "type": "text",
         "title": "Properties of Materials Flow",
@@ -7723,7 +7898,7 @@
           "example": "A doctor uses a thermometer to check fever."
         }
       ],
-      "realLifeExample": "After holding ice, even normal water feels warm to your hand.",
+      "realLifeExample": "A simple classroom or home observation can show Hot or Cold?. For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from Temperature and its Measurement.",
       "diagram": {
         "type": "text",
         "title": "Hot or Cold? Flow",
@@ -7810,7 +7985,7 @@
           "example": "A temperature of 39 degrees Celsius shows fever."
         }
       ],
-      "realLifeExample": "A healthy person has a body temperature of about 37 degrees Celsius.",
+      "realLifeExample": "A simple classroom or home observation can show Temperature. For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from Temperature and its Measurement.",
       "diagram": {
         "type": "text",
         "title": "Temperature Flow",
@@ -7897,7 +8072,7 @@
           "example": "A digital thermometer shows the reading on a screen."
         }
       ],
-      "realLifeExample": "A doctor uses a clinical thermometer to check a patient's fever.",
+      "realLifeExample": "A simple classroom or home observation can show Measuring Temperature. For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from Temperature and its Measurement.",
       "diagram": {
         "type": "text",
         "title": "Measuring Temperature Flow",
@@ -7984,7 +8159,7 @@
           "example": "Spread-out water has more surface area and dries faster."
         }
       ],
-      "realLifeExample": "Wet clothes dry on a sunny, windy day because of evaporation.",
+      "realLifeExample": "A simple classroom or home observation can show Investigating Water's Disappearing Act (Evaporation). For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from A Journey through States of Water.",
       "diagram": {
         "type": "text",
         "title": "Investigating Water's Disappearing Act (Evaporation) Flow",
@@ -8071,7 +8246,7 @@
           "example": "Cooling vapour causes condensation."
         }
       ],
-      "realLifeExample": "Water droplets form on a cold water bottle taken out of the fridge.",
+      "realLifeExample": "A simple classroom or home observation can show Another Mystery (Condensation). For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from A Journey through States of Water.",
       "diagram": {
         "type": "text",
         "title": "Another Mystery (Condensation) Flow",
@@ -8158,7 +8333,7 @@
           "example": "Steam from a kettle becomes water vapour."
         }
       ],
-      "realLifeExample": "Ice in a glass (solid) melts into water (liquid) and can boil into steam (gas).",
+      "realLifeExample": "A simple classroom or home observation can show The Different States of Water. For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from A Journey through States of Water.",
       "diagram": {
         "type": "text",
         "title": "The Different States of Water Flow",
@@ -8245,7 +8420,7 @@
           "example": "Water boiling into steam at 100 degree C."
         }
       ],
-      "realLifeExample": "An ice cream melts into liquid on a hot day (melting).",
+      "realLifeExample": "A simple classroom or home observation can show Changing the States of Water. For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from A Journey through States of Water.",
       "diagram": {
         "type": "text",
         "title": "Changing the States of Water Flow",
@@ -8332,7 +8507,7 @@
           "example": "Wind speeds up the drying of clothes."
         }
       ],
-      "realLifeExample": "Clothes spread out on a windy, sunny day dry much faster.",
+      "realLifeExample": "A simple classroom or home observation can show Evaporating Water Faster or Slower. For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from A Journey through States of Water.",
       "diagram": {
         "type": "text",
         "title": "Evaporating Water Faster or Slower Flow",
@@ -8419,7 +8594,7 @@
           "example": "A matka keeps drinking water cool in summer."
         }
       ],
-      "realLifeExample": "Sweat evaporating from our skin cools us down on a hot day.",
+      "realLifeExample": "A simple classroom or home observation can show Cooling Effect. For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from A Journey through States of Water.",
       "diagram": {
         "type": "text",
         "title": "Cooling Effect Flow",
@@ -8506,7 +8681,7 @@
           "example": "Rain is the most common form of precipitation."
         }
       ],
-      "realLifeExample": "Rain falls when cloud droplets join to become heavy enough to drop.",
+      "realLifeExample": "A simple classroom or home observation can show How do Clouds give us Rain? (The Water Cycle). For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from A Journey through States of Water.",
       "diagram": {
         "type": "text",
         "title": "How do Clouds give us Rain? (The Water Cycle) Flow",
@@ -8593,7 +8768,7 @@
           "example": "Clean salt is a pure substance."
         }
       ],
-      "realLifeExample": "Removing small stones from rice before cooking is a separation.",
+      "realLifeExample": "A simple classroom or home observation can show Why do we Separate Substances?. For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from Methods of Separation in Everyday Life.",
       "diagram": {
         "type": "text",
         "title": "Why do we Separate Substances? Flow",
@@ -8673,9 +8848,14 @@
           "term": "Impurity",
           "meaning": "An unwanted substance mixed in with a useful one.",
           "example": "A stone in rice is an impurity."
+        },
+        {
+          "term": "Concept",
+          "meaning": "The main idea being learned in the topic.",
+          "example": "Handpicking is the concept being studied."
         }
       ],
-      "realLifeExample": "Removing small stones and husk from rice by hand before cooking.",
+      "realLifeExample": "A simple classroom or home observation can show Handpicking. For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from Methods of Separation in Everyday Life.",
       "diagram": {
         "type": "text",
         "title": "Handpicking Flow",
@@ -8750,9 +8930,14 @@
           "term": "Thresher",
           "meaning": "A machine used for threshing crops.",
           "example": "A thresher separates grain from straw quickly."
+        },
+        {
+          "term": "Concept",
+          "meaning": "The main idea being learned in the topic.",
+          "example": "Threshing is the concept being studied."
         }
       ],
-      "realLifeExample": "Farmers beat bundles of wheat to separate the grains from the stalks.",
+      "realLifeExample": "A simple classroom or home observation can show Threshing. For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from Methods of Separation in Everyday Life.",
       "diagram": {
         "type": "text",
         "title": "Threshing Flow",
@@ -8834,7 +9019,7 @@
           "example": "Chaff is carried away by the wind."
         }
       ],
-      "realLifeExample": "Farmers drop threshed grain from a basket in the wind so the husk blows away.",
+      "realLifeExample": "A simple classroom or home observation can show Winnowing. For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from Methods of Separation in Everyday Life.",
       "diagram": {
         "type": "text",
         "title": "Winnowing Flow",
@@ -8914,9 +9099,14 @@
           "term": "Sieve",
           "meaning": "A tool with small holes used to separate particles by size.",
           "example": "A kitchen sieve separates fine flour from bran."
+        },
+        {
+          "term": "Concept",
+          "meaning": "The main idea being learned in the topic.",
+          "example": "Sieving is the concept being studied."
         }
       ],
-      "realLifeExample": "Sieving wheat flour to separate fine flour from the coarse bran.",
+      "realLifeExample": "A simple classroom or home observation can show Sieving. For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from Methods of Separation in Everyday Life.",
       "diagram": {
         "type": "text",
         "title": "Sieving Flow",
@@ -9259,7 +9449,7 @@
           "example": "Plants and animals remove waste by excretion."
         }
       ],
-      "realLifeExample": "A plant grows, makes food, breathes and reproduces, so it is living.",
+      "realLifeExample": "A simple classroom or home observation can show What Sets the Living Apart from the Non-living. For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from Living Creatures: Exploring their Characteristics.",
       "diagram": {
         "type": "text",
         "title": "What Sets the Living Apart from the Non-living Flow",
@@ -9346,7 +9536,7 @@
           "example": "A green sprout appears from a germinating seed."
         }
       ],
-      "realLifeExample": "Soaked gram seeds kept on moist cotton sprout in a few days.",
+      "realLifeExample": "A simple classroom or home observation can show Essential Conditions for Germination. For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from Living Creatures: Exploring their Characteristics.",
       "diagram": {
         "type": "text",
         "title": "Essential Conditions for Germination Flow",
@@ -9433,7 +9623,7 @@
           "example": "A plant bending to light is a response."
         }
       ],
-      "realLifeExample": "A potted plant on a windowsill bends towards the sunlight.",
+      "realLifeExample": "A simple classroom or home observation can show Growth and Movement in Plants. For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from Living Creatures: Exploring their Characteristics.",
       "diagram": {
         "type": "text",
         "title": "Growth and Movement in Plants Flow",
@@ -9520,7 +9710,7 @@
           "example": "A flower develops into a fruit with seeds."
         }
       ],
-      "realLifeExample": "A bean seed grows into a plant that flowers and produces new bean seeds.",
+      "realLifeExample": "A simple classroom or home observation can show Life Cycle of a Plant. For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from Living Creatures: Exploring their Characteristics.",
       "diagram": {
         "type": "text",
         "title": "Life Cycle of a Plant Flow",
@@ -9607,7 +9797,7 @@
           "example": "A caterpillar is the larva of a butterfly."
         }
       ],
-      "realLifeExample": "A frog's life cycle: egg -> tadpole -> adult frog.",
+      "realLifeExample": "A simple classroom or home observation can show Life Cycle of Animals. For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from Living Creatures: Exploring their Characteristics.",
       "diagram": {
         "type": "text",
         "title": "Life Cycle of Animals Flow",
@@ -9694,7 +9884,7 @@
           "example": "Smoke from vehicles causes air pollution."
         }
       ],
-      "realLifeExample": "We breathe in oxygen from the air to stay alive.",
+      "realLifeExample": "A simple classroom or home observation can show Air. For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from Nature's Treasures.",
       "diagram": {
         "type": "text",
         "title": "Air Flow",
@@ -9781,7 +9971,7 @@
           "example": "Turning off taps is water conservation."
         }
       ],
-      "realLifeExample": "We use water every day for drinking, bathing and cooking.",
+      "realLifeExample": "A simple classroom or home observation can show Water. For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from Nature's Treasures.",
       "diagram": {
         "type": "text",
         "title": "Water Flow",
@@ -9868,7 +10058,7 @@
           "example": "Sunlight is a renewable energy source."
         }
       ],
-      "realLifeExample": "A solar panel uses sunlight to produce electricity.",
+      "realLifeExample": "A simple classroom or home observation can show Energy from the Sun. For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from Nature's Treasures.",
       "diagram": {
         "type": "text",
         "title": "Energy from the Sun Flow",
@@ -9955,7 +10145,7 @@
           "example": "A forest is the habitat of many animals."
         }
       ],
-      "realLifeExample": "Forests give us timber, medicines and many fruits.",
+      "realLifeExample": "A simple classroom or home observation can show Forests. For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from Nature's Treasures.",
       "diagram": {
         "type": "text",
         "title": "Forests Flow",
@@ -10042,7 +10232,7 @@
           "example": "Coal is a mineral used as fuel."
         }
       ],
-      "realLifeExample": "Plants grow in soil, which gives them water and nutrients.",
+      "realLifeExample": "A simple classroom or home observation can show Soil, Rocks and Minerals. For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from Nature's Treasures.",
       "diagram": {
         "type": "text",
         "title": "Soil, Rocks and Minerals Flow",
@@ -10129,7 +10319,7 @@
           "example": "Petrol is made from petroleum."
         }
       ],
-      "realLifeExample": "Petrol and diesel made from petroleum run cars, buses and trucks.",
+      "realLifeExample": "A simple classroom or home observation can show Fossil Fuels. For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from Nature's Treasures.",
       "diagram": {
         "type": "text",
         "title": "Fossil Fuels Flow",
@@ -10216,7 +10406,7 @@
           "example": "Coal is a non-renewable resource."
         }
       ],
-      "realLifeExample": "Sunlight and wind are renewable resources that do not run out.",
+      "realLifeExample": "A simple classroom or home observation can show Natural Resources: Renewable and Non-renewable. For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from Nature's Treasures.",
       "diagram": {
         "type": "text",
         "title": "Natural Resources: Renewable and Non-renewable Flow",
@@ -10303,7 +10493,7 @@
           "example": "We reuse cloth bags for shopping."
         }
       ],
-      "realLifeExample": "Turning off lights and taps when not in use saves electricity and water.",
+      "realLifeExample": "A simple classroom or home observation can show Resources We Use (Conservation). For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from Nature's Treasures.",
       "diagram": {
         "type": "text",
         "title": "Resources We Use (Conservation) Flow",
@@ -10390,7 +10580,7 @@
           "example": "The Saptarshi looks like a big ladle."
         }
       ],
-      "realLifeExample": "Ursa Major, also called the Saptarshi, is a well-known constellation.",
+      "realLifeExample": "A simple classroom or home observation can show Stars and Constellations. For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from Beyond Earth.",
       "diagram": {
         "type": "text",
         "title": "Stars and Constellations Flow",
@@ -10477,7 +10667,7 @@
           "example": "Venus is a planet seen in the night sky."
         }
       ],
-      "realLifeExample": "The Pole Star can be located by following the pointer stars of Ursa Major.",
+      "realLifeExample": "A simple classroom or home observation can show Night Sky Watching. For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from Beyond Earth.",
       "diagram": {
         "type": "text",
         "title": "Night Sky Watching Flow",
@@ -10564,7 +10754,7 @@
           "example": "Mars is the fourth planet from the Sun."
         }
       ],
-      "realLifeExample": "Jupiter is the largest planet in our solar system.",
+      "realLifeExample": "A simple classroom or home observation can show Our Solar System. For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from Beyond Earth.",
       "diagram": {
         "type": "text",
         "title": "Our Solar System Flow",
@@ -10651,7 +10841,7 @@
           "example": "Akash Ganga means the Milky Way."
         }
       ],
-      "realLifeExample": "The Milky Way appears as a hazy band of light across a very dark night sky.",
+      "realLifeExample": "A simple classroom or home observation can show The Milky Way Galaxy. For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from Beyond Earth.",
       "diagram": {
         "type": "text",
         "title": "The Milky Way Galaxy Flow",
@@ -10738,7 +10928,7 @@
           "example": "A space mission sends rockets to study planets."
         }
       ],
-      "realLifeExample": "The universe contains billions of galaxies like our Milky Way.",
+      "realLifeExample": "A simple classroom or home observation can show The Universe. For example, students can notice a change, identify what caused it, compare the result with evidence, and then explain the idea using the science concept from Beyond Earth.",
       "diagram": {
         "type": "text",
         "title": "The Universe Flow",
@@ -10830,7 +11020,7 @@
           "example": "Economics looks at how people earn a living."
         }
       ],
-      "realLifeExample": "Learning how the Harappans lived is part of History.",
+      "realLifeExample": "This can be seen in real life when students look at maps, local government services, markets, festivals, rules or historical places around them. Why Social Science? helps explain how people, places and decisions are connected in society.",
       "diagram": {
         "type": "text",
         "title": "Why Social Science? Flow",
@@ -10927,7 +11117,7 @@
           "example": "The key tells us what each map symbol means."
         }
       ],
-      "realLifeExample": "A map of your town uses symbols for the school, hospital and railway station.",
+      "realLifeExample": "This can be seen in real life when students look at maps, local government services, markets, festivals, rules or historical places around them. A Map and Its Components helps explain how people, places and decisions are connected in society.",
       "diagram": {
         "type": "text",
         "title": "A Map and Its Components Flow",
@@ -11024,7 +11214,7 @@
           "example": "We locate places using the grid."
         }
       ],
-      "realLifeExample": "The latitude and longitude of a city act like its address on the Earth.",
+      "realLifeExample": "This can be seen in real life when students look at maps, local government services, markets, festivals, rules or historical places around them. The Globe: Latitudes and Longitudes helps explain how people, places and decisions are connected in society.",
       "diagram": {
         "type": "text",
         "title": "The Globe: Latitudes and Longitudes Flow",
@@ -11116,7 +11306,7 @@
           "example": "The Tropic of Cancer crosses India."
         }
       ],
-      "realLifeExample": "The Equator (0 degrees) passes through countries like Kenya and Indonesia.",
+      "realLifeExample": "This can be seen in real life when students look at maps, local government services, markets, festivals, rules or historical places around them. Latitudes and Important Parallels helps explain how people, places and decisions are connected in society.",
       "diagram": {
         "type": "text",
         "title": "Latitudes and Important Parallels Flow",
@@ -11203,7 +11393,7 @@
           "example": "Each meridian joins the two poles."
         }
       ],
-      "realLifeExample": "The Prime Meridian (0 degrees) passes through Greenwich in London.",
+      "realLifeExample": "This can be seen in real life when students look at maps, local government services, markets, festivals, rules or historical places around them. Longitudes and the Prime Meridian helps explain how people, places and decisions are connected in society.",
       "diagram": {
         "type": "text",
         "title": "Longitudes and the Prime Meridian Flow",
@@ -11377,7 +11567,7 @@
           "example": "The Earth is called the Blue Planet."
         }
       ],
-      "realLifeExample": "The Earth looks blue from space because most of it is ocean.",
+      "realLifeExample": "This can be seen in real life when students look at maps, local government services, markets, festivals, rules or historical places around them. The Earth: Land and Water helps explain how people, places and decisions are connected in society.",
       "diagram": {
         "type": "text",
         "title": "The Earth: Land and Water Flow",
@@ -11464,7 +11654,7 @@
           "example": "No one lives permanently in Antarctica."
         }
       ],
-      "realLifeExample": "India is located in the continent of Asia.",
+      "realLifeExample": "This can be seen in real life when students look at maps, local government services, markets, festivals, rules or historical places around them. The Continents helps explain how people, places and decisions are connected in society.",
       "diagram": {
         "type": "text",
         "title": "The Continents Flow",
@@ -11551,7 +11741,7 @@
           "example": "India is named after the Indian Ocean region."
         }
       ],
-      "realLifeExample": "The Indian Ocean lies to the south of India.",
+      "realLifeExample": "This can be seen in real life when students look at maps, local government services, markets, festivals, rules or historical places around them. The Oceans helps explain how people, places and decisions are connected in society.",
       "diagram": {
         "type": "text",
         "title": "The Oceans Flow",
@@ -11638,7 +11828,7 @@
           "example": "Oceans are major trade routes."
         }
       ],
-      "realLifeExample": "Ships carry goods across oceans between continents.",
+      "realLifeExample": "This can be seen in real life when students look at maps, local government services, markets, festivals, rules or historical places around them. Importance of Oceans and Continents helps explain how people, places and decisions are connected in society.",
       "diagram": {
         "type": "text",
         "title": "Importance of Oceans and Continents Flow",
@@ -11730,7 +11920,7 @@
           "example": "The Ganga plains are very fertile."
         }
       ],
-      "realLifeExample": "The Himalayas are mountains, while the Deccan is a plateau.",
+      "realLifeExample": "This can be seen in real life when students look at maps, local government services, markets, festivals, rules or historical places around them. Major Landforms of the Earth helps explain how people, places and decisions are connected in society.",
       "diagram": {
         "type": "text",
         "title": "Major Landforms of the Earth Flow",
@@ -11822,7 +12012,7 @@
           "example": "Mountain farmers use terrace farming."
         }
       ],
-      "realLifeExample": "The Ganga and other rivers start from the Himalayan mountains.",
+      "realLifeExample": "This can be seen in real life when students look at maps, local government services, markets, festivals, rules or historical places around them. Mountains and Life helps explain how people, places and decisions are connected in society.",
       "diagram": {
         "type": "text",
         "title": "Mountains and Life Flow",
@@ -11909,7 +12099,7 @@
           "example": "A plateau is called a tableland."
         }
       ],
-      "realLifeExample": "The Deccan Plateau has black soil good for growing cotton.",
+      "realLifeExample": "This can be seen in real life when students look at maps, local government services, markets, festivals, rules or historical places around them. Plateaus and Life helps explain how people, places and decisions are connected in society.",
       "diagram": {
         "type": "text",
         "title": "Plateaus and Life Flow",
@@ -11996,7 +12186,7 @@
           "example": "Plains are densely populated."
         }
       ],
-      "realLifeExample": "The Northern Plains of India are very fertile and densely populated.",
+      "realLifeExample": "This can be seen in real life when students look at maps, local government services, markets, festivals, rules or historical places around them. Plains and Life helps explain how people, places and decisions are connected in society.",
       "diagram": {
         "type": "text",
         "title": "Plains and Life Flow",
@@ -12088,7 +12278,7 @@
           "example": "The 20th century is the 1900s."
         }
       ],
-      "realLifeExample": "2500 BCE is earlier in time than 1500 BCE.",
+      "realLifeExample": "This can be seen in real life when students look at maps, local government services, markets, festivals, rules or historical places around them. Measuring Historical Time helps explain how people, places and decisions are connected in society.",
       "diagram": {
         "type": "text",
         "title": "Measuring Historical Time Flow",
@@ -12185,7 +12375,7 @@
           "example": "An inscription on a pillar tells us about a king."
         }
       ],
-      "realLifeExample": "Coins, pottery and ruins of buildings are archaeological sources.",
+      "realLifeExample": "This can be seen in real life when students look at maps, local government services, markets, festivals, rules or historical places around them. Sources of History helps explain how people, places and decisions are connected in society.",
       "diagram": {
         "type": "text",
         "title": "Sources of History Flow",
@@ -12277,7 +12467,7 @@
           "example": "Hindustan refers to the land around the Sindhu."
         }
       ],
-      "realLifeExample": "The name 'India' comes from the river Sindhu (Indus).",
+      "realLifeExample": "This can be seen in real life when students look at maps, local government services, markets, festivals, rules or historical places around them. The Many Names of India helps explain how people, places and decisions are connected in society.",
       "diagram": {
         "type": "text",
         "title": "The Many Names of India Flow",
@@ -12364,7 +12554,7 @@
           "example": "Shared names reflect India's unity."
         }
       ],
-      "realLifeExample": "The Greeks knew the land beyond the Sindhu river as 'India'.",
+      "realLifeExample": "This can be seen in real life when students look at maps, local government services, markets, festivals, rules or historical places around them. What These Names Tell Us helps explain how people, places and decisions are connected in society.",
       "diagram": {
         "type": "text",
         "title": "What These Names Tell Us Flow",
@@ -12451,7 +12641,7 @@
           "example": "Farming led to the first settlements."
         }
       ],
-      "realLifeExample": "Early people gathered wild fruits and hunted deer for food.",
+      "realLifeExample": "This can be seen in real life when students look at maps, local government services, markets, festivals, rules or historical places around them. From Hunting to the First Crops helps explain how people, places and decisions are connected in society.",
       "diagram": {
         "type": "text",
         "title": "From Hunting to the First Crops Flow",
@@ -12538,7 +12728,7 @@
           "example": "Many sites lie along the Sarasvati river."
         }
       ],
-      "realLifeExample": "Rakhigarhi in Haryana is an important Harappan site.",
+      "realLifeExample": "This can be seen in real life when students look at maps, local government services, markets, festivals, rules or historical places around them. The Indus-Sarasvati (Harappan) Civilisation helps explain how people, places and decisions are connected in society.",
       "diagram": {
         "type": "text",
         "title": "The Indus-Sarasvati (Harappan) Civilisation Flow",
@@ -12625,7 +12815,7 @@
           "example": "Harappan seals often show animals."
         }
       ],
-      "realLifeExample": "Harappan cities had covered drains running along straight streets.",
+      "realLifeExample": "This can be seen in real life when students look at maps, local government services, markets, festivals, rules or historical places around them. Harappan Town Planning and Life helps explain how people, places and decisions are connected in society.",
       "diagram": {
         "type": "text",
         "title": "Harappan Town Planning and Life Flow",
@@ -12799,7 +12989,7 @@
           "example": "The Rigveda is a collection of hymns."
         }
       ],
-      "realLifeExample": "The Rigveda is the oldest of the four Vedas.",
+      "realLifeExample": "This can be seen in real life when students look at maps, local government services, markets, festivals, rules or historical places around them. The Vedas and Vedic Culture helps explain how people, places and decisions are connected in society.",
       "diagram": {
         "type": "text",
         "title": "The Vedas and Vedic Culture Flow",
@@ -12886,7 +13076,7 @@
           "example": "Ahimsa means not harming any living being."
         }
       ],
-      "realLifeExample": "Mahavira taught the importance of non-violence (ahimsa).",
+      "realLifeExample": "This can be seen in real life when students look at maps, local government services, markets, festivals, rules or historical places around them. Other Roots: New Ideas and Teachers helps explain how people, places and decisions are connected in society.",
       "diagram": {
         "type": "text",
         "title": "Other Roots: New Ideas and Teachers Flow",
@@ -12973,7 +13163,7 @@
           "example": "The Ganga is a sacred river."
         }
       ],
-      "realLifeExample": "The river Ganga is considered sacred across India.",
+      "realLifeExample": "This can be seen in real life when students look at maps, local government services, markets, festivals, rules or historical places around them. A Land of Sacred Geography helps explain how people, places and decisions are connected in society.",
       "diagram": {
         "type": "text",
         "title": "A Land of Sacred Geography Flow",
@@ -13147,7 +13337,7 @@
           "example": "Hospitality is an Indian value."
         }
       ],
-      "realLifeExample": "The epics Ramayana and Mahabharata are known across all of India.",
+      "realLifeExample": "This can be seen in real life when students look at maps, local government services, markets, festivals, rules or historical places around them. The Threads of Unity helps explain how people, places and decisions are connected in society.",
       "diagram": {
         "type": "text",
         "title": "The Threads of Unity Flow",
@@ -13234,7 +13424,7 @@
           "example": "Communities living in harmony respect each other."
         }
       ],
-      "realLifeExample": "People of many languages and religions live together as one Indian nation.",
+      "realLifeExample": "This can be seen in real life when students look at maps, local government services, markets, festivals, rules or historical places around them. Unity in Diversity helps explain how people, places and decisions are connected in society.",
       "diagram": {
         "type": "text",
         "title": "Unity in Diversity Flow",
@@ -13321,7 +13511,7 @@
           "example": "A joint family includes grandparents and relatives."
         }
       ],
-      "realLifeExample": "A mother, father and their children form a nuclear family.",
+      "realLifeExample": "This can be seen in real life when students look at maps, local government services, markets, festivals, rules or historical places around them. The Family helps explain how people, places and decisions are connected in society.",
       "diagram": {
         "type": "text",
         "title": "The Family Flow",
@@ -13408,7 +13598,7 @@
           "example": "A community shares resources like water."
         }
       ],
-      "realLifeExample": "The people of a village form a community that shares roads and water.",
+      "realLifeExample": "This can be seen in real life when students look at maps, local government services, markets, festivals, rules or historical places around them. The Community helps explain how people, places and decisions are connected in society.",
       "diagram": {
         "type": "text",
         "title": "The Community Flow",
@@ -13495,7 +13685,7 @@
           "example": "Government works for public welfare."
         }
       ],
-      "realLifeExample": "The government builds roads and runs government schools and hospitals.",
+      "realLifeExample": "This can be seen in real life when students look at maps, local government services, markets, festivals, rules or historical places around them. What is Government? helps explain how people, places and decisions are connected in society.",
       "diagram": {
         "type": "text",
         "title": "What is Government? Flow",
@@ -13582,7 +13772,7 @@
           "example": "The local government cleans local streets."
         }
       ],
-      "realLifeExample": "The central government handles defence for the whole country.",
+      "realLifeExample": "This can be seen in real life when students look at maps, local government services, markets, festivals, rules or historical places around them. Levels of Government helps explain how people, places and decisions are connected in society.",
       "diagram": {
         "type": "text",
         "title": "Levels of Government Flow",
@@ -13669,7 +13859,7 @@
           "example": "The judiciary settles disputes."
         }
       ],
-      "realLifeExample": "The legislature debates and passes new laws.",
+      "realLifeExample": "This can be seen in real life when students look at maps, local government services, markets, festivals, rules or historical places around them. Organs of Government helps explain how people, places and decisions are connected in society.",
       "diagram": {
         "type": "text",
         "title": "Organs of Government Flow",
@@ -13756,7 +13946,7 @@
           "example": "Adults cast a vote to elect leaders."
         }
       ],
-      "realLifeExample": "People elect their representatives by voting in a democracy.",
+      "realLifeExample": "This can be seen in real life when students look at maps, local government services, markets, festivals, rules or historical places around them. Democracy and Grassroots Democracy helps explain how people, places and decisions are connected in society.",
       "diagram": {
         "type": "text",
         "title": "Democracy and Grassroots Democracy Flow",
@@ -13843,7 +14033,7 @@
           "example": "The Sarpanch leads the village council."
         }
       ],
-      "realLifeExample": "All the adult voters of a village together form the Gram Sabha.",
+      "realLifeExample": "This can be seen in real life when students look at maps, local government services, markets, festivals, rules or historical places around them. The Gram Sabha and Gram Panchayat helps explain how people, places and decisions are connected in society.",
       "diagram": {
         "type": "text",
         "title": "The Gram Sabha and Gram Panchayat Flow",
@@ -13930,7 +14120,7 @@
           "example": "The Zila Parishad plans for the whole district."
         }
       ],
-      "realLifeExample": "The Zila Parishad works at the district level of Panchayati Raj.",
+      "realLifeExample": "This can be seen in real life when students look at maps, local government services, markets, festivals, rules or historical places around them. The Three Tiers of Panchayati Raj helps explain how people, places and decisions are connected in society.",
       "diagram": {
         "type": "text",
         "title": "The Three Tiers of Panchayati Raj Flow",
@@ -14191,7 +14381,7 @@
           "example": "The Mayor leads the city corporation."
         }
       ],
-      "realLifeExample": "A large city like Mumbai is governed by a Municipal Corporation.",
+      "realLifeExample": "This can be seen in real life when students look at maps, local government services, markets, festivals, rules or historical places around them. Municipal Corporations and Councils helps explain how people, places and decisions are connected in society.",
       "diagram": {
         "type": "text",
         "title": "Municipal Corporations and Councils Flow",
@@ -14278,7 +14468,7 @@
           "example": "Each ward elects a councillor."
         }
       ],
-      "realLifeExample": "The urban local body collects garbage and maintains street lights in the city.",
+      "realLifeExample": "This can be seen in real life when students look at maps, local government services, markets, festivals, rules or historical places around them. How Urban Local Bodies Work helps explain how people, places and decisions are connected in society.",
       "diagram": {
         "type": "text",
         "title": "How Urban Local Bodies Work Flow",
@@ -14452,7 +14642,7 @@
           "example": "A shopkeeper earns income from sales."
         }
       ],
-      "realLifeExample": "A shopkeeper selling goods is doing an economic activity.",
+      "realLifeExample": "This can be seen in real life when students look at maps, local government services, markets, festivals, rules or historical places around them. Economic and Non-Economic Activities helps explain how people, places and decisions are connected in society.",
       "diagram": {
         "type": "text",
         "title": "Economic and Non-Economic Activities Flow",
@@ -14539,7 +14729,7 @@
           "example": "Caring for elders has great social value."
         }
       ],
-      "realLifeExample": "Caring for elders and children at home is vital non-economic work.",
+      "realLifeExample": "This can be seen in real life when students look at maps, local government services, markets, festivals, rules or historical places around them. The Importance of Non-Economic Activities helps explain how people, places and decisions are connected in society.",
       "diagram": {
         "type": "text",
         "title": "The Importance of Non-Economic Activities Flow",
@@ -14713,7 +14903,7 @@
           "example": "Mining coal is a primary activity."
         }
       ],
-      "realLifeExample": "A farmer growing wheat is doing a primary activity.",
+      "realLifeExample": "This can be seen in real life when students look at maps, local government services, markets, festivals, rules or historical places around them. Primary Activities helps explain how people, places and decisions are connected in society.",
       "diagram": {
         "type": "text",
         "title": "Primary Activities Flow",
@@ -14800,7 +14990,7 @@
           "example": "Cotton is a raw material for cloth."
         }
       ],
-      "realLifeExample": "Turning cotton into cloth in a textile factory is a secondary activity.",
+      "realLifeExample": "This can be seen in real life when students look at maps, local government services, markets, festivals, rules or historical places around them. Secondary Activities helps explain how people, places and decisions are connected in society.",
       "diagram": {
         "type": "text",
         "title": "Secondary Activities Flow",
@@ -14887,7 +15077,7 @@
           "example": "Trains provide transport."
         }
       ],
-      "realLifeExample": "A bank keeping money safe and giving loans is a tertiary activity.",
+      "realLifeExample": "This can be seen in real life when students look at maps, local government services, markets, festivals, rules or historical places around them. Tertiary Activities helps explain how people, places and decisions are connected in society.",
       "diagram": {
         "type": "text",
         "title": "Tertiary Activities Flow",
@@ -14979,7 +15169,7 @@
           "example": "He tended his banana plants every day."
         }
       ],
-      "realLifeExample": "Rama Natha's wife Madhumati helps gather and sell the bananas at a good price.",
+      "realLifeExample": "While reading the lesson, a student can connect A Bottle of Dew (Prose) with a real conversation, a classroom discussion, a family story, or a situation where words, feelings and choices matter. This makes the lesson easier to remember and explain in their own words.",
       "diagram": {
         "type": "text",
         "title": "A Bottle of Dew (Prose) Flow",
@@ -15076,7 +15266,7 @@
           "example": "The raven's pride made him lose his food."
         }
       ],
-      "realLifeExample": "The fox calls the raven a 'handsome bird' to trick him into singing.",
+      "realLifeExample": "While reading the lesson, a student can connect The Raven and the Fox (Poem) with a real conversation, a classroom discussion, a family story, or a situation where words, feelings and choices matter. This makes the lesson easier to remember and explain in their own words.",
       "diagram": {
         "type": "text",
         "title": "The Raven and the Fox (Poem) Flow",
@@ -15173,7 +15363,7 @@
           "example": "'Rama to the Rescue' is a folk tale."
         }
       ],
-      "realLifeExample": "The policeman in the story is called the kotwal (also thaanedar).",
+      "realLifeExample": "While reading the lesson, a student can connect Rama to the Rescue (Prose) with a real conversation, a classroom discussion, a family story, or a situation where words, feelings and choices matter. This makes the lesson easier to remember and explain in their own words.",
       "diagram": {
         "type": "text",
         "title": "Rama to the Rescue (Prose) Flow",
@@ -15270,7 +15460,7 @@
           "example": "The dog became Gajaraj's companion."
         }
       ],
-      "realLifeExample": "Gajaraj shares his food with the hungry stray dog, beginning their friendship.",
+      "realLifeExample": "While reading the lesson, a student can connect The Unlikely Best Friends (Prose) with a real conversation, a classroom discussion, a family story, or a situation where words, feelings and choices matter. This makes the lesson easier to remember and explain in their own words.",
       "diagram": {
         "type": "text",
         "title": "The Unlikely Best Friends (Prose) Flow",
@@ -15464,7 +15654,7 @@
           "example": "Many were acquaintances, not real friends."
         }
       ],
-      "realLifeExample": "The lesson uses many words for friend: partner, buddies, companion, classmates.",
+      "realLifeExample": "While reading the lesson, a student can connect The Chair (Prose) with a real conversation, a classroom discussion, a family story, or a situation where words, feelings and choices matter. This makes the lesson easier to remember and explain in their own words.",
       "diagram": {
         "type": "text",
         "title": "The Chair (Prose) Flow",
@@ -15561,7 +15751,7 @@
           "example": "We should respect trees and nature."
         }
       ],
-      "realLifeExample": "Parts of the neem tree are used to prepare natural medicines.",
+      "realLifeExample": "While reading the lesson, a student can connect Neem Baba (Poem) with a real conversation, a classroom discussion, a family story, or a situation where words, feelings and choices matter. This makes the lesson easier to remember and explain in their own words.",
       "diagram": {
         "type": "text",
         "title": "Neem Baba (Poem) Flow",
@@ -15658,7 +15848,7 @@
           "example": "The bird flew out to explore the world."
         }
       ],
-      "realLifeExample": "The bird first thinks its little nest is the whole world.",
+      "realLifeExample": "While reading the lesson, a student can connect What a Bird Thought (Poem) with a real conversation, a classroom discussion, a family story, or a situation where words, feelings and choices matter. This makes the lesson easier to remember and explain in their own words.",
       "diagram": {
         "type": "text",
         "title": "What a Bird Thought (Poem) Flow",
@@ -15852,7 +16042,7 @@
           "example": "They played a friendly match in the park."
         }
       ],
-      "realLifeExample": "Prabhat could not bear to lose even a simple game of marbles.",
+      "realLifeExample": "While reading the lesson, a student can connect Change of Heart (Prose) with a real conversation, a classroom discussion, a family story, or a situation where words, feelings and choices matter. This makes the lesson easier to remember and explain in their own words.",
       "diagram": {
         "type": "text",
         "title": "Change of Heart (Prose) Flow",
@@ -15949,7 +16139,7 @@
           "example": "'Trees creep close' is an example of imagery."
         }
       ],
-      "realLifeExample": "The children run so fast they 'can't even catch their breath'.",
+      "realLifeExample": "While reading the lesson, a student can connect The Winner (Poem) with a real conversation, a classroom discussion, a family story, or a situation where words, feelings and choices matter. This makes the lesson easier to remember and explain in their own words.",
       "diagram": {
         "type": "text",
         "title": "The Winner (Poem) Flow",
@@ -16046,7 +16236,7 @@
           "example": "The sage Patanjali wrote the Yoga Sutras."
         }
       ],
-      "realLifeExample": "The word 'Yoga' comes from the Sanskrit root 'yuj', meaning 'to unite'.",
+      "realLifeExample": "While reading the lesson, a student can connect Yoga - A Way of Life (Prose) with a real conversation, a classroom discussion, a family story, or a situation where words, feelings and choices matter. This makes the lesson easier to remember and explain in their own words.",
       "diagram": {
         "type": "text",
         "title": "Yoga - A Way of Life (Prose) Flow",
@@ -16143,7 +16333,7 @@
           "example": "We work hard so our country can prosper."
         }
       ],
-      "realLifeExample": "India's people live in unison, presenting 'unity in diversity' to the world.",
+      "realLifeExample": "While reading the lesson, a student can connect Hamara Bharat - Incredible India! (Prose) with a real conversation, a classroom discussion, a family story, or a situation where words, feelings and choices matter. This makes the lesson easier to remember and explain in their own words.",
       "diagram": {
         "type": "text",
         "title": "Hamara Bharat - Incredible India! (Prose) Flow",
@@ -16240,7 +16430,7 @@
           "example": "People below stare at the kites."
         }
       ],
-      "realLifeExample": "The kites are compared to 'coloured birds in the sky'.",
+      "realLifeExample": "While reading the lesson, a student can connect The Kites (Poem) with a real conversation, a classroom discussion, a family story, or a situation where words, feelings and choices matter. This makes the lesson easier to remember and explain in their own words.",
       "diagram": {
         "type": "text",
         "title": "The Kites (Poem) Flow",
@@ -16434,7 +16624,7 @@
           "example": "The eternal flame never goes out."
         }
       ],
-      "realLifeExample": "The names of brave soldiers are etched in stone at the National War Memorial.",
+      "realLifeExample": "While reading the lesson, a student can connect National War Memorial (Poem) with a real conversation, a classroom discussion, a family story, or a situation where words, feelings and choices matter. This makes the lesson easier to remember and explain in their own words.",
       "diagram": {
         "type": "text",
         "title": "National War Memorial (Poem) Flow",
@@ -16500,7 +16690,7 @@
     "studyContent": {
       "title": "Kavita ka bhav",
       "intro": "Kavita ka bhav Class 6 Hindi chapter Matrbhumi ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Matrbhumi ke madhyam se Kavita ka bhav, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Kavita ka bhav is studied as part of the chapter Matrbhumi. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Kavita ka bhav ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Matrbhumi ka mukhya bhav samjho.",
@@ -16588,7 +16778,7 @@
     "studyContent": {
       "title": "Desh prem",
       "intro": "Desh prem Class 6 Hindi chapter Matrbhumi ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Matrbhumi ke madhyam se Desh prem, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Desh prem is studied as part of the chapter Matrbhumi. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Desh prem ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Matrbhumi ka mukhya bhav samjho.",
@@ -16676,7 +16866,7 @@
     "studyContent": {
       "title": "Pushp ki Abhilasha",
       "intro": "Pushp ki Abhilasha Class 6 Hindi chapter Matrbhumi ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Matrbhumi ke madhyam se Pushp ki Abhilasha, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Pushp ki Abhilasha is studied as part of the chapter Matrbhumi. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Pushp ki Abhilasha ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Matrbhumi ka mukhya bhav samjho.",
@@ -16764,7 +16954,7 @@
     "studyContent": {
       "title": "Shabdarth",
       "intro": "Shabdarth Class 6 Hindi chapter Matrbhumi ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Matrbhumi ke madhyam se Shabdarth, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Shabdarth is studied as part of the chapter Matrbhumi. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Shabdarth ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Matrbhumi ka mukhya bhav samjho.",
@@ -16852,7 +17042,7 @@
     "studyContent": {
       "title": "Sansmaran",
       "intro": "Sansmaran Class 6 Hindi chapter Gol ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Gol ke madhyam se Sansmaran, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Sansmaran is studied as part of the chapter Gol. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Sansmaran ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Gol ka mukhya bhav samjho.",
@@ -16878,7 +17068,7 @@
           "example": "Path ke naye shabdon ke arth."
         }
       ],
-      "realLifeExample": "Example: Gol ke answer mein Sansmaran ko path ke sandesh se joda ja sakta hai.",
+      "realLifeExample": "While reading the lesson, a student can connect Sansmaran with a real conversation, a classroom discussion, a family story, or a situation where words, feelings and choices matter. This makes the lesson easier to remember and explain in their own words.",
       "diagram": {
         "type": "text",
         "title": "Sansmaran Flow",
@@ -16940,7 +17130,7 @@
     "studyContent": {
       "title": "Khel aur anubhav",
       "intro": "Khel aur anubhav Class 6 Hindi chapter Gol ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Gol ke madhyam se Khel aur anubhav, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Khel aur anubhav is studied as part of the chapter Gol. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Khel aur anubhav ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Gol ka mukhya bhav samjho.",
@@ -17028,7 +17218,7 @@
     "studyContent": {
       "title": "Ek daud aisi bhi",
       "intro": "Ek daud aisi bhi Class 6 Hindi chapter Gol ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Gol ke madhyam se Ek daud aisi bhi, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Ek daud aisi bhi is studied as part of the chapter Gol. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Ek daud aisi bhi ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Gol ka mukhya bhav samjho.",
@@ -17116,7 +17306,7 @@
     "studyContent": {
       "title": "Prashn uttar",
       "intro": "Prashn uttar Class 6 Hindi chapter Gol ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Gol ke madhyam se Prashn uttar, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Prashn uttar is studied as part of the chapter Gol. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Prashn uttar ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Gol ka mukhya bhav samjho.",
@@ -17204,7 +17394,7 @@
     "studyContent": {
       "title": "Kavita path",
       "intro": "Kavita path Class 6 Hindi chapter Pahali Boond ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Pahali Boond ke madhyam se Kavita path, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Kavita path is studied as part of the chapter Pahali Boond. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Kavita path ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Pahali Boond ka mukhya bhav samjho.",
@@ -17292,7 +17482,7 @@
     "studyContent": {
       "title": "Prakriti varnan",
       "intro": "Prakriti varnan Class 6 Hindi chapter Pahali Boond ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Pahali Boond ke madhyam se Prakriti varnan, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Prakriti varnan is studied as part of the chapter Pahali Boond. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Prakriti varnan ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Pahali Boond ka mukhya bhav samjho.",
@@ -17380,7 +17570,7 @@
     "studyContent": {
       "title": "Varsha ka mahatva",
       "intro": "Varsha ka mahatva Class 6 Hindi chapter Pahali Boond ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Pahali Boond ke madhyam se Varsha ka mahatva, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Varsha ka mahatva is studied as part of the chapter Pahali Boond. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Varsha ka mahatva ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Pahali Boond ka mukhya bhav samjho.",
@@ -17468,7 +17658,7 @@
     "studyContent": {
       "title": "Bhavarth",
       "intro": "Bhavarth Class 6 Hindi chapter Pahali Boond ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Pahali Boond ke madhyam se Bhavarth, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Bhavarth is studied as part of the chapter Pahali Boond. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Bhavarth ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Pahali Boond ka mukhya bhav samjho.",
@@ -17556,7 +17746,7 @@
     "studyContent": {
       "title": "Kahani path",
       "intro": "Kahani path Class 6 Hindi chapter Haar Ki Jeet ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Haar Ki Jeet ke madhyam se Kahani path, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Kahani path is studied as part of the chapter Haar Ki Jeet. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Kahani path ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Haar Ki Jeet ka mukhya bhav samjho.",
@@ -17644,7 +17834,7 @@
     "studyContent": {
       "title": "Patra aur ghatna",
       "intro": "Patra aur ghatna Class 6 Hindi chapter Haar Ki Jeet ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Haar Ki Jeet ke madhyam se Patra aur ghatna, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Patra aur ghatna is studied as part of the chapter Haar Ki Jeet. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Patra aur ghatna ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Haar Ki Jeet ka mukhya bhav samjho.",
@@ -17732,7 +17922,7 @@
     "studyContent": {
       "title": "Naitik sandesh",
       "intro": "Naitik sandesh Class 6 Hindi chapter Haar Ki Jeet ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Haar Ki Jeet ke madhyam se Naitik sandesh, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Naitik sandesh is studied as part of the chapter Haar Ki Jeet. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Naitik sandesh ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Haar Ki Jeet ka mukhya bhav samjho.",
@@ -17820,7 +18010,7 @@
     "studyContent": {
       "title": "Prashn uttar",
       "intro": "Prashn uttar Class 6 Hindi chapter Haar Ki Jeet ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Haar Ki Jeet ke madhyam se Prashn uttar, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Prashn uttar is studied as part of the chapter Haar Ki Jeet. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Prashn uttar ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Haar Ki Jeet ka mukhya bhav samjho.",
@@ -17908,7 +18098,7 @@
     "studyContent": {
       "title": "Doha path",
       "intro": "Doha path Class 6 Hindi chapter Rahim Ke Dohe ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Rahim Ke Dohe ke madhyam se Doha path, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Doha path is studied as part of the chapter Rahim Ke Dohe. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Doha path ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Rahim Ke Dohe ka mukhya bhav samjho.",
@@ -17996,7 +18186,7 @@
     "studyContent": {
       "title": "Arth",
       "intro": "Arth Class 6 Hindi chapter Rahim Ke Dohe ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Rahim Ke Dohe ke madhyam se Arth, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Arth is studied as part of the chapter Rahim Ke Dohe. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Arth ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Rahim Ke Dohe ka mukhya bhav samjho.",
@@ -18084,7 +18274,7 @@
     "studyContent": {
       "title": "Jeevan moolya",
       "intro": "Jeevan moolya Class 6 Hindi chapter Rahim Ke Dohe ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Rahim Ke Dohe ke madhyam se Jeevan moolya, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Jeevan moolya is studied as part of the chapter Rahim Ke Dohe. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Jeevan moolya ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Rahim Ke Dohe ka mukhya bhav samjho.",
@@ -18172,7 +18362,7 @@
     "studyContent": {
       "title": "Udaharan",
       "intro": "Udaharan Class 6 Hindi chapter Rahim Ke Dohe ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Rahim Ke Dohe ke madhyam se Udaharan, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Udaharan is studied as part of the chapter Rahim Ke Dohe. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Udaharan ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Rahim Ke Dohe ka mukhya bhav samjho.",
@@ -18260,7 +18450,7 @@
     "studyContent": {
       "title": "Atmakatha",
       "intro": "Atmakatha Class 6 Hindi chapter Meri Maan ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Meri Maan ke madhyam se Atmakatha, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Atmakatha is studied as part of the chapter Meri Maan. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Atmakatha ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Meri Maan ka mukhya bhav samjho.",
@@ -18348,7 +18538,7 @@
     "studyContent": {
       "title": "Maa ka prem",
       "intro": "Maa ka prem Class 6 Hindi chapter Meri Maan ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Meri Maan ke madhyam se Maa ka prem, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Maa ka prem is studied as part of the chapter Meri Maan. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Maa ka prem ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Meri Maan ka mukhya bhav samjho.",
@@ -18436,7 +18626,7 @@
     "studyContent": {
       "title": "Yaadein",
       "intro": "Yaadein Class 6 Hindi chapter Meri Maan ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Meri Maan ke madhyam se Yaadein, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Yaadein is studied as part of the chapter Meri Maan. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Yaadein ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Meri Maan ka mukhya bhav samjho.",
@@ -18524,7 +18714,7 @@
     "studyContent": {
       "title": "Prashn uttar",
       "intro": "Prashn uttar Class 6 Hindi chapter Meri Maan ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Meri Maan ke madhyam se Prashn uttar, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Prashn uttar is studied as part of the chapter Meri Maan. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Prashn uttar ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Meri Maan ka mukhya bhav samjho.",
@@ -18612,7 +18802,7 @@
     "studyContent": {
       "title": "Kavita ka sandesh",
       "intro": "Kavita ka sandesh Class 6 Hindi chapter Jalate Chalo ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Jalate Chalo ke madhyam se Kavita ka sandesh, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Kavita ka sandesh is studied as part of the chapter Jalate Chalo. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Kavita ka sandesh ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Jalate Chalo ka mukhya bhav samjho.",
@@ -18700,7 +18890,7 @@
     "studyContent": {
       "title": "Prerna",
       "intro": "Prerna Class 6 Hindi chapter Jalate Chalo ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Jalate Chalo ke madhyam se Prerna, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Prerna is studied as part of the chapter Jalate Chalo. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Prerna ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Jalate Chalo ka mukhya bhav samjho.",
@@ -18788,7 +18978,7 @@
     "studyContent": {
       "title": "Deepak ka pratik",
       "intro": "Deepak ka pratik Class 6 Hindi chapter Jalate Chalo ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Jalate Chalo ke madhyam se Deepak ka pratik, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Deepak ka pratik is studied as part of the chapter Jalate Chalo. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Deepak ka pratik ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Jalate Chalo ka mukhya bhav samjho.",
@@ -18876,7 +19066,7 @@
     "studyContent": {
       "title": "Bhavarth",
       "intro": "Bhavarth Class 6 Hindi chapter Jalate Chalo ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Jalate Chalo ke madhyam se Bhavarth, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Bhavarth is studied as part of the chapter Jalate Chalo. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Bhavarth ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Jalate Chalo ka mukhya bhav samjho.",
@@ -18964,7 +19154,7 @@
     "studyContent": {
       "title": "Nritya parampara",
       "intro": "Nritya parampara Class 6 Hindi chapter Sattriya Aur Bihu Nritya ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Sattriya Aur Bihu Nritya ke madhyam se Nritya parampara, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Nritya parampara is studied as part of the chapter Sattriya Aur Bihu Nritya. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Nritya parampara ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Sattriya Aur Bihu Nritya ka mukhya bhav samjho.",
@@ -19052,7 +19242,7 @@
     "studyContent": {
       "title": "Assam ki sanskriti",
       "intro": "Assam ki sanskriti Class 6 Hindi chapter Sattriya Aur Bihu Nritya ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Sattriya Aur Bihu Nritya ke madhyam se Assam ki sanskriti, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Assam ki sanskriti is studied as part of the chapter Sattriya Aur Bihu Nritya. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Assam ki sanskriti ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Sattriya Aur Bihu Nritya ka mukhya bhav samjho.",
@@ -19140,7 +19330,7 @@
     "studyContent": {
       "title": "Kala aur abhyas",
       "intro": "Kala aur abhyas Class 6 Hindi chapter Sattriya Aur Bihu Nritya ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Sattriya Aur Bihu Nritya ke madhyam se Kala aur abhyas, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Kala aur abhyas is studied as part of the chapter Sattriya Aur Bihu Nritya. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Kala aur abhyas ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Sattriya Aur Bihu Nritya ka mukhya bhav samjho.",
@@ -19228,7 +19418,7 @@
     "studyContent": {
       "title": "Prashn uttar",
       "intro": "Prashn uttar Class 6 Hindi chapter Sattriya Aur Bihu Nritya ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Sattriya Aur Bihu Nritya ke madhyam se Prashn uttar, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Prashn uttar is studied as part of the chapter Sattriya Aur Bihu Nritya. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Prashn uttar ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Sattriya Aur Bihu Nritya ka mukhya bhav samjho.",
@@ -19316,7 +19506,7 @@
     "studyContent": {
       "title": "Pad path",
       "intro": "Pad path Class 6 Hindi chapter Maiya Main Nahin Makhan Khayo ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Maiya Main Nahin Makhan Khayo ke madhyam se Pad path, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Pad path is studied as part of the chapter Maiya Main Nahin Makhan Khayo. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Pad path ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Maiya Main Nahin Makhan Khayo ka mukhya bhav samjho.",
@@ -19404,7 +19594,7 @@
     "studyContent": {
       "title": "Krishna leela",
       "intro": "Krishna leela Class 6 Hindi chapter Maiya Main Nahin Makhan Khayo ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Maiya Main Nahin Makhan Khayo ke madhyam se Krishna leela, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Krishna leela is studied as part of the chapter Maiya Main Nahin Makhan Khayo. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Krishna leela ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Maiya Main Nahin Makhan Khayo ka mukhya bhav samjho.",
@@ -19492,7 +19682,7 @@
     "studyContent": {
       "title": "Bhakti bhav",
       "intro": "Bhakti bhav Class 6 Hindi chapter Maiya Main Nahin Makhan Khayo ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Maiya Main Nahin Makhan Khayo ke madhyam se Bhakti bhav, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Bhakti bhav is studied as part of the chapter Maiya Main Nahin Makhan Khayo. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Bhakti bhav ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Maiya Main Nahin Makhan Khayo ka mukhya bhav samjho.",
@@ -19580,7 +19770,7 @@
     "studyContent": {
       "title": "Shabdarth",
       "intro": "Shabdarth Class 6 Hindi chapter Maiya Main Nahin Makhan Khayo ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Maiya Main Nahin Makhan Khayo ke madhyam se Shabdarth, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Shabdarth is studied as part of the chapter Maiya Main Nahin Makhan Khayo. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Shabdarth ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Maiya Main Nahin Makhan Khayo ka mukhya bhav samjho.",
@@ -19668,7 +19858,7 @@
     "studyContent": {
       "title": "Kahani path",
       "intro": "Kahani path Class 6 Hindi chapter Pariksha ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Pariksha ke madhyam se Kahani path, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Kahani path is studied as part of the chapter Pariksha. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Kahani path ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Pariksha ka mukhya bhav samjho.",
@@ -19756,7 +19946,7 @@
     "studyContent": {
       "title": "Imaandari",
       "intro": "Imaandari Class 6 Hindi chapter Pariksha ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Pariksha ke madhyam se Imaandari, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Imaandari is studied as part of the chapter Pariksha. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Imaandari ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Pariksha ka mukhya bhav samjho.",
@@ -19844,7 +20034,7 @@
     "studyContent": {
       "title": "Mehnat",
       "intro": "Mehnat Class 6 Hindi chapter Pariksha ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Pariksha ke madhyam se Mehnat, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Mehnat is studied as part of the chapter Pariksha. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Mehnat ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Pariksha ka mukhya bhav samjho.",
@@ -19932,7 +20122,7 @@
     "studyContent": {
       "title": "Prashn uttar",
       "intro": "Prashn uttar Class 6 Hindi chapter Pariksha ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Pariksha ke madhyam se Prashn uttar, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Prashn uttar is studied as part of the chapter Pariksha. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Prashn uttar ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Pariksha ka mukhya bhav samjho.",
@@ -20020,7 +20210,7 @@
     "studyContent": {
       "title": "Kavita path",
       "intro": "Kavita path Class 6 Hindi chapter Chetak Ki Veerta ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Chetak Ki Veerta ke madhyam se Kavita path, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Kavita path is studied as part of the chapter Chetak Ki Veerta. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Kavita path ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Chetak Ki Veerta ka mukhya bhav samjho.",
@@ -20108,7 +20298,7 @@
     "studyContent": {
       "title": "Chetak ka sahas",
       "intro": "Chetak ka sahas Class 6 Hindi chapter Chetak Ki Veerta ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Chetak Ki Veerta ke madhyam se Chetak ka sahas, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Chetak ka sahas is studied as part of the chapter Chetak Ki Veerta. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Chetak ka sahas ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Chetak Ki Veerta ka mukhya bhav samjho.",
@@ -20196,7 +20386,7 @@
     "studyContent": {
       "title": "Maharana Pratap",
       "intro": "Maharana Pratap Class 6 Hindi chapter Chetak Ki Veerta ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Chetak Ki Veerta ke madhyam se Maharana Pratap, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Maharana Pratap is studied as part of the chapter Chetak Ki Veerta. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Maharana Pratap ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Chetak Ki Veerta ka mukhya bhav samjho.",
@@ -20284,7 +20474,7 @@
     "studyContent": {
       "title": "Bhavarth",
       "intro": "Bhavarth Class 6 Hindi chapter Chetak Ki Veerta ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Chetak Ki Veerta ke madhyam se Bhavarth, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Bhavarth is studied as part of the chapter Chetak Ki Veerta. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Bhavarth ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Chetak Ki Veerta ka mukhya bhav samjho.",
@@ -20372,7 +20562,7 @@
     "studyContent": {
       "title": "Yatra vrittant",
       "intro": "Yatra vrittant Class 6 Hindi chapter Hind Mahasagar Mein Chhota-sa Hindustan ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Hind Mahasagar Mein Chhota-sa Hindustan ke madhyam se Yatra vrittant, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Yatra vrittant is studied as part of the chapter Hind Mahasagar Mein Chhota-sa Hindustan. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Yatra vrittant ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Hind Mahasagar Mein Chhota-sa Hindustan ka mukhya bhav samjho.",
@@ -20460,7 +20650,7 @@
     "studyContent": {
       "title": "Pravasi Bharatiya",
       "intro": "Pravasi Bharatiya Class 6 Hindi chapter Hind Mahasagar Mein Chhota-sa Hindustan ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Hind Mahasagar Mein Chhota-sa Hindustan ke madhyam se Pravasi Bharatiya, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Pravasi Bharatiya is studied as part of the chapter Hind Mahasagar Mein Chhota-sa Hindustan. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Pravasi Bharatiya ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Hind Mahasagar Mein Chhota-sa Hindustan ka mukhya bhav samjho.",
@@ -20548,7 +20738,7 @@
     "studyContent": {
       "title": "Hind Mahasagar",
       "intro": "Hind Mahasagar Class 6 Hindi chapter Hind Mahasagar Mein Chhota-sa Hindustan ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Hind Mahasagar Mein Chhota-sa Hindustan ke madhyam se Hind Mahasagar, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Hind Mahasagar is studied as part of the chapter Hind Mahasagar Mein Chhota-sa Hindustan. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Hind Mahasagar ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Hind Mahasagar Mein Chhota-sa Hindustan ka mukhya bhav samjho.",
@@ -20636,7 +20826,7 @@
     "studyContent": {
       "title": "Prashn uttar",
       "intro": "Prashn uttar Class 6 Hindi chapter Hind Mahasagar Mein Chhota-sa Hindustan ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Hind Mahasagar Mein Chhota-sa Hindustan ke madhyam se Prashn uttar, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Prashn uttar is studied as part of the chapter Hind Mahasagar Mein Chhota-sa Hindustan. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Prashn uttar ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Hind Mahasagar Mein Chhota-sa Hindustan ka mukhya bhav samjho.",
@@ -20724,7 +20914,7 @@
     "studyContent": {
       "title": "Prakriti sandesh",
       "intro": "Prakriti sandesh Class 6 Hindi chapter Ped Ki Baat ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Ped Ki Baat ke madhyam se Prakriti sandesh, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Prakriti sandesh is studied as part of the chapter Ped Ki Baat. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Prakriti sandesh ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Ped Ki Baat ka mukhya bhav samjho.",
@@ -20812,7 +21002,7 @@
     "studyContent": {
       "title": "Vriksh ka mahatva",
       "intro": "Vriksh ka mahatva Class 6 Hindi chapter Ped Ki Baat ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Ped Ki Baat ke madhyam se Vriksh ka mahatva, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Vriksh ka mahatva is studied as part of the chapter Ped Ki Baat. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Vriksh ka mahatva ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Ped Ki Baat ka mukhya bhav samjho.",
@@ -20900,7 +21090,7 @@
     "studyContent": {
       "title": "Paryavaran",
       "intro": "Paryavaran Class 6 Hindi chapter Ped Ki Baat ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Ped Ki Baat ke madhyam se Paryavaran, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Paryavaran is studied as part of the chapter Ped Ki Baat. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Paryavaran ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Ped Ki Baat ka mukhya bhav samjho.",
@@ -20988,7 +21178,7 @@
     "studyContent": {
       "title": "Prashn uttar",
       "intro": "Prashn uttar Class 6 Hindi chapter Ped Ki Baat ka mahatvapurn hissa hai.",
-      "ncertBasedExplanation": "NCERT Malhar mein Ped Ki Baat ke madhyam se Prashn uttar, bhav, sandesh, shabdarth, patra, ghatna, ya jeevan moolya ko samjhaya jata hai.",
+      "ncertBasedExplanation": "In Class 6 Hindi, Prashn uttar is studied as part of the chapter Ped Ki Baat. The topic should be understood by looking at the context, important lines, characters or speaker, central idea, and the message of the lesson. A student should notice how words create meaning, how events or ideas are connected, and how the lesson can be explained in simple language. This helps in answering comprehension questions, writing summaries, explaining values, and using vocabulary correctly.",
       "aiSimplifiedExplanation": "Easy words mein, Prashn uttar ko pehle mukhya bhav se jodo, phir ek example aur important shabdon ke saath apne shabdon mein samjho.",
       "stepByStep": [
         "Ped Ki Baat ka mukhya bhav samjho.",

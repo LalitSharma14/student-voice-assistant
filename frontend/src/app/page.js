@@ -260,7 +260,9 @@ function AssistantBubble({ msg, index, playingIndex, playAudio, stopAudio, onTyp
         {!msg.typing && <div className="designer-bubble-actions"><button onClick={copyAnswer}>Copy</button><button onClick={onRegenerate}>Regenerate</button></div>}
         <div style={{ whiteSpace: "pre-wrap", lineHeight: "1.7", maxHeight: "320px", overflowY: "auto", paddingRight: textToShow.length > 400 ? "4px" : "0" }}>
           {textToShow.split("\n").map((line, i) => {
-            const cleanLine = line.replace(/\*\*/g, "");
+            const cleanLine = line
+              .replace(/\*\*/g, "")
+              .replace(/^\s{0,3}#{1,6}\s*/, "");
             const lowerLine = cleanLine.toLowerCase().trim();
             const isHeading =
               lowerLine === "topic explanation" || lowerLine === "quick revision" ||
