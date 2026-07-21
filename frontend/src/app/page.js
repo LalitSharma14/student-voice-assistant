@@ -1223,7 +1223,7 @@ export default function Home() {
       await sendEmailVerification(auth.currentUser);
       setVerificationSent(true);
     } catch (err) {
-      setAuthError(err.message || "Could not resend the verification email.");
+      setAuthError("Could not resend the verification email. Please wait a moment, then try again. Also check your spam folder.");
     }
   };
 
@@ -1234,9 +1234,9 @@ export default function Home() {
     try {
       await reload(auth.currentUser);
       setUser({ ...auth.currentUser });
-      if (!auth.currentUser.emailVerified) setAuthError("Your email is not verified yet. Open the verification link, then try again.");
+      if (!auth.currentUser.emailVerified) setAuthError("Your email is not verified yet. Please check your inbox and spam folder, open the verification link, then try again.");
     } catch (err) {
-      setAuthError(err.message || "Could not check verification status.");
+      setAuthError("Your email is not verified yet. Please check your inbox and spam folder, open the verification link, then try again.");
     } finally {
       setAuthLoading(false);
     }
@@ -2743,8 +2743,8 @@ ${latestAnswer}`;
         <div style={{ width: "min(440px, 100%)", background: B.white, border: `1px solid ${B.gray200}`, borderRadius: "20px", padding: "32px 28px", textAlign: "center", boxShadow: "0 8px 32px rgba(43,88,136,0.08)" }}>
           <div style={{ width: "62px", height: "62px", borderRadius: "50%", background: B.navyLight, display: "grid", placeItems: "center", margin: "0 auto 16px", fontSize: "26px" }}>✉️</div>
           <h1 style={{ color: B.navy, fontSize: "22px", margin: "0 0 8px" }}>Verify your email</h1>
-          <p style={{ color: B.gray500, fontSize: "14px", lineHeight: 1.6, margin: "0 0 18px" }}>We sent a verification link to <strong>{user.email}</strong>. Open it before entering the student dashboard.</p>
-          {verificationSent && <p style={{ color: "#0f9f6e", fontSize: "13px", fontWeight: 700 }}>Verification email sent.</p>}
+          <p style={{ color: B.gray500, fontSize: "14px", lineHeight: 1.6, margin: "0 0 18px" }}>We sent a verification link to <strong>{user.email}</strong>. Please check your inbox and spam folder, then open the link before entering the student dashboard.</p>
+          {verificationSent && <p style={{ color: "#0f9f6e", fontSize: "13px", fontWeight: 700 }}>Verification email sent. Please check your inbox and spam folder.</p>}
           {authError && <p style={{ color: B.red, fontSize: "13px" }}>{authError}</p>}
           <button onClick={handleCheckVerification} style={{ ...inputStyle, marginBottom: "10px", border: 0, background: B.navy, color: B.white, cursor: "pointer", fontWeight: 700 }}>I have verified my email</button>
           <button onClick={handleResendVerification} style={{ border: 0, background: "transparent", color: B.navy, cursor: "pointer", fontWeight: 700 }}>Resend verification email</button>
