@@ -1147,18 +1147,35 @@ export default function Home() {
   // ── Auth handlers ──────────────────────────────────────
   const handleCreateAccount = async () => {
     setAuthError("");
+    setAuthNotice("");
     if (!signupName.trim() || !signupEmail.trim() || !signupMobile.trim() || !signupPassword.trim()) { setAuthError("Please fill all required fields."); return; }
     if (signupPassword.length < 6) { setAuthError("Password should be at least 6 characters."); return; }
+    const email = signupEmail.trim();
     try {
       setAuthLoading(true);
-      const userCredential = await createUserWithEmailAndPassword(auth, signupEmail.trim(), signupPassword);
+      const userCredential = await createUserWithEmailAndPassword(auth, email, signupPassword);
       const createdUser = userCredential.user;
-      const profileData = { name: signupName.trim(), email: signupEmail.trim(), mobile: signupMobile.trim(), classLevel: signupClassLevel, board: signupBoard, answerLanguage, authProvider: "password", createdAt: serverTimestamp() };
+      const profileData = { name: signupName.trim(), email, mobile: signupMobile.trim(), classLevel: signupClassLevel, board: signupBoard, answerLanguage, authProvider: "password", createdAt: serverTimestamp() };
       await setDoc(doc(db, "users", createdUser.uid), profileData);
       await sendEmailVerification(createdUser);
       setVerificationSent(true);
       setUser(createdUser); setUserProfile(profileData); setClassLevel(signupClassLevel); setBoard(signupBoard); setProfileNeedsSetup(false); setProfileCompleted(false);
-    } catch (err) { setAuthError(err.message || "Could not create account."); } finally { setAuthLoading(false); }
+    } catch (err) {
+      if (err?.code === "auth/email-already-in-use") {
+        try {
+          const existingCredential = await signInWithEmailAndPassword(auth, email, signupPassword);
+          setUser(existingCredential.user);
+          setAuthNotice("This email was already registered. We signed you in so you can continue verification or complete your profile.");
+        } catch (loginErr) {
+          setAuthMode("login");
+          setLoginEmail(email);
+          setLoginPassword("");
+          setAuthError("This email is already registered. Please login with the same password, or use Forgot password if you do not remember it.");
+        }
+      } else {
+        setAuthError(err.message || "Could not create account.");
+      }
+    } finally { setAuthLoading(false); }
   };
 
   const handleLogin = async () => {
