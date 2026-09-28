@@ -31,6 +31,7 @@ Your rules:
    - For a normal learning question, give a concise but complete answer.
    - Include the definition or main idea, the key formula/fact if relevant, and one simple example when helpful.
    - Do not stop after only one incomplete sentence.
+   - Prefer clear labels such as Meaning, Formula/Rule, and Example when the concept needs more than one line.
    - Include one simple real-life example only if useful.
    - Never make a simple answer unnecessarily long.
  
@@ -158,6 +159,15 @@ def is_detail_question(question: str) -> bool:
     detail_keywords = [
         "explain more",
         "more detail",
+        "complete answer",
+        "full answer",
+        "incomplete",
+        "regenerate",
+        "previous answer",
+        "clear headings",
+        "with headings",
+        "examples",
+        "with examples",
         "in detail",
         "why",
         "how",
@@ -456,7 +466,19 @@ Current follow-up request:
     if detailed:
         return f"""The student is asking for more detail or explanation on the previous topic.
  
-Give a detailed answer of 4 to 6 sentences with one simple example and one encouraging closing line.
+Give a complete answer with clear plain-text headings when useful.
+If the student asks to regenerate a previous answer, use the previous chat history to identify the topic.
+
+Required format:
+- Meaning: Explain the concept clearly.
+- Formula/Rule: Include the formula or key rule if the topic has one.
+- Example: Give one simple example.
+- Summary: End only after the answer is complete.
+
+Rules:
+- Do not stop after one incomplete sentence.
+- Do not use Markdown heading marks such as #, ##, or ###.
+- Keep it suitable for the student's class.
  
 {profile_instruction}
  
@@ -468,15 +490,17 @@ Student question:
     return f"""Give a concise but complete answer for a school student.
 
 Required format:
-- Start with the definition or main idea.
-- Add the key formula, rule, or important fact if the topic has one.
-- Add one simple example when useful.
-- End only after the concept feels complete.
+- Meaning: Start with the definition or main idea.
+- Formula/Rule: Add the key formula, rule, or important fact if the topic has one.
+- Example: Add one simple example when useful.
+- Summary: End only after the concept feels complete.
 
 Rules:
 - Do not stop after one incomplete sentence.
+- Write at least 45 words unless the student asks for a one-line answer.
 - Keep it easy and suitable for the student's class.
 - Avoid a long essay unless the student asks for detail.
+- Do not use Markdown heading marks such as #, ##, or ###.
 
 Do not add a greeting, motivational line, praise, closing sentence, or phrases such as "Keep learning".
 Answer the question immediately and stop after the explanation.
@@ -553,6 +577,39 @@ def clean_normal_answer(answer: str) -> str:
         flags=re.IGNORECASE,
     )
     return text.strip()
+
+
+def is_complete_normal_answer(answer: str) -> bool:
+    """
+    Guard against model responses that stop mid-sentence or only return a fragment.
+    """
+
+    text = str(answer or "").strip()
+    if not text:
+        return False
+
+    words = re.findall(r"\b[\w'-]+\b", text)
+    if len(words) < 35:
+        return False
+
+    lowered = text.lower().rstrip()
+    incomplete_endings = (
+        " a", " an", " the", " to", " for", " with", " that", " which",
+        " who", " have", " has", " is", " are", " only", " applies only",
+        "because", "when", "where", "if", "and", "or", "but", "of", "in",
+    )
+    if lowered.endswith(incomplete_endings):
+        return False
+
+    if not re.search(r"[.!?।)]\s*$", text):
+        return False
+
+    sentence_count = len(re.findall(r"[.!?।]", text))
+    has_structure = any(
+        label in lowered
+        for label in ["meaning", "formula", "rule", "example", "summary"]
+    )
+    return sentence_count >= 2 or has_structure
  
  
 def ask_llm(
@@ -577,6 +634,9 @@ def ask_llm(
     follow_up_prompt = is_follow_up_prompt(question)
     follow_up_mode = get_follow_up_mode(question)
     doubt_title_prompt = is_doubt_title_prompt(question)
+    detailed_answer = detailed and not any(
+        [study_topic_prompt, revision_topic_prompt, follow_up_prompt, doubt_title_prompt]
+    )
     normal_answer = not any(
         [detailed, study_topic_prompt, revision_topic_prompt, follow_up_prompt, doubt_title_prompt]
     )
@@ -609,9 +669,14 @@ Student question:
  
     print(f"[LLM] User message length: {len(user_message)}")
  
-    # Normal answers stay short.
+    # Normal answers should stay concise but still complete.
     # Syllabus topic explanations get more output space.
-    max_tokens = 80 if doubt_title_prompt else 1000 if revision_topic_prompt else 2200 if study_topic_prompt or follow_up_prompt else 300
+    max_tokens = (
+        80 if doubt_title_prompt
+        else 1000 if revision_topic_prompt or detailed
+        else 2200 if study_topic_prompt or follow_up_prompt
+        else 700
+    )
  
     clean_history = clean_chat_history(history)
  
@@ -652,6 +717,16 @@ Student question:
                 )
             if normal_answer:
                 answer = clean_normal_answer(answer)
+                if not is_complete_normal_answer(answer):
+                    raise ValueError(
+                        f"Incomplete normal answer from {model_name}: "
+                        f"words={len(answer.split())}, chars={len(answer)}"
+                    )
+            if detailed_answer and not is_complete_normal_answer(answer):
+                raise ValueError(
+                    f"Incomplete detailed answer from {model_name}: "
+                    f"words={len(answer.split())}, chars={len(answer)}"
+                )
  
             print(
                 f"[LLM] Used: {model_name} "
@@ -675,6 +750,14 @@ Student question:
  
             if "Incomplete follow-up answer" in error_text:
                 print(f"[{model_name}] Follow-up too short - trying next model")
+                continue
+
+            if "Incomplete normal answer" in error_text:
+                print(f"[{model_name}] Normal answer incomplete - trying next model")
+                continue
+
+            if "Incomplete detailed answer" in error_text:
+                print(f"[{model_name}] Detailed answer incomplete - trying next model")
                 continue
 
             print(f"[{model_name}] Error: {error}")
@@ -724,19 +807,31 @@ Student question:
 
             if not answer:
                 raise ValueError("Groq returned an empty answer")
-            if not follow_up_prompt or is_complete_follow_up_answer(answer, follow_up_mode):
+            candidate_answer = clean_normal_answer(answer) if normal_answer else answer
+            answer_complete = (
+                is_complete_follow_up_answer(answer, follow_up_mode)
+                if follow_up_prompt
+                else is_complete_normal_answer(answer)
+                if detailed_answer
+                else is_complete_normal_answer(candidate_answer)
+                if normal_answer
+                else True
+            )
+            if answer_complete:
+                answer = candidate_answer
                 break
 
             print(
-                f"[Groq] Follow-up too short on attempt {attempt + 1} "
-                f"| mode={follow_up_mode} | words={len(answer.split())}"
+                f"[Groq] Answer incomplete on attempt {attempt + 1} "
+                f"| mode={follow_up_mode or 'normal'} | words={len(answer.split())}"
             )
             groq_messages.append({"role": "assistant", "content": answer})
             groq_messages.append({
                 "role": "user",
                 "content": (
                     "Your previous response was incomplete. Start again and provide the full "
-                    "required answer now. Complete every required section and meet the minimum detail."
+                    "required answer now. Complete every required section and meet the minimum detail. "
+                    "Do not stop mid-sentence."
                 ),
             })
 
@@ -747,6 +842,16 @@ Student question:
             )
         if normal_answer:
             answer = clean_normal_answer(answer)
+            if not is_complete_normal_answer(answer):
+                raise ValueError(
+                    f"Groq returned an incomplete normal answer after retry: "
+                    f"words={len(answer.split())}, chars={len(answer)}"
+                )
+        if detailed_answer and not is_complete_normal_answer(answer):
+            raise ValueError(
+                f"Groq returned an incomplete detailed answer after retry: "
+                f"words={len(answer.split())}, chars={len(answer)}"
+            )
  
         print(
             f"[LLM] Groq answered "
