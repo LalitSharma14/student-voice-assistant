@@ -28,7 +28,9 @@ Your rules:
 2. Keep explanations simple, clear, and age-appropriate for students aged 10 to 16 years.
  
 3. Normal chatbot answer rules:
-   - For a normal first question, give a short answer of 2 to 3 sentences maximum.
+   - For a normal learning question, give a concise but complete answer.
+   - Include the definition or main idea, the key formula/fact if relevant, and one simple example when helpful.
+   - Do not stop after only one incomplete sentence.
    - Include one simple real-life example only if useful.
    - Never make a simple answer unnecessarily long.
  
@@ -463,7 +465,18 @@ Give a detailed answer of 4 to 6 sentences with one simple example and one encou
 Student question:
 {question}"""
  
-    return f"""Give exactly 2 or 3 complete sentences, with one simple example only if helpful.
+    return f"""Give a concise but complete answer for a school student.
+
+Required format:
+- Start with the definition or main idea.
+- Add the key formula, rule, or important fact if the topic has one.
+- Add one simple example when useful.
+- End only after the concept feels complete.
+
+Rules:
+- Do not stop after one incomplete sentence.
+- Keep it easy and suitable for the student's class.
+- Avoid a long essay unless the student asks for detail.
 
 Do not add a greeting, motivational line, praise, closing sentence, or phrases such as "Keep learning".
 Answer the question immediately and stop after the explanation.

@@ -183,7 +183,7 @@ async function fetchApi(url, options = {}, timeoutMs = 60000) {
 }
 
 // ── Typewriter hook ────────────────────────────────────────
-function useTypewriter(text, speed = 120, startedAt = 0) {
+function useTypewriter(text, speed = 55, startedAt = 0) {
   const [displayed, setDisplayed] = useState("");
   const [done, setDone] = useState(false);
   useEffect(() => {
@@ -238,7 +238,7 @@ function DiagramCard({ diagram }) {
 }
 
 function AssistantBubble({ msg, index, playingIndex, playAudio, stopAudio, onTypingComplete, onRegenerate }) {
-  const { displayed, done } = useTypewriter(msg.typing ? msg.text : "", 120, msg.typingStartedAt);
+  const { displayed, done } = useTypewriter(msg.typing ? msg.text : "", 55, msg.typingStartedAt);
   const [audioReady, setAudioReady] = useState(false);
   const ttsStarted = useRef(false);
 
@@ -258,7 +258,7 @@ function AssistantBubble({ msg, index, playingIndex, playAudio, stopAudio, onTyp
       <div className="designer-assistant-avatar" style={{ width: "32px", height: "32px", borderRadius: "50%", flexShrink: 0, background: `linear-gradient(135deg, ${B.navy}, ${B.navyDark})`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "12px", fontWeight: 700, color: B.white, marginTop: "2px" }}><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3Zm-7 10.18v4L12 21l7-3.82v-4L12 17l-7-3.82Z" /></svg></div>
       <div className="designer-assistant-bubble" style={{ maxWidth: "82%", padding: "12px 16px", borderRadius: "4px 16px 16px 16px", background: B.white, border: `1px solid ${B.gray200}`, fontSize: "14px", lineHeight: "1.7", color: B.gray900, boxShadow: "0 1px 4px rgba(43,88,136,0.06)" }}>
         {!msg.typing && <div className="designer-bubble-actions"><button onClick={copyAnswer}>Copy</button><button onClick={onRegenerate}>Regenerate</button></div>}
-        <div style={{ whiteSpace: "pre-wrap", lineHeight: "1.7", maxHeight: "320px", overflowY: "auto", paddingRight: textToShow.length > 400 ? "4px" : "0" }}>
+        <div style={{ whiteSpace: "pre-wrap", lineHeight: "1.7", overflowY: "visible", paddingRight: textToShow.length > 400 ? "4px" : "0" }}>
           {textToShow.split("\n").map((line, i) => {
             const cleanLine = line
               .replace(/\*\*/g, "")
